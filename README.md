@@ -4,6 +4,10 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
+<a href="https://redos.red-soft.ru/" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg" alt="Platform">
+</a>
+
 **Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС 7.3.**
 
 ---
