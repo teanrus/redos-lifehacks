@@ -87,36 +87,36 @@ sudo systemctl enable --now fstrim.timer
 
 ## 📚 Категории лайфхаков
 ### 🖥️ Системные настройки
-- [Настройка DNF для быстрой загрузки](/docs/optimization/dnf-tuning.md)
-- [Оптимизация работы с SSD](/docs/optimization/ssd-optimization.md)
+- [Настройка DNF для быстрой загрузки](docs/optimization/dnf-tuning.md)
+- [Оптимизация работы с SSD](docs/optimization/ssd-optimization.md)
 - [Настройка автодополнения в терминале](docs/desktop/bash-completion.md)
-- [Настройка часовых поясов и времени](/docs/installation/timezone-setup.md)
+- [Настройка часовых поясов и времени](docs/installation/timezone-setup.md)
 ### 🔒 Безопасность
-- [Настройка Firewall (firewalld)](/docs/security/firewall-setup.md)
-- [Настройка аудита действий пользователей](/docs/security/audit-setup.md)
-- [Шифрование домашней папки](/docs/security/encryption.md)
-- [Настройка сложных паролей](/docs/security/password-policy.md)
+- [Настройка Firewall (firewalld)](docs/security/firewall-setup.md)
+- [Настройка аудита действий пользователей](docs/security/audit-setup.md)
+- [Шифрование домашней папки](docs/security/encryption.md)
+- [Настройка сложных паролей](docs/security/password-policy.md)
 ### 🌐 Сеть и интернет
-- [Настройка статического IP](/docs/network/static-ip.md)
-- [Подключение к корпоративному VPN](/docs/network/vpn-settings.md)
-- [Настройка прокси-сервера](/docs/network/proxy-setup.md)
-- [Wi-Fi настройки для ноутбуков](/docs/network/wifi-setup.md)
+- [Настройка статического IP](docs/network/static-ip.md)
+- [Подключение к корпоративному VPN](docs/network/vpn-settings.md)
+- [Настройка прокси-сервера](docs/network/proxy-setup.md)
+- [Wi-Fi настройки для ноутбуков](docs/network/wifi-setup.md)
 ### 📦 Установка ПО
-- [Установка КриптоПро CSP](/scripts/install/install-cryptopro.sh)
-- [Установка ViPNet](/scripts/install/install-vipnet.sh)
-- [Установка 1С:Предприятие](/scripts/install/install-1c.sh)
-- [Установка мессенджеров](/scripts/install/install-messengers.sh)
-- [Установка офисных пакетов](/docs/installation/office-setup.md)
+- [Установка КриптоПро CSP](scripts/install/install-cryptopro.sh)
+- [Установка ViPNet](scripts/install/install-vipnet.sh)
+- [Установка 1С:Предприятие](scripts/install/install-1c.sh)
+- [Установка мессенджеров](scripts/install/install-messengers.sh)
+- [Установка офисных пакетов](docs/installation/office-setup.md)
 ### 🛠️ Решение проблем
-- [Проблемы с сетью](/docs/troubleshooting/network-issues.md)
-- [Ошибки при установке ПО](/docs/troubleshooting/software-issues.md)
-- [Проблемы со звуком](/docs/troubleshooting/audio-issues.md)
-- [Проблемы с графикой](/docs/troubleshooting/graphics-issues.md)
+- [Проблемы с сетью](docs/troubleshooting/network-issues.md)
+- [Ошибки при установке ПО](docs/troubleshooting/software-issues.md)
+- [Проблемы со звуком](docs/troubleshooting/audio-issues.md)
+- [Проблемы с графикой](docs/troubleshooting/graphics-issues.md)
 ### ⚡ Оптимизация
-- [Ускорение загрузки системы](/docs/optimization/boot-speed.md)
-- [Оптимизация потребления памяти](/docs/optimization/memory-tuning.md)
-- [Настройка swap](/docs/optimization/swap-tuning.md)
-- [Очистка системы от мусора](/scripts/utils/cleanup.sh)
+- [Ускорение загрузки системы](docs/optimization/boot-speed.md)
+- [Оптимизация потребления памяти](docs/optimization/memory-tuning.md)
+- [Настройка swap](docs/optimization/swap-tuning.md)
+- [Очистка системы от мусора](scripts/utils/cleanup.sh)
 
 ---
 
