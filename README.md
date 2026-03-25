@@ -89,6 +89,7 @@ sudo systemctl enable --now fstrim.timer
 ### 🖥️ Системные настройки
 - [Настройка DNF для быстрой загрузки](/docs/optimization/dnf-tuning.md)
 - [Оптимизация работы с SSD](/docs/optimization/ssd-optimization.md)
+- [Настройка автодополнения в терминале](docs/desktop/bash-completion.md)
 - [Настройка часовых поясов и времени](/docs/installation/timezone-setup.md)
 ### 🔒 Безопасность
 - [Настройка Firewall (firewalld)](/docs/security/firewall-setup.md)
