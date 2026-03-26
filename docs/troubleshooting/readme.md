@@ -9,4 +9,4 @@
 - [Ошибки при установке ПО](docs/troubleshooting/software-issues.md)
 - [Проблемы со звуком](docs/troubleshooting/audio-issues.md)
 - [Проблемы с графикой](docs/troubleshooting/graphics-issues.md)
-- [Установка принтеров Kyocera в РЕД ОС](docs/troubleshooting/printers-kyocera.md)
+- [Установка принтеров Kyocera в РЕД ОС](//teanrus/redos-lifehacks/docs/troubleshooting/printers-kyocera.md)
