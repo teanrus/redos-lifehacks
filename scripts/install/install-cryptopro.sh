@@ -1,6 +1,6 @@
 #!/bin/bash
 # Установка КриптоПро CSP на РЕД ОС 7.3
-# Версия: 1.3
+# Версия: 1.5
 # Описание: Установка КриптоПро CSP, драйверов Рутокен и дополнительных компонентов
 #           Автоматически использует последнюю версию из репозитория
 
@@ -14,7 +14,6 @@ NC='\033[0m' # No Color
 # === КОНФИГУРАЦИЯ ===
 GITHUB_USER="teanrus"
 GITHUB_REPO="redos-setup"
-# GITHUB_TAG не указываем, будем получать последнюю версию автоматически
 
 # Рабочая директория
 WORK_DIR="/home/inst/cryptopro"
@@ -51,29 +50,58 @@ check_success() {
     fi
 }
 
-# Функция получения последней версии релиза
+# Функция проверки наличия установленного КриптоПро
+check_cryptopro_installed() {
+    # Проверяем различные возможные названия пакетов
+    local packages=(
+        "crypto-pro"
+        "cprocsp"
+        "cprocsp-csp"
+        "cprocsp-rdr-rutoken"
+        "lsb-cprocsp-base"
+    )
+    
+    for pkg in "${packages[@]}"; do
+        if rpm -q "$pkg" &>/dev/null; then
+            local installed_version=$(rpm -q "$pkg")
+            echo -e "${YELLOW}Обнаружен установленный пакет: $installed_version${NC}"
+            return 0
+        fi
+    done
+    
+    # Проверяем наличие исполняемых файлов
+    if command -v cryptcp &> /dev/null; then
+        local version=$(cryptcp -version 2>/dev/null | head -1)
+        echo -e "${YELLOW}Обнаружен КриптоПро CSP: $version${NC}"
+        return 0
+    fi
+    
+    return 1
+}
+
+# Функция получения последней версии релиза (возвращает только тег)
 get_latest_tag() {
     local user=$1
     local repo=$2
     
-    echo -e "${BLUE}Получение информации о последнем релизе...${NC}"
+    echo -e "${BLUE}Получение информации о последнем релизе...${NC}" >&2
     
     # Получаем данные о последнем релизе через GitHub API
     local api_url="https://api.github.com/repos/$user/$repo/releases/latest"
     local latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
     
     if [ -z "$latest_tag" ]; then
-        echo -e "${RED}✗ Не удалось получить последнюю версию${NC}"
+        echo -e "${RED}✗ Не удалось получить последнюю версию${NC}" >&2
         return 1
     fi
     
-    echo -e "${GREEN}✓ Найдена последняя версия: $latest_tag${NC}"
+    echo -e "${GREEN}✓ Найдена последняя версия: $latest_tag${NC}" >&2
     echo "$latest_tag"
     return 0
 }
 
-# Функция скачивания с GitHub (использует последнюю версию)
-download_from_github_latest() {
+# Функция скачивания с GitHub
+download_from_github() {
     local file_name=$1
     local dest_dir=$2
     local tag=$3
@@ -95,6 +123,30 @@ download_from_github_latest() {
         echo -e "${RED}✗ Ошибка загрузки $file_name${NC}"
         return 1
     fi
+}
+
+# Функция удаления старой версии КриптоПро
+remove_old_cryptopro() {
+    echo -e "${BLUE}Удаление старой версии КриптоПро...${NC}"
+    
+    # Список пакетов для удаления
+    local packages=(
+        "crypto-pro"
+        "cprocsp*"
+        "lsb-cprocsp*"
+    )
+    
+    for pkg in "${packages[@]}"; do
+        if rpm -q "$pkg" &>/dev/null; then
+            dnf remove -y "$pkg"
+        fi
+    done
+    
+    # Удаляем конфигурационные файлы
+    rm -rf /etc/cprocsp 2>/dev/null
+    rm -rf /opt/cprocsp 2>/dev/null
+    
+    check_success "Удаление старой версии"
 }
 
 # Проверка прав root
@@ -120,7 +172,9 @@ echo ""
 echo -e "${GREEN}=== 1. Поиск последней версии в репозитории ===${NC}"
 
 LATEST_TAG=$(get_latest_tag "$GITHUB_USER" "$GITHUB_REPO")
-if [ $? -ne 0 ] || [ -z "$LATEST_TAG" ]; then
+GET_TAG_RESULT=$?
+
+if [ $GET_TAG_RESULT -ne 0 ] || [ -z "$LATEST_TAG" ]; then
     echo -e "${RED}Не удалось определить последнюю версию. Укажите версию вручную.${NC}"
     echo -e "${YELLOW}Введите тег версии (например: v2.7):${NC}"
     read -r LATEST_TAG < /dev/tty
@@ -164,15 +218,13 @@ echo ""
 # === 3. ПРОВЕРКА НАЛИЧИЯ УСТАНОВЛЕННОЙ ВЕРСИИ ===
 echo -e "${GREEN}=== 3. Проверка наличия установленной версии ===${NC}"
 
-if rpm -q crypto-pro &>/dev/null; then
-    installed_version=$(rpm -q crypto-pro)
-    echo -e "${YELLOW}Обнаружена установленная версия: $installed_version${NC}"
+if check_cryptopro_installed; then
+    echo -e "${YELLOW}Обнаружена установленная версия КриптоПро${NC}"
     if confirm_action "Удалить существующую версию перед установкой?"; then
-        echo -e "${BLUE}Удаление КриптоПро...${NC}"
-        dnf remove -y crypto-pro
-        check_success "Удаление старой версии"
+        remove_old_cryptopro
     else
         echo -e "${YELLOW}Установка будет продолжена поверх существующей версии${NC}"
+        echo -e "${YELLOW}Внимание: это может привести к конфликтам!${NC}"
     fi
 else
     echo -e "${GREEN}КриптоПро не обнаружен, будет выполнена чистая установка${NC}"
@@ -208,7 +260,7 @@ echo ""
 echo -e "${GREEN}=== 6. Загрузка и установка КриптоПро CSP ===${NC}"
 
 echo -e "${BLUE}Загрузка КриптоПро из репозитория redos-setup...${NC}"
-download_from_github_latest "kriptopror4.tar.gz" "$WORK_DIR" "$LATEST_TAG"
+download_from_github "kriptopror4.tar.gz" "$WORK_DIR" "$LATEST_TAG"
 
 if [ -f "$WORK_DIR/kriptopror4.tar.gz" ]; then
     echo -e "${BLUE}Распаковка архива...${NC}"
