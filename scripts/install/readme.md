@@ -11,19 +11,25 @@
 
 
 </details>
+
 ---
+
 <details>
   <summary>Установка ViPNet (с выбором версии) (install-vipnet.sh)</summary>
 
 
 </details>
+
 ---
+
 <details>
   <summary>Установка 1С:Предприятие (install-1c.sh )</summary>
 
 
 </details>
+
 ---
+
 <details>
   <summary>Установка мессенджеров (Telegram, СРЕДА, MAX) (install-messengers.sh)</summary>
 
