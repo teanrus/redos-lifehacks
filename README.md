@@ -36,7 +36,7 @@ cd redos-lifehacks
 | scripts/install/install-cryptopro.sh  | Установка КриптоПро CSP                               |
 | scripts/install/install-vipnet.sh     | Установка ViPNet (с выбором версии)                   |
 | scripts/install/install-1c.sh         | Установка 1С:Предприятие                              |
-| scripts/install/install-messengers.sh | Установка мессенджеров (Telegram, Viber, СРЕДА)       |
+| scripts/install/install-messengers.sh | Установка мессенджеров (Telegram, СРЕДА, MAX)       |
 | scripts/utils/cleanup.sh              | Очистка системы от временных файлов                   |
 
 ## 📂 Структура репозитория
