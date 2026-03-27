@@ -32,12 +32,93 @@ cd redos-lifehacks
 ## Основные скрипты
 | Скрипт                                                                | Назначение                                            |
 | :-------------------------------------------------------------------- | :---------------------------------------------------- |
-| [scripts/setup/base-setup.sh](/releases/latest/download/base-setup.sh) | Базовая настройка системы (SELinux, DNF, репозитории) |
+| scripts/setup/base-setup.sh | Базовая настройка системы (SELinux, DNF, репозитории) |
 | scripts/install/install-cryptopro.sh                                  | Установка КриптоПро CSP                               |
 | scripts/install/install-vipnet.sh                                     | Установка ViPNet (с выбором версии)                   |
 | scripts/install/install-1c.sh                                         | Установка 1С:Предприятие                              |
 | scripts/install/install-messengers.sh                                 | Установка мессенджеров (Telegram, СРЕДА, MAX)         |
 | scripts/utils/cleanup.sh                                              | Очистка системы от временных файлов                   |
+
+# 🚀 Релиз v1.0 - Базовый набор скриптов для настройки РЕД ОС 7.3
+
+## 📋 Состав релиза
+
+| Файл | Описание | Команда для запуска (последняя версия) |
+|------|----------|----------------------------------------|
+| `base-setup.sh` | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh \| sudo bash` |
+| `install-cryptopro.sh` | Установка КриптоПро CSP с автоматическим определением последней версии | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh \| sudo bash` |
+| `cleanup.sh` | Очистка системы от временных файлов, кэша, старых ядер | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh \| sudo bash` |
+
+---
+
+## 🔧 Подробное описание скриптов
+
+### 1. base-setup.sh — Базовая настройка системы
+
+**Что делает:**
+- Отключает SELinux
+- Настраивает DNF (параллельная загрузка, fastestmirror)
+- Добавляет репозитории R7 Office, MAX Desktop, Яндекс.Браузер
+- Устанавливает R7 Office, MAX, Яндекс.Браузер
+- Устанавливает и обновляет ядро (redos-kernels6)
+- Настраивает часовой пояс (Asia/Yekaterinburg, UTC+5)
+- Настраивает SSH и firewall
+- Оптимизирует систему (swappiness, TRIM для SSD)
+
+**Запуск (последняя версия):**
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh | sudo bash
+```
+**Запуск (фиксированная версия v1.0):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/base-setup.sh | sudo bash
+```
+### 2. install-cryptopro.sh — Установка КриптоПро CSP
+
+**Что делает:**
+- Автоматически определяет последнюю версию из репозитория redos-setup
+- Устанавливает зависимости (ifd-rutokens, token-manager, pcsc-lite и др.)
+- Загружает и устанавливает КриптоПро CSP
+- Настраивает работу с Рутокен
+- Предлагает установить лицензию
+- Настраивает интеграцию ГОСТ-шифрования с файловым менеджером
+
+**Запуск (последняя версия):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh | sudo bash
+```
+
+**Запуск (фиксированная версия v1.0):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh | sudo bash
+```
+
+### 3. cleanup.sh — Очистка системы
+
+**Что делает:**
+- Очищает временные файлы (/tmp, /var/tmp)
+- Очищает кэш DNF и системные журналы
+- Удаляет старые логи
+- Очищает кэш браузеров и мессенджеров
+- Удаляет старые ядра (оставляет последние 2)
+- Очищает корзину
+- Удаляет старые бэкапы конфигов
+
+**Запуск (последняя версия):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh | sudo bash
+```
+
+**Запуск (фиксированная версия v1.0):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/cleanup.sh | sudo bash
+```
+
 
 ## 📂 Структура репозитория
 
