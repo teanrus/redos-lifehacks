@@ -35,11 +35,6 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/red
 | Безопасность | Статус SELinux, статус Firewall, последние успешные входы, неудачные попытки входа                           |
 
 ## 🛠️ Использование
-```bash
-wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh
-chmod +x redos-info.sh
-sudo ./redos-info.sh
-```
 Синтаксис
 ```bash
 redos-info.sh [опции]
@@ -67,6 +62,8 @@ redos-info.sh [опции]
 ## 📝 Примеры использования
 1. Базовый запуск (автоматическое определение режима)
 ```bash
+wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh
+chmod +x redos-info.sh
 sudo ./redos-info.sh
 ```
 - Если скрипт запущен из терминала — работает в интерактивном режиме
