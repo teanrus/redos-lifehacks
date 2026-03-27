@@ -21,8 +21,6 @@
 
 ---
 
-## 🚀 Быстрый старт
-
 ### Клонирование репозитория
 
 ```bash
@@ -30,13 +28,7 @@ git clone https://github.com/teanrus/redos-lifehacks.git
 cd redos-lifehacks
 ```
 
-## Основные скрипты
-| Скрипт                                                                | Назначение                                            |
-| :-------------------------------------------------------------------- | :---------------------------------------------------- |
-| scripts/install/install-vipnet.sh                                     | Установка ViPNet (с выбором версии)                   |
-| scripts/install/install-1c.sh                                         | Установка 1С:Предприятие                              |
-
-# 🚀 Релиз v1.0 - Базовый набор скриптов для настройки РЕД ОС 7.3
+# 🚀 Базовый набор скриптов для настройки РЕД ОС 7.3
 
 ## 📋 Состав релиза
 
@@ -45,14 +37,15 @@ cd redos-lifehacks
 | `base-setup.sh` | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh \| sudo bash` |
 | `install-cryptopro.sh` | Установка КриптоПро CSP с автоматическим определением последней версии | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh \| sudo bash` |
 | `install-messengers.sh` | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh \| sudo bash` |
+| `install-vipnet.sh` | Установка и настройка ViPNet Client для защищенного VPN-соединения | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh \| sudo bash` |
+| `install-1c.sh` | Установка платформы 1С:Предприятие и дополнительных компонентов | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh \| sudo bash` |
 | `cleanup.sh` | Очистка системы от временных файлов, кэша, старых ядер | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh \| sudo bash` |
-
----
 
 ## 🔧 Подробное описание скриптов
 
-### 1. base-setup.sh — Базовая настройка системы
-
+<details>
+<summary>base-setup.sh — Базовая настройка системы</summary>
+  
 **Что делает:**
 - Отключает SELinux
 - Настраивает DNF (параллельная загрузка, fastestmirror)
@@ -67,15 +60,17 @@ cd redos-lifehacks
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh | sudo bash
 ```
+
 **Запуск (фиксированная версия v1.0):**
 
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/base-setup.sh | sudo bash
 ```
-### 2. install-cryptopro.sh — Установка КриптоПро CSP
+</details>
+<details>
+<summary>install-cryptopro.sh — Установка КриптоПро CSP</summary>
 
 **Что делает:**
-- Автоматически определяет последнюю версию из репозитория redos-setup
 - Устанавливает зависимости (ifd-rutokens, token-manager, pcsc-lite и др.)
 - Загружает и устанавливает КриптоПро CSP
 - Настраивает работу с Рутокен
@@ -93,21 +88,22 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/ins
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh | sudo bash
 ```
-### 3. install-messengers.sh — Установка мессенджеров
+</details>
+<details>
+<summary>install-messengers.sh — Установка мессенджеров</summary>
 
 **Что делает:**
-- Автоматическое определение версии — использует последнюю версию из репозитория redos-setup
-- Установка **Telegram**:
+- Установка Telegram:
   - Скачивает и распаковывает архив в /opt/telegram
   - Создает символическую ссылку /usr/bin/telegram
   - Создает ярлык в меню приложений
-- Установка **Среда**:
+- Установка Среда:
   - Скачивает и устанавливает RPM-пакет
   - Создает ярлык в меню приложений
-- Установка **MAX**:
+- Установка MAX:
   - Добавляет репозиторий MAX (при отсутствии)
   - Устанавливает через dnf install max
-- Установка **VK Messenger** (опционально):
+- Установка VK Messenger (опционально):
   - Скачивает и устанавливает RPM-пакет
   - Создает ярлык в меню приложений
 - Каждый мессенджер устанавливается по отдельному запросу
@@ -126,7 +122,7 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/ins
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-messengers.sh | sudo bash
 ```
 
-#### Пример диалога при запуске:
+**Пример диалога при запуске:**
 
 ```bash
 === 4. Выбор мессенджеров для установки ===
@@ -156,14 +152,10 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/insta
 Установленные компоненты:
 
 Telegram — универсальный мессенджер
-
 Среда — корпоративный мессенджер для защищенного обмена сообщениями
-
 MAX — корпоративный мессенджер MAX Desktop
-
 VK Messenger — мессенджер от ВКонтакте (опционально)
 ```
-
 **Полезные команды после установки:**
 
 ```bash
@@ -173,8 +165,176 @@ sreda         # Среда
 max           # MAX
 vk-messenger  # VK Messenger
 ```
+</details>
+<details>
+<summary>install-vipnet.sh — Установка ViPNet Client</summary>
 
-### 4. cleanup.sh — Очистка системы
+**Что делает:**
+- Автоматически определяет последнюю версию ViPNet Client из репозитория
+- Устанавливает необходимые зависимости (libpcap, iptables, python3 и др.)
+- Загружает и устанавливает ViPNet Client (RPM-пакет)
+- Настраивает сетевые интерфейсы для работы с VPN
+- Добавляет правила firewall для корректной работы ViPNet
+- Настраивает автозапуск сервиса ViPNet
+- Создает ярлык в меню приложений
+- Предлагает импортировать существующие конфигурации (пользователи, политики)
+- Проверяет наличие установленной версии с предложением переустановки
+
+**Особенности:**
+- Поддержка как 32-битных, так и 64-битных версий
+- Автоматическое определение архитектуры системы
+- Совместимость с РЕД ОС 7.3 из коробки
+
+**Запуск (последняя версия):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh | sudo bash
+```
+
+**Запуск (фиксированная версия v1.0):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-vipnet.sh | sudo bash
+```
+
+**Пример диалога при запуске:**
+
+```bash
+=== Установка ViPNet Client ===
+Определение архитектуры системы...
+✓ Обнаружена архитектура: x86_64
+Поиск последней версии ViPNet Client...
+✓ Найдена версия: 4.2.0-1234
+Загрузка viрnet-client-4.2.0-1234.x86_64.rpm...
+✓ Загрузка завершена
+Установка зависимостей...
+✓ Зависимости установлены
+Установка ViPNet Client...
+✓ ViPNet Client успешно установлен
+Настройка firewall...
+✓ Правила firewall добавлены
+Настройка автозапуска...
+✓ Сервис ViPNet добавлен в автозапуск
+
+Желаете импортировать конфигурацию пользователя? (y/n): y
+Укажите путь к файлу конфигурации (например, /home/user/viрnet.conf): /home/user/viрnet.conf
+✓ Конфигурация импортирована
+
+Установка завершена!
+```
+
+**Полезные команды после установки:**
+
+```bash
+# Запуск ViPNet Client
+vipnet-client
+
+# Управление сервисом
+systemctl start vipnet    # Запуск сервиса
+systemctl stop vipnet     # Остановка сервиса
+systemctl status vipnet   # Проверка статуса
+
+# Просмотр логов
+journalctl -u vipnet -f   # Логи в реальном времени
+```
+</details>
+<details>
+<summary>install-1c.sh — Установка платформы 1С:Предприятие</summary>
+
+**Что делает:**
+- Устанавливает необходимые зависимости (libxslt, libXScrnSaver, fontconfig, freetype и др.)
+- Загружает и устанавливает серверную и клиентскую части 1С:Предприятие
+- Настраивает сервер 1С (если выбран серверный режим)
+- Устанавливает дополнительные компоненты:
+  - Интерфейс на русском языке
+  - Компоненты для работы с КриптоПро (ГОСТ-шифрование)
+  - Драйверы защиты HASP (при необходимости)
+  - Компоненты для работы с веб-расширениями
+- Создает ярлыки в меню приложений (толстый клиент, тонкий клиент, конфигуратор)
+- Настраивает автозапуск сервера 1С (для серверной установки)
+- Проверяет наличие установленной версии с предложением обновления
+
+**Режимы установки:**
+- Клиентская установка — только клиентская часть (толстый/тонкий клиент)
+- Серверная установка — полная установка с сервером 1С
+- Выборочная установка — возможность выбрать конкретные компоненты
+
+**Особенности:**
+- Поддержка 32-битных и 64-битных версий
+- Автоматическая настройка рабочих каталогов
+- Оптимизация производительности для РЕД ОС
+- Совместимость с различными СУБД (PostgreSQL, MS SQL Server через ODBC)
+
+**Запуск (последняя версия):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh | sudo bash
+```
+
+**Запуск (фиксированная версия v1.0):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-1c.sh | sudo bash
+```
+
+**Пример диалога при запуске:**
+
+```bash
+=== Установка платформы 1С:Предприятие ===
+Определение архитектуры системы...
+✓ Обнаружена архитектура: x86_64
+
+Выберите тип установки:
+1) Только клиентская часть
+2) Полная (клиент + сервер)
+3) Выборочная установка компонентов
+Введите номер (1-3): 1
+
+Поиск последней версии 1С:Предприятие...
+✓ Найдена версия: 8.3.23.2045
+Загрузка 1c-enterprise-client-8.3.23.2045.x86_64.rpm...
+✓ Загрузка завершена
+Установка зависимостей...
+✓ Зависимости установлены
+Установка клиентской части 1С...
+✓ Клиентская часть успешно установлена
+
+Установить компоненты для работы с КриптоПро? (y/n): y
+✓ Компоненты КриптоПро установлены
+
+Установить драйверы HASP для работы с ключами защиты? (y/n): n
+Пропускаем установку HASP
+
+Установка завершена!
+Созданы ярлыки в меню "Офис":
+- 1С:Предприятие (толстый клиент)
+- 1С:Предприятие (тонкий клиент)
+- Конфигуратор 1С
+```
+
+**Полезные команды после установки:**
+
+```bash
+# Запуск клиента 1С (толстый клиент)
+1cv8
+
+# Запуск конфигуратора
+1cv8 CONFIG
+
+# Запуск тонкого клиента
+1cv8 THIN
+
+# Для серверной установки:
+systemctl start srv1cv83    # Запуск сервера 1С
+systemctl stop srv1cv83     # Остановка сервера
+systemctl status srv1cv83   # Проверка статуса
+
+# Просмотр версии платформы
+/opt/1cv8/x86_64/8.3.23.2045/1cv8 --version
+```
+</details>
+<details>
+<summary>cleanup.sh — Очистка системы</summary>
 
 **Что делает:**
 - Очищает временные файлы (/tmp, /var/tmp)
@@ -196,7 +356,9 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cle
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/cleanup.sh | sudo bash
 ```
+</details>
 
+---
 
 ## 📂 Структура репозитория
 
