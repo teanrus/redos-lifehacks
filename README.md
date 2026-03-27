@@ -35,11 +35,11 @@ cd redos-lifehacks
 | Файл | Описание |
 |------|----------|
 | [base-setup.sh](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
-| install-cryptopro.sh | Установка КриптоПро CSP с автоматическим определением последней версии |
-| install-messengers.sh | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
-| install-vipnet.sh | Установка и настройка ViPNet Client для защищенного VPN-соединения |
-| install-1c.sh | Установка платформы 1С:Предприятие и дополнительных компонентов |
-| cleanup.sh | Очистка системы от временных файлов, кэша, старых ядер |
+| [install-cryptopro.sh](scripts/install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
+| [install-messengers.sh](scripts/install/install-messengers.md) | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
+| [install-vipnet.sh](scripts/install/install-vipnet.md) | Установка и настройка ViPNet Client для защищенного VPN-соединения |
+| [install-1c.sh](scripts/install/install-1c.md) | Установка платформы 1С:Предприятие и дополнительных компонентов |
+| [cleanup.sh](scripts/utils/cleanup.md) | Очистка системы от временных файлов, кэша, старых ядер |
 
 ## 🔧 Подробное описание скриптов
 
