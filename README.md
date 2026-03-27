@@ -334,7 +334,7 @@ systemctl status srv1cv83   # Проверка статуса
 ```
 </details>
 <details>
-<summary>### cleanup.sh — Очистка системы</summary>
+<summary>cleanup.sh — Очистка системы</summary>
 
 **Что делает:**
 - Очищает временные файлы (/tmp, /var/tmp)
