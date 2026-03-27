@@ -32,41 +32,17 @@ cd redos-lifehacks
 
 ## 📋 Состав релиза
 
-| Файл | Описание | Команда для запуска (последняя версия) |
-|------|----------|----------------------------------------|
-| base-setup.sh | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh \| sudo bash` |
-| install-cryptopro.sh | Установка КриптоПро CSP с автоматическим определением последней версии | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh \| sudo bash` |
-| install-messengers.sh | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh \| sudo bash` |
-| install-vipnet.sh | Установка и настройка ViPNet Client для защищенного VPN-соединения | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh \| sudo bash` |
-| install-1c.sh | Установка платформы 1С:Предприятие и дополнительных компонентов | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh \| sudo bash` |
-| cleanup.sh | Очистка системы от временных файлов, кэша, старых ядер | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh \| sudo bash` |
+| Файл | Описание |
+|------|----------|
+| [base-setup.sh](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
+| install-cryptopro.sh | Установка КриптоПро CSP с автоматическим определением последней версии |
+| install-messengers.sh | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
+| install-vipnet.sh | Установка и настройка ViPNet Client для защищенного VPN-соединения |
+| install-1c.sh | Установка платформы 1С:Предприятие и дополнительных компонентов |
+| cleanup.sh | Очистка системы от временных файлов, кэша, старых ядер |
 
 ## 🔧 Подробное описание скриптов
 
-<details>
-<summary>base-setup.sh — Базовая настройка системы</summary>
-  
-**Что делает:**
-- Отключает SELinux
-- Настраивает DNF (параллельная загрузка, fastestmirror)
-- Добавляет репозитории R7 Office, MAX Desktop, Яндекс.Браузер
-- Устанавливает R7 Office, MAX, Яндекс.Браузер
-- Устанавливает и обновляет ядро (redos-kernels6)
-- Настраивает часовой пояс (Asia/Yekaterinburg, UTC+5)
-- Настраивает SSH и firewall
-- Оптимизирует систему (swappiness, TRIM для SSD)
-
-**Запуск (последняя версия):**
-```bash
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh | sudo bash
-```
-
-**Запуск (фиксированная версия v1.0):**
-
-```bash
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/base-setup.sh | sudo bash
-```
-</details>
 <details>
 <summary>install-cryptopro.sh — Установка КриптоПро CSP</summary>
 
