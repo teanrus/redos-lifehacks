@@ -34,12 +34,12 @@ cd redos-lifehacks
 
 | Файл | Описание | Команда для запуска (последняя версия) |
 |------|----------|----------------------------------------|
-| `base-setup.sh` | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh \| sudo bash` |
-| `install-cryptopro.sh` | Установка КриптоПро CSP с автоматическим определением последней версии | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh \| sudo bash` |
-| `install-messengers.sh` | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh \| sudo bash` |
-| `install-vipnet.sh` | Установка и настройка ViPNet Client для защищенного VPN-соединения | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh \| sudo bash` |
-| `install-1c.sh` | Установка платформы 1С:Предприятие и дополнительных компонентов | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh \| sudo bash` |
-| `cleanup.sh` | Очистка системы от временных файлов, кэша, старых ядер | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh \| sudo bash` |
+| base-setup.sh | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh \| sudo bash` |
+| install-cryptopro.sh | Установка КриптоПро CSP с автоматическим определением последней версии | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh \| sudo bash` |
+| install-messengers.sh | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh \| sudo bash` |
+| install-vipnet.sh | Установка и настройка ViPNet Client для защищенного VPN-соединения | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh \| sudo bash` |
+| install-1c.sh | Установка платформы 1С:Предприятие и дополнительных компонентов | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh \| sudo bash` |
+| cleanup.sh | Очистка системы от временных файлов, кэша, старых ядер | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh \| sudo bash` |
 
 ## 🔧 Подробное описание скриптов
 
