@@ -334,7 +334,7 @@ systemctl status srv1cv83   # Проверка статуса
 ```
 </details>
 <details>
-<summary>cleanup.sh — Очистка системы</summary>
+<summary>### cleanup.sh — Очистка системы</summary>
 
 **Что делает:**
 - Очищает временные файлы (/tmp, /var/tmp)
@@ -360,30 +360,6 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/clean
 
 ---
 
-## 📂 Структура репозитория
-
-```text
-redos-lifehacks/
-├── scripts/              # Готовые скрипты для автоматизации
-│   ├── setup/            # Скрипты настройки системы
-│   ├── install/          # Скрипты установки ПО
-│   └── utils/            # Вспомогательные скрипты
-│
-├── configs/              # Готовые конфигурационные файлы
-│   ├── dnf/              # Настройки DNF
-│   ├── selinux/          # Настройки SELinux
-│   ├── network/          # Сетевые настройки
-│   └── desktop/          # Настройки рабочего стола
-│
-├── docs/                 # Подробная документация
-│   ├── installation/     # Установка ОС
-│   ├── troubleshooting/  # Решение проблем
-│   ├── optimization/     # Оптимизация
-│   └── security/         # Безопасность
-│
-├── examples/             # Примеры использования
-└── tools/                # Полезные инструменты
-```
 ## 🔥 Популярные лайфхаки
 1. Ускорение DNF в 10 раз
 ```bash
@@ -440,21 +416,6 @@ sudo systemctl enable --now fstrim.timer
 - [Очистка системы от мусора](scripts/utils/cleanup.sh)
 
 ---
-
-## 🛠️ Использование скриптов
-Запуск отдельного скрипта
-```bash
-# Скачать скрипт
-wget https://raw.githubusercontent.com/teanrus/redos-lifehacks/main/scripts/install/install-cryptopro.sh
-# Сделать исполняемым
-chmod +x install-cryptopro.sh
-# Запустить
-sudo ./install-cryptopro.sh
-```
-Запуск через curl (для быстрых скриптов)
-```bash
-curl -sL https://raw.githubusercontent.com/teanrus/redos-lifehacks/main/scripts/setup/base-setup.sh | sudo bash
-```
 
 ### 📖 Документация
 Подробные инструкции с пошаговыми объяснениями находятся в папке docs/:
