@@ -33,12 +33,8 @@ cd redos-lifehacks
 ## Основные скрипты
 | Скрипт                                                                | Назначение                                            |
 | :-------------------------------------------------------------------- | :---------------------------------------------------- |
-| scripts/setup/base-setup.sh | Базовая настройка системы (SELinux, DNF, репозитории) |
-| scripts/install/install-cryptopro.sh                                  | Установка КриптоПро CSP                               |
 | scripts/install/install-vipnet.sh                                     | Установка ViPNet (с выбором версии)                   |
 | scripts/install/install-1c.sh                                         | Установка 1С:Предприятие                              |
-| scripts/install/install-messengers.sh                                 | Установка мессенджеров (Telegram, СРЕДА, MAX)         |
-| scripts/utils/cleanup.sh                                              | Очистка системы от временных файлов                   |
 
 # 🚀 Релиз v1.0 - Базовый набор скриптов для настройки РЕД ОС 7.3
 
@@ -48,6 +44,7 @@ cd redos-lifehacks
 |------|----------|----------------------------------------|
 | `base-setup.sh` | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh \| sudo bash` |
 | `install-cryptopro.sh` | Установка КриптоПро CSP с автоматическим определением последней версии | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh \| sudo bash` |
+| `install-messengers.sh` | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh \| sudo bash` |
 | `cleanup.sh` | Очистка системы от временных файлов, кэша, старых ядер | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh \| sudo bash` |
 
 ---
@@ -96,8 +93,88 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/ins
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh | sudo bash
 ```
+### 3. install-messengers.sh — Установка мессенджеров
 
-### 3. cleanup.sh — Очистка системы
+**Что делает:**
+- Автоматическое определение версии — использует последнюю версию из репозитория redos-setup
+- Установка **Telegram**:
+  - Скачивает и распаковывает архив в /opt/telegram
+  - Создает символическую ссылку /usr/bin/telegram
+  - Создает ярлык в меню приложений
+- Установка **Среда**:
+  - Скачивает и устанавливает RPM-пакет
+  - Создает ярлык в меню приложений
+- Установка **MAX**:
+  - Добавляет репозиторий MAX (при отсутствии)
+  - Устанавливает через dnf install max
+- Установка **VK Messenger** (опционально):
+  - Скачивает и устанавливает RPM-пакет
+  - Создает ярлык в меню приложений
+- Каждый мессенджер устанавливается по отдельному запросу
+- Проверка наличия установленной версии с предложением переустановки
+- Автоматическая очистка временных файлов после установки
+
+**Запуск (последняя версия):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh | sudo bash
+```
+
+**Запуск (фиксированная версия v1.0):**
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-messengers.sh | sudo bash
+```
+
+#### Пример диалога при запуске:
+
+```bash
+=== 4. Выбор мессенджеров для установки ===
+Будут установлены только выбранные мессенджеры
+
+Установить мессенджер Telegram? (y/n): y
+=== Установка Telegram ===
+Получение информации о последнем релизе...
+✓ Найдена последняя версия: v2.7
+Загрузка tsetup.tar.xz...
+✓ tsetup.tar.xz успешно загружен
+Распаковка Telegram...
+✓ Telegram успешно установлен
+
+Установить корпоративный мессенджер Среда? (y/n): y
+=== Установка Среда ===
+Загрузка sreda.rpm...
+✓ sreda.rpm успешно загружен
+✓ Установка Среда успешно выполнено
+
+Установить мессенджер MAX? (y/n): y
+=== Установка MAX ===
+✓ MAX успешно установлен
+
+Установить мессенджер ВК (VK Messenger)? (y/n): n
+Пропускаем установку VK Messenger
+Установленные компоненты:
+
+Telegram — универсальный мессенджер
+
+Среда — корпоративный мессенджер для защищенного обмена сообщениями
+
+MAX — корпоративный мессенджер MAX Desktop
+
+VK Messenger — мессенджер от ВКонтакте (опционально)
+```
+
+**Полезные команды после установки:**
+
+```bash
+# Запуск мессенджеров
+telegram      # Telegram
+sreda         # Среда
+max           # MAX
+vk-messenger  # VK Messenger
+```
+
+### 4. cleanup.sh — Очистка системы
 
 **Что делает:**
 - Очищает временные файлы (/tmp, /var/tmp)
