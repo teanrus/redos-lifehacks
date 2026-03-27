@@ -432,14 +432,14 @@ sudo systemctl enable --now fstrim.timer
 - [Настройка многомониторной конфигурации](examples/multi-monitor.md)
 
 ## 3 🛠️ Полезные инструменты
-В папке tools/ собраны утилиты для диагностики и мониторинга:
+Утилиты для диагностики и мониторинга:
 
-| Инструмент       | Назначение                                       |
-| :--------------- | :----------------------------------------------- |
-| redos-info.sh    | Сбор информации о системе (версия, ядро, пакеты) |
-| check-updates.sh | Проверка доступных обновлений                    |
-| disk-usage.sh    | Анализ использования дискового пространства      |
-| system-health.sh | Проверка состояния системы                       |
+| Файл | Описание | Команда для запуска (последняя версия) |
+|------|----------|----------------------------------------|
+| `redos-info.sh` | Сбор информации о системе (версия, ядро, пакеты) | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh \| sudo bash` |
+| `check-updates.sh` | Проверка доступных обновлений | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/check-updates.sh \| sudo bash` |
+| `disk-usage.sh` | Анализ использования дискового пространства | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/disk-usage.sh \| sudo bash` |
+| `system-health.sh` | Проверка состояния системы | `curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/system-health.sh \| sudo bash` |
 
 >### 🤝 Как внести свой вклад
 >- Форкните репозиторий
