@@ -30,14 +30,14 @@ cd redos-lifehacks
 ```
 
 ## Основные скрипты
-| Скрипт                                | Назначение                                            |
-| :------------------------------------ | :---------------------------------------------------- |
-| scripts/setup/base-setup.sh           | Базовая настройка системы (SELinux, DNF, репозитории) |
-| scripts/install/install-cryptopro.sh  | Установка КриптоПро CSP                               |
-| scripts/install/install-vipnet.sh     | Установка ViPNet (с выбором версии)                   |
-| scripts/install/install-1c.sh         | Установка 1С:Предприятие                              |
-| scripts/install/install-messengers.sh | Установка мессенджеров (Telegram, СРЕДА, MAX)       |
-| scripts/utils/cleanup.sh              | Очистка системы от временных файлов                   |
+| Скрипт                                                                | Назначение                                            |
+| :-------------------------------------------------------------------- | :---------------------------------------------------- |
+| [scripts/setup/base-setup.sh](releases/latest/download/base-setup.sh) | Базовая настройка системы (SELinux, DNF, репозитории) |
+| scripts/install/install-cryptopro.sh                                  | Установка КриптоПро CSP                               |
+| scripts/install/install-vipnet.sh                                     | Установка ViPNet (с выбором версии)                   |
+| scripts/install/install-1c.sh                                         | Установка 1С:Предприятие                              |
+| scripts/install/install-messengers.sh                                 | Установка мессенджеров (Telegram, СРЕДА, MAX)         |
+| scripts/utils/cleanup.sh                                              | Очистка системы от временных файлов                   |
 
 ## 📂 Структура репозитория
 
