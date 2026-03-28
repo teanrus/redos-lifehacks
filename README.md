@@ -81,9 +81,9 @@ sudo systemctl enable --now fstrim.timer
 - [Wi-Fi настройки для ноутбуков](docs/network/wifi-setup.md)
 ### 📦 Установка ПО
 - [Установка КриптоПро CSP](scripts/install/install-cryptopro.md)
-- [Установка ViPNet](scripts/install/install-vipnet.sh)
-- [Установка 1С:Предприятие](scripts/install/install-1c.sh)
-- [Установка мессенджеров](scripts/install/install-messengers.sh)
+- [Установка ViPNet](scripts/install/install-vipnet.md)
+- [Установка 1С:Предприятие](scripts/install/install-1c.md)
+- [Установка мессенджеров](scripts/install/install-messengers.md)
 - [Установка офисных пакетов](docs/installation/office-setup.md)
 ### 🛠️ Решение проблем
 - [Проблемы с сетью](docs/troubleshooting/network-issues.md)
