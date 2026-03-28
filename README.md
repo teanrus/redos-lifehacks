@@ -80,7 +80,7 @@ sudo systemctl enable --now fstrim.timer
 - [Настройка прокси-сервера](docs/network/proxy-setup.md)
 - [Wi-Fi настройки для ноутбуков](docs/network/wifi-setup.md)
 ### 📦 Установка ПО
-- [Установка КриптоПро CSP](scripts/install/install-cryptopro.sh)
+- [Установка КриптоПро CSP](redos-lifehacks/blob/main/scripts/install/install-cryptopro.md)
 - [Установка ViPNet](scripts/install/install-vipnet.sh)
 - [Установка 1С:Предприятие](scripts/install/install-1c.sh)
 - [Установка мессенджеров](scripts/install/install-messengers.sh)
