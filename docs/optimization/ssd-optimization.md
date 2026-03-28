@@ -52,7 +52,7 @@ issue_discards = 1
 sudo dracut --force --regenerate-all
 ```
 ---
-## 2. Оптимизация монтирования (fstab)
+## 2. Оптимизация монтирования fstab
 Оптимальные параметры для SSD  
 Отредактируйте `/etc/fstab:`
 
