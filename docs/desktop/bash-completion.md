@@ -14,4 +14,33 @@
 5. Автоподсказки как в Fish
 6. Создание своих правил автодополнения
 7. Однострочный скрипт диагностики
-
+---
+## 1. Базовое автодополнение в Bash
+**Включение автодополнения**  
+В большинстве современных дистрибутивов (включая РЕД ОС) автодополнение уже установлено, но может быть отключено. Проверьте и включите :
+```bash
+# Установить пакет bash-completion
+sudo dnf install bash-completion -y
+```
+Добавьте в ~/.bashrc (если еще нет) :
+```bash
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
+```
+Применить изменения:
+```bash
+source ~/.bashrc
+```
+Проверка работы
+```bash
+# Нажмите Tab дважды для списка команд, начинающихся с sys
+sys<Tab><Tab>
+# systemctl  sysstat  systemd  syslog
+```
+---
