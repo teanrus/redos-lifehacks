@@ -34,7 +34,7 @@ cd redos-lifehacks
 
 | Файл | Описание |
 |------|----------|
-| [redos-setup](https://github.com/teanrus/redos-setup) | автоматизированный скрипт настройки АРМ РЕД ОС 7.3. Выполняет выборочную установку ПО с экономией трафика: базовая система (R7 Office, Яндекс.Браузер, ядро), мессенджеры (СРЕДА, Telegram), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие. |
+| [redos-setup](https://github.com/teanrus/redos-setup) | Автоматизированный скрипт настройки АРМ РЕД ОС 7.3. Выполняет выборочную установку ПО: базовая система (R7 Office, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие. |
 | [base-setup.sh](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
 | [install-cryptopro.sh](scripts/install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
 | [install-messengers.sh](scripts/install/install-messengers.md) | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
