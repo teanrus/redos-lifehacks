@@ -90,6 +90,7 @@ sudo systemctl enable --now fstrim.timer
 - [Ошибки при установке ПО](docs/troubleshooting/software-issues.md)
 - [Проблемы со звуком](docs/troubleshooting/audio-issues.md)
 - [Проблемы с графикой](docs/troubleshooting/graphics-issues.md)
+- [Проблема с печатью из РЕД ОС (принтеры Kyocera)](docs/troubleshooting/printers-kyocera.md)
 ### ⚡ Оптимизация
 - [Ускорение загрузки системы](docs/optimization/boot-speed.md)
 - [Оптимизация потребления памяти](docs/optimization/memory-tuning.md)
