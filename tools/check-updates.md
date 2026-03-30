@@ -1,171 +1,404 @@
 # Проверка доступных обновлений в операционной системе РЕД ОС
 
-[![Version](https://img.shields.io/badge/version-1.0-green.svg)](https://github.com/teanrus/redos-lifehacks/releases)
+[![Version](https://img.shields.io/badge/version-1.1-green.svg)](https://github.com/teanrus/redos-lifehacks/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-## Оглавление
-
-- [Базовая проверка обновлений](#базовая-проверка-обновлений)
-- [Автоматизация проверки](#автоматизация-проверки)
-- [Проверка конкретных пакетов](#проверка-конкретных-пакетов)
-- [Работа с репозиториями](#работа-с-репозиториями)
-- [Логирование обновлений](#логирование-обновлений)
+> 📋 **Описание:** Руководство по проверке и установке обновлений в РЕД ОС с использованием встроенных утилит DNF и универсального скрипта `redos-update-checker`.
 
 ---
 
-## Базовая проверка обновлений
+## Оглавление
 
-### Быстрый просмотр всех доступных обновлений
+- [Универсальный скрипт redos-update-checker](#универсальный-скрипт-redos-update-checker)
+- [Базовые команды DNF](#базовые-команды-dnf)
+- [Проверка конкретных пакетов](#проверка-конкретных-пакетов)
+- [Работа с репозиториями](#работа-с-репозиториями)
+- [Логирование и отчётность](#логирование-и-отчётность)
+- [Автоматизация](#автоматизация)
+
+---
+
+## Универсальный скрипт redos-update-checker
+
+### 🚀 Быстрый старт
+
+#### Одной командой:
 
 ```bash
-sudo dnf check-update
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-update-checker.sh | sudo bash
 ```
 
-Показывает список пакетов, для которых доступны обновления. Возвращает код выхода `100`, если обновления есть, и `0`, если система актуальна.
-
-### Обновление с предварительным просмотром
+#### Или вручную:
 
 ```bash
+# Скачайте скрипт
+wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-update-checker.sh
+
+# Сделайте исполняемым
+chmod +x redos-update-checker.sh
+
+# Запустите от root
+sudo ./redos-update-checker.sh
+```
+
+#### Установка в систему:
+
+```bash
+# Скопировать в /usr/local/bin
+sudo cp redos-update-checker.sh /usr/local/bin/redos-update-checker
+sudo chmod +x /usr/local/bin/redos-update-checker
+
+# Теперь доступен по имени
+redos-update-checker --check
+```
+
+### 📋 Возможности скрипта
+
+| Функция | Описание |
+|---------|----------|
+| 🖥️ Информация о системе | Версия РЕД ОС, ядро, архитектура |
+| 📦 Проверка репозиториев | Список активных репозиториев |
+| 🔄 Обновление кэша | Актуализация метаданных пакетов |
+| 🔍 Проверка обновлений | Поиск доступных обновлений |
+| 🔐 Обновления безопасности | Фильтрация по критическим обновлениям |
+| 🐧 Обновления ядра | Отдельная проверка kernel-пакетов |
+| 📊 Статистика | Подсчёт количества обновлений |
+| 📝 Экспорт отчёта | Сохранение результатов в файл |
+
+### 🎯 Ключи запуска
+
+```bash
+redos-update-checker [опция]
+```
+
+| Ключ | Описание | Пример |
+|------|----------|--------|
+| `-h`, `--help` | Показать справку | `redos-update-checker --help` |
+| `-i`, `--info` | Информация о системе | `redos-update-checker --info` |
+| `-c`, `--check` | Быстрая проверка | `redos-update-checker --check` |
+| `-s`, `--security` | Только безопасность | `redos-update-checker --security` |
+| `-k`, `--kernel` | Только ядро | `redos-update-checker --kernel` |
+| `-u`, `--update` | Проверка + применение | `redos-update-checker --update` |
+| `-r`, `--report` | Экспорт отчёта | `redos-update-checker --report` |
+| `-f`, `--full` | Полная проверка | `redos-update-checker --full` |
+
+### 📁 Примеры использования
+
+```bash
+# Ежедневная быстрая проверка
+redos-update-checker --check
+
+# Перед установкой обновлений — проверка безопасности
+redos-update-checker --security
+
+# Полная проверка с экспортом отчёта
+sudo redos-update-checker --full
+
+# Автоматическое обновление (без подтверждения)
+sudo redos-update-checker --update
+```
+
+### 📄 Структура отчёта
+
+При использовании ключей `--report` или `--full` скрипт создаёт файл:
+```
+$HOME/redos-updates-report-ГГГГММДД-ЧЧММСС.txt
+```
+
+Отчёт содержит:
+- Дату и имя хоста
+- Список доступных обновлений
+- Обновления безопасности
+
+---
+
+## Базовые команды DNF
+
+### Проверка обновлений
+
+```bash
+# Показать все доступные обновления
+sudo dnf check-update
+
+# Обновить все пакеты
+sudo dnf upgrade
+
+# Обновить с предварительной проверкой
 sudo dnf check-update && sudo dnf upgrade
 ```
 
-Сначала показывает доступные обновления, затем применяет их.
-
----
-
-## Автоматизация проверки
-
-### Скрипт для быстрой проверки
-
-Создайте файл `/usr/local/bin/check-redos-updates`:
+### Информация об обновлениях
 
 ```bash
-#!/bin/bash
-echo "=== Проверка обновлений РЕД ОС ==="
-echo "Дата: $(date)"
-echo ""
-sudo dnf check-update
-echo ""
-echo "=== Статус: $(sudo dnf check-update > /dev/null 2>&1 && echo 'Обновлений нет' || echo 'Есть доступные обновления') ==="
+# История транзакций DNF
+dnf history
+
+# Детали последней транзакции
+dnf history info last
+
+# Отменить последнюю транзакцию
+sudo dnf history undo last
 ```
 
-Сделайте его исполняемым:
+### Коды возврата `dnf check-update`
 
-```bash
-sudo chmod +x /usr/local/bin/check-redos-updates
-```
-
-Теперь можно запускать просто: `check-redos-updates`
-
-### Проверка в фоновом режиме
-
-```bash
-sudo dnf check-update --refresh &
-```
-
-Обновляет метаданные репозиториев и проверяет обновления в фоновом режиме.
+| Код | Значение |
+|-----|----------|
+| `0` | Система актуальна |
+| `100` | Доступны обновления |
+| `1` | Произошла ошибка |
 
 ---
 
 ## Проверка конкретных пакетов
 
-### Поиск обновлений для конкретного пакета
+### Поиск обновлений по пакету
 
 ```bash
+# Конкретный пакет
 sudo dnf list updates | grep <имя-пакета>
-```
 
-Пример:
-```bash
+# Пример: проверка обновлений ядра
 sudo dnf list updates | grep kernel
-```
 
-### Проверка доступных версий пакета
-
-```bash
+# Все версии пакета
 dnf list --showduplicates <имя-пакета>
 ```
 
-Показывает все доступные версии пакета в репозиториях.
-
-### Проверка обновлений безопасности
+### Обновления безопасности
 
 ```bash
+# Список обновлений безопасности
 sudo dnf updateinfo list security
+
+# Подробная информация об обновлениях безопасности
+sudo dnf updateinfo info security
+
+# Применить только обновления безопасности
+sudo dnf upgrade --security
 ```
 
-Отображает только обновления, связанные с безопасностью.
+### Статистика обновлений
+
+```bash
+# Подсчитать количество доступных обновлений
+sudo dnf check-update | grep -c "^[a-zA-Z]"
+
+# Показать обновления по категориям
+sudo dnf updateinfo list
+```
 
 ---
 
 ## Работа с репозиториями
 
-### Проверка активных репозиториев
+### Управление репозиториями
 
 ```bash
-dnf repolist
-```
+# Список активных репозиториев
+dnf repolist enabled
 
-### Обновление метаданных репозиториев
+# Список всех репозиториев (включая отключенные)
+dnf repolist all
 
-```bash
+# Обновить метаданные репозиториев
 sudo dnf makecache
+
+# Очистить кэш DNF
+sudo dnf clean all
 ```
 
-Полезно выполнить перед проверкой обновлений, если давно не обновляли кэш.
-
-### Проверка обновлений из конкретного репозитория
+### Отдельные репозитории
 
 ```bash
+# Проверка обновлений из конкретного репозитория
 sudo dnf check-update --enablerepo=<repo-name>
+
+# Включить репозиторий
+sudo dnf config-manager --set-enabled <repo-name>
+
+# Отключить репозиторий
+sudo dnf config-manager --set-disabled <repo-name>
 ```
 
-Пример:
-```bash
-sudo dnf check-update --enablerepo=baseos
-```
-
-### Включение репозитория обновлений
+### Диагностика репозиториев
 
 ```bash
-sudo dnf config-manager --set-enabled updates
+# Проверить доступность репозиториев
+sudo dnf repolist -v
+
+# Информация о репозитории
+sudo dnf repo-info <repo-name>
 ```
 
 ---
 
-## Логирование обновлений
+## Логирование и отчётность
 
-### Просмотр истории обновлений DNF
+### Просмотр логов
 
 ```bash
-dnf history
+# История операций DNF
+dnf history list
+
+# Детальная информация о транзакции
+dnf history info <ID>
+
+# Логи в системном журнале
+journalctl -u dnf
 ```
 
-Показывает все транзакции DNF с датами.
-
-### Детальная информация о последней транзакции
+### Экспорт данных
 
 ```bash
-dnf history info last
-```
-
-### Экспорт списка доступных обновлений в файл
-
-```bash
+# Экспорт списка обновлений в файл
 sudo dnf check-update > ~/updates-$(date +%Y%m%d).txt 2>&1
+
+# Экспорт с подробностями
+{
+    echo "Дата: $(date)"
+    echo "Хост: $(hostname)"
+    echo ""
+    sudo dnf check-update
+    echo ""
+    sudo dnf updateinfo list security
+} > ~/full-report-$(date +%Y%m%d).txt
 ```
 
-### Автоматическое логирование
+### Формирование отчёта для аудита
 
-Добавьте в `/etc/cron.daily/log-updates`:
+```bash
+# Полный отчёт для аудита
+sudo dnf history list > ~/audit-history.txt
+sudo dnf repolist enabled >> ~/audit-history.txt
+sudo dnf check-update >> ~/audit-history.txt 2>&1
+```
+
+---
+
+## Автоматизация
+
+### Cron: ежедневная проверка
+
+Создайте файл `/etc/cron.daily/redos-updates`:
 
 ```bash
 #!/bin/bash
-sudo dnf check-update >> /var/log/dnf-updates.log 2>&1
+/usr/local/bin/redos-update-checker --report >> /var/log/redos-updates-cron.log 2>&1
+```
+
+Сделайте исполняемым:
+```bash
+sudo chmod +x /etc/cron.daily/redos-updates
+```
+
+### Cron: еженедельное обновление
+
+Создайте файл `/etc/cron.weekly/redos-upgrade`:
+
+```bash
+#!/bin/bash
+# Только обновления безопасности
+sudo dnf upgrade --security -y
+```
+
+### Systemd-таймер для проверки обновлений
+
+Создайте сервис `/etc/systemd/system/redos-update-checker.service`:
+
+```ini
+[Unit]
+Description=RED OS Update Checker
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/redos-update-checker --report
+```
+
+Создайте таймер `/etc/systemd/system/redos-update-checker.timer`:
+
+```ini
+[Unit]
+Description=Run update checker daily
+Requires=redos-update-checker.service
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+```
+
+Активируйте таймер:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now redos-update-checker.timer
+```
+
+### Уведомления в Telegram (опционально)
+
+Добавьте в скрипт отправку отчёта:
+
+```bash
+# После экспорта отчёта
+curl -X POST "https://api.telegram.org/bot<TOKEN>/sendMessage" \
+    -d chat_id="<CHAT_ID>" \
+    -d text="🔔 РЕД ОС: доступны обновления" \
+    -d parse_mode="Markdown"
 ```
 
 ---
 
-> 💡 **Совет:** Регулярно проверяйте обновления безопасности с помощью `sudo dnf updateinfo list security` и применяйте их в первую очередь.
+## 🔧 Troubleshooting
+
+### Проблема: `dnf check-update` возвращает ошибку
+
+**Решение:**
+```bash
+# Очистить кэш
+sudo dnf clean all
+
+# Пересоздать кэш
+sudo dnf makecache
+
+# Проверить репозитории
+sudo dnf repolist -v
+```
+
+### Проблема: медленная проверка обновлений
+
+**Решение:**
+```bash
+# Использовать только быстрые зеркала
+sudo dnf install dnf-plugin-fastestmirror
+
+# Включить fastestmirror
+echo "fastestmirror=True" | sudo tee -a /etc/dnf/dnf.conf
+```
+
+### Проблема: недостаточно места для обновлений
+
+**Решение:**
+```bash
+# Очистить старые ядра
+sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1 -q)
+
+# Очистить кэш
+sudo dnf clean all
+```
+
+---
+
+## 📚 Дополнительные ресурсы
+
+- [Официальная документация РЕД ОС](https://redos.red-soft.ru/wiki)
+- [DNF Documentation](https://dnf.readthedocs.io/)
+- [Репозиторий lifehacks](https://github.com/teanrus/redos-lifehacks)
+
+---
+
+> 💡 **Совет:** Регулярно проверяйте обновления безопасности с помощью `sudo dnf updateinfo list security` и применяйте их в первую очередь. Для автоматизации используйте скрипт `redos-update-checker`.
