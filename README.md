@@ -34,13 +34,13 @@ cd redos-lifehacks
 
 | Файл | Описание |
 |------|----------|
-| [redos-setup](https://github.com/teanrus/redos-setup) | Автоматизированный скрипт настройки АРМ РЕД ОС 7.3. Выполняет выборочную установку ПО: базовая система (R7 Office, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие. |
-| [base-setup.sh](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
-| [install-cryptopro.sh](scripts/install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
-| [install-messengers.sh](scripts/install/install-messengers.md) | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
-| [install-vipnet.sh](scripts/install/install-vipnet.md) | Установка и настройка ViPNet Client для защищенного VPN-соединения |
-| [install-1c.sh](scripts/install/install-1c.md) | Установка платформы 1С:Предприятие и дополнительных компонентов |
-| [cleanup.sh](scripts/utils/cleanup.md) | Очистка системы от временных файлов, кэша, старых ядер |
+| [redos-setup](https://github.com/teanrus/redos-setup) | Автоматизированный скрипт настройки АРМ РЕД ОС 7.3. Выполняет выборочную установку ПО: базовая система (R7 Office, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram, VK Messenger), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие. |
+| [base-setup](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
+| [install-cryptopro](scripts/install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
+| [install-messengers](scripts/install/install-messengers.md) | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
+| [install-vipnet](scripts/install/install-vipnet.md) | Установка и настройка ViPNet Client для защищенного VPN-соединения |
+| [install-1c](scripts/install/install-1c.md) | Установка платформы 1С:Предприятие и дополнительных компонентов |
+| [cleanup](scripts/utils/cleanup.md) | Очистка системы от временных файлов, кэша, старых ядер |
 
 ## 🔥 Популярные лайфхаки
 1. Ускорение DNF в 10 раз
