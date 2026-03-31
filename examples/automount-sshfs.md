@@ -519,4 +519,4 @@ ssh -i ~/.ssh/id_rsa_sshfs user@host
 
 - [Официальная документация SSHFS](https://github.com/libfuse/sshfs)
 - [FUSE Documentation](https://libfuse.github.io/)
-- [RED OS Wiki](https://wiki.redos.red-soft.ru/)
+- [RED OS База знаний](https://redos.red-soft.ru/base/)
