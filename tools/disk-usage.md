@@ -132,7 +132,7 @@ du -h --max-depth=2 /home 2>/dev/null | sort -rh
 ### Интерактивный анализ с ncdu
 
 ```bash
-sudo apt install ncdu
+sudo dnf install ncdu
 sudo ncdu /
 ```
 
@@ -149,22 +149,16 @@ sudo ncdu /
 
 ## Очистка кэша пакетного менеджера
 
-### Очистка кэша APT
+### Очистка кэша DNF
 
 ```bash
-sudo apt clean
+sudo dnf clean all
 ```
 
 Полная очистка кэша загруженных пакетов.
 
 ```bash
-sudo apt autoclean
-```
-
-Удаление только устаревших версий пакетов из кэша.
-
-```bash
-sudo apt autoremove
+sudo dnf autoremove
 ```
 
 Удаление ненужных пакетов-зависимостей, установленных автоматически.
@@ -172,10 +166,10 @@ sudo apt autoremove
 ### Проверка размера кэша
 
 ```bash
-du -sh /var/cache/apt/archives
+du -sh /var/cache/dnf
 ```
 
-Показывает текущий размер кэша пакетов APT.
+Показывает текущий размер кэша пакетов DNF.
 
 ### Очистка журналов системы
 
@@ -198,7 +192,7 @@ sudo journalctl --vacuum-size=100M
 ### С помощью fdupes
 
 ```bash
-sudo apt install fdupes
+sudo dnf install fdupes
 fdupes -r /home/username
 ```
 
@@ -213,7 +207,7 @@ fdupes -r -d /home/username
 ### С помощью rdfind
 
 ```bash
-sudo apt install rdfind
+sudo dnf install rdfind
 rdfind -dryrun true /home/username
 ```
 
@@ -271,9 +265,9 @@ sudo kill -HUP $(pidof rsyslog)
 
 | Утилита | Описание | Установка |
 |---------|----------|-----------|
-| `baobab` | Графический анализатор диска | `sudo apt install baobab` |
-| `filelight` | Визуализация в виде круговой диаграммы | `sudo apt install filelight` |
-| `duc` | Продвинутый анализатор с TUI/GUI | `sudo apt install duc` |
+| `baobab` | Графический анализатор диска | `sudo dnf install baobab` |
+| `filelight` | Визуализация в виде круговой диаграммы | `sudo dnf install filelight` |
+| `duc` | Продвинутый анализатор с TUI/GUI | `sudo dnf install duc` |
 
 ---
 
