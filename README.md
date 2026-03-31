@@ -2,10 +2,10 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
-[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+[![Bash](https://img.shields.io/badge/bash-5.0+-blue.svg)]()
 [![Issues](https://img.shields.io/github/issues/teanrus/redos-lifehacks)](https://github.com/teanrus/redos-lifehacks/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/teanrus/redos-lifehacks)](https://github.com/teanrus/redos-lifehacks/commits/main)
-[![Bash](https://img.shields.io/badge/bash-5.0+-blue.svg)]()
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 **Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС 7.3.**
 
