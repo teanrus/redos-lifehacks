@@ -151,7 +151,7 @@ sudo systemctl enable --now fstrim.timer
 | [disk-usage.sh](tools/disk-usage.md) | Анализ использования дискового пространства |
 | [system-health.sh](tools/system-health.md) | Проверка состояния системы |
 
-> [!NOTE]
+> [!tip]
 > 🤝 **Как внести свой вклад**.
 >
 >- Форкните репозиторий
