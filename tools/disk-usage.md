@@ -9,7 +9,7 @@
 
 ### Скрипт disk-usage.sh
 
-Для автоматического выполнения всех описанных ниже действий используйте скрипт [`disk-usage.sh`](https://github.com/teanrus/redos-lifehacks/blob/main/disk-usage.sh).
+Для автоматического выполнения всех описанных ниже действий используйте скрипт [`disk-usage.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/disk-usage.sh).
 
 **Быстрый запуск:**
 
