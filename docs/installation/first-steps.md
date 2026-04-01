@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
+[![Bash](https://img.shields.io/badge/bash-5.0+-blue.svg)]()
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ## 📖 Оглавление
@@ -78,7 +79,7 @@ dnf repolist --all
 
 ## 🎬 3. Установка кодеков и драйверов
 
-### Мультимедиа кодеки:
+### Мультимедиа кодеки
 
 ```bash
 # Установка кодеков для воспроизведения видео и аудио
@@ -89,7 +90,7 @@ sudo dnf install ffmpeg gstreamer1-plugins-base gstreamer1-plugins-good \
 sudo dnf install libdvdcss gstreamer1-plugin-openh264
 ```
 
-### Драйверы устройств:
+### Драйверы устройств
 
 ```bash
 # Драйверы для принтеров
@@ -112,22 +113,53 @@ sudo dnf install mesa-dri-drivers mesa-vulkan-drivers
 
 ## 🎨 4. Настройка внешнего вида
 
-### Смена темы оформления (MATE):
+### Смена темы оформления (MATE)
+
+#### Сначала найдем, какие пакеты с темами доступны:
 
 ```bash
-# Установка дополнительных тем
-sudo dnf install gnome-themes-extra gtk2-engines
+# Поиск пакетов с темами
+sudo dnf search theme | grep -i gnome
 
-# Темы в пользовательскую папку
+# Или более широкий поиск
+sudo dnf search gnome | grep -i theme
+
+# Поиск конкретных пакетов
+sudo dnf search adwaita
+```
+
+#### В RED OS (EL7) доступны следующие пакеты:
+
+```bash
+# Установка базовых тем GNOME
+sudo dnf install gnome-themes-standard
+
+# Или установка дополнительных тем
+sudo dnf install gnome-themes-legacy
+
+# Если нужно больше тем, включите EPEL репозиторий
+sudo dnf install epel-release
+sudo dnf install gnome-themes-extra  # после EPEL может появиться
+```
+
+#### Ручная установка тем:
+
+```bash
+# Создание директорий для тем и иконок
 mkdir -p ~/.themes
 mkdir -p ~/.icons
 
-# Применить тему через gsettings
-gsettings set org.mate.interface gtk-theme 'Adwaita-dark'
-gsettings set org.mate.interface icon-theme 'Adwaita'
+# Загрузка популярных тем (например, Arc)
+cd /tmp
+wget https://github.com/jnsh/arc-theme/releases/download/20221218/arc-theme-20221218.tar.xz
+tar -xf arc-theme-20221218.tar.xz
+cp -r arc-theme-* ~/.themes/
+
+# Загрузка набора иконок Papirus
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 ```
 
-### Настройка панели задач:
+### Настройка панели задач
 
 ```
 1. Правый клик на панели → Добавить на панель
@@ -138,7 +170,7 @@ gsettings set org.mate.interface icon-theme 'Adwaita'
    - Быстрый запуск
 ```
 
-### Настройка шрифтов:
+### Настройка шрифтов
 
 ```bash
 # Установка дополнительных шрифтов
@@ -168,14 +200,11 @@ EOF
 
 ## 📚 5. Установка необходимого ПО
 
-### Офисные приложения:
+### Офисные приложения
 
 ```bash
 # Р7-Офис
 sudo dnf install r7-office
-
-# LibreOffice (уже установлен)
-sudo dnf install libreoffice-writer libreoffice-calc libreoffice-impress
 
 # PDF-редактор
 sudo dnf install okular
@@ -185,12 +214,12 @@ sudo dnf install simple-scan
 ```
 
 > [!NOTE]
-> Если Р7-Офис недоступен в репозитории, скачайте установщик с официального сайта: https://r7-office.ru/download/
+> Если Р7-Офис недоступен в репозитории, скачайте установщик с официального сайта: <https://r7-office.ru/download/>
 
-### Браузеры:
+### Браузеры
 
 ```bash
-# Firefox (обычно уже установлен)
+# Firefox
 sudo dnf install firefox
 
 # Яндекс Браузер
@@ -200,7 +229,7 @@ sudo dnf install yandex-browser-stable
 sudo dnf install chromium
 ```
 
-### Графические редакторы:
+### Графические редакторы
 
 ```bash
 # GIMP
@@ -219,7 +248,7 @@ sudo dnf install inkscape
 sudo dnf install shotwell
 ```
 
-### Мессенджеры:
+### Мессенджеры
 
 ```bash
 # Telegram (установка из репозитория GitHub)
@@ -279,6 +308,7 @@ sudo ./install-messengers.sh
 ```
 
 **Скрипт устанавливает:**
+
 - **Telegram** — популярный мессенджер
 - **СРЕДА** — корпоративный мессенджер
 - **MAX** — национальный мессенджер
@@ -289,7 +319,7 @@ sudo ./install-messengers.sh
 
 ---
 
-### Медиаплееры:
+### Медиаплееры
 
 ```bash
 # VLC
@@ -302,7 +332,7 @@ sudo dnf install audacious
 sudo dnf install celluloid
 ```
 
-### Утилиты:
+### Утилиты
 
 ```bash
 # Архиваторы
@@ -325,7 +355,7 @@ sudo dnf install uget
 
 ## 🔒 6. Настройка безопасности
 
-### Настройка брандмауэра:
+### Настройка брандмауэра
 
 ```bash
 # Проверка статуса
@@ -343,7 +373,7 @@ sudo firewall-cmd --reload
 sudo firewall-cmd --list-all
 ```
 
-### Настройка автоматических обновлений:
+### Настройка автоматических обновлений
 
 ```bash
 # Установка пакета для автообновлений
@@ -356,7 +386,7 @@ sudo systemctl enable --now dnf-automatic-install.timer
 sudo systemctl status dnf-automatic-install.timer
 ```
 
-### Резервное копирование паролей:
+### Резервное копирование паролей
 
 ```bash
 # Сохранить список установленных пакетов
@@ -376,7 +406,7 @@ cut -d: -f1 /etc/passwd > ~/backup-users.txt
 
 ## ⚡ 7. Оптимизация производительности
 
-### Очистка системы:
+### Очистка системы
 
 ```bash
 # Очистка кэша DNF
@@ -392,7 +422,7 @@ sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1 -q)
 sudo journalctl --vacuum-time=7d
 ```
 
-### Настройка своп-файла:
+### Настройка своп-файла
 
 ```bash
 # Проверка текущего свопа
@@ -409,7 +439,7 @@ sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-### Отключение визуальных эффектов:
+### Отключение визуальных эффектов
 
 ```bash
 # Отключить анимации в MATE
@@ -419,7 +449,7 @@ gsettings set org.mate.Marco.general reduced-resources true
 gsettings set org.mate.Marco.general compositing-manager false
 ```
 
-### Настройка энергопотребления (для ноутбуков):
+### Настройка энергопотребления (для ноутбуков)
 
 ```bash
 # Установка утилит энергосбережения
