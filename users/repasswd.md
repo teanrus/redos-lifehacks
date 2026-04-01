@@ -2,7 +2,6 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
-[![Bash](https://img.shields.io/badge/bash-5.0+-blue.svg)]()
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 > **Важно:** Для выполнения этой инструкции требуется физический доступ к консоли сервера или доступ к remote console виртуальной машины.
@@ -159,7 +158,7 @@ reboot
 ## Возможные проблемы
 
 | Проблема | Решение |
-|----------|---------|
+| -------- | ------- |
 | Система не загружается после смены пароля | Не создан `/.autorelabel` — повторите процедуру |
 | Команда `passwd` зависает | Установите локаль: `export LANG=en_US.UTF-8` |
 | Диск зашифрован LUKS | Методы через GRUB не работают — нужен ключ дешифрования |
