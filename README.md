@@ -118,7 +118,7 @@ sudo systemctl enable --now fstrim.timer
 - [Ускорение загрузки системы](docs/optimization/boot-speed.md)
 - [Оптимизация потребления памяти](docs/optimization/memory-tuning.md)
 - [Настройка swap](docs/optimization/swap-tuning.md)
-- [Очистка системы от мусора](scripts/utils/cleanup.sh)
+- [Очистка системы от мусора](scripts/utils/cleanup.md)
 
 ---
 
