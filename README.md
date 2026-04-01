@@ -167,10 +167,6 @@ cd redos-lifehacks
 >- Команды с пояснениями
 >- Проверка работоспособности на РЕД ОС 7.3
 
-## 📄 Лицензия
-
-MIT License — свободное использование, копирование, модификация и распространение.
-
 ---
 
 ## ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
