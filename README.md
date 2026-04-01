@@ -28,12 +28,12 @@ git clone https://github.com/teanrus/redos-lifehacks.git
 cd redos-lifehacks
 ```
 
-# 🚀 Базовый набор скриптов для настройки РЕД ОС 7.3
+## 🚀 Базовый набор скриптов для настройки РЕД ОС 7.3
 
 ## 📋 Состав релиза
 
 | Файл | Описание |
-|------|----------|
+| ---- | -------- |
 | [redos-setup](https://github.com/teanrus/redos-setup) | Автоматизированный скрипт настройки АРМ РЕД ОС 7.3. Выполняет выборочную установку ПО: базовая система (R7 Office, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram, VK Messenger), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие. |
 | [base-setup](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
 | [install-cryptopro](scripts/install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
@@ -46,33 +46,33 @@ cd redos-lifehacks
 
 1. Ускорение DNF в 10 раз
 
-```bash
-echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf
-```
+    ```bash
+    echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf
+    ```
 
 2. Отключение SELinux (для совместимости с некоторым ПО)
 
-```bash
-sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
-```
+    ```bash
+    sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
+    ```
 
 3. Монтирование удаленной папки через SSH
 
-```bash
-sshfs user@server:/remote/path /local/mount/point
-```
+    ```bash
+    sshfs user@server:/remote/path /local/mount/point
+    ```
 
 4. Быстрая установка всех обновлений
 
-```bash
-sudo dnf update -y
-```
+    ```bash
+    sudo dnf update -y
+    ```
 
 5. Настройка TRIM для SSD
 
-```bash
-sudo systemctl enable --now fstrim.timer
-```
+    ```bash
+    sudo systemctl enable --now fstrim.timer
+    ```
 
 ## 📚 Категории лайфхаков
 
@@ -145,7 +145,7 @@ sudo systemctl enable --now fstrim.timer
 В папке tools/ собраны утилиты для диагностики и мониторинга:
 
 | Файл | Описание |
-|------|----------|
+| ---- | -------- |
 | [redos-info.sh](tools/redos-info.md) | Сбор информации о системе (версия, ядро, пакеты) |
 | [check-updates.sh](tools/check-updates.md) | Проверка доступных обновлений |
 | [disk-usage.sh](tools/disk-usage.md) | Анализ использования дискового пространства |
@@ -153,14 +153,16 @@ sudo systemctl enable --now fstrim.timer
 
 > [!tip]
 > **Как внести свой вклад**.
+>
 >- Форкните репозиторий
 >- Создайте ветку (git checkout -b feature/new-lifehack)
 >- Добавьте свой лайфхак в соответствующую категорию
 >- Зафиксируйте изменения (git commit -m 'Add: новый лайфхак')
 >- Отправьте пулл-реквест
-
+<!-- -->
 >[!important]
 > **Требования к контенту**
+>
 >- Подробное описание проблемы и решения
 >- Пошаговые инструкции
 >- Команды с пояснениями
