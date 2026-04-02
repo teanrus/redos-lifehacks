@@ -24,7 +24,7 @@
    init=/bin/bash
    ```
 
-   Пример строки после редактирования:
+   **Пример строки после редактирования:**
 
    ```bash
    linux /vmlinuz-... rhgb quiet init=/bin/bash
