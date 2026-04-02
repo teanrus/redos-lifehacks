@@ -4,9 +4,6 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
----
-
-## Оглавление
 - [1. Чёрный экран после загрузки системы](#1-чёрный-экран-после-загрузки-системы)
 - [2. Низкое разрешение экрана](#2-низкое-разрешение-экрана)
 - [3. Тормозит интерфейс GNOME/MATE](#3-тормозит-интерфейс-gnomemate)
