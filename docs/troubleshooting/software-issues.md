@@ -4,7 +4,6 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-## 📚 Оглавление
 - [1. Ошибка зависимости пакета](#1-ошибка-зависимости-пакета)
 - [2. Ошибка конфликта пакетов](#2-ошибка-конфликта-пакетов)
 - [3. Ошибка места на диске](#3-ошибка-места-на-диске)
