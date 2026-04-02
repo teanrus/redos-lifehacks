@@ -46,12 +46,12 @@
 | Файл | Описание |
 | ---- | -------- |
 | [redos-setup](https://github.com/teanrus/redos-setup) | Автоматизированный скрипт настройки АРМ РЕД ОС 7.3. Выполняет выборочную установку ПО: базовая система (R7 Office, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram, VK Messenger), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие. |
-| [base-setup](setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
-| [install-cryptopro](install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
-| [install-messengers](install/install-messengers.md) | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
-| [install-vipnet](install/install-vipnet.md) | Установка и настройка ViPNet Client для защищенного VPN-соединения |
-| [install-1c](install/install-1c.md) | Установка платформы 1С:Предприятие и дополнительных компонентов |
-| [cleanup](utils/cleanup.md) | Очистка системы от временных файлов, кэша, старых ядер |
+| [base-setup](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
+| [install-cryptopro](scripts/install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
+| [install-messengers](scripts/install/install-messengers.md) | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
+| [install-vipnet](scripts/install/install-vipnet.md) | Установка и настройка ViPNet Client для защищенного VPN-соединения |
+| [install-1c](scripts/install/install-1c.md) | Установка платформы 1С:Предприятие и дополнительных компонентов |
+| [cleanup](scripts/utils/cleanup.md) | Очистка системы от временных файлов, кэша, старых ядер |
 
 ## 🔥 Популярные лайфхаки
 
@@ -89,10 +89,10 @@
 
 ### 🖥️ Системные настройки
 
-- [Настройка DNF для быстрой загрузки](optimization/dnf-tuning.md)
-- [Оптимизация работы с SSD](optimization/ssd-optimization.md)
-- [Настройка автодополнения в терминале](desktop/bash-completion.md)
-- [Настройка часовых поясов и времени](installation/timezone-setup.md)
+- [Настройка DNF для быстрой загрузки](docs/optimization/dnf-tuning.md)
+- [Оптимизация работы с SSD](docs/optimization/ssd-optimization.md)
+- [Настройка автодополнения в терминале](docs/desktop/bash-completion.md)
+- [Настройка часовых поясов и времени](docs/installation/timezone-setup.md)
 
 ### 🔒 Безопасность
 
@@ -114,7 +114,7 @@
 - [Установка ViPNet](install/install-vipnet.md)
 - [Установка 1С:Предприятие](install/install-1c.md)
 - [Установка мессенджеров](install/install-messengers.md)
-- [Установка офисных пакетов](installation/office-setup.md)
+- [Установка офисных пакетов](docs/installation/office-setup.md)
 
 ### 🛠️ Решение проблем
 
@@ -126,10 +126,10 @@
 
 ### ⚡ Оптимизация
 
-- [Ускорение загрузки системы](optimization/boot-speed.md)
-- [Оптимизация потребления памяти](optimization/memory-tuning.md)
-- [Настройка swap](optimization/swap-tuning.md)
-- [Очистка системы от мусора](utils/cleanup.md)
+- [Ускорение загрузки системы](docs/optimization/boot-speed.md)
+- [Оптимизация потребления памяти](docs/optimization/memory-tuning.md)
+- [Настройка swap](docs/optimization/swap-tuning.md)
+- [Очистка системы от мусора](scripts/utils/cleanup.md)
 
 ---
 
@@ -137,10 +137,10 @@
 
 Подробные инструкции с пошаговыми объяснениями находятся в папке docs/:
 
-- [Установка РЕД ОС с флешки](installation/usb-install.md)
-- [Первые шаги после установки](installation/first-steps.md)
-- [Настройка рабочего окружения](desktop/environment-setup.md)
-- [Резервное копирование и восстановление](backup/backup-strategies.md)
+- [Установка РЕД ОС с флешки](docs/installation/usb-install.md)
+- [Первые шаги после установки](docs/installation/first-steps.md)
+- [Настройка рабочего окружения](docs/desktop/environment-setup.md)
+- [Резервное копирование и восстановление](docs/troubleshooting/backup-strategies.md)
 
 ## 🎯 Примеры использования
 
