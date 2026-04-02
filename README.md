@@ -27,14 +27,15 @@
 │   ├── [install](/scripts/install/) Скрипты установки ПО  
 │   └── [utils](/scripts/utils/) Вспомогательные скрипты  
 │  
-├── docs/              # Подробная документация  
-│   ├── installation/  # Установка ОС  
-│   ├── troubleshooting/ # Решение проблем  
-│   ├── optimization/  # Оптимизация  
-│   └── security/      # Безопасность  
+├── [docs](/docs/) Подробная документация  
+│   ├── [desktop](/docs/desktop/) Окружение рабочего стола  
+│   ├── [installation](/docs/installation/) Установка ОС  
+│   ├── [optimization](/docs/optimization/) Оптимизация  
+│   ├── [security](/docs/security/) Безопасность  
+│   └── [troubleshooting](/docs/troubleshooting/) Решение проблем  
 │  
-├── examples/          # Примеры использования  
-└── tools/             # Полезные инструменты  
+├── [examples](/examples/) Примеры использования  
+└── [tools](/tools/) Полезные инструменты  
 
 ## 🚀 Базовый набор скриптов для настройки РЕД ОС 7.3
 
