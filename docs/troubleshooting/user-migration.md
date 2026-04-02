@@ -1,14 +1,11 @@
-# Миграция пользователя в РЕД ОС — Интерактивный скрипт
+# Миграция пользователя в РЕД ОС
 
-Автоматизированный скрипт для переноса данных от старого пользователя к новому с интерактивным выбором и настройкой параметров.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-## 📋 Описание
-
-Скрипт `user-migration.sh` предназначен для миграции учётной записи пользователя в операционной системе РЕД ОС. Автоматизирует создание нового пользователя, перенос файлов и настройку прав доступа.
-
-**Версия:** 2.0 (интерактивная)  
-**Репозиторий:** https://github.com/teanrus/redos-lifehacks  
-**Прямая ссылка:** https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh
+>Скрипт `user-migration.sh` предназначен для миграции учётной записи пользователя в операционной системе РЕД ОС.
+>Автоматизирует создание нового пользователя, перенос файлов и настройку прав доступа.
 
 ---
 
