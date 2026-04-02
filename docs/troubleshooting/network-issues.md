@@ -4,7 +4,6 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-## 📚 Оглавление
 - [1. Диагностика подключения к сети](#1-диагностика-подключения-к-сети)
 - [2. Сброс сетевых настроек](#2-сброс-сетевых-настроек)
 - [3. Настройка DNS при проблемах с разрешением имён](#3-настройка-dns-при-проблемах-с-разрешением-имён)
