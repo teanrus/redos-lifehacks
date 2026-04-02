@@ -6,6 +6,7 @@
 
 - [audio-issues.md](audio-issues.md) Решение проблем со звуком в РЕД ОС
 - [graphics-issues.md](graphics-issues.md) Проблемы с графикой в операционной системе РЕД ОС
+- [keyrings.md](keyrings.md) Сброс связки ключей GNOME Keyring в РЕД ОС
 - [network-issues.md](network-issues.md) Решение проблем с сетью в РЕД ОС
 - [printers-kyocera.md](printers-kyocera.md) Установка принтеров Kyocera в РЕД ОС
 - [repasswd.md](repasswd.md) Восстановление пароля root в РЕД ОС 7.3
