@@ -22,19 +22,21 @@
 
 ## 📂 Структура репозитория
 
-├── [scripts](/scripts/) Готовые скрипты для автоматизации  
-│   ├── [setup](/scripts/setup/) Скрипты настройки системы  
-│   ├── [install](/scripts/install/) Скрипты установки ПО  
-│   └── [utils](/scripts/utils/) Вспомогательные скрипты  
-│  
 ├── [docs](/docs/) Подробная документация  
 │   ├── [desktop](/docs/desktop/) Окружение рабочего стола  
 │   ├── [installation](/docs/installation/) Установка ОС  
+│   ├── [network](/docs/network/) Сеть и интернет
 │   ├── [optimization](/docs/optimization/) Оптимизация  
 │   ├── [security](/docs/security/) Безопасность  
 │   └── [troubleshooting](/docs/troubleshooting/) Решение проблем  
 │  
 ├── [examples](/examples/) Примеры использования  
+│  
+├── [scripts](/scripts/) Готовые скрипты для автоматизации  
+│   ├── [setup](/scripts/setup/) Скрипты настройки системы  
+│   ├── [install](/scripts/install/) Скрипты установки ПО  
+│   └── [utils](/scripts/utils/) Вспомогательные скрипты  
+│  
 └── [tools](/tools/) Полезные инструменты  
 
 ## 🚀 Базовый набор скриптов для настройки РЕД ОС 7.3
