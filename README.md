@@ -25,7 +25,7 @@
 ├── [docs](/docs/) Подробная документация  
 │   ├── [desktop](/docs/desktop/) Окружение рабочего стола  
 │   ├── [installation](/docs/installation/) Установка ОС  
-│   ├── [network](/docs/network/) Сеть и интернет
+│   ├── [network](/docs/network/) Сеть и интернет  
 │   ├── [optimization](/docs/optimization/) Оптимизация  
 │   ├── [security](/docs/security/) Безопасность  
 │   └── [troubleshooting](/docs/troubleshooting/) Решение проблем  
