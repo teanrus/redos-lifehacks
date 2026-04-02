@@ -45,35 +45,9 @@ dnf repolist
 # Включить все репозитории
 sudo dnf config-manager --set-enabled "*"
 
-# Добавить репозиторий EPEL (дополнительные пакеты)
-sudo dnf install epel-release
-
-# Добавить репозиторий для Р7-Офис
-sudo dnf install -y r7-release
-
-# Добавить репозиторий для MAX (национальный мессенджер)
-cat > /etc/yum.repos.d/max.repo << 'EOF'
-[max]
-name=MAX Desktop
-baseurl=https://download.max.ru/linux/rpm/el/9/x86_64
-enabled=1
-gpgcheck=1
-repo_gpgcheck=1
-gpgkey=https://download.max.ru/linux/rpm/public.asc
-sslverify=1
-metadata_expire=300
-EOF
-rpm --import https://download.max.ru/linux/rpm/public.asc
-
-# Добавить репозиторий для Яндекс Браузера
-sudo dnf install -y yandex-browser-release
-
 # Проверить доступные репозитории
 dnf repolist --all
 ```
-
-> [!TIP]
-> Репозиторий EPEL содержит дополнительные пакеты, которых нет в основных репозиториях РЕД ОС.
 
 ---
 
@@ -112,52 +86,6 @@ sudo dnf install mesa-dri-drivers mesa-vulkan-drivers
 ---
 
 ## 🎨 4. Настройка внешнего вида
-
-### Смена темы оформления (MATE)
-
-#### Сначала найдем, какие пакеты с темами доступны:
-
-```bash
-# Поиск пакетов с темами
-sudo dnf search theme | grep -i gnome
-
-# Или более широкий поиск
-sudo dnf search gnome | grep -i theme
-
-# Поиск конкретных пакетов
-sudo dnf search adwaita
-```
-
-#### В RED OS (EL7) доступны следующие пакеты:
-
-```bash
-# Установка базовых тем GNOME
-sudo dnf install gnome-themes-standard
-
-# Или установка дополнительных тем
-sudo dnf install gnome-themes-legacy
-
-# Если нужно больше тем, включите EPEL репозиторий
-sudo dnf install epel-release
-sudo dnf install gnome-themes-extra  # после EPEL может появиться
-```
-
-#### Ручная установка тем:
-
-```bash
-# Создание директорий для тем и иконок
-mkdir -p ~/.themes
-mkdir -p ~/.icons
-
-# Загрузка популярных тем (например, Arc)
-cd /tmp
-wget https://github.com/jnsh/arc-theme/releases/download/20221218/arc-theme-20221218.tar.xz
-tar -xf arc-theme-20221218.tar.xz
-cp -r arc-theme-* ~/.themes/
-
-# Загрузка набора иконок Papirus
-wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
-```
 
 ### Настройка панели задач
 
@@ -202,14 +130,24 @@ EOF
 
 ### Офисные приложения
 
+**Р7-Офис**
+
 ```bash
-# Р7-Офис
-sudo dnf install r7-office
+# Добавить репозиторий для Р7-Офис
+sudo dnf install -y r7-release
+# Установить
+sudo dnf install -y r7-office
+```
 
-# PDF-редактор
+**PDF-редактор**
+
+```bash
 sudo dnf install okular
+```
 
-# Сканер документов
+**Сканер документов**
+
+```bash
 sudo dnf install simple-scan
 ```
 
@@ -218,14 +156,24 @@ sudo dnf install simple-scan
 
 ### Браузеры
 
+**Firefox**
+
 ```bash
-# Firefox
 sudo dnf install firefox
+```
 
-# Яндекс Браузер
+**Яндекс Браузер**
+
+```bash
+# Добавить репозиторий для Яндекс Браузера
+sudo dnf install -y yandex-browser-release
+# Установить
 sudo dnf install yandex-browser-stable
+```
 
-# Chromium
+**Chromium**
+
+```bash
 sudo dnf install chromium
 ```
 
@@ -250,8 +198,9 @@ sudo dnf install shotwell
 
 ### Мессенджеры
 
+**Telegram** (установка из репозитория GitHub)
+
 ```bash
-# Telegram (установка из репозитория GitHub)
 wget https://github.com/teanrus/redos-setup/releases/latest/download/tsetup.tar.xz
 tar -xJf tsetup.tar.xz
 sudo mkdir -p /opt/telegram
@@ -259,15 +208,21 @@ sudo cp -r Telegram/* /opt/telegram/
 sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram
 sudo chmod +x /opt/telegram/Telegram
 rm -rf Telegram tsetup.tar.xz
+```
 
-# СРЕДА (корпоративный мессенджер)
+ **Среда** (корпоративный мессенджер)
+
+```bash
 wget https://github.com/teanrus/redos-setup/releases/latest/download/sreda.rpm
 sudo dnf install -y sreda.rpm
 rm -f sreda.rpm
+```
 
-# MAX (национальный мессенджер)
-# Добавить репозиторий MAX
-cat > /tmp/max.repo << 'EOF'
+**MAX** (национальный мессенджер)
+
+```bash
+# Добавить репозиторий
+sudo tee /etc/yum.repos.d/max.repo >/dev/null <<'EOF'
 [max]
 name=MAX Desktop
 baseurl=https://download.max.ru/linux/rpm/el/9/x86_64
@@ -275,26 +230,30 @@ enabled=1
 gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://download.max.ru/linux/rpm/public.asc
+sslverify=1
+metadata_expire=300
 EOF
-sudo cp /tmp/max.repo /etc/yum.repos.d/
+# Импортировать GPG-ключ
 sudo rpm --import https://download.max.ru/linux/rpm/public.asc
-sudo dnf makecache
+# Установить
+sudo dnf clean all
+sudo dnf install max
+```
 
-# Установка MAX
-sudo dnf install -y max
+**VK Messenger** (установка из репозитория GitHub)
 
-# VK Messenger (установка из репозитория GitHub)
+```bash
 wget https://github.com/teanrus/redos-setup/releases/latest/download/vk-messenger.rpm
 sudo dnf install -y vk-messenger.rpm
 rm -f vk-messenger.rpm
 ```
 
 > [!NOTE]
-> Все мессенджеры устанавливаются из официальных источников. Для СРЕДА требуется корпоративный аккаунт.
+> Все мессенджеры устанавливаются из официальных источников. Для корпоративного мессенджера "Среда" требуется корпоративный аккаунт.
 
 ---
 
-### 🔹 Установка мессенджеров готовым скриптом
+### Установка мессенджеров готовым скриптом
 
 ```bash
 # Скачать скрипт установки мессенджеров
@@ -310,7 +269,7 @@ sudo ./install-messengers.sh
 **Скрипт устанавливает:**
 
 - **Telegram** — популярный мессенджер
-- **СРЕДА** — корпоративный мессенджер
+- **Среда** — корпоративный мессенджер
 - **MAX** — национальный мессенджер
 - **VK Messenger** — мессенджер ВКонтакте
 
@@ -470,7 +429,7 @@ sudo tlp-stat -s
 
 ## 🎯 8. Лайфхаки
 
-### 🔹 Быстрая настройка системы одним скриптом
+### Быстрая настройка системы одним скриптом
 
 ```bash
 #!/bin/bash
@@ -480,7 +439,6 @@ echo "Обновление системы..."
 sudo dnf upgrade --refresh -y
 
 echo "Настройка репозиториев..."
-sudo dnf install epel-release -y
 sudo dnf install -y r7-release
 sudo dnf install -y yandex-browser-release
 
@@ -520,7 +478,7 @@ echo "Готово! Перезагрузите систему."
 
 ---
 
-### 🔹 Проверка установленных пакетов
+### Проверка установленных пакетов
 
 ```bash
 # Количество установленных пакетов
@@ -538,7 +496,7 @@ dnf list installed | grep -i "название"
 
 ---
 
-### 🔹 Быстрый доступ к настройкам
+### Быстрый доступ к настройкам
 
 ```bash
 # Открыть настройки системы
@@ -559,7 +517,7 @@ mate-mouse-properties
 
 ---
 
-### 🔹 Создание точек восстановления
+### Создание точек восстановления
 
 ```bash
 # Установка Timeshift
@@ -579,7 +537,7 @@ sudo timeshift-gtk
 
 ---
 
-### 🔹 Настройка автозапуска программ
+### Настройка автозапуска программ
 
 ```bash
 # Просмотр автозагрузки
@@ -607,7 +565,7 @@ EOF
 
 ---
 
-### 🔹 Мониторинг ресурсов в реальном времени
+### Мониторинг ресурсов в реальном времени
 
 ```bash
 # Установка htop
@@ -626,7 +584,7 @@ glances
 
 ---
 
-### 🔹 Быстрая очистка места на диске
+### Быстрая очистка места на диске
 
 ```bash
 # Анализ занятого места
@@ -647,7 +605,7 @@ rm -rf ~/.cache/*
 
 ---
 
-### 🔹 Настройка общего доступа к файлам
+### Настройка общего доступа к файлам
 
 ```bash
 # Установка Samba
@@ -678,7 +636,7 @@ sudo systemctl enable smb
 
 ---
 
-### 🔹 Настройка удалённого рабочего стола
+### Настройка удалённого рабочего стола
 
 ```bash
 # Установка xrdp
@@ -701,7 +659,7 @@ sudo systemctl status xrdp
 
 ---
 
-### 🔹 Резервное копирование настроек пользователя
+### Резервное копирование настроек пользователя
 
 ```bash
 # Создание архива с настройками
@@ -722,7 +680,7 @@ tar -xzvf ~/backup-settings-DATE.tar.gz -C ~/
 
 ---
 
-### 🔹 Настройка горячих клавиш
+### Настройка горячих клавиш
 
 ```
 Система → Настройки → Клавиатура → Комбинации клавиш
@@ -741,7 +699,7 @@ tar -xzvf ~/backup-settings-DATE.tar.gz -C ~/
 
 ---
 
-### 🔹 Проверка состояния системы
+### Проверка состояния системы
 
 ```bash
 # Информация о системе
@@ -768,7 +726,7 @@ free -h
 
 ---
 
-### 🔹 Настройка ночного режима
+### Настройка ночного режима
 
 ```bash
 # Включение Redshift (фильтр синего света)
@@ -795,7 +753,7 @@ EOF
 
 ---
 
-### 🔹 Быстрый доступ к часто используемым командам
+### Быстрый доступ к часто используемым командам
 
 ```bash
 # Добавить алиасы в ~/.bashrc
