@@ -4,8 +4,6 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-## 📚 Оглавление
-
 - [1. Проверка состояния звука](#1-проверка-состояния-звука)
 - [2. Звук полностью отсутствует](#2-звук-полностью-отсутствует)
 - [3. Звук тихий или хриплый](#3-звук-тихий-или-хриплый)
