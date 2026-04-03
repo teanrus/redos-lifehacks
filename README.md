@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-**Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС 7.3.**
+**Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС**
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## 📂 Структура репозитория
 
-├── [docs](/docs/) Подробная документация  
+├── [docs](/docs/readme.md) Подробная документация  
 │   ├── [desktop](/docs/desktop/) Окружение рабочего стола  
 │   ├── [installation](/docs/installation/) Установка ОС  
 │   ├── [network](/docs/network/) Сеть и интернет  
