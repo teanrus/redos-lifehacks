@@ -5,7 +5,7 @@
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ├── [desktop](/docs/desktop/readme.md) Окружение рабочего стола  
-├── [installation](/docs/installation/) Установка ОС  
+├── [installation](/docs/installation/readme.md) Установка ОС  
 ├── [network](/docs/network/) Сеть и интернет  
 ├── [optimization](/docs/optimization/) Оптимизация  
 ├── [security](/docs/security/) Безопасность  
