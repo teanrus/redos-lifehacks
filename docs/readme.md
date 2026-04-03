@@ -7,6 +7,6 @@
 ├── [desktop](/docs/desktop/readme.md) Окружение рабочего стола  
 ├── [installation](/docs/installation/readme.md) Установка ОС  
 ├── [network](/docs/network/readme.md) Сеть и интернет  
-├── [optimization](/docs/optimization/) Оптимизация  
+├── [optimization](/docs/optimization/readme.md) Оптимизация  
 ├── [security](/docs/security/) Безопасность  
 └── [troubleshooting](/docs/troubleshooting/) Решение проблем  
