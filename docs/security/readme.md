@@ -3,3 +3,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+
+├── [Настройка аудита действий пользователей в Linux](/docs/security/audit-setup.md)  
+├── [Шифрование домашней папки в Linux](/docs/security/encryption.md)  
+├── [Настройка Firewall (firewalld) в РЕД ОС](/docs/security/firewall-setup.md)  
+└── [Настройка сложных паролей](/docs/security/password-policy.md)  
