@@ -23,21 +23,21 @@
 ## 📂 Структура репозитория
 
 ├── [docs](/docs/readme.md) Подробная документация  
-│   ├── [desktop](/docs/desktop/) Окружение рабочего стола  
-│   ├── [installation](/docs/installation/) Установка ОС  
-│   ├── [network](/docs/network/) Сеть и интернет  
-│   ├── [optimization](/docs/optimization/) Оптимизация  
-│   ├── [security](/docs/security/) Безопасность  
-│   └── [troubleshooting](/docs/troubleshooting/) Решение проблем  
+│   ├── [desktop](/docs/desktop/readme.md) Окружение рабочего стола  
+│   ├── [installation](/docs/installation/readme.md) Установка ОС  
+│   ├── [network](/docs/network/readme.md) Сеть и интернет  
+│   ├── [optimization](/docs/optimization/readme.md) Оптимизация  
+│   ├── [security](/docs/security/readme.md) Безопасность  
+│   └── [troubleshooting](/docs/troubleshooting/readme.md) Решение проблем  
 │  
 ├── [examples](/examples/readme.md) Примеры использования  
 │  
-├── [scripts](/scripts/) Готовые скрипты для автоматизации  
-│   ├── [setup](/scripts/setup/) Скрипты настройки системы  
-│   ├── [install](/scripts/install/) Скрипты установки ПО  
-│   └── [utils](/scripts/utils/) Вспомогательные скрипты  
+├── [scripts](/scripts/readme.md) Готовые скрипты для автоматизации  
+│   ├── [setup](/scripts/setup/readme.md) Скрипты настройки системы  
+│   ├── [install](/scripts/install/readme.md) Скрипты установки ПО  
+│   └── [utils](/scripts/utils/readme.md) Вспомогательные скрипты  
 │  
-└── [tools](/tools/) Полезные инструменты  
+└── [tools](/tools/readme.md) Полезные инструменты  
 
 ## 🚀 Базовый набор скриптов для настройки РЕД ОС 7.3
 
