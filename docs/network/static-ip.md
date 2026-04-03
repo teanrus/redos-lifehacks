@@ -74,21 +74,17 @@ ping -c1 8.8.8.8 || nmcli connection reload
 
 ---
 
-### 5. Настройка через /etc/netplan (если используется)
+### 5. Ручное редактирование конфигурации NetworkManager
 
-```yaml
-# /etc/netplan/01-netcfg.yaml
-network:
-  version: 2
-  ethernets:
-    eth0:
-      addresses: [192.168.1.100/24]
-      gateway4: 192.168.1.1
-      nameservers:
-        addresses: [8.8.8.8, 8.8.4.4]
+```ini
+# /etc/NetworkManager/system-connections/<имя_подключения>.nmconnection
+[ipv4]
+address1=192.168.1.100/24,192.168.1.1
+dns=8.8.8.8;8.8.4.4;
+method=manual
 ```
 
-> **Зачем:** Декларативный способ настройки для систем с netplan.
+> **Зачем:** Прямое редактирование конфигурационных файлов для автоматизации через скрипты или Ansible. После изменения файла выполните `nmcli connection reload`.
 
 ---
 
