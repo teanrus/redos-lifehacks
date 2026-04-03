@@ -8,5 +8,5 @@
 ├── [installation](/docs/installation/readme.md) Установка ОС  
 ├── [network](/docs/network/readme.md) Сеть и интернет  
 ├── [optimization](/docs/optimization/readme.md) Оптимизация  
-├── [security](/docs/security/) Безопасность  
+├── [security](/docs/security/readme.md) Безопасность  
 └── [troubleshooting](/docs/troubleshooting/) Решение проблем  
