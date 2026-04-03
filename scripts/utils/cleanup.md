@@ -14,14 +14,8 @@
 - Очищает корзину
 - Удаляет старые бэкапы конфигов
 
-**Запуск (последняя версия):**
+**Запуск:**
 
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh | sudo bash
-```
-
-**Запуск (фиксированная версия v1.0):**
-
-```bash
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/cleanup.sh | sudo bash
 ```
