@@ -9,4 +9,4 @@
 ├── [network](/docs/network/readme.md) Сеть и интернет  
 ├── [optimization](/docs/optimization/readme.md) Оптимизация  
 ├── [security](/docs/security/readme.md) Безопасность  
-└── [troubleshooting](/docs/troubleshooting/) Решение проблем  
+└── [troubleshooting](/docs/troubleshooting/readme.md) Решение проблем  
