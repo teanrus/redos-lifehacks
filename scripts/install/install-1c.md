@@ -1,4 +1,4 @@
-# install-1c.sh Установка платформы 1С:Предприятие и дополнительных компонентов
+# Установка платформы 1С:Предприятие и дополнительных компонентов
 
 [![Version](https://img.shields.io/badge/version-1.0-green.svg)](https://github.com/teanrus/redos-lifehacks/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
