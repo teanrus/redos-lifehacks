@@ -22,36 +22,53 @@
 
 ## 📂 Структура репозитория
 
-├── [docs](/docs/readme.md) Подробная документация  
-│   ├── [desktop](/docs/desktop/readme.md) Окружение рабочего стола  
-│   ├── [installation](/docs/installation/readme.md) Установка ОС  
-│   ├── [network](/docs/network/readme.md) Сеть и интернет  
-│   ├── [optimization](/docs/optimization/readme.md) Оптимизация  
-│   ├── [security](/docs/security/readme.md) Безопасность  
-│   └── [troubleshooting](/docs/troubleshooting/readme.md) Решение проблем  
-│  
-├── [examples](/examples/readme.md) Примеры использования  
-│  
-├── [scripts](/scripts/readme.md) Готовые скрипты для автоматизации  
-│   ├── [setup](/scripts/setup/readme.md) Скрипты настройки системы  
-│   ├── [install](/scripts/install/readme.md) Скрипты установки ПО  
-│   └── [utils](/scripts/utils/readme.md) Вспомогательные скрипты  
-│  
-└── [tools](/tools/readme.md) Полезные инструменты  
+### 📚 [docs](/docs/readme.md) — Подробная документация
+Руководства и лайфхаки по настройке РЕД ОС
+
+- 🖥️ [desktop](/docs/desktop/readme.md) — окружение рабочего стола: автодополнение, конфигурация среды
+- 📦 [installation](/docs/installation/readme.md) — установка ОС: первые шаги, офисные пакеты, время, установка с USB
+- 🌐 [network](/docs/network/readme.md) — сеть и интернет: прокси, статический IP, VPN, Wi-Fi
+- ⚡ [optimization](/docs/optimization/readme.md) — оптимизация: ускорение загрузки, DNF, SSD, память, swap
+- 🔒 [security](/docs/security/readme.md) — безопасность: аудит, шифрование, firewall, политики паролей
+- 🔧 [troubleshooting](/docs/troubleshooting/readme.md) — решение проблем: звук, графика, сеть, принтеры, миграция
+
+### 💡 [examples](/examples/readme.md) — Примеры использования
+Готовые сценарии: автомонтирование SSHFS, многомониторная конфигурация, принтеры CUPS, сканеры
+
+### 🤖 [scripts](/scripts/readme.md) — Готовые скрипты для автоматизации
+Автоматизация настройки и установки ПО
+
+- ⚙️ [setup](/scripts/setup/readme.md) — базовая настройка системы
+- 📦 [install](/scripts/install/readme.md) — установка ПО (1С, КриптоПро, мессенджеры, ViPNet)
+- 🧹 [utils](/scripts/utils/readme.md) — вспомогательные скрипты (очистка системы)
+
+### 🛠️ [tools](/tools/readme.md) — Полезные инструменты
+Диагностика и мониторинг: проверка обновлений, анализ диска, информация о системе, состояние системы
 
 ## 🚀 Базовый набор скриптов для настройки РЕД ОС 7.3
 
 ## 📋 Состав релиза
 
-| Файл | Описание |
-| ---- | -------- |
-| [redos-setup](https://github.com/teanrus/redos-setup) | Автоматизированный скрипт настройки АРМ РЕД ОС 7.3. Выполняет выборочную установку ПО: базовая система (R7 Office, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram, VK Messenger), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие. |
-| [base-setup](scripts/setup/base-setup.md) | Базовая настройка системы (SELinux, DNF, репозитории, обновление ядра) |
-| [install-cryptopro](scripts/install/install-cryptopro.md) | Установка КриптоПро CSP с автоматическим определением последней версии |
-| [install-messengers](scripts/install/install-messengers.md) | Установка мессенджеров (Telegram, Среда, MAX, VK Messenger) |
-| [install-vipnet](scripts/install/install-vipnet.md) | Установка и настройка ViPNet Client для защищенного VPN-соединения |
-| [install-1c](scripts/install/install-1c.md) | Установка платформы 1С:Предприятие и дополнительных компонентов |
-| [cleanup](scripts/utils/cleanup.md) | Очистка системы от временных файлов, кэша, старых ядер |
+### 🏗️ [redos-setup](https://github.com/teanrus/redos-setup)
+Автоматизированный скрипт настройки АРМ РЕД ОС 7.3: базовая система (Р7-Офис, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram, VK Messenger), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие
+
+### ⚙️ [base-setup](scripts/setup/base-setup.md)
+Базовая настройка системы: отключение SELinux, оптимизация DNF, репозитории (Р7-Офис, MAX, Яндекс), установка ПО, часовой пояс, SSH, firewall, оптимизация для SSD
+
+### 🔐 [install-cryptopro](scripts/install/install-cryptopro.md)
+КриптоПро CSP: зависимости, установка и настройка, поддержка Рутокен, лицензия, интеграция ГОСТ-шифрования с файловым менеджером
+
+### 💬 [install-messengers](scripts/install/install-messengers.md)
+Корпоративные мессенджеры: Telegram, Среда, MAX, VK Messenger — выборочная установка, ярлыки в меню, автоматическая очистка временных файлов
+
+### 🛡️ [install-vipnet](scripts/install/install-vipnet.md)
+ViPNet Client: VPN-соединение, автоматическое определение версии, настройка firewall, автозапуск сервиса, импорт конфигурации
+
+### 🏢 [install-1c](scripts/install/install-1c.md)
+Платформа 1С: клиентская и серверная установка, компоненты КриптоПро, драйверы HASP, ярлыки в меню, автозапуск сервера, поддержка PostgreSQL
+
+### 🗑️ [cleanup](scripts/utils/cleanup.md)
+Обслуживание системы: временные файлы, кэш DNF, системные журналы, старые ядра, кэш браузеров и мессенджеров, корзина, старые бэкапы конфигов
 
 ## 🔥 Популярные лайфхаки
 
@@ -84,83 +101,6 @@
     ```bash
     sudo systemctl enable --now fstrim.timer
     ```
-
-## 📚 Категории лайфхаков
-
-### 🖥️ Системные настройки
-
-- [Настройка DNF для быстрой загрузки](docs/optimization/dnf-tuning.md)
-- [Оптимизация работы с SSD](docs/optimization/ssd-optimization.md)
-- [Настройка автодополнения в терминале](docs/desktop/bash-completion.md)
-- [Настройка часовых поясов и времени](docs/installation/timezone-setup.md)
-
-### 🔒 Безопасность
-
-- [Настройка Firewall (firewalld)](security/firewall-setup.md)
-- [Настройка аудита действий пользователей](security/audit-setup.md)
-- [Шифрование домашней папки](security/encryption.md)
-- [Настройка сложных паролей](security/password-policy.md)
-
-### 🌐 Сеть и интернет
-
-- [Настройка статического IP](network/static-ip.md)
-- [Подключение к корпоративному VPN](network/vpn-settings.md)
-- [Настройка прокси-сервера](network/proxy-setup.md)
-- [Wi-Fi настройки для ноутбуков](network/wifi-setup.md)
-
-### 📦 Установка ПО
-
-- [Установка КриптоПро CSP](install/install-cryptopro.md)
-- [Установка ViPNet](install/install-vipnet.md)
-- [Установка 1С:Предприятие](install/install-1c.md)
-- [Установка мессенджеров](install/install-messengers.md)
-- [Установка офисных пакетов](docs/installation/office-setup.md)
-
-### 🛠️ Решение проблем
-
-- [Проблемы с сетью](troubleshooting/network-issues.md)
-- [Ошибки при установке ПО](troubleshooting/software-issues.md)
-- [Проблемы со звуком](troubleshooting/audio-issues.md)
-- [Проблемы с графикой](troubleshooting/graphics-issues.md)
-- [Проблема с печатью из РЕД ОС (принтеры Kyocera)](troubleshooting/printers-kyocera.md)
-
-### ⚡ Оптимизация
-
-- [Ускорение загрузки системы](docs/optimization/boot-speed.md)
-- [Оптимизация потребления памяти](docs/optimization/memory-tuning.md)
-- [Настройка swap](docs/optimization/swap-tuning.md)
-- [Очистка системы от мусора](scripts/utils/cleanup.md)
-
----
-
-### 📖 Документация
-
-Подробные инструкции с пошаговыми объяснениями находятся в папке docs/:
-
-- [Установка РЕД ОС с флешки](docs/installation/usb-install.md)
-- [Первые шаги после установки](docs/installation/first-steps.md)
-- [Настройка рабочего окружения](docs/desktop/environment-setup.md)
-- [Резервное копирование и восстановление](docs/troubleshooting/backup-strategies.md)
-
-## 🎯 Примеры использования
-
-В папке examples/ вы найдете готовые сценарии:
-
-- [Автомонтирование сетевых папок при входе](examples/automount-sshfs.md)
-- [Настройка принтера через CUPS](examples/printer-setup.md)
-- [Подключение сканера](examples/scanner-setup.md)
-- [Настройка многомониторной конфигурации](examples/multi-monitor.md)
-
-## 3 🛠️ Полезные инструменты
-
-В папке tools/ собраны утилиты для диагностики и мониторинга:
-
-| Файл | Описание |
-| ---- | -------- |
-| [redos-info.sh](tools/redos-info.md) | Сбор информации о системе (версия, ядро, пакеты) |
-| [check-updates.sh](tools/check-updates.md) | Проверка доступных обновлений |
-| [disk-usage.sh](tools/disk-usage.md) | Анализ использования дискового пространства |
-| [system-health.sh](tools/system-health.md) | Проверка состояния системы |
 
 > [!tip]
 > **Как внести свой вклад**.
