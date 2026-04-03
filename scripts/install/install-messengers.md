@@ -1,4 +1,4 @@
-# install-messengers.sh Установка мессенджеров (Telegram, Среда, MAX, VK Messenger)
+# Установка мессенджеров (Telegram, Среда, MAX, VK Messenger)
 
 [![Version](https://img.shields.io/badge/version-1.0-green.svg)](https://github.com/teanrus/redos-lifehacks/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
