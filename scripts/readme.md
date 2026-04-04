@@ -5,10 +5,9 @@
 
 ## 📁 Структура
 
-├── [setup](/scripts/setup/readme.md) — Базовая настройка системы
-├── [install](/scripts/install/readme.md) — Установка программного обеспечения
-├── [utils](/scripts/utils/readme.md) — Вспомогательные скрипты
-└── [monitoring](/scripts/monitoring/readme.md) — Мониторинг и диагностика
+├── [setup](/scripts/setup/readme.md) — Базовая настройка системы  
+├── [install](/scripts/install/readme.md) — Установка программного обеспечения  
+└── [utils](/scripts/utils/readme.md) — Вспомогательные скрипты  
 
 ---
 
