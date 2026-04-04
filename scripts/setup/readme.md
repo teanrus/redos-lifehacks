@@ -19,6 +19,6 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/bas
 ```
 
 > [!TIP]
-> Скрипт требует прав `root` и предназначен для РЕД ОС 7.3.
+> Скрипт требует прав `root`.
 > Возможно использование в других RPM-дистрибутивах (CentOS, Fedora, AlmaLinux).
 > Рекомендуется запускать сразу после установки системы.
