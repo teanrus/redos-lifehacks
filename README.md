@@ -2,11 +2,12 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ## 📖 О чем этот репозиторий
 
-Этот репозиторий содержит собранные и систематизированные лайфхаки, скрипты и конфигурации для настройки рабочей станции на базе **РЕД ОС 7.3**. Здесь вы найдете решения для:
+Этот репозиторий содержит собранные и систематизированные лайфхаки, скрипты и конфигурации для настройки рабочей станции на базе **РЕД ОС**. Здесь вы найдете решения для:
 
 - 🚀 **Быстрой настройки** системы после установки
 - 🔧 **Установки и настройки** популярного корпоративного ПО
@@ -36,6 +37,7 @@
 - ⚙️ [setup](/scripts/setup/readme.md) — базовая настройка системы
 - 📦 [install](/scripts/install/readme.md) — установка ПО (1С, КриптоПро, мессенджеры, ViPNet)
 - 🧹 [utils](/scripts/utils/readme.md) — вспомогательные скрипты (очистка системы)
+- 📊 [monitoring](/scripts/monitoring/readme.md) — мониторинг и диагностика (здоровье системы, логи, оборудование)
 
 ### 🛠️ [tools](/tools/readme.md) — Полезные инструменты
 
