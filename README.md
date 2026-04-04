@@ -101,6 +101,8 @@ ViPNet Client: VPN-соединение, автоматическое опред
     sudo systemctl enable --now fstrim.timer
     ```
 
+---
+
 > [!tip]
 > **Как внести свой вклад**.
 >
@@ -118,8 +120,6 @@ ViPNet Client: VPN-соединение, автоматическое опред
 >- Команды с пояснениями
 >- Проверка работоспособности на РЕД ОС 7.3
 
----
-
-## ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+### ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ### Вместе сделаем работу в РЕД ОС удобнее и эффективнее
