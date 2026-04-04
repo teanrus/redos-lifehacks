@@ -1,10 +1,8 @@
-# 🐧 Лайф-хаки по настройке рабочей станции на базе операционной системы РЕД ОС
+# 🐧 Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
-
-**Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС**
 
 ---
 
@@ -23,6 +21,7 @@
 ## 📂 Структура репозитория
 
 ### 📚 [docs](/docs/readme.md) — Подробная документация
+
 Руководства и лайфхаки по настройке РЕД ОС
 
 - 🖥️ [desktop](/docs/desktop/readme.md) — окружение рабочего стола: SSHFS, автодополнение, конфигурация среды, многомониторная конфигурация
@@ -33,6 +32,7 @@
 - 🔧 [troubleshooting](/docs/troubleshooting/readme.md) — решение проблем: звук, графика, сеть, принтеры, миграция
 
 ### 🤖 [scripts](/scripts/readme.md) — Готовые скрипты для автоматизации
+
 Автоматизация настройки и установки ПО
 
 - ⚙️ [setup](/scripts/setup/readme.md) — базовая настройка системы
@@ -40,29 +40,37 @@
 - 🧹 [utils](/scripts/utils/readme.md) — вспомогательные скрипты (очистка системы)
 
 ### 🛠️ [tools](/tools/readme.md) — Полезные инструменты
+
 Диагностика и мониторинг: проверка обновлений, анализ диска, информация о системе, состояние системы
 
-##  Состав релиза
+## Состав релиза
 
 ### 🏗️ [redos-setup](https://github.com/teanrus/redos-setup)
+
 Автоматизированный скрипт настройки АРМ РЕД ОС 7.3: базовая система (Р7-Офис, Яндекс.Браузер, ядро), мессенджеры (MAX, Среда, Telegram, VK Messenger), криптография (КриптоПро, Рутокен), ViPNet VPN, 1С:Предприятие
 
 ### ⚙️ [base-setup](scripts/setup/base-setup.md)
+
 Базовая настройка системы: отключение SELinux, оптимизация DNF, репозитории (Р7-Офис, MAX, Яндекс), установка ПО, часовой пояс, SSH, firewall, оптимизация для SSD
 
 ### 🔐 [install-cryptopro](scripts/install/install-cryptopro.md)
+
 КриптоПро CSP: зависимости, установка и настройка, поддержка Рутокен, лицензия, интеграция ГОСТ-шифрования с файловым менеджером
 
 ### 💬 [install-messengers](scripts/install/install-messengers.md)
+
 Корпоративные мессенджеры: Telegram, Среда, MAX, VK Messenger — выборочная установка, ярлыки в меню, автоматическая очистка временных файлов
 
 ### 🛡️ [install-vipnet](scripts/install/install-vipnet.md)
+
 ViPNet Client: VPN-соединение, автоматическое определение версии, настройка firewall, автозапуск сервиса, импорт конфигурации
 
 ### 🏢 [install-1c](scripts/install/install-1c.md)
+
 Платформа 1С: клиентская и серверная установка, компоненты КриптоПро, драйверы HASP, ярлыки в меню, автозапуск сервера, поддержка PostgreSQL
 
 ### 🗑️ [cleanup](scripts/utils/cleanup.md)
+
 Обслуживание системы: временные файлы, кэш DNF, системные журналы, старые ядра, кэш браузеров и мессенджеров, корзина, старые бэкапы конфигов
 
 ## 🔥 Популярные лайфхаки
