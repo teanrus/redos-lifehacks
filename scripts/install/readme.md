@@ -44,5 +44,5 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/ins
 ```
 
 > [!TIP]
-> Все скрипты требуют прав `root` и предназначены для РЕД ОС 7.3. Возможно использование в других RPM-дистрибутивах (CentOS, Fedora, AlmaLinux).
+> Все скрипты требуют прав `root`. Возможно использование в других RPM-дистрибутивах (CentOS, Fedora, AlmaLinux).
 
