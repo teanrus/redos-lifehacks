@@ -19,9 +19,3 @@
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh | sudo bash
 ```
-
-**Запуск (фиксированная версия v1.0):**
-
-```bash
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/base-setup.sh | sudo bash
-```
