@@ -1,11 +1,11 @@
-# Скрипты установки программного обеспечения в операционной системе РЕД ОС 7+
+# Скрипты установки программного обеспечения в операционной системе РЕД ОС
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ## 📋 Доступные скрипты
 
-### 🏢 [Установка 1С:Предприятие](/scripts/install/install-1c.md)
+### 🏢 [Установка 1С:Предприятие](/scripts/install/install-1c.md) [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 Платформа 1С: клиентская и серверная установка, компоненты КриптоПро, драйверы HASP, ярлыки в меню, автозапуск сервера, поддержка PostgreSQL
 
 ### 🔐 [Установка КриптоПро CSP](/scripts/install/install-cryptopro.md)
