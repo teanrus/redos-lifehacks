@@ -1,6 +1,8 @@
 # Полезные инструменты
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange.svg)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ## 📋 Доступные инструменты
@@ -35,5 +37,5 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/red
 ```
 
 > [!TIP]
-> Скрипты требуют прав `root` и предназначены для РЕД ОС 7.3. Возможно использование в других RPM-дистрибутивах (CentOS, Fedora, AlmaLinux).
+> Скрипты требуют прав `root`. Возможно использование в других RPM-дистрибутивах (CentOS, Fedora, AlmaLinux).
 
