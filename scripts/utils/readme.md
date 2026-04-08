@@ -12,7 +12,7 @@
 
 ---
 
-## 🚀 Быстрый запуск
+### 🚀 Быстрый запуск
 
 ```bash
 # Очистка системы от временных файлов, кэша, старых ядер
@@ -21,3 +21,19 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cle
 
 > [!TIP]
 > Скрипт требует прав `root`. Рекомендуется запускать периодически для поддержания системы в чистоте.
+
+### 🔐 [Управление сохранёнными паролями сетевых ресурсов на РЕД ОС](/scripts/utils/smb-credentials-manager.md)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange.svg)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)  
+Скрипт автоматически сканирует все возможные хранилища учётных данных в системе, находит сохранённые пароли от сетевых ресурсов (SMB/CIFS) и предлагает удалить их в интерактивном режиме.
+
+---
+
+### 🚀 Быстрый запуск
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | sudo bash
+```
+
+> [!note]
+> Скрипт требует прав `sudo` для доступа к системным файлам и кэшам служб.
