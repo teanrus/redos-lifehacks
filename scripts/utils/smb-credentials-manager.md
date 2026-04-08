@@ -17,7 +17,8 @@
 4. [Как работает скрипт](#4-как-работает-скрипт)
 5. [Пример вывода](#5-пример-вывода)
 6. [Ручное управление](#6-ручное-управление)
-7. [Диагностика проблем](#7-диагностика-проблем)
+7. [Сводная таблица методов](#7-сводная-таблица-методов)
+8. [Диагностика проблем](#8-диагностика-проблем)
 
 ---
 
@@ -44,17 +45,20 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb
 
 ## 3. Что сканирует скрипт
 
-Скрипт проверяет **7 типов хранилищ** учётных данных:
+Скрипт проверяет **7 основных хранилищ** учётных данных:
 
 | № | Хранилище | Путь / Описание | Что ищет |
 |---|-----------|-----------------|----------|
-| 1 | **GNOME Keyring** | `secret-tool` | Записи SMB/CIFS с серверами |
+| 1 | **GNOME Keyring** | `secret-tool search` | Записи SMB/CIFS с серверами, пользователями |
 | 2 | **Файлы учётных данных Samba** | `~/.smbcredentials`, `/etc/samba/*cred*`, `/etc/fstab` | Логины и пароли для SMB |
 | 3 | **Кэш Samba** | `/var/cache/samba`, `~/.cache/samba` | Кэшированные сессии |
-| 4 | **Файл ~/.netrc** | `~/.netrc` | Учётные данные для FTP/SMB |
+| 4 | **Файл ~/.netrc** | `~/.netrc` | Учётные данные для FTP/SMB/HTTP |
 | 5 | **GVFS (монтирования)** | `~/.config/gvfs`, `~/.gvfs` | Смонтированные сетевые ресурсы |
 | 6 | **GVFS Metadata** | `~/.local/share/gvfs-metadata/` | Метаданные подключений |
 | 7 | **Конфиг Samba пользователя** | `~/.smb/smb.conf` | Пользовательские настройки SMB |
+
+> [!note]
+> Помимо этих 7 хранилищ, учётные данные могут храниться в **KDE Wallet**, **Autofs**, **Systemd mount units** и других местах. Смотрите раздел [Ручное управление](#6-ручное-управление) для полного списка.
 
 ---
 
@@ -145,76 +149,273 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb
 
 Если нужно удалить учётные данные вручную, используйте следующие команды:
 
-### GNOME Keyring
+### Способ 1: GNOME Keyring через Seahorse (графический интерфейс)
+
+> **Рекомендуется для пользователей, не знакомых с терминалом.**
 
 ```bash
-# Через терминал
-secret-tool clear server 10.13.60.4
+# Установите Seahorse если не установлен
+sudo dnf install seahorse
 
-# Через графический интерфейс
+# Запустите менеджер паролей
 seahorse
-# Раздел "Пароли" → "Вход" → найти запись → Удалить
 ```
 
-### Файл ~/.smbcredentials
+В приложении **Seahorse (Пароли и ключи)**:
+
+1. Откройте раздел **"Пароли"** → **"Вход"** (или "Login")
+2. Найдите запись с адресом сетевого ресурса (например, `10.13.60.4` или `smb://...`)
+3. Нажмите правой кнопкой → **Удалить**
+
+![Seahorse интерфейс](https://i.imgur.com/example.png)
+
+> [!tip]
+> Этот способ удаляет пароль из связки ключей GNOME — именно там хранятся пароли, сохранённые через файловый менеджер при подключении к `smb://`.
+
+### Способ 2: GNOME Keyring через терминал (secret-tool)
+
+```bash
+# Поиск записей по серверу
+secret-tool search server 10.13.60.4
+
+# Удаление записи
+secret-tool clear server 10.13.60.4
+
+# Поиск всех SMB-записей
+secret-tool search --all smb
+```
+
+> [!note]
+> Если `secret-tool` не установлен: `sudo dnf install libsecret-tools`
+
+### Способ 3: Монтирование через /etc/fstab
+
+Проверьте файл `/etc/fstab`:
+
+```bash
+cat /etc/fstab
+```
+
+Если там есть запись с логином/паролём, отредактируйте:
+
+```bash
+sudo nano /etc/fstab
+```
+
+Найдите и удалите (или закомментируйте) строки вида:
+
+```
+//10.13.60.4/share /mnt/share cifs username=admin,password=oldpass,uid=1000,gid=1000 0 0
+//10.13.60.4/share /mnt/share cifs credentials=/etc/samba/credentials,uid=1000 0 0
+```
+
+После редактирования:
+
+```bash
+# Перемонтировать все записи
+sudo mount -a
+
+# Или отмонтировать конкретный ресурс
+sudo umount /mnt/share
+```
+
+### Способ 4: Файл учётных данных (credentials)
+
+Проверьте наличие файлов с учётными данными:
+
+```bash
+ls -la ~/.smbcredentials /etc/samba/credentials 2>/dev/null
+```
+
+**Пользовательский файл:**
 
 ```bash
 # Просмотр
 cat ~/.smbcredentials
 
+# Содержимое обычно выглядит так:
+# username=admin
+# password=oldpass
+
 # Удаление
 rm ~/.smbcredentials
 ```
 
-### Кэш Samba
+**Системный файл:**
 
 ```bash
+# Просмотр
+sudo cat /etc/samba/credentials
+
+# Удаление
+sudo rm /etc/samba/credentials
+
+# Или редактирование (замена пароля)
+sudo nano /etc/samba/credentials
+```
+
+> [!warning]
+> Файлы credentials могут использоваться в `/etc/fstab` — после удаления обновите соответствующие записи.
+
+### Способ 5: Кэш Samba
+
+```bash
+# Остановка служб Samba (опционально, но рекомендуется)
+sudo systemctl stop smbd nmbd
+
 # Очистка системного кэша
 sudo rm -rf /var/cache/samba/*
 
 # Очистка пользовательского кэша
 rm -rf ~/.cache/samba/*
+
+# Запуск служб Samba
+sudo systemctl start smbd nmbd
 ```
 
-### Файл ~/.netrc
+### Способ 6: Файл ~/.netrc
+
+Файл `~/.netrc` хранит учётные данные для автоматической авторизации (FTP, SMB, HTTP):
 
 ```bash
 # Просмотр
 cat ~/.netrc
 
+# Пример содержимого:
+# machine 10.13.60.4 login admin password oldpass
+
 # Удаление записи для конкретного сервера
 sed -i '/^machine 10.13.60.4/,+2d' ~/.netrc
+
+# Или полное удаление файла
+rm ~/.netrc
 ```
 
-### GVFS (отмонтирование)
+> [!note]
+> Файл `~/.netrc` должен иметь права `600`: `chmod 600 ~/.netrc`
+
+### Способ 7: GVFS (отмонтирование сетевых ресурсов)
+
+GVFS (GNOME Virtual File System) хранит активные подключения:
 
 ```bash
-# Отмонтирование всех SMB-ресурсов
+# Просмотр подключённых ресурсов
+gio mount --list
+
+# Отмонтирование конкретного ресурса
 gio mount -u smb://10.13.60.4/share
 
-# Отмонтирование всех ресурсов
+# Отмонтирование всех SMB-ресурсов
 gio mount -a | grep smb | awk '{print $2}' | xargs -I {} gio mount -u {}
+
+# Отмонтирование всех ресурсов
+gio mount -a | awk '{print $2}' | xargs -I {} gio mount -u {}
 ```
 
-### Метаданные GVFS
+> [!tip]
+> После отмонтирования GVFS удалит кэшированные учётные данные для этой сессии.
+
+### Способ 8: Метаданные GVFS
 
 ```bash
+# Просмотр
+ls -la ~/.local/share/gvfs-metadata/
+
+# Удаление всех метаданных
 rm -rf ~/.local/share/gvfs-metadata/*
+
+# Удаление метаданных для конкретного ресурса
+rm ~/.local/share/gvfs-metadata/*10.13.60.4* 2>/dev/null
 ```
 
-### /etc/fstab
+### Способ 9: Конфигурация Samba пользователя
 
 ```bash
-# Редактирование
-sudo nano /etc/fstab
+# Просмотр пользовательского конфига
+cat ~/.smb/smb.conf
 
-# Удалите или закомментируйте строки вида:
-# //10.13.60.4/share /mnt/share cifs username=user,password=pass 0 0
+# Удаление
+rm -rf ~/.smb/
+
+# Или редактирование
+nano ~/.smb/smb.conf
+```
+
+### Способ 10: KDE Wallet (если используется KDE)
+
+Если в РЕД ОС установлена среда KDE, пароли могут храниться в KDE Wallet:
+
+```bash
+# Установка менеджера KDE Wallet
+sudo dnf install kwalletmanager
+
+# Запуск менеджера
+kwalletmanager5
+```
+
+В KWalletManager:
+1. Откройте кошелек **kdewallet**
+2. Найдите записи с `smb://` или адресом сервера
+3. Удалите их
+
+### Способ 11: Autofs (автоматическое монтирование)
+
+Если используется autofs для автоматического монтирования:
+
+```bash
+# Проверка конфигурации autofs
+cat /etc/auto.master
+cat /etc/auto.misc  # или другой файл из auto.master
+
+# Удаление записей с учётными данными
+sudo nano /etc/auto.misc
+
+# Перезапуск службы
+sudo systemctl restart autofs
+```
+
+### Способ 12: Systemd mount units
+
+Systemd может управлять монтированием сетевых ресурсов:
+
+```bash
+# Поиск unit-файлов для SMB
+systemctl list-units --type=mount | grep smb
+
+# Просмотр unit-файла
+systemctl cat mnt-share.mount
+
+# Отключение и остановка
+sudo systemctl stop mnt-share.mount
+sudo systemctl disable mnt-share.mount
+
+# Удаление unit-файла
+sudo rm /etc/systemd/system/mnt-share.mount
+sudo systemctl daemon-reload
 ```
 
 ---
 
-## 7. Диагностика проблем
+## 7. Сводная таблица методов
+
+| Метод | Где хранится | Сложность | Когда использовать |
+|-------|--------------|-----------|-------------------|
+| **Seahorse (GUI)** | GNOME Keyring | ⭐ Легко | Подключение через файловый менеджер |
+| **secret-tool** | GNOME Keyring | ⭐⭐ Средне | Скрипты и терминал |
+| **/etc/fstab** | Файл монтирования | ⭐⭐ Средне | Статическое монтирование |
+| **Credentials файл** | `~/.smbcredentials` или `/etc/samba/` | ⭐ Легко | Монтирование с отдельным файлом паролей |
+| **Кэш Samba** | `/var/cache/samba` | ⭐⭐ Средне | Проблемы с кэшированными сессиями |
+| **~/.netrc** | Файл автоавторизации | ⭐⭐ Средне | Автоматическая авторизация |
+| **GVFS** | Виртуальная ФС | ⭐ Легко | Активные подключения |
+| **GVFS Metadata** | Метаданные | ⭐ Легко | Ошибки подключения |
+| **~/.smb/smb.conf** | Конфиг пользователя | ⭐⭐ Средне | Пользовательские настройки SMB |
+| **KDE Wallet** | KDE Wallet | ⭐⭐ Средне | Среда KDE |
+| **Autofs** | Autofs конфиг | ⭐⭐⭐ Сложно | Автоматическое монтирование |
+| **Systemd mount** | Systemd units | ⭐⭐⭐ Сложно | Systemd-монтирование |
+
+---
+
+## 8. Диагностика проблем
 
 ### После удаления пароля
 
