@@ -5,6 +5,8 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=РЕД+ОС+Импортозамещение)](https://git.io/typing-svg)
+
 ## 📖 О чем этот репозиторий
 
 Этот репозиторий содержит собранные и систематизированные лайфхаки, скрипты и конфигурации для настройки рабочей станции на базе **РЕД ОС**. Здесь вы найдете решения для:
