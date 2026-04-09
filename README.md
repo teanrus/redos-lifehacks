@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href=".secrets/style.css">
 # 🐧 Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
