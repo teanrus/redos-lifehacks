@@ -171,8 +171,3 @@ ls -la /home/user/
 ## Связанные документы
 
 - [Основная инструкция rsync](../../docs/network/rsync-file-copy.md)
-- [Настройка SMB](./smb-credentials-manager.md)
-
-## Лицензия
-
-MIT — см. [LICENSE](../../LICENSE)
