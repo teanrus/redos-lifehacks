@@ -39,3 +39,33 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb
 
 > [!note]
 > Скрипт требует прав `sudo` для доступа к системным файлам и кэшам служб.
+
+### 📂 [Копирование файлов через rsync](/scripts/utils/rsync-copy.md)
+
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange.svg)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
+Интерактивный скрипт для копирования файлов и папок по SSH: проверки пути, ping, SSH-доступа, создание удалённой папки, гибкая настройка параметров rsync (архивный режим, сжатие, прогресс, ускорение)
+
+---
+
+### 🚀 Быстрый запуск
+
+```bash
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh | sudo bash
+```
+
+Или:
+
+```bash
+# Скачайте скрипт
+wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh
+
+# Сделайте исполняемым
+chmod +x rsync-copy.sh
+
+# Запустите от root
+sudo ./rsync-copy.sh
+```
+
+> [!tip]
+> Скрипт запускается на **исходной машине** (откуда копируются файлы). Утилиты `rsync` и `sshpass` устанавливаются автоматически при отсутствии.
