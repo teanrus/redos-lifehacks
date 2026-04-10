@@ -36,12 +36,35 @@
 
 ## 2. Быстрый запуск
 
+### Способ 1: Запуск без скачивания (через curl)
+
 ```bash
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | bash
 ```
 
+### Способ 2: Скачивание и запуск (рекомендуется)
+
+```bash
+# Скачивание скрипта
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh -o smb-credentials-manager.sh
+
+# Установка прав на выполнение
+chmod +x smb-credentials-manager.sh
+
+# Запуск в интерактивном режиме
+./smb-credentials-manager.sh
+
+# Или с опциями
+./smb-credentials-manager.sh --scan    # Только сканирование
+./smb-credentials-manager.sh --batch   # Пакетное удаление
+./smb-credentials-manager.sh --export  # Экспорт отчёта
+```
+
 > [!note]
 > Скрипт может потребовать права `sudo` для доступа к системным файлам и кэшам служб.
+
+> [!tip]
+> Рекомендуется **скачать скрипт** (Способ 2), чтобы предварительно ознакомиться с содержимым перед запуском.
 
 ---
 
