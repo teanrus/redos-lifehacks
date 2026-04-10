@@ -244,11 +244,31 @@ scan_gvfs() {
 # 6. Файлы ~/.local/share/gvfs-metadata/
 scan_gvfs_metadata() {
     if [ -d "$HOME/.local/share/gvfs-metadata" ]; then
+        # Ищем файлы метаданных, связанные с сетевыми ресурсами
         local metadata_files
-        metadata_files=$(ls "$HOME/.local/share/gvfs-metadata/" 2>/dev/null || true)
+        metadata_files=$(find "$HOME/.local/share/gvfs-metadata" -type f \( -name "*smb*" -o -name "*cifs*" -o -name "*ftp*" -o -name "*dav*" -o -name "*network*" -o -name "*10.*" -o -name "*192.168*" \) 2>/dev/null || true)
 
         if [ -n "$metadata_files" ]; then
-            add_entry "GVFS Metadata" "Метаданные сетевых ресурсов" "gvfs:metadata" "" "" "$HOME/.local/share/gvfs-metadata"
+            while IFS= read -r file; do
+                local filename=""
+                local server=""
+                filename=$(basename "$file")
+                # Пытаемся извлечь имя сервера из имени файла
+                server=$(echo "$filename" | grep -oP '(?:smb|cifs|ftp|dav)://\K[^/]+' || echo "$filename")
+                add_entry "GVFS Metadata" "Метаданные: $filename" "gvfs:metadata:$filename" "$server" "" "$file"
+            done <<< "$metadata_files"
+        fi
+
+        # Также проверяем все файлы в директории (если не нашли специфичных)
+        if [ -z "$metadata_files" ]; then
+            local all_files
+            all_files=$(ls "$HOME/.local/share/gvfs-metadata/" 2>/dev/null | head -10 || true)
+            if [ -n "$all_files" ]; then
+                while IFS= read -r filename; do
+                    [ -n "$filename" ] || continue
+                    add_entry "GVFS Metadata" "Метаданные: $filename" "gvfs:metadata:$filename" "" "" "$HOME/.local/share/gvfs-metadata/$filename"
+                done <<< "$all_files"
+            fi
         fi
     fi
 }
@@ -633,7 +653,16 @@ perform_deletion() {
             unmount_gvfs "$uri"
             ;;
         "GVFS Metadata")
-            rm -rf "${HOME:?}/.local/share/gvfs-metadata/"*
+            if [ -n "$path" ] && [ -f "$path" ]; then
+                # Удаляем конкретный файл метаданных
+                delete_credentials_file "$path"
+            else
+                # Если путь не указан, удаляем все метаданные
+                print_warning "Будут удалены ВСЕ файлы метаданных GVFS"
+                if confirm_action "Продолжить?"; then
+                    rm -rf "${HOME:?}/.local/share/gvfs-metadata/"*
+                fi
+            fi
             ;;
         "Конфиг Samba (~/.smb)")
             delete_credentials_file "$path"
@@ -949,6 +978,27 @@ run_diagnostics() {
     local systemd_mounts
     systemd_mounts=$(systemctl list-units --type=mount --all 2>/dev/null | grep -iE "smb|cifs" || echo "  Нет SMB mount units")
     echo "$systemd_mounts"
+    echo ""
+
+    # Проверяем GVFS Metadata
+    echo -e "${CYAN}GVFS Metadata:${NC}"
+    if [ -d "$HOME/.local/share/gvfs-metadata" ]; then
+        local gvfs_files
+        gvfs_files=$(ls -la "$HOME/.local/share/gvfs-metadata/" 2>/dev/null || echo "  Директория пуста")
+        if [ -n "$gvfs_files" ]; then
+            local file_count
+            file_count=$(ls "$HOME/.local/share/gvfs-metadata/" 2>/dev/null | wc -l)
+            echo "  Файлов: $file_count"
+            echo -e "  ${YELLOW}Список файлов:${NC}"
+            ls "$HOME/.local/share/gvfs-metadata/" 2>/dev/null | while IFS= read -r filename; do
+                echo "    - $filename"
+            done
+        else
+            echo "  Директория пуста"
+        fi
+    else
+        echo "  Директория не найдена"
+    fi
     echo ""
 }
 

@@ -79,13 +79,16 @@ chmod +x smb-credentials-manager.sh
 | 3 | **Кэш Samba** | `/var/cache/samba`, `~/.cache/samba` | Кэшированные сессии |
 | 4 | **Файл ~/.netrc** | `~/.netrc` | Учётные данные для FTP/SMB/HTTP |
 | 5 | **GVFS (монтирования)** | `~/.config/gvfs`, `~/.gvfs` | Смонтированные сетевые ресурсы |
-| 6 | **GVFS Metadata** | `~/.local/share/gvfs-metadata/` | Метаданные подключений |
+| 6 | **GVFS Metadata** | `~/.local/share/gvfs-metadata/` | Метаданные подключений (с именами файлов) |
 | 7 | **Конфиг Samba пользователя** | `~/.smb/smb.conf` | Пользовательские настройки SMB |
 | 8 | **KDE Wallet** | `~/.local/share/kwalletd/` | Учётные данные KDE (новый) |
 | 9 | **Autofs** | `/etc/auto.master`, `/etc/auto.*` | Автоматическое монтирование (новый) |
 | 10 | **Systemd mount units** | `/etc/systemd/system/*.mount` | Systemd-монтирование (новый) |
 | 11 | **Активные GVFS** | `gio mount --list` | Активные подключения (новый) |
 | 12 | **Dconf (GNOME)** | `~/.config/dconf/user` | Настройки GNOME (новый) |
+
+> [!note]
+> Для **GVFS Metadata** скрипт теперь показывает **конкретные имена файлов**, чтобы вы могли понять, от какого ресурса хранятся метаданные.
 
 ---
 
@@ -205,8 +208,18 @@ chmod +x smb-credentials-manager.sh
       Источник: Кэш Samba (пользователь)
       Ключ: cache:/home/user/.cache/samba
 
+  [5] Метаданные: smb-10.13.60.4.share
+      Источник: GVFS Metadata
+      Сервер: 10.13.60.4
+      Ключ: gvfs:metadata:smb-10.13.60.4.share
+
+  [6] Метаданные: smb-192.168.1.100.public
+      Источник: GVFS Metadata
+      Сервер: 192.168.1.100
+      Ключ: gvfs:metadata:smb-192.168.1.100.public
+
 =======================================================
-  Найдено: 4 записей
+  Найдено: 6 записей
 =======================================================
 
 Введите номер записи для удаления (или 'q' для выхода, 'a' для удаления всех): 1
