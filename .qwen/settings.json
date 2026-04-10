@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Read(d:\\GitHub_old\\releases/**)"
-    ]
-  },
-  "$version": 3
-}
