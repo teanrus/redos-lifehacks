@@ -23,7 +23,7 @@
 
 - 🖥️ [desktop](/docs/desktop/readme.md) — окружение рабочего стола: SSHFS, автодополнение, конфигурация среды, многомониторная конфигурация
 - 📦 [installation](/docs/installation/readme.md) — установка ОС: первые шаги, офисные пакеты, принтеры CUPS, сканеры, время, установка с USB
-- 🌐 [network](/docs/network/readme.md) — сеть и интернет: прокси, статический IP, VPN, Wi-Fi
+- 🌐 [network](/docs/network/readme.md) — сеть и интернет: прокси, статический IP, VPN, Wi-Fi, копирование файлов через rsync
 - ⚡ [optimization](/docs/optimization/readme.md) — оптимизация: ускорение загрузки, DNF, SSD, память, swap
 - 🔒 [security](/docs/security/readme.md) — безопасность: аудит, шифрование, firewall, политики паролей
 - 🔧 [troubleshooting](/docs/troubleshooting/readme.md) — решение проблем: звук, графика, сеть, принтеры, миграция
