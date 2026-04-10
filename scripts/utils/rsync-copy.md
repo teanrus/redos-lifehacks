@@ -1,5 +1,10 @@
 # Интерактивный скрипт копирования файлов
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+
 ## Описание
 
 Интерактивный Bash-скрипт для удобного копирования файлов и папок с локальной машины на удалённый компьютер по SSH с использованием rsync. Скрипт пошагово запрашивает все необходимые параметры и выполняет проверки на каждом этапе.
