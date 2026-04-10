@@ -30,6 +30,7 @@ echo -e "\n=== Диск ===" && df -h /
 ```
 
 **Что показывает:**
+
 - Версию РЕД ОС и ядра
 - Время работы системы
 - Текущую загрузку процессора
@@ -54,6 +55,7 @@ systemctl list-units --state=failed --no-pager
 ```
 
 **Совет:** Создайте алиас для быстрой проверки:
+
 ```bash
 echo 'alias syscheck="systemctl list-units --state=failed --no-pager"' >> ~/.bashrc
 source ~/.bashrc
@@ -122,6 +124,7 @@ sudo dnf update --security
 ```
 
 **Автоматизация:** Настройте еженедельную проверку через cron:
+
 ```bash
 # /etc/cron.weekly/check-updates
 #!/bin/bash
