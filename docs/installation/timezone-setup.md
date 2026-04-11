@@ -524,3 +524,11 @@ CRON_TZ=Europe/Moscow
 
 > [!note]
 > В РЕД ОС 7.x и 8.x `chrony` предпочтителен для NTP-синхронизации. Для изолированных сетей настройте `local stratum 10` в конфигурации chrony. Рекомендуется использовать российские серверы ВНИИФТРИ (`ntp1.vniiftri.ru`, `ntp2.vniiftri.ru`) для максимальной точности синхронизации.
+
+---
+
+## 📘 Энциклопедия (Wiki)
+
+Подробные пояснения принципов работы:
+
+- [🕐 Настройка времени и часовых поясов](https://github.com/teanrus/redos-lifehacks/wiki/Timezone-Setup) — системное время vs RTC, NTP-стратумы, chrony vs timesyncd, параметры `chrony.conf` (`iburst`, `makestep`, `driftfile`), расшифровка `chronyc sources -v`, dual-boot UTC

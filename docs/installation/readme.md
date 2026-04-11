@@ -22,3 +22,18 @@
 
 ### 💾 [Установка операционной системы РЕД ОС с USB-накопителя](/docs/installation/usb-install.md)
 Создание загрузочной флешки: Ventoy, Rufus, Etcher, разметка диска, диагностика проблем
+
+---
+
+## 📘 Дополнительное чтение (Wiki)
+
+Подробные пояснения принципов работы и терминов:
+
+| Тема | Wiki-статья |
+|------|-------------|
+| Установка с USB, Ventoy, dd | [💾 Установка РЕД ОС с USB](https://github.com/teanrus/redos-lifehacks/wiki/USB-Install) |
+| Первые шаги, DNF, кодеки | [🔄 Первые шаги после установки](https://github.com/teanrus/redos-lifehacks/wiki/First-Steps) |
+| Офисные пакеты, КриптоПро | [📦 Установка офисных пакетов](https://github.com/teanrus/redos-lifehacks/wiki/Office-Setup) |
+| CUPS, драйверы, IPP | [🖨️ Настройка принтера через CUPS](https://github.com/teanrus/redos-lifehacks/wiki/Printer-CUPS-Setup) |
+| SANE, сканирование, saned | [📷 Подключение сканера](https://github.com/teanrus/redos-lifehacks/wiki/Scanner-Setup) |
+| NTP, chrony, RTC | [🕐 Настройка времени и часовых поясов](https://github.com/teanrus/redos-lifehacks/wiki/Timezone-Setup) |

@@ -742,3 +742,11 @@ sudo ./Ventoy2Disk.sh -i /dev/sdX  # установка
 > [!note]
 > Скрипт использует Ventoy — совместим с обоими ISO-образами.
 > Поддержка UEFI и Legacy BIOS.
+
+---
+
+## 📘 Энциклопедия (Wiki)
+
+Подробные пояснения принципов работы:
+
+- [💾 Установка РЕД ОС с USB](https://github.com/teanrus/redos-lifehacks/wiki/USB-Install) — что такое Ventoy, UEFI vs Legacy, Secure Boot, параметры ядра `dd`, `bs=4M`, `status=progress`, диагностика чёрного экрана
