@@ -57,7 +57,7 @@ git push origin feature/ваше-изменение
 
 ## 📂 Структура репозитория
 
-```
+```txt
 redos-lifehacks/
 ├── README.md                 # Главная страница
 ├── CHANGELOG.md              # История изменений
@@ -168,7 +168,7 @@ main "$@"
 
 ### Как это работает
 
-```
+```bash
 push .sh → GitHub Actions → sha256sum → Release + .sha256
 ```
 
@@ -223,6 +223,8 @@ sha256sum -c install-cryptopro.sh.sha256
 ```bash
 # команда с пояснением
 sudo dnf install пакет
+```
+
 ```
 
 ---
