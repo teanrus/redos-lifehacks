@@ -679,7 +679,7 @@ traceroute -n 8.8.8.8
 | **Архитектура** | любая |
 | **Права** | root (для firewall-cmd, ethtool) |
 | **Скрипт** | [`network-diagnostics.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/network-diagnostics.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует стандартные утилиты (`nmcli`, `ethtool`, `firewall-cmd`). Совместим с обеими версиями.

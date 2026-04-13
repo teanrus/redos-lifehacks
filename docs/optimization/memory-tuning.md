@@ -14,7 +14,7 @@
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Параметры ядра** | `vm.swappiness`, `vm.vfs_cache_pressure`, `vm.dirty_ratio` |
 | **Утилиты** | `sysctl`, `free`, `zram-generator` |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x с большими объёмами RAM значение `vm.swappiness=10` рекомендуется по умолчанию. Для серверов с zram используйте `zram-generator`.

@@ -78,4 +78,4 @@
 
 ---
 
-[v1.0]: https://github.com/teanrus/redos-lifehacks/releases/tag/v1.0
+[v1.1.1]: https://github.com/teanrus/redos-lifehacks/releases/tag/v1.1.1

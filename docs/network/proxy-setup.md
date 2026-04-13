@@ -701,7 +701,7 @@ proxy-toggle.sh status
 | **Архитектура** | любая |
 | **Права** | root (для системных настроек) |
 | **Скрипт** | [`setup_proxy.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_proxy.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт определяет наличие `dnf` и настраивает прокси для всех основных приложений.

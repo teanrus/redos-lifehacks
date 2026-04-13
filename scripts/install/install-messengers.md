@@ -109,7 +109,7 @@ vk-messenger  # VK Messenger
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
 | **Скрипт** | [`install-messengers.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт универсален, но репозиторий MAX использует `el/9` (RHEL 9).

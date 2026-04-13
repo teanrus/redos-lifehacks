@@ -828,7 +828,7 @@ pavucontrol
 | **Архитектура** | любая |
 | **Права** | пользователь (диагностика), root (установка пакетов) |
 | **Скрипт** | [`sound-diagnostics.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт проверяет и PulseAudio (7.x), и PipeWire (8.x).

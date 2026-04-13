@@ -296,7 +296,7 @@ sudo kill -HUP $(pidof rsyslog)
 | **Архитектура** | любая |
 | **Права** | root (для dnf clean, journalctl vacuum) |
 | **Скрипт** | [`disk-usage.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/disk-usage.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Все команды стандартные (`df`, `du`, `dnf`, `journalctl`). Работают одинаково в обеих версиях.

@@ -442,7 +442,7 @@ sudo userdel -r SemkinaSY
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
 | **Скрипт** | [`user-migration.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует стандартные команды (`useradd`, `rsync`, `passwd`) — совместим с обеими версиями.

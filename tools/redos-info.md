@@ -229,7 +229,7 @@ sudo dnf install smartmontools -y
 | **Архитектура** | любая |
 | **Права** | root (для полной информации) |
 | **Скрипт** | [`redos-info.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует стандартные утилиты (`/proc`, `uname`, `ip`, `rpm`). Совместим с обеими версиями.

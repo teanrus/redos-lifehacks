@@ -188,7 +188,7 @@ sudo cp /boot/initramfs-$(uname -r).img /boot/initramfs-$(uname -r).img.backup
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Загрузчик** | GRUB2 |
 | **Init** | systemd, dracut |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x с ядром 6.x параметры `nowatchdog` и `audit=0` могут быть уже применены по умолчанию. Проверяйте через `systemd-analyze blame` перед отключением служб.

@@ -741,7 +741,7 @@ sudo ./Ventoy2Disk.sh -i /dev/sdX  # установка
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
 | **Скрипт** | [`usb-install.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-install.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует Ventoy — совместим с обоими ISO-образами.

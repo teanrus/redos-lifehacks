@@ -39,7 +39,7 @@ sudo bash install-cryptopro.sh
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
 | **Скрипт** | [`install-cryptopro.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > КриптоПро CSP работает на обеих версиях.

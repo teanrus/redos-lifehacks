@@ -545,7 +545,7 @@ ssh -i ~/.ssh/id_rsa_sshfs user@host
 | **Архитектура** | любая |
 | **Права** | root (установка sshfs), пользователь (монтирование) |
 | **Скрипт** | [`automount-sshfs.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x может потребоваться `fuse3` вместо `fuse`.

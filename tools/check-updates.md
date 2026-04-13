@@ -423,7 +423,7 @@ sudo dnf clean all
 | **Архитектура** | любая |
 | **Права** | root (для check-update) |
 | **Скрипт** | [`redos-update-checker.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-update-checker.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует стандартные команды `dnf`, которые работают одинаково в обеих версиях.

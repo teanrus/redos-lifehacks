@@ -709,7 +709,7 @@ sudo dnf install htop
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
 | **Скрипт** | [`package-install-fix.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует `dnf` и `rpm` — стандартные для обеих версий.

@@ -277,7 +277,7 @@ systemctl is-active cups
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
 | **Скрипт** | [`setup-network-printer.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-network-printer.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > CUPS и firewalld работают одинаково в обеих версиях.

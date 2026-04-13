@@ -2018,7 +2018,7 @@ jq '.network.interfaces[]' /var/reports/hw/hw-report-*.json
 | **Опционально** | smartmontools, nvme-cli, ethtool, glx-utils, ipmitool, lm_sensors, alsa-utils |
 | **Скрипт** | hw-check.sh (bash 4.0+) |
 | **Отчёты** | HTML, JSON |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Для проверки SMART, NVMe, IPMI и некоторых других компонентов требуются root-права.

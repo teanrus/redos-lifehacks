@@ -598,7 +598,7 @@ wg show
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
 | **Скрипт** | [`setup_corporate_vpn.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_corporate_vpn.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > WireGuard встроен в ядро обеих версий. OpenVPN устанавливается из репозитория.

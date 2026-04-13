@@ -793,7 +793,7 @@ wifi-connect.sh status
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
 | **Скрипт** | [`setup_wifi.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_wifi.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Названия firmware-пакетов могут отличаться в РЕД ОС 8.x.

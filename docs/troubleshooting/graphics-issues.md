@@ -233,7 +233,7 @@ sudo systemctl isolate graphical.target
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Графика** | Mesa, X11, NVIDIA/Intel/AMD |
 | **Утилиты** | `xrandr`, `glxinfo`, `mesa-utils`, `ethtool` |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x с ядром 6.x драйверы Intel и AMD встроены в ядро. Для NVIDIA может потребоваться установка драйверов из ELRepo или rpmfusion.

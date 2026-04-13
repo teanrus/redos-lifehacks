@@ -553,7 +553,7 @@ myoffice-writer    # МойОфис Документы
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
 | **Скрипт** | [`install-office.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-office.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт устанавливает стандартные офисные пакеты из репозиториев.

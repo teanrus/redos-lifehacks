@@ -461,7 +461,7 @@ journalctl -u NetworkManager -f
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
 | **Скрипт** | [`set_static_ip.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_static_ip.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует только `nmcli` — стандартный инструмент NetworkManager в обеих версиях.
