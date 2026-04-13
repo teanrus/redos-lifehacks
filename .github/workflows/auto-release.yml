@@ -17,6 +17,9 @@ on:
         default: 'v1.1'
         type: string
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
 
