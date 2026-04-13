@@ -84,7 +84,17 @@ grep -E '^\$y\$' /etc/shadow
 ### Одной командой:
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_password_policy.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_password_policy.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_password_policy.sh -o set_password_policy.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_password_policy.sh.sha256 -o set_password_policy.sh.sha256
+sha256sum -c set_password_policy.sh.sha256
+sudo bash set_password_policy.sh
 ```
 
 ### Или вручную:

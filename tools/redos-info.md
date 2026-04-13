@@ -10,16 +10,35 @@
 ## 🚀 Быстрый запуск
 
 ```bash
-# Автоматический сбор информации (без запросов)
+# Вариант 1: Быстрый запуск (curl) — автоматический сбор информации (без запросов)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash
 
-# С сохранением отчета в файл
+# Вариант 2: Быстрый запуск (wget) — автоматический сбор информации (без запросов)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh -o redos-info.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh.sha256 -o redos-info.sh.sha256
+sha256sum -c redos-info.sh.sha256
+sudo bash redos-info.sh
+
+# С сохранением отчёта в файл
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash -s -- -o system-info.txt
 ```
 
 ## Только сетевая информация
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash -s -- -s network
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash -s -- -s network
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh -o redos-info.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh.sha256 -o redos-info.sh.sha256
+sha256sum -c redos-info.sh.sha256
+sudo bash redos-info.sh -s -- -s network
 ```
 
 ## 📋 Что собирает скрипт
@@ -88,14 +107,34 @@ sudo ./redos-info.sh -d /var/log/reports -o system-info.txt
 sudo ./redos-info.sh -s network
 ```
 
-5. Запуск через curl (без сохранения отчета)
+5. Запуск через curl (без сохранения отчёта)
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh -o redos-info.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh.sha256 -o redos-info.sh.sha256
+sha256sum -c redos-info.sh.sha256
+sudo bash redos-info.sh
 ```
 
-6. Запуск через curl с сохранением отчета
+6. Запуск через curl с сохранением отчёта
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash -s -- -o /tmp/system-report.txt
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh | sudo bash -s -- -o /tmp/system-report.txt
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh -o redos-info.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-info.sh.sha256 -o redos-info.sh.sha256
+sha256sum -c redos-info.sh.sha256
+sudo bash redos-info.sh -s -- -o /tmp/system-report.txt
 ```
 
 ## 📊 Пример вывода

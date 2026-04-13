@@ -513,7 +513,17 @@ pactl load-module module-equalizer-sink
 ### Одной командой (неинтерактивный режим):
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh | bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh | bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh -o sound-diagnostics.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh.sha256 -o sound-diagnostics.sh.sha256
+sha256sum -c sound-diagnostics.sh.sha256
+bash sound-diagnostics.sh
 ```
 
 ### Или вручную (интерактивный режим):
@@ -691,6 +701,15 @@ chmod +x sound-diagnostics.sh
 
 ```bash
 $ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh | bash
+
+# Или через wget:
+$ wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh | bash
+
+# Или с проверкой целостности:
+$ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh -o sound-diagnostics.sh
+$ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/sound-diagnostics.sh.sha256 -o sound-diagnostics.sh.sha256
+$ sha256sum -c sound-diagnostics.sh.sha256
+$ bash sound-diagnostics.sh
 
 ========================================
 Диагностика проблем со звуком в РЕД ОС

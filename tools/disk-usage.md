@@ -14,7 +14,17 @@
 **Быстрый запуск:**
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/disk-usage.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/disk-usage.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/disk-usage.sh -o disk-usage.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/disk-usage.sh.sha256 -o disk-usage.sh.sha256
+sha256sum -c disk-usage.sh.sha256
+sudo bash disk-usage.sh
 ```
 
 **Или вручную:**

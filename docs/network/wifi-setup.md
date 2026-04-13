@@ -459,7 +459,17 @@ nmcli -f GENERAL connection show "HomeWiFi"
 ### Одной командой:
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_wifi.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_wifi.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_wifi.sh -o setup_wifi.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_wifi.sh.sha256 -o setup_wifi.sh.sha256
+sha256sum -c setup_wifi.sh.sha256
+sudo bash setup_wifi.sh
 ```
 
 ### Или вручную:

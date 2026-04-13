@@ -570,13 +570,17 @@ gunzip -c ~/system-backup.img.gz | sudo dd of=/dev/sda bs=4M status=progress
 ### 📥 Запуск скрипта
 
 ```bash
-# Скачать и выполнить скрипт
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-install.sh | sudo bash
 
-# Или скачать и запустить вручную
-wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-install.sh
-chmod +x usb-install.sh
-sudo ./usb-install.sh
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-install.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-install.sh -o usb-install.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-install.sh.sha256 -o usb-install.sh.sha256
+sha256sum -c usb-install.sh.sha256
+sudo bash usb-install.sh
 ```
 
 > [!IMPORTANT]

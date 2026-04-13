@@ -23,13 +23,33 @@
 **Запуск (последняя версия):**
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh -o install-vipnet.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh.sha256 -o install-vipnet.sh.sha256
+sha256sum -c install-vipnet.sh.sha256
+sudo bash install-vipnet.sh
 ```
 
 **Запуск (фиксированная версия v1.0):**
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-vipnet.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-vipnet.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-vipnet.sh -o install-vipnet.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-vipnet.sh.sha256 -o install-vipnet.sh.sha256
+sha256sum -c install-vipnet.sh.sha256
+sudo bash install-vipnet.sh
 ```
 
 **Пример диалога при запуске:**

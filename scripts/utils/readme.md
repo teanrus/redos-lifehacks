@@ -17,7 +17,15 @@
 
 ```bash
 # Очистка системы от временных файлов, кэша, старых ядер
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh | sudo bash
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh | sudo bash
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh -o cleanup.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh.sha256 -o cleanup.sh.sha256
+sha256sum -c cleanup.sh.sha256
+sudo bash cleanup.sh
 ```
 
 > [!TIP]
@@ -34,7 +42,17 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cle
 ### 🚀 Быстрый запуск
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh -o smb-credentials-manager.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh.sha256 -o smb-credentials-manager.sh.sha256
+sha256sum -c smb-credentials-manager.sh.sha256
+sudo bash smb-credentials-manager.sh
 ```
 
 > [!note]
@@ -51,7 +69,17 @@ curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb
 ### 🚀 Быстрый запуск
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh -o rsync-copy.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh.sha256 -o rsync-copy.sh.sha256
+sha256sum -c rsync-copy.sh.sha256
+sudo bash rsync-copy.sh
 ```
 
 Или:

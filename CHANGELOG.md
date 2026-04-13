@@ -66,7 +66,7 @@
 ### Особенности релиза
 
 - 27 bash-скриптов, приаттаченных к GitHub Release
-- Все скрипты запускаемы через `curl -sL .../download/*.sh | sudo bash`
+- Все скрипты запускаемы через `curl -sL .../download/*.sh | sudo bash`, `wget -qO- ... | sudo bash` или локально с проверкой SHA256
 - Совместимость: РЕД ОС 7.3, РЕД ОС 8.0 (x86_64, aarch64)
 - Лицензия: MIT
 - Отчёты: TXT, HTML, JSON

@@ -27,7 +27,17 @@
 #### Одной командой:
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-update-checker.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-update-checker.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-update-checker.sh -o redos-update-checker.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-update-checker.sh.sha256 -o redos-update-checker.sh.sha256
+sha256sum -c redos-update-checker.sh.sha256
+sudo bash redos-update-checker.sh
 ```
 
 #### Или вручную:

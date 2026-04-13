@@ -36,10 +36,20 @@
 
 ## 2. Быстрый запуск
 
-### Способ 1: Запуск без скачивания (через curl)
+### Способ 1: Запуск без скачивания (через curl/wget)
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh -o smb-credentials-manager.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh.sha256 -o smb-credentials-manager.sh.sha256
+sha256sum -c smb-credentials-manager.sh.sha256
+bash smb-credentials-manager.sh
 ```
 
 ### Способ 2: Скачивание и запуск (рекомендуется)

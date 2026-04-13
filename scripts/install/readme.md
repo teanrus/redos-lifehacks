@@ -31,16 +31,48 @@ ViPNet Client: VPN-соединение, автоматическое опред
 
 ```bash
 # 1С:Предприятие
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh | sudo bash
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh | sudo bash
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh -o install-1c.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-1c.sh.sha256 -o install-1c.sh.sha256
+sha256sum -c install-1c.sh.sha256
+sudo bash install-1c.sh
 
 # КриптоПро CSP
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh | sudo bash
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh | sudo bash
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh -o install-cryptopro.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-cryptopro.sh.sha256 -o install-cryptopro.sh.sha256
+sha256sum -c install-cryptopro.sh.sha256
+sudo bash install-cryptopro.sh
 
 # Мессенджеры
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh | sudo bash
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh | sudo bash
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh -o install-messengers.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh.sha256 -o install-messengers.sh.sha256
+sha256sum -c install-messengers.sh.sha256
+sudo bash install-messengers.sh
 
 # ViPNet Client
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh | sudo bash
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh | sudo bash
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh -o install-vipnet.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-vipnet.sh.sha256 -o install-vipnet.sh.sha256
+sha256sum -c install-vipnet.sh.sha256
+sudo bash install-vipnet.sh
 ```
 
 > [!TIP]

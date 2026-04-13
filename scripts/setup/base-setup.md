@@ -16,7 +16,17 @@
 
 **Запуск (последняя версия):**
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh -o base-setup.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/base-setup.sh.sha256 -o base-setup.sh.sha256
+sha256sum -c base-setup.sh.sha256
+sudo bash base-setup.sh
 ```
 
 ---
