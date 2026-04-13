@@ -438,7 +438,7 @@ sudo firewall-cmd --zone=trusted --add-interface=docker0 --permanent
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Фаервол** | firewalld, iptables/nftables |
 | **Права** | root (для управления правилами) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x firewalld установлен и включён по умолчанию. Для Docker-контейнеров рекомендуется использовать зону `trusted` для интерфейса `docker0`.

@@ -1,8 +1,24 @@
 #!/bin/bash
-# Установка КриптоПро CSP на РЕД ОС 7.3
-# Версия: 1.5
-# Описание: Установка КриптоПро CSP, драйверов Рутокен и дополнительных компонентов
-#           Автоматически использует последнюю версию из репозитория
+##############################################################################
+# install-cryptopro.sh — Установка КриптоПро CSP на РЕД ОС 7.3/8.0
+#
+# Описание: Установка КриптоПро CSP, драйверов Рутокен и дополнительных компонентов.
+#           Автоматически использует последнюю версию из репозитория.
+#
+# Использование:
+#   sudo ./install-cryptopro.sh [ОПЦИИ]
+#
+# Опции:
+#   -h, --help           Справка
+#   -w, --work-dir DIR   Рабочая директория (по умолчанию /tmp/cryptopro)
+#   -t, --tag TAG        Версия релиза (по умолчанию — последний GitHub Release)
+#   --skip-download      Пропустить загрузку, использовать локальные файлы
+#
+# Зависимости: bash, coreutils, curl, wget, tar, dnf
+# Опционально: pcsc-tools, Rutoken drivers
+# Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅ (x86_64)
+##############################################################################
+set -euo pipefail
 
 # Цвета для вывода
 RED='\033[0;31m'
@@ -11,12 +27,47 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# === КОНФИГУРАЦИЯ ===
+# ─── Конфигурация ──────────────────────────────────────────────────────────
 GITHUB_USER="teanrus"
 GITHUB_REPO="redos-setup"
 
-# Рабочая директория
-WORK_DIR="/home/inst/cryptopro"
+# Рабочая директория (по умолчанию /tmp/cryptopro)
+WORK_DIR="/tmp/cryptopro"
+TAG_OVERRIDE=""
+SKIP_DOWNLOAD=false
+
+# ─── Парсинг аргументов ───────────────────────────────────────────────────
+show_help() {
+    head -21 "$0" | tail -19 | sed 's/^# \?//'
+}
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h|--help)
+            show_help
+            exit 0
+            ;;
+        -w|--work-dir)
+            WORK_DIR="${2:?Ошибка: требуется значение для --work-dir}"
+            shift 2
+            ;;
+        -t|--tag)
+            TAG_OVERRIDE="${2:?Ошибка: требуется значение для --tag}"
+            shift 2
+            ;;
+        --skip-download)
+            SKIP_DOWNLOAD=true
+            shift
+            ;;
+        *)
+            echo -e "${RED}Неизвестная опция: $1${NC}" >&2
+            show_help
+            exit 1
+            ;;
+    esac
+done
+
+# ─── Функции ───────────────────────────────────────────────────────────────
 
 # Функция для запроса подтверждения
 confirm_action() {
@@ -83,41 +134,71 @@ check_cryptopro_installed() {
 get_latest_tag() {
     local user=$1
     local repo=$2
-    
+
+    # Если тег задан вручную, используем его
+    if [ -n "$TAG_OVERRIDE" ]; then
+        echo -e "${GREEN}✓ Используется указанная версия: $TAG_OVERRIDE${NC}" >&2
+        echo "$TAG_OVERRIDE"
+        return 0
+    fi
+
     echo -e "${BLUE}Получение информации о последнем релизе...${NC}" >&2
-    
+
     # Получаем данные о последнем релизе через GitHub API
     local api_url="https://api.github.com/repos/$user/$repo/releases/latest"
-    local latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
-    
+    local latest_tag
+    latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
+
     if [ -z "$latest_tag" ]; then
         echo -e "${RED}✗ Не удалось получить последнюю версию${NC}" >&2
         return 1
     fi
-    
+
     echo -e "${GREEN}✓ Найдена последняя версия: $latest_tag${NC}" >&2
     echo "$latest_tag"
     return 0
 }
 
-# Функция скачивания с GitHub
+# Функция скачивания с GitHub с проверкой контрольной суммы
 download_from_github() {
     local file_name=$1
     local dest_dir=$2
     local tag=$3
-    
+    local expected_sha256="${4:-}"
+
     local url="https://github.com/$GITHUB_USER/$GITHUB_REPO/releases/download/$tag/$file_name"
-    
+
     echo -e "${BLUE}Загрузка $file_name (версия: $tag)...${NC}"
     echo -e "${BLUE}URL: $url${NC}"
-    
+
     if ! curl -s --head -f "$url" > /dev/null 2>&1; then
         echo -e "${RED}✗ Файл $file_name не найден в релизе $tag${NC}"
         return 1
     fi
-    
+
     if wget --progress=bar:force -O "$dest_dir/$file_name" "$url" 2>&1; then
         echo -e "${GREEN}✓ $file_name успешно загружен${NC}"
+
+        # Проверка контрольной суммы SHA256
+        if [ -n "$expected_sha256" ]; then
+            echo -e "${BLUE}Проверка контрольной суммы SHA256...${NC}"
+            local actual_sha256
+            actual_sha256=$(sha256sum "$dest_dir/$file_name" | awk '{print $1}')
+
+            if [ "$actual_sha256" = "$expected_sha256" ]; then
+                echo -e "${GREEN}✓ Контрольная сумма совпадает${NC}"
+            else
+                echo -e "${RED}✗ Контрольная сумма НЕ совпадает!${NC}"
+                echo -e "${RED}  Ожидалось: $expected_sha256${NC}"
+                echo -e "${RED}  Получено:  $actual_sha256${NC}"
+                rm -f "$dest_dir/$file_name"
+                return 1
+            fi
+        else
+            echo -e "${YELLOW}⚠ Контрольная сумма не указана, проверка пропущена${NC}"
+            echo -e "${YELLOW}  SHA256 загруженного файла: $(sha256sum "$dest_dir/$file_name" | awk '{print $1}')${NC}"
+        fi
+
         return 0
     else
         echo -e "${RED}✗ Ошибка загрузки $file_name${NC}"

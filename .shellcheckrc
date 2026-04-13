@@ -1,0 +1,8 @@
+# .shellcheckrc — настройки shellcheck для проекта redos-lifehacks
+# Документация: https://github.com/koalaman/shellcheck/wiki/Ignore
+
+# Исключаем SC1090: "Can't follow non-constant source"
+#   Мы используем source с переменными путями — это нормально для CI/CD
+# Исключаем SC1091: "Not following: file not found"
+#   Файлы конфигурации могут быть на целевой системе, но не в CI
+exclude=SC1090,SC1091

@@ -1,12 +1,20 @@
 #!/bin/bash
+##############################################################################
+# install-office.sh — Установка офисных пакетов для РЕД ОС
 #
-# Скрипт установки офисных пакетов для РЕД ОС
-# Версия: 1.0
-# Запуск: curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-office.sh | sudo bash
-# GitHub: https://github.com/teanrus/redos-lifehacks
+# Описание: Установка Р7-Офис, LibreOffice, МойОфис
 #
-
-set -e
+# Использование:
+#   sudo ./install-office.sh [ОПЦИИ]
+#
+# Опции:
+#   -h, --help    Справка
+#   -p, --package Выбор пакета (r7|libreoffice|myoffice|all)
+#
+# Зависимости: bash, coreutils, dnf
+# Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅
+##############################################################################
+set -euo pipefail
 
 # Цвета для вывода
 RED='\033[0;31m'

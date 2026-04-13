@@ -108,6 +108,29 @@ ViPNet Client: VPN-соединение, автоматическое опред
     sudo systemctl enable --now fstrim.timer
     ```
 
+## 🔒 Проверка целостности скриптов
+
+Каждый скрипт в Release сопровождается файом `.sha256` с контрольной суммой.
+Это гарантирует, что файл не был изменён при доставке.
+
+### Быстрая проверка
+
+```bash
+# 1. Скачиваем скрипт и файл контрольной суммы
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh -o install-cryptopro.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh.sha256 -o install-cryptopro.sh.sha256
+
+# 2. Проверяем совпадение
+sha256sum -c install-cryptopro.sh.sha256
+# install-cryptopro.sh: OK
+
+# 3. Запускаем (только после успешной проверки!)
+sudo bash install-cryptopro.sh
+```
+
+> [!important]
+> Никогда не запускайте скрипты из интернета без проверки контрольных сумм!
+
 ---
 
 > [!tip]

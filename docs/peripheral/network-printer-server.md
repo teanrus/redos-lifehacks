@@ -1360,7 +1360,7 @@ sudo bash setup-print-server.sh --interactive
 | **Firewall** | firewalld |
 | **AD-интеграция** | realmd + sssd |
 | **Сеть** | Требуется для клиентского доступа |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > CUPS + Samba работают одинаково в обеих версиях. Samba может потребовать адаптации конфигов для 8.x.

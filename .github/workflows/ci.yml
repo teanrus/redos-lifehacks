@@ -1,0 +1,107 @@
+# GitHub Actions CI для redos-lifehacks
+# Проверка синтаксиса bash-скриптов и валидация shellcheck
+name: CI — Bash Script Validation
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '**/*.sh'
+      - '.github/workflows/ci.yml'
+  pull_request:
+    branches: [main, master]
+    paths:
+      - '**/*.sh'
+      - '.github/workflows/ci.yml'
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Install ShellCheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+
+      - name: Find all .sh files
+        id: find-scripts
+        run: |
+          # Находим все .sh файлы в репозитории
+          mapfile -t scripts < <(find . -name '*.sh' -type f | sort)
+          echo "Found ${#scripts[@]} scripts:"
+          printf '  %s\n' "${scripts[@]}"
+          echo "scripts=${scripts[*]}" >> "$GITHUB_OUTPUT"
+
+      - name: Run ShellCheck
+        run: |
+          exit_code=0
+          for script in ${{ steps.find-scripts.outputs.scripts }}; do
+            echo ""
+            echo "───────────────────────────────────────────"
+            echo "Checking: $script"
+            echo "───────────────────────────────────────────"
+
+            # ShellCheck с настройками для bash
+            if ! shellcheck \
+              --shell=bash \
+              --severity=warning \
+              --exclude=SC1090,SC1091 \
+              "$script"; then
+              exit_code=1
+            fi
+          done
+          exit $exit_code
+
+  syntax-check:
+    name: Bash Syntax Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Find all .sh files
+        id: find-scripts
+        run: |
+          mapfile -t scripts < <(find . -name '*.sh' -type f | sort)
+          echo "scripts=${scripts[*]}" >> "$GITHUB_OUTPUT"
+
+      - name: Check bash syntax with bash -n
+        run: |
+          exit_code=0
+          for script in ${{ steps.find-scripts.outputs.scripts }}; do
+            echo "Syntax check: $script"
+            if ! bash -n "$script" 2>&1; then
+              echo "  FAILED: $script"
+              exit_code=1
+            fi
+          done
+          exit $exit_code
+
+  markdown-links:
+    name: Markdown Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Check internal links
+        run: |
+          # Проверяем что все относительные ссылки на файлы в репозитории работают
+          exit_code=0
+          for md_file in $(find . -name '*.md' -type f); do
+            # Извлекаем относительные ссылки вида (../path/file.sh) или (path/file.md)
+            grep -oP '\(\K[^)]+\.(sh|md)\b' "$md_file" 2>/dev/null | while read -r link; do
+              # Разрешаем относительные пути
+              dir=$(dirname "$md_file")
+              target=$(realpath -m "$dir/$link" 2>/dev/null || echo "")
+              if [ -n "$target" ] && [ ! -e "$target" ]; then
+                echo "BROKEN LINK in $md_file -> $link (resolved: $target)"
+                exit_code=1
+              fi
+            done
+          done
+          exit $exit_code

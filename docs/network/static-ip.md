@@ -147,7 +147,17 @@ journalctl -u NetworkManager -f
 ### Одной командой
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_static_ip.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_static_ip.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_static_ip.sh -o set_static_ip.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_static_ip.sh.sha256 -o set_static_ip.sh.sha256
+sha256sum -c set_static_ip.sh.sha256
+sudo bash set_static_ip.sh
 ```
 
 ### Или вручную
@@ -451,7 +461,7 @@ journalctl -u NetworkManager -f
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
 | **Скрипт** | [`set_static_ip.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_static_ip.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт использует только `nmcli` — стандартный инструмент NetworkManager в обеих версиях.

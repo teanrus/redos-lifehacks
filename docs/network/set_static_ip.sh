@@ -1,12 +1,16 @@
 #!/bin/bash
+##############################################################################
+# set_static_ip.sh — Настройка статического IP-адреса для РЕД ОС
 #
-# Скрипт настройки статического IP-адреса для РЕД ОС
-# Версия: 1.0
-# Запуск: curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/set_static_ip.sh | sudo bash
-# GitHub: https://github.com/teanrus/redos-lifehacks
+# Описание: Интерактивная настройка статического IP через NetworkManager
 #
-
-set -e
+# Использование:
+#   sudo ./set_static_ip.sh
+#
+# Зависимости: bash, coreutils, nmcli, ping, nslookup
+# Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅ (x86_64, aarch64)
+##############################################################################
+set -euo pipefail
 
 # Цвета для вывода
 RED='\033[0;31m'

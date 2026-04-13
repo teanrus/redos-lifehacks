@@ -1,12 +1,16 @@
 #!/bin/bash
+##############################################################################
+# network-diagnostics.sh — Диагностика сетевых проблем для РЕД ОС
 #
-# Скрипт диагностики сетевых проблем для РЕД ОС
-# Версия: 1.0
-# Запуск: curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/network-diagnostics.sh | sudo bash
-# GitHub: https://github.com/teanrus/redos-lifehacks
+# Описание: Комплексная диагностика сетевых подключений и настроек
 #
-
-set -e
+# Использование:
+#   sudo ./network-diagnostics.sh
+#
+# Зависимости: bash, coreutils, ip, ss, ping, dig/nslookup
+# Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅
+##############################################################################
+set -u
 
 # Цвета для вывода
 RED='\033[0;31m'

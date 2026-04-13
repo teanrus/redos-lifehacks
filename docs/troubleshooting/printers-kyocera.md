@@ -82,7 +82,17 @@ sudo systemctl restart cups.service
 #### На сервере печати (ПК с подключённым принтером):
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-network-printer.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-network-printer.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-network-printer.sh -o setup-network-printer.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-network-printer.sh.sha256 -o setup-network-printer.sh.sha256
+sha256sum -c setup-network-printer.sh.sha256
+sudo bash setup-network-printer.sh
 ```
 
 Скрипт автоматически:
@@ -267,7 +277,7 @@ systemctl is-active cups
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
 | **Скрипт** | [`setup-network-printer.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-network-printer.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > CUPS и firewalld работают одинаково в обеих версиях.

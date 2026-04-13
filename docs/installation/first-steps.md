@@ -177,7 +177,17 @@ sudo dnf install simple-scan
 ***Одной командой:***
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-office.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-office.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-office.sh -o install-office.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-office.sh.sha256 -o install-office.sh.sha256
+sha256sum -c install-office.sh.sha256
+sudo bash install-office.sh
 ```
 
 ***Или вручную:***
@@ -838,7 +848,7 @@ source ~/.bashrc
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Права** | root (для установки пакетов и настройки системы) |
 | **Интернет** | требуется для загрузки пакетов и обновлений |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x некоторые репозитории и пакеты могут отличаться. Рекомендуется проверить доступность репозиториев перед выполнением скриптов.

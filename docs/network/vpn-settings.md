@@ -253,7 +253,17 @@ ping -c 3 10.0.0.1
 ### Одной командой:
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_corporate_vpn.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_corporate_vpn.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_corporate_vpn.sh -o setup_corporate_vpn.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_corporate_vpn.sh.sha256 -o setup_corporate_vpn.sh.sha256
+sha256sum -c setup_corporate_vpn.sh.sha256
+sudo bash setup_corporate_vpn.sh
 ```
 
 ### Или вручную:
@@ -588,7 +598,7 @@ wg show
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
 | **Скрипт** | [`setup_corporate_vpn.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup_corporate_vpn.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > WireGuard встроен в ядро обеих версий. OpenVPN устанавливается из репозитория.

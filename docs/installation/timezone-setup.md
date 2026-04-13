@@ -28,7 +28,17 @@
 ### Быстрый запуск
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/timedate.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/timedate.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/timedate.sh -o timedate.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/timedate.sh.sha256 -o timedate.sh.sha256
+sha256sum -c timedate.sh.sha256
+sudo bash timedate.sh
 ```
 
 ### Что делает скрипт
@@ -520,7 +530,7 @@ CRON_TZ=Europe/Moscow
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Синхронизация** | chrony (рекомендуется), systemd-timesyncd |
 | **Утилиты** | `timedatectl`, `chronyc`, `hwclock` |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 7.x и 8.x `chrony` предпочтителен для NTP-синхронизации. Для изолированных сетей настройте `local stratum 10` в конфигурации chrony. Рекомендуется использовать российские серверы ВНИИФТРИ (`ntp1.vniiftri.ru`, `ntp2.vniiftri.ru`) для максимальной точности синхронизации.

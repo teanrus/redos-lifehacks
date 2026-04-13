@@ -7,7 +7,7 @@
 
 ---
 
-## [v1.0] — 2026-04-13
+## [v1.1.1] — 2026-04-13
 
 Первый публичный релиз. Полная коллекция руководств и скриптов для РЕД ОС 7.3/8.0.
 
@@ -66,7 +66,7 @@
 ### Особенности релиза
 
 - 27 bash-скриптов, приаттаченных к GitHub Release
-- Все скрипты запускаемы через `curl -sL .../download/*.sh | sudo bash`
+- Все скрипты запускаемы через `curl -sL .../download/*.sh | sudo bash`, `wget -qO- ... | sudo bash` или локально с проверкой SHA256
 - Совместимость: РЕД ОС 7.3, РЕД ОС 8.0 (x86_64, aarch64)
 - Лицензия: MIT
 - Отчёты: TXT, HTML, JSON
@@ -78,4 +78,4 @@
 
 ---
 
-[v1.0]: https://github.com/teanrus/redos-lifehacks/releases/tag/v1.0
+[v1.1.1]: https://github.com/teanrus/redos-lifehacks/releases/tag/v1.1.1

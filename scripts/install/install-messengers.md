@@ -26,13 +26,33 @@
 **Запуск (последняя версия):**
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh -o install-messengers.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh.sha256 -o install-messengers.sh.sha256
+sha256sum -c install-messengers.sh.sha256
+sudo bash install-messengers.sh
 ```
 
 **Запуск (фиксированная версия v1.0):**
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-messengers.sh | sudo bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-messengers.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-messengers.sh -o install-messengers.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-messengers.sh.sha256 -o install-messengers.sh.sha256
+sha256sum -c install-messengers.sh.sha256
+sudo bash install-messengers.sh
 ```
 
 **Пример диалога при запуске:**
@@ -89,7 +109,7 @@ vk-messenger  # VK Messenger
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
 | **Скрипт** | [`install-messengers.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/install-messengers.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Скрипт универсален, но репозиторий MAX использует `el/9` (RHEL 9).

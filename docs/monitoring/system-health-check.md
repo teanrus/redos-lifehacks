@@ -36,7 +36,18 @@
 
 Быстрая проверка ключевых параметров системы одной командой:
 
-[Скрипт `quick-check.sh`](quick-check.sh)
+```bash
+# Вариант 1: Запуск напрямую из интернета (curl)
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/quick-check.sh | bash
+
+# Вариант 2: Запуск через wget
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/quick-check.sh | bash
+
+# Вариант 3: Скачивание и запуск локально
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/quick-check.sh -o quick-check.sh
+chmod +x quick-check.sh
+./quick-check.sh
+```
 
 > [!tip]
 > Сохраните этот скрипт как `~/quick-check.sh`, сделайте исполняемым (`chmod +x`) и запускайте при любом подозрении на проблему.
@@ -876,7 +887,18 @@ tmux attach -t monitoring
 
 Полный автоматический скрипт диагностики с цветным выводом и генерацией отчётов:
 
-[Скрипт `system-health-check.sh`](system-health-check.sh)
+```bash
+# Вариант 1: Запуск напрямую из интернета (curl)
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/system-health-check.sh | sudo bash
+
+# Вариант 2: Запуск через wget
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/system-health-check.sh | sudo bash
+
+# Вариант 3: Скачивание и запуск локально
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/system-health-check.sh -o system-health-check.sh
+chmod +x system-health-check.sh
+sudo ./system-health-check.sh
+```
 
 ---
 
@@ -1149,7 +1171,7 @@ EOF
 | **Скрипт** | system-health-check.sh (bash 4.0+) |
 | **Отчёты** | TXT, HTML, JSON |
 | **Планировщик** | cron, systemd timer |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Для проверки SMART, температуры и сетевых интерфейсов требуются root-права.

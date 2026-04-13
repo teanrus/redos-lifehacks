@@ -315,7 +315,7 @@ sudo clevis luks bind -d /dev/sdaX tpm2 '{"pcr_ids":"7"}'
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Шифрование** | LUKS/dm-crypt, fscrypt, gocryptfs |
 | **Пакеты** | `cryptsetup`, `fscrypt`, `gocryptfs` |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x fscrypt поддерживает только ext4 и f2fs. Для LUKS2 используйте `cryptsetup 2.x`. gocryptfs требует FUSE, который доступен в стандартных репозиториях.

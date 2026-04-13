@@ -338,13 +338,17 @@ done
 ### 📥 Запуск скрипта
 
 ```bash
-# Скачать и выполнить скрипт
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh | sudo bash
 
-# Или скачать и запустить вручную
-wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh
-chmod +x automount-sshfs.sh
-sudo ./automount-sshfs.sh
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh | sudo bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh -o automount-sshfs.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh.sha256 -o automount-sshfs.sh.sha256
+sha256sum -c automount-sshfs.sh.sha256
+sudo bash automount-sshfs.sh
 ```
 
 > [!IMPORTANT]
@@ -541,7 +545,7 @@ ssh -i ~/.ssh/id_rsa_sshfs user@host
 | **Архитектура** | любая |
 | **Права** | root (установка sshfs), пользователь (монтирование) |
 | **Скрипт** | [`automount-sshfs.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > В РЕД ОС 8.x может потребоваться `fuse3` вместо `fuse`.

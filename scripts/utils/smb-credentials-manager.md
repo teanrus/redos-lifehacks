@@ -36,10 +36,20 @@
 
 ## 2. Быстрый запуск
 
-### Способ 1: Запуск без скачивания (через curl)
+### Способ 1: Запуск без скачивания (через curl/wget)
 
 ```bash
+# Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | bash
+
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | bash
+
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh -o smb-credentials-manager.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh.sha256 -o smb-credentials-manager.sh.sha256
+sha256sum -c smb-credentials-manager.sh.sha256
+bash smb-credentials-manager.sh
 ```
 
 ### Способ 2: Скачивание и запуск (рекомендуется)
@@ -599,7 +609,7 @@ df -h | grep share
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Зависимости** | `secret-tool`, `gio`, `smbclient` (опционально), `qdbus` (для KDE) |
 | **Права** | `sudo` (для системных файлов и кэшей, опционально) |
-| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x |
+| **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]
 > Если `secret-tool` не установлен, установите: `sudo dnf install libsecret-tools`. Для работы с GVFS убедитесь, что установлен пакет `gvfs-smb`.
