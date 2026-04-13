@@ -47,7 +47,7 @@ echo "=== Failed Services ===" && systemctl --failed --no-pager
 
 ```bash
 # Скачать и запустить system-health-check.sh
-curl -sL https://raw.githubusercontent.com/teanrus/redos-lifehacks/main/docs/monitoring/scripts/system-health-check.sh -o /tmp/system-health-check.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/system-health-check.sh -o /tmp/system-health-check.sh
 chmod +x /tmp/system-health-check.sh
 sudo bash /tmp/system-health-check.sh --full --report html
 ```

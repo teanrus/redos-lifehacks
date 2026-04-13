@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del *)",
+      "Bash(copy *)"
+    ]
+  },
+  "$version": 3
+}

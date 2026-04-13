@@ -28,7 +28,7 @@
 | `install-vipnet.sh` | ViPNet Client: VPN, firewall, автозапуск, импорт конфигурации |
 | `network-diagnostics.sh` | Диагностика сети: интерфейсы, DNS, маршруты, порты |
 | `package-install-fix.sh` | Исправление ошибок установки пакетов: зависимости, GPG, lock |
-| `redos-auto-update.sh` | Автоматическое обновление по расписанию: временное окно, режимы, Telegram |
+| `redos-auto-update.sh` | Автообновление по расписанию: временное окно, режимы, уведомления MAX Messenger |
 | `redos-info.sh` | Информация о системе: ОС, ядро, оборудование, диски, сеть, пакеты, сервисы |
 | `redos-update-checker.sh` | Проверка и установка обновлений: DNF, безопасность, ядро |
 | `rsync-copy.sh` | Интерактивное копирование файлов по SSH с проверками |
@@ -62,12 +62,16 @@
 - `check-updates.md` — проверка обновлений системы
 - `disk-usage.md` — анализ дискового пространства
 - `redos-info.md` + `redos-info.sh` — информация о системе
-- `redos-update-scheduler.md` — документация по автоматическому обновлению
 - `system-health.md` — быстрая проверка состояния
+
+#### Документация скриптов
+
+- `scripts/monitoring/redos-auto-update.md` — автоматическое обновление по расписанию
+- `scripts/monitoring/system-health-check.md` — полная диагностика системы
 
 ### Особенности релиза
 
-- 27 bash-скриптов, приаттаченных к GitHub Release
+- 28 bash-скриптов, приаттаченных к GitHub Release
 - Все скрипты запускаемы через `curl -sL .../download/*.sh | sudo bash`, `wget -qO- ... | sudo bash` или локально с проверкой SHA256
 - Совместимость: РЕД ОС 7.3, РЕД ОС 8.0 (x86_64, aarch64)
 - Лицензия: MIT

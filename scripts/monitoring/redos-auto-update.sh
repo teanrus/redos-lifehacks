@@ -271,16 +271,21 @@ dnf clean expire-cache >> "$LOG_FILE" 2>&1
 log "Автоматическое обновление завершено."
 log "=========================================="
 
-# Отправка уведомления в Telegram (если настроено)
-TELEGRAM_BOT=$(read_config "TELEGRAM_BOT_TOKEN" "")
-TELEGRAM_CHAT=$(read_config "TELEGRAM_CHAT_ID" "")
-if [ -n "$TELEGRAM_BOT" ] && [ -n "$TELEGRAM_CHAT" ]; then
-    curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT}/sendMessage" \
-        -d chat_id="${TELEGRAM_CHAT}" \
-        -d text="🔔 РЕД ОС: обновление завершено ($(date '+%d.%m.%Y %H:%M'))
+# Отправка уведомления (если настроено)
+# Канал: MAX Messenger (platform-api.max.ru)
+NOTIFY_TEXT="🔔 РЕД ОС: обновление завершено ($(date '+%d.%m.%Y %H:%M'))
 Режим: ${MODE}
-Обновлений: ${UPDATE_COUNT}" \
-        -d parse_mode="Markdown" >> "$LOG_FILE" 2>&1
+Обновлений: ${UPDATE_COUNT}"
+
+# MAX Messenger
+MAX_BOT=$(read_config "MAX_BOT_TOKEN" "")
+MAX_CHAT=$(read_config "MAX_CHAT_ID" "")
+if [ -n "$MAX_BOT" ] && [ -n "$MAX_CHAT" ]; then
+    curl -s -X POST "https://platform-api.max.ru/messages?chat_id=${MAX_CHAT}" \
+        -H "Authorization: Bearer ${MAX_BOT}" \
+        -H "Content-Type: application/json" \
+        -d "{\"text\": \"${NOTIFY_TEXT}\"}" >> "$LOG_FILE" 2>&1
+    log "Уведомление отправлено в MAX"
 fi
 
 exit 0
@@ -451,14 +456,17 @@ setup_schedule() {
         esac
     done
 
-    # ── Telegram уведомления ──
+    # ── Уведомления ──
     echo ""
-    if confirm "Настроить уведомления в Telegram?"; then
-        TELEGRAM_BOT=$(read_terminal "${BLUE}Telegram Bot Token:${NC} ")
-        TELEGRAM_CHAT=$(read_terminal "${BLUE}Telegram Chat ID:${NC} ")
+    if confirm "Настроить уведомления в MAX Messenger?"; then
+        echo -e "  ${WHITE}Создайте бота на ${CYAN}dev.max.ru${WHITE}, получите токен.${NC}"
+        echo -e "  ${WHITE}В MAX откройте чат с ботом, отправьте /start, узнайте chat_id.${NC}"
+        echo ""
+        MAX_BOT=$(read_terminal "${BLUE}MAX Bot Token:${NC} ")
+        MAX_CHAT=$(read_terminal "${BLUE}MAX Chat ID:${NC} ")
     else
-        TELEGRAM_BOT=""
-        TELEGRAM_CHAT=""
+        MAX_BOT=""
+        MAX_CHAT=""
     fi
 
     # ── Показ итоговой конфигурации ──
@@ -467,9 +475,7 @@ setup_schedule() {
     echo -e "  ${WHITE}Время:${NC}         ${GREEN}${START_TIME} — ${END_TIME}${NC}"
     echo -e "  ${WHITE}Режим:${NC}         ${GREEN}${MODE}${NC}"
     echo -e "  ${WHITE}Период:${NC}        ${GREEN}${PERIOD}${NC}"
-    if [ -n "$TELEGRAM_BOT" ]; then
-        echo -e "  ${WHITE}Telegram:${NC}      ${GREEN}настроен${NC}"
-    fi
+    echo -e "  ${WHITE}Уведомления:${NC}   $(if [ -n "$MAX_BOT" ]; then echo -e "${GREEN}MAX Messenger${NC}"; else echo "отключены"; fi)"
     echo ""
 
     if ! confirm "Применить настройки?"; then
@@ -487,8 +493,10 @@ START_TIME="${START_TIME}"
 END_TIME="${END_TIME}"
 MODE="${MODE}"
 PERIOD="${PERIOD}"
-TELEGRAM_BOT_TOKEN="${TELEGRAM_BOT}"
-TELEGRAM_CHAT_ID="${TELEGRAM_CHAT}"
+
+# MAX Messenger (platform-api.max.ru)
+MAX_BOT_TOKEN="${MAX_BOT}"
+MAX_CHAT_ID="${MAX_CHAT}"
 EOFCONF
 
     chmod 600 "$CONF_FILE"
@@ -608,11 +616,11 @@ show_status() {
         echo -e "    Время:      $(read_config "START_TIME" "—") – $(read_config "END_TIME" "—")"
         echo -e "    Режим:      $(read_config "MODE" "—")"
         echo -e "    Период:     $(read_config "PERIOD" "—")"
-        local bot=$(read_config "TELEGRAM_BOT_TOKEN" "")
-        if [ -n "$bot" ]; then
-            echo -e "    Telegram:   ${GREEN}настроен${NC}"
+        local mx=$(read_config "MAX_BOT_TOKEN" "")
+        if [ -n "$mx" ]; then
+            echo -e "    MAX:        ${GREEN}настроен${NC}"
         else
-            echo -e "    Telegram:   не настроен"
+            echo -e "    Уведомления: отключены"
         fi
         echo ""
     else

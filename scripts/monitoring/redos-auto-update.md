@@ -18,7 +18,7 @@
 - [Режимы обновления](#режимы-обновления)
 - [Структура файлов](#структура-файлов)
 - [Логирование](#логирование)
-- [Уведомления в Telegram](#уведомления-в-telegram)
+- [Уведомления](#уведомления)
 - [Troubleshooting](#troubleshooting)
 
 ---
@@ -31,7 +31,7 @@
 | 🔐 Режимы | Только проверка / безопасность / полное обновление |
 | 📅 Гибкое расписание | Ежедневно / еженедельно / будни / произвольные дни |
 | 📝 Логирование | Полный журнал в `/var/log/redos-auto-update.log` |
-| 🔔 Telegram | Уведомления о завершении обновления |
+| 🔔 Уведомления | MAX Messenger |
 | 🛡️ Безопасность | Проверка временного окна перед запуском |
 | ⚙️ systemd timer | Надёжный планировщик с Persistent=true |
 
@@ -116,12 +116,24 @@ sudo ./redos-auto-update.sh --setup
 Дни: 1 3 5  # Понедельник, Среда, Пятница
 ```
 
-### 4. Telegram уведомления (опционально)
+### 4. Уведомления
 
 ```
-Настроить уведомления в Telegram? (y/n): y
-Telegram Bot Token: 123456:ABC-DEF...
-Telegram Chat ID: -1001234567890
+Включить уведомления в MAX? (y/n): y
+```
+
+**Настройка MAX:**
+
+1. Создайте бота на [dev.max.ru](https://dev.max.ru/docs/chatbots/bots-coding/prepare), получите токен
+2. В MAX откройте чат с ботом, отправьте `/start`
+3. Узнайте `chat_id` (через API или лог бота)
+
+> [!note]
+> MAX Bot API: токен передаётся в заголовке `Authorization: Bearer`. Базовый URL: `platform-api.max.ru`.
+
+```
+MAX Bot Token: <ваш-токен>
+MAX Chat ID: <ваш-chat-id>
 ```
 
 ### 5. Подтверждение
@@ -133,7 +145,7 @@ Telegram Chat ID: -1001234567890
   Время:         12:30 — 14:00
   Режим:         security
   Период:        daily
-  Telegram:      настроен
+  Уведомления:   MAX
 
 Применить настройки? (y/n): y
 ```
@@ -230,8 +242,10 @@ START_TIME="12:30"
 END_TIME="14:00"
 MODE="security"
 PERIOD="daily"
-TELEGRAM_BOT_TOKEN=""
-TELEGRAM_CHAT_ID=""
+
+# MAX Messenger (platform-api.max.ru)
+MAX_BOT_TOKEN=""
+MAX_CHAT_ID=""
 ```
 
 > [!note]
@@ -288,18 +302,21 @@ sudo ./redos-auto-update.sh --status
 
 ---
 
-## Уведомления в Telegram
+## Уведомления
 
-### Настройка
+### Настройка MAX Messenger
 
-1. Создайте бота через [@BotFather](https://t.me/BotFather)
-2. Получите токен
-3. Узнайте Chat ID (через [@userinfobot](https://t.me/userinfobot))
+1. Создайте бота на [dev.max.ru](https://dev.max.ru/docs/chatbots/bots-coding/prepare)
+2. Получите токен организации (доступ для юрлиц/ИП РФ)
+3. Откройте чат с ботом в MAX, отправьте `/start`
 4. Перенастройте скрипт:
 
 ```bash
 sudo ./redos-auto-update.sh --edit
 ```
+
+> [!note]
+> MAX доступен только для юридических лиц и ИП — резидентов РФ. Лимит: 5 ботов на организацию.
 
 ### Пример уведомления
 
@@ -388,9 +405,10 @@ sudo systemctl restart redos-auto-update.timer
 
 ## 📚 Связанные документы
 
-- [Проверка обновлений](check-updates.md) — ручная проверка и update checker
-- [Очистка системы](../scripts/utils/cleanup.sh) — удаление временных файлов
-- [Диагностика](../scripts/monitoring/system-health-check.sh) — полная проверка системы
+- [Проверка обновлений](../../tools/check-updates.md) — ручная проверка и update checker
+- [Очистка системы](../utils/cleanup.md) — удаление временных файлов
+- [Диагностика](system-health-check.md) — полная проверка системы
+- [MAX Bot API](https://dev.max.ru/docs/chatbots/bots-coding/prepare) — документация ботов MAX
 
 ---
 

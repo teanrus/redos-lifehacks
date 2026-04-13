@@ -54,20 +54,12 @@ ViPNet Client: VPN-соединение, автоматическое опред
 
 ## 📊 monitoring — Мониторинг и диагностика
 
+Подробности: [scripts/monitoring/readme.md](/scripts/monitoring/readme.md)
+
 ### ⏰ [Автоматическое обновление по расписанию](/scripts/monitoring/redos-auto-update.md)
 
 Интерактивная настройка автообновления с временным окном (например, 12:30–14:00), режимами безопасности/полным/проверкой, гибким расписанием и Telegram-уведомлениями
 
-### 📈 [Проверка здоровья системы](/scripts/monitoring/system-health-check.md)
+### 📈 [Проверка здоровья системы](/scripts/monitoring/system-health-check.sh)
 
 Полная диагностика: CPU, RAM, диск, сеть, службы, обновления, безопасность, температура. Отчёты в TXT/HTML/JSON
-
----
-
-### 📝 [Анализ журналов systemd](/docs/monitoring/log-analyzer.md)
-
-Автоматический анализ логов: ошибки, failed службы, безопасность, OOM Killer, ошибки диска
-
-### 🔍 [Проверка совместимости оборудования](/docs/monitoring/hardware-compatibility.md)
-
-Совместимость оборудования: процессор, видеокарта, сеть, звук, диски, USB, Wi-Fi, Bluetooth
