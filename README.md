@@ -37,6 +37,7 @@
 - ⚙️ [setup](/scripts/setup/readme.md) — базовая настройка системы
 - 📦 [install](/scripts/install/readme.md) — установка ПО (1С, КриптоПро, мессенджеры, ViPNet)
 - 🧹 [utils](/scripts/utils/readme.md) — вспомогательные скрипты (очистка системы, управление сохраненными паролями)
+- 📊 [monitoring](/scripts/monitoring/readme.md) — мониторинг и диагностика (автообновление, здоровье системы)
 
 ### 🛠️ [tools](/tools/readme.md) — Полезные инструменты
 

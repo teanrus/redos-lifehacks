@@ -5,9 +5,10 @@
 
 ## 📁 Структура
 
-├── [setup](/scripts/setup/readme.md) — Базовая настройка системы  
-├── [install](/scripts/install/readme.md) — Установка программного обеспечения  
-└── [utils](/scripts/utils/readme.md) — Вспомогательные скрипты  
+├── [setup](/scripts/setup/readme.md) — Базовая настройка системы
+├── [install](/scripts/install/readme.md) — Установка программного обеспечения
+├── [utils](/scripts/utils/readme.md) — Вспомогательные скрипты
+└── [monitoring](/scripts/monitoring/readme.md) — Мониторинг и диагностика
 
 ---
 
@@ -53,9 +54,15 @@ ViPNet Client: VPN-соединение, автоматическое опред
 
 ## 📊 monitoring — Мониторинг и диагностика
 
-### 📈 [Проверка здоровья системы](/docs/monitoring/system-health-check.md)
+### ⏰ [Автоматическое обновление по расписанию](/scripts/monitoring/redos-auto-update.md)
 
-Полная проверка: CPU, RAM, диск, службы, обновления, безопасность, температура. Отчёты в TXT/HTML/JSON
+Интерактивная настройка автообновления с временным окном (например, 12:30–14:00), режимами безопасности/полным/проверкой, гибким расписанием и Telegram-уведомлениями
+
+### 📈 [Проверка здоровья системы](/scripts/monitoring/system-health-check.md)
+
+Полная диагностика: CPU, RAM, диск, сеть, службы, обновления, безопасность, температура. Отчёты в TXT/HTML/JSON
+
+---
 
 ### 📝 [Анализ журналов systemd](/docs/monitoring/log-analyzer.md)
 
