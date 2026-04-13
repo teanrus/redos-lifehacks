@@ -24,7 +24,7 @@
 # Опционально: smartmontools, lm_sensors, hddtemp, ethtool, jq
 ##############################################################################
 
-set -euo pipefail
+set -u
 
 # ─── Цвета ───────────────────────────────────────────────────────────────
 RED='\033[0;31m'
@@ -187,24 +187,29 @@ check_disk() {
     local has_warning=false
 
     # Проверка разделов
-    while IFS= read -r line; do
-        local usage pct mount
-        usage=$(echo "$line" | awk '{print $5}' | tr -d '%')
-        mount=$(echo "$line" | awk '{print $6}')
-        if [ "$usage" -gt 90 ]; then
-            log_error "Раздел ${mount} заполнен на ${usage}%"
-            has_warning=true
-        elif [ "$usage" -gt 80 ]; then
-            log_warn "Раздел ${mount} заполнен на ${usage}%"
-            has_warning=true
-        else
-            log_ok "Раздел ${mount}: ${usage}% использовано"
-        fi
-    done < <(df -h --output=pcent,target 2>/dev/null | grep "^ *[0-9]" | grep -E "^|/dev/")
+    local df_output
+    df_output=$(df -h 2>/dev/null | grep "^/dev/" || true)
+
+    if [ -n "$df_output" ]; then
+        while IFS= read -r line; do
+            local usage mount
+            usage=$(echo "$line" | awk '{print $5}' | tr -d '%')
+            mount=$(echo "$line" | awk '{print $6}')
+            if [ "$usage" -gt 90 ]; then
+                log_error "Раздел ${mount} заполнен на ${usage}%"
+                has_warning=true
+            elif [ "$usage" -gt 80 ]; then
+                log_warn "Раздел ${mount} заполнен на ${usage}%"
+                has_warning=true
+            else
+                log_ok "Раздел ${mount}: ${usage}% использовано"
+            fi
+        done <<< "$df_output"
+    fi
 
     if [ "$has_warning" = false ] && [ "$QUIET" = false ]; then
         echo ""
-        df -h --output=source,size,used,avail,pcent,target 2>/dev/null | grep -E "Filesystem|/dev/"
+        df -h 2>/dev/null | grep "^/dev/" || true
     fi
 
     # Inodes
