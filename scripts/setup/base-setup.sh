@@ -1,7 +1,26 @@
 #!/bin/bash
-# Базовая настройка системы РЕД ОС 7.3
-# Версия: 1.2
-# Описание: Настройка SELinux, DNF, добавление репозиториев MAX и R7, установка ПО, обновление системы и ядра
+##############################################################################
+# base-setup.sh — Базовая настройка системы РЕД ОС 7.3/8.0
+#
+# Описание: Настройка SELinux, DNF, добавление репозиториев MAX и R7,
+#           установка ПО, обновление системы и ядра.
+#
+# Использование:
+#   sudo ./base-setup.sh [ОПЦИИ]
+#
+# Опции:
+#   -h, --help               Справка
+#   -z, --timezone TZ        Часовой пояс (по умолчаниюEurope/Moscow)
+#   -n, --hostname NAME      Имя хоста (по умолчанию — без изменений)
+#       --skip-selinux       Пропустить настройку SELinux
+#       --skip-dnf           Пропустить настройку DNF
+#       --skip-ssh           Пропустить настройку SSH
+#       --non-interactive    Не задавать вопросов, применить всё
+#
+# Зависимости: bash, coreutils, dnf, systemd
+# Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅ (x86_64, aarch64)
+##############################################################################
+set -euo pipefail
 
 # Цвета для вывода
 RED='\033[0;31m'
@@ -9,6 +28,59 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
+
+# ─── Конфигурация ──────────────────────────────────────────────────────────
+TIMEZONE="Europe/Moscow"
+HOSTNAME_OVERRIDE=""
+SKIP_SELINUX=false
+SKIP_DNF=false
+SKIP_SSH=false
+NON_INTERACTIVE=false
+
+# ─── Парсинг аргументов ───────────────────────────────────────────────────
+show_help() {
+    head -19 "$0" | tail -16 | sed 's/^# \?//'
+}
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h|--help)
+            show_help
+            exit 0
+            ;;
+        -z|--timezone)
+            TIMEZONE="${2:?Ошибка: требуется значение для --timezone}"
+            shift 2
+            ;;
+        -n|--hostname)
+            HOSTNAME_OVERRIDE="${2:?Ошибка: требуется значение для --hostname}"
+            shift 2
+            ;;
+        --skip-selinux)
+            SKIP_SELINUX=true
+            shift
+            ;;
+        --skip-dnf)
+            SKIP_DNF=true
+            shift
+            ;;
+        --skip-ssh)
+            SKIP_SSH=true
+            shift
+            ;;
+        --non-interactive)
+            NON_INTERACTIVE=true
+            shift
+            ;;
+        *)
+            echo -e "${RED}Неизвестная опция: $1${NC}" >&2
+            show_help
+            exit 1
+            ;;
+    esac
+done
+
+# ─── Функции ───────────────────────────────────────────────────────────────
 
 # Функция для запроса подтверждения
 confirm_action() {
@@ -269,13 +341,19 @@ echo ""
 # === 9. НАСТРОЙКА ВРЕМЕНИ ===
 echo -e "${GREEN}=== 9. Настройка времени ===${NC}"
 
-if confirm_action "Настроить часовой пояс (Asia/Yekaterinburg, UTC+5)?"; then
-    timedatectl set-timezone Asia/Yekaterinburg
-    check_success "Настройка часового пояса"
-    echo -e "${BLUE}Текущее время: $(date)${NC}"
+if [ "$NON_INTERACTIVE" = true ] || confirm_action "Настроить часовой пояс ($TIMEZONE)?"; then
+    # Проверяем, что часовой пояс существует
+    if [ -f "/usr/share/zoneinfo/$TIMEZONE" ]; then
+        timedatectl set-timezone "$TIMEZONE"
+        check_success "Настройка часового пояса: $TIMEZONE"
+        echo -e "${BLUE}Текущее время: $(date)${NC}"
+    else
+        echo -e "${RED}✗ Часовой пояс '$TIMEZONE' не найден в /usr/share/zoneinfo/${NC}"
+        echo -e "${YELLOW}Доступные часовые пояса: timedatectl list-timezones${NC}"
+    fi
 fi
 
-if confirm_action "Включить синхронизацию времени (chronyd)?"; then
+if [ "$NON_INTERACTIVE" = true ] || confirm_action "Включить синхронизацию времени (chronyd)?"; then
     systemctl enable --now chronyd
     check_success "Включение синхронизации времени"
     chronyc sources -v
@@ -320,12 +398,18 @@ echo ""
 # === 12. НАСТРОЙКА HOSTNAME ===
 echo -e "${GREEN}=== 12. Настройка hostname ===${NC}"
 
-if confirm_action "Установить имя компьютера?"; then
-    echo -e "${YELLOW}Введите имя компьютера (например: workstation-01):${NC}"
-    read -r new_hostname
-    if [ -n "$new_hostname" ]; then
-        hostnamectl set-hostname "$new_hostname"
-        echo -e "${GREEN}✓ Имя компьютера установлено: $new_hostname${NC}"
+if [ -n "$HOSTNAME_OVERRIDE" ]; then
+    echo -e "${BLUE}Установка имени компьютера: $HOSTNAME_OVERRIDE${NC}"
+    hostnamectl set-hostname "$HOSTNAME_OVERRIDE"
+    check_success "Настройка hostname: $HOSTNAME_OVERRIDE"
+elif [ "$NON_INTERACTIVE" = true ] || confirm_action "Установить имя компьютера?"; then
+    if [ "$NON_INTERACTIVE" = false ]; then
+        echo -e "${YELLOW}Введите имя компьютера (например: workstation-01):${NC}"
+        read -r new_hostname
+        if [ -n "$new_hostname" ]; then
+            hostnamectl set-hostname "$new_hostname"
+            echo -e "${GREEN}✓ Имя компьютера установлено: $new_hostname${NC}"
+        fi
     fi
 fi
 

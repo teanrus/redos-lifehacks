@@ -1,12 +1,20 @@
 #!/bin/bash
+##############################################################################
+# package-install-fix.sh — Решение ошибок установки ПО для РЕД ОС
 #
-# Скрипт решения ошибок установки ПО для РЕД ОС
-# Версия: 1.0
-# Запуск: curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh | sudo bash
-# GitHub: https://github.com/teanrus/redos-lifehacks
+# Описание: Автоматическое исправление типичных проблем при установке пакетов
 #
-
-set -e
+# Использование:
+#   sudo ./package-install-fix.sh [ОПЦИИ]
+#
+# Опции:
+#   -h, --help     Справка
+#   -p, --package  Имя пакета для исправления
+#
+# Зависимости: bash, coreutils, dnf, rpm
+# Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅
+##############################################################################
+set -euo pipefail
 
 # Цвета для вывода
 RED='\033[0;31m'

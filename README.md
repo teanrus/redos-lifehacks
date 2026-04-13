@@ -1,6 +1,7 @@
 # 🐧 Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![CI](https://github.com/teanrus/redos-lifehacks/actions/workflows/ci.yml/badge.svg)](https://github.com/teanrus/redos-lifehacks/actions)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
@@ -107,6 +108,29 @@ ViPNet Client: VPN-соединение, автоматическое опред
     ```bash
     sudo systemctl enable --now fstrim.timer
     ```
+
+## 🔒 Проверка целостности скриптов
+
+Каждый скрипт в Release сопровождается файом `.sha256` с контрольной суммой.
+Это гарантирует, что файл не был изменён при доставке.
+
+### Быстрая проверка
+
+```bash
+# 1. Скачиваем скрипт и файл контрольной суммы
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh -o install-cryptopro.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh.sha256 -o install-cryptopro.sh.sha256
+
+# 2. Проверяем совпадение
+sha256sum -c install-cryptopro.sh.sha256
+# install-cryptopro.sh: OK
+
+# 3. Запускаем (только после успешной проверки!)
+sudo bash install-cryptopro.sh
+```
+
+> [!important]
+> Никогда не запускайте скрипты из интернета без проверки контрольных сумм!
 
 ---
 

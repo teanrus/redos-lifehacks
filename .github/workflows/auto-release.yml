@@ -1,0 +1,129 @@
+# GitHub Actions — Автоматическая публикация скриптов в Releases
+# При push .sh файлов — скрипт прикрепляется к релизу + создаётся .sha256
+name: 📦 Auto Release Scripts
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '**/*.sh'
+
+  # Ручной запуск через GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Тег релиза (например v1.1)'
+        required: true
+        default: 'v1.1'
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish-scripts:
+    name: Publish Scripts to Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine version tag
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ inputs.tag }}"
+          else
+            # Автоматически определяем тег из CHANGELOG.md (последний [vX.Y])
+            LAST_TAG=$(grep -oP '\[v\d+\.\d+\]' CHANGELOG.md 2>/dev/null | tail -1 | tr -d '[]' || echo "")
+            if [ -n "$LAST_TAG" ]; then
+              TAG="$LAST_TAG"
+            else
+              # Если тега нет — берём последний тег из git
+              TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0")
+            fi
+          fi
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "✅ Using tag: $TAG"
+
+      - name: Prepare scripts and SHA256
+        id: prepare
+        run: |
+          mkdir -p release-assets
+          
+          echo "📋 Found scripts:"
+          for script in $(find . -name '*.sh' -type f | sort); do
+            filename=$(basename "$script")
+            
+            # Копируем скрипт в release-assets (плоская структура)
+            cp "$script" "release-assets/$filename"
+            
+            # Создаём .sha256 файл рядом
+            sha256=$(sha256sum "$script" | awk '{print $1}')
+            echo "$sha256  $filename" > "release-assets/${filename}.sha256"
+            
+            echo "  📄 $filename ($sha256)"
+          done
+
+      - name: Generate release changelog
+        id: changelog
+        run: |
+          # Формируем описание релиза из списка скриптов
+          {
+            echo "## 📜 Скрипты в релизе"
+            echo ""
+            echo "| Скрипт | SHA256 |"
+            echo "|--------|--------|"
+            
+            for sha_file in release-assets/*.sha256; do
+              sha256=$(awk '{print $1}' "$sha_file")
+              filename=$(awk '{print $2}' "$sha_file")
+              echo "| \`$filename\` | \`$sha256\` |"
+            done
+            
+            echo ""
+            echo "## 🔍 Проверка целостности"
+            echo ""
+            echo '```bash'
+            echo '# Скачивание и запуск:'
+            echo 'curl -sL https://github.com/${{ github.repository }}/releases/download/${{ steps.version.outputs.tag }}/install-cryptopro.sh | sudo bash'
+            echo ''
+            echo '# Проверка контрольной суммы:'
+            echo 'curl -sL https://github.com/${{ github.repository }}/releases/download/${{ steps.version.outputs.tag }}/install-cryptopro.sh.sha256 > install-cryptopro.sh.sha256'
+            echo 'sha256sum -c install-cryptopro.sh.sha256'
+            echo '```'
+          } > /tmp/release-body.md
+          
+          # Выводим для отладки
+          cat /tmp/release-body.md
+          
+          # Сохраняем в GITHUB_OUTPUT
+          echo "changelog<<ENDOFBODY" >> "$GITHUB_OUTPUT"
+          cat /tmp/release-body.md >> "$GITHUB_OUTPUT"
+          echo "ENDOFBODY" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: "🐧 redos-lifehacks ${{ steps.version.outputs.tag }}"
+          body: ${{ steps.changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+          generate_release_notes: false
+          files: |
+            release-assets/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Summary
+        run: |
+          echo ""
+          echo "✅ Релиз ${{ steps.version.outputs.tag }} обновлён"
+          echo ""
+          echo "📎 Прикреплены файлы:"
+          ls -la release-assets/ | tail -n +2 | while read -r line; do
+            echo "   $line"
+          done
