@@ -12,9 +12,9 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Тег релиза (например v1.1)'
+        description: 'Тег релиза (например v1.1.1)'
         required: true
-        default: 'v1.1'
+        default: 'v1.1.1'
         type: string
 
 permissions:
