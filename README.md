@@ -139,21 +139,7 @@ sudo bash install-cryptopro.sh
 ---
 
 > [!tip]
-> **Как внести свой вклад**.
->
->- Форкните репозиторий
->- Создайте ветку (git checkout -b feature/new-lifehack)
->- Добавьте свой лайфхак в соответствующую категорию
->- Зафиксируйте изменения (git commit -m 'Add: новый лайфхак')
->- Отправьте пулл-реквест
-<!-- -->
->[!important]
-> **Требования к контенту**
->
->- Подробное описание проблемы и решения
->- Пошаговые инструкции
->- Команды с пояснениями
->- Проверка работоспособности на РЕД ОС 7.3
+> **Как внести свой вклад** → см. [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
