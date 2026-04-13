@@ -1,7 +1,6 @@
 # 🐧 Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-[![CI](https://github.com/teanrus/redos-lifehacks/actions/workflows/ci.yml/badge.svg)](https://github.com/teanrus/redos-lifehacks/actions)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
