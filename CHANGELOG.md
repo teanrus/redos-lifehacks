@@ -7,7 +7,7 @@
 
 ---
 
-## [v1.1.1] — 2026-04-13
+## [v2.0] — 2026-04-14
 
 Первый публичный релиз. Полная коллекция руководств и скриптов для РЕД ОС 7.3/8.0.
 
@@ -82,4 +82,4 @@
 
 ---
 
-[v1.1.1]: https://github.com/teanrus/redos-lifehacks/releases/tag/v1.1.1
+[v2.0]: https://github.com/teanrus/redos-lifehacks/releases/tag/v2.0
