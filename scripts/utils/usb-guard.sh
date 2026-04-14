@@ -3,6 +3,7 @@
 # usb-guard.sh — Управление блокировкой USB-накопителей
 #
 # Автор: pagrishaevich
+# Версия: 2.1 (с улучшенной обработкой ввода)
 #
 # Описание:
 #   Скрипт для управления блокировкой USB-накопителей на РЕД ОС.
@@ -28,7 +29,7 @@
 # Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅
 ##############################################################################
 
-set -e
+set -euo pipefail
 
 # ─── Цвета ────────────────────────────────────────────────────────────────
 RED='\033[0;31m'
@@ -49,6 +50,62 @@ declare -a SCANNED_SERIALS=()
 declare -a SCANNED_PRODUCTS=()
 declare -a SCANNED_MAXPOWERS=()
 SCAN_DONE=0
+
+# ─── Вспомогательные функции для ввода/вывода ────────────────────────────
+
+# Функция для безопасного чтения ввода из терминала
+read_from_terminal() {
+    local prompt=$1
+    local answer
+    echo -e "$prompt" >&2
+    read -r answer < /dev/tty 2>/dev/null || true
+    echo "$answer"
+}
+
+# Функция для запроса подтверждения
+confirm_action() {
+    local message=$1
+    local answer
+    
+    answer=$(read_from_terminal "${YELLOW}$message (y/n)${NC}")
+    if [[ $answer =~ ^[Yy]$ ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Функция для проверки успешности выполнения
+check_success() {
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN}✓ $1 успешно выполнено${NC}"
+    else
+        echo -e "${RED}✗ Ошибка при выполнении: $1${NC}"
+        exit 1
+    fi
+}
+
+# Функция для безопасного выбора из списка
+select_from_list() {
+    local prompt="$1"
+    local max_value="$2"
+    local selection
+    
+    while true; do
+        selection=$(read_from_terminal "$prompt")
+        if [[ "$selection" =~ ^[0-9]+$ ]] && [ "$selection" -ge 1 ] && [ "$selection" -le "$max_value" ]; then
+            echo "$selection"
+            return 0
+        else
+            echo -e "${RED}Неверный ввод. Пожалуйста, выберите число от 1 до $max_value${NC}" >&2
+        fi
+    done
+}
+
+# ─── Функция для безопасного экранирования строк ──────────────────────────
+escape_udev_string() {
+    printf "%s" "$1" | sed 's/[\\"]/\\&/g'
+}
 
 # ─── Проверка прав root ──────────────────────────────────────────────────
 check_root() {
@@ -83,12 +140,13 @@ check_dependencies() {
     if [[ ! -d "$UDEV_RULES_DIR" ]]; then
         echo -e "${BLUE}Создание директории: ${UDEV_RULES_DIR}${NC}"
         mkdir -p "$UDEV_RULES_DIR"
+        check_success "Создание директории $UDEV_RULES_DIR"
     fi
 }
 
 # ─── Проверка поддержки USB 3.0 ──────────────────────────────────────────
 detect_usb3() {
-    if lsusb -t 2>/dev/null | grep -Fq "xhci"; then
+    if lsmod | grep -q "^xhci_hcd"; then
         echo "1"
     else
         echo "0"
@@ -115,7 +173,7 @@ scan_usb_devices() {
         if [[ "$devname" =~ ^sd[a-z]+$ ]]; then
             devices+=("$devname")
         fi
-    done < <(ls -l /dev/sd* 2>/dev/null | grep "^b")
+    done < <(ls -l /dev/sd* 2>/dev/null | grep "^b" || true)
 
     if [[ ${#devices[@]} -eq 0 ]]; then
         echo -e "  ${YELLOW}USB-накопители не обнаружены${NC}"
@@ -166,13 +224,21 @@ create_remove_script() {
 
     cat > "$REMOVE_USB_SCRIPT" <<'SCRIPT'
 #!/bin/bash
-var=$1
-var2=$(echo "$1" | sed 's/.*usb[[:digit:]]//' | sed 's/[a-z].*//'| sed 's/[0-9]-[0-9].//')
-echo 0 > '/sys/bus/usb/devices'"$var2"'/authorized'
+# Безопасная версия скрипта для деавторизации USB-устройств
+devpath="$1"
+
+# Извлекаем только безопасные символы (цифры, дефисы, точки)
+if [[ "$devpath" =~ usb[0-9]+/[0-9]+-[0-9]+(\.[0-9]+)? ]]; then
+    bus_num="${BASH_REMATCH[0]}"
+    # Дополнительная валидация: только разрешённые символы
+    if [[ "$bus_num" =~ ^[a-zA-Z0-9/.-]+$ ]]; then
+        echo 0 > "/sys/bus/usb/devices/${bus_num}/authorized" 2>/dev/null || true
+    fi
+fi
 SCRIPT
 
     chmod +x "$REMOVE_USB_SCRIPT"
-    echo -e "${GREEN}Скрипт создан: ${REMOVE_USB_SCRIPT}${NC}"
+    check_success "Создание скрипта $REMOVE_USB_SCRIPT"
 }
 
 # ─── Генерация правила UDISKS_IGNORE — блокировка всех ───────────────────
@@ -200,13 +266,19 @@ generate_whitelist_udisks() {
     fi
 
     if [[ -n "$serial" ]]; then
-        echo "ATTRS{serial}==\"${serial}\",ENV{UDISKS_IGNORE}=\"0\""
+        local safe_serial
+        safe_serial=$(escape_udev_string "$serial")
+        echo "ATTRS{serial}==\"${safe_serial}\",ENV{UDISKS_IGNORE}=\"0\""
     fi
     if [[ -n "$product" ]]; then
-        echo "ATTRS{product}==\"${product}\",ENV{UDISKS_IGNORE}=\"0\""
+        local safe_product
+        safe_product=$(escape_udev_string "$product")
+        echo "ATTRS{product}==\"${safe_product}\",ENV{UDISKS_IGNORE}=\"0\""
     fi
     if [[ -n "$maxpower" ]]; then
-        echo "ATTRS{bMaxPower}==\"${maxpower}\",ENV{UDISKS_IGNORE}=\"0\""
+        local safe_maxpower
+        safe_maxpower=$(escape_udev_string "$maxpower")
+        echo "ATTRS{bMaxPower}==\"${safe_maxpower}\",ENV{UDISKS_IGNORE}=\"0\""
     fi
 }
 
@@ -219,10 +291,14 @@ generate_whitelist_authorized() {
     echo 'ENV{ID_USB_DRIVER}!="usb-storage", GOTO="dont_remove_usb"'
 
     if [[ -n "$product" ]]; then
-        echo "ATTRS{product}==\"${product}\", GOTO=\"dont_remove_usb\""
+        local safe_product
+        safe_product=$(escape_udev_string "$product")
+        echo "ATTRS{product}==\"${safe_product}\", GOTO=\"dont_remove_usb\""
     fi
     if [[ -n "$serial" ]]; then
-        echo "ATTRS{serial}==\"${serial}\", GOTO=\"dont_remove_usb\""
+        local safe_serial
+        safe_serial=$(escape_udev_string "$serial")
+        echo "ATTRS{serial}==\"${safe_serial}\", GOTO=\"dont_remove_usb\""
     fi
 
     echo 'ENV{ID_USB_DRIVER}=="usb-storage", RUN+="/bin/sh -c '"'"'/usr/bin/remove_usb.sh $devpath'"'"'"'
@@ -233,8 +309,10 @@ generate_whitelist_authorized() {
 apply_rules() {
     echo -e "${BLUE}Применение правил udev...${NC}"
     udevadm control --reload-rules
+    check_success "Перезагрузка правил udev"
+    
     udevadm trigger --subsystem-match=usb --subsystem-match=block 2>/dev/null || true
-    echo -e "${GREEN}Правила применены${NC}"
+    echo -e "${GREEN}✓ Правила применены${NC}"
     echo -e "${YELLOW}Рекомендуется переподключить USB-устройства${NC}"
 }
 
@@ -259,7 +337,8 @@ block_all_usb() {
     fi
 
     generate_block_all_udisks > "$UDEV_RULE_FILE"
-    echo -e "${GREEN}Правила записаны: ${UDEV_RULE_FILE}${NC}"
+    check_success "Запись правил в $UDEV_RULE_FILE"
+    
     echo ""
     echo -e "${BLUE}Содержимое:${NC}"
     while IFS= read -r line; do
@@ -278,11 +357,11 @@ whitelist_udisks() {
     if [[ $SCAN_DONE -eq 0 || ${#SCANNED_DEVS[@]} -eq 0 ]]; then
         echo -e "${YELLOW}Сначала выполните сканирование устройств (пункт 1 в меню)${NC}"
         echo ""
-        read -rp "Просканировать сейчас? (y/n): " scan_now
-        if [[ "$scan_now" == "y" || "$scan_now" == "Y" ]]; then
+        if confirm_action "Просканировать сейчас?"; then
             scan_usb_devices
         else
-            return 0
+            echo -e "${RED}Белый список невозможен без сканирования устройств${NC}"
+            return 1
         fi
     fi
 
@@ -301,12 +380,7 @@ whitelist_udisks() {
         echo ""
     done
 
-    read -rp "Выберите номер устройства для добавления в белый список: " dev_num
-    if [[ $dev_num -lt 1 || $dev_num -gt ${#SCANNED_DEVS[@]} ]]; then
-        echo -e "${RED}Неверный номер${NC}"
-        return 0
-    fi
-
+    dev_num=$(select_from_list "Выберите номер устройства для добавления в белый список: " "${#SCANNED_DEVS[@]}")
     local idx=$((dev_num-1))
     local serial="${SCANNED_SERIALS[$idx]}"
     local product="${SCANNED_PRODUCTS[$idx]}"
@@ -326,7 +400,8 @@ whitelist_udisks() {
     echo "  4) Все три атрибута"
     echo "  5) Ввести вручную"
     echo ""
-    read -rp "Выбор: " attr_choice
+    
+    attr_choice=$(select_from_list "Выбор: " 5)
 
     case "$attr_choice" in
         1) product=""; maxpower="" ;;
@@ -334,9 +409,9 @@ whitelist_udisks() {
         3) maxpower="" ;;
         4) ;;
         5)
-            read -rp "Serial (Enter для пропуска): " serial
-            read -rp "Product (Enter для пропуска): " product
-            read -rp "MaxPower (Enter для пропуска): " maxpower
+            serial=$(read_from_terminal "Serial (Enter для пропуска): ")
+            product=$(read_from_terminal "Product (Enter для пропуска): ")
+            maxpower=$(read_from_terminal "MaxPower (Enter для пропуска): ")
             ;;
     esac
 
@@ -354,28 +429,33 @@ whitelist_udisks() {
         done < "$UDEV_RULE_FILE"
         echo ""
 
-        read -rp "Добавить к существующим правилам? (y/n): " add_existing
-        if [[ "$add_existing" == "y" || "$add_existing" == "Y" ]]; then
+        if confirm_action "Добавить к существующим правилам?"; then
             if [[ -n "$serial" ]]; then
-                if ! grep -Fq "ATTRS{serial}==\"${serial}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
-                    echo "ATTRS{serial}==\"${serial}\",ENV{UDISKS_IGNORE}=\"0\"" >> "$UDEV_RULE_FILE"
-                    echo -e "${GREEN}Правило добавлено: serial=${serial}${NC}"
+                local safe_serial
+                safe_serial=$(escape_udev_string "$serial")
+                if ! grep -Fq "ATTRS{serial}==\"${safe_serial}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
+                    echo "ATTRS{serial}==\"${safe_serial}\",ENV{UDISKS_IGNORE}=\"0\"" >> "$UDEV_RULE_FILE"
+                    echo -e "${GREEN}✓ Правило добавлено: serial=${serial}${NC}"
                 else
                     echo -e "${YELLOW}Такое правило уже есть${NC}"
                 fi
             fi
             if [[ -n "$product" ]]; then
-                if ! grep -Fq "ATTRS{product}==\"${product}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
-                    echo "ATTRS{product}==\"${product}\",ENV{UDISKS_IGNORE}=\"0\"" >> "$UDEV_RULE_FILE"
-                    echo -e "${GREEN}Правило добавлено: product=${product}${NC}"
+                local safe_product
+                safe_product=$(escape_udev_string "$product")
+                if ! grep -Fq "ATTRS{product}==\"${safe_product}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
+                    echo "ATTRS{product}==\"${safe_product}\",ENV{UDISKS_IGNORE}=\"0\"" >> "$UDEV_RULE_FILE"
+                    echo -e "${GREEN}✓ Правило добавлено: product=${product}${NC}"
                 else
                     echo -e "${YELLOW}Такое правило уже есть${NC}"
                 fi
             fi
             if [[ -n "$maxpower" ]]; then
-                if ! grep -Fq "ATTRS{bMaxPower}==\"${maxpower}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
-                    echo "ATTRS{bMaxPower}==\"${maxpower}\",ENV{UDISKS_IGNORE}=\"0\"" >> "$UDEV_RULE_FILE"
-                    echo -e "${GREEN}Правило добавлено: bMaxPower=${maxpower}${NC}"
+                local safe_maxpower
+                safe_maxpower=$(escape_udev_string "$maxpower")
+                if ! grep -Fq "ATTRS{bMaxPower}==\"${safe_maxpower}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
+                    echo "ATTRS{bMaxPower}==\"${safe_maxpower}\",ENV{UDISKS_IGNORE}=\"0\"" >> "$UDEV_RULE_FILE"
+                    echo -e "${GREEN}✓ Правило добавлено: bMaxPower=${maxpower}${NC}"
                 else
                     echo -e "${YELLOW}Такое правило уже есть${NC}"
                 fi
@@ -385,11 +465,11 @@ whitelist_udisks() {
             local backup="${UDEV_RULE_FILE}.bak.$(date +%Y%m%d_%H%M%S)"
             cp "$UDEV_RULE_FILE" "$backup"
             generate_whitelist_udisks "$serial" "$product" "$maxpower" > "$UDEV_RULE_FILE"
-            echo -e "${GREEN}Правила записаны: ${UDEV_RULE_FILE}${NC}"
+            check_success "Запись новых правил в $UDEV_RULE_FILE"
         fi
     else
         generate_whitelist_udisks "$serial" "$product" "$maxpower" > "$UDEV_RULE_FILE"
-        echo -e "${GREEN}Правила записаны: ${UDEV_RULE_FILE}${NC}"
+        check_success "Запись правил в $UDEV_RULE_FILE"
     fi
 
     echo ""
@@ -412,11 +492,11 @@ whitelist_authorized() {
     if [[ $SCAN_DONE -eq 0 || ${#SCANNED_DEVS[@]} -eq 0 ]]; then
         echo -e "${YELLOW}Сначала выполните сканирование устройств (пункт 1 в меню)${NC}"
         echo ""
-        read -rp "Просканировать сейчас? (y/n): " scan_now
-        if [[ "$scan_now" == "y" || "$scan_now" == "Y" ]]; then
+        if confirm_action "Просканировать сейчас?"; then
             scan_usb_devices
         else
-            return 0
+            echo -e "${RED}Белый список невозможен без сканирования устройств${NC}"
+            return 1
         fi
     fi
 
@@ -434,12 +514,7 @@ whitelist_authorized() {
         echo ""
     done
 
-    read -rp "Выберите номер устройства для добавления в белый список: " dev_num
-    if [[ $dev_num -lt 1 || $dev_num -gt ${#SCANNED_DEVS[@]} ]]; then
-        echo -e "${RED}Неверный номер${NC}"
-        return 0
-    fi
-
+    dev_num=$(select_from_list "Выберите номер устройства для добавления в белый список: " "${#SCANNED_DEVS[@]}")
     local idx=$((dev_num-1))
     local serial="${SCANNED_SERIALS[$idx]}"
     local product="${SCANNED_PRODUCTS[$idx]}"
@@ -456,15 +531,16 @@ whitelist_authorized() {
     echo "  3) Оба"
     echo "  4) Ввести вручную"
     echo ""
-    read -rp "Выбор: " attr_choice
+    
+    attr_choice=$(select_from_list "Выбор: " 4)
 
     case "$attr_choice" in
         1) product="" ;;
         2) serial="" ;;
         3) ;;
         4)
-            read -rp "Serial: " serial
-            read -rp "Product: " product
+            serial=$(read_from_terminal "Serial: ")
+            product=$(read_from_terminal "Product: ")
             ;;
     esac
 
@@ -475,35 +551,42 @@ whitelist_authorized() {
     echo ""
 
     if [[ -f "$UDEV_RULE_FILE" ]]; then
-        read -rp "Перезаписать правила? (y/n): " overwrite
-        if [[ "$overwrite" != "y" && "$overwrite" != "Y" ]]; then
+        if confirm_action "Перезаписать правила?"; then
+            generate_whitelist_authorized "$serial" "$product" > "$UDEV_RULE_FILE"
+            check_success "Запись правил в $UDEV_RULE_FILE"
+        else
             local tmp_file
-            tmp_file=$(mktemp)
+            tmp_file=$(mktemp) || { echo -e "${RED}Ошибка создания временного файла${NC}"; return 1; }
+            trap 'rm -f "$tmp_file"' EXIT
+            
             while IFS= read -r line; do
-                if echo "$line" | grep -q "RUN+=.*remove_usb"; then
+                if echo "$line" | grep -qE '^[^#]*RUN\+=".*remove_usb.*"'; then
                     if [[ -n "$serial" ]]; then
-                        if ! grep -Fq "ATTRS{serial}==\"${serial}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
-                            echo "ATTRS{serial}==\"${serial}\", GOTO=\"dont_remove_usb\"" >> "$tmp_file"
+                        local safe_serial
+                        safe_serial=$(escape_udev_string "$serial")
+                        if ! grep -Fq "ATTRS{serial}==\"${safe_serial}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
+                            echo "ATTRS{serial}==\"${safe_serial}\", GOTO=\"dont_remove_usb\"" >> "$tmp_file"
                         fi
                     fi
                     if [[ -n "$product" ]]; then
-                        if ! grep -Fq "ATTRS{product}==\"${product}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
-                            echo "ATTRS{product}==\"${product}\", GOTO=\"dont_remove_usb\"" >> "$tmp_file"
+                        local safe_product
+                        safe_product=$(escape_udev_string "$product")
+                        if ! grep -Fq "ATTRS{product}==\"${safe_product}\"" "$UDEV_RULE_FILE" 2>/dev/null; then
+                            echo "ATTRS{product}==\"${safe_product}\", GOTO=\"dont_remove_usb\"" >> "$tmp_file"
                         fi
                     fi
                 fi
                 echo "$line" >> "$tmp_file"
             done < "$UDEV_RULE_FILE"
+            
             cp "$tmp_file" "$UDEV_RULE_FILE"
+            trap - EXIT
             rm -f "$tmp_file"
-            echo -e "${GREEN}Правила добавлены к существующим${NC}"
-        else
-            generate_whitelist_authorized "$serial" "$product" > "$UDEV_RULE_FILE"
-            echo -e "${GREEN}Правила записаны: ${UDEV_RULE_FILE}${NC}"
+            echo -e "${GREEN}✓ Правила добавлены к существующим${NC}"
         fi
     else
         generate_whitelist_authorized "$serial" "$product" > "$UDEV_RULE_FILE"
-        echo -e "${GREEN}Правила записаны: ${UDEV_RULE_FILE}${NC}"
+        check_success "Запись правил в $UDEV_RULE_FILE"
     fi
 
     echo ""
@@ -531,14 +614,13 @@ unblock_all_usb() {
     cp "$UDEV_RULE_FILE" "$backup"
     echo -e "${YELLOW}Правила сохранены в бэкап: ${backup}${NC}"
 
-    read -rp "Удалить файл правил и разблокировать все USB? (y/n): " confirm
-    if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
+    if confirm_action "Удалить файл правил и разблокировать все USB?"; then
         rm -f "$UDEV_RULE_FILE"
-        echo -e "${GREEN}Файл правил удалён: ${UDEV_RULE_FILE}${NC}"
+        echo -e "${GREEN}✓ Файл правил удалён: ${UDEV_RULE_FILE}${NC}"
 
         if [[ -f "$REMOVE_USB_SCRIPT" ]]; then
             rm -f "$REMOVE_USB_SCRIPT"
-            echo -e "${GREEN}Скрипт удалён: ${REMOVE_USB_SCRIPT}${NC}"
+            echo -e "${GREEN}✓ Скрипт удалён: ${REMOVE_USB_SCRIPT}${NC}"
         fi
 
         apply_rules
@@ -549,7 +631,7 @@ unblock_all_usb() {
                 echo 1 > "$dev" 2>/dev/null || true
             fi
         done
-        echo -e "${GREEN}Все USB-накопители разблокированы${NC}"
+        echo -e "${GREEN}✓ Все USB-накопители разблокированы${NC}"
     else
         echo -e "${YELLOW}Отменено${NC}"
     fi
@@ -611,7 +693,8 @@ main_menu() {
         echo "  6) Просмотреть текущие правила"
         echo "  7) Выход"
         echo ""
-        read -rp "Выбор: " choice
+        
+        choice=$(select_from_list "Выбор: " 7)
 
         case $choice in
             1) scan_usb_devices ;;
@@ -621,7 +704,6 @@ main_menu() {
             5) unblock_all_usb ;;
             6) show_rules ;;
             7) echo "Выход..."; exit 0 ;;
-            *) echo -e "${RED}Неверный выбор${NC}" ;;
         esac
     done
 }
