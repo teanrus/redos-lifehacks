@@ -9,44 +9,44 @@
 
 ## [v2.0] — 2026-04-14
 
-Первый публичный релиз. Полная коллекция руководств и скриптов для РЕД ОС 7.3/8.0.
+Публичный релиз. Коллекция руководств и скриптов для РЕД ОС 7.3/8.0.
 
 ### Добавлено
 
 #### Скрипты (29)
 
-| Скрипт | Описание |
-| ------ | -------- |
-| `automount-sshfs.sh` | Автомонтирование SSHFS-папок при входе |
-| `base-setup.sh` | Комплексная настройка: SELinux, DNF, репозитории, SSH, firewall, SSD |
-| `cleanup.sh` | Очистка системы: кэш, журналы, старые ядра, корзины, бэкапы |
-| `disk-usage.sh` | Анализ дискового пространства: большие файлы, дубликаты, ncdu |
-| `install-1c.sh` | Установка 1С:Предприятие (клиент/сервер), КриптоПро, HASP, PostgreSQL |
-| `install-cryptopro.sh` | КриптоПро CSP: зависимости, Рутокен, лицензия, ГОСТ |
-| `install-messengers.sh` | Корпоративные мессенджеры: Telegram, Среда, MAX, VK Messenger |
-| `install-office.sh` | Установка офисных пакетов: Р7-Офис, LibreOffice, МойОфис |
-| `install-vipnet.sh` | ViPNet Client: VPN, firewall, автозапуск, импорт конфигурации |
-| `mount-manager.sh` | Управление монтированием сетевых шар (CIFS/SMB): интерактивное меню, пресеты, fstab |
-| `network-diagnostics.sh` | Диагностика сети: интерфейсы, DNS, маршруты, порты |
-| `package-install-fix.sh` | Исправление ошибок установки пакетов: зависимости, GPG, lock |
-| `quick-check.sh` | Быстрая проверка состояния системы |
-| `redos-auto-update.sh` | Автообновление по расписанию: временное окно, режимы, уведомления MAX Messenger |
-| `redos-info.sh` | Информация о системе: ОС, ядро, оборудование, диски, сеть, пакеты, сервисы |
-| `redos-update-checker.sh` | Проверка и установка обновлений: DNF, безопасность, ядро |
-| `rsync-copy.sh` | Интерактивное копирование файлов по SSH с проверками |
-| `set_password_policy.sh` | Политика паролей: yescrypt, pam_faillock, pam_pwquality |
-| `set_static_ip.sh` | Статический IP: nmcli, несколько IP, автоматический откат |
-| `setup_corporate_vpn.sh` | Корпоративный VPN: OpenVPN, WireGuard, Cisco AnyConnect |
-| `setup_network-printer.sh` | Сервер печати: CUPS + Samba + Avahi, Windows-клиенты, AD |
-| `setup_proxy.sh` | Корпоративный прокси: HTTP/HTTPS, авторизация, DNF/Git/Docker |
-| `setup_wifi.sh` | Wi-Fi: драйверы, hotspot, роуминг, энергопотребление |
-| `smb-credentials-manager.sh` | Управление сохранёнными паролями SMB |
-| `sound-diagnostics.sh` | Диагностика звука: PulseAudio/PipeWire, микрофон, Bluetooth |
-| `system-health-check.sh` | Полная диагностика: CPU, RAM, диски, сеть, сервисы, отчёты TXT/HTML/JSON |
-| `timedate.sh` | Настройка часового пояса: NTP, chrony, RTC |
-| `usb-guard.sh` | Управление блокировкой USB-накопителей: UDISKS_IGNORE, authorized, белый список |
-| `usb-install.sh` | Создание загрузочной USB: Ventoy, Rufus, Etcher, разметка |
-| `user-migration.sh` | Миграция пользователя: файлы, браузеры, SSH-ключи, GNOME Keyring |
+| Скрипт | Описание | Документация |
+| ------ | -------- | ------------ |
+| `automount-sshfs.sh` | Автомонтирование SSHFS-папок при входе | [Открыть](docs/desktop/automount-sshfs.md) |
+| `base-setup.sh` | Комплексная настройка: SELinux, DNF, репозитории, SSH, firewall, SSD | [1](scripts/setup/base-setup.md), [2](docs/installation/first-steps.md) |
+| `cleanup.sh` | Очистка системы: кэш, журналы, старые ядра, корзины, бэкапы | [Открыть](scripts/utils/cleanup.md) |
+| `disk-usage.sh` | Анализ дискового пространства: большие файлы, дубликаты, ncdu | [Открыть](tools/disk-usage.md) |
+| `install-1c.sh` | Установка 1С:Предприятие (клиент/сервер), КриптоПро, HASP, PostgreSQL | [Открыть](scripts/install/install-1c.md) |
+| `install-cryptopro.sh` | КриптоПро CSP: зависимости, Рутокен, лицензия, ГОСТ | [Открыть](scripts/install/install-cryptopro.md) |
+| `install-messengers.sh` | Корпоративные мессенджеры: Telegram, Среда, MAX, VK Messenger | [Открыть](scripts/install/install-messengers.md) |
+| `install-office.sh` | Установка офисных пакетов: Р7-Офис, LibreOffice, МойОфис | [Открыть](docs/installation/office-setup.md) |
+| `install-vipnet.sh` | ViPNet Client: VPN, firewall, автозапуск, импорт конфигурации | [Открыть](scripts/install/install-vipnet.md) |
+| `mount-manager.sh` | Управление монтированием сетевых шар (CIFS/SMB): интерактивное меню, пресеты, fstab | [Открыть](scripts/utils/mount-manager.md) |
+| `network-diagnostics.sh` | Диагностика сети: интерфейсы, DNS, маршруты, порты | [Открыть](docs/troubleshooting/network-issues.md) |
+| `package-install-fix.sh` | Исправление ошибок установки пакетов: зависимости, GPG, lock | — |
+| `quick-check.sh` | Быстрая проверка состояния системы | — |
+| `redos-auto-update.sh` | Автообновление по расписанию: временное окно, режимы, уведомления MAX Messenger | [Открыть](scripts/monitoring/redos-auto-update.md) |
+| `redos-info.sh` | Информация о системе: ОС, ядро, оборудование, диски, сеть, пакеты, сервисы | [Открыть](tools/redos-info.md) |
+| `redos-update-checker.sh` | Проверка и установка обновлений: DNF, безопасность, ядро | [Открыть](tools/check-updates.md) |
+| `rsync-copy.sh` | Интерактивное копирование файлов по SSH с проверками | [1](scripts/utils/rsync-copy.md), [2](docs/network/rsync-file-copy.md) |
+| `set_password_policy.sh` | Политика паролей: yescrypt, pam_faillock, pam_pwquality | [Открыть](docs/security/password-policy.md) |
+| `set_static_ip.sh` | Статический IP: nmcli, несколько IP, автоматический откат | [Открыть](docs/network/static-ip.md) |
+| `setup_corporate_vpn.sh` | Корпоративный VPN: OpenVPN, WireGuard, Cisco AnyConnect | [Открыть](docs/network/vpn-settings.md) |
+| `setup_network-printer.sh` | Сервер печати: CUPS + Samba + Avahi, Windows-клиенты, AD | [Открыть](docs/peripheral/network-printer-server.md) |
+| `setup_proxy.sh` | Корпоративный прокси: HTTP/HTTPS, авторизация, DNF/Git/Docker | [Открыть](docs/network/proxy-setup.md) |
+| `setup_wifi.sh` | Wi-Fi: драйверы, hotspot, роуминг, энергопотребление | [Открыть](docs/network/wifi-setup.md) |
+| `smb-credentials-manager.sh` | Управление сохранёнными паролями SMB | [Открыть](scripts/utils/smb-credentials-manager.md) |
+| `sound-diagnostics.sh` | Диагностика звука: PulseAudio/PipeWire, микрофон, Bluetooth | [Открыть](docs/troubleshooting/audio-issues.md) |
+| `system-health-check.sh` | Полная диагностика: CPU, RAM, диски, сеть, сервисы, отчёты TXT/HTML/JSON | [1](scripts/monitoring/system-health-check.md), [2](docs/monitoring/system-health-check.md) |
+| `timedate.sh` | Настройка часового пояса: NTP, chrony, RTC | [Открыть](docs/installation/timezone-setup.md) |
+| `usb-guard.sh` | Управление блокировкой USB-накопителей: UDISKS_IGNORE, authorized, белый список | [1](scripts/utils/usb-guard.md), [2](docs/security/usb-guard.md) |
+| `usb-install.sh` | Создание загрузочной USB: Ventoy, Rufus, Etcher, разметка | [Открыть](docs/installation/usb-install.md) |
+| `user-migration.sh` | Миграция пользователя: файлы, браузеры, SSH-ключи, GNOME Keyring | [Открыть](docs/troubleshooting/user-migration.md) |
 
 ### Особенности релиза
 
