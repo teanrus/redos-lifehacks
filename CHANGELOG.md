@@ -13,7 +13,7 @@
 
 ### Добавлено
 
-#### Скрипты (28)
+#### Скрипты (30)
 
 | Скрипт | Описание |
 |--------|----------|
@@ -26,6 +26,7 @@
 | `install-messengers.sh` | Корпоративные мессенджеры: Telegram, Среда, MAX, VK Messenger |
 | `install-office.sh` | Установка офисных пакетов: Р7-Офис, LibreOffice, МойОфис |
 | `install-vipnet.sh` | ViPNet Client: VPN, firewall, автозапуск, импорт конфигурации |
+| `mount-manager.sh` | Управление монтированием сетевых шар (CIFS/SMB): интерактивное меню, пресеты, fstab |
 | `network-diagnostics.sh` | Диагностика сети: интерфейсы, DNS, маршруты, порты |
 | `package-install-fix.sh` | Исправление ошибок установки пакетов: зависимости, GPG, lock |
 | `redos-auto-update.sh` | Автообновление по расписанию: временное окно, режимы, уведомления MAX Messenger |
@@ -42,6 +43,7 @@
 | `sound-diagnostics.sh` | Диагностика звука: PulseAudio/PipeWire, микрофон, Bluetooth |
 | `system-health-check.sh` | Полная диагностика: CPU, RAM, диски, сеть, сервисы, отчёты TXT/HTML/JSON |
 | `timedate.sh` | Настройка часового пояса: NTP, chrony, RTC |
+| `usb-guard.sh` | Управление блокировкой USB-накопителей: UDISKS_IGNORE, authorized, белый список |
 | `usb-install.sh` | Создание загрузочной USB: Ventoy, Rufus, Etcher, разметка |
 | `user-migration.sh` | Миграция пользователя: файлы, браузеры, SSH-ключи, GNOME Keyring |
 
@@ -51,7 +53,7 @@
 - **docs/installation/** — установка: первые шаги, офис, принтеры, сканеры, время, USB
 - **docs/network/** — сеть: прокси, статический IP, VPN, Wi-Fi, rsync
 - **docs/optimization/** — оптимизация: загрузка, DNF, память, SSD, swap
-- **docs/security/** — безопасность: аудит, шифрование, firewall, пароли
+- **docs/security/** — безопасность: аудит, шифрование, firewall, пароли, блокировка USB
 - **docs/troubleshooting/** — решение проблем: звук, графика, сеть, принтеры, миграция, OOM, ключи
 - **docs/peripheral/** — периферия: принтеры, сканеры, сервер печати, смарт-карты, штрих-коды
 - **docs/monitoring/** — мониторинг: здоровье системы, логи, совместимость оборудования
@@ -77,10 +79,6 @@
 - Лицензия: MIT
 - Отчёты: TXT, HTML, JSON
 - Планирование: cron, systemd timer
-
----
-
-[Невыпущенное]
 
 ---
 
