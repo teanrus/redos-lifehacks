@@ -32,7 +32,7 @@
 set -uo pipefail
 
 # ─── Конфигурация ──────────────────────────────────────────────────────────
-readonly SCRIPT_VERSION="2.1"
+readonly SCRIPT_VERSION="2.1.1"
 readonly SCRIPT_NAME=$(basename "$0")
 readonly LOG_FILE="/var/log/mount-manager.log"
 readonly MOUNT_BASE="/mnt"
