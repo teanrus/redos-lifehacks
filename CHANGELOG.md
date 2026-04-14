@@ -46,30 +46,7 @@
 | `usb-guard.sh` | Управление блокировкой USB-накопителей: UDISKS_IGNORE, authorized, белый список |
 | `usb-install.sh` | Создание загрузочной USB: Ventoy, Rufus, Etcher, разметка |
 | `user-migration.sh` | Миграция пользователя: файлы, браузеры, SSH-ключи, GNOME Keyring |
-
-#### Документация
-
-- **docs/desktop/** — рабочее окружение: SSHFS, автодополнение, среда, multi-monitor
-- **docs/installation/** — установка: первые шаги, офис, принтеры, сканеры, время, USB
-- **docs/network/** — сеть: прокси, статический IP, VPN, Wi-Fi, rsync
-- **docs/optimization/** — оптимизация: загрузка, DNF, память, SSD, swap
-- **docs/security/** — безопасность: аудит, шифрование, firewall, пароли, блокировка USB
-- **docs/troubleshooting/** — решение проблем: звук, графика, сеть, принтеры, миграция, OOM, ключи
-- **docs/peripheral/** — периферия: принтеры, сканеры, сервер печати, смарт-карты, штрих-коды
-- **docs/monitoring/** — мониторинг: здоровье системы, логи, совместимость оборудования
-- **VERSIONS.md** — полное сравнение РЕД ОС 7.x и 8.x: ядро, пакеты, архитектуры, EOL, миграция
-
-#### Инструменты (tools/)
-
-- `check-updates.md` — проверка обновлений системы
-- `disk-usage.md` — анализ дискового пространства
-- `redos-info.md` + `redos-info.sh` — информация о системе
-- `system-health.md` — быстрая проверка состояния
-
-#### Документация скриптов
-
-- `scripts/monitoring/redos-auto-update.md` — автоматическое обновление по расписанию
-- `scripts/monitoring/system-health-check.md` — полная диагностика системы
+| `redos-info.sh` | информация о системе |
 
 ### Особенности релиза
 
