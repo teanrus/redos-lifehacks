@@ -25,6 +25,7 @@
 
 | Документ | Описание | Ссылка |
 |----------|----------|--------|
+| ⚡ **Экспресс-диагностика системы** | Быстрая проверка CPU, RAM, диска, сети и сервисов. Скрипт `quick-check.sh`, вывод за 30 секунд, без root-прав | [→ quick-check.md](quick-check.md) |
 | 📊 **Диагностика состояния системы** | Полный гайд по проверке CPU, RAM, дисков, сети, сервисов, безопасности, температуры. Скрипты `system-health-check.sh`, отчёты в TXT/HTML/JSON, cron и systemd timer | [→ system-health-check.md](system-health-check.md) |
 | 📝 **Анализ журналов systemd** | Руководство по journalctl, фильтрация по времени/сервисам/приоритетам, анализ загрузки, скрипт `log-analyzer.sh`, мониторинг в реальном времени | [→ log-analyzer.md](log-analyzer.md) |
 | 🔍 **Совместимость оборудования** | Проверка процессоров, GPU, сетевых адаптеров, накопителей, USB, Wi-Fi, Bluetooth, принтеров, ноутбуков, серверного оборудования. Скрипт `hw-check.sh`, отчёты HTML/JSON | [→ hardware-compatibility.md](hardware-compatibility.md) |

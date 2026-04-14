@@ -28,8 +28,8 @@
 | `install-vipnet.sh` | ViPNet Client: VPN, firewall, автозапуск, импорт конфигурации | [Открыть](scripts/install/install-vipnet.md) |
 | `mount-manager.sh` | Управление монтированием сетевых шар (CIFS/SMB): интерактивное меню, пресеты, fstab | [Открыть](scripts/utils/mount-manager.md) |
 | `network-diagnostics.sh` | Диагностика сети: интерфейсы, DNS, маршруты, порты | [Открыть](docs/troubleshooting/network-issues.md) |
-| `package-install-fix.sh` | Исправление ошибок установки пакетов: зависимости, GPG, lock | — |
-| `quick-check.sh` | Быстрая проверка состояния системы | — |
+| `package-install-fix.sh` | Исправление ошибок установки пакетов: зависимости, GPG, lock | [Открыть](docs/troubleshooting/package-install-fix.md) |
+| `quick-check.sh` | Быстрая проверка состояния системы | [Открыть](docs/monitoring/quick-check.md) |
 | `redos-auto-update.sh` | Автообновление по расписанию: временное окно, режимы, уведомления MAX Messenger | [Открыть](scripts/monitoring/redos-auto-update.md) |
 | `redos-info.sh` | Информация о системе: ОС, ядро, оборудование, диски, сеть, пакеты, сервисы | [Открыть](tools/redos-info.md) |
 | `redos-update-checker.sh` | Проверка и установка обновлений: DNF, безопасность, ядро | [Открыть](tools/check-updates.md) |

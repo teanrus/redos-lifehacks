@@ -15,13 +15,16 @@ GNOME Keyring: сброс пароля связки, автоматическа�
 ### 🌐 [Решение проблем с сетью в РЕД ОС](/docs/troubleshooting/network-issues.md)
 Сетевые проблемы: диагностика подключения, сброс настроек, DNS, NetworkManager, Wi-Fi, прокси, маршрутизация, блокировка firewalld
 
+### 📦 [Решение ошибок при установке ПО в РЕД ОС](/docs/troubleshooting/package-install-fix.md)
+Автоматическое исправление ошибок DNF/RPM: зависимости, конфликты, репозитории, кэш, lock-файлы, GPG-ключи, повреждённые пакеты, транзакции
+
 ### 🖨️ [Установка принтеров Kyocera в РЕД ОС](/docs/troubleshooting/printers-kyocera.md)
 Принтеры Kyocera: установка драйверов GDI через CUPS, автоматический скрипт, настройка сетевого принтера, общий доступ по локальной сети
 
 ### 🔓 [Восстановление пароля root в РЕД ОС](/docs/troubleshooting/repasswd.md)
 Сброс пароля root: GRUB (init=/bin/bash, rd.break), перемаркировка SELinux, LiveCD/Rescue mode, решение типичных проблем
 
-### 📦 [Решение ошибок при установке ПО в РЕД ОС](/docs/troubleshooting/software-issues.md)
+### 📦 [Руководство по ошибкам DNF/RPM в РЕД ОС](/docs/troubleshooting/software-issues.md)
 Ошибки DNF/RPM: зависимости, конфликты пакетов, нехватка места, повреждённые пакеты, ошибки репозиториев, GPG-подписи, lock-файлы, 32-битные пакеты
 
 ### 🔄 [Миграция пользователя в РЕД ОС](/docs/troubleshooting/user-migration.md)
