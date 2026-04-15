@@ -8,7 +8,6 @@
 [![Wiki](https://img.shields.io/badge/Wiki-documentation-purple?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/wiki)
 [![Changelog](https://img.shields.io/badge/Changelog-versions-orange?style=for-the-badge)](CHANGELOG.md)
 [![Contributing](https://img.shields.io/badge/Contributing-guide-yellow?style=for-the-badge)](CONTRIBUTING.md)
-[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 > 💡 **Если вы ищете быстрые инструкции и скрипты для администрирования РЕД ОС — этот репозиторий поможет собрать рабочее место за 10–15 минут.**
 
