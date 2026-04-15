@@ -7,6 +7,17 @@
 
 ---
 
+## [Unreleased]
+
+### Добавлено
+
+- 📖 **Wiki репозитория** — расширенная документация на [GitHub Wiki](https://github.com/teanrus/redos-lifehacks/wiki)
+  - Сравнение версий РЕД ОС 7.x и 8.x
+  - Руководства по миграции и диагностике
+  - Дополнительные сценарии использования
+
+---
+
 ## [v2.0] — 2026-04-14
 
 Публичный релиз. Коллекция руководств и скриптов для РЕД ОС 7.3/8.0.
@@ -62,3 +73,8 @@
 ---
 
 [v2.0]: https://github.com/teanrus/redos-lifehacks/releases/tag/v2.0
+[Unreleased]: https://github.com/teanrus/redos-lifehacks/compare/v2.0...HEAD
+
+---
+
+📖 **Wiki**: https://github.com/teanrus/redos-lifehacks/wiki
