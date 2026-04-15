@@ -6,6 +6,7 @@
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 **Что делает:**
+
 - Установка Telegram:
   - Скачивает и распаковывает архив в /opt/telegram
   - Создает символическую ссылку /usr/bin/telegram
@@ -73,6 +74,7 @@ Telegram — универсальный мессенджер
 MAX — корпоративный мессенджер MAX Desktop
 VK Messenger — мессенджер от ВКонтакте (опционально)
 ```
+
 **Полезные команды после установки:**
 
 ```bash
@@ -88,7 +90,7 @@ vk-messenger  # VK Messenger
 ## 📋 Требования и совместимость
 
 | Параметр | Значение |
-|----------|----------|
+| -------- | -------- |
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Архитектура** | x86_64 |
 | **Права** | root (sudo) |
