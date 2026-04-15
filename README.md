@@ -1,6 +1,8 @@
 # 🐧 РЕД ОС: Готовые решения и скрипты
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![Changelog](https://img.shields.io/badge/changelog-versions-orange.svg)](/CHANGELOG.md)
+[![Contributing](https://img.shields.io/badge/contributing-guide-yellow.svg)](/CONTRIBUTING.md)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
