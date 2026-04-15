@@ -189,6 +189,6 @@ sudo bash install-cryptopro.sh
 > [!tip]
 > **Как внести свой вклад** → см. [CONTRIBUTING.md](CONTRIBUTING.md)
 
-### ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+### ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ### Вместе сделаем работу в РЕД ОС удобнее и эффективнее

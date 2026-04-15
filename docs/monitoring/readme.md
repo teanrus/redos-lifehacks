@@ -2,10 +2,10 @@
 
 > Комплексное руководство по мониторингу состояния системы, анализу журналов и проверке совместимости оборудования в РЕД ОС 7.x / 8.x.
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
-[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ---
 
@@ -188,6 +188,6 @@ sudo systemctl enable --now system-health-check.timer
 
 ---
 
-### ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+### ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ### Вместе сделаем работу в РЕД ОС удобнее и эффективнее!

@@ -2,9 +2,9 @@
 
 > 📋 **Описание:** Быстрая проверка CPU, RAM, диска, сети и сервисов для мгновенной оценки состояния системы.
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 
 ## Оглавление
 

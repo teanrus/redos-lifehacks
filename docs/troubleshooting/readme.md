@@ -1,7 +1,7 @@
 # Решение проблем
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ### 🔊 [Решение проблем со звуком в РЕД ОС](/docs/troubleshooting/audio-issues.md)
 Звуковая система: диагностика PulseAudio/PipeWire, отсутствие звука, тихий/хриплый звук, микрофон, Bluetooth-гарнитуры, треск и щелчки, эквалайзер
