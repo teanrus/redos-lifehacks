@@ -5,7 +5,9 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-[📖 Wiki](https://github.com/teanrus/redos-lifehacks/wiki) • [📝 Changelog](CHANGELOG.md) • [🤝 Contributing](CONTRIBUTING.md)
+[![Wiki](https://img.shields.io/badge/Wiki-documentation-purple?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/wiki)
+[![Changelog](https://img.shields.io/badge/Changelog-versions-orange?style=for-the-badge)](CHANGELOG.md)
+[![Contributing](https://img.shields.io/badge/Contributing-guide-yellow?style=for-the-badge)](CONTRIBUTING.md)
 
 > 💡 **Если вы ищете быстрые инструкции и скрипты для администрирования РЕД ОС — этот репозиторий поможет собрать рабочее место за 10–15 минут.**
 
