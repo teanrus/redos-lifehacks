@@ -8,6 +8,7 @@
 [![Wiki](https://img.shields.io/badge/Wiki-documentation-purple?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/wiki)
 [![Changelog](https://img.shields.io/badge/Changelog-versions-orange?style=for-the-badge)](CHANGELOG.md)
 [![Contributing](https://img.shields.io/badge/Contributing-guide-yellow?style=for-the-badge)](CONTRIBUTING.md)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks.svg)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 > 💡 **Если вы ищете быстрые инструкции и скрипты для администрирования РЕД ОС — этот репозиторий поможет собрать рабочее место за 10–15 минут.**
 
@@ -61,7 +62,7 @@ sudo bash install-cryptopro.sh             # Запуск
 ## 🔒 Совместимость и требования
 
 | Параметр | Значение |
-|----------|----------|
+| -------- | -------- |
 | **ОС** | РЕД ОС 7.3 / 8.x (основная поддержка) |
 | **Совместимость** | Может работать на других RPM-дистрибутивах (CentOS, Fedora) |
 | **Права** | Требуется `root` или `sudo` для большинства скриптов |
@@ -73,7 +74,7 @@ sudo bash install-cryptopro.sh             # Запуск
 ## 📦 Что внутри
 
 | Раздел | Описание | Примеры |
-|--------|----------|---------|
+| ------ | -------- | ------- |
 | 📚 **Документация** | Пошаговые руководства и лайфхаки | настройка рабочего стола, установка с USB, миграция |
 | 🤖 **Автоматизация** | Готовые скрипты для установки ПО | 1С, КриптоПро, мессенджеры, ViPNet |
 | 📊 **Диагностика** | Мониторинг и проверка системы | автообновление, здоровье системы, логи |
@@ -117,7 +118,7 @@ sudo bash install-cryptopro.sh             # Запуск
 ## 🔑 Ключевые скрипты
 
 | Скрипт | Назначение | Документация |
-|--------|-----------|--------------|
+| ------ | --------- | ------------ |
 | 💬 [install-messengers](scripts/install/install-messengers.md) | Telegram, Среда, MAX, VK Messenger | [подробнее](scripts/install/install-messengers.md) |
 | 🔐 [install-cryptopro](scripts/install/install-cryptopro.md) | КриптоПро CSP + Рутокен | [подробнее](scripts/install/install-cryptopro.md) |
 | 🛡️ [install-vipnet](scripts/install/install-vipnet.md) | ViPNet Client VPN | [подробнее](scripts/install/install-vipnet.md) |
