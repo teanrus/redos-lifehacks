@@ -5,6 +5,8 @@
 # Запуск: curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/automount-sshfs.sh | sudo bash
 # GitHub: https://github.com/teanrus/redos-lifehacks
 #
+# Совместимость: РЕД ОС 7.x ✅, РЕД ОС 8.x ✅
+#
 
 set -e
 
