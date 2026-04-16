@@ -116,16 +116,16 @@ sudo bash install-cryptopro.sh             # Запуск
 
 ## 🔑 Ключевые скрипты
 
-| Скрипт | Назначение | Документация |
-| ------ | --------- | ------------ |
-| 💬 [install-messengers](scripts/install/install-messengers.md) | Telegram, Среда, MAX, VK Messenger | [подробнее](scripts/install/install-messengers.md) |
-| 🔐 [install-cryptopro](scripts/install/install-cryptopro.md) | КриптоПро CSP + Рутокен | [подробнее](scripts/install/install-cryptopro.md) |
-| 🛡️ [install-vipnet](scripts/install/install-vipnet.md) | ViPNet Client VPN | [подробнее](scripts/install/install-vipnet.md) |
-| 🏢 [install-1c](scripts/install/install-1c.md) | 1С:Предприятие + PostgreSQL | [подробнее](scripts/install/install-1c.md) |
-| 🗑️ [cleanup](scripts/utils/cleanup.md) | Очистка системы и кэша | [подробнее](scripts/utils/cleanup.md) |
-| ⏰ [redos-auto-update](scripts/monitoring/redos-auto-update.md) | Автообновление по расписанию | [подробнее](scripts/monitoring/redos-auto-update.md) |
-| 🖥️ [mount-manager](scripts/utils/mount-manager.md) | Сетевые шары CIFS/SMB | [подробнее](scripts/utils/mount-manager.md) |
-| 🔒 [usb-guard](scripts/utils/usb-guard.md) | Блокировка USB-накопителей | [подробнее](scripts/utils/usb-guard.md) |
+| Скрипт | Назначение |
+| ------ | --------- |
+| 💬 [install-messengers](scripts/install/install-messengers.md) | Telegram, Среда, MAX, VK Messenger |
+| 🔐 [install-cryptopro](scripts/install/install-cryptopro.md) | КриптоПро CSP + Рутокен |
+| 🛡️ [install-vipnet](scripts/install/install-vipnet.md) | ViPNet Client VPN |
+| 🏢 [install-1c](scripts/install/install-1c.md) | 1С:Предприятие + PostgreSQL |
+| 🗑️ [cleanup](scripts/utils/cleanup.md) | Очистка системы и кэша |
+| ⏰ [redos-auto-update](scripts/monitoring/redos-auto-update.md) | Автообновление по расписанию |
+| 🖥️ [mount-manager](scripts/utils/mount-manager.md) | Сетевые шары CIFS/SMB |
+| 🔒 [usb-guard](scripts/utils/usb-guard.md) | Блокировка USB-накопителей |
 
 > 📦 Полный пакет автоматизации: [redos-setup](https://github.com/teanrus/redos-setup) — базовая настройка АРМ за один запуск
 
