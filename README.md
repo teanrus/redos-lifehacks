@@ -5,10 +5,6 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-[![Wiki](https://img.shields.io/badge/Wiki-documentation-purple?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/wiki)
-[![Changelog](https://img.shields.io/badge/Changelog-versions-orange?style=for-the-badge)](CHANGELOG.md)
-[![Contributing](https://img.shields.io/badge/Contributing-guide-yellow?style=for-the-badge)](CONTRIBUTING.md)
-
 > 💡 **Если вы ищете быстрые инструкции и скрипты для администрирования РЕД ОС — этот репозиторий поможет собрать рабочее место за 10–15 минут.**
 
 Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС 7/8.
@@ -179,6 +175,12 @@ sudo bash install-cryptopro.sh
 > [!tip]
 > **Как внести свой вклад** → см. [CONTRIBUTING.md](CONTRIBUTING.md)
 
-### ⭐ Если этот репозиторий помог вам, поставьте звезду! [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
+### ⭐ Если этот репозиторий помог вам, поставьте звезду!
 
 ### Вместе сделаем работу в РЕД ОС удобнее и эффективнее
+
+[![Wiki](https://img.shields.io/badge/Wiki-documentation-purple?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/wiki)
+[![Changelog](https://img.shields.io/badge/Changelog-versions-orange?style=for-the-badge)](CHANGELOG.md)
+[![Contributing](https://img.shields.io/badge/Contributing-guide-yellow?style=for-the-badge)](CONTRIBUTING.md)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
+
