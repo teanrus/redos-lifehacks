@@ -2,11 +2,9 @@
 
 Все значимые изменения в проекте redos-lifehacks.
 
-Формат: [Keep a Changelog](https://keepachangelog.com/ru/1.1.0/).
-Версионирование: [Semantic Versioning](https://semver.org/lang/ru/).
-
 [![Формат](https://img.shields.io/badge/Формат-Keep%20a%20Changelog%201.1.0-009812?style=for-the-badge)](https://keepachangelog.com/ru/1.1.0/)
 [![Версионирование](https://img.shields.io/badge/Версионирование-Semantic%20Versioning%202.0.0-3F81FF?style=for-the-badge)](https://semver.org/lang/ru/)
+
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red?style=for-the-badge)](https://redos.red-soft.ru/)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
