@@ -75,11 +75,8 @@
 
 ---
 
-[v2.0]: https://github.com/teanrus/redos-lifehacks/releases/tag/v2.0
-[Unreleased]: https://github.com/teanrus/redos-lifehacks/compare/v2.0...HEAD
-
----
-
+[![Release v2.0](https://img.shields.io/badge/Release-v2.0-blue?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/releases/tag/v2.0)
+[![Unreleased](https://img.shields.io/badge/Unreleased-changes-orange?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/compare/v2.0...HEAD)
 [![Wiki](https://img.shields.io/badge/Wiki-documentation-purple?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/wiki)
 [![Contributing](https://img.shields.io/badge/Contributing-guide-yellow?style=for-the-badge)](CONTRIBUTING.md)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
