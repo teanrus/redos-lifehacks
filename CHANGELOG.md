@@ -5,6 +5,11 @@
 Формат: [Keep a Changelog](https://keepachangelog.com/ru/1.1.0/).
 Версионирование: [Semantic Versioning](https://semver.org/lang/ru/).
 
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
+
 ---
 
 ## [Unreleased]
@@ -24,7 +29,7 @@
 
 ### Добавлено
 
-#### Скрипты (29)
+#### Скрипты
 
 | Скрипт | Описание | Документация |
 | ------ | -------- | ------------ |
@@ -61,7 +66,6 @@
 
 ### Особенности релиза
 
-- 29 bash-скриптов в `scripts/` и `docs/`
 - Скрипты организованы по категориям: setup, install, utils, monitoring
 - Все скрипты запускаемы через `curl -sL .../download/*.sh | sudo bash`, `wget -qO- ... | sudo bash` или локально с проверкой SHA256
 - Совместимость: РЕД ОС 7.3, РЕД ОС 8.0 (x86_64, aarch64)
@@ -77,4 +81,7 @@
 
 ---
 
-📖 **Wiki**: https://github.com/teanrus/redos-lifehacks/wiki
+[![Wiki](https://img.shields.io/badge/Wiki-documentation-purple?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/wiki)
+[![Changelog](https://img.shields.io/badge/Changelog-versions-orange?style=for-the-badge)](CHANGELOG.md)
+[![Contributing](https://img.shields.io/badge/Contributing-guide-yellow?style=for-the-badge)](CONTRIBUTING.md)
+[![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
