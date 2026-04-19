@@ -1,3 +1,5 @@
+![Logo](img/logo.png)
+
 # 🐧 РЕД ОС: Готовые решения и скрипты
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
