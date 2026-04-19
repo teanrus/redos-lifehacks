@@ -4,8 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
 [![Version](https://img.shields.io/badge/version-2.0-green?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/releases)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
+[![РЕД ОС](https://img.shields.io/badge/РЕД%20ОС-7.3%20|%208.0-red?style=for-the-badge&logo=linux)](https://redos.red-soft.ru/)
 [![GitHub Releases](https://img.shields.io/github/downloads/teanrus/redos-lifehacks/total?style=for-the-badge&logo=github)](https://github.com/teanrus/redos-lifehacks/releases)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
