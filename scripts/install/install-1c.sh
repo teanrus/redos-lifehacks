@@ -31,7 +31,7 @@ GITHUB_REPO="redos-setup"
 
 # Рабочая директория (по умолчанию /tmp/1c)
 WORK_DIR="/tmp/1c"
-TAG_OVERRIDE=""
+TAG_OVERRIDE="packages"
 ONEC_VERSION="8.3.24.1691"
 ONEC_DIR="lin_8_3_24_1691"
 
@@ -104,6 +104,13 @@ check_success() {
 get_latest_tag() {
     local user=$1
     local repo=$2
+
+    # Если тег задан вручную, используем его
+    if [ -n "$TAG_OVERRIDE" ]; then
+        echo -e "${GREEN}✓ Используется указанная версия: $TAG_OVERRIDE${NC}" >&2
+        echo "$TAG_OVERRIDE"
+        return 0
+    fi
     
     echo -e "${BLUE}Получение информации о последнем релизе...${NC}" >&2
     

@@ -33,7 +33,7 @@ GITHUB_REPO="redos-setup"
 
 # Рабочая директория (по умолчанию /tmp/cryptopro)
 WORK_DIR="/tmp/cryptopro"
-TAG_OVERRIDE=""
+TAG_OVERRIDE="packages"
 SKIP_DOWNLOAD=false
 
 # ─── Парсинг аргументов ───────────────────────────────────────────────────

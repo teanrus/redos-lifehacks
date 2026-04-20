@@ -250,7 +250,7 @@ sudo dnf install shotwell
 **Telegram** (установка из репозитория GitHub)
 
 ```bash
-wget https://github.com/teanrus/redos-setup/releases/latest/download/tsetup.tar.xz
+wget https://github.com/teanrus/redos-setup/releases/download/packages/tsetup.tar.xz
 tar -xJf tsetup.tar.xz
 sudo mkdir -p /opt/telegram
 sudo cp -r Telegram/* /opt/telegram/
@@ -262,7 +262,7 @@ rm -rf Telegram tsetup.tar.xz
  **Среда** (корпоративный мессенджер)
 
 ```bash
-wget https://github.com/teanrus/redos-setup/releases/latest/download/sreda.rpm
+wget https://github.com/teanrus/redos-setup/releases/download/packages/sreda.rpm
 sudo dnf install -y sreda.rpm
 rm -f sreda.rpm
 ```
@@ -292,7 +292,7 @@ sudo dnf install max
 **VK Messenger** (установка из репозитория GitHub)
 
 ```bash
-wget https://github.com/teanrus/redos-setup/releases/latest/download/vk-messenger.rpm
+wget https://github.com/teanrus/redos-setup/releases/download/packages/vk-messenger.rpm
 sudo dnf install -y vk-messenger.rpm
 rm -f vk-messenger.rpm
 ```
