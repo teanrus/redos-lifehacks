@@ -3,7 +3,6 @@
 # 🐧 РЕД ОС: Готовые решения и скрипты
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
-[![Version](https://img.shields.io/badge/version-2.0-green?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/releases)
 [![РЕД ОС](https://img.shields.io/badge/РЕД%20ОС-7.3%20|%208.0-red?style=for-the-badge&logo=linux)](https://redos.red-soft.ru/)
 [![GitHub Releases](https://img.shields.io/github/downloads/teanrus/redos-lifehacks/total?style=for-the-badge&logo=github)](https://github.com/teanrus/redos-lifehacks/releases)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
