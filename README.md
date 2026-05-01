@@ -117,6 +117,7 @@ sudo bash install-cryptopro.sh             # Запуск
 | 🗑️ [cleanup](scripts/utils/cleanup.md) | Очистка системы и кэша |
 | ⏰ [redos-auto-update](scripts/monitoring/redos-auto-update.md) | Автообновление по расписанию |
 | 🖥️ [mount-manager](scripts/utils/mount-manager.md) | Сетевые шары CIFS/SMB |
+| 🔄 [user-migration](scripts/utils/user-migration.md) | Миграция пользователя и перенос данных |
 | 🔒 [usb-guard](scripts/utils/usb-guard.md) | Блокировка USB-накопителей |
 
 > 📦 Полный пакет автоматизации: [redos-setup](https://github.com/teanrus/redos-setup) — базовая настройка АРМ за один запуск

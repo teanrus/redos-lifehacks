@@ -56,6 +56,42 @@ print_error() {
     echo -e "${RED}❌ $1${NC}"
 }
 
+clear_new_user_keyrings() {
+    local keyrings_dir="/home/$NEW_USER/.local/share/keyrings"
+
+    if [ ! -d "$keyrings_dir" ]; then
+        return
+    fi
+
+    find "$keyrings_dir" -mindepth 1 -maxdepth 1 -exec rm -rf {} + 2>/dev/null || true
+}
+
+format_bytes() {
+    local bytes="${1:-0}"
+    numfmt --to=iec --suffix=B "$bytes" 2>/dev/null || echo "${bytes} байт"
+}
+
+get_dir_size_bytes() {
+    local dir="$1"
+    local size
+
+    if [ ! -d "$dir" ]; then
+        echo 0
+        return
+    fi
+
+    size=$(du -sb "$dir" 2>/dev/null | awk '{print $1}')
+    echo "${size:-0}"
+}
+
+get_free_space_bytes() {
+    local path="$1"
+    local free_space
+
+    free_space=$(df -PB1 "$path" 2>/dev/null | awk 'NR==2 {print $4}')
+    echo "${free_space:-0}"
+}
+
 # ============================================ #
 # ПРОВЕРКА ПРАВ ДОСТУПА
 # ============================================ #
@@ -142,6 +178,72 @@ if [ ! -d "/home/$OLD_USER" ]; then
 fi
 
 # ============================================ #
+# ОЦЕНКА ОБЪЕМА ДАННЫХ И СВОБОДНОГО МЕСТА
+# ============================================ #
+
+TRANSFER_MODE="copy"
+TRANSFERRED_DATA_BYTES=0
+TRANSFER_STATUS="не выполнялся"
+OLD_HOME="/home/$OLD_USER"
+HOME_TARGET_ROOT="/home"
+
+print_header "💾 ПРОВЕРКА МЕСТА НА ДИСКЕ"
+
+if [ -d "$OLD_HOME" ]; then
+    DATA_SIZE_BYTES=$(get_dir_size_bytes "$OLD_HOME")
+    DATA_SIZE_HUMAN=$(format_bytes "$DATA_SIZE_BYTES")
+    FREE_SPACE_BYTES=$(get_free_space_bytes "$HOME_TARGET_ROOT")
+    FREE_SPACE_HUMAN=$(format_bytes "$FREE_SPACE_BYTES")
+
+    echo ""
+    echo "Оценка переносимых данных:"
+    echo "-------------------------------------------"
+    echo -e "📁 Каталог источника: $OLD_HOME"
+    echo -e "📦 Объем данных: ${CYAN}$DATA_SIZE_HUMAN${NC}"
+    echo -e "💽 Свободно в $HOME_TARGET_ROOT: ${CYAN}$FREE_SPACE_HUMAN${NC}"
+    echo "-------------------------------------------"
+    echo ""
+
+    if [ "$DATA_SIZE_BYTES" -gt "$FREE_SPACE_BYTES" ]; then
+        print_warning "Свободного места недостаточно для копирования всех данных."
+        echo "   Рекомендуется освободить место на разделе $HOME_TARGET_ROOT и запустить скрипт повторно."
+        echo ""
+        echo "Выберите дальнейшее действие:"
+        echo "   1) Прекратить работу скрипта"
+        echo "   2) Не копировать данные, а переместить их новому пользователю"
+        echo ""
+
+        while true; do
+            echo -n "Ваш выбор (1/2): "
+            read disk_space_choice
+
+            case "$disk_space_choice" in
+                1)
+                    print_error "Операция отменена. Освободите место на диске и запустите скрипт повторно."
+                    exit 1
+                    ;;
+                2)
+                    TRANSFER_MODE="move"
+                    print_warning "Выбран режим перемещения: исходные файлы будут удаляться после успешного переноса."
+                    break
+                    ;;
+                *)
+                    print_warning "Введите 1 или 2"
+                    ;;
+            esac
+        done
+    else
+        print_success "Свободного места достаточно для копирования данных"
+    fi
+else
+    DATA_SIZE_BYTES=0
+    DATA_SIZE_HUMAN=$(format_bytes "$DATA_SIZE_BYTES")
+    FREE_SPACE_BYTES=$(get_free_space_bytes "$HOME_TARGET_ROOT")
+    FREE_SPACE_HUMAN=$(format_bytes "$FREE_SPACE_BYTES")
+    print_warning "Домашний каталог старого пользователя не найден, оценка данных равна 0"
+fi
+
+# ============================================ #
 # ВВОД ДАННЫХ НОВОГО ПОЛЬЗОВАТЕЛЯ
 # ============================================ #
 
@@ -206,6 +308,12 @@ echo "-------------------------------------------"
 echo -e "📁 Старый пользователь: ${RED}$OLD_USER${NC}"
 echo -e "👤 Новый пользователь: ${GREEN}$NEW_USER${NC}"
 echo -e "📝 ФИО: $NEW_USER_FULL_NAME"
+echo -e "📦 Объем переносимых данных: $DATA_SIZE_HUMAN"
+if [ "$TRANSFER_MODE" = "move" ]; then
+    echo -e "🚚 Режим переноса: перемещение данных"
+else
+    echo -e "🚚 Режим переноса: копирование данных"
+fi
 if [ -n "$NEW_USER_COMMENT" ]; then
     echo -e "💼 Должность: $NEW_USER_COMMENT"
 fi
@@ -224,7 +332,7 @@ fi
 # 1. СОЗДАНИЕ НОВОГО ПОЛЬЗОВАТЕЛЯ
 # ============================================ #
 
-print_step "Шаг 1/7: Создание нового пользователя..."
+print_step "Шаг 1/8: Создание нового пользователя..."
 
 comment_string="$NEW_USER_FULL_NAME"
 if [ -n "$NEW_USER_COMMENT" ]; then
@@ -244,7 +352,7 @@ fi
 # 2. УСТАНОВКА ПАРОЛЯ
 # ============================================ #
 
-print_step "Шаг 2/7: Установка пароля для нового пользователя"
+print_step "Шаг 2/8: Установка пароля для нового пользователя"
 echo "   Введите пароль дважды при запросе системы:"
 echo ""
 
@@ -254,7 +362,7 @@ passwd "$NEW_USER"
 # 3. ДОБАВЛЕНИЕ В ГРУППЫ
 # ============================================ #
 
-print_step "Шаг 3/7: Добавление в группы..."
+print_step "Шаг 3/8: Добавление в группы..."
 
 # Запрос на добавление в группу wheel
 echo ""
@@ -275,33 +383,57 @@ fi
 # 4. ПЕРЕНОС ФАЙЛОВ
 # ============================================ #
 
-print_step "Шаг 4/7: Перенос файлов из /home/$OLD_USER/"
+print_step "Шаг 4/8: Перенос файлов из /home/$OLD_USER/"
 
 if [ -d "/home/$OLD_USER" ]; then
     echo ""
     print_warning "Перенос файлов может занять несколько минут..."
     echo ""
     
-    # Копирование всех файлов с сохранением атрибутов
-    rsync -avh --progress "/home/$OLD_USER/" "/home/$NEW_USER/"
-    
-    if [ $? -eq 0 ]; then
-        print_success "Файлы успешно скопированы"
+    if [ "$TRANSFER_MODE" = "move" ]; then
+        # Перемещение файлов: после успешной передачи исходные файлы удаляются.
+        rsync -avh --progress --remove-source-files "/home/$OLD_USER/" "/home/$NEW_USER/"
+        transfer_result=$?
+
+        if [ $transfer_result -eq 0 ]; then
+            find "/home/$OLD_USER" -mindepth 1 -depth -type d -empty -delete 2>/dev/null || true
+            print_success "Файлы успешно перемещены"
+            TRANSFERRED_DATA_BYTES="$DATA_SIZE_BYTES"
+            TRANSFER_STATUS="перемещено"
+        else
+            print_warning "При перемещении возникли ошибки"
+            TRANSFER_STATUS="перемещение завершилось с ошибками"
+        fi
     else
-        print_warning "При копировании возникли ошибки"
+        # Копирование всех файлов с сохранением атрибутов
+        rsync -avh --progress "/home/$OLD_USER/" "/home/$NEW_USER/"
+        transfer_result=$?
+    
+        if [ $transfer_result -eq 0 ]; then
+            print_success "Файлы успешно скопированы"
+            TRANSFERRED_DATA_BYTES="$DATA_SIZE_BYTES"
+            TRANSFER_STATUS="скопировано"
+        else
+            print_warning "При копировании возникли ошибки"
+            TRANSFER_STATUS="копирование завершилось с ошибками"
+        fi
     fi
 else
     print_warning "Домашний каталог старого пользователя не найден, перенос пропущен"
+    TRANSFER_STATUS="пропущен"
 fi
 
 # ============================================ #
 # 5. ПЕРЕНОС ДАННЫХ БРАУЗЕРОВ
 # ============================================ #
 
-print_step "Шаг 5/7: Перенос данных браузеров..."
+print_step "Шаг 5/8: Перенос данных браузеров..."
 
 browser_count=0
 
+if [ "$TRANSFER_MODE" = "move" ]; then
+    print_warning "Отдельный перенос браузеров пропущен: профили уже вошли в перемещение домашнего каталога"
+else
 # Google Chrome / Chromium
 if [ -d "/home/$OLD_USER/.config/google-chrome" ]; then
     rsync -avh "/home/$OLD_USER/.config/google-chrome/" "/home/$NEW_USER/.config/google-chrome/" && \
@@ -336,22 +468,30 @@ if [ -d "/home/$OLD_USER/.config/opera" ]; then
     browser_count=$((browser_count + 1))
 fi
 
-# GNOME Keyring (ключи шифрования паролей)
-if [ -d "/home/$OLD_USER/.local/share/keyrings" ]; then
-    rsync -avh "/home/$OLD_USER/.local/share/keyrings/" "/home/$NEW_USER/.local/share/keyrings/" && \
-    print_success "GNOME Keyring: ключи перенесены"
-    browser_count=$((browser_count + 1))
-fi
-
 if [ $browser_count -eq 0 ]; then
     print_warning "Данные браузеров не найдены или уже перенесены"
 fi
+fi
 
 # ============================================ #
-# 6. ИСПРАВЛЕНИЕ ПРАВ ДОСТУПА
+# 6. ОЧИСТКА СВЯЗКИ КЛЮЧЕЙ GNOME KEYRING
 # ============================================ #
 
-print_step "Шаг 6/7: Исправление прав доступа..."
+print_step "Шаг 6/8: Очистка связки ключей GNOME Keyring..."
+
+if [ -d "/home/$NEW_USER/.local/share/keyrings" ]; then
+    clear_new_user_keyrings
+    print_success "Связка ключей нового пользователя очищена"
+    echo "   При первом входе GNOME Keyring создаст новую связку ключей для $NEW_USER"
+else
+    print_warning "Каталог связки ключей не найден, очистка не требуется"
+fi
+
+# ============================================ #
+# 7. ИСПРАВЛЕНИЕ ПРАВ ДОСТУПА
+# ============================================ #
+
+print_step "Шаг 7/8: Исправление прав доступа..."
 
 # Смена владельца всех файлов на нового пользователя
 chown -R "$NEW_USER":"$NEW_USER" "/home/$NEW_USER/"
@@ -366,10 +506,10 @@ chmod 600 "/home/$NEW_USER/.ssh/"* 2>/dev/null || true
 print_success "Права доступа установлены"
 
 # ============================================ #
-# 7. ПРОВЕРКА РЕЗУЛЬТАТА
+# 8. ПРОВЕРКА РЕЗУЛЬТАТА
 # ============================================ #
 
-print_step "Шаг 7/7: Проверка результата..."
+print_step "Шаг 8/8: Проверка результата..."
 
 echo ""
 echo "📊 Информация о пользователе:"
@@ -380,6 +520,20 @@ echo ""
 echo "📁 Размер перенесённых данных:"
 echo "-------------------------------------------"
 du -sh "/home/$NEW_USER/" 2>/dev/null || echo "   Данные недоступны"
+echo ""
+
+NEW_HOME_SIZE_BYTES=$(get_dir_size_bytes "/home/$NEW_USER")
+NEW_HOME_SIZE_HUMAN=$(format_bytes "$NEW_HOME_SIZE_BYTES")
+TRANSFERRED_DATA_HUMAN=$(format_bytes "$TRANSFERRED_DATA_BYTES")
+
+echo "📊 Сводка переноса:"
+echo "-------------------------------------------"
+echo "   Режим: $([ "$TRANSFER_MODE" = "move" ] && echo "перемещение" || echo "копирование")"
+echo "   Статус: $TRANSFER_STATUS"
+echo "   Оценка исходных данных: $DATA_SIZE_HUMAN"
+echo "   Перенесено по оценке: $TRANSFERRED_DATA_HUMAN"
+echo "   Текущий размер /home/$NEW_USER: $NEW_HOME_SIZE_HUMAN"
+echo "-------------------------------------------"
 echo ""
 
 echo "📂 Структура домашнего каталога (первые 15 строк):"
@@ -450,6 +604,8 @@ print_header "🎉 РАБОТА СКРИПТА ЗАВЕРШЕНА"
 
 echo ""
 echo -e "Новый пользователь готов к работе: ${GREEN}$NEW_USER${NC}"
+echo "Перенос данных: $TRANSFER_STATUS, объем: $TRANSFERRED_DATA_HUMAN"
+echo "Размер домашнего каталога /home/$NEW_USER: $NEW_HOME_SIZE_HUMAN"
 echo ""
 echo "📞 Поддержка:"
 echo "   Документация: https://github.com/teanrus/redos-lifehacks"

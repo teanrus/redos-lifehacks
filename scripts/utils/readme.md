@@ -31,6 +31,31 @@ sudo bash cleanup.sh
 > [!TIP]
 > Скрипт требует прав `root`. Рекомендуется запускать периодически для поддержания системы в чистоте.
 
+### 🔄 [Миграция пользователя в РЕД ОС](/scripts/utils/user-migration.md)
+
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
+Создание нового пользователя и перенос данных старой учётной записи: домашний каталог, профили браузеров, SSH-ключи, проверка свободного места, выбор копирования или перемещения, очистка GNOME Keyring у нового пользователя.
+
+---
+
+### 🚀 Быстрый запуск
+
+```bash
+# Скачайте скрипт
+curl -L -o user-migration.sh \
+     https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh
+
+# Сделайте исполняемым
+chmod +x user-migration.sh
+
+# Запустите от root
+sudo ./user-migration.sh
+```
+
+> [!warning]
+> Перед миграцией убедитесь, что старый пользователь вышел из системы и закрыл браузеры.
+
 ### 🔐 [Управление сохранёнными паролями сетевых ресурсов на РЕД ОС](/scripts/utils/smb-credentials-manager.md)
 
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)

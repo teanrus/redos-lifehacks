@@ -58,7 +58,7 @@
 | `timedate.sh` | Настройка часового пояса: NTP, chrony, RTC | [Открыть](docs/installation/timezone-setup.md) |
 | `usb-guard.sh` | Управление блокировкой USB-накопителей: UDISKS_IGNORE, authorized, белый список | [1](scripts/utils/usb-guard.md), [2](docs/security/usb-guard.md) |
 | `usb-install.sh` | Создание загрузочной USB: Ventoy, Rufus, Etcher, разметка | [Открыть](docs/installation/usb-install.md) |
-| `user-migration.sh` | Миграция пользователя: файлы, браузеры, SSH-ключи, GNOME Keyring | [Открыть](docs/troubleshooting/user-migration.md) |
+| `user-migration.sh` | Миграция пользователя: файлы, браузеры, SSH-ключи, очистка GNOME Keyring | [Открыть](scripts/utils/user-migration.md) |
 
 ### Особенности релиза
 
