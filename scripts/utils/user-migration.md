@@ -53,20 +53,36 @@
 
 ### 1. Скачивание скрипта
 
+**Вариант 1: Быстрый запуск через `curl`**
+
 ```bash
-# Перейдите в директорию для скрипта
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh | sudo bash
+```
+
+**Вариант 2: Быстрый запуск через `wget`**
+
+```bash
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh | sudo bash
+```
+
+**Вариант 3: Скачивание с проверкой целостности**
+
+```bash
 cd /tmp
 
-# Скачайте последнюю версию
-curl -L -o user-migration.sh \
-     https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh \
+  -o user-migration.sh
 
-# Или с wget
-wget -O user-migration.sh \
-     https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh.sha256 \
+  -o user-migration.sh.sha256
+
+sha256sum -c user-migration.sh.sha256
+sudo bash user-migration.sh
 ```
 
 ### 2. Подготовка
+
+Если скрипт скачан вручную и вы хотите запускать его как исполняемый файл:
 
 ```bash
 # Сделать скрипт исполняемым
