@@ -7,9 +7,9 @@
 [![GitHub Releases](https://img.shields.io/github/downloads/teanrus/redos-lifehacks/total?style=for-the-badge&logo=github)](https://github.com/teanrus/redos-lifehacks/releases)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-> 💡 **Если вы ищете быстрые инструкции и скрипты для администрирования РЕД ОС — этот репозиторий поможет собрать рабочее место за 10–15 минут.**
+<!-- > 💡 **Если вы ищете быстрые инструкции и скрипты для администрирования РЕД ОС — этот репозиторий поможет собрать рабочее место за 10–15 минут.**
 
-Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС 7/8.
+Коллекция проверенных решений, скриптов и настроек для комфортной работы в РЕД ОС 7/8. -->
 
 **Для кого:**
 
