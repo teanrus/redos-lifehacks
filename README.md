@@ -1,7 +1,7 @@
-![Logo](img/logo.png)
-<!--  -->
 # 🐧 РЕД ОС: Готовые решения и скрипты
-<!--  -->
+
+![Logo](img/logo.png)
+
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
 [![РЕД ОС](https://img.shields.io/badge/РЕД%20ОС-7.3%20|%208.0-red?style=for-the-badge&logo=linux)](https://redos.red-soft.ru/)
 [![GitHub Releases](https://img.shields.io/github/downloads/teanrus/redos-lifehacks/total?style=for-the-badge&logo=github)](https://github.com/teanrus/redos-lifehacks/releases)
