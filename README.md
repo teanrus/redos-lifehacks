@@ -1,4 +1,4 @@
-# 🐧 РЕД ОС: Готовые решения и скрипты
+# 🐧 RED OS: Ready-made solutions and scripts
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
 [![РЕД ОС](https://img.shields.io/badge/РЕД%20ОС-7.3%20|%208.0-red?style=for-the-badge&logo=linux)](https://redos.red-soft.ru/)
