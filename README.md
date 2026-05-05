@@ -5,7 +5,7 @@
 [![GitHub Releases](https://img.shields.io/github/downloads/teanrus/redos-lifehacks/total?style=for-the-badge&logo=github)](https://github.com/teanrus/redos-lifehacks/releases)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
-![Logo](img/logo.png)
+![Logo](assets/logo.png)
 
 **Для кого:**
 
