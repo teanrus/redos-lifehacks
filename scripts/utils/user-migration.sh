@@ -436,37 +436,37 @@ if [ "$TRANSFER_MODE" = "move" ]; then
 else
 # Google Chrome / Chromium
 if [ -d "/home/$OLD_USER/.config/google-chrome" ]; then
-    rsync -avh "/home/$OLD_USER/.config/google-chrome/" "/home/$NEW_USER/.config/google-chrome/" && \
-    print_success "Google Chrome: данные перенесены"
-    browser_count=$((browser_count + 1))
+    if rsync -avh "/home/$OLD_USER/.config/google-chrome/" "/home/$NEW_USER/.config/google-chrome/"; then
+        print_success "Google Chrome: данные перенесены"
+        browser_count=$((browser_count + 1))
+    fi
 fi
 
 if [ -d "/home/$OLD_USER/.config/chromium" ]; then
-    rsync -avh "/home/$OLD_USER/.config/chromium/" "/home/$NEW_USER/.config/chromium/" && \
-    print_success "Chromium: данные перенесены"
-    browser_count=$((browser_count + 1))
+    if rsync -avh "/home/$OLD_USER/.config/chromium/" "/home/$NEW_USER/.config/chromium/"; then
+        print_success "Chromium: данные перенесены"
+        browser_count=$((browser_count + 1))
+    fi
 fi
 
 # Mozilla Firefox
 if [ -d "/home/$OLD_USER/.mozilla/firefox" ]; then
-    rsync -avh "/home/$OLD_USER/.mozilla/firefox/" "/home/$NEW_USER/.mozilla/firefox/" && \
-    print_success "Mozilla Firefox: данные перенесены"
-    browser_count=$((browser_count + 1))
+    if rsync -avh "/home/$OLD_USER/.mozilla/firefox/" "/home/$NEW_USER/.mozilla/firefox/"; then
+        print_success "Mozilla Firefox: данные перенесены"
+        browser_count=$((browser_count + 1))
+    fi
 fi
 
 # Яндекс.Браузер
 if [ -d "/home/$OLD_USER/.config/Yandex/YandexBrowser" ]; then
-    rsync -avh "/home/$OLD_USER/.config/Yandex/YandexBrowser/" "/home/$NEW_USER/.config/Yandex/YandexBrowser/" && \
-    print_success "Яндекс.Браузер: данные перенесены"
-    browser_count=$((browser_count + 1))
+    if rsync -avh "/home/$OLD_USER/.config/Yandex/YandexBrowser/" "/home/$NEW_USER/.config/Yandex/YandexBrowser/"; then
+        print_success "Яндекс.Браузер: данные перенесены"
+        browser_count=$((browser_count + 1))
+    fi
 fi
 
 # Opera
-if [ -d "/home/$OLD_USER/.config/opera" ]; then
-    rsync -avh "/home/$OLD_USER/.config/opera/" "/home/$NEW_USER/.config/opera/" && \
-    print_success "Opera: данные перенесены"
-    browser_count=$((browser_count + 1))
-fi
+if [ -d "/home/$OLD_
 
 if [ $browser_count -eq 0 ]; then
     print_warning "Данные браузеров не найдены или уже перенесены"
