@@ -11,17 +11,8 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)  
 Обслуживание системы: очистка временных файлов (/tmp, /var/tmp), кэш DNF, системные журналы, старые ядра (оставляет последние 2), кэш браузеров и мессенджеров, корзина, старые бэкапы конфигов
 
----
-
-### 🚀 Быстрый запуск
-
 ```bash
-# Очистка системы от временных файлов, кэша, старых ядер
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh | sudo bash
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh | sudo bash
-# Вариант 3: Скачивание с проверкой целостности
+# Скачивание с проверкой целостности
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh -o cleanup.sh
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/cleanup.sh.sha256 -o cleanup.sh.sha256
 sha256sum -c cleanup.sh.sha256
@@ -34,23 +25,15 @@ sudo bash cleanup.sh
 ### 🔄 [Миграция пользователя в РЕД ОС](/scripts/utils/user-migration.md)
 
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)  
 Создание нового пользователя и перенос данных старой учётной записи: домашний каталог, профили браузеров, SSH-ключи, проверка свободного места, выбор копирования или перемещения, очистка GNOME Keyring у нового пользователя.
 
----
-
-### Быстрый запуск 🚀
-
 ```bash
-# Скачайте скрипт
-curl -L -o user-migration.sh \
-     https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh
-
-# Сделайте исполняемым
-chmod +x user-migration.sh
-
-# Запустите от root
-sudo ./user-migration.sh
+# Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh -o user-migration.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/user-migration.sh.sha256 -o user-migration.sh.sha256
+sha256sum -c user-migration.sh.sha256
+sudo bash user-migration.sh
 ```
 
 > [!warning]
@@ -63,13 +46,7 @@ sudo ./user-migration.sh
 Интерактивная утилита резервного копирования пользовательских данных: XDG-каталоги или полный HOME, автоматический поиск накопителя, проверка свободного места, безопасные исключения, обработка символических ссылок, прогресс-бар с процентами и логирование.
 
 ```bash
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh | sudo bash
-
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh | sudo bash
-
-# Вариант 3: Скачивание с проверкой целостности
+# Скачивание с проверкой целостности
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh -o redos-backup-v2.4.sh
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh.sha256 -o redos-backup-v2.4.sh.sha256
 sha256sum -c redos-backup-v2.4.sh.sha256
@@ -86,13 +63,7 @@ sudo bash redos-backup-v2.4.sh
 Скрипт автоматически сканирует все возможные хранилища учётных данных в системе, находит сохранённые пароли от сетевых ресурсов (SMB/CIFS) и предлагает удалить их в интерактивном режиме.
 
 ```bash
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | sudo bash
-
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh | sudo bash
-
-# Вариант 3: Скачивание с проверкой целостности
+# Скачивание с проверкой целостности
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh -o smb-credentials-manager.sh
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/smb-credentials-manager.sh.sha256 -o smb-credentials-manager.sh.sha256
 sha256sum -c smb-credentials-manager.sh.sha256
@@ -109,13 +80,7 @@ sudo bash smb-credentials-manager.sh
 Скрипт для управления монтированием пользовательских директорий по протоколу CIFS/SMB. Поддерживает интерактивное меню, командные аргументы, сохранение пресетов и автоматическое добавление в fstab.
 
 ```bash
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/mount-manager.sh | sudo bash
-
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/mount-manager.sh | sudo bash
-
-# Вариант 3: Скачивание с проверкой целостности
+# Скачивание с проверкой целостности
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/mount-manager.sh -o mount-manager.sh
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/mount-manager.sh.sha256 -o mount-manager.sh.sha256
 sha256sum -c mount-manager.sh.sha256
@@ -132,13 +97,7 @@ sudo bash mount-manager.sh
 Интерактивный скрипт для копирования файлов и папок по SSH: проверки пути, ping, SSH-доступа, создание удалённой папки, гибкая настройка параметров rsync (архивный режим, сжатие, прогресс, ускорение)
 
 ```bash
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh | sudo bash
-
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh | sudo bash
-
-# Вариант 3: Скачивание с проверкой целостности
+# Скачивание с проверкой целостности
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh -o rsync-copy.sh
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh.sha256 -o rsync-copy.sh.sha256
 sha256sum -c rsync-copy.sh.sha256
@@ -155,13 +114,7 @@ sudo bash rsync-copy.sh
 Скрипт для управления блокировкой USB-накопителей на РЕД ОС. Реализует два метода: UDISKS_IGNORE (запрет автомонтирования) и authorized (полное отключение на уровне шины USB). Поддерживает создание белого списка доверенных устройств.
 
 ```bash
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-guard.sh | sudo bash
-
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-guard.sh | sudo bash
-
-# Вариант 3: Скачивание с проверкой целостности
+# Скачивание с проверкой целостности
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-guard.sh -o usb-guard.sh
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/usb-guard.sh.sha256 -o usb-guard.sh.sha256
 sha256sum -c usb-guard.sh.sha256
