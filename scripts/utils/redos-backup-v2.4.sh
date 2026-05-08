@@ -63,11 +63,30 @@ usage() {
     cat <<EOF
 REDOS BACKUP v2.4
 
-Интерактивная утилита резервного копирования для РЕД ОС.
+Утилита резервного копирования для РЕД ОС.
 
 Использование:
-  sudo ./redos-backup-v2.4.sh
-  ./redos-backup-v2.4.sh --help
+  sudo ./redos-backup-v2.4.sh                 # интерактивный режим
+  sudo ./redos-backup-v2.4.sh [опции]         # CLI-режим
+
+Основные опции:
+  -u, --user USER             Пользователь для резервного копирования
+  -m, --mode data|home        data = XDG-каталоги, home = весь HOME
+  -d, --dest DIR              Полный каталог назначения
+      --usb DIR               Базовый каталог накопителя (/run/media/...)
+  -n, --name NAME             Имя папки бэкапа внутри --usb
+  -y, --yes                   Не спрашивать подтверждение
+      --check                 Только проверить размер и свободное место
+
+Справочные команды:
+      --list-users            Показать доступных пользователей
+      --list-usb              Показать смонтированные USB/внешние каталоги
+  -h, --help                  Показать эту справку
+
+Примеры:
+  sudo ./redos-backup-v2.4.sh --user eduadmin --mode data --dest /mnt/backup/eduadmin --yes
+  sudo ./redos-backup-v2.4.sh -u eduadmin -m home --usb /run/media/eduadmin/USB -n backup-home -y
+  sudo ./redos-backup-v2.4.sh -u eduadmin -m data -d /mnt/backup/eduadmin --check
 EOF
 }
 
@@ -279,6 +298,29 @@ select_user() {
     echo -e "${GREEN}Выбран: $USER_SELECTED${NC}"
 }
 
+list_users() {
+    awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
+}
+
+set_user() {
+    local user="$1"
+
+    if [[ -z "$user" ]]; then
+        fail "Пользователь не задан"
+    fi
+
+    if ! awk -F: -v user="$user" '$1 == user && $3 >= 1000 && $1 != "nobody" {found=1} END {exit !found}' /etc/passwd; then
+        fail "Пользователь не найден или не является обычным пользователем: $user"
+    fi
+
+    USER_SELECTED="$user"
+    HOME_DIR=$(eval echo "~$USER_SELECTED")
+
+    if [[ ! -d "$HOME_DIR" ]]; then
+        fail "Домашняя директория не найдена: $HOME_DIR"
+    fi
+}
+
 # ─── РЕЖИМ ───────────────────────────────────────────────────────────────
 
 select_mode() {
@@ -293,6 +335,22 @@ select_mode() {
         *)
             echo -e "${RED}Неверный режим${NC}"
             exit 1
+            ;;
+    esac
+}
+
+set_mode() {
+    local mode="$1"
+
+    case "$mode" in
+        data|user|xdg|1)
+            MODE="1"
+            ;;
+        home|full|2)
+            MODE="2"
+            ;;
+        *)
+            fail "Неверный режим: $mode. Используйте data или home"
             ;;
     esac
 }
@@ -326,6 +384,10 @@ select_usb() {
     DEST_BASE="${MOUNTS[$((idx - 1))]}"
 }
 
+list_usb() {
+    findmnt -rn -o TARGET | grep -E "^/run/media|^/media" || true
+}
+
 # ─── КАТАЛОГ НАЗНАЧЕНИЯ ─────────────────────────────────────────────────
 
 select_dest() {
@@ -341,6 +403,57 @@ select_dest() {
         fail "Имя папки должно быть простым именем без '/'"
     fi
 
+    DEST_DIR="$DEST_BASE/$name"
+
+    mkdir -p "$DEST_DIR"
+}
+
+validate_dest_name() {
+    local name="$1"
+
+    if [[ -z "$name" ]]; then
+        fail "Имя папки не задано"
+    fi
+
+    if [[ "$name" == "." || "$name" == ".." || "$name" == *"/"* ]]; then
+        fail "Имя папки должно быть простым именем без '/'"
+    fi
+}
+
+set_dest_dir() {
+    local dest="$1"
+
+    if [[ -z "$dest" ]]; then
+        fail "Каталог назначения не задан"
+    fi
+
+    DEST_DIR="$dest"
+
+    if [[ "$DEST_DIR" == */* ]]; then
+        DEST_BASE="${DEST_DIR%/*}"
+        [[ -n "$DEST_BASE" ]] || DEST_BASE="/"
+    else
+        DEST_BASE="."
+    fi
+
+    mkdir -p "$DEST_DIR"
+}
+
+set_dest_from_base_and_name() {
+    local base="$1"
+    local name="$2"
+
+    if [[ -z "$base" ]]; then
+        fail "Базовый каталог накопителя не задан"
+    fi
+
+    if [[ ! -d "$base" ]]; then
+        fail "Базовый каталог не найден: $base"
+    fi
+
+    validate_dest_name "$name"
+
+    DEST_BASE="$base"
     DEST_DIR="$DEST_BASE/$name"
 
     mkdir -p "$DEST_DIR"
@@ -506,19 +619,34 @@ run_backup() {
     esac
 }
 
-# ─── MAIN ────────────────────────────────────────────────────────────────
+# ─── CLI ─────────────────────────────────────────────────────────────────
 
-main() {
-    if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
-        usage
-        exit 0
+print_summary() {
+    echo
+    echo -e "${BLUE}Параметры:${NC}"
+    echo "Пользователь: $USER_SELECTED"
+    echo "HOME:         $HOME_DIR"
+    if [[ "$MODE" == "1" ]]; then
+        echo "Режим:        пользовательские данные"
+    else
+        echo "Режим:        полный HOME"
     fi
+    echo "Каталог:      $DEST_DIR"
+    echo "Лог:          $LOG_FILE"
+}
 
-    if [[ $# -gt 0 ]]; then
-        usage
-        fail "Неизвестные параметры: $*"
+finish_message() {
+    echo
+    if [[ "${BACKUP_RESULT:-success}" == "warning" ]]; then
+        echo -e "${YELLOW}⚠ Бэкап завершён с предупреждениями${NC}"
+    else
+        echo -e "${GREEN}✔ Бэкап успешно завершён${NC}"
     fi
+    echo "Каталог: $DEST_DIR"
+    echo "Лог: $LOG_FILE"
+}
 
+run_interactive() {
     clear 2>/dev/null || true
 
     echo -e "${GREEN}=== REDOS BACKUP v2.4 ===${NC}"
@@ -546,24 +674,140 @@ main() {
     echo
 
     if confirm "Начать копирование?"; then
-
         run_backup
-
-        echo
-        if [[ "${BACKUP_RESULT:-success}" == "warning" ]]; then
-            echo -e "${YELLOW}⚠ Бэкап завершён с предупреждениями${NC}"
-        else
-            echo -e "${GREEN}✔ Бэкап успешно завершён${NC}"
-        fi
-        echo "Каталог: $DEST_DIR"
-        echo "Лог: $LOG_FILE"
-
+        finish_message
     else
-
         echo
         echo -e "${YELLOW}Операция отменена${NC}"
-
     fi
+}
+
+run_cli() {
+    check_dependencies
+
+    if [[ -z "${CLI_USER:-}" ]]; then
+        fail "Не указан пользователь: добавьте --user USER"
+    fi
+
+    if [[ -z "${CLI_MODE:-}" ]]; then
+        fail "Не указан режим: добавьте --mode data или --mode home"
+    fi
+
+    set_user "$CLI_USER"
+    set_mode "$CLI_MODE"
+
+    if [[ -n "${CLI_DEST:-}" ]]; then
+        set_dest_dir "$CLI_DEST"
+    elif [[ -n "${CLI_USB:-}" || -n "${CLI_NAME:-}" ]]; then
+        set_dest_from_base_and_name "${CLI_USB:-}" "${CLI_NAME:-}"
+    else
+        fail "Не указан каталог назначения: добавьте --dest DIR или --usb DIR --name NAME"
+    fi
+
+    print_summary
+    configure_link_handling
+    check_space
+
+    if [[ "${CLI_CHECK_ONLY:-0}" -eq 1 ]]; then
+        echo
+        echo -e "${GREEN}Проверка завершена, копирование не запускалось${NC}"
+        exit 0
+    fi
+
+    if [[ "${CLI_YES:-0}" -eq 1 ]] || confirm "Начать копирование?"; then
+        run_backup
+        finish_message
+    else
+        echo
+        echo -e "${YELLOW}Операция отменена${NC}"
+    fi
+}
+
+main() {
+    if [[ $# -eq 0 ]]; then
+        run_interactive
+        return
+    fi
+
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            -h|--help)
+                usage
+                exit 0
+                ;;
+            --list-users)
+                list_users
+                exit 0
+                ;;
+            --list-usb)
+                list_usb
+                exit 0
+                ;;
+            -u|--user)
+                [[ $# -ge 2 ]] || fail "Для $1 нужно указать пользователя"
+                CLI_USER="$2"
+                shift 2
+                ;;
+            --user=*)
+                CLI_USER="${1#*=}"
+                shift
+                ;;
+            -m|--mode)
+                [[ $# -ge 2 ]] || fail "Для $1 нужно указать режим"
+                CLI_MODE="$2"
+                shift 2
+                ;;
+            --mode=*)
+                CLI_MODE="${1#*=}"
+                shift
+                ;;
+            -d|--dest)
+                [[ $# -ge 2 ]] || fail "Для $1 нужно указать каталог"
+                CLI_DEST="$2"
+                shift 2
+                ;;
+            --dest=*)
+                CLI_DEST="${1#*=}"
+                shift
+                ;;
+            --usb)
+                [[ $# -ge 2 ]] || fail "Для $1 нужно указать каталог накопителя"
+                CLI_USB="$2"
+                shift 2
+                ;;
+            --usb=*)
+                CLI_USB="${1#*=}"
+                shift
+                ;;
+            -n|--name)
+                [[ $# -ge 2 ]] || fail "Для $1 нужно указать имя папки"
+                CLI_NAME="$2"
+                shift 2
+                ;;
+            --name=*)
+                CLI_NAME="${1#*=}"
+                shift
+                ;;
+            -y|--yes)
+                CLI_YES=1
+                shift
+                ;;
+            --check)
+                CLI_CHECK_ONLY=1
+                shift
+                ;;
+            *)
+                usage
+                fail "Неизвестный параметр: $1"
+                ;;
+        esac
+    done
+
+    if [[ -n "${CLI_DEST:-}" && ( -n "${CLI_USB:-}" || -n "${CLI_NAME:-}" ) ]]; then
+        fail "Используйте либо --dest DIR, либо --usb DIR --name NAME"
+    fi
+
+    run_cli
 }
 
 main "$@"
