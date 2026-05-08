@@ -102,7 +102,7 @@ log() {
         case "$level" in
             ERROR)   echo -e "${RED}[ERROR] $message${NC}" >&2 ;;
             WARN)    echo -e "${YELLOW}[WARN] $message${NC}" >&2 ;;
-            INFO)    echo -e "${GREEN}[INFO] $message${NC}" ;;
+            INFO)    echo -e "${GREEN}[INFO] $message${NC}" >&2 ;;
             DEBUG)   [[ ${DEBUG:-0} -eq 1 ]] && echo -e "${CYAN}[DEBUG] $message${NC}" ;;
             *)       echo "$message" ;;
         esac
