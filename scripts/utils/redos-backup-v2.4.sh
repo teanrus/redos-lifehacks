@@ -44,6 +44,11 @@ EXCLUDES_COMMON=(
     ".steam"
     ".var/app"
     "thinclient_drives"
+    ".config/chromium/Singleton*"
+    ".config/google-chrome/Singleton*"
+    ".config/yandex-browser*/Singleton*"
+    ".pcsc*/pcscd.comm"
+    "*.sock"
 )
 
 EXCLUDES_PRIVATE=(
@@ -445,6 +450,8 @@ run_backup() {
 
         rsync -a \
             "${RSYNC_LINK_ARGS[@]}" \
+            --no-devices \
+            --no-specials \
             --info=progress2,name0 \
             --stderr=all \
             --no-inc-recursive \
@@ -463,6 +470,8 @@ run_backup() {
 
         rsync -a \
             "${RSYNC_LINK_ARGS[@]}" \
+            --no-devices \
+            --no-specials \
             --info=progress2,name0 \
             --stderr=all \
             --no-inc-recursive \
