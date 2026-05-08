@@ -1,14 +1,13 @@
 # Вспомогательные скрипты для автоматизации в операционной системе РЕД ОС
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
+[![RED OS](https://img.shields.io/badge/RED%20OS-7.3%20%7C%208.x-b30000?style=for-the-badge)](https://redos.red-soft.ru/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 ## 📋 Доступные скрипты
 
 ### 🗑️ [Очистка системы](/scripts/utils/cleanup.md)
 
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)  
 Обслуживание системы: очистка временных файлов (/tmp, /var/tmp), кэш DNF, системные журналы, старые ядра (оставляет последние 2), кэш браузеров и мессенджеров, корзина, старые бэкапы конфигов
 
 ```bash
@@ -24,8 +23,6 @@ sudo bash cleanup.sh
 
 ### 🔄 [Миграция пользователя в РЕД ОС](/scripts/utils/user-migration.md)
 
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)  
 Создание нового пользователя и перенос данных старой учётной записи: домашний каталог, профили браузеров, SSH-ключи, проверка свободного места, выбор копирования или перемещения, очистка GNOME Keyring у нового пользователя.
 
 ```bash
@@ -41,8 +38,6 @@ sudo bash user-migration.sh
 
 ### 💾 [REDOS BACKUP v2.4](/scripts/utils/redos-backup.md)
 
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Интерактивная утилита резервного копирования пользовательских данных: XDG-каталоги или полный HOME, автоматический поиск накопителя, проверка свободного места, безопасные исключения, обработка символических ссылок и спецфайлов, прогресс-бар с процентами и логирование.
 
 ```bash
@@ -58,8 +53,6 @@ sudo bash redos-backup-v2.4.sh
 
 ### 🔐 [Управление сохранёнными паролями сетевых ресурсов на РЕД ОС](/scripts/utils/smb-credentials-manager.md)
 
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Скрипт автоматически сканирует все возможные хранилища учётных данных в системе, находит сохранённые пароли от сетевых ресурсов (SMB/CIFS) и предлагает удалить их в интерактивном режиме.
 
 ```bash
@@ -75,8 +68,6 @@ sudo bash smb-credentials-manager.sh
 
 ### 🖥️ [Управление монтированием сетевых шар (CIFS/SMB)](/scripts/utils/mount-manager.md)
 
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Скрипт для управления монтированием пользовательских директорий по протоколу CIFS/SMB. Поддерживает интерактивное меню, командные аргументы, сохранение пресетов и автоматическое добавление в fstab.
 
 ```bash
@@ -92,8 +83,6 @@ sudo bash mount-manager.sh
 
 ### 📂 [Копирование файлов через rsync](/scripts/utils/rsync-copy.md)
 
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Интерактивный скрипт для копирования файлов и папок по SSH: проверки пути, ping, SSH-доступа, создание удалённой папки, гибкая настройка параметров rsync (архивный режим, сжатие, прогресс, ускорение)
 
 ```bash
@@ -109,8 +98,6 @@ sudo bash rsync-copy.sh
 
 ### 🔒 [Управление блокировкой USB-накопителей](/scripts/utils/usb-guard.md)
 
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Скрипт для управления блокировкой USB-накопителей на РЕД ОС. Реализует два метода: UDISKS_IGNORE (запрет автомонтирования) и authorized (полное отключение на уровне шины USB). Поддерживает создание белого списка доверенных устройств.
 
 ```bash
