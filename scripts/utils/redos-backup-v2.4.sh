@@ -28,6 +28,7 @@ NC='\033[0m'
 # ─── ЛОГ ─────────────────────────────────────────────────────────────────
 
 LOG_FILE="/tmp/redos-backup.log"
+PROGRESS_WIDTH=40
 
 # ─── ИСКЛЮЧЕНИЯ ──────────────────────────────────────────────────────────
 
@@ -50,6 +51,50 @@ EXCLUDES_PRIVATE=(
 )
 
 # ─── УТИЛИТЫ ─────────────────────────────────────────────────────────────
+
+usage() {
+    cat <<EOF
+REDOS BACKUP v2.4
+
+Интерактивная утилита резервного копирования для РЕД ОС.
+
+Использование:
+  sudo ./redos-backup-v2.4.sh
+  ./redos-backup-v2.4.sh --help
+EOF
+}
+
+fail() {
+    echo -e "${RED}$1${NC}" >&2
+    exit 1
+}
+
+check_dependencies() {
+    local deps=(
+        awk
+        cut
+        df
+        du
+        findmnt
+        grep
+        numfmt
+        rsync
+        tail
+        tr
+    )
+    local missing=()
+    local dep
+
+    for dep in "${deps[@]}"; do
+        if ! command -v "$dep" >/dev/null 2>&1; then
+            missing+=("$dep")
+        fi
+    done
+
+    if [[ ${#missing[@]} -gt 0 ]]; then
+        fail "Не найдены необходимые команды: ${missing[*]}"
+    fi
+}
 
 read_from_terminal() {
     local prompt="$1"
@@ -75,6 +120,49 @@ human_size() {
     numfmt --to=iec --suffix=B "$1"
 }
 
+valid_index() {
+    local idx="$1"
+    local count="$2"
+
+    [[ "$idx" =~ ^[0-9]+$ ]] && (( idx >= 1 && idx <= count ))
+}
+
+draw_progress_bar() {
+    local percent="$1"
+    local filled
+    local empty
+
+    if (( percent < 0 )); then
+        percent=0
+    elif (( percent > 100 )); then
+        percent=100
+    fi
+
+    filled=$((percent * PROGRESS_WIDTH / 100))
+    empty=$((PROGRESS_WIDTH - filled))
+
+    printf "\r["
+    printf '%*s' "$filled" "" | tr ' ' '#'
+    printf '%*s' "$empty" ""
+    printf "] %3d%%" "$percent"
+}
+
+process_rsync_output() {
+    local line
+    local percent
+
+    while IFS= read -r line; do
+        printf '%s\n' "$line" >> "$LOG_FILE"
+
+        if [[ "$line" =~ ([0-9]{1,3})% ]]; then
+            percent="${BASH_REMATCH[1]}"
+            draw_progress_bar "$percent"
+        elif [[ -n "$line" ]]; then
+            printf "\n%s\n" "$line"
+        fi
+    done
+}
+
 # ─── XDG ─────────────────────────────────────────────────────────────────
 
 get_xdg_dir() {
@@ -83,13 +171,15 @@ get_xdg_dir() {
 
     path=$(grep "^${key}=" "$HOME_DIR/.config/user-dirs.dirs" 2>/dev/null \
         | cut -d= -f2 \
-        | tr -d '"')
+        | tr -d '"' || true)
 
     path=${path/\$HOME/$HOME_DIR}
 
     if [[ -d "$path" ]]; then
         echo "$path"
     fi
+
+    return 0
 }
 
 get_user_data_dirs() {
@@ -113,6 +203,10 @@ get_user_data_dirs() {
             USER_DIRS+=("$dir")
         fi
     done
+
+    if [[ ${#USER_DIRS[@]} -eq 0 ]]; then
+        fail "Пользовательские XDG-каталоги не найдены"
+    fi
 }
 
 # ─── ПОЛЬЗОВАТЕЛЬ ────────────────────────────────────────────────────────
@@ -137,18 +231,16 @@ select_user() {
 
     idx=$(read_from_terminal "Выберите пользователя:")
 
-    USER_SELECTED="${USERS[$((idx - 1))]:-}"
-
-    if [[ -z "$USER_SELECTED" ]]; then
-        echo -e "${RED}Неверный выбор${NC}"
-        exit 1
+    if ! valid_index "$idx" "${#USERS[@]}"; then
+        fail "Неверный выбор"
     fi
+
+    USER_SELECTED="${USERS[$((idx - 1))]}"
 
     HOME_DIR=$(eval echo "~$USER_SELECTED")
 
     if [[ ! -d "$HOME_DIR" ]]; then
-        echo -e "${RED}Домашняя директория не найдена${NC}"
-        exit 1
+        fail "Домашняя директория не найдена"
     fi
 
     echo -e "${GREEN}Выбран: $USER_SELECTED${NC}"
@@ -194,12 +286,11 @@ select_usb() {
 
     idx=$(read_from_terminal "Выберите диск:")
 
-    DEST_BASE="${MOUNTS[$((idx - 1))]:-}"
-
-    if [[ -z "$DEST_BASE" ]]; then
-        echo -e "${RED}Неверный выбор${NC}"
-        exit 1
+    if ! valid_index "$idx" "${#MOUNTS[@]}"; then
+        fail "Неверный выбор"
     fi
+
+    DEST_BASE="${MOUNTS[$((idx - 1))]}"
 }
 
 # ─── КАТАЛОГ НАЗНАЧЕНИЯ ─────────────────────────────────────────────────
@@ -210,8 +301,11 @@ select_dest() {
     name=$(read_from_terminal "Имя папки для бэкапа:")
 
     if [[ -z "$name" ]]; then
-        echo -e "${RED}Имя папки не задано${NC}"
-        exit 1
+        fail "Имя папки не задано"
+    fi
+
+    if [[ "$name" == "." || "$name" == ".." || "$name" == *"/"* ]]; then
+        fail "Имя папки должно быть простым именем без '/'"
     fi
 
     DEST_DIR="$DEST_BASE/$name"
@@ -245,9 +339,10 @@ calculate_backup_size() {
     if [[ "$MODE" == "1" ]]; then
 
         get_user_data_dirs
+        build_excludes
 
         for dir in "${USER_DIRS[@]}"; do
-            dir_size=$(du -sbx "$dir" 2>/dev/null | awk '{print $1}')
+            dir_size=$(du -sbx "${EXCLUDE_ARGS[@]}" "$dir" 2>/dev/null | awk '{print $1}' || true)
 
             dir_size=${dir_size:-0}
 
@@ -256,11 +351,11 @@ calculate_backup_size() {
 
     else
 
+        build_excludes
+
         size=$(du -sbx \
-            --exclude=".cache" \
-            --exclude=".local/share/Trash" \
-            --exclude="thinclient_drives" \
-            "$HOME_DIR" 2>/dev/null | awk '{print $1}')
+            "${EXCLUDE_ARGS[@]}" \
+            "$HOME_DIR" 2>/dev/null | awk '{print $1}' || true)
 
         size=${size:-0}
     fi
@@ -310,29 +405,33 @@ run_backup() {
     echo
     echo -e "${CYAN}Копирование данных...${NC}"
     echo
+    : > "$LOG_FILE"
 
     set +e
 
     if [[ "$MODE" == "1" ]]; then
 
         get_user_data_dirs
+        build_excludes
 
-        rsync -aL \
+        rsync -a \
             --info=progress2,name0 \
             --stderr=all \
             --no-inc-recursive \
             --human-readable \
             --no-owner \
             --no-group \
+            "${EXCLUDE_ARGS[@]}" \
             "${USER_DIRS[@]}" \
             "$DEST_DIR/" \
-            2>&1 | tee -a "$LOG_FILE"
+            2>&1 | tr '\r' '\n' | process_rsync_output
+        RSYNC_EXIT=${PIPESTATUS[0]}
 
     else
 
         build_excludes
 
-        rsync -aL \
+        rsync -a \
             --info=progress2,name0 \
             --stderr=all \
             --no-inc-recursive \
@@ -342,11 +441,10 @@ run_backup() {
             "${EXCLUDE_ARGS[@]}" \
             "$HOME_DIR/" \
             "$DEST_DIR/" \
-            2>&1 | tee -a "$LOG_FILE"
+            2>&1 | tr '\r' '\n' | process_rsync_output
+        RSYNC_EXIT=${PIPESTATUS[0]}
 
     fi
-
-    RSYNC_EXIT=${PIPESTATUS[0]}
 
     set -e
 
@@ -369,9 +467,21 @@ run_backup() {
 # ─── MAIN ────────────────────────────────────────────────────────────────
 
 main() {
-    clear
+    if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
+        usage
+        exit 0
+    fi
+
+    if [[ $# -gt 0 ]]; then
+        usage
+        fail "Неизвестные параметры: $*"
+    fi
+
+    clear 2>/dev/null || true
 
     echo -e "${GREEN}=== REDOS BACKUP v2.4 ===${NC}"
+
+    check_dependencies
 
     select_user
 
