@@ -466,7 +466,12 @@ if [ -d "/home/$OLD_USER/.config/Yandex/YandexBrowser" ]; then
 fi
 
 # Opera
-if [ -d "/home/$OLD_
+if [ -d "/home/$OLD_USER/.config/opera" ]; then
+    if rsync -avh "/home/$OLD_USER/.config/opera/" "/home/$NEW_USER/.config/opera/"; then
+        print_success "Opera: данные перенесены"
+        browser_count=$((browser_count + 1))
+    fi
+fi
 
 if [ $browser_count -eq 0 ]; then
     print_warning "Данные браузеров не найдены или уже перенесены"
