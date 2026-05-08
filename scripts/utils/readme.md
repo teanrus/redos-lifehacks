@@ -56,6 +56,31 @@ sudo ./user-migration.sh
 > [!warning]
 > Перед миграцией убедитесь, что старый пользователь вышел из системы и закрыл браузеры.
 
+### 💾 [REDOS BACKUP v2.4](/scripts/utils/redos-backup.md)
+
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
+Интерактивная утилита резервного копирования пользовательских данных: XDG-каталоги или полный HOME, автоматический поиск накопителя, проверка свободного места, безопасные исключения, прогресс-бар с процентами и логирование.
+
+---
+
+### 🚀 Быстрый запуск
+
+```bash
+# Скачайте скрипт
+curl -L -o redos-backup-v2.4.sh \
+     https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh
+
+# Сделайте исполняемым
+chmod +x redos-backup-v2.4.sh
+
+# Запустите от root
+sudo ./redos-backup-v2.4.sh
+```
+
+> [!tip]
+> Перед запуском подключите и смонтируйте накопитель для бэкапа. Скрипт работает интерактивно и показывает прогресс копирования.
+
 ### 🔐 [Управление сохранёнными паролями сетевых ресурсов на РЕД ОС](/scripts/utils/smb-credentials-manager.md)
 
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)

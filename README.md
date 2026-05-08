@@ -60,7 +60,7 @@ sudo bash install-cryptopro.sh             # Запуск
 
 - ⚙️ [setup](/scripts/setup/readme.md) — базовая настройка системы
 - 📦 [install](/scripts/install/readme.md) — установка ПО: 1С, КриптоПро, мессенджеры, ViPNet
-- 🧹 [utils](/scripts/utils/readme.md) — утилиты: очистка, USB-блокировка, сетевые шары
+- 🧹 [utils](/scripts/utils/readme.md) — утилиты: очистка, бэкап, USB-блокировка, сетевые шары
 - 📊 [monitoring](/scripts/monitoring/readme.md) — диагностика и автообновление
 
 ### 🛠️ [tools](/tools/readme.md) — Диагностика
@@ -87,6 +87,7 @@ sudo bash install-cryptopro.sh             # Запуск
 | 🛡️ [install-vipnet](scripts/install/install-vipnet.md) | ViPNet Client VPN |
 | 🏢 [install-1c](scripts/install/install-1c.md) | 1С:Предприятие + PostgreSQL |
 | 🗑️ [cleanup](scripts/utils/cleanup.md) | Очистка системы и кэша |
+| 💾 [redos-backup](scripts/utils/redos-backup.md) | Резервное копирование HOME и пользовательских данных |
 | ⏰ [redos-auto-update](scripts/monitoring/redos-auto-update.md) | Автообновление по расписанию |
 | 🖥️ [mount-manager](scripts/utils/mount-manager.md) | Сетевые шары CIFS/SMB |
 | 🔄 [user-migration](scripts/utils/user-migration.md) | Миграция пользователя и перенос данных |
