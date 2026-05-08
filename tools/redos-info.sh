@@ -26,20 +26,16 @@ set -u
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
 CYAN='\033[0;36m'
-MAGENTA='\033[0;35m'
 NC='\033[0m'
 
 # Определяем, выполняется ли скрипт через pipe (curl | bash)
 if [ ! -t 0 ]; then
     # stdin не является терминалом -> неинтерактивный режим
     INTERACTIVE_MODE=false
-    QUIET_MODE=true
 else
     # Интерактивный режим
     INTERACTIVE_MODE=true
-    QUIET_MODE=false
 fi
 
 # Глобальные переменные
@@ -51,9 +47,12 @@ REPORT_DIR="./reports"
 # Функция для чтения ввода от пользователя
 # ============================================
 read_from_terminal() {
-    local prompt="$1"
-    local default_value="$2"
+    local prompt
+    local default_value
     local input
+
+    prompt="$1"
+    default_value="$2"
     
     # Если не интерактивный режим или stdin не терминал, возвращаем значение по умолчанию
     if [ "$INTERACTIVE_MODE" = false ] || [ ! -t 0 ]; then
@@ -83,9 +82,12 @@ read_from_terminal() {
 # Функция для подтверждения действия
 # ============================================
 confirm_action() {
-    local prompt="$1"
-    local default="${2:-n}"
+    local prompt
+    local default
     local response
+
+    prompt="$1"
+    default="${2:-n}"
     
     if [ "$INTERACTIVE_MODE" = false ] || [ ! -t 0 ]; then
         [ "$default" = "y" ] && return 0 || return 1
@@ -116,8 +118,11 @@ print_header() {
 # Функция для вывода информации
 # ============================================
 print_info() {
-    local label="$1"
-    local value="$2"
+    local label
+    local value
+
+    label="$1"
+    value="$2"
     
     echo -e "${GREEN}✓${NC} $label: ${YELLOW}$value${NC}"
 }
@@ -434,8 +439,11 @@ collect_security_info() {
 # Функция для сохранения отчета
 # ============================================
 save_report() {
-    local filename="$1"
-    local full_path="$REPORT_DIR/$filename"
+    local filename
+    local full_path
+
+    filename="$1"
+    full_path="$REPORT_DIR/$filename"
     
     # Создаем директорию для отчетов
     mkdir -p "$REPORT_DIR"
@@ -497,7 +505,9 @@ EOF
 # Главная функция
 # ============================================
 main() {
-    local force_interactive=false
+    local force_interactive
+
+    force_interactive=false
     
     # Парсинг аргументов командной строки
     while [[ $# -gt 0 ]]; do
@@ -533,13 +543,10 @@ main() {
     # Определяем режим работы
     if [ "$force_interactive" = true ]; then
         INTERACTIVE_MODE=true
-        QUIET_MODE=false
     elif [ ! -t 0 ]; then
         INTERACTIVE_MODE=false
-        QUIET_MODE=true
     else
         INTERACTIVE_MODE=true
-        QUIET_MODE=false
     fi
     
     # Заголовок

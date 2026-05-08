@@ -57,7 +57,9 @@ print_error() {
 }
 
 clear_new_user_keyrings() {
-    local keyrings_dir="/home/$NEW_USER/.local/share/keyrings"
+    local keyrings_dir
+
+    keyrings_dir="/home/$NEW_USER/.local/share/keyrings"
 
     if [ ! -d "$keyrings_dir" ]; then
         return
@@ -67,13 +69,17 @@ clear_new_user_keyrings() {
 }
 
 format_bytes() {
-    local bytes="${1:-0}"
+    local bytes
+
+    bytes="${1:-0}"
     numfmt --to=iec --suffix=B "$bytes" 2>/dev/null || echo "${bytes} байт"
 }
 
 get_dir_size_bytes() {
-    local dir="$1"
+    local dir
     local size
+
+    dir="$1"
 
     if [ ! -d "$dir" ]; then
         echo 0
@@ -85,8 +91,10 @@ get_dir_size_bytes() {
 }
 
 get_free_space_bytes() {
-    local path="$1"
+    local path
     local free_space
+
+    path="$1"
 
     free_space=$(df -PB1 "$path" 2>/dev/null | awk 'NR==2 {print $4}')
     echo "${free_space:-0}"
