@@ -29,6 +29,8 @@ NC='\033[0m'
 
 LOG_FILE="/tmp/redos-backup.log"
 PROGRESS_WIDTH=40
+RSYNC_LINK_ARGS=()
+DU_LINK_ARGS=()
 
 # ─── ИСКЛЮЧЕНИЯ ──────────────────────────────────────────────────────────
 
@@ -77,7 +79,9 @@ check_dependencies() {
         du
         findmnt
         grep
+        ln
         numfmt
+        rm
         rsync
         tail
         tr
@@ -161,6 +165,30 @@ process_rsync_output() {
             printf "\n%s\n" "$line"
         fi
     done
+}
+
+configure_link_handling() {
+    local test_target
+    local test_link
+
+    test_target="$DEST_DIR/.redos-backup-link-test-target.$$"
+    test_link="$DEST_DIR/.redos-backup-link-test.$$"
+
+    RSYNC_LINK_ARGS=()
+    DU_LINK_ARGS=()
+
+    : > "$test_target"
+
+    if ln -s "${test_target##*/}" "$test_link" 2>/dev/null; then
+        rm -f -- "$test_link" "$test_target"
+        echo -e "${GREEN}Накопитель поддерживает символические ссылки${NC}"
+    else
+        rm -f -- "$test_link" "$test_target"
+        RSYNC_LINK_ARGS=(--copy-links)
+        DU_LINK_ARGS=(-L)
+        echo -e "${YELLOW}Накопитель не поддерживает символические ссылки${NC}"
+        echo "Ссылки будут скопированы как обычные файлы"
+    fi
 }
 
 # ─── XDG ─────────────────────────────────────────────────────────────────
@@ -342,7 +370,7 @@ calculate_backup_size() {
         build_excludes
 
         for dir in "${USER_DIRS[@]}"; do
-            dir_size=$(du -sbx "${EXCLUDE_ARGS[@]}" "$dir" 2>/dev/null | awk '{print $1}' || true)
+            dir_size=$(du -sbx "${DU_LINK_ARGS[@]}" "${EXCLUDE_ARGS[@]}" "$dir" 2>/dev/null | awk '{print $1}' || true)
 
             dir_size=${dir_size:-0}
 
@@ -354,6 +382,7 @@ calculate_backup_size() {
         build_excludes
 
         size=$(du -sbx \
+            "${DU_LINK_ARGS[@]}" \
             "${EXCLUDE_ARGS[@]}" \
             "$HOME_DIR" 2>/dev/null | awk '{print $1}' || true)
 
@@ -415,6 +444,7 @@ run_backup() {
         build_excludes
 
         rsync -a \
+            "${RSYNC_LINK_ARGS[@]}" \
             --info=progress2,name0 \
             --stderr=all \
             --no-inc-recursive \
@@ -432,6 +462,7 @@ run_backup() {
         build_excludes
 
         rsync -a \
+            "${RSYNC_LINK_ARGS[@]}" \
             --info=progress2,name0 \
             --stderr=all \
             --no-inc-recursive \
@@ -452,9 +483,11 @@ run_backup() {
 
     case "$RSYNC_EXIT" in
         0)
+            BACKUP_RESULT="success"
             echo -e "${GREEN}✔ Копирование завершено${NC}"
             ;;
         23|24)
+            BACKUP_RESULT="warning"
             echo -e "${YELLOW}⚠ Копирование завершено с предупреждениями${NC}"
             ;;
         *)
@@ -497,6 +530,8 @@ main() {
 
     select_dest
 
+    configure_link_handling
+
     check_space
 
     echo
@@ -506,7 +541,11 @@ main() {
         run_backup
 
         echo
-        echo -e "${GREEN}✔ Бэкап успешно завершён${NC}"
+        if [[ "${BACKUP_RESULT:-success}" == "warning" ]]; then
+            echo -e "${YELLOW}⚠ Бэкап завершён с предупреждениями${NC}"
+        else
+            echo -e "${GREEN}✔ Бэкап успешно завершён${NC}"
+        fi
         echo "Каталог: $DEST_DIR"
         echo "Лог: $LOG_FILE"
 

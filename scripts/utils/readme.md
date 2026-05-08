@@ -39,7 +39,7 @@ sudo bash cleanup.sh
 
 ---
 
-### 🚀 Быстрый запуск
+### Быстрый запуск 🚀
 
 ```bash
 # Скачайте скрипт
@@ -60,22 +60,20 @@ sudo ./user-migration.sh
 
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
-Интерактивная утилита резервного копирования пользовательских данных: XDG-каталоги или полный HOME, автоматический поиск накопителя, проверка свободного места, безопасные исключения, прогресс-бар с процентами и логирование.
-
----
-
-### 🚀 Быстрый запуск
+Интерактивная утилита резервного копирования пользовательских данных: XDG-каталоги или полный HOME, автоматический поиск накопителя, проверка свободного места, безопасные исключения, обработка символических ссылок, прогресс-бар с процентами и логирование.
 
 ```bash
-# Скачайте скрипт
-curl -L -o redos-backup-v2.4.sh \
-     https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh
+# Вариант 1: Быстрый запуск (curl)
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh | sudo bash
 
-# Сделайте исполняемым
-chmod +x redos-backup-v2.4.sh
+# Вариант 2: Быстрый запуск (wget)
+wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh | sudo bash
 
-# Запустите от root
-sudo ./redos-backup-v2.4.sh
+# Вариант 3: Скачивание с проверкой целостности
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh -o redos-backup-v2.4.sh
+curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/redos-backup-v2.4.sh.sha256 -o redos-backup-v2.4.sh.sha256
+sha256sum -c redos-backup-v2.4.sh.sha256
+sudo bash redos-backup-v2.4.sh
 ```
 
 > [!tip]
@@ -86,10 +84,6 @@ sudo ./redos-backup-v2.4.sh
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Скрипт автоматически сканирует все возможные хранилища учётных данных в системе, находит сохранённые пароли от сетевых ресурсов (SMB/CIFS) и предлагает удалить их в интерактивном режиме.
-
----
-
-### 🚀 Быстрый запуск
 
 ```bash
 # Вариант 1: Быстрый запуск (curl)
@@ -114,10 +108,6 @@ sudo bash smb-credentials-manager.sh
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Скрипт для управления монтированием пользовательских директорий по протоколу CIFS/SMB. Поддерживает интерактивное меню, командные аргументы, сохранение пресетов и автоматическое добавление в fstab.
 
----
-
-### 🚀 Быстрый запуск
-
 ```bash
 # Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/mount-manager.sh | sudo bash
@@ -141,10 +131,6 @@ sudo bash mount-manager.sh
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Интерактивный скрипт для копирования файлов и папок по SSH: проверки пути, ping, SSH-доступа, создание удалённой папки, гибкая настройка параметров rsync (архивный режим, сжатие, прогресс, ускорение)
 
----
-
-### 🚀 Быстрый запуск
-
 ```bash
 # Вариант 1: Быстрый запуск (curl)
 curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh | sudo bash
@@ -159,19 +145,6 @@ sha256sum -c rsync-copy.sh.sha256
 sudo bash rsync-copy.sh
 ```
 
-Или:
-
-```bash
-# Скачайте скрипт
-wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/rsync-copy.sh
-
-# Сделайте исполняемым
-chmod +x rsync-copy.sh
-
-# Запустите от root
-sudo ./rsync-copy.sh
-```
-
 > [!tip]
 > Скрипт запускается на **исходной машине** (откуда копируются файлы). Утилиты `rsync` и `sshpass` устанавливаются автоматически при отсутствии.
 
@@ -180,10 +153,6 @@ sudo ./rsync-copy.sh
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
 Скрипт для управления блокировкой USB-накопителей на РЕД ОС. Реализует два метода: UDISKS_IGNORE (запрет автомонтирования) и authorized (полное отключение на уровне шины USB). Поддерживает создание белого списка доверенных устройств.
-
----
-
-### 🚀 Быстрый запуск
 
 ```bash
 # Вариант 1: Быстрый запуск (curl)
