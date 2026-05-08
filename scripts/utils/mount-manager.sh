@@ -228,11 +228,10 @@ check_smb_share() {
 # ─── Получение опций монтирования ────────────────────────────────────────
 get_mount_opts() {
     local is_domain="$1"
-    local timeout="${2:-30}"
-    local retrans="${3:-2}"
-    local opts="nobrl,iocharset=utf8,file_mode=0777,dir_mode=0777,timeo=${timeout},retrans=${retrans}"
+    local target="${2:-mount}"
+    local opts="nobrl,iocharset=utf8,file_mode=0777,dir_mode=0777"
     
-    if [[ "$is_domain" == "1" ]]; then
+    if [[ "$target" == "fstab" ]] && [[ "$is_domain" == "1" ]]; then
         opts="${opts},nofail"
     fi
     
@@ -324,14 +323,16 @@ mount_share() {
     local add_to_fstab="$6"
     
     local mount_point="${MOUNT_BASE}/${mount_name}"
-    local mount_opts=$(get_mount_opts "$is_domain")
+    local mount_opts=$(get_mount_opts "$is_domain" "mount")
     mount_opts="credentials=${cred_file},${mount_opts}"
     
     # Dry-run режим
     if [[ $DRY_RUN -eq 1 ]]; then
         info "[DRY-RUN] Будет выполнено: mount -t cifs //${server}/${share} ${mount_point} -o ${mount_opts}"
         if [[ "$add_to_fstab" == "1" ]]; then
-            info "[DRY-RUN] Будет добавлено в fstab: //${server}/${share} ${mount_point}/ cifs ${mount_opts} 0 0"
+            local fstab_opts
+            fstab_opts="credentials=${cred_file},$(get_mount_opts "$is_domain" "fstab")"
+            info "[DRY-RUN] Будет добавлено в fstab: //${server}/${share} ${mount_point}/ cifs ${fstab_opts} 0 0"
         fi
         return 0
     fi
@@ -375,7 +376,7 @@ add_to_fstab_entry() {
     local is_domain="$5"
     
     local mount_point="${MOUNT_BASE}/${mount_name}/"
-    local mount_opts=$(get_mount_opts "$is_domain")
+    local mount_opts=$(get_mount_opts "$is_domain" "fstab")
     local fstab_entry="//${server}/${share} ${mount_point} cifs credentials=${cred_file},${mount_opts} 0 0"
     
     # Проверяем существующую запись
