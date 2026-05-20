@@ -208,10 +208,9 @@ configure_link_handling() {
         echo -e "${GREEN}Накопитель поддерживает символические ссылки${NC}"
     else
         rm -f -- "$test_link" "$test_target"
-        RSYNC_LINK_ARGS=(--copy-links)
-        DU_LINK_ARGS=(-L)
+        RSYNC_LINK_ARGS=(--no-links)
         echo -e "${YELLOW}Накопитель не поддерживает символические ссылки${NC}"
-        echo "Ссылки будут скопированы как обычные файлы"
+        echo "Ссылки будут пропущены, чтобы не попасть в циклические каталоги"
     fi
 }
 
