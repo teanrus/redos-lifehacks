@@ -234,6 +234,23 @@ get_xdg_dir() {
     return 0
 }
 
+add_user_data_dir() {
+    local dir="$1"
+    local existing
+
+    if [[ ! -d "$dir" ]]; then
+        return 0
+    fi
+
+    for existing in "${USER_DIRS[@]}"; do
+        if [[ "$existing" == "$dir" ]]; then
+            return 0
+        fi
+    done
+
+    USER_DIRS+=("$dir")
+}
+
 get_user_data_dirs() {
     USER_DIRS=()
 
@@ -246,15 +263,36 @@ get_user_data_dirs() {
         XDG_VIDEOS_DIR
     )
 
+    local fallback_dirs=(
+        "Desktop"
+        "Documents"
+        "Downloads"
+        "Music"
+        "Pictures"
+        "Videos"
+        "Рабочий стол"
+        "Документы"
+        "Загрузки"
+        "Музыка"
+        "Изображения"
+        "Видео"
+    )
+
     local dir
 
     for key in "${xdg_keys[@]}"; do
         dir=$(get_xdg_dir "$key")
 
-        if [[ -n "$dir" && -d "$dir" ]]; then
-            USER_DIRS+=("$dir")
+        if [[ -n "$dir" ]]; then
+            add_user_data_dir "$dir"
         fi
     done
+
+    if [[ ${#USER_DIRS[@]} -eq 0 ]]; then
+        for dir in "${fallback_dirs[@]}"; do
+            add_user_data_dir "$HOME_DIR/$dir"
+        done
+    fi
 
     if [[ ${#USER_DIRS[@]} -eq 0 ]]; then
         fail "Пользовательские XDG-каталоги не найдены"
@@ -263,12 +301,46 @@ get_user_data_dirs() {
 
 # ─── ПОЛЬЗОВАТЕЛЬ ────────────────────────────────────────────────────────
 
+get_user_home() {
+    local user="$1"
+
+    awk -F: -v user="$user" '$1 == user {print $6; exit}' /etc/passwd
+}
+
+is_regular_user() {
+    local user="$1"
+    local name uid home shell
+
+    while IFS=: read -r name _ uid _ _ home shell; do
+        [[ "$name" == "$user" ]] || continue
+        [[ "$uid" =~ ^[0-9]+$ ]] || return 1
+        (( uid >= 1000 && uid < 60000 )) || return 1
+        [[ "$name" != "nobody" && "$name" != "nfsnobody" ]] || return 1
+        [[ "$home" == /home/* && -d "$home" ]] || return 1
+        [[ "$shell" != */nologin && "$shell" != */false ]] || return 1
+        return 0
+    done < /etc/passwd
+
+    return 1
+}
+
+list_users() {
+    local name uid home shell
+
+    while IFS=: read -r name _ uid _ _ home shell; do
+        [[ "$uid" =~ ^[0-9]+$ ]] || continue
+        (( uid >= 1000 && uid < 60000 )) || continue
+        [[ "$name" != "nobody" && "$name" != "nfsnobody" ]] || continue
+        [[ "$home" == /home/* && -d "$home" ]] || continue
+        [[ "$shell" != */nologin && "$shell" != */false ]] || continue
+        echo "$name"
+    done < /etc/passwd
+}
+
 select_user() {
     echo -e "${CYAN}Пользователи:${NC}"
 
-    mapfile -t USERS < <(
-        awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
-    )
+    mapfile -t USERS < <(list_users)
 
     if [[ ${#USERS[@]} -eq 0 ]]; then
         echo -e "${RED}Пользователи не найдены${NC}"
@@ -289,17 +361,13 @@ select_user() {
 
     USER_SELECTED="${USERS[$((idx - 1))]}"
 
-    HOME_DIR=$(eval echo "~$USER_SELECTED")
+    HOME_DIR=$(get_user_home "$USER_SELECTED")
 
     if [[ ! -d "$HOME_DIR" ]]; then
         fail "Домашняя директория не найдена"
     fi
 
     echo -e "${GREEN}Выбран: $USER_SELECTED${NC}"
-}
-
-list_users() {
-    awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd
 }
 
 set_user() {
@@ -309,12 +377,12 @@ set_user() {
         fail "Пользователь не задан"
     fi
 
-    if ! awk -F: -v user="$user" '$1 == user && $3 >= 1000 && $1 != "nobody" {found=1} END {exit !found}' /etc/passwd; then
+    if ! is_regular_user "$user"; then
         fail "Пользователь не найден или не является обычным пользователем: $user"
     fi
 
     USER_SELECTED="$user"
-    HOME_DIR=$(eval echo "~$USER_SELECTED")
+    HOME_DIR=$(get_user_home "$USER_SELECTED")
 
     if [[ ! -d "$HOME_DIR" ]]; then
         fail "Домашняя директория не найдена: $HOME_DIR"
