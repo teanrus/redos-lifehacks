@@ -173,7 +173,7 @@ scan_usb_devices() {
         if [[ "$devname" =~ ^sd[a-z]+$ ]]; then
             devices+=("$devname")
         fi
-    done < <(ls -l /dev/sd* 2>/dev/null | grep "^b" || true)
+    done < <(find /dev -maxdepth 1 -type b -name 'sd*' -print 2>/dev/null || true)
 
     if [[ ${#devices[@]} -eq 0 ]]; then
         echo -e "  ${YELLOW}USB-накопители не обнаружены${NC}"
@@ -331,7 +331,8 @@ block_all_usb() {
     echo ""
 
     if [[ -f "$UDEV_RULE_FILE" ]]; then
-        local backup="${UDEV_RULE_FILE}.bak.$(date +%Y%m%d_%H%M%S)"
+        local backup
+        backup="${UDEV_RULE_FILE}.bak.$(date +%Y%m%d_%H%M%S)"
         cp "$UDEV_RULE_FILE" "$backup"
         echo -e "${YELLOW}Текущие правила сохранены: ${backup}${NC}"
     fi
@@ -462,7 +463,8 @@ whitelist_udisks() {
             fi
         else
             echo -e "${YELLOW}Создаём новые правила (старые будут сохранены в бэкап)${NC}"
-            local backup="${UDEV_RULE_FILE}.bak.$(date +%Y%m%d_%H%M%S)"
+            local backup
+            backup="${UDEV_RULE_FILE}.bak.$(date +%Y%m%d_%H%M%S)"
             cp "$UDEV_RULE_FILE" "$backup"
             generate_whitelist_udisks "$serial" "$product" "$maxpower" > "$UDEV_RULE_FILE"
             check_success "Запись новых правил в $UDEV_RULE_FILE"
@@ -610,7 +612,8 @@ unblock_all_usb() {
         return 0
     fi
 
-    local backup="${UDEV_RULE_FILE}.bak.$(date +%Y%m%d_%H%M%S)"
+    local backup
+    backup="${UDEV_RULE_FILE}.bak.$(date +%Y%m%d_%H%M%S)"
     cp "$UDEV_RULE_FILE" "$backup"
     echo -e "${YELLOW}Правила сохранены в бэкап: ${backup}${NC}"
 

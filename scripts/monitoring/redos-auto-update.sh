@@ -24,7 +24,6 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-MAGENTA='\033[0;35m'
 CYAN='\033[0;36m'
 WHITE='\033[1;37m'
 NC='\033[0m'
@@ -112,10 +111,14 @@ is_within_time_window() {
     local start_time="$1"
     local end_time="$2"
 
-    local now=$(date +"%H:%M")
-    local now_min=$(time_to_minutes "$now")
-    local start_min=$(time_to_minutes "$start_time")
-    local end_min=$(time_to_minutes "$end_time")
+    local now
+    local now_min
+    local start_min
+    local end_min
+    now=$(date +"%H:%M")
+    now_min=$(time_to_minutes "$now")
+    start_min=$(time_to_minutes "$start_time")
+    end_min=$(time_to_minutes "$end_time")
 
     if [ "$start_min" -le "$end_min" ]; then
         # Обычный диапазон (например 12:30–14:00)
@@ -129,7 +132,8 @@ is_within_time_window() {
 # ─── Логирование ─────────────────────────────────────────────────────────
 log_message() {
     local message="$1"
-    local timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+    local timestamp
+    timestamp=$(date +"%Y-%m-%d %H:%M:%S")
     echo "[$timestamp] $message" >> "$LOG_FILE"
 }
 
@@ -138,6 +142,7 @@ create_wrapper_script() {
     local start_time="$1"
     local end_time="$2"
     local mode="$3"
+    : "$mode"
 
     cat > "$WRAPPER_SCRIPT" << 'WRAPPER_EOF'
 #!/bin/bash
@@ -150,7 +155,8 @@ LOG_FILE="/var/log/redos-auto-update.log"
 CONF_FILE="/etc/redos-auto-update.conf"
 
 log() {
-    local timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+    local timestamp
+    timestamp=$(date +"%Y-%m-%d %H:%M:%S")
     echo "[$timestamp] $1" >> "$LOG_FILE"
 }
 
@@ -181,10 +187,14 @@ time_to_minutes() {
 is_within_window() {
     local start_time="$1"
     local end_time="$2"
-    local now=$(date +"%H:%M")
-    local now_min=$(time_to_minutes "$now")
-    local start_min=$(time_to_minutes "$start_time")
-    local end_min=$(time_to_minutes "$end_time")
+    local now
+    local now_min
+    local start_min
+    local end_min
+    now=$(date +"%H:%M")
+    now_min=$(time_to_minutes "$now")
+    start_min=$(time_to_minutes "$start_time")
+    end_min=$(time_to_minutes "$end_time")
 
     if [ "$start_min" -le "$end_min" ]; then
         [ "$now_min" -ge "$start_min" ] && [ "$now_min" -le "$end_min" ]
@@ -339,10 +349,14 @@ setup_schedule() {
     log_header "Настройка автоматического обновления"
 
     # Чтение текущих значений
-    local current_start=$(read_config "START_TIME" "$DEFAULT_START_TIME")
-    local current_end=$(read_config "END_TIME" "$DEFAULT_END_TIME")
-    local current_mode=$(read_config "MODE" "$DEFAULT_MODE")
-    local current_period=$(read_config "PERIOD" "$DEFAULT_PERIOD")
+    local current_start
+    local current_end
+    local current_mode
+    local current_period
+    current_start=$(read_config "START_TIME" "$DEFAULT_START_TIME")
+    current_end=$(read_config "END_TIME" "$DEFAULT_END_TIME")
+    current_mode=$(read_config "MODE" "$DEFAULT_MODE")
+    current_period=$(read_config "PERIOD" "$DEFAULT_PERIOD")
 
     echo ""
     echo -e "  ${WHITE}Текущие настройки:${NC}"
@@ -616,7 +630,8 @@ show_status() {
         echo -e "    Время:      $(read_config "START_TIME" "—") – $(read_config "END_TIME" "—")"
         echo -e "    Режим:      $(read_config "MODE" "—")"
         echo -e "    Период:     $(read_config "PERIOD" "—")"
-        local mx=$(read_config "MAX_BOT_TOKEN" "")
+        local mx
+        mx=$(read_config "MAX_BOT_TOKEN" "")
         if [ -n "$mx" ]; then
             echo -e "    MAX:        ${GREEN}настроен${NC}"
         else

@@ -33,7 +33,8 @@ set -uo pipefail
 
 # ─── Конфигурация ──────────────────────────────────────────────────────────
 readonly SCRIPT_VERSION="2.1.1"
-readonly SCRIPT_NAME=$(basename "$0")
+SCRIPT_NAME=$(basename "$0")
+readonly SCRIPT_NAME
 readonly LOG_FILE="/var/log/mount-manager.log"
 readonly MOUNT_BASE="/mnt"
 readonly FSTAB="/etc/fstab"
@@ -94,7 +95,8 @@ log() {
     local level="$1"
     shift
     local message="$*"
-    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    local timestamp
+    timestamp=$(date '+%Y-%m-%d %H:%M:%S')
     
     echo "[$timestamp] [$level] $message" >> "$LOG_FILE"
     
@@ -245,7 +247,8 @@ create_credentials_file() {
     local domain="${3:-}"
     
     # Генерируем уникальное имя файла
-    local hash=$(echo "${username}${domain}$(date +%s%N)" | md5sum | cut -c1-12)
+    local hash
+    hash=$(echo "${username}${domain}$(date +%s%N)" | md5sum | cut -c1-12)
     local cred_file="${CREDENTIALS_DIR}/cred_${hash}"
     
     # Проверяем, не является ли файл симлинком
@@ -277,7 +280,8 @@ clean_credentials() {
     if [[ -f "$FSTAB" ]]; then
         while IFS= read -r line; do
             if echo "$line" | grep -q "credentials="; then
-                local cred_file=$(echo "$line" | sed -n 's/.*credentials=\([^,]*\).*/\1/p')
+                local cred_file
+                cred_file=$(echo "$line" | sed -n 's/.*credentials=\([^,]*\).*/\1/p')
                 if [[ -n "$cred_file" ]] && [[ -f "$cred_file" ]]; then
                     used_creds+=("$cred_file")
                 fi
@@ -323,7 +327,8 @@ mount_share() {
     local add_to_fstab="$6"
     
     local mount_point="${MOUNT_BASE}/${mount_name}"
-    local mount_opts=$(get_mount_opts "$is_domain" "mount")
+    local mount_opts
+    mount_opts=$(get_mount_opts "$is_domain" "mount")
     mount_opts="credentials=${cred_file},${mount_opts}"
     
     # Dry-run режим
@@ -376,7 +381,8 @@ add_to_fstab_entry() {
     local is_domain="$5"
     
     local mount_point="${MOUNT_BASE}/${mount_name}/"
-    local mount_opts=$(get_mount_opts "$is_domain" "fstab")
+    local mount_opts
+    mount_opts=$(get_mount_opts "$is_domain" "fstab")
     local fstab_entry="//${server}/${share} ${mount_point} cifs credentials=${cred_file},${mount_opts} 0 0"
     
     # Проверяем существующую запись
@@ -622,8 +628,10 @@ load_from_config() {
                 break
             fi
             
-            local key=$(echo "$line" | cut -d'=' -f1)
-            local value=$(echo "$line" | cut -d'=' -f2-)
+            local key
+            local value
+            key=$(echo "$line" | cut -d'=' -f1)
+            value=$(echo "$line" | cut -d'=' -f2-)
             
             case "$key" in
                 server)     server="$value" ;;
@@ -736,8 +744,10 @@ interactive_remove() {
     local mounts=()
     while IFS= read -r line; do
         if echo "$line" | grep -q "type cifs"; then
-            local mp=$(echo "$line" | awk '{print $3}')
-            local name=$(basename "$mp")
+            local mp
+            local name
+            mp=$(echo "$line" | awk '{print $3}')
+            name=$(basename "$mp")
             mounts+=("$name")
         fi
     done < <(mount | grep cifs)

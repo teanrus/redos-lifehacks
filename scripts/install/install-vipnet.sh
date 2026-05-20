@@ -108,7 +108,8 @@ get_latest_tag() {
     echo -e "${BLUE}Получение информации о последнем релизе...${NC}" >&2
     
     local api_url="https://api.github.com/repos/$user/$repo/releases/latest"
-    local latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
+    local latest_tag
+    latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
     
     if [ -z "$latest_tag" ]; then
         echo -e "${RED}✗ Не удалось получить последнюю версию${NC}" >&2
@@ -177,7 +178,7 @@ setup_vipnet_dns() {
     fi
     
     echo -e "${BLUE}Создание резервной копии /etc/vipnet.conf...${NC}"
-    cp /etc/vipnet.conf /etc/vipnet.conf.backup.$(date +%Y%m%d_%H%M%S)
+    cp /etc/vipnet.conf "/etc/vipnet.conf.backup.$(date +%Y%m%d_%H%M%S)"
     check_success "Создание резервной копии ViPNet конфигурации"
     
     echo -e "${BLUE}Замена DNS-серверов на корпоративные (департамент образования)...${NC}"
@@ -211,7 +212,8 @@ install_vipnet_client() {
     # Проверка, не установлен ли уже ViPNet
     if rpm -q vipnetclient &>/dev/null; then
         echo -e "${YELLOW}ViPNet Client уже установлен${NC}"
-        local installed_version=$(rpm -q vipnetclient 2>/dev/null)
+        local installed_version
+        installed_version=$(rpm -q vipnetclient 2>/dev/null)
         echo -e "${BLUE}Установленная версия: $installed_version${NC}"
         if confirm_action "Переустановить ViPNet Client?"; then
             echo -e "${BLUE}Удаление старой версии...${NC}"
@@ -300,7 +302,8 @@ select_vipnet_version() {
     echo "2. ViPNet + Деловая почта (DP) — два RPM-пакета в архиве"
     echo ""
     
-    local choice=$(read_from_terminal "${YELLOW}Выберите вариант (1 или 2):${NC}")
+    local choice
+    choice=$(read_from_terminal "${YELLOW}Выберите вариант (1 или 2):${NC}")
     
     case $choice in
         1)

@@ -44,18 +44,22 @@ while [[ $# -gt 0 ]]; do
             exit 0
             ;;
         --non-interactive)
+            # shellcheck disable=SC2034
             NON_INTERACTIVE=true
             shift
             ;;
         --skip-kernels)
+            # shellcheck disable=SC2034
             SKIP_KERNELS=true
             shift
             ;;
         --skip-cache)
+            # shellcheck disable=SC2034
             SKIP_CACHE=true
             shift
             ;;
         --skip-logs)
+            # shellcheck disable=SC2034
             SKIP_LOGS=true
             shift
             ;;
@@ -95,7 +99,8 @@ confirm_action() {
 show_size() {
     local dir=$1
     if [ -d "$dir" ]; then
-        local size=$(du -sh "$dir" 2>/dev/null | cut -f1)
+        local size
+        size=$(du -sh "$dir" 2>/dev/null | cut -f1)
         echo -e "${BLUE}  Размер: $size${NC}"
     fi
 }

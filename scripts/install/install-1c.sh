@@ -115,7 +115,8 @@ get_latest_tag() {
     echo -e "${BLUE}Получение информации о последнем релизе...${NC}" >&2
     
     local api_url="https://api.github.com/repos/$user/$repo/releases/latest"
-    local latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
+    local latest_tag
+    latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
     
     if [ -z "$latest_tag" ]; then
         echo -e "${RED}✗ Не удалось получить последнюю версию${NC}" >&2
@@ -178,7 +179,8 @@ check_1c_installed() {
     if [ -d "/opt/1cv8" ]; then
         echo -e "${YELLOW}Обнаружена установленная 1С:Предприятие${NC}"
         if [ -f "/opt/1cv8/version" ]; then
-            local installed_version=$(cat /opt/1cv8/version 2>/dev/null)
+            local installed_version
+            installed_version=$(cat /opt/1cv8/version 2>/dev/null)
             echo -e "${BLUE}Установленная версия: $installed_version${NC}"
         fi
         return 0

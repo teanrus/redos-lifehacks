@@ -167,7 +167,7 @@ install_chrony() {
     check_success "Установка chrony"
 
     # Резервная копия конфигурации
-    cp /etc/chrony.conf /etc/chrony.conf.backup.$(date +%Y%m%d_%H%M%S)
+    cp /etc/chrony.conf "/etc/chrony.conf.backup.$(date +%Y%m%d_%H%M%S)"
     check_success "Резервная копия /etc/chrony.conf"
 
     # Настройка серверов времени

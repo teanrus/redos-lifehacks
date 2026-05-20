@@ -57,14 +57,17 @@ while [[ $# -gt 0 ]]; do
             shift 2
             ;;
         --skip-selinux)
+            # shellcheck disable=SC2034
             SKIP_SELINUX=true
             shift
             ;;
         --skip-dnf)
+            # shellcheck disable=SC2034
             SKIP_DNF=true
             shift
             ;;
         --skip-ssh)
+            # shellcheck disable=SC2034
             SKIP_SSH=true
             shift
             ;;
@@ -109,8 +112,10 @@ check_success() {
 backup_file() {
     local file=$1
     if [ -f "$file" ]; then
-        cp "$file" "$file.backup.$(date +%Y%m%d_%H%M%S)"
-        echo -e "${BLUE}✓ Создана резервная копия: $file.backup.$(date +%Y%m%d_%H%M%S)${NC}"
+        local backup
+        backup="$file.backup.$(date +%Y%m%d_%H%M%S)"
+        cp "$file" "$backup"
+        echo -e "${BLUE}✓ Создана резервная копия: $backup${NC}"
     fi
 }
 

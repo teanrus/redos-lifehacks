@@ -114,7 +114,8 @@ check_cryptopro_installed() {
     
     for pkg in "${packages[@]}"; do
         if rpm -q "$pkg" &>/dev/null; then
-            local installed_version=$(rpm -q "$pkg")
+            local installed_version
+            installed_version=$(rpm -q "$pkg")
             echo -e "${YELLOW}Обнаружен установленный пакет: $installed_version${NC}"
             return 0
         fi
@@ -122,7 +123,8 @@ check_cryptopro_installed() {
     
     # Проверяем наличие исполняемых файлов
     if command -v cryptcp &> /dev/null; then
-        local version=$(cryptcp -version 2>/dev/null | head -1)
+        local version
+        version=$(cryptcp -version 2>/dev/null | head -1)
         echo -e "${YELLOW}Обнаружен КриптоПро CSP: $version${NC}"
         return 0
     fi

@@ -108,7 +108,8 @@ get_latest_tag() {
     echo -e "${BLUE}Получение информации о последнем релизе...${NC}" >&2
     
     local api_url="https://api.github.com/repos/$user/$repo/releases/latest"
-    local latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
+    local latest_tag
+    latest_tag=$(curl -s "$api_url" | grep '"tag_name"' | head -1 | cut -d '"' -f 4)
     
     if [ -z "$latest_tag" ]; then
         echo -e "${RED}✗ Не удалось получить последнюю версию${NC}" >&2
@@ -228,7 +229,8 @@ install_sreda() {
     
     if command -v sreda &> /dev/null; then
         echo -e "${YELLOW}СРЕДА уже установлена${NC}"
-        local installed_version=$(rpm -q sreda 2>/dev/null)
+        local installed_version
+        installed_version=$(rpm -q sreda 2>/dev/null)
         echo -e "${BLUE}Установленная версия: $installed_version${NC}"
         if confirm_action "Переустановить СРЕДА?"; then
             echo -e "${BLUE}Удаление старой версии...${NC}"
@@ -261,7 +263,8 @@ install_max() {
     
     if command -v max &> /dev/null; then
         echo -e "${YELLOW}MAX уже установлен${NC}"
-        local installed_version=$(rpm -q max 2>/dev/null)
+        local installed_version
+        installed_version=$(rpm -q max 2>/dev/null)
         echo -e "${BLUE}Установленная версия: $installed_version${NC}"
         if confirm_action "Переустановить MAX?"; then
             echo -e "${BLUE}Удаление старой версии...${NC}"
@@ -303,7 +306,8 @@ install_vk_messenger() {
     
     if command -v vk-messenger &> /dev/null; then
         echo -e "${YELLOW}VK Messenger уже установлен${NC}"
-        local installed_version=$(rpm -q vk-messenger 2>/dev/null)
+        local installed_version
+        installed_version=$(rpm -q vk-messenger 2>/dev/null)
         echo -e "${BLUE}Установленная версия: $installed_version${NC}"
         if confirm_action "Переустановить VK Messenger?"; then
             echo -e "${BLUE}Удаление старой версии...${NC}"

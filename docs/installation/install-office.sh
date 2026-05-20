@@ -120,7 +120,7 @@ if confirm_action "Настроить DNF для быстрой загрузки
     log_info "Настройка DNF..."
     
     # Резервное копирование
-    cp /etc/dnf/dnf.conf /etc/dnf/dnf.conf.backup.$(date +%Y%m%d_%H%M%S)
+    cp /etc/dnf/dnf.conf "/etc/dnf/dnf.conf.backup.$(date +%Y%m%d_%H%M%S)"
     
     # Добавление оптимизаций (если ещё не добавлены)
     if ! grep -q "max_parallel_downloads" /etc/dnf/dnf.conf; then

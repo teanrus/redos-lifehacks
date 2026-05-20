@@ -212,7 +212,7 @@ if [ $DNS_ISSUES -eq 1 ]; then
         log_info "Настройка DNS..."
         
         # Резервное копирование
-        cp /etc/resolv.conf /etc/resolv.conf.backup.$(date +%Y%m%d_%H%M%S)
+        cp /etc/resolv.conf "/etc/resolv.conf.backup.$(date +%Y%m%d_%H%M%S)"
         
         # Добавление DNS
         cat > /etc/resolv.conf << EOF
