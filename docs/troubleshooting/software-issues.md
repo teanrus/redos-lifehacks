@@ -444,39 +444,6 @@ sudo dnf install glibc.i686 libgcc.i686
 
 ---
 
-## 🚀 Быстрый старт
-
-### Одной командой:
-
-```bash
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh | sudo bash
-
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh | sudo bash
-
-# Вариант 3: Скачивание с проверкой целостности
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh -o package-install-fix.sh
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh.sha256 -o package-install-fix.sh.sha256
-sha256sum -c package-install-fix.sh.sha256
-sudo bash package-install-fix.sh
-```
-
-### Или вручную:
-
-```bash
-# Скачайте скрипт
-wget https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh
-
-# Сделайте исполняемым
-chmod +x package-install-fix.sh
-
-# Запустите от root
-sudo ./package-install-fix.sh
-```
-
----
-
 ## 📖 Возможности
 
 ### ✅ Интерактивный режим
@@ -708,7 +675,6 @@ sudo dnf install htop
 | **ОС** | РЕД ОС 7.3 / 8.0 |
 | **Архитектура** | любая |
 | **Права** | root (sudo) |
-| **Скрипт** | [`package-install-fix.sh`](https://github.com/teanrus/redos-lifehacks/releases/latest/download/package-install-fix.sh) |
 | **Совместимость** | ✅ РЕД ОС 7.x, ✅ РЕД ОС 8.x (может работать на других RPM-дистрибутивах: Fedora, RHEL, CentOS, Astra Linux, Alt Linux) |
 
 > [!note]

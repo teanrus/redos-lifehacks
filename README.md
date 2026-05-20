@@ -24,13 +24,6 @@
 4. **Проверьте контрольную сумму** — обязательно сверьте SHA256 перед запуском
 5. **Запустите с правами root** — используйте `sudo bash script.sh`
 
-```bash
-# Пример: установка КриптоПро
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh -o install-cryptopro.sh
-sha256sum -c install-cryptopro.sh.sha256  # Проверка
-sudo bash install-cryptopro.sh             # Запуск
-```
-
 ## 🔒 Совместимость и требования
 
 | Параметр | Значение |
@@ -59,7 +52,7 @@ sudo bash install-cryptopro.sh             # Запуск
 ### 🤖 [scripts](/scripts/readme.md) — Автоматизация
 
 - ⚙️ [setup](/scripts/setup/readme.md) — базовая настройка системы
-- 📦 [install](/scripts/install/readme.md) — установка ПО: 1С, КриптоПро, мессенджеры, ViPNet
+- 📦 [install](/scripts/install/readme.md) — установка ПО: мессенджеры, ViPNet
 - 🧹 [utils](/scripts/utils/readme.md) — утилиты: очистка, бэкап, USB-блокировка, сетевые шары
 - 📊 [monitoring](/scripts/monitoring/readme.md) — диагностика и автообновление
 
@@ -70,7 +63,7 @@ sudo bash install-cryptopro.sh             # Запуск
 **Результаты:**
 
 - ⚡ Быстрый старт — настройка за 10-15 минут
-- 📦 Установка корпоративного ПО — 1С, КриптоПро, Р7-Офис
+- 📦 Установка корпоративного ПО — Р7-Офис
 - 🚀 Оптимизация — ускорение DNF, TRIM для SSD, управление swap
 - 🔐 Безопасность — настройка VPN, firewall, USB-блокировка
 
@@ -83,9 +76,7 @@ sudo bash install-cryptopro.sh             # Запуск
 | Скрипт | Назначение |
 | ------ | --------- |
 | 💬 [install-messengers](scripts/install/install-messengers.md) | Telegram, Среда, MAX, VK Messenger |
-| 🔐 [install-cryptopro](scripts/install/install-cryptopro.md) | КриптоПро CSP + Рутокен |
 | 🛡️ [install-vipnet](scripts/install/install-vipnet.md) | ViPNet Client VPN |
-| 🏢 [install-1c](scripts/install/install-1c.md) | 1С:Предприятие + PostgreSQL |
 | 🗑️ [cleanup](scripts/utils/cleanup.md) | Очистка системы и кэша |
 | 💾 [redos-backup](scripts/utils/redos-backup.md) | Резервное копирование HOME и пользовательских данных |
 | ⏰ [redos-auto-update](scripts/monitoring/redos-auto-update.md) | Автообновление по расписанию |
@@ -131,21 +122,6 @@ sudo bash install-cryptopro.sh             # Запуск
 
 Каждый скрипт в Release сопровождается файом `.sha256` с контрольной суммой.
 Это гарантирует, что файл не был изменён при доставке.
-
-### Быстрая проверка
-
-```bash
-# 1. Скачиваем скрипт и файл контрольной суммы
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh -o install-cryptopro.sh
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh.sha256 -o install-cryptopro.sh.sha256
-
-# 2. Проверяем совпадение
-sha256sum -c install-cryptopro.sh.sha256
-# install-cryptopro.sh: OK
-
-# 3. Запускаем (только после успешной проверки!)
-sudo bash install-cryptopro.sh
-```
 
 > [!important]
 > Никогда не запускайте скрипты из интернета без проверки контрольных сумм!

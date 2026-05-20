@@ -187,18 +187,6 @@ push .sh → GitHub Actions → sha256sum → Release + .sha256
 
 ### Проверка целостности скриптов
 
-После скачивания из Release можно проверить контрольную сумму:
-
-```bash
-# Скачиваем скрипт и .sha256
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh -o install-cryptopro.sh
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/download/v1.0/install-cryptopro.sh.sha256 -o install-cryptopro.sh.sha256
-
-# Проверяем
-sha256sum -c install-cryptopro.sh.sha256
-# install-cryptopro.sh: OK
-```
-
 ---
 
 ## 📝 Требования к документам
