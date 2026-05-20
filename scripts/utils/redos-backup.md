@@ -1,4 +1,4 @@
-# REDOS BACKUP v2.4
+# redos-backup-v2.4.sh — резервное копирование Linux-систем, оптимизировано для РЕД ОС
 
 [![RED OS](https://img.shields.io/badge/RED%20OS-7.3%20%7C%208.x-b30000?style=for-the-badge)](https://redos.red-soft.ru/)
 [![Bash](https://img.shields.io/badge/Bash-script-2b2b2b?style=for-the-badge&logo=gnubash)](https://www.gnu.org/software/bash/)
