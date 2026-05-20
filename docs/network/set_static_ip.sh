@@ -104,7 +104,7 @@ echo ""
 # Получение списка сетевых подключений
 # ============================================================================
 declare -a CONNECTIONS_ARRAY
-CONNECTIONS_ARRAY=($(nmcli -t -f NAME connection show))
+mapfile -t CONNECTIONS_ARRAY < <(nmcli -t -f NAME connection show)
 
 echo -e "${BLUE}Обнаружены сетевые подключения:${NC}"
 if [[ ${#CONNECTIONS_ARRAY[@]} -eq 0 ]]; then
