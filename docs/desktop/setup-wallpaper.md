@@ -5,7 +5,7 @@
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 >Скрипт предназначен для автоматической установки корпоративных обоев рабочего стола из SMB-шары (сетевой папки Windows) в Linux-системах с последующей **блокировкой возможности изменения** обоев пользователями. Поддерживает основные графические окружения: MATE, GNOME, XFCE, KDE Plasma.
-
+>
 > **Важно:** Скрипт требует запуска с правами root (через `sudo`).
 
 ## Основные функции
