@@ -2,6 +2,9 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
 [![RED OS](https://img.shields.io/badge/RED%20OS-7.3%20%7C%208.x-b30000?style=for-the-badge)](https://redos.red-soft.ru/)
+[![RHEL](https://img.shields.io/badge/RHEL-8%20%7C%209-ee0000?style=for-the-badge)](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux)
+[![Fedora](https://img.shields.io/badge/Fedora-39%20%7C%2040-0B57A4?style=for-the-badge)](https://fedoraproject.org/)
+[![CentOS](https://img.shields.io/badge/CentOS-Stream%208%20%7C%209-262477?style=for-the-badge)](https://www.centos.org/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
 >Скрипт предназначен для автоматической установки корпоративных обоев рабочего стола из SMB-шары (сетевой папки Windows) в Linux-системах с последующей **блокировкой возможности изменения** обоев пользователями. Поддерживает основные графические окружения: MATE, GNOME, XFCE, KDE Plasma.
@@ -269,5 +272,4 @@ sudo rm -rf /mnt/smb_temp
 <!--  -->
 
 - Поддерживаемые DE: MATE, GNOME, XFCE, KDE Plasma
-- Тестирование: Red Hat Enterprise Linux / Fedora / CentOS
-- Лицензия: MIT
+- Тестирование: Red Hat Enterprise Linux / Fedora / CentOS / РЕД ОС
