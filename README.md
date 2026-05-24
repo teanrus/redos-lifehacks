@@ -40,7 +40,7 @@
 
 ### 📚 [docs](/docs/readme.md) — Документация и руководства
 
-- 🖥️ [desktop](/docs/desktop/readme.md) — рабочий стол: SSHFS, автодополнение, многомониторная настройка
+- 🖥️ [desktop](/docs/desktop/readme.md) — рабочий стол: SSHFS, автодополнение, многомониторная настройка, установка корпоративных обоев
 - 📦 [installation](/docs/installation/readme.md) — установка: офисные пакеты, CUPS, сканеры, USB
 - 🌐 [network](/docs/network/readme.md) — сеть: прокси, VPN, Wi-Fi, rsync
 - ⚡ [optimization](/docs/optimization/readme.md) — производительность: DNF, SSD, swap
@@ -83,6 +83,7 @@
 | 🖥️ [mount-manager](scripts/utils/mount-manager.md) | Сетевые шары CIFS/SMB |
 | 🔄 [user-migration](scripts/utils/user-migration.md) | Миграция пользователя и перенос данных |
 | 🔒 [usb-guard](scripts/utils/usb-guard.md) | Блокировка USB-накопителей |
+| 🖼️ [setup-wallpaper](docs/desktop/setup-wallpaper.md) | Автоустановка корпоративных обоев с SMB-шары с блокировкой изменений (MATE, GNOME, XFCE, KDE) |
 
 > 📦 Полный пакет автоматизации: [redos-setup](https://github.com/teanrus/redos-setup) — базовая настройка АРМ за один запуск
 
