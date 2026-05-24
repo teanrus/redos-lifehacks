@@ -41,6 +41,20 @@
 - `LOCAL_WALLPAPER_FILE` – путь к итоговому файлу обоев
 - `MOUNT_POINT` – временная точка монтирования (`/mnt/smb_temp`)
 
+## Запуск setup-wallpaper из репозитория
+
+```bash
+mkdir ~/scripts
+cd ~/scripts
+curl -LO https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-wallpaper.sh
+curl -LO https://github.com/teanrus/redos-lifehacks/releases/latest/download/setup-wallpaper.sh.sha256
+sha256sum -c ~/scripts/setup-wallpaper.sh.sha256
+chmod +x ~/scripts/setup-wallpaper.sh
+sudo ~/scripts/setup-wallpaper.sh
+```
+
+> Обязательно корректируем настраиваемые параметры (в начале скрипта)!
+
 ---
 
 ## Логика работы
