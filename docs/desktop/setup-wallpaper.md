@@ -7,7 +7,7 @@
 [![CentOS](https://img.shields.io/badge/CentOS-Stream%208%20%7C%209-262477?style=for-the-badge)](https://www.centos.org/)
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
->Скрипт предназначен для автоматической установки корпоративных обоев рабочего стола из SMB-шары (сетевой папки Windows) в Linux-системах с последующей **блокировкой возможности изменения** обоев пользователями. Поддерживает основные графические окружения: MATE, GNOME, XFCE, KDE Plasma.
+>Скрипт `docs/desktop/setup-wallpaper.sh` предназначен для автоматической установки корпоративных обоев рабочего стола из SMB-шары (сетевой папки Windows) в Linux-системах с последующей **блокировкой возможности изменения** обоев пользователями. Поддерживает основные графические окружения: MATE, GNOME, XFCE, KDE Plasma.
 >
 > **Важно:** Скрипт требует запуска с правами root (через `sudo`).
 
