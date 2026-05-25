@@ -144,7 +144,7 @@ mount_smb() {
     log INFO "Mounting SMB share to ${MOUNT_POINT}..."
     local creds_opt="credentials=${SMB_CRED_FILE}"
     mount -t cifs "//${SMB_SERVER}/${SMB_SHARE}" "${MOUNT_POINT}" \
-        -o "${creds_opt},ro,vers=3.0,sec=ntlmssp,noserverino,retry=1,timeo=5" || {
+    -o "${creds_opt},ro,vers=3.0,sec=ntlmssp,noserverino" || {
         log ERROR "Failed to mount SMB share."
         exit 1
     }
