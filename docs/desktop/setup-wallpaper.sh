@@ -128,7 +128,7 @@ detect_de() {
     fi
     if [[ -z "${CURRENT_DE:-}" ]]; then
         if loginctl list-sessions --no-legend 2>/dev/null | grep -q 'seat0'; then
-            CURRENT_DE=$(loginctl show-session $(loginctl --no-legend | awk 'NR==1{print $1}') -p Desktop 2>/dev/null | cut -d= -f2 || true)
+            CURRENT_DE=$(loginctl show-session "$(loginctl --no-legend | awk 'NR==1{print $1}')" -p Desktop 2>/dev/null | cut -d= -f2 || true)
         fi
     fi
     if [[ -z "${CURRENT_DE:-}" || "${CURRENT_DE}" == "UNKNOWN" ]]; then
