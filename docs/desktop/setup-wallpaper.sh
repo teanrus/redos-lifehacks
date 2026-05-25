@@ -1,509 +1,344 @@
-#!/bin/bash
-# setup-wallpaper.sh - скрипт установки корпоративных обоев из SMB-шары с блокировкой изменений
-# Поддерживает: MATE, GNOME, XFCE, KDE Plasma
-# Запускать с правами root (sudo)
-
+#!/usr/bin/env bash
 set -euo pipefail
 
-# ========== НАСТРАИВАЕМЫЕ ПАРАМЕТРЫ ==========
-SMB_SERVER="192.168.22.11"  # Укажите адрес сервера
-SMB_SHARE="Share"  # Укажите шару
-SMB_FOLDER="backgrounds"  # Укажите каталог
-SMB_FILE="corporate-wallpaper.jpg"  # Укажите файл корпоративных обоев
-SMB_PATH="smb://${SMB_SERVER}/${SMB_SHARE}/${SMB_FOLDER}/${SMB_FILE}"
-SMB_USER="user"  # Укажите имя пользователя SMB, если требуется, например "domain\\user"
-SMB_PASS="passwd"  # Укажите пароль, если требуется
+# ==============================================================================
+# Corporate Wallpaper Setup Script
+# Supports: GNOME, MATE, XFCE, KDE Plasma
+# Requires: root privileges, cifs-utils, bash >= 4.0
+# ==============================================================================
 
-LOCAL_WALLPAPER_DIR="/usr/share/wallpapers"
-LOCAL_WALLPAPER_FILE="${LOCAL_WALLPAPER_DIR}/corporate-wallpaper.jpg"
-MOUNT_POINT="/mnt/smb_temp"
-
-# Можно принудительно указать окружение: DESKTOP_ENV=GNOME sudo ./setup-wallpaper.sh
-# Допустимые значения: AUTO, MATE, GNOME, XFCE, KDE, ALL
+# --- Configuration (override via env vars or edit below) ---
+SMB_SERVER="${SMB_SERVER:-}"
+SMB_SHARE="${SMB_SHARE:-}"
+SMB_FOLDER="${SMB_FOLDER:-backgrounds}"
+SMB_FILE="${SMB_FILE:-corporate-wallpaper.jpg}"
 DESKTOP_ENV="${DESKTOP_ENV:-AUTO}"
-# =============================================
+UPDATE_MODE="${UPDATE_MODE:-false}"
 
+# Security: Prefer credentials file. Fallback to env vars with warning.
+SMB_CRED_FILE="${SMB_CRED_FILE:-/etc/smb-credentials/corp-wallpaper}"
+SMB_USER="${SMB_USER:-}"
+SMB_PASS="${SMB_PASS:-}"
+
+# Paths
+LOCAL_WALLPAPER_DIR="/usr/share/wallpapers"
+LOCAL_WALLPAPER="${LOCAL_WALLPAPER_DIR}/corporate-wallpaper.jpg"
+LOG_FILE="/var/log/corporate-wallpaper.log"
+APPLY_SCRIPT="/usr/local/bin/apply-corporate-wallpaper.sh"
+AUTOSTART_GLOBAL="/etc/xdg/autostart/corporate-wallpaper.desktop"
+AUTOSTART_SKEL="/etc/skel/.config/autostart/corporate-wallpaper.desktop"
+
+MOUNT_POINT=""
+CURRENT_DE=""
+
+# --- Logging ---
 log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
+    local level="$1"; shift
+    local msg="$*"
+    local ts
+    ts=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[${ts}] [${level}] ${msg}" | tee -a "${LOG_FILE}" >&2
 }
 
-check_command() {
-    if ! command -v "$1" &>/dev/null; then
-        log "ОШИБКА: Команда $1 не найдена. Установите необходимый пакет."
-        exit 1
+# --- Trap & Cleanup ---
+cleanup() {
+    if [[ -n "${MOUNT_POINT}" && -d "${MOUNT_POINT}" ]]; then
+        log INFO "Unmounting ${MOUNT_POINT}..."
+        umount -l "${MOUNT_POINT}" 2>/dev/null || true
+        rmdir "${MOUNT_POINT}" 2>/dev/null || true
     fi
+    log INFO "Cleanup completed."
+}
+trap cleanup EXIT ERR INT TERM
+
+# --- Usage ---
+usage() {
+    cat <<EOF
+Usage: $0 [OPTIONS]
+  --update, -u      Check remote hash and update only if changed.
+  --help, -h        Show this help message.
+Environment Variables:
+  SMB_SERVER, SMB_SHARE, SMB_USER, SMB_PASS (or SMB_CRED_FILE)
+  DESKTOP_ENV=GNOME|MATE|XFCE|KDE|ALL|AUTO (default: AUTO)
+EOF
+    exit "${1:-0}"
 }
 
-normalize_de_name() {
-    local value
-    value="$(echo "${1:-}" | tr '[:lower:]' '[:upper:]')"
-
-    case "${value}" in
-        *KDE*|*PLASMA*) echo "KDE" ;;
-        *GNOME*) echo "GNOME" ;;
-        *MATE*) echo "MATE" ;;
-        *XFCE*|*XFCE4*) echo "XFCE" ;;
-        ALL) echo "ALL" ;;
-        *) echo "UNKNOWN" ;;
+# --- Argument Parsing ---
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --update|-u) UPDATE_MODE=true; shift ;;
+        --help|-h)   usage 0 ;;
+        *)           log ERROR "Unknown option: $1"; usage 1 ;;
     esac
-}
+done
 
-detect_de_from_process_env() {
-    local env_file env_value
-
-    for env_file in /proc/[0-9]*/environ; do
-        [ -r "${env_file}" ] || continue
-        env_value="$(tr '\0' '\n' <"${env_file}" 2>/dev/null \
-            | awk -F= '/^(XDG_CURRENT_DESKTOP|DESKTOP_SESSION|GDMSESSION)=/ {print $2; exit}' || true)"
-        if [ -n "${env_value}" ]; then
-            normalize_de_name "${env_value}"
-            return
-        fi
-    done
-
-    echo "UNKNOWN"
-}
-
-detect_de_from_loginctl() {
-    local session_id desktop de
-
-    command -v loginctl &>/dev/null || {
-        echo "UNKNOWN"
-        return
-    }
-
-    while read -r session_id; do
-        [ -n "${session_id}" ] || continue
-        desktop="$(loginctl show-session "${session_id}" -p Desktop --value 2>/dev/null || true)"
-        de="$(normalize_de_name "${desktop}")"
-        if [ "${de}" != "UNKNOWN" ]; then
-            echo "${de}"
-            return
-        fi
-    done < <(loginctl list-sessions --no-legend 2>/dev/null | awk '{print $1}')
-
-    echo "UNKNOWN"
-}
-
-detect_de_from_processes() {
-    if pgrep -x plasmashell &>/dev/null || pgrep -x kwin_x11 &>/dev/null || pgrep -x kwin_wayland &>/dev/null; then
-        echo "KDE"
-    elif pgrep -x gnome-shell &>/dev/null; then
-        echo "GNOME"
-    elif pgrep -x mate-session &>/dev/null || pgrep -x marco &>/dev/null; then
-        echo "MATE"
-    elif pgrep -x xfce4-session &>/dev/null || pgrep -x xfdesktop &>/dev/null; then
-        echo "XFCE"
-    else
-        echo "UNKNOWN"
-    fi
-}
-
-detect_de_from_packages() {
-    if command -v rpm &>/dev/null; then
-        if rpm -q plasma-workspace &>/dev/null; then
-            echo "KDE"
-        elif rpm -q gnome-shell &>/dev/null; then
-            echo "GNOME"
-        elif rpm -q mate-desktop &>/dev/null; then
-            echo "MATE"
-        elif rpm -q xfdesktop &>/dev/null || rpm -q xfce4-session &>/dev/null; then
-            echo "XFCE"
-        else
-            echo "UNKNOWN"
-        fi
-    else
-        echo "UNKNOWN"
-    fi
-}
-
-detect_desktop_environment() {
-    local de
-
-    de="$(normalize_de_name "${XDG_CURRENT_DESKTOP:-${DESKTOP_SESSION:-${GDMSESSION:-}}}")"
-    [ "${de}" != "UNKNOWN" ] && { echo "${de}"; return; }
-
-    de="$(detect_de_from_loginctl)"
-    [ "${de}" != "UNKNOWN" ] && { echo "${de}"; return; }
-
-    de="$(detect_de_from_process_env)"
-    [ "${de}" != "UNKNOWN" ] && { echo "${de}"; return; }
-
-    de="$(detect_de_from_processes)"
-    [ "${de}" != "UNKNOWN" ] && { echo "${de}"; return; }
-
-    detect_de_from_packages
-}
-
-cleanup_mount() {
-    if mountpoint -q "${MOUNT_POINT}" 2>/dev/null; then
-        umount "${MOUNT_POINT}" 2>/dev/null || true
-    fi
-    rmdir "${MOUNT_POINT}" 2>/dev/null || true
-}
-
-mount_smb_share() {
-    log "Создание временной точки монтирования..."
-    mkdir -p "${MOUNT_POINT}"
-
-    log "Монтирование SMB-шары ${SMB_PATH}..."
-    if [ -n "${SMB_USER}" ] && [ -n "${SMB_PASS}" ]; then
-        mount -t cifs "//${SMB_SERVER}/${SMB_SHARE}" "${MOUNT_POINT}" \
-            -o "username=${SMB_USER},password=${SMB_PASS},vers=3.0,uid=0,gid=0"
-    elif [ -n "${SMB_USER}" ]; then
-        mount -t cifs "//${SMB_SERVER}/${SMB_SHARE}" "${MOUNT_POINT}" \
-            -o "username=${SMB_USER},vers=3.0,uid=0,gid=0"
-    else
-        mount -t cifs "//${SMB_SERVER}/${SMB_SHARE}" "${MOUNT_POINT}" \
-            -o "guest,vers=3.0,uid=0,gid=0"
-    fi
-}
-
-install_wallpaper_file() {
-    local source_file="${MOUNT_POINT}/${SMB_FOLDER}/${SMB_FILE}"
-
-    if [ ! -f "${source_file}" ]; then
-        log "ОШИБКА: Файл ${source_file} не найден"
+# --- Validation ---
+check_root() {
+    if [[ $EUID -ne 0 ]]; then
+        log ERROR "This script must be run as root."
         exit 1
     fi
+}
 
-    log "Создание каталога ${LOCAL_WALLPAPER_DIR}..."
+prepare_credentials() {
+    if [[ -f "${SMB_CRED_FILE}" ]]; then
+        return 0
+    fi
+    if [[ -z "${SMB_USER}" || -z "${SMB_PASS}" ]]; then
+        log ERROR "SMB credentials missing. Provide SMB_USER/SMB_PASS or create ${SMB_CRED_FILE}"
+        exit 1
+    fi
+    log WARN "Plaintext credentials detected. Generating secure credential file..."
+    mkdir -p "$(dirname "${SMB_CRED_FILE}")"
+    cat > "${SMB_CRED_FILE}" <<CREDS
+username=${SMB_USER}
+password=${SMB_PASS}
+CREDS
+    chmod 600 "${SMB_CRED_FILE}"
+    chown root:root "${SMB_CRED_FILE}"
+}
+
+validate_inputs() {
+    [[ -z "${SMB_SERVER}" || -z "${SMB_SHARE}" ]] && { log ERROR "SMB_SERVER and SMB_SHARE must be set."; exit 1; }
+    for cmd in mount cp chmod chattr dconf xfconf-query kbuildsycoca5; do
+        command -v "$cmd" >/dev/null 2>&1 || log WARN "Command '${cmd}' not found. Related DE features may fail."
+    done
+    if ! rpm -q cifs-utils >/dev/null 2>&1 && ! dpkg -l cifs-utils >/dev/null 2>&1; then
+        log INFO "Installing cifs-utils..."
+        if command -v dnf >/dev/null 2>&1; then dnf install -y cifs-utils >/dev/null;
+        elif command -v apt >/dev/null 2>&1; then apt install -y cifs-utils >/dev/null;
+        else log ERROR "Package manager not supported."; exit 1; fi
+    fi
+}
+
+# --- DE Detection ---
+detect_de() {
+    if [[ "${DESKTOP_ENV}" != "AUTO" ]]; then
+        CURRENT_DE="${DESKTOP_ENV}"
+        return 0
+    fi
+    if [[ -n "${XDG_CURRENT_DESKTOP:-}" ]]; then
+        case "${XDG_CURRENT_DESKTOP}" in
+            *GNOME*) CURRENT_DE="GNOME" ;;
+            *KDE*)   CURRENT_DE="KDE" ;;
+            *XFCE*)  CURRENT_DE="XFCE" ;;
+            *MATE*)  CURRENT_DE="MATE" ;;
+        esac
+    fi
+    if [[ -z "${CURRENT_DE:-}" ]]; then
+        if loginctl list-sessions --no-legend 2>/dev/null | grep -q 'seat0'; then
+            CURRENT_DE=$(loginctl show-session $(loginctl --no-legend | awk 'NR==1{print $1}') -p Desktop 2>/dev/null | cut -d= -f2 || true)
+        fi
+    fi
+    if [[ -z "${CURRENT_DE:-}" || "${CURRENT_DE}" == "UNKNOWN" ]]; then
+        log WARN "DE detection inconclusive. Applying settings for ALL supported DEs."
+        CURRENT_DE="ALL"
+    fi
+    log INFO "Target DE: ${CURRENT_DE}"
+}
+
+# --- Core Logic ---
+mount_smb() {
+    MOUNT_POINT=$(mktemp -d /mnt/corp-wallpaper.XXXXXX)
+    log INFO "Mounting SMB share to ${MOUNT_POINT}..."
+    local creds_opt="credentials=${SMB_CRED_FILE}"
+    mount -t cifs "//${SMB_SERVER}/${SMB_SHARE}" "${MOUNT_POINT}" \
+        -o "${creds_opt},ro,vers=3.0,sec=ntlmssp,noserverino,retry=1,timeo=5" || {
+        log ERROR "Failed to mount SMB share."
+        exit 1
+    }
+}
+
+copy_wallpaper() {
+    local remote_path="${MOUNT_POINT}/${SMB_FOLDER}/${SMB_FILE}"
+    [[ ! -f "${remote_path}" ]] && { log ERROR "Wallpaper not found at ${remote_path}"; exit 1; }
+
     mkdir -p "${LOCAL_WALLPAPER_DIR}"
 
-    if [ -f "${LOCAL_WALLPAPER_FILE}" ] && command -v chattr &>/dev/null; then
-        chattr -i "${LOCAL_WALLPAPER_FILE}" 2>/dev/null || true
+    if [[ "${UPDATE_MODE}" == "true" ]]; then
+        if [[ -f "${LOCAL_WALLPAPER}" ]]; then
+            local remote_hash local_hash
+            remote_hash=$(sha256sum "${remote_path}" | awk '{print $1}')
+            local_hash=$(sha256sum "${LOCAL_WALLPAPER}" | awk '{print $1}')
+            if [[ "${remote_hash}" == "${local_hash}" ]]; then
+                log INFO "Wallpaper is already up-to-date. Skipping copy."
+                return 0
+            fi
+            log INFO "New version detected. Updating..."
+            chattr -i "${LOCAL_WALLPAPER}" 2>/dev/null || true
+        fi
     fi
 
-    log "Копирование корпоративных обоев в ${LOCAL_WALLPAPER_FILE}..."
-    cp "${source_file}" "${LOCAL_WALLPAPER_FILE}"
-    chmod 644 "${LOCAL_WALLPAPER_FILE}"
-    chown root:root "${LOCAL_WALLPAPER_FILE}"
-
-    if command -v chattr &>/dev/null; then
-        log "Установка защиты файла через chattr +i..."
-        chattr +i "${LOCAL_WALLPAPER_FILE}" 2>/dev/null || \
-            log "ПРЕДУПРЕЖДЕНИЕ: не удалось установить chattr +i для ${LOCAL_WALLPAPER_FILE}"
-    fi
+    cp -f "${remote_path}" "${LOCAL_WALLPAPER}"
+    chmod 644 "${LOCAL_WALLPAPER}"
+    chown root:root "${LOCAL_WALLPAPER}"
+    chattr +i "${LOCAL_WALLPAPER}" 2>/dev/null || log WARN "chattr +i failed (filesystem may not support immutable)."
+    log INFO "Wallpaper installed and protected."
 }
 
-write_autostart_apply_script() {
-    log "Создание универсального скрипта применения обоев..."
-
-    cat > /usr/local/bin/apply-corporate-wallpaper.sh << EOF
-#!/bin/bash
-set +e
-
-LOCAL_WALLPAPER_FILE="${LOCAL_WALLPAPER_FILE}"
-
-[ -f "\${LOCAL_WALLPAPER_FILE}" ] || exit 0
-
-normalize_de_name() {
-    local value
-    value="\$(echo "\${1:-}" | tr '[:lower:]' '[:upper:]')"
-    case "\${value}" in
-        *KDE*|*PLASMA*) echo "KDE" ;;
-        *GNOME*) echo "GNOME" ;;
-        *MATE*) echo "MATE" ;;
-        *XFCE*|*XFCE4*) echo "XFCE" ;;
-        *) echo "UNKNOWN" ;;
+configure_dconf() {
+    local de_name="$1"
+    local schema
+    case "${de_name}" in
+        GNOME) schema="org.gnome.desktop.background" ;;
+        MATE)  schema="org.mate.background" ;;
     esac
-}
+    local db_dir="/etc/dconf/db/local.d"
+    local lock_dir="/etc/dconf/db/local.d/locks"
+    mkdir -p "${db_dir}" "${lock_dir}"
 
-DE="\$(normalize_de_name "\${XDG_CURRENT_DESKTOP:-\${DESKTOP_SESSION:-\${GDMSESSION:-}}}")"
-
-apply_kde() {
-    command -v qdbus &>/dev/null || return 0
-    [ -n "\${DBUS_SESSION_BUS_ADDRESS:-}" ] || return 0
-
-    qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
-        var allDesktops = desktops();
-        for (i = 0; i < allDesktops.length; i++) {
-            allDesktops[i].wallpaperPlugin = 'org.kde.image';
-            allDesktops[i].currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];
-            allDesktops[i].writeConfig('Image', 'file://\${LOCAL_WALLPAPER_FILE}');
-        }
-    " 2>/dev/null || true
-}
-
-apply_gnome() {
-    command -v gsettings &>/dev/null || return 0
-    gsettings set org.gnome.desktop.background picture-uri "file://\${LOCAL_WALLPAPER_FILE}" 2>/dev/null || true
-    gsettings set org.gnome.desktop.background picture-uri-dark "file://\${LOCAL_WALLPAPER_FILE}" 2>/dev/null || true
-    gsettings set org.gnome.desktop.background picture-options "zoom" 2>/dev/null || true
-}
-
-apply_mate() {
-    command -v gsettings &>/dev/null || return 0
-    gsettings set org.mate.background picture-filename "\${LOCAL_WALLPAPER_FILE}" 2>/dev/null || true
-    gsettings set org.mate.background picture-options "zoom" 2>/dev/null || true
-}
-
-apply_xfce() {
-    command -v xfconf-query &>/dev/null || return 0
-
-    props="\$(xfconf-query -c xfce4-desktop -l 2>/dev/null | grep -E '/(last-image|image-path)$' || true)"
-    if [ -n "\${props}" ]; then
-        echo "\${props}" | while read -r prop; do
-            [ -n "\${prop}" ] || continue
-            xfconf-query -c xfce4-desktop -p "\${prop}" -s "\${LOCAL_WALLPAPER_FILE}" 2>/dev/null || true
-        done
-    else
-        xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/last-image \
-            -n -t string -s "\${LOCAL_WALLPAPER_FILE}" 2>/dev/null || true
-        xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-path \
-            -n -t string -s "\${LOCAL_WALLPAPER_FILE}" 2>/dev/null || true
-    fi
-
-    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace0/image-style \
-        -n -t int -s 5 2>/dev/null || true
-}
-
-case "\${DE}" in
-    KDE) apply_kde ;;
-    GNOME) apply_gnome ;;
-    MATE) apply_mate ;;
-    XFCE) apply_xfce ;;
-    *)
-        apply_kde
-        apply_gnome
-        apply_mate
-        apply_xfce
-        ;;
-esac
-EOF
-
-    chmod +x /usr/local/bin/apply-corporate-wallpaper.sh
-
-    log "Настройка системного автозапуска применения обоев..."
-    mkdir -p /etc/xdg/autostart /etc/skel/.config/autostart
-    cat > /etc/xdg/autostart/corporate-wallpaper.desktop << 'EOF'
-[Desktop Entry]
-Type=Application
-Name=Corporate Wallpaper
-Exec=/usr/local/bin/apply-corporate-wallpaper.sh
-Hidden=false
-NoDisplay=true
-X-GNOME-Autostart-enabled=true
-Comment=Apply corporate wallpaper
-EOF
-    cp /etc/xdg/autostart/corporate-wallpaper.desktop /etc/skel/.config/autostart/corporate-wallpaper.desktop
-}
-
-ensure_dconf_profile() {
-    mkdir -p /etc/dconf/profile
-
-    if [ ! -f /etc/dconf/profile/user ]; then
-        cat > /etc/dconf/profile/user << 'EOF'
-user-db:user
-system-db:local
-EOF
-    elif ! grep -qx "system-db:local" /etc/dconf/profile/user; then
-        echo "system-db:local" >> /etc/dconf/profile/user
-    fi
-}
-
-setup_gnome_lockdown() {
-    log "Настройка GNOME: системные обои и блокировка через dconf..."
-
-    ensure_dconf_profile
-    mkdir -p /etc/dconf/db/local.d /etc/dconf/db/local.d/locks
-    cat > /etc/dconf/db/local.d/00-corporate-wallpaper << EOF
-[org/gnome/desktop/background]
-picture-uri='file://${LOCAL_WALLPAPER_FILE}'
-picture-uri-dark='file://${LOCAL_WALLPAPER_FILE}'
+    cat > "${db_dir}/00-corporate-wallpaper" <<EOF
+[${schema}]
+picture-uri='file://${LOCAL_WALLPAPER}'
 picture-options='zoom'
 EOF
-
-    cat > /etc/dconf/db/local.d/locks/corporate-wallpaper << 'EOF'
-/org/gnome/desktop/background/picture-uri
-/org/gnome/desktop/background/picture-uri-dark
-/org/gnome/desktop/background/picture-options
-EOF
-
-    if command -v dconf &>/dev/null; then
-        dconf update
-    else
-        log "ПРЕДУПРЕЖДЕНИЕ: dconf не найден, блокировка GNOME применится после установки dconf и выполнения dconf update"
-    fi
+    echo "/${schema}/picture-uri" > "${lock_dir}/corporate-wallpaper"
+    echo "/${schema}/picture-options" >> "${lock_dir}/corporate-wallpaper"
+    dconf update
+    log INFO "dconf settings applied for ${de_name}."
 }
 
-setup_mate_lockdown() {
-    log "Настройка MATE: системные обои и блокировка через dconf..."
-
-    ensure_dconf_profile
-    mkdir -p /etc/dconf/db/local.d /etc/dconf/db/local.d/locks
-    cat > /etc/dconf/db/local.d/01-corporate-wallpaper-mate << EOF
-[org/mate/background]
-picture-filename='${LOCAL_WALLPAPER_FILE}'
-picture-options='zoom'
-EOF
-
-    cat > /etc/dconf/db/local.d/locks/corporate-wallpaper-mate << 'EOF'
-/org/mate/background/picture-filename
-/org/mate/background/picture-options
-EOF
-
-    if command -v dconf &>/dev/null; then
-        dconf update
-    else
-        log "ПРЕДУПРЕЖДЕНИЕ: dconf не найден, блокировка MATE применится после установки dconf и выполнения dconf update"
-    fi
-}
-
-setup_xfce_lockdown() {
-    log "Настройка XFCE: системные обои и блокировка через kioskrc..."
-
-    mkdir -p /etc/xdg/xfce4/kiosk
-    cat > /etc/xdg/xfce4/kiosk/kioskrc << 'EOF'
+configure_xfce() {
+    mkdir -p /etc/xdg/xfce4/kiosk /etc/xdg/xfce4/xfconf/xfce-perchannel-xml
+    cat > /etc/xdg/xfce4/kiosk/kioskrc <<EOF
+[xfce4-session]
+CustomizeBackdrop=NONE
 [xfce4-desktop]
 CustomizeBackdrop=NONE
 EOF
-
-    mkdir -p /etc/xdg/xfce4/xfconf/xfce-perchannel-xml
-    cat > /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml << EOF
+    cat > /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml <<XML
 <?xml version="1.0" encoding="UTF-8"?>
-
 <channel name="xfce4-desktop" version="1.0">
   <property name="backdrop" type="empty">
     <property name="screen0" type="empty">
       <property name="monitor0" type="empty">
-        <property name="workspace0" type="empty">
-          <property name="last-image" type="string" value="${LOCAL_WALLPAPER_FILE}"/>
-          <property name="image-path" type="string" value="${LOCAL_WALLPAPER_FILE}"/>
-          <property name="image-style" type="int" value="5"/>
-        </property>
+        <property name="image-path" type="string" value="${LOCAL_WALLPAPER}"/>
+        <property name="image-style" type="int" value="5"/>
       </property>
     </property>
   </property>
 </channel>
-EOF
-
-    chmod 644 /etc/xdg/xfce4/kiosk/kioskrc
-    chmod 644 /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+XML
+    log INFO "XFCE lockdown applied."
 }
 
-setup_kde_lockdown() {
-    log "Настройка KDE Plasma: системные обои и блокировка через Kiosk..."
+configure_kde() {
+    local kdeglobals="/etc/xdg/kdeglobals"
+    [[ ! -f "${kdeglobals}.backup" ]] && cp -a "${kdeglobals}" "${kdeglobals}.backup" 2>/dev/null || true
 
-    local kde_globals="/etc/xdg/kdeglobals"
-    local kde_profile_dir="/etc/kde-profile"
-    local kde_profile_file="${kde_profile_dir}/locked-profile"
-
-    mkdir -p /etc/xdg "${kde_profile_dir}"
-
-    if [ -f "${kde_globals}" ] && [ ! -f "${kde_globals}.backup" ]; then
-        cp "${kde_globals}" "${kde_globals}.backup" 2>/dev/null || true
-    fi
-
-    if [ -f "${kde_globals}" ]; then
-        sed -i '/# BEGIN CORPORATE WALLPAPER/,/# END CORPORATE WALLPAPER/d' "${kde_globals}" 2>/dev/null || true
-    fi
-
-    cat >> "${kde_globals}" << EOF
-
-# BEGIN CORPORATE WALLPAPER
-[KDE Action Restrictions][\$i]
-plasma/plasmashell/unlockedDesktop=false
-systemsettings/desktop=false
-
-[Wallpaper][\$i]
-Image=file://${LOCAL_WALLPAPER_FILE}
-# END CORPORATE WALLPAPER
-EOF
-
-    cat > "${kde_profile_file}" << EOF
-[General]
-Name=Corporate Lockdown
-
-[KDE Action Restrictions]
-plasma/plasmashell/unlockedDesktop=false
-systemsettings/desktop=false
-
+    sed -i '/^\[Wallpaper\]/,/^$/d; /^\[KDE Action Restrictions\]/,/^$/d' "${kdeglobals}" 2>/dev/null || true
+    cat >> "${kdeglobals}" <<EOF
 [Wallpaper]
-Image=file://${LOCAL_WALLPAPER_FILE}
+Image=${LOCAL_WALLPAPER}
+[Desktop][Locale][sl]
+Image=${LOCAL_WALLPAPER}
+[KDE Action Restrictions]
+wallpapersettings=true
 EOF
+    mkdir -p /etc/kde/profile.d
+    cat > /etc/kde/profile.d/corporate-wallpaper.conf <<EOF
+[Wallpaper]
+Image=${LOCAL_WALLPAPER}
+[KDE Action Restrictions]
+wallpapersettings=true
+EOF
+    if command -v kbuildsycoca5 >/dev/null 2>&1; then
+        kbuildsycoca5 --noincremental 2>/dev/null || true
+    fi
+    log INFO "KDE Plasma lockdown applied."
 }
 
-setup_existing_users_autostart() {
-    log "Настройка автозапуска для существующих пользователей..."
+create_apply_script() {
+    cat > "${APPLY_SCRIPT}" << 'APPLY_EOF'
+#!/usr/bin/env bash
+set -euo pipefail
 
-    for user_home in /home/*; do
-        [ -d "${user_home}" ] || continue
+WALLPAPER="/usr/share/wallpapers/corporate-wallpaper.jpg"
+[[ ! -f "${WALLPAPER}" ]] && exit 0
 
-        local username user_autostart
-        username="$(basename "${user_home}")"
-        user_autostart="${user_home}/.config/autostart"
+DESKTOP="${XDG_CURRENT_DESKTOP:-}"
 
-        mkdir -p "${user_autostart}"
-        cp /etc/xdg/autostart/corporate-wallpaper.desktop "${user_autostart}/corporate-wallpaper.desktop"
-        chown -R "${username}:${username}" "${user_autostart}" 2>/dev/null || true
+if [[ "${DESKTOP}" == *"GNOME"* || "${DESKTOP}" == *"MATE"* ]]; then
+    until gsettings list-keys org.gnome.desktop.background >/dev/null 2>&1; do sleep 1; done
+    if echo "${DESKTOP}" | grep -q "MATE"; then
+        gsettings set org.mate.background picture-filename "${WALLPAPER}"
+    else
+        gsettings set org.gnome.desktop.background picture-uri "file://${WALLPAPER}"
+        gsettings set org.gnome.desktop.background picture-uri-dark "file://${WALLPAPER}"
+    fi
+elif [[ "${DESKTOP}" == *"XFCE"* ]]; then
+    until xfconf-query -c xfce4-desktop -p /backdrop >/dev/null 2>&1; do sleep 1; done
+    xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "${WALLPAPER}" -t string
+elif [[ "${DESKTOP}" == *"KDE"* ]]; then
+    until qdbus org.kde.plasmashell >/dev/null 2>&1; do sleep 1; done
+    qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
+        var allDesktops = desktops();
+        for (var i=0; i<allDesktops.length; i++) {
+            var d = allDesktops[i];
+            d.wallpaperPlugin = 'org.kde.image';
+            d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');
+            d.writeConfig('Image', '${WALLPAPER}');
+        }"
+fi
+APPLY_EOF
+    chmod +x "${APPLY_SCRIPT}"
+    log INFO "Apply script created at ${APPLY_SCRIPT}."
+}
+
+setup_autostart() {
+    mkdir -p /etc/xdg/autostart /etc/skel/.config/autostart
+    cat > "${AUTOSTART_GLOBAL}" <<EOF
+[Desktop Entry]
+Type=Application
+Name=Corporate Wallpaper Enforcer
+Exec=${APPLY_SCRIPT}
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+X-KDE-autostart-phase=2
+EOF
+    cp -f "${AUTOSTART_GLOBAL}" "${AUTOSTART_SKEL}"
+
+    for home_dir in /home/*; do
+        if [[ -d "${home_dir}" ]]; then
+            local user_home="${home_dir}/.config/autostart"
+            mkdir -p "${user_home}"
+            cp -f "${AUTOSTART_GLOBAL}" "${user_home}/"
+            chown -R "$(stat -c '%u:%g' "${home_dir}")" "${user_home}/corporate-wallpaper.desktop"
+        fi
     done
+    log INFO "Autostart configured for all users."
 }
 
-apply_lockdown_for_de() {
-    local de="$1"
+# --- Main ---
+main() {
+    log INFO "=== Corporate Wallpaper Setup Started ==="
+    check_root
+    prepare_credentials
+    validate_inputs
+    detect_de
 
-    case "${de}" in
-        KDE) setup_kde_lockdown ;;
-        GNOME) setup_gnome_lockdown ;;
-        MATE) setup_mate_lockdown ;;
-        XFCE) setup_xfce_lockdown ;;
+    mount_smb
+    copy_wallpaper
+
+    case "${CURRENT_DE}" in
+        GNOME) configure_dconf "GNOME" ;;
+        MATE)  configure_dconf "MATE" ;;
+        XFCE)  configure_xfce ;;
+        KDE)   configure_kde ;;
         ALL)
-            setup_kde_lockdown
-            setup_gnome_lockdown
-            setup_mate_lockdown
-            setup_xfce_lockdown
+            configure_dconf "GNOME"
+            configure_dconf "MATE"
+            configure_xfce
+            configure_kde
             ;;
-        *)
-            log "ПРЕДУПРЕЖДЕНИЕ: окружение не определено, применяем настройки для всех поддерживаемых DE"
-            setup_kde_lockdown
-            setup_gnome_lockdown
-            setup_mate_lockdown
-            setup_xfce_lockdown
-            ;;
+        *) log WARN "Unknown DE '${CURRENT_DE}'. Skipping lockdown." ;;
     esac
+
+    create_apply_script
+    setup_autostart
+    log INFO "=== Setup Completed Successfully ==="
 }
 
-log "=== Начало установки корпоративных обоев ==="
-
-if [ "${EUID}" -ne 0 ]; then
-    log "ОШИБКА: Скрипт должен запускаться с правами root (sudo)"
-    exit 1
-fi
-
-log "Проверка зависимостей..."
-check_command mount
-check_command umount
-check_command cp
-check_command chmod
-check_command chown
-check_command sed
-check_command awk
-
-if ! command -v mount.cifs &>/dev/null; then
-    log "Установка cifs-utils..."
-    dnf install -y cifs-utils
-fi
-
-if [ "${DESKTOP_ENV}" = "AUTO" ]; then
-    DETECTED_DE="$(detect_desktop_environment)"
-else
-    DETECTED_DE="$(normalize_de_name "${DESKTOP_ENV}")"
-fi
-
-log "Определено графическое окружение: ${DETECTED_DE}"
-
-trap cleanup_mount EXIT
-mount_smb_share
-install_wallpaper_file
-cleanup_mount
-trap - EXIT
-
-write_autostart_apply_script
-apply_lockdown_for_de "${DETECTED_DE}"
-setup_existing_users_autostart
-
-log "=== Установка завершена успешно ==="
-log "Корпоративные обои установлены: ${LOCAL_WALLPAPER_FILE}"
-log "Блокировка настроена для окружения: ${DETECTED_DE}"
-log "Для полного применения пользователям необходимо перезайти в систему"
+main
