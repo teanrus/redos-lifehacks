@@ -823,11 +823,9 @@ source ~/.bashrc
 ## 🔗 Ссылки
 
 - [Официальный сайт РЕД ОС](https://redos.red-soft.ru/)
-- [Документация РЕД ОС](https://redos.red-soft.ru/base/redos-7_3/)
 - [Р7-Офис](https://r7-office.ru/)
 - [MAX (национальный мессенджер)](https://max.ru/)
 - [Яндекс Браузер](https://browser.yandex.ru/)
-- [Telegram](https://telegram.org/)
 - [VK Мессенджер](https://vk.com/)
 - [Скрипт установки мессенджеров](https://github.com/teanrus/redos-lifehacks/blob/main/scripts/install/install-messengers.md)
 
