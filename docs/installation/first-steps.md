@@ -1,8 +1,7 @@
 # Первые шаги после установки РЕД ОС
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](/LICENSE)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange?style=for-the-badge)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green?style=for-the-badge)](https://redos.red-soft.ru/)
+[![РЕД ОС](https://img.shields.io/badge/РЕД%20ОС-7.3%20|%208.0-red?style=for-the-badge&logo=linux)](https://redos.red-soft.ru/)
 [![Bash](https://img.shields.io/badge/bash-5.0+-blue?style=for-the-badge)]()
 [![Stars](https://img.shields.io/github/stars/teanrus/redos-lifehacks?style=for-the-badge)](https://github.com/teanrus/redos-lifehacks/stargazers)
 
@@ -152,9 +151,6 @@ sudo dnf install okular
 sudo dnf install simple-scan
 ```
 
-> [!NOTE]
-> Если Р7-Офис недоступен в репозитории, скачайте установщик с официального сайта: <https://r7-office.ru/download/>
-
 #### 🤖 Автоматическая установка через скрипт
 
 Скрипт для автоматической установки и настройки офисных пакетов в **РЕД ОС**.
@@ -231,9 +227,6 @@ sudo dnf install chromium
 ```bash
 # GIMP
 sudo dnf install gimp
-
-# Inkscape (векторная графика)
-sudo dnf install inkscape
 
 # Pinta (лёгкий редактор)
 sudo dnf install pinta
