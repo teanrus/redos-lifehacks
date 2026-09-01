@@ -38,13 +38,14 @@
 
 ```mermaid
 flowchart TD
-    A[Приложение (LibreOffice и др.)]
-    B[cups-filters<br>(фильтры: PDF → PCL/PostScript)]
-    C[Драйвер принтера (PPD)<br>Gutenprint / Foomatic / фирменный]
-    D[Бэкенд CUPS (usb/ipp/socket)]
+    A[Приложение<br>LibreOffice и др.]
+    B[cups-filters<br>фильтры: PDF → PCL/PostScript]
+    C[Драйвер принтера PPD<br>Gutenprint / Foomatic / фирменный]
+    D[Бэкенд CUPS<br>usb / ipp / socket]
     E[Принтер]
 
-    A --> B --> C --> D --> E
+    A ==> B ==> C ==> D ==> E
+
 ```
 
 ### Основные пакеты
