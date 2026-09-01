@@ -1,0 +1,2923 @@
+*PPD-Adobe: "4.3"
+*%%%% PPD file for HP Designjet T2500 PostScript with CUPS.
+*%%%% Created by the CUPS PPD Compiler CUPS v1.5.4.
+*% Adobe Systems PostScript(R) Printer Description File
+*% (c) Copyright 2015 HP Development Company, L.P.
+*% All Rights Reserved.
+*% Permission is granted for redistribution of this file as
+*% long as this copyright notice is intact and the contents
+*% of the file is not altered in any way from its original form.
+*% End of Copyright statement
+*FormatVersion: "4.3"
+*FileVersion: "25.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "HPPD0013.PPD"
+*Product: "(HP Designjet T2500 PostScript)"
+*Product: "(HP Designjet T2500 PostScript (36'' sized))"
+*Manufacturer: "HP"
+*ModelName: "HP Designjet T2500 PostScript"
+*ShortNickName: "HP Designjet T2500 PostScript"
+*1284DeviceID: "MFG:Hewlett-Packard;MDL:hp designjet t2500 postscript;"
+*NickName: "HP Designjet T2500 - PostScript"
+*PSVersion: "(3016.102) 1"
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Minus90
+*TTRasterizer: Type42
+
+*%== All the UIConstraints ==
+
+*% =============== Constraints for the output profiles ===============
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation CoatedGRACoL2006-ISO12647
+*UIConstraints: *HPCMYKEmulation CoatedGRACoL2006-ISO12647 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation PSOUncoatedISO12647-ECI
+*UIConstraints: *HPCMYKEmulation PSOUncoatedISO12647-ECI *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation PSOLWCImproved-ECI
+*UIConstraints: *HPCMYKEmulation PSOLWCImproved-ECI *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation WebCoatedSWOP2006Grade3
+*UIConstraints: *HPCMYKEmulation WebCoatedSWOP2006Grade3 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation WebCoatedSWOP2006Grade5
+*UIConstraints: *HPCMYKEmulation WebCoatedSWOP2006Grade5 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation USWebCoated(SWOP)v2
+*UIConstraints: *HPCMYKEmulation USWebCoated(SWOP)v2 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation USWebUncoatedv2
+*UIConstraints: *HPCMYKEmulation USWebUncoatedv2 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation USSheetfedCoatedv2
+*UIConstraints: *HPCMYKEmulation USSheetfedCoatedv2 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation USSheetfedUncoatedv2
+*UIConstraints: *HPCMYKEmulation USSheetfedUncoatedv2 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation EuroscaleUncoatedv2
+*UIConstraints: *HPCMYKEmulation EuroscaleUncoatedv2 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation JapanWebCoated
+*UIConstraints: *HPCMYKEmulation JapanWebCoated *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation JapanStandardv2
+*UIConstraints: *HPCMYKEmulation JapanStandardv2 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation JapanUncoated2
+*UIConstraints: *HPCMYKEmulation JapanUncoated2 *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation JapanColor2002Newspaper
+*UIConstraints: *HPCMYKEmulation JapanColor2002Newspaper *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation JapanColor2003WebCoated
+*UIConstraints: *HPCMYKEmulation JapanColor2003WebCoated *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation JMPA
+*UIConstraints: *HPCMYKEmulation JMPA *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation TOYO
+*UIConstraints: *HPCMYKEmulation TOYO *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPCMYKEmulation DIC
+*UIConstraints: *HPCMYKEmulation DIC *HPColorMatchingMode ApplicationMatching
+
+
+*% =============== Constraints for the input profiles ===============
+
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPRGBEmulation AppleRGB
+*UIConstraints: *HPRGBEmulation AppleRGB *HPColorMatchingMode ApplicationMatching
+*UIConstraints: *HPColorMatchingMode ApplicationMatching *HPRGBEmulation ColorMatchRGB
+*UIConstraints: *HPRGBEmulation ColorMatchRGB *HPColorMatchingMode ApplicationMatching
+
+
+*% =============== BorderLess over MediaType Constraints ===============
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *PageSize B4.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HPBrhtWhtInkjetBond
+*UIConstraints: *MediaType HPBrhtWhtInkjetBond *PageSize EnvARCHD.FullBleed
+
+*%===HP Universal Bond Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *PageSize B4.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HPUniInkjetBond
+*UIConstraints: *MediaType HPUniInkjetBond *PageSize EnvARCHD.FullBleed
+
+*%===HP Coated Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HPCoated *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HPCoated
+*UIConstraints: *PageSize B4.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HPCoated
+*UIConstraints: *MediaType HPCoated *PageSize EnvARCHD.FullBleed
+
+*%===HP Recycled Bond Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HPRecycledBond *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *PageSize B4.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HPRecycledBond
+*UIConstraints: *MediaType HPRecycledBond *PageSize EnvARCHD.FullBleed
+
+
+*%====HP Super Heavyweight Plus Matte Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *PageSize B4.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPSuperHvwPlus *PageSize EnvARCHD.FullBleed
+
+
+*%===HP Heavyweight Coated Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HPHvwCoated *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *PageSize B4.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HPHvwCoated
+*UIConstraints: *MediaType HPHvwCoated *PageSize EnvARCHD.FullBleed
+
+
+*%===Plain Paper===
+*UIConstraints: *PageSize Letter.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType Plain *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType Plain
+*UIConstraints: *PageSize B4.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType Plain
+*UIConstraints: *MediaType Plain *PageSize EnvARCHD.FullBleed
+
+
+*%===Coated Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType Coated *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType Coated
+*UIConstraints: *PageSize B4.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType Coated
+*UIConstraints: *MediaType Coated *PageSize EnvARCHD.FullBleed
+
+
+*%===Heavyweight Coated Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HeavyweightCoated *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *PageSize B4.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HeavyweightCoated *PageSize EnvARCHD.FullBleed
+
+
+*%===Natural Tracing Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType HPNaturalTracing *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *PageSize B4.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType HPNaturalTracing
+*UIConstraints: *MediaType HPNaturalTracing *PageSize EnvARCHD.FullBleed
+
+
+
+*%===Translucent Bond====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType TranslucentBond *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType TranslucentBond
+*UIConstraints: *PageSize B4.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType TranslucentBond
+*UIConstraints: *MediaType TranslucentBond *PageSize EnvARCHD.FullBleed
+
+
+*%===Vellum====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType Vellum *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType Vellum
+*UIConstraints: *PageSize B4.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType Vellum
+*UIConstraints: *MediaType Vellum *PageSize EnvARCHD.FullBleed
+
+
+*%===Photo Matte Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType PhtoMatt *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType PhtoMatt
+*UIConstraints: *PageSize B4.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType PhtoMatt
+*UIConstraints: *MediaType PhtoMatt *PageSize EnvARCHD.FullBleed
+
+
+*%===Transparent/Clear Film====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType TranspClearFilm *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *PageSize B4.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType TranspClearFilm
+*UIConstraints: *MediaType TranspClearFilm *PageSize EnvARCHD.FullBleed
+
+*%===Matte Film====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType MatteFilm *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType MatteFilm
+*UIConstraints: *PageSize B4.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType MatteFilm
+*UIConstraints: *MediaType MatteFilm *PageSize EnvARCHD.FullBleed
+
+
+*%===Backlit Material====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType BklitMaterial *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType BklitMaterial
+*UIConstraints: *PageSize B4.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType BklitMaterial
+*UIConstraints: *MediaType BklitMaterial *PageSize EnvARCHD.FullBleed
+
+*%===Adhesive Paper====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType Adhesive *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType Adhesive
+*UIConstraints: *PageSize B4.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType Adhesive
+*UIConstraints: *MediaType Adhesive *PageSize EnvARCHD.FullBleed
+
+*%===Adhesive Polypropylene Satin====
+*UIConstraints: *PageSize Letter.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize 27x39.FullBleed
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *PageSize B4.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *MediaType AdhesivePolypSatin
+*UIConstraints: *MediaType AdhesivePolypSatin *PageSize EnvARCHD.FullBleed
+
+*% =============== Max Detail over Media Type Constraints ===============
+*UIConstraints:  *MediaType HPBrhtWhtInkjetBond *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPBrhtWhtInkjetBond
+*UIConstraints:  *MediaType HPUniInkjetBond *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPUniInkjetBond
+*UIConstraints:  *MediaType HPRecycledBond *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPRecycledBond
+*UIConstraints:  *MediaType HPCoated *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPCoated
+*UIConstraints:  *MediaType HPSuperHvwPlus *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPSuperHvwPlus
+*UIConstraints:  *MediaType HPHvwCoated *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPHvwCoated
+*UIConstraints:  *MediaType Plain *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType Plain
+*UIConstraints:  *MediaType Coated *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType Coated
+*UIConstraints:  *MediaType HeavyweightCoated *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HeavyweightCoated
+*UIConstraints:  *MediaType HPNaturalTracing *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPNaturalTracing
+*UIConstraints:  *MediaType TranslucentBond *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType TranslucentBond
+*UIConstraints:  *MediaType Vellum *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType Vellum
+*UIConstraints:  *MediaType HPUniIDGlsPhto *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType HPUniIDGlsPhto
+*UIConstraints:  *MediaType PhtoMatt *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType PhtoMatt
+*UIConstraints:  *MediaType TranspClearFilm *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType TranspClearFilm
+*UIConstraints:  *MediaType MatteFilm *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType MatteFilm
+*UIConstraints:  *MediaType Adhesive *HPMaximumDetail True
+*UIConstraints:  *HPMaximumDetail True *MediaType Adhesive
+
+*%================ Economode over Media Type Constraint==================
+*UIConstraints: *MediaType HPSuperHvwPlus *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPSuperHvwPlus
+*UIConstraints: *MediaType HPHvwCoated *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPHvwCoated
+*UIConstraints: *MediaType HeavyweightCoated *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HeavyweightCoated
+*UIConstraints: *MediaType HPUniIDGlsPhto *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPUniIDGlsPhto
+*UIConstraints: *MediaType HPUniIDSatinPhto *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPUniIDSatinPhto
+*UIConstraints: *MediaType HPPremIDPhtoGls *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPPremIDPhtoGls
+*UIConstraints: *MediaType HPPremIDPhtoSatn *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPPremIDPhtoSatn
+*UIConstraints: *MediaType HPPremGlsPhoto *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPPremGlsPhoto
+*UIConstraints: *MediaType HPPremStnPhoto *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPPremStnPhoto
+*UIConstraints: *MediaType HPUniGls *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPUniGls
+*UIConstraints: *MediaType HPUniSatin *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType HPUniSatin
+*UIConstraints: *MediaType PhtoGls *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType PhtoGls
+*UIConstraints: *MediaType PhtoSemiGlsSatn *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType PhtoSemiGlsSatn
+*UIConstraints: *MediaType PhtoMatt *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType PhtoMatt
+*UIConstraints: *MediaType BklitMaterial *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType BklitMaterial
+*UIConstraints: *MediaType Adhesive *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType Adhesive
+*UIConstraints: *MediaType AdhesiveVinyl *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType AdhesiveVinyl
+*UIConstraints: *MediaType AdhesivePolypMatt *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType AdhesivePolypMatt
+*UIConstraints: *MediaType AdhesivePolypSatin *HPEconoMode True
+*UIConstraints: *HPEconoMode True *MediaType AdhesivePolypSatin
+
+*% =============== Output Mode over Max Detail Constraints ===============
+*UIConstraints: *OutputMode Normal *HPMaximumDetail True
+*UIConstraints: *HPMaximumDetail True *OutputMode Normal
+
+
+*% =============== Output Mode & Econo Mode Constraints ===============
+*UIConstraints: *OutputMode Normal *HPEconoMode True
+*UIConstraints: *HPEconoMode True *OutputMode Normal
+*UIConstraints: *OutputMode Best *HPEconoMode True
+*UIConstraints: *HPEconoMode True *OutputMode Best
+
+
+*% =============== Crop Mark over (Save Roll & Manuel Feed) Constraints ===============
+*UIConstraints: *HPCropLines True *HPInkedArea True
+*UIConstraints: *HPInkedArea True *HPCropLines True
+
+
+*% =============== Bordless over (Crop Mark, Save Roll & Auto Cutter) Constraints ===============
+*UIConstraints: *HPImageLayout automatic-layout *HPCropLines True
+*UIConstraints: *HPCropLines True *HPImageLayout automatic-layout
+*UIConstraints: *HPImageLayout automatic-layout *HPInkedArea True
+*UIConstraints: *HPInkedArea True *HPImageLayout automatic-layout
+*UIConstraints: *HPImageLayout automatic-layout *HPDisableAutoCutter True
+*UIConstraints: *HPDisableAutoCutter True *HPImageLayout automatic-layout
+*UIConstraints: *HPImageLayout manual-layout *HPCropLines True
+*UIConstraints: *HPCropLines True *HPImageLayout manual-layout
+*UIConstraints: *HPImageLayout manual-layout *HPInkedArea True
+*UIConstraints: *HPInkedArea True *HPImageLayout manual-layout
+*UIConstraints: *HPImageLayout manual-layout *HPDisableAutoCutter True
+*UIConstraints: *HPDisableAutoCutter True *HPImageLayout manual-layout
+*UIConstraints: *HPImageLayout automatic-layout *HPCropLines True
+*UIConstraints: *HPCropLines True *HPImageLayout automatic-layout
+*UIConstraints: *HPImageLayout automatic-layout *HPInkedArea True
+*UIConstraints: *HPInkedArea True *HPImageLayout automatic-layout
+*UIConstraints: *HPImageLayout automatic-layout *HPDisableAutoCutter True
+*UIConstraints: *HPDisableAutoCutter True *HPImageLayout automatic-layout
+
+
+*% =============== Manual Feed over (Bordless, Save Roll, Auto Cutter & Crop Mark) constraints ===============
+*UIConstraints: *InputSlot ManualFeed *HPImageLayout automatic-layout
+*UIConstraints: *HPImageLayout automatic-layout *InputSlot ManualFeed
+*UIConstraints: *InputSlot ManualFeed *HPImageLayout manual-layout
+*UIConstraints: *HPImageLayout manual-layout *InputSlot ManualFeed
+*UIConstraints: *InputSlot ManualFeed *HPImageLayout automatic-layout
+*UIConstraints: *HPImageLayout automatic-layout *InputSlot ManualFeed
+*UIConstraints: *InputSlot ManualFeed *HPInkedArea True
+*UIConstraints: *HPInkedArea True *InputSlot ManualFeed
+*UIConstraints: *InputSlot ManualFeed *HPDisableAutoCutter True
+*UIConstraints: *HPDisableAutoCutter True *InputSlot ManualFeed
+*UIConstraints: *InputSlot ManualFeed *HPCropLines True
+*UIConstraints: *HPCropLines True *InputSlot ManualFeed
+
+
+*% =============== Auto Rotate over (Save Roll & Manual Feed) constraints ===============
+*UIConstraints: *HPAutorotate True *HPInkedArea True
+*UIConstraints: *HPInkedArea True *HPAutorotate True
+*UIConstraints: *HPAutorotate True *InputSlot ManualFeed
+*UIConstraints: *InputSlot ManualFeed *HPAutorotate True
+*UIConstraints: *HPAutorotate True *HPTransverse True
+*UIConstraints: *HPTransverse True *HPAutorotate True
+
+*% =============== PaperSize with Margins && OverSize constraints ===============
+*UIConstraints: *PageSize Letter *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize Letter
+*UIConstraints: *PageSize Legal *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize Legal
+*UIConstraints: *PageSize Tabloid *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize Tabloid
+*UIConstraints: *PageSize AnsiC *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize AnsiC
+*UIConstraints: *PageSize AnsiD *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize AnsiD
+*UIConstraints: *PageSize AnsiE *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize AnsiE
+*UIConstraints: *PageSize 28x40 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 28x40
+*UIConstraints: *PageSize ARCHA *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ARCHA
+*UIConstraints: *PageSize ARCHB *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ARCHB
+*UIConstraints: *PageSize ARCHE *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ARCHE
+*UIConstraints: *PageSize 30x42 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 30x42
+*UIConstraints: *PageSize 26x38 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 26x38
+*UIConstraints: *PageSize 27x39 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 27x39
+*UIConstraints: *PageSize A4 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A4
+*UIConstraints: *PageSize A3 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A3
+*UIConstraints: *PageSize A2 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A2
+*UIConstraints: *PageSize A1 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A1
+*UIConstraints: *PageSize A0 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A0
+*UIConstraints: *PageSize ISOB4 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB4
+*UIConstraints: *PageSize ISOB3 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB3
+*UIConstraints: *PageSize ISOB2 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB2
+*UIConstraints: *PageSize ISOB1 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB1
+*UIConstraints: *PageSize B4 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B4
+*UIConstraints: *PageSize B3 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B3
+*UIConstraints: *PageSize B2 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B2
+*UIConstraints: *PageSize B1 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B1
+
+*UIConstraints: *PageSize Env13x19 *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize Env13x19
+*UIConstraints: *PageSize EnvARCHC *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize EnvARCHC
+*UIConstraints: *PageSize EnvARCHD *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize EnvARCHD
+*%===%Sheet paperSize=====
+*UIConstraints: *PageSize LetterSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize LetterSH
+*UIConstraints: *PageSize LegalSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize LegalSH
+*UIConstraints: *PageSize TabloidSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize TabloidSH
+*UIConstraints: *PageSize AnsiCSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize AnsiCSH
+*UIConstraints: *PageSize AnsiDSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize AnsiDSH
+*UIConstraints: *PageSize AnsiESH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize AnsiESH
+*UIConstraints: *PageSize 28x40SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 28x40SH
+*UIConstraints: *PageSize ARCHASH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ARCHASH
+*UIConstraints: *PageSize ARCHBSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ARCHBSH
+*UIConstraints: *PageSize ARCHESH *HPImageLayout oversize-layout
+*UIConstraints: *PageSize 30x42SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 30x42SH
+*UIConstraints: *PageSize 26x38SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 26x38SH
+*UIConstraints: *PageSize 27x39SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize 27x39SH
+*UIConstraints: *PageSize A4SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A4SH
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A3SH
+*UIConstraints: *PageSize A2SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A2SH
+*UIConstraints: *PageSize A1SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A1SH
+*UIConstraints: *PageSize A0SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize A0SH
+*UIConstraints: *PageSize ISOB4SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB4SH
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB3SH
+*UIConstraints: *PageSize ISOB2SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB2SH
+*UIConstraints: *PageSize ISOB1SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize ISOB1SH
+*UIConstraints: *PageSize B4SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B4SH
+*UIConstraints: *PageSize B3SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B3SH
+*UIConstraints: *PageSize B2SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B2SH
+*UIConstraints: *PageSize B1SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize B1SH
+*UIConstraints: *PageSize Env13x19SH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize Env13x19SH
+*UIConstraints: *PageSize EnvARCHCSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize EnvARCHCSH
+*UIConstraints: *PageSize EnvARCHDSH *HPImageLayout oversize-layout
+*UIConstraints: *HPImageLayout oversize-layout *PageSize EnvARCHDSH
+
+*% ==== PaperSize over Margins && clip-layout constraints ===
+*UIConstraints: *PageSize Letter *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize Letter
+*UIConstraints: *PageSize Legal *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize Legal
+*UIConstraints: *PageSize Tabloid *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize Tabloid
+*UIConstraints: *PageSize AnsiC *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize AnsiC
+*UIConstraints: *PageSize AnsiD *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize AnsiD
+*UIConstraints: *PageSize AnsiE *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize AnsiE
+*UIConstraints: *PageSize 28x40 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 28x40
+*UIConstraints: *PageSize ARCHA *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ARCHA
+*UIConstraints: *PageSize ARCHB *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ARCHB
+*UIConstraints: *PageSize ARCHE *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ARCHE
+*UIConstraints: *PageSize 30x42 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 30x42
+*UIConstraints: *PageSize 26x38 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 26x38
+*UIConstraints: *PageSize 27x39 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 27x39
+*UIConstraints: *PageSize A4 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A4
+*UIConstraints: *PageSize A3 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A3
+*UIConstraints: *PageSize A2 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A2
+*UIConstraints: *PageSize A1 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A1
+*UIConstraints: *PageSize A0 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A0
+*UIConstraints: *PageSize ISOB4 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB4
+*UIConstraints: *PageSize ISOB3 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB3
+*UIConstraints: *PageSize ISOB2 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB2
+*UIConstraints: *PageSize ISOB1 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB1
+*UIConstraints: *PageSize B4 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B4
+*UIConstraints: *PageSize B3 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B3
+*UIConstraints: *PageSize B2 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B2
+*UIConstraints: *PageSize B1 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B1
+*UIConstraints: *PageSize Env13x19 *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize Env13x19
+*UIConstraints: *PageSize EnvARCHC *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize EnvARCHC
+*UIConstraints: *PageSize EnvARCHD *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize EnvARCHD
+*%===%Sheet paperSize=====
+*UIConstraints: *PageSize LetterSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize LetterSH
+*UIConstraints: *PageSize LegalSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize LegalSH
+*UIConstraints: *PageSize TabloidSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize TabloidSH
+*UIConstraints: *PageSize AnsiCSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize AnsiCSH
+*UIConstraints: *PageSize AnsiDSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize AnsiDSH
+*UIConstraints: *PageSize AnsiESH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize AnsiESH
+*UIConstraints: *PageSize 28x40SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 28x40SH
+*UIConstraints: *PageSize ARCHASH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ARCHASH
+*UIConstraints: *PageSize ARCHBSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ARCHBSH
+*UIConstraints: *PageSize ARCHESH *HPImageLayout clip-layout
+*UIConstraints: *PageSize 30x42SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 30x42SH
+*UIConstraints: *PageSize 26x38SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 26x38SH
+*UIConstraints: *PageSize 27x39SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize 27x39SH
+*UIConstraints: *PageSize A4SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A4SH
+*UIConstraints: *HPImageLayout clip-layout *PageSize A3SH
+*UIConstraints: *PageSize A2SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A2SH
+*UIConstraints: *PageSize A1SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A1SH
+*UIConstraints: *PageSize A0SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize A0SH
+*UIConstraints: *PageSize ISOB4SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB4SH
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB3SH
+*UIConstraints: *PageSize ISOB2SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB2SH
+*UIConstraints: *PageSize ISOB1SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize ISOB1SH
+*UIConstraints: *PageSize B4SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B4SH
+*UIConstraints: *PageSize B3SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B3SH
+*UIConstraints: *PageSize B2SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B2SH
+*UIConstraints: *PageSize B1SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize B1SH
+*UIConstraints: *PageSize Env13x19SH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize Env13x19SH
+*UIConstraints: *PageSize EnvARCHCSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize EnvARCHCSH
+*UIConstraints: *PageSize EnvARCHDSH *HPImageLayout clip-layout
+*UIConstraints: *HPImageLayout clip-layout *PageSize EnvARCHDSH
+
+*% =============== Borderless PaperSize && standard-layout ===============
+*UIConstraints: *PageSize Letter.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize Letter.FullBleed
+*UIConstraints: *PageSize Legal.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize Legal.FullBleed
+*UIConstraints: *PageSize Tabloid.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize Tabloid.FullBleed
+*UIConstraints: *PageSize AnsiC.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize AnsiC.FullBleed
+*UIConstraints: *PageSize AnsiD.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize AnsiD.FullBleed
+*UIConstraints: *PageSize AnsiE.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize AnsiE.FullBleed
+*UIConstraints: *PageSize 28x40.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize 28x40.FullBleed
+*UIConstraints: *PageSize ARCHA.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize ARCHA.FullBleed
+*UIConstraints: *PageSize ARCHB.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize ARCHB.FullBleed
+*UIConstraints: *PageSize ARCHE.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize ARCHE.FullBleed
+*UIConstraints: *PageSize 30x42.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize 30x42.FullBleed
+*UIConstraints: *PageSize 26x38.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize 26x38.FullBleed
+*UIConstraints: *PageSize 27x39.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize 27x39.FullBleed
+*UIConstraints: *HPImageLayout standard-layout *PageSize A4.FullBleed
+*UIConstraints: *PageSize A3.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize A3.FullBleed
+*UIConstraints: *PageSize A2.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize A2.FullBleed
+*UIConstraints: *PageSize A1.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize A1.FullBleed
+*UIConstraints: *PageSize A0.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize A0.FullBleed
+*UIConstraints: *PageSize ISOB4.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize ISOB4.FullBleed
+*UIConstraints: *PageSize ISOB3.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize ISOB3.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize ISOB2.FullBleed
+*UIConstraints: *PageSize ISOB2.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize ISOB1.FullBleed
+*UIConstraints: *PageSize ISOB1.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *PageSize B4.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize B4.FullBleed
+*UIConstraints: *PageSize B3.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize B3.FullBleed
+*UIConstraints: *PageSize B2.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize B2.FullBleed
+*UIConstraints: *PageSize B1.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize B1.FullBleed
+*UIConstraints: *PageSize Env13x19.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize Env13x19.FullBleed
+*UIConstraints: *PageSize EnvARCHC.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize EnvARCHC.FullBleed
+*UIConstraints: *PageSize EnvARCHD.FullBleed *HPImageLayout standard-layout
+*UIConstraints: *HPImageLayout standard-layout *PageSize EnvARCHD.FullBleed
+
+
+*% =============== General Options ===============
+*OpenGroup: HPGeneralOptions/General
+
+
+*% =============== Paper Handling ===============
+*OpenUI *PageSize: PickOne
+*OrderDependency: 30.0 AnySetup *PageSize
+*DefaultPageSize: A4
+
+*% =============== Page Sizes Roll ===============
+*PageSize Letter/US Letter: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize Legal/US Legal: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize Tabloid/Tabloid: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiC/C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiD/D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiE/E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 28x40/F: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHA/Arch A: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHB/Arch B: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHE/Arch E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 30x42/Arch E1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 26x38/Arch E2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 27x39/Arch E3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A4/A4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A3/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A2/A2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A1/A1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A0/A0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB4/B4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB3/B3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB2/B2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB1/B1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B4/JB4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B3/JB3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B2/JB2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B1/JB1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize Env13x19/Super B/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize EnvARCHC/Super C/A2, Arch C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize EnvARCHD/Super D/A1, Arch D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*End
+
+*% =============== Sheet Sizes ===============
+*PageSize LetterSH/US Letter on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize LegalSH/US Legal on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize TabloidSH/Tabloid on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiCSH/C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiDSH/D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiESH/E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 28x40SH/F on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHASH/Arch A on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHBSH/Arch B on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHESH/Arch E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 30x42SH/Arch E1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 26x38SH/Arch E2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 27x39SH/Arch E3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A4SH/A4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A3SH/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A2SH/A2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A1SH/A1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A0SH/A0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB4SH/B4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB3SH/B3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB2SH/B2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB1SH/B1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B4SH/JB4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B3SH/JB3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B2SH/JB2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B1SH/JB1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize Env13x19SH/Super B/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize EnvARCHCSH/Super C/A2, Arch C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize EnvARCHDSH/Super D/A1, Arch D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*End
+
+
+*% =============== No margins paper ===============
+*PageSize Letter.FullBleed/US Letter no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize Legal.FullBleed/US Legal no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize Tabloid.FullBleed/Tabloid no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiC.FullBleed/C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiD.FullBleed/D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiE.FullBleed/E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 28x40.FullBleed/F no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHA.FullBleed/Arch A no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHB.FullBleed/Arch B no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ARCHE.FullBleed/Arch E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 30x42.FullBleed/Arch E1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 26x38.FullBleed/Arch E2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize 27x39.FullBleed/Arch E3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A4.FullBleed/A4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A3.FullBleed/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A2.FullBleed/A2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A1.FullBleed/A1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize A0.FullBleed/A0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB4.FullBleed/B4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB3.FullBleed/B3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB2.FullBleed/B2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize ISOB1.FullBleed/B1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B4.FullBleed/JB4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B3.FullBleed/JB3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B2.FullBleed/JB2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize B1.FullBleed/JB1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize Env13x19.FullBleed/Super B/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize EnvARCHC.FullBleed/Super C/A2, Arch C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize EnvARCHD.FullBleed/Super D/A1, Arch D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*End
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: A4
+
+*% =============== Page Region Roll ===============
+*PageRegion Letter/US Letter: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion Legal/US Legal: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion Tabloid/Tabloid: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiE/E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 28x40/F: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHA/Arch A: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHB/Arch B: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiC/C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiD/D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHE/Arch E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 30x42/Arch E1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 26x38/Arch E2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 27x39/Arch E3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A4/A4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A3/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A2/A2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A1/A1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A0/A0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB4/B4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB3/B3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB2/B2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB1/B1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B4/JB4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B3/JB3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B2/JB2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B1/JB1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion Env13x19/Super B/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion EnvARCHC/Super C/A2, Arch C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion EnvARCHD/Super D/A1, Arch D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*End
+
+*% =============== Sheet Sizes ===============
+*PageRegion LetterSH/US Letter on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion LegalSH/US Legal on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion TabloidSH/Tabloid on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiCSH/C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiDSH/D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiESH/E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 28x40SH/F on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHASH/Arch A on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHBSH/Arch B on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHESH/Arch E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 30x42SH/Arch E1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 26x38SH/Arch E2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 27x39SH/Arch E3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A4SH/A4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A3SH/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A2SH/A2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A1SH/A1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A0SH/A0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB4SH/B4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB3SH/B3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB2SH/B2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB1SH/B1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B4SH/JB4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B3SH/JB3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B2SH/JB2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B1SH/JB1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion Env13x19SH/Super B/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion EnvARCHCSH/Super C/A2, Arch C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion EnvARCHDSH/Super D/A1, Arch D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 62 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*End
+
+
+*% =============== No margins paper ===============
+*PageRegion Letter.FullBleed/US Letter no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion Legal.FullBleed/US Legal no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion Tabloid.FullBleed/Tabloid no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiC.FullBleed/C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiD.FullBleed/D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiE.FullBleed/E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 28x40.FullBleed/F no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHA.FullBleed/Arch A no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHB.FullBleed/Arch B no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ARCHE.FullBleed/Arch E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 30x42.FullBleed/Arch E1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 26x38.FullBleed/Arch E2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion 27x39.FullBleed/Arch E3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A4.FullBleed/A4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A3.FullBleed/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A2.FullBleed/A2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A1.FullBleed/A1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion A0.FullBleed/A0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB4.FullBleed/B4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB3.FullBleed/B3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB2.FullBleed/B2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion ISOB1.FullBleed/B1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B4.FullBleed/JB4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B3.FullBleed/JB3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B2.FullBleed/JB2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion B1.FullBleed/JB1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion Env13x19.FullBleed/Super B/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion EnvARCHC.FullBleed/Super C/A2, Arch C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion EnvARCHD.FullBleed/Super D/A1, Arch D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice"
+*End
+*CloseUI: *PageRegion
+
+
+*% The following entries provide information about specific paper keywords.
+*DefaultImageableArea: Letter
+*ImageableArea Letter/US Letter: "14 14 598 778"
+*ImageableArea Legal/US Legal: "14 14 598 994"
+*ImageableArea Tabloid/Tabloid: "14 14 778 1210"
+*ImageableArea AnsiC/C: "14 14 1210 1570"
+*ImageableArea AnsiD/D: "14 14 1570 2434"
+*ImageableArea AnsiE/E: "14 14 2434 3154"
+*ImageableArea 28x40/F: "14 14 2002 2866"
+*ImageableArea ARCHA/Arch A: "14 14 634 850"
+*ImageableArea ARCHB/Arch B: "14 14 850 1282"
+*ImageableArea ARCHE/Arch E: "14 14 2578 3442"
+*ImageableArea 30x42/Arch E1: "14 14 2146 3010"
+*ImageableArea 26x38/Arch E2: "14 14 1858 2722"
+*ImageableArea 27x39/Arch E3: "14 14 1930 2794"
+*ImageableArea A4/A4: "14 14 581 828"
+*ImageableArea A3/A3: "14 14 828 1177"
+*ImageableArea A2/A2: "14 14 1177 1670"
+*ImageableArea A1/A1: "14 14 1670 2370"
+*ImageableArea A0/A0: "14 14 2370 3356"
+*ImageableArea ISOB4/B4: "14 14 695 987"
+*ImageableArea ISOB3/B3: "14 14 987 1403"
+*ImageableArea ISOB2/B2: "14 14 1403 1990"
+*ImageableArea ISOB1/B1: "14 14 1990 2821"
+*ImageableArea B4/JB4: "14 14 715 1018"
+*ImageableArea B3/JB3: "14 14 1018 1446"
+*ImageableArea B2/JB2: "14 14 1446 2050"
+*ImageableArea B1/JB1: "14 14 2050 2906"
+*ImageableArea Env13x19/Super B/A3: "14 14 922 1354"
+*ImageableArea EnvARCHC/Super C/A2, Arch C: "14 14 1282 1714"
+*ImageableArea EnvARCHD/Super D/A1, Arch D: "14 14 1714 2578"
+*ImageableArea LetterSH/US Letter on sheet media: "14 62 598 778"
+*ImageableArea LegalSH/US Legal on sheet media: "14 62 598 994"
+*ImageableArea TabloidSH/Tabloid on sheet media: "14 62 778 1210"
+*ImageableArea AnsiCSH/C on sheet media: "14 62 1210 1570"
+*ImageableArea AnsiDSH/D on sheet media: "14 62 1570 2434"
+*ImageableArea AnsiESH/E on sheet media: "14 62 2434 3154"
+*ImageableArea 28x40SH/F on sheet media: "14 62 2002 2866"
+*ImageableArea ARCHASH/Arch A on sheet media: "14 62 634 850"
+*ImageableArea ARCHBSH/Arch B on sheet media: "14 62 850 1282"
+*ImageableArea ARCHESH/Arch E on sheet media: "14 62 2578 3442"
+*ImageableArea 30x42SH/Arch E1 on sheet media: "14 62 2146 3010"
+*ImageableArea 26x38SH/Arch E2 on sheet media: "14 62 1858 2722"
+*ImageableArea 27x39SH/Arch E3 on sheet media: "14 62 1930 2794"
+*ImageableArea A4SH/A4 on sheet media: "14 62 581 828"
+*ImageableArea A3SH/A3 on sheet media: "14 62 828 1177"
+*ImageableArea A2SH/A2 on sheet media: "14 62 1177 1670"
+*ImageableArea A1SH/A1 on sheet media: "14 62 1670 2370"
+*ImageableArea A0SH/A0 on sheet media: "14 62 2370 3356"
+*ImageableArea ISOB4SH/B4 on sheet media: "14 62 695 987"
+*ImageableArea ISOB3SH/B3 on sheet media: "14 62 987 1403"
+*ImageableArea ISOB2SH/B2 on sheet media: "14 62 1403 1990"
+*ImageableArea ISOB1SH/B1 on sheet media: "14 62 1990 2821"
+*ImageableArea B4SH/JB4 on sheet media: "14 62 715 1018"
+*ImageableArea B3SH/JB3 on sheet media: "14 62 1018 1446"
+*ImageableArea B2SH/JB2 on sheet media: "14 62 1446 2050"
+*ImageableArea B1SH/JB1 on sheet media: "14 62 2050 2906"
+*ImageableArea Env13x19SH/Super B/A3 on sheet media: "14 62 922 1354"
+*ImageableArea EnvARCHCSH/Super C/A2, Arch C on sheet media: "14 62 1282 1714"
+*ImageableArea EnvARCHDSH/Super D/A1, Arch D on sheet media: "14 62 1714 2578"
+*ImageableArea Letter.FullBleed/US Letter no margins:"0 0 612 792"
+*ImageableArea Legal.FullBleed/US Legal no margins: "0 0 612 1008"
+*ImageableArea Tabloid.FullBleed/Tabloid no margins:"0 0 792 1224"
+*ImageableArea AnsiC.FullBleed/C no margins: "0 0 1224 1584"
+*ImageableArea AnsiD.FullBleed/D no margins: "0 0 1584 2448"
+*ImageableArea AnsiE.FullBleed/E no margins: "0 0 2448 3168"
+*ImageableArea 28x40.FullBleed/F no margins: "0 0 2016 2880"
+*ImageableArea ARCHA.FullBleed/Arch A no margins: "0 0 648 864"
+*ImageableArea ARCHB.FullBleed/Arch B no margins: "0 0 864 1296"
+*ImageableArea ARCHE.FullBleed/Arch E no margins: "0 0 2592 3456"
+*ImageableArea 30x42.FullBleed/Arch E1 on sheet media: "0 0 2160 3024"
+*ImageableArea 26x38.FullBleed/Arch E2 on sheet media: "0 0 1872 2736"
+*ImageableArea 27x39.FullBleed/Arch E3 on sheet media: "0 0 1944 2808"
+*ImageableArea A4.FullBleed/A4 no margins: "0 0 595 842"
+*ImageableArea A3.FullBleed/A3 no margins: "0 0 842 1191"
+*ImageableArea A2.FullBleed/A2 no margins: "0 0 1191 1684"
+*ImageableArea A1.FullBleed/A1 no margins: "0 0 1684 2384"
+*ImageableArea A0.FullBleed/A0 no margins: "0 0 2384 3370"
+*ImageableArea ISOB4.FullBleed/B4 no margins: "0 0 709 1001"
+*ImageableArea ISOB3.FullBleed/B3 no margins: "0 0 1001 1417"
+*ImageableArea ISOB2.FullBleed/B2 no margins: "0 0 1417 2004"
+*ImageableArea ISOB1.FullBleed/B1 no margins: "0 0 2004 2835"
+*ImageableArea B4.FullBleed/JB4 no margins: "0 0 729 1032"
+*ImageableArea B3.FullBleed/JB3 no margins: "0 0 1032 1460"
+*ImageableArea B2.FullBleed/JB2 no margins: "0 0 1460 2064"
+*ImageableArea B1.FullBleed/JB1 no margins: "0 0 2064 2920"
+*ImageableArea Env13x19.FullBleed/Super B/A3 no margins: "0 0 936 1368"
+*ImageableArea EnvARCHC.FullBleed/Super C/A2, Arch C no margins: "0 0 1296 1728"
+*ImageableArea EnvARCHD.FullBleed/Super D/A1, Arch D no margins: "0 0 1728 2592"
+
+*% These provide the physical dimensions of the paper (by keyword)
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/US Letter: "612 792"
+*PaperDimension Legal/US Legal: "612 1008"
+*PaperDimension Tabloid/Tabloid: "792 1224"
+*PaperDimension AnsiC/C: "1224 1584"
+*PaperDimension AnsiD/D: "1584 2448"
+*PaperDimension AnsiE/E: "2448 3168"
+*PaperDimension 28x40/F: "2016 2880"
+*PaperDimension ARCHA/Arch A: "648 864"
+*PaperDimension ARCHB/Arch B: "864 1296"
+*PaperDimension ARCHE/Arch E: "2592 3456"
+*PaperDimension 30x42/Arch E1: "2160 3024"
+*PaperDimension 26x38/Arch E2: "1872 2736"
+*PaperDimension 27x39/Arch E3: "1944 2808"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A3/A3: "842 1191"
+*PaperDimension A2/A2: "1191 1684"
+*PaperDimension A1/A1: "1684 2384"
+*PaperDimension A0/A0: "2384 3370"
+*PaperDimension ISOB4/B4: "709 1001"
+*PaperDimension ISOB3/B3: "1001 1417"
+*PaperDimension ISOB2/B2: "1417 2004"
+*PaperDimension ISOB1/B1: "2004 2835"
+*PaperDimension B4/JB4: "729 1032"
+*PaperDimension B3/JB3: "1032 1460"
+*PaperDimension B2/JB2: "1460 2064"
+*PaperDimension B1/JB1: "2064 2920"
+*PaperDimension Env13x19/Super B/A3: "936 1368"
+*PaperDimension EnvARCHC/Super C/A2, Arch C: "1296 1728"
+*PaperDimension EnvARCHD/Super D/A1, Arch D: "1728 2592"
+*PaperDimension LetterSH/US Letter on sheet media: "612 792"
+*PaperDimension LegalSH/US Legal on sheet media: "612 1008"
+*PaperDimension TabloidSH/Tabloid on sheet media: "792 1224"
+*PaperDimension AnsiCSH/C on sheet media: "1224 1584"
+*PaperDimension AnsiDSH/D: "1584 2448"
+*PaperDimension AnsiESH/E on sheet media: "2448 3168"
+*PaperDimension 28x40SH/F on sheet media: "2016 2880"
+*PaperDimension ARCHASH/Arch A on sheet media: "648 864"
+*PaperDimension ARCHBSH/Arch B on sheet media: "864 1296"
+*PaperDimension ARCHESH/Arch E on sheet media: "2592 3456"
+*PaperDimension 30x42SH/Arch E1 on sheet media: "2160 3024"
+*PaperDimension 26x38SH/Arch E2 on sheet media: "1872 2736"
+*PaperDimension 27x39SH/Arch E3 on sheet media: "1944 2808"
+*PaperDimension A4SH/A4 on sheet media: "595 842"
+*PaperDimension A3SH/A3 on sheet media: "842 1191"
+*PaperDimension A2SH/A2 on sheet media: "1191 1684"
+*PaperDimension A1SH/A1 on sheet media: "1684 2384"
+*PaperDimension A0SH/A0 on sheet media: "2384 3370"
+*PaperDimension ISOB4SH/B4 on sheet media: "709 1001"
+*PaperDimension ISOB3SH/B3 on sheet media: "1001 1417"
+*PaperDimension ISOB2SH/B2 on sheet media: "1417 2004"
+*PaperDimension ISOB1SH/B1 on sheet media: "2004 2835"
+*PaperDimension B4SH/JB4 on sheet media: "729 1032"
+*PaperDimension B3SH/JB3 on sheet media: "1032 1460"
+*PaperDimension B2SH/JB2 on sheet media: "1460 2064"
+*PaperDimension B1SH/JB1 on sheet media: "2064 2920"
+*PaperDimension Env13x19SH/Super B/A3 on sheet media: "936 1368"
+*PaperDimension EnvARCHCSH/Super C/A2, Arch C on sheet media: "1296 1728"
+*PaperDimension EnvARCHDSH/Super D/A1, Arch D on sheet media: "1728 2592"
+*PaperDimension Letter.FullBleed/US Letter no margins: "612 792"
+*PaperDimension Legal.FullBleed/US Legal no margins: "612 1008"
+*PaperDimension Tabloid.FullBleed/Tabloid no margins: "792 1224"
+*PaperDimension AnsiC.FullBleed/C no margins: "1224 1584"
+*PaperDimension AnsiD.FullBleed/D: "1584 2448"
+*PaperDimension AnsiE.FullBleed/E no margins: "2448 3168"
+*PaperDimension 28x40.FullBleed/F no margins: "2016 2880"
+*PaperDimension ARCHA.FullBleed/Arch A no margins: "648 864"
+*PaperDimension ARCHB.FullBleed/Arch B no margins: "864 1296"
+*PaperDimension ARCHE.FullBleed/Arch E no margins: "2592 3456"
+*PaperDimension 30x42.FullBleed/Arch E1 no margins: "2160 3024"
+*PaperDimension 26x38.FullBleed/Arch E2 no margins: "1872 2736"
+*PaperDimension 27x39.FullBleed/Arch E3 no margins: "1944 2808"
+*PaperDimension A4.FullBleed/A4 no margins: "595 842"
+*PaperDimension A3.FullBleed/A3 no margins: "842 1191"
+*PaperDimension A2.FullBleed/A2 no margins: "1191 1684"
+*PaperDimension A1.FullBleed/A1 no margins: "1684 2384"
+*PaperDimension A0.FullBleed/A0 no margins: "2384 3370"
+*PaperDimension ISOB4.FullBleed/B4 no margins: "709 1001"
+*PaperDimension ISOB3.FullBleed/B3 no margins: "1001 1417"
+*PaperDimension ISOB2.FullBleed/B2 no margins: "1417 2004"
+*PaperDimension ISOB1.FullBleed/B1 no margins: "2004 2835"
+*PaperDimension B4.FullBleed/JB4 no margins: "729 1032"
+*PaperDimension B3.FullBleed/JB3 no margins: "1032 1460"
+*PaperDimension B2.FullBleed/JB2 no margins: "1460 2064"
+*PaperDimension B1.FullBleed/JB1 no margins: "2064 2920"
+*PaperDimension Env13x19.FullBleed/Super B/A3 no margins: "936 1368"
+*PaperDimension EnvARCHC.FullBleed/Super C/A2, Arch C no margins: "1296 1728"
+*PaperDimension EnvARCHD.FullBleed/Super D/A1, Arch D no margins: "1728 2592"
+
+
+*% =============== Input Tray ===============
+*RequiresPageRegion All: True
+
+
+*% =============== Custom Page Sizes ===============
+*MaxMediaWidth: "2592"
+*MaxMediaHeight: "257953"
+*HWMargins: 0 0 0 0
+*ADUseHWMargins: True
+*ParamCustomPageSize Width/Width: 1 points 216 3186
+*ParamCustomPageSize Height/Height: 2 points 396 257953
+*ParamCustomPageSize WidthOffset/WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset/HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation/Orientation: 5 int 1 1
+*NonUIOrderDependency: 30.0 AnySetup *CustomPageSize
+*CustomPageSize True: "
+   pop pop pop   % discard offsets
+    3 dict begin
+    /PageSize [ 4 -2 roll ] def
+    /ImagingBBox null def
+    currentdict end setpagedevice
+  /HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+  <<>> setpagedevice"
+*End
+
+
+*% =============== Min media size ===============
+*MinMediaWidth: "216"
+*MinMediaHeight: "396"
+
+
+*% =============== Paper Source ===============
+*OpenUI *InputSlot/Paper Source is: PickOne
+*OrderDependency: 50.0 AnySetup *InputSlot
+*DefaultInputSlot: AutoSelect
+
+*InputSlot AutoSelect/Printer Auto Select: "
+    /HPDict /ProcSet findresource /SetMediaSource get (Automatic) exch exec"
+*End
+
+*InputSlot ManualFeed/Manual Feed: "
+    /HPDict /ProcSet findresource /SetMediaSource get (ManualFeed) exch exec"
+*End
+
+*InputSlot Roll1/Roll 1: "
+    /HPDict /ProcSet findresource /SetMediaSource get (Roll1) exch exec"
+*End
+
+*InputSlot Roll2/Roll 2: "
+    /HPDict /ProcSet findresource /SetMediaSource get (Roll2) exch exec"
+*End
+
+*CloseUI: *InputSlot
+
+*%=============Media Types=======================
+*OpenUI *MediaType/Paper Type: PickOne
+*OrderDependency: 10 AnySetup *MediaType
+*DefaultMediaType: Any
+*MediaType Any/Any: ""
+*MediaType HPBrhtWhtInkjetBond/HP Bright White Inkjet Paper: "/HPDict /ProcSet findresource /SetMediaId get (1011) exch exec"
+*MediaType HPUniInkjetBond/HP Universal Bond Paper: "/HPDict /ProcSet findresource /SetMediaId get (1012) exch exec"
+*MediaType HPRecycledBond/HP Recycled Bond Paper: "/HPDict /ProcSet findresource /SetMediaId get (1221) exch exec"
+*MediaType HPCoated/HP Coated Paper: "/HPDict /ProcSet findresource /SetMediaId get (1101) exch exec"
+*MediaType HPSuperHvwPlus/HP Super Heavyweight Plus Matte Paper: "/HPDict /ProcSet findresource /SetMediaId get (1121) exch exec"
+*MediaType HPHvwCoated/HP Heavyweight Coated Paper: "/HPDict /ProcSet findresource /SetMediaId get (1111) exch exec"
+*MediaType Plain/Plain Paper: "/HPDict /ProcSet findresource /SetMediaId get (1000) exch exec"
+*MediaType BrightWhiteBond/Bright White Bond Paper: "/HPDict /ProcSet findresource /SetMediaId get (1010) exch exec"
+*MediaType Coated/Coated Paper: "/HPDict /ProcSet findresource /SetMediaId get (1100) exch exec"
+*MediaType HeavyweightCoated/Heavyweight Coated Paper: "/HPDict /ProcSet findresource /SetMediaId get (1110) exch exec"
+*MediaType HPNaturalTracing/HP Natural Tracing Paper: "/HPDict /ProcSet findresource /SetMediaId get (3001) exch exec"
+*MediaType NaturalTracingL/Generic Natural Tracing Paper <3C> 65 g/m2: "/HPDict /ProcSet findresource /SetMediaId get (3030) exch exec"
+*MediaType NaturalTracingM/Generic Natural Tracing Paper > 65 g/m2: "/HPDict /ProcSet findresource /SetMediaId get (3040) exch exec"
+*MediaType TranslucentBond/Translucent Bond: "/HPDict /ProcSet findresource /SetMediaId get (3010) exch exec"
+*MediaType Vellum/Vellum: "/HPDict /ProcSet findresource /SetMediaId get (3020) exch exec"
+*MediaType HPUniIDGlsPhto/HP Universal Instant-dry Gloss Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2003) exch exec"
+*MediaType HPUniIDSatinPhto/HP Universal Instant-dry Satin Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2014) exch exec"
+*MediaType HPPremIDPhtoGls/HP Premium Instant-dry Gloss Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2001) exch exec"
+*MediaType HPPremIDPhtoSatn/HP Premium Instant-dry Satin Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2011) exch exec"
+*MediaType HPPremGlsPhoto/HP Premium Gloss Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2005) exch exec"
+*MediaType HPPremStnPhoto/HP Premium Satin Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2016) exch exec"
+*MediaType HPUniGls/HP Universal Gloss Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2002) exch exec"
+*MediaType HPUniSatin/HP Universal Satin Photo Paper: "/HPDict /ProcSet findresource /SetMediaId get (2013) exch exec"
+*MediaType PhtoGls/Photo Gloss Paper: "/HPDict /ProcSet findresource /SetMediaId get (2000) exch exec"
+*MediaType PhtoSemiGlsSatn/Photo Semi-Gloss/Satin Paper: "/HPDict /ProcSet findresource /SetMediaId get (2010) exch exec"
+*MediaType PhtoMatt/Photo Matte Paper: "/HPDict /ProcSet findresource /SetMediaId get (2020) exch exec"
+*MediaType TranspClearFilm/Transparent/Clear Film: "/HPDict /ProcSet findresource /SetMediaId get (3100) exch exec"
+*MediaType MatteFilm/Matte Film: "/HPDict /ProcSet findresource /SetMediaId get (3110) exch exec"
+*MediaType BklitMaterial/Backlit Material: "/HPDict /ProcSet findresource /SetMediaId get (3200) exch exec"
+*MediaType Adhesive/Adhesive Paper: "/HPDict /ProcSet findresource /SetMediaId get (5120) exch exec"
+*MediaType AdhesiveVinyl/Adhesive Vinyl: "/HPDict /ProcSet findresource /SetMediaId get (5130) exch exec"
+*MediaType AdhesivePolypMatt/Adhesive Polypropylene Matte: "/HPDict /ProcSet findresource /SetMediaId get (5110) exch exec"
+*MediaType AdhesivePolypSatin/Adhesive Polypropylene Satin: "/HPDict /ProcSet findresource /SetMediaId get (5140) exch exec"
+*CloseUI: *MediaType
+*CloseGroup: HPGeneralOptions
+*% =============== Image Quality Options ===============
+*OpenGroup: HPPrintQualityOptions/Image Quality Options
+
+*% =============== EconoMode ===============
+*OpenUI *HPEconoMode/EconoMode: Boolean
+*OrderDependency: 50 AnySetup *HPEconoMode
+*DefaultHPEconoMode: False
+*HPEconoMode True/On: "/HPDict /ProcSet findresource /SetEconofast get true exch exec"
+*HPEconoMode False/Off: "/HPDict /ProcSet findresource /SetEconofast get false exch exec"
+*CloseUI: *HPEconoMode
+
+
+*% =============== Print Quality ===============
+*OpenUI *OutputMode/Quality: PickOne
+*OrderDependency: 50 AnySetup *OutputMode
+*DefaultOutputMode: draft
+*OutputMode draft/Fast: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /PrintQuality 1 /Type 36 >> >> systemdict /setpagedevice get exec"
+*OutputMode normal/Normal: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /PrintQuality 2 /Type 36 >> >> systemdict /setpagedevice get exec"
+*OutputMode best/Best: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /PrintQuality 3 /Type 36 >> >> systemdict /setpagedevice get exec"
+*CloseUI: *OutputMode
+
+
+*% =============== Maximum Detail ===============
+*OpenUI *HPMaximumDetail/Maximum Detail: Boolean
+*OrderDependency: 50 AnySetup *HPMaximumDetail
+*DefaultHPMaximumDetail: False
+*HPMaximumDetail True/On: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /MaxQualityResolution true /Type 36 >> >> systemdict /setpagedevice get exec"
+*HPMaximumDetail False/Off: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /MaxQualityResolution false /Type 36 >> >> systemdict /setpagedevice get exec"
+*CloseUI: *HPMaximumDetail
+*CloseGroup: HPPrintQualityOptionss
+
+*% =============== Color Options Group ===============
+*OpenGroup: HPColorOptions/Color Options
+
+*% =============== Color Matching Mode ===============
+*OpenUI *HPColorMatchingMode/Color Management: PickOne
+*OrderDependency: 60 AnySetup *HPColorMatchingMode
+*DefaultHPColorMatchingMode: ApplicationMatching
+*HPColorMatchingMode Vendor/Printer: ""
+*HPColorMatchingMode ApplicationMatching/Application: "/CMYKColorManagement where {pop /None CMYKColorManagement} if /RGBColorManagement where {pop /None RGBColorManagement} if"
+*CloseUI: *HPColorMatchingMode
+
+*% ============ Professional PANTONE Emulation ============
+*OpenUI *HPPantone/HP Professional PANTONE Emulation: Boolean
+*OrderDependency: 50 AnySetup *HPPantone
+*DefaultHPPantone: True
+*HPPantone False/Off: "/SpotColorMatching where { pop false SpotColorMatching } if"
+*HPPantone True/On: "/SpotColorMatching where { pop true SpotColorMatching } if"
+*CloseUI: *HPPantone
+*OpenUI *HPColorOptions/Mode: PickOne
+*OrderDependency: 60 AnySetup *HPColorOptions
+*DefaultHPColorOptions: colorsmart
+*HPColorOptions colorsmart/Color: "<< /ProcessColorModel /DeviceCMYK >> setpagedevice"
+*HPColorOptions grayscale/Grayscale: "<< /ProcessColorModel /DeviceGray >> setpagedevice
+userdict /GrayscaleMode (BlackOnly) put <<>> setpagedevice"
+*End
+*HPColorOptions black-and-white/Pure Black and White: "<< /ProcessColorModel /DeviceGray >> setpagedevice userdict /GrayscaleMode (BlackAndWhite) put << >> setpagedevice"
+*CloseUI: *HPColorOptions
+
+*% =============== HP Printer Emulation =================
+*OpenUI *HPEmulatedPrinter/Printer Emulation: PickOne
+*OrderDependency: 80 AnySetup *HPEmulatedPrinter
+*DefaultHPEmulatedPrinter: Off
+*HPEmulatedPrinter Off/Off: "/HPDict /ProcSet findresource /SetPrinterEmulation get /None exch exec"
+*HPEmulatedPrinter hpdj800/HP Designjet 500/800 Series: "/HPDict /ProcSet findresource /SetPrinterEmulation get /hpdj800  exch exec"
+*HPEmulatedPrinter hpdj1055/HP Designjet 1000 Series: "/HPDict /ProcSet findresource /SetPrinterEmulation get /hpdj1055  exch exec"
+*HPEmulatedPrinter hpdj4500/HP Designjet 4000/4500 Series: "/HPDict /ProcSet findresource /SetPrinterEmulation get /hpdj4500  exch exec"
+*CloseUI: *HPEmulatedPrinter
+
+
+*% ================= HP CMYK Emulation ===================
+*OpenUI *HPCMYKEmulation/CMYK: PickOne
+*OrderDependency: 50 AnySetup *HPCMYKEmulation
+*DefaultHPCMYKEmulation: ISOCoatedv2-ECI
+*HPCMYKEmulation None/None: "/CMYKColorManagement where {pop /None CMYKColorManagement} if"
+*HPCMYKEmulation ISOCoatedv2-ECI/ISO Coated v2 (ECI): "/CMYKColorManagement where {pop /ISOCoatedv2-ECI CMYKColorManagement} if"
+*HPCMYKEmulation CoatedGRACoL2006-ISO12647/Coated GRACoL 2006 (ISO 12647-2<3A>2004): "/CMYKColorManagement where {pop /CoatedGRACoL2006-ISO12647 CMYKColorManagement} if"
+*HPCMYKEmulation PSOUncoatedISO12647-ECI/PSO Uncoated ISO12647 (ECI): "/CMYKColorManagement where {pop /PSOUncoatedISO12647-ECI CMYKColorManagement} if"
+*HPCMYKEmulation PSOLWCImproved-ECI/PSO LWC Improved (ECI): "/CMYKColorManagement where {pop /PSOLWCImproved-ECI CMYKColorManagement} if"
+*HPCMYKEmulation WebCoatedSWOP2006Grade3/Web Coated SWOP 2006 Grade 3 Paper: "/CMYKColorManagement where {pop /WebCoatedSWOP2006Grade3 CMYKColorManagement} if"
+*HPCMYKEmulation WebCoatedSWOP2006Grade5/Web Coated SWOP 2006 Grade 5 Paper: "/CMYKColorManagement where {pop /WebCoatedSWOP2006Grade5 CMYKColorManagement} if"
+*HPCMYKEmulation USSheetfedCoatedv2/US Sheetfed Coated v2: "/CMYKColorManagement where {pop /USSheetfedCoated-v2  CMYKColorManagement} if"
+*HPCMYKEmulation USSheetfedUncoatedv2/US Sheetfed Uncoated v2: "/CMYKColorManagement where {pop /USSheetfedUncoated-v2 CMYKColorManagement} if"
+*HPCMYKEmulation USWebCoated(SWOP)v2/US Web Coated (SWOP) v2: "/CMYKColorManagement where {pop /USWebCoatedSWOP-v2 CMYKColorManagement} if"
+*HPCMYKEmulation USWebUncoatedv2/US Web Uncoated v2: "/CMYKColorManagement where {pop /USWebUncoated-v2 CMYKColorManagement} if"
+*HPCMYKEmulation EuroscaleUncoatedv2/Euroscale Uncoated v2: "/CMYKColorManagement where {pop /EuroscaleUncoated-v2 CMYKColorManagement} if"
+*HPCMYKEmulation JapanWebCoated/Japan Web Coated (Ad): "/CMYKColorManagement where {pop /JapanWebCoated-Ad CMYKColorManagement} if"
+*HPCMYKEmulation JapanStandardv2/Japan Color 2001 Coated: "/CMYKColorManagement where {pop /JapanColor2001Coated CMYKColorManagement} if"
+*HPCMYKEmulation JapanUncoated2/Japan Color 2001 Uncoated: "/CMYKColorManagement where {pop /JapanColor2001Uncoated CMYKColorManagement} if"
+*HPCMYKEmulation JapanColor2002Newspaper/Japan Color 2002 Newspaper: "/CMYKColorManagement where {pop /JapanColor2002Newspaper CMYKColorManagement} if"
+*HPCMYKEmulation JapanColor2003WebCoated/Japan Color 2003 Web Coated: "/CMYKColorManagement where {pop /JapanColor2003WebCoated CMYKColorManagement} if"
+*HPCMYKEmulation JMPA/JMPA: "/CMYKColorManagement where {pop /JMPA CMYKColorManagement} if"
+*HPCMYKEmulation TOYO/TOYO: "/CMYKColorManagement where {pop /TOYO CMYKColorManagement} if"
+*HPCMYKEmulation DIC/DIC: "/CMYKColorManagement where {pop /DIC CMYKColorManagement} if"
+*CloseUI: *HPCMYKEmulation
+
+*% ================= HP RGB Emulation ===================
+*OpenUI *HPRGBEmulation/RGB: PickOne
+*OrderDependency: 50 AnySetup *HPRGBEmulation
+*DefaultHPRGBEmulation: sRGBIEC61966-2.1
+*HPRGBEmulation None/None: "/RGBColorManagement where {pop /None RGBColorManagement} if"
+*HPRGBEmulation sRGBIEC61966-2.1/sRGB IEC61966-2.1: "/RGBColorManagement where {pop /sRGB RGBColorManagement} if"
+*HPRGBEmulation AdobeRGB(1998)/Adobe RGB (1998): "/RGBColorManagement where {pop /AdobeRGB RGBColorManagement} if"
+*HPRGBEmulation AppleRGB/Apple RGB: "/RGBColorManagement where {pop /AppleRGB RGBColorManagement} if"
+*HPRGBEmulation ColorMatchRGB/ColorMatch RGB: "/RGBColorManagement where {pop /ColorMatchRGB RGBColorManagement} if"
+*CloseUI: *HPRGBEmulation
+
+*% ================= Stacker && Basket ===================
+*OpenUI *OutputBin/Paper Output: PickOne
+*OrderDependency: 10 AnySetup *OutputBin
+*DefaultOutputBin: Stacker
+*OutputBin Stacker/Stacker: "/HPDict /ProcSet findresource /SetMediaDest get (Stacker) exch exec"
+*OutputBin Basket/Basket: "/HPDict /ProcSet findresource /SetMediaDest get (Bin) exch exec"
+*CloseUI: *OutputBin
+*CloseGroup: HPColorOptions
+
+*% =============== HP Finishing Group ===============
+*OpenGroup: HPFinishing/Finishing
+
+*% =========== Hold for Manual Printing =============
+*OpenUI *HPHoldForAttended/Hold for Manual Printing: Boolean
+*OrderDependency: 50 AnySetup *HPHoldForAttended
+*DefaultHPHoldForAttended: False
+*HPHoldForAttended True/On: "/HPDict /ProcSet findresource /SetAttendedMode get true exch exec << >> setpagedevice"
+*HPHoldForAttended False/Off: "/HPDict /ProcSet findresource /SetAttendedMode get false exch exec << >> setpagedevice"
+*CloseUI: *HPHoldForAttended
+
+*% ===========  Transverse =============
+*OpenUI *HPTransverse/Rotate by 90 Degrees: Boolean
+*OrderDependency: 50 AnySetup *HPTransverse
+*DefaultHPTransverse: False
+*HPTransverse True/On: "<</Orientation 1>> setpagedevice"
+*HPTransverse False/Off: "<</Orientation 0>> setpagedevice"
+*CloseUI: *HPTransverse
+
+*% ===========  Disable Automatic Cutter =============
+*OpenUI *HPDisableAutoCutter/Disable Automatic Cutter: Boolean
+*OrderDependency: 50 AnySetup *HPDisableAutoCutter
+*DefaultHPDisableAutoCutter: False
+*HPDisableAutoCutter True/On: "/HPDict /ProcSet findresource /SetCutMedia get false exch exec << >> setpagedevice"
+*HPDisableAutoCutter False/Off: "/HPDict /ProcSet findresource /SetCutMedia get true exch exec << >> setpagedevice"
+*CloseUI: *HPDisableAutoCutter
+
+*% =========== Autorotate =============
+*OpenUI *HPAutoRotate/Autorotate: Boolean
+*OrderDependency: 50 AnySetup *HPAutoRotate
+*DefaultHPAutoRotate: False
+*HPAutoRotate True/On: "/HPDict /ProcSet findresource /SetAutorotate get true exch exec"
+*HPAutoRotate False/Off: "/HPDict /ProcSet findresource /SetAutorotate get false exch exec"
+*CloseUI: *HPAutoRotate
+
+*% =========== Crop Lines =============
+*OpenUI *HPCropLines/Crop Lines: Boolean
+*OrderDependency: 50 AnySetup *HPCropLines
+*DefaultHPCropLines: False
+*HPCropLines True/On: "/HPDict /ProcSet findresource /SetCropMarks get true exch exec"
+*HPCropLines False/Off: "/HPDict /ProcSet findresource /SetCropMarks get false exch exec"
+*CloseUI: *HPCropLines
+
+*% =========== InkedArea =============
+*OpenUI *HPInkedArea/Remove Blank Areas: Boolean
+*OrderDependency: 50 AnySetup *HPInkedArea
+*DefaultHPInkedArea: False
+*HPInkedArea True/On: "/HPDict /ProcSet findresource /SetInkedArea get true exch exec << >> setpagedevice"
+*HPInkedArea False/Off: "/HPDict /ProcSet findresource /SetInkedArea get false exch exec << >> setpagedevice"
+*CloseUI: *HPInkedArea
+
+*% =========== AutoScaling =============
+*OpenUI *HPAutoScaling/Print Document on: PickOne
+*OrderDependency: 20 AnySetup *HPAutoScaling
+*DefaultHPAutoScaling: Off
+*HPAutoScaling Off/No Change: " "
+*HPAutoScaling A0/A0: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2384 3370] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling A1/A1: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1684 2384] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling A2/A2: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1191 1684] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling A3/A3: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [842 1191] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling A4/A4: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [595 842] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ARCHA/Arch A: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [648 864] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ARCHB/Arch B: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [864 1296] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ARCHE/Arch E: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2592 3456] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling 30x42/Arch E1: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2160 3024] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling 26x38/Arch E2: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1872 2736] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling 27x39/Arch E3: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1944 2808] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ISOB1/B1: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2004 2835] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ISOB2/B2: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1417 2004] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ISOB3/B3: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1001 1417] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ISOB4/B4: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [709 1001] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling AnsiC/C: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1224 1584] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling AnsiD/D: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1584 2448] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling AnsiE/E: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2448 3168] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling 28x40/F: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2016 2880] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling B1/JB1: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2064 2920] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling B2/JB2: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1460 2064] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling B3/JB3: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1032 1460] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling B4/JB4: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [729 1032] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling 13x19/Super B/A3: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [936 1368] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ARCHC/Super C/A2, Arch C: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1296 1728] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling ARCHD/Super D/A1, Arch D: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1728 2592] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling Tabloid/Tabloid: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [792 1224] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling Legal/US Legal: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [612 1008] exch exec
+<<>> setpagedevice"
+*End
+*HPAutoScaling Letter/US Letter: "
+/HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [612 792] exch exec
+<<>> setpagedevice"
+*End
+*CloseUI: *HPAutoScaling
+*CloseGroup: HPFinishing
+
+*% =============== HP Margins ===============
+*OpenGroup: Margins/Layout
+
+*% =========== Image Layout =============
+*OpenUI *HPImageLayout/Layout: PickOne
+*OrderDependency: 50 AnySetup *HPImageLayout
+*DefaultHPImageLayout: standard-layout
+*HPImageLayout standard-layout/Standard: "/HPDict /ProcSet findresource /SetMarginLayout get /MarginLayoutStandard exch exec /HPDict /ProcSet findresource /SetMarginType get (Normal) exch exec"
+*HPImageLayout oversize-layout/Oversize: "/HPDict /ProcSet findresource /SetMarginLayout get /MarginLayoutOversize exch exec /HPDict /ProcSet findresource /SetMarginType get (Normal) exch exec"
+*HPImageLayout clip-layout/Clip Contents by Margins: "/HPDict /ProcSet findresource /SetMarginLayout get /MarginLayoutClipInside exch exec /HPDict /ProcSet findresource /SetMarginType get (Normal) exch exec"
+*HPImageLayout automatic-layout/Automatically by Printer: "/HPDict /ProcSet findresource /SetBorderlessMethod get /BorderlessMethodAutofit exch exec /HPDict /ProcSet findresource /SetMarginType get (No Margins) exch exec"
+*HPImageLayout manual-layout/Manually in Application: "/HPDict /ProcSet findresource /SetBorderlessMethod get /BorderlessMethodCrop exch exec /HPDict /ProcSet findresource /SetMarginType get (No Margins) exch exec"
+*CloseUI: *HPImageLayout
+*CloseGroup: Margins
+
+*% =============== Separation And Screening ===============
+*ScreenFreq: "60.0"
+*ScreenAngle: "0.0"
+*DefaultScreenProc: Dot
+*ScreenProc Dot: "
+{abs exch abs 2 copy add 1 gt {1 sub dup mul exch 1 sub dup mul add 1
+sub }{dup mul exch dup mul add 1 exch sub }ifelse }
+"
+*End
+*ScreenProc Line: "{ pop }"
+*ScreenProc Ellipse: "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1 exch sub }"
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+*DefaultHalftoneType: 100
+*DeviceAdjustMatrix: "[1 0 0 1 0 0]"
+*%=============== Color Separation Information ===============
+*DefaultColorSep: ProcessBlack.60lpi.600dpi/60 lpi / 600 dpi
+*InkName: ProcessBlack/Process Black
+*InkName: CustomColor/Custom Color
+*InkName: ProcessCyan/Process Cyan
+*InkName: ProcessMagenta/Process Magenta
+*InkName: ProcessYellow/Process Yellow
+*% =============== For 60 lpi / 600 dpi ===============
+*ColorSepScreenAngle ProcessBlack.60lpi.600dpi/60 lpi / 600 dpi: "45"
+*ColorSepScreenAngle CustomColor.60lpi.600dpi/60 lpi / 600 dpi: "45"
+*ColorSepScreenAngle ProcessCyan.60lpi.600dpi/60 lpi / 600 dpi: "15"
+*ColorSepScreenAngle ProcessMagenta.60lpi.600dpi/60 lpi / 600 dpi: "75"
+*ColorSepScreenAngle ProcessYellow.60lpi.600dpi/60 lpi / 600 dpi: "0"
+*ColorSepScreenFreq ProcessBlack.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq CustomColor.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq ProcessCyan.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq ProcessMagenta.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq ProcessYellow.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*% =============== For 53 lpi / 600 dpi ===============
+*ColorSepScreenAngle ProcessBlack.53lpi.600dpi/53 lpi / 600 dpi: "45.0"
+*ColorSepScreenAngle CustomColor.53lpi.600dpi/53 lpi / 600 dpi: "45.0"
+*ColorSepScreenAngle ProcessCyan.53lpi.600dpi/53 lpi / 600 dpi: "71.5651"
+*ColorSepScreenAngle ProcessMagenta.53lpi.600dpi/53 lpi / 600 dpi: "18.4349"
+*ColorSepScreenAngle ProcessYellow.53lpi.600dpi/53 lpi / 600 dpi: "0.0"
+*ColorSepScreenFreq ProcessBlack.53lpi.600dpi/53 lpi / 600 dpi: "53.033"
+*ColorSepScreenFreq CustomColor.53lpi.600dpi/53 lpi / 600 dpi: "53.033"
+*ColorSepScreenFreq ProcessCyan.53lpi.600dpi/53 lpi / 600 dpi: "47.4342"
+*ColorSepScreenFreq ProcessMagenta.53lpi.600dpi/53 lpi / 600 dpi: "47.4342"
+*ColorSepScreenFreq ProcessYellow.53lpi.600dpi/53 lpi / 600 dpi: "50.0"
+*cupsMediaQualifier2: "InputSlot"
+*cupsMinSize .ManualFeed.: "595.28 792.0"
+*cupsMaxSize .ManualFeed.: "2592.0 4752.0"
+*% =============== Font Information ===============
+*DefaultFont: Courier
+*Font AlbertusMT: Standard "(001.001)" Standard ROM
+*Font AlbertusMT-Italic: Standard "(001.001)" Standard ROM
+*Font AlbertusMT-Light: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Bold: Standard "(001.002)" Standard ROM
+*Font AntiqueOlive-Compact: Standard "(001.002)" Standard ROM
+*Font AntiqueOlive-Italic: Standard "(001.002)" Standard ROM
+*Font AntiqueOlive-Roman: Standard "(001.002)" Standard ROM
+*Font Apple-Chancery: Standard "(3.0)" Standard ROM
+*Font Arial-BoldItalicMT: Standard "(001.003)" Standard ROM
+*Font Arial-BoldMT: Standard "(001.003)" Standard ROM
+*Font Arial-ItalicMT: Standard "(001.003)" Standard ROM
+*Font ArialMT: Standard "(001.003)" Standard ROM
+*Font AvantGarde-Book: Standard "(003.000)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(003.000)" Standard ROM
+*Font AvantGarde-Demi: Standard "(003.000)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(003.000)" Standard ROM
+*Font Bodoni: Standard "(001.003)" Standard ROM
+*Font Bodoni-Bold: Standard "(001.003)" Standard ROM
+*Font Bodoni-BoldItalic: Standard "(001.003)" Standard ROM
+*Font Bodoni-Italic: Standard "(001.003)" Standard ROM
+*Font Bodoni-Poster: Standard "(001.003)" Standard ROM
+*Font Bodoni-PosterCompressed: Standard "(001.002)" Standard ROM
+*Font Bookman-Demi: Standard "(003.000)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(003.000)" Standard ROM
+*Font Bookman-Light: Standard "(003.000)" Standard ROM
+*Font Bookman-LightItalic: Standard "(003.000)" Standard ROM
+*Font Carta: Special "(001.001)" Special ROM
+*Font Chicago: Standard "(3.0)" Standard ROM
+*Font Clarendon: Standard "(001.002)" Standard ROM
+*Font Clarendon-Bold: Standard "(001.002)" Standard ROM
+*Font Clarendon-Light: Standard "(001.002)" Standard ROM
+*Font CooperBlack: Standard "(001.004)" Standard ROM
+*Font CooperBlack-Italic: Standard "(001.004)" Standard ROM
+*Font Copperplate-ThirtyThreeBC: Standard "(001.003)" Standard ROM
+*Font Copperplate-ThirtyTwoBC: Standard "(001.003)" Standard ROM
+*Font Coronet-Regular: Standard "(001.002)" Standard ROM
+*Font Courier: Standard "(004.000)" Standard ROM
+*Font Courier-Bold: Standard "(004.000)" Standard ROM
+*Font Courier-BoldOblique: Standard "(004.000)" Standard ROM
+*Font Courier-Oblique: Standard "(004.000)" Standard ROM
+*Font Eurostile: Standard "(001.003)" Standard ROM
+*Font Eurostile-Bold: Standard "(001.002)" Standard ROM
+*Font Eurostile-BoldExtendedTwo: Standard "(001.003)" Standard ROM
+*Font Eurostile-ExtendedTwo: Standard "(001.003)" Standard ROM
+*Font Geneva: Standard "(3.0)" Standard ROM
+*Font GillSans: Standard "(001.003)" Standard ROM
+*Font GillSans-Bold: Standard "(001.002)" Standard ROM
+*Font GillSans-BoldCondensed: Standard "(001.002)" Standard ROM
+*Font GillSans-BoldItalic: Standard "(001.003)" Standard ROM
+*Font GillSans-Condensed: Standard "(001.002)" Standard ROM
+*Font GillSans-ExtraBold: Standard "(001.002)" Standard ROM
+*Font GillSans-Italic: Standard "(001.003)" Standard ROM
+*Font GillSans-Light: Standard "(001.002)" Standard ROM
+*Font GillSans-LightItalic: Standard "(001.003)" Standard ROM
+*Font Goudy: Standard "(001.004)" Standard ROM
+*Font Goudy-Bold: Standard "(001.003)" Standard ROM
+*Font Goudy-BoldItalic: Standard "(001.003)" Standard ROM
+*Font Goudy-ExtraBold: Standard "(001.002)" Standard ROM
+*Font Goudy-Italic: Standard "(001.003)" Standard ROM
+*Font Helvetica: Standard "(003.000)" Standard ROM
+*Font Helvetica-Bold: Standard "(003.000)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed-Bold: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed-BoldObl: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed-Oblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Oblique: Standard "(003.000)" Standard ROM
+*Font HoeflerText-Black: Standard "(1.0)" Unknown ROM
+*Font HoeflerText-BlackItalic: Standard "(1.0)" Unknown ROM
+*Font HoeflerText-Italic: Standard "(1.0)" Unknown ROM
+*Font HoeflerText-Ornaments: Special "(001.001)" Special ROM
+*Font HoeflerText-Regular: Standard "(1.0)" Unknown ROM
+*Font JoannaMT: Standard "(001.001)" Standard ROM
+*Font JoannaMT-Bold: Standard "(001.001)" Standard ROM
+*Font JoannaMT-BoldItalic: Standard "(001.001)" Standard ROM
+*Font JoannaMT-Italic: Standard "(001.001)" Standard ROM
+*Font LetterGothic: Standard "(001.005)" Standard ROM
+*Font LetterGothic-Bold: Standard "(001.007)" Standard ROM
+*Font LetterGothic-BoldSlanted: Standard "(001.006)" Standard ROM
+*Font LetterGothic-Slanted: Standard "(001.005)" Standard ROM
+*Font LubalinGraph-Book: Standard "(001.004)" Standard ROM
+*Font LubalinGraph-BookOblique: Standard "(001.004)" Standard ROM
+*Font LubalinGraph-Demi: Standard "(001.004)" Standard ROM
+*Font LubalinGraph-DemiOblique: Standard "(001.004)" Standard ROM
+*Font Marigold: Standard "(001.001)" Standard ROM
+*Font Monaco: Standard "(3.0)" Standard ROM
+*Font MonaLisa-Recut: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(003.000)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(003.000)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(003.000)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(003.000)" Standard ROM
+*Font NewYork: Standard "(001.000)" ExtendedRoman ROM
+*Font Optima: Standard "(001.006)" Standard ROM
+*Font Optima-Bold: Standard "(001.007)" Standard ROM
+*Font Optima-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Optima-Italic: Standard "(001.001)" Standard ROM
+*Font Oxford: Standard "(001.001)" Standard ROM
+*Font Palatino-Bold: Standard "(003.000)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(003.000)" Standard ROM
+*Font Palatino-Italic: Standard "(003.000)" Standard ROM
+*Font Palatino-Roman: Standard "(003.000)" Standard ROM
+*Font StempelGaramond-Bold: Standard "(001.003)" Standard ROM
+*Font StempelGaramond-BoldItalic: Standard "(001.003)" Standard ROM
+*Font StempelGaramond-Italic: Standard "(001.003)" Standard ROM
+*Font StempelGaramond-Roman: Standard "(001.003)" Standard ROM
+*Font Symbol: Special "(001.008)" Special ROM
+*Font Tekton: Standard "(001.002)" Standard ROM
+*Font Times-Bold: Standard "(003.000)" Standard ROM
+*Font Times-BoldItalic: Standard "(003.000)" Standard ROM
+*Font Times-Italic: Standard "(003.000)" Standard ROM
+*Font TimesNewRomanPS-BoldItalicMT: Standard "(001.003)" Standard ROM
+*Font TimesNewRomanPS-BoldMT: Standard "(001.004)" Standard ROM
+*Font TimesNewRomanPS-ItalicMT: Standard "(001.003)" Standard ROM
+*Font TimesNewRomanPSMT: Standard "(001.003)" Standard ROM
+*Font Times-Roman: Standard "(003.000)" Standard ROM
+*Font Univers: Standard "(001.004)" Standard ROM
+*Font Univers-Bold: Standard "(001.004)" Standard ROM
+*Font Univers-BoldExt: Standard "(001.001)" Standard ROM
+*Font Univers-BoldExtObl: Standard "(001.001)" Standard ROM
+*Font Univers-BoldOblique: Standard "(001.004)" Standard ROM
+*Font Univers-Condensed: Standard "(001.003)" Standard ROM
+*Font Univers-CondensedBold: Standard "(001.002)" Standard ROM
+*Font Univers-CondensedBoldOblique: Standard "(001.002)" Standard ROM
+*Font Univers-CondensedOblique: Standard "(001.003)" Standard ROM
+*Font Univers-Extended: Standard "(001.001)" Standard ROM
+*Font Univers-ExtendedObl: Standard "(001.001)" Standard ROM
+*Font Univers-Light: Standard "(001.004)" Standard ROM
+*Font Univers-LightOblique: Standard "(001.004)" Standard ROM
+*Font Univers-Oblique: Standard "(001.004)" Standard ROM
+*Font Wingdings: Unknown "(001.001)" Unknown ROM
+*Font Wingdings-Regular: Special "(Version 2.00)" Special ROM
+*Font ZapfChancery-MediumItalic: Standard "(003.000)" Standard ROM
+*Font ZapfDingbats: Special "(002.000)" Special ROM
+*% End of PPD file for HP Designjet T2500 PostScript Printers

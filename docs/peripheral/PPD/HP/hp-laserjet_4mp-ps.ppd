@@ -1,0 +1,859 @@
+*PPD-Adobe: "4.3"
+*% =================================
+*% Copyright 1992-2015 HP Company
+*% Permission is hereby granted, free of charge, to any person obtaining
+*% a copy of this software and associated documentation files (the
+*% "Software"), to deal in the Software without restriction, including
+*% without limitation the rights to use, copy, modify, merge, publish,
+*% distribute, sublicense, and/or sell copies of the Software, and to
+*% permit persons to whom the Software is furnished to do so, subject to
+*% the following conditions:
+*%
+*% The above copyright notice and this permission notice shall be
+*% included in all copies or substantial portions of the Software.
+*%
+*% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*% LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*% OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*% WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*%
+*% [this is the MIT open source license -- please see www.opensource.org]
+*%
+*% ===================================
+*% Adobe Systems PostScript(R) Printer Description File
+*% (c) Copyright 1992-2015 HP Development Company, L.P.
+*% PPD Version for Apple Macintosh only
+*% ===================================
+
+*FormatVersion: "4.3"
+*FileVersion: "1.1"
+*LanguageVersion: English
+*cupsLanguages: "da de es fi fr it nl nb sv"
+*LanguageEncoding: ISOLatin1
+*PCFileName: "XXXXXXXX.XXX"
+*Product: "(HP LaserJet 4MP)"
+*Product: "(Hewlett-Packard HP LaserJet 4MP)"
+*Manufacturer:	"HP"
+*PSVersion: "(2013.103) 0"
+*ModelName: "HP LaserJet 4MP"
+*NickName: "HP LaserJet 4MP v2013.103 Postscript (recommended)"
+*ShortNickName: "HP LaserJet 4MP"
+*1284DeviceID: "MFG:Hewlett-Packard;MDL:hp laserjet 4mp;"
+*LanguageLevel: "2"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*TTRasterizer: Type42
+*FileSystem: False
+*Throughput: "4"
+
+
+
+*UIConstraints: *PageSize Comm10 *InputSlot Cassette
+*UIConstraints: *PageSize Monarch *InputSlot Cassette
+*UIConstraints: *PageSize DL *InputSlot Cassette
+*UIConstraints: *PageSize C5 *InputSlot Cassette
+*UIConstraints: *PageSize B5 *InputSlot Cassette
+*UIConstraints: *PageRegion Comm10 *InputSlot Cassette
+*UIConstraints: *PageRegion Monarch *InputSlot Cassette
+*UIConstraints: *PageRegion DL *InputSlot Cassette
+*UIConstraints: *PageRegion C5 *InputSlot Cassette
+*UIConstraints: *PageRegion B5 *InputSlot Cassette
+*UIConstraints: *InputSlot Cassette *PageSize Comm10
+*UIConstraints: *InputSlot Cassette *PageSize Monarch
+*UIConstraints: *InputSlot Cassette *PageSize DL
+*UIConstraints: *InputSlot Cassette *PageSize C5
+*UIConstraints: *InputSlot Cassette *PageSize B5
+*UIConstraints: *InputSlot Cassette *PageRegion Comm10
+*UIConstraints: *InputSlot Cassette *PageRegion Monarch
+*UIConstraints: *InputSlot Cassette *PageRegion DL
+*UIConstraints: *InputSlot Cassette *PageRegion C5
+*UIConstraints: *InputSlot Cassette *PageRegion B5
+
+*LandscapeOrientation: Plus90
+
+*OpenUI *PageSize/Page Size: PickOne
+*OrderDependency: 30 AnySetup *PageSize
+*DefaultPageSize: Letter
+*da.Translation PageSize/Page Size: ""
+*de.Translation PageSize/Papierformat: ""
+*es.Translation PageSize/Tamaño del papel: ""
+*fi.Translation PageSize/Sivukoko: ""
+*fr.Translation PageSize/Format de page: ""
+*it.Translation PageSize/Dimensioni pagina: ""
+*nl.Translation PageSize/Papierformaat: ""
+*nb.Translation PageSize/Papirformat: ""
+*sv.Translation PageSize/Sidstorlek: ""
+
+*PageSize Letter/Letter: "
+   <</DeferredMediaSelection true /PageSize [612 792]>> setpagedevice"
+*End
+*da.PageSize Letter/Letter: ""
+*de.PageSize Letter/Letter: ""
+*es.PageSize Letter/Letter: ""
+*fi.PageSize Letter/Letter: ""
+*fr.PageSize Letter/Lettre: ""
+*it.PageSize Letter/Letter: ""
+*nl.PageSize Letter/Letter: ""
+*nb.PageSize Letter/Letter: ""
+*sv.PageSize Letter/Letter: ""
+
+*PageSize Legal/Legal: "
+   <</DeferredMediaSelection true /PageSize [612 1008]>> setpagedevice"
+*End
+*da.PageSize Legal/Legal: ""
+*de.PageSize Legal/Legal: ""
+*es.PageSize Legal/Legal: ""
+*fi.PageSize Legal/Legal: ""
+*fr.PageSize Legal/Légal: ""
+*it.PageSize Legal/Legal: ""
+*nl.PageSize Legal/Legal: ""
+*nb.PageSize Legal/Legal: ""
+*sv.PageSize Legal/Legal: ""
+
+*PageSize A4/A4: "
+     <</DeferredMediaSelection true /PageSize [595 842]>> setpagedevice"
+*End
+*da.PageSize A4/A4: ""
+*de.PageSize A4/A4: ""
+*es.PageSize A4/A4: ""
+*fi.PageSize A4/A4: ""
+*fr.PageSize A4/A4: ""
+*it.PageSize A4/A4: ""
+*nl.PageSize A4/A4: ""
+*nb.PageSize A4/A4: ""
+*sv.PageSize A4/A4: ""
+
+*PageSize Executive/Executive: "
+    <</DeferredMediaSelection true /PageSize [522 756]>> setpagedevice"
+*End
+*da.PageSize Executive/Executive: ""
+*de.PageSize Executive/Executive: ""
+*es.PageSize Executive/Ejecutivo: ""
+*fi.PageSize Executive/Executive: ""
+*fr.PageSize Executive/Exécutif: ""
+*it.PageSize Executive/Executive: ""
+*nl.PageSize Executive/Executive: ""
+*nb.PageSize Executive/Executive: ""
+*sv.PageSize Executive/Executive: ""
+
+*PageSize Comm10/Comm10: "
+    <</DeferredMediaSelection true /PageSize [297 684]>> setpagedevice"
+*End
+*da.PageSize Comm10/Comm10: ""
+*de.PageSize Comm10/Comm10: ""
+*es.PageSize Comm10/Comm10: ""
+*fi.PageSize Comm10/Comm10: ""
+*fr.PageSize Comm10/Comm10: ""
+*it.PageSize Comm10/Comm10: ""
+*nl.PageSize Comm10/Comm10: ""
+*nb.PageSize Comm10/Comm10: ""
+*sv.PageSize Comm10/Comm10: ""
+
+*PageSize Monarch/Monarch: "
+    <</DeferredMediaSelection true /PageSize [279 540]>> setpagedevice"
+*End
+*da.PageSize Monarch/Monarch: ""
+*de.PageSize Monarch/Monarch: ""
+*es.PageSize Monarch/Monarch: ""
+*fi.PageSize Monarch/Monarch: ""
+*fr.PageSize Monarch/Monarch: ""
+*it.PageSize Monarch/Monarch: ""
+*nl.PageSize Monarch/Monarch: ""
+*nb.PageSize Monarch/Monarch: ""
+*sv.PageSize Monarch/Monarch: ""
+
+*PageSize DL/DL: "
+    <</DeferredMediaSelection true /PageSize [312 624]>> setpagedevice"
+*End
+*da.PageSize DL/DL: ""
+*de.PageSize DL/DL: ""
+*es.PageSize DL/DL: ""
+*fi.PageSize DL/DL: ""
+*fr.PageSize DL/DL: ""
+*it.PageSize DL/DL: ""
+*nl.PageSize DL/DL: ""
+*nb.PageSize DL/DL: ""
+*sv.PageSize DL/DL: ""
+
+*PageSize C5/C5: "
+    <</DeferredMediaSelection true /PageSize [459 649]>> setpagedevice"
+*End
+*da.PageSize C5/C5: ""
+*de.PageSize C5/C5: ""
+*es.PageSize C5/C5: ""
+*fi.PageSize C5/C5: ""
+*fr.PageSize C5/C5: ""
+*it.PageSize C5/C5: ""
+*nl.PageSize C5/C5: ""
+*nb.PageSize C5/C5: ""
+*sv.PageSize C5/C5: ""
+
+*PageSize B5/B5: "
+    <</DeferredMediaSelection true /PageSize [499 708]>> setpagedevice"
+*End
+*da.PageSize B5/B5: ""
+*de.PageSize B5/B5: ""
+*es.PageSize B5/B5: ""
+*fi.PageSize B5/B5: ""
+*fr.PageSize B5/B5: ""
+*it.PageSize B5/B5: ""
+*nl.PageSize B5/B5: ""
+*nb.PageSize B5/B5: ""
+*sv.PageSize B5/B5: ""
+
+
+*CloseUI: *PageSize
+
+*OpenUI *HPStraightPaperPath/Use Straight Paper Path: Boolean
+*DefaultHPStraightPaperPath: False
+*da.Translation HPStraightPaperPath/Benyt lige papirgang: ""
+*de.Translation HPStraightPaperPath/Geraden Papierpfad verwenden: ""
+*es.Translation HPStraightPaperPath/Utilizar ruta de papel recta: ""
+*fi.Translation HPStraightPaperPath/Käytä suoraa paperireittiä: ""
+*fr.Translation HPStraightPaperPath/Insérer le papier droit: ""
+*it.Translation HPStraightPaperPath/Usa percorso carta diretto: ""
+*nl.Translation HPStraightPaperPath/Recht papierpad gebruiken: ""
+*nb.Translation HPStraightPaperPath/Bruk rett papirbane: ""
+*sv.Translation HPStraightPaperPath/Använd rak pappersbana: ""
+
+*HPStraightPaperPath True/On: ""
+*da.HPStraightPaperPath True/På: ""
+*de.HPStraightPaperPath True/Ein: ""
+*es.HPStraightPaperPath True/Activado: ""
+*fi.HPStraightPaperPath True/Käytössä: ""
+*fr.HPStraightPaperPath True/Activé: ""
+*it.HPStraightPaperPath True/Attiva: ""
+*nl.HPStraightPaperPath True/Aan: ""
+*nb.HPStraightPaperPath True/På: ""
+*sv.HPStraightPaperPath True/På: ""
+
+*HPStraightPaperPath False/Off: ""
+*da.HPStraightPaperPath False/Fra: ""
+*de.HPStraightPaperPath False/Aus: ""
+*es.HPStraightPaperPath False/Desactivado: ""
+*fi.HPStraightPaperPath False/Ei käytössä: ""
+*fr.HPStraightPaperPath False/Désactivé: ""
+*it.HPStraightPaperPath False/Disattivata: ""
+*nl.HPStraightPaperPath False/Uit: ""
+*nb.HPStraightPaperPath False/Av: ""
+*sv.HPStraightPaperPath False/Av: ""
+
+*CloseUI: *HPStraightPaperPath
+*HPStraightPaperPathDS True: "HPSTRAIGHTPAPERPATH_DS"
+*HPStraightPaperPathDS False: "HPSTRAIGHTPAPERPATH_DS"
+
+
+*OpenUI *PageRegion/Page Region:  PickOne
+*OrderDependency: 40 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*da.Translation PageRegion/Page Region: ""
+*de.Translation PageRegion/Seitenbereich: ""
+*es.Translation PageRegion/Dimensión de papel: ""
+*fi.Translation PageRegion/Sivuseutu: ""
+*fr.Translation PageRegion/Région de page: ""
+*it.Translation PageRegion/Dimensioni regione: ""
+*nl.Translation PageRegion/Page Region: ""
+*nb.Translation PageRegion/Page Region: ""
+*sv.Translation PageRegion/Page Region: ""
+
+*PageRegion Letter/Letter: "
+    <</DeferredMediaSelection true /PageSize [612 792]>> setpagedevice"
+*End
+*da.PageRegion Letter/Letter: ""
+*de.PageRegion Letter/Letter: ""
+*es.PageRegion Letter/Letter: ""
+*fi.PageRegion Letter/Letter: ""
+*fr.PageRegion Letter/Lettre: ""
+*it.PageRegion Letter/Letter: ""
+*nl.PageRegion Letter/Letter: ""
+*nb.PageRegion Letter/Letter: ""
+*sv.PageRegion Letter/Letter: ""
+
+*PageRegion Legal/Legal: "
+    <</DeferredMediaSelection true /PageSize [612 1008]>> setpagedevice"
+*End
+*da.PageRegion Legal/Legal: ""
+*de.PageRegion Legal/Legal: ""
+*es.PageRegion Legal/Legal: ""
+*fi.PageRegion Legal/Legal: ""
+*fr.PageRegion Legal/Légal: ""
+*it.PageRegion Legal/Legal: ""
+*nl.PageRegion Legal/Legal: ""
+*nb.PageRegion Legal/Legal: ""
+*sv.PageRegion Legal/Legal: ""
+
+*PageRegion A4/A4: "
+ 	 <</DeferredMediaSelection true /PageSize [595 842]>> setpagedevice"
+*End
+*da.PageRegion A4/A4: ""
+*de.PageRegion A4/A4: ""
+*es.PageRegion A4/A4: ""
+*fi.PageRegion A4/A4: ""
+*fr.PageRegion A4/A4: ""
+*it.PageRegion A4/A4: ""
+*nl.PageRegion A4/A4: ""
+*nb.PageRegion A4/A4: ""
+*sv.PageRegion A4/A4: ""
+
+*PageRegion Executive/Executive: "
+    <</DeferredMediaSelection true /PageSize [522 756]>> setpagedevice"
+*End
+*da.PageRegion Executive/Executive: ""
+*de.PageRegion Executive/Executive: ""
+*es.PageRegion Executive/Executive: ""
+*fi.PageRegion Executive/Executive: ""
+*fr.PageRegion Executive/Exécutif: ""
+*it.PageRegion Executive/Executive: ""
+*nl.PageRegion Executive/Executive: ""
+*nb.PageRegion Executive/Executive: ""
+*sv.PageRegion Executive/Executive: ""
+
+*PageRegion Comm10/Comm10: "
+    <</DeferredMediaSelection true /PageSize [297 684]>> setpagedevice"
+*End
+*da.PageRegion Comm10/Comm10: ""
+*de.PageRegion Comm10/Comm10: ""
+*es.PageRegion Comm10/Comm10: ""
+*fi.PageRegion Comm10/Comm10: ""
+*fr.PageRegion Comm10/Comm10: ""
+*it.PageRegion Comm10/Comm10: ""
+*nl.PageRegion Comm10/Comm10: ""
+*nb.PageRegion Comm10/Comm10: ""
+*sv.PageRegion Comm10/Comm10: ""
+
+*PageRegion Monarch/Monarch: "
+    <</DeferredMediaSelection true /PageSize [279 540]>> setpagedevice"
+*End
+*da.PageRegion Monarch/Monarch: ""
+*de.PageRegion Monarch/Monarch: ""
+*es.PageRegion Monarch/Monarch: ""
+*fi.PageRegion Monarch/Monarch: ""
+*fr.PageRegion Monarch/Monarch: ""
+*it.PageRegion Monarch/Monarch: ""
+*nl.PageRegion Monarch/Monarch: ""
+*nb.PageRegion Monarch/Monarch: ""
+*sv.PageRegion Monarch/Monarch: ""
+
+*PageRegion DL/DL: "
+    <</DeferredMediaSelection true /PageSize [312 624]>> setpagedevice"
+*End
+*da.PageRegion DL/DL: ""
+*de.PageRegion DL/DL: ""
+*es.PageRegion DL/DL: ""
+*fi.PageRegion DL/DL: ""
+*fr.PageRegion DL/DL: ""
+*it.PageRegion DL/DL: ""
+*nl.PageRegion DL/DL: ""
+*nb.PageRegion DL/DL: ""
+*sv.PageRegion DL/DL: ""
+
+*PageRegion C5/C5: "
+    <</DeferredMediaSelection true /PageSize [459 649]>> setpagedevice"
+*End
+*da.PageRegion C5/C5: ""
+*de.PageRegion C5/C5: ""
+*es.PageRegion C5/C5: ""
+*fi.PageRegion C5/C5: ""
+*fr.PageRegion C5/C5: ""
+*it.PageRegion C5/C5: ""
+*nl.PageRegion C5/C5: ""
+*nb.PageRegion C5/C5: ""
+*sv.PageRegion C5/C5: ""
+
+*PageRegion B5/B5: "
+    <</DeferredMediaSelection true /PageSize [499 708]>> setpagedevice"
+*End
+*da.PageRegion B5/B5: ""
+*de.PageRegion B5/B5: ""
+*es.PageRegion B5/B5: ""
+*fi.PageRegion B5/B5: ""
+*fr.PageRegion B5/B5: ""
+*it.PageRegion B5/B5: ""
+*nl.PageRegion B5/B5: ""
+*nb.PageRegion B5/B5: ""
+*sv.PageRegion B5/B5: ""
+
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Letter
+*ImageableArea Letter/US Letter: "12.24 12.06 599.76 780.06"
+*da.ImageableArea Letter/Letter (USA): ""
+*de.ImageableArea Letter/US-Letter: ""
+*es.ImageableArea Letter/Letter (USA): ""
+*fi.ImageableArea Letter/US Letter: ""
+*fr.ImageableArea Letter/Lettre US: ""
+*it.ImageableArea Letter/US Lettera: ""
+*nl.ImageableArea Letter/VS-kwarto: ""
+*nb.ImageableArea Letter/Letter (USA): ""
+*sv.ImageableArea Letter/US Letter: ""
+
+*ImageableArea Legal/US Legal: "12.24 12.06 599.76 996.06"
+*da.ImageableArea Legal/Legal (USA): ""
+*de.ImageableArea Legal/US-Legal: ""
+*es.ImageableArea Legal/Legal (USA): ""
+*fi.ImageableArea Legal/US Legal: ""
+*fr.ImageableArea Legal/Légal US: ""
+*it.ImageableArea Legal/US Legale: ""
+*nl.ImageableArea Legal/VS-folio: ""
+*nb.ImageableArea Legal/Legal (USA): ""
+*sv.ImageableArea Legal/US Legal: ""
+
+*ImageableArea A4/A4: "13.44 12.06 581.76 829.74"
+*da.ImageableArea A4/A4: ""
+*de.ImageableArea A4/A4: ""
+*es.ImageableArea A4/A4: ""
+*fi.ImageableArea A4/A4: ""
+*fr.ImageableArea A4/A4: ""
+*it.ImageableArea A4/A4: ""
+*nl.ImageableArea A4/A4: ""
+*nb.ImageableArea A4/A4: ""
+*sv.ImageableArea A4/A4: ""
+
+*ImageableArea Executive/Executive: "13.32 12.06 508.68 744.06"
+*da.ImageableArea Executive/Executive: ""
+*de.ImageableArea Executive/Executive: ""
+*es.ImageableArea Executive/Exec: ""
+*fi.ImageableArea Executive/Executive: ""
+*fr.ImageableArea Executive/Exécutif: ""
+*it.ImageableArea Executive/Executive: ""
+*nl.ImageableArea Executive/Executive: ""
+*nb.ImageableArea Executive/Executive: ""
+*sv.ImageableArea Executive/Executive: ""
+
+*ImageableArea Comm10/Env Comm10: "12.12 12.06 284.76 672.06"
+*da.ImageableArea Comm10/Comm10-konvolutter: ""
+*de.ImageableArea Comm10/Umschlag Comm10: ""
+*es.ImageableArea Comm10/Sobre Comm10: ""
+*fi.ImageableArea Comm10/Comm10 kirjekuori: ""
+*fr.ImageableArea Comm10/Env. Comm10: ""
+*it.ImageableArea Comm10/Busta Comm10: ""
+*nl.ImageableArea Comm10/Env Comm10: ""
+*nb.ImageableArea Comm10/Konv Comm10: ""
+*sv.ImageableArea Comm10/Kuv Comm10: ""
+
+*ImageableArea Monarch/Env Monarch: "12.72 12.06 266.16 528.06"
+*da.ImageableArea Monarch/Monarch-konvolutter: ""
+*de.ImageableArea Monarch/Umschlag Monarch: ""
+*es.ImageableArea Monarch/Sobre Monarch: ""
+*fi.ImageableArea Monarch/Monarch kirjekuori: ""
+*fr.ImageableArea Monarch/Env. Monarch: ""
+*it.ImageableArea Monarch/Busta Monarch: ""
+*nl.ImageableArea Monarch/Env Monarch: ""
+*nb.ImageableArea Monarch/Konv Monarch: ""
+*sv.ImageableArea Monarch/Kuv Monarch: ""
+
+*ImageableArea DL/Env DL: "13.8 12.06 297.96 611.58"
+*da.ImageableArea DL/DL-konvolutter: ""
+*de.ImageableArea DL/Umschlag DL: ""
+*es.ImageableArea DL/Sobre DL: ""
+*fi.ImageableArea DL/DL kirjekuori: ""
+*fr.ImageableArea DL/Env. DL: ""
+*it.ImageableArea DL/Busta DL: ""
+*nl.ImageableArea DL/Env DL: ""
+*nb.ImageableArea DL/Konv DL: ""
+*sv.ImageableArea DL/Kuv DL: ""
+
+*ImageableArea C5/Env C5: "12.6 12.06 446.52 637.02"
+*da.ImageableArea C5/C5-konvolutter: ""
+*de.ImageableArea C5/Umschlag C5: ""
+*es.ImageableArea C5/Sobre C5: ""
+*fi.ImageableArea C5/C5 kirjekuori: ""
+*fr.ImageableArea C5/Env. C5: ""
+*it.ImageableArea C5/Busta C5: ""
+*nl.ImageableArea C5/Env C5: ""
+*nb.ImageableArea C5/Konv C5: ""
+*sv.ImageableArea C5/Kuv C5: ""
+
+*ImageableArea B5/Env ISO B5: "13.2 12.06 485.52 696.54"
+*da.ImageableArea B5/ISO B5-konvolutter: ""
+*de.ImageableArea B5/Umschlag ISO B5: ""
+*es.ImageableArea B5/Sobre ISO B5: ""
+*fi.ImageableArea B5/ISO B5 kirjekuori: ""
+*fr.ImageableArea B5/Env. ISO B5: ""
+*it.ImageableArea B5/Busta ISO B5: ""
+*nl.ImageableArea B5/Env ISO B5: ""
+*nb.ImageableArea B5/Konv ISO B5: ""
+*sv.ImageableArea B5/Kuv ISO B5: ""
+
+
+*DefaultPaperDimension: Letter
+*PaperDimension Letter: "612 792"
+*PaperDimension Legal: "612 1008"
+*PaperDimension A4: "595 842"
+*PaperDimension Executive: "522 756"
+*PaperDimension Comm10: "297 684"
+*PaperDimension Monarch: "279 540"
+*PaperDimension DL: "312 624"
+*PaperDimension C5: "459 649"
+*PaperDimension B5: "499 708"
+
+*RequiresPageRegion All: True
+
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Automatic: "
+	<</ManualFeed false /MediaPosition 7>> setpagedevice"
+*End
+*da.InputSlot Auto/Automatisk: ""
+*de.InputSlot Auto/Automatisch: ""
+*es.InputSlot Auto/Automático: ""
+*fi.InputSlot Auto/Automaattinen: ""
+*fr.InputSlot Auto/Automatique: ""
+*it.InputSlot Auto/Automatico: ""
+*nl.InputSlot Auto/Automatisch: ""
+*nb.InputSlot Auto/Automatisk: ""
+*sv.InputSlot Auto/Automatiskt: ""
+
+*da.Translation InputSlot/Papirkilde: ""
+*de.Translation InputSlot/Papierquelle: ""
+*es.Translation InputSlot/Alimentación de papel: ""
+*fi.Translation InputSlot/Paperilähde: ""
+*fr.Translation InputSlot/Source du papier: ""
+*it.Translation InputSlot/Alimentazione della carta: ""
+*nl.Translation InputSlot/Papierbron: ""
+*nb.Translation InputSlot/Arkmating: ""
+*sv.Translation InputSlot/Papperskälla: ""
+
+*InputSlot Cassette/Paper Cassette: ""
+*da.InputSlot Cassette/Papirkassette: ""
+*de.InputSlot Cassette/Papierkassette: ""
+*es.InputSlot Cassette/Casete para papel: ""
+*fi.InputSlot Cassette/Paperilokero: ""
+*fr.InputSlot Cassette/Cassette à papier: ""
+*it.InputSlot Cassette/Cassetto per la carta: ""
+*nl.InputSlot Cassette/Papierlade: ""
+*nb.InputSlot Cassette/Papirkassett: ""
+*sv.InputSlot Cassette/Pappersmagasin: ""
+
+*CloseUI: *InputSlot
+
+*OpenUI *ManualFeed/Manual Feed:  Boolean
+*OrderDependency: 20 AnySetup *ManualFeed
+*DefaultManualFeed: False
+*da.Translation ManualFeed/Manuel indføring: ""
+*de.Translation ManualFeed/Manuelle Zufuhr: ""
+*es.Translation ManualFeed/Alimentación manual: ""
+*fi.Translation ManualFeed/Käsinsyöttö: ""
+*fr.Translation ManualFeed/Alimentation manuelle: ""
+*it.Translation ManualFeed/Alimentazione manuale: ""
+*nl.Translation ManualFeed/Handinvoer: ""
+*nb.Translation ManualFeed/Manuell arkmating: ""
+*sv.Translation ManualFeed/Manuell matning: ""
+
+*ManualFeed True/True: "<</ManualFeed true>> setpagedevice"
+*da.ManualFeed True/Sand: ""
+*de.ManualFeed True/Wahr: ""
+*es.ManualFeed True/Verdadero: ""
+*fi.ManualFeed True/Käytössä: ""
+*fr.ManualFeed True/Vrai: ""
+*it.ManualFeed True/Vero: ""
+*nl.ManualFeed True/Waar: ""
+*nb.ManualFeed True/Sann: ""
+*sv.ManualFeed True/Sant: ""
+
+*ManualFeed False/False: "<</ManualFeed false>> setpagedevice"
+*da.ManualFeed False/Falsk: ""
+*de.ManualFeed False/Falsch: ""
+*es.ManualFeed False/Falso: ""
+*fi.ManualFeed False/Ei käytössä: ""
+*fr.ManualFeed False/Faux: ""
+*it.ManualFeed False/Falso: ""
+*nl.ManualFeed False/Fout: ""
+*nb.ManualFeed False/Usann: ""
+*sv.ManualFeed False/Inte sant: ""
+
+
+*CloseUI: *ManualFeed
+
+*DefaultResolution: 600dpi
+
+*OpenUI *Smoothing/Resolution Enhancement:  PickOne
+*OrderDependency: 50 AnySetup *Smoothing
+*DefaultSmoothing: None
+*da.Translation Smoothing/Opløsningsforbedring: ""
+*de.Translation Smoothing/Auflösungsoptimierung: ""
+*es.Translation Smoothing/Resolución Enhancement: ""
+*fi.Translation Smoothing/Tarkkuuden parannus: ""
+*fr.Translation Smoothing/Amélioration résolution: ""
+*it.Translation Smoothing/Miglioramento risoluzione: ""
+*nl.Translation Smoothing/Resolutieverbetering: ""
+*nb.Translation Smoothing/Oppløsningsfremheving: ""
+*sv.Translation Smoothing/Förbättring av upplösning: ""
+
+*Smoothing None/Off: "
+<< /PostRenderingEnhance true
+    /PostRenderingEnhanceDetails << /REValue 0 /Type 8 >>
+>>  setpagedevice"
+*End
+*da.Smoothing None/nej: ""
+*de.Smoothing None/Aus: ""
+*es.Smoothing None/Des: ""
+*fi.Smoothing None/Ei: ""
+*fr.Smoothing None/Non: ""
+*it.Smoothing None/No: ""
+*nl.Smoothing None/Uit: ""
+*nb.Smoothing None/Av: ""
+*sv.Smoothing None/Av: ""
+
+*Smoothing Light/Light: "
+<< /PostRenderingEnhance true
+    /PostRenderingEnhanceDetails << /REValue 1 /Type 8 >>
+>>  setpagedevice"
+*End
+*da.Smoothing Light/Lys: ""
+*de.Smoothing Light/Hell: ""
+*es.Smoothing Light/Clara: ""
+*fi.Smoothing Light/Vaalea: ""
+*fr.Smoothing Light/Claire: ""
+*it.Smoothing Light/Chiaro: ""
+*nl.Smoothing Light/Licht: ""
+*nb.Smoothing Light/Lys: ""
+*sv.Smoothing Light/Ljus: ""
+
+*Smoothing Medium/Medium: "
+<< /PostRenderingEnhance true
+    /PostRenderingEnhanceDetails << /REValue 2 /Type 8 >>
+>>  setpagedevice"
+*End
+*da.Smoothing Medium/Middel: ""
+*de.Smoothing Medium/Mittel: ""
+*es.Smoothing Medium/Media: ""
+*fi.Smoothing Medium/Normaali: ""
+*fr.Smoothing Medium/Moyenne: ""
+*it.Smoothing Medium/Medio: ""
+*nl.Smoothing Medium/Normaal: ""
+*nb.Smoothing Medium/Normal: ""
+*sv.Smoothing Medium/Normal: ""
+
+*Smoothing Dark/Dark: "
+<< /PostRenderingEnhance true
+    /PostRenderingEnhanceDetails << /REValue 3 /Type 8 >>
+>> setpagedevice"
+*End
+*da.Smoothing Dark/Mørk: ""
+*de.Smoothing Dark/Dunkel: ""
+*es.Smoothing Dark/Oscuro: ""
+*fi.Smoothing Dark/Tumma: ""
+*fr.Smoothing Dark/Sombre: ""
+*it.Smoothing Dark/Scuro: ""
+*nl.Smoothing Dark/Donker: ""
+*nb.Smoothing Dark/Mørk: ""
+*sv.Smoothing Dark/Mörk: ""
+
+*CloseUI: *Smoothing
+
+*ScreenFreq: "85.0"
+*ScreenAngle: "45.0"
+*DefaultScreenProc: Dot
+*ScreenProc Dot: "
+{abs exch abs 2 copy add 1 gt {1 sub dup mul exch 1 sub dup mul add 1
+sub }{dup mul exch dup mul add 1 exch sub }ifelse }
+"
+*End
+
+*ScreenProc Line: "{ pop }"
+*ScreenProc Ellipse: "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1 exch sub }"
+
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+*DefaultColorSep: ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi
+
+*ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: "45.0"
+*da.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: "45.0"
+*da.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*da.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: "18.4349"
+*da.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: "0.0"
+*da.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+
+*ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: "84.8528"
+*da.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: "84.8528"
+*da.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: "94.8683"
+*da.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: "94.8683"
+*da.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+*ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: "30.0"
+*da.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+
+*ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: "
+{1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch
+1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch
+abs exch abs 2 copy add 1 gt {1 sub dup mul exch 1 sub dup mul add 1
+sub }{dup mul exch dup mul add 1 exch sub }ifelse }"
+*End
+*da.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*de.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*es.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fi.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*fr.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*it.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nl.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*nb.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+*sv.ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: ""
+
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.003S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.003S)" Standard ROM
+*Font Bookman-Light: Standard "(001.003S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.003S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Special ROM
+
+*FreeVM: "625932"
+
+*Password: "()"
+*ExitServer: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+     (WARNING: Cannot modify initial VM.) =
+     (Missing or invalid password.) =
+     (Please contact the author of this software.) = flush quit
+     } if
+"
+*End
+*Reset: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+ systemdict /quit get exec
+ (WARNING : Printer Reset Failed.) = flush
+"
+*End
+
+*% ===================================
+*% For "HP LaserJet 4MP" version 2013.103 (600 dpi)
+*% ===================================

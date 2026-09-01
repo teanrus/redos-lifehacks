@@ -1,0 +1,2088 @@
+*PPD-Adobe: "4.3"
+*% =================================
+*% Copyright 1992-2015 HP Company
+*% Permission is hereby granted, free of charge, to any person obtaining
+*% a copy of this software and associated documentation files (the
+*% "Software"), to deal in the Software without restriction, including
+*% without limitation the rights to use, copy, modify, merge, publish,
+*% distribute, sublicense, and/or sell copies of the Software, and to
+*% permit persons to whom the Software is furnished to do so, subject to
+*% the following conditions:
+*%
+*% The above copyright notice and this permission notice shall be
+*% included in all copies or substantial portions of the Software.
+*%
+*% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*% LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*% OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*% WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*%
+*% [this is the MIT open source license -- please see www.opensource.org]
+*%
+*% =================================
+*% Adobe Systems PostScript(R) Printer Description File
+*% (c) Copyright 1993-2015 HP Development Company, L.P.
+*% PPD Version for Apple Macintosh
+*% =================================
+*% Product/PPD Version Information
+*% =================================
+*% PPD File Version Information
+*FormatVersion: "4.3"
+*FileVersion: "1.1"
+*LanguageVersion: English
+*cupsLanguages: "da de es fi fr it nl nb pt sv"
+*LanguageEncoding: ISOLatin1
+*PCFileName: "HP__CLJ5.PPD"
+
+
+
+*% Product Name and Version Information
+*Manufacturer:	"HP"
+*Product: 	"(HP Color LaserJet 5/5M)"
+*Product: "(Hewlett-Packard HP Color LaserJet 5/5M)"
+*ModelName:	"HP Color LaserJet 5/5M"
+*ShortNickName: "HP Color LaserJet 5M"
+*NickName: "HP Color LaserJet 5/5M v2015.104 Postscript (recommended)"
+*1284DeviceID: "MFG:Hewlett-Packard;MDL:HP Color LaserJet 5M;"
+*PSVersion:	"(2015.104) 4"
+
+*% =================================
+*% Basic Device Capabilities
+*% =================================
+*LanguageLevel: 	"2"
+*ColorDevice:  		True
+*DefaultColorSpace: RGB
+*TTRasterizer: 		Type42
+*FileSystem: 		False
+*Throughput: 		"10"
+
+*% =================================
+*% Emulations and Protocols
+*% =================================
+*Protocols: TBCP
+*JCLBegin: 				"<1B>%-12345X@PJL JOB<0A>"
+*JCLToPSInterpreter: 	"@PJL ENTER LANGUAGE = POSTSCRIPT <0A>"
+*JCLEnd: 				""
+
+*%=== Output Bin ======================
+*PageStackOrder Upper: Normal
+*PageStackOrder Lower: Reverse
+
+*% =================================
+*% Installable Options
+*% =================================
+*OpenGroup: InstallableOptions/Options Installed
+*da.Translation InstallableOptions/Installerede alternativer: ""
+*de.Translation InstallableOptions/Install. Optionen: ""
+*es.Translation InstallableOptions/Opciones instaladas: ""
+*fi.Translation InstallableOptions/Vaihtoehdot asennettu: ""
+*fr.Translation InstallableOptions/Options Installées: ""
+*it.Translation InstallableOptions/Opzioni Installate: ""
+*nl.Translation InstallableOptions/Geïnstalleerde opties: ""
+*nb.Translation InstallableOptions/Installert ekstrautstyr: ""
+*pt.Translation InstallableOptions/Opç<9B>es Instaladas: ""
+*sv.Translation InstallableOptions/Installerade alternativ: ""
+
+*OpenUI *HPOption_500_Sheet_Feeder_Tray3/Rear Feed Unit: Boolean
+*DefaultHPOption_500_Sheet_Feeder_Tray3: False
+*da.Translation HPOption_500_Sheet_Feeder_Tray3/Arkføder bag på printeren : ""
+*de.Translation HPOption_500_Sheet_Feeder_Tray3/Hintere Papierzufuhr: ""
+*es.Translation HPOption_500_Sheet_Feeder_Tray3/Unidad de alimentación posterior: ""
+*fi.Translation HPOption_500_Sheet_Feeder_Tray3/takasyöttölaite: ""
+*fr.Translation HPOption_500_Sheet_Feeder_Tray3/Unité d'alimentation arriére': ""
+*it.Translation HPOption_500_Sheet_Feeder_Tray3/Alimentatore posteriore: ""
+*nl.Translation HPOption_500_Sheet_Feeder_Tray3/Invoereenheid achter: ""
+*nb.Translation HPOption_500_Sheet_Feeder_Tray3/Bakre arkmater: ""
+*pt.Translation HPOption_500_Sheet_Feeder_Tray3/Unidade de alimentação traseira: ""
+*sv.Translation HPOption_500_Sheet_Feeder_Tray3/Bakre inmatningsfack: ""
+
+*HPOption_500_Sheet_Feeder_Tray3 True/Installed: ""
+*da.HPOption_500_Sheet_Feeder_Tray3 True/Installeret : ""
+*de.HPOption_500_Sheet_Feeder_Tray3 True/Installiert: ""
+*es.HPOption_500_Sheet_Feeder_Tray3 True/Instalada: ""
+*fi.HPOption_500_Sheet_Feeder_Tray3 True/asennettu: ""
+*fr.HPOption_500_Sheet_Feeder_Tray3 True/Installée: ""
+*it.HPOption_500_Sheet_Feeder_Tray3 True/Installato: ""
+*nl.HPOption_500_Sheet_Feeder_Tray3 True/Geïnstalleerd: ""
+*nb.HPOption_500_Sheet_Feeder_Tray3 True/Installert: ""
+*pt.HPOption_500_Sheet_Feeder_Tray3 True/Instalada: ""
+*sv.HPOption_500_Sheet_Feeder_Tray3 True/Installerat: ""
+
+*HPOption_500_Sheet_Feeder_Tray3 False/Not Installed: ""
+*da.HPOption_500_Sheet_Feeder_Tray3 False/Ikke installeret : ""
+*de.HPOption_500_Sheet_Feeder_Tray3 False/Nicht installiert: ""
+*es.HPOption_500_Sheet_Feeder_Tray3 False/No instalada: ""
+*fi.HPOption_500_Sheet_Feeder_Tray3 False/ei asennettu: ""
+*fr.HPOption_500_Sheet_Feeder_Tray3 False/Non installée: ""
+*it.HPOption_500_Sheet_Feeder_Tray3 False/Non Installato: ""
+*nl.HPOption_500_Sheet_Feeder_Tray3 False/Niet geïnstalleerd: ""
+*nb.HPOption_500_Sheet_Feeder_Tray3 False/Ikke installert: ""
+*pt.HPOption_500_Sheet_Feeder_Tray3 False/Não Instalada: ""
+*sv.HPOption_500_Sheet_Feeder_Tray3 False/Ej installerat: ""
+
+*?HPOption_500_Sheet_Feeder_Tray3: "
+	save
+		currentpagedevice /InputAttributes get
+		dup 1 known
+		{1 get null eq {(False)}{(True)}ifelse}{pop (False)}ifelse = flush
+	restore
+"
+*End
+*CloseUI: *HPOption_500_Sheet_Feeder_Tray3
+
+*OpenUI *InstalledMemory/Memory Configuration: PickOne
+*DefaultInstalledMemory: 36Meg
+*da.Translation InstalledMemory/Memory Configuration: ""
+*de.Translation InstalledMemory/Memory Configuration: ""
+*es.Translation InstalledMemory/Memory Configuration: ""
+*fi.Translation InstalledMemory/Memory Configuration: ""
+*fr.Translation InstalledMemory/Memory Configuration: ""
+*it.Translation InstalledMemory/Memory Configuration: ""
+*nl.Translation InstalledMemory/Memory Configuration: ""
+*nb.Translation InstalledMemory/Memory Configuration: ""
+*pt.Translation InstalledMemory/Memory Configuration: ""
+*sv.Translation InstalledMemory/Memory Configuration: ""
+
+*InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*da.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*de.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*es.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*fi.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*fr.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*it.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*nl.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*nb.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*pt.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+*sv.InstalledMemory 36Meg/36 - 43 MB RAM: ""
+
+*InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*da.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*de.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*es.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*fi.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*fr.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*it.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*nl.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*nb.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*pt.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+*sv.InstalledMemory 44Meg/44 - 51 MB RAM: ""
+
+*InstalledMemory 52Meg/52 - 59 MB RAM: ""
+*da.InstalledMemory 52Meg/52 - 59 MB RAM: ""
+*de.InstalledMemory 52Meg/52 - 59 MB RAM: ""
+*es.InstalledMemory 52Meg/52 - 59 MB de RAM: ""
+*fi.InstalledMemory 52Meg/52 - 59 megatavua: ""
+*fr.InstalledMemory 52Meg/52 à 59 Mo de RAM: ""
+*it.InstalledMemory 52Meg/52 - 59 MB RAM: ""
+*nl.InstalledMemory 52Meg/52 - 59 MB RAM: ""
+*nb.InstalledMemory 52Meg/52 - 59 MB RAM: ""
+*pt.InstalledMemory 52Meg/52 - 59 MB RAM: ""
+*sv.InstalledMemory 52Meg/52 - 59 MB RAM: ""
+
+*InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*da.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*de.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*es.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*fi.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*fr.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*it.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*nl.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*nb.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*pt.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+*sv.InstalledMemory 60Meg/60 - 67 MB RAM: ""
+
+*InstalledMemory 68Meg/>= 68 MB RAM: ""
+*da.InstalledMemory 68Meg/≥ 68 MB RAM: ""
+*de.InstalledMemory 68Meg/≥ 68 MB RAM: ""
+*es.InstalledMemory 68Meg/≥ 68 MB de RAM: ""
+*fi.InstalledMemory 68Meg/≥ 68 megatavua: ""
+*fr.InstalledMemory 68Meg/≥ 68 Mo de RAM: ""
+*it.InstalledMemory 68Meg/≥ 68 MB RAM: ""
+*nl.InstalledMemory 68Meg/≥ 68 MB RAM: ""
+*nb.InstalledMemory 68Meg/≥ 68 MB RAM: ""
+*pt.InstalledMemory 68Meg/≥ 68 MB RAM: ""
+*sv.InstalledMemory 68Meg/≥ 68 MB RAM: ""
+
+*?InstalledMemory: "
+  save
+	currentsystemparams /RamSize get
+	524288 div ceiling cvi 2 div
+	/size exch def
+	size 68 ge
+	{(68Meg)}
+	{size 60 ge
+		{(60Meg)}
+		{size 52 ge
+			{(52Meg)}
+			{size 44 ge
+				{(44Meg)}
+				{(36Meg)}ifelse
+			}ifelse
+		}ifelse
+	}ifelse = flush
+  restore
+"
+*End
+*CloseUI: *InstalledMemory
+
+*OpenUI *HPOption_PaperPolicy/Paper Match: PickOne
+*OrderDependency: 10 AnySetup *HPOption_PaperPolicy
+*DefaultHPOption_PaperPolicy: Prompt
+*da.Translation HPOption_PaperPolicy/Papirafstemning: ""
+*de.Translation HPOption_PaperPolicy/Formatabstimmung: ""
+*es.Translation HPOption_PaperPolicy/Coincidencia de papel: ""
+*fi.Translation HPOption_PaperPolicy/Vastaavan paperin valinta: ""
+*fr.Translation HPOption_PaperPolicy/Correspondance de papier: ""
+*it.Translation HPOption_PaperPolicy/Corrispondenza alla pagina: ""
+*nl.Translation HPOption_PaperPolicy/Papieraanpassing: ""
+*nb.Translation HPOption_PaperPolicy/Papirtilpasning: ""
+*pt.Translation HPOption_PaperPolicy/Correspondência de papel: ""
+*sv.Translation HPOption_PaperPolicy/Pappersmatchning: ""
+
+*HPOption_PaperPolicy Prompt/Prompt User: "
+    <</DeferredMediaSelection true>> setpagedevice"
+*End
+*da.HPOption_PaperPolicy Prompt/Spørg bruger om korrekt format: ""
+*de.HPOption_PaperPolicy Prompt/Benutzeraufforderung richtiges Format: ""
+*es.HPOption_PaperPolicy Prompt/Solicitar al usuario el tamaño correcto: ""
+*fi.HPOption_PaperPolicy Prompt/Kysy käyttäjältä oikeaa kokoa: ""
+*fr.HPOption_PaperPolicy Prompt/Demande du format correct à l'utilisateur: ""
+*it.HPOption_PaperPolicy Prompt/Richiedi formato corretto: ""
+*nl.HPOption_PaperPolicy Prompt/Gebruiker vragen om formaat: ""
+*nb.HPOption_PaperPolicy Prompt/Spør bruker etter riktig størrelse: ""
+*pt.HPOption_PaperPolicy Prompt/Solicite o tamanho correto ao usuário: ""
+*sv.HPOption_PaperPolicy Prompt/Fråga användaren efter rätt storlek: ""
+
+*HPOption_PaperPolicy Scale/Nearest Size & Scale: "
+    <</DeferredMediaSelection false>> setpagedevice
+    <</Policies << /PageSize 3 >> >> setpagedevice"
+*End
+*da.HPOption_PaperPolicy Scale/Nærmeste format & skalér: ""
+*de.HPOption_PaperPolicy Scale/Nächstes Format & Skalieren: ""
+*es.HPOption_PaperPolicy Scale/Tamaño más próximo, luego ajustar escala: ""
+*fi.HPOption_PaperPolicy Scale/Lähin koko ja skaala: ""
+*fr.HPOption_PaperPolicy Scale/Format et échelle les plus proches: ""
+*it.HPOption_PaperPolicy Scale/Formato più vicino e scalatura : ""
+*nl.HPOption_PaperPolicy Scale/Beste formaat & schalen: ""
+*nb.HPOption_PaperPolicy Scale/Nærmeste størrelse og proporsjon: ""
+*pt.HPOption_PaperPolicy Scale/Tamanho mais próximo e ajustar [escalonar]: ""
+*sv.HPOption_PaperPolicy Scale/Närmaste storlek och skala: ""
+
+*HPOption_PaperPolicy Crop/Nearest Size & Crop: "
+    <</DeferredMediaSelection false>> setpagedevice
+    <</Policies << /PageSize 5 >> >> setpagedevice"
+*End
+*da.HPOption_PaperPolicy Crop/Nærmeste format & beskær: ""
+*de.HPOption_PaperPolicy Crop/Nächstes Format & Beschnitt: ""
+*es.HPOption_PaperPolicy Crop/Tamaño más próximo, luego recortar: ""
+*fi.HPOption_PaperPolicy Crop/Lähin koko ja rajaus: ""
+*fr.HPOption_PaperPolicy Crop/Format et coupe les plus proches: ""
+*it.HPOption_PaperPolicy Crop/Formato più vicino e ritaglio: ""
+*nl.HPOption_PaperPolicy Crop/Beste formaat & bijsnijden: ""
+*nb.HPOption_PaperPolicy Crop/Nærmeste størrelse og beskjæring: ""
+*pt.HPOption_PaperPolicy Crop/Tamanho mais próximo e cortar: ""
+*sv.HPOption_PaperPolicy Crop/Närmaste storlek och beskär: ""
+
+*CloseUI: *HPOption_PaperPolicy
+*CloseGroup: InstallableOptions
+
+*% =================================
+*% User Interface Constraints
+*% =================================
+
+*% If selected page size is not supported, disable Rear Tray UI
+*UIConstraints: *PageRegion Tabloid *InputSlot Rear
+*UIConstraints: *PageRegion A3      *InputSlot Rear
+*UIConstraints: *PageRegion Legal   *InputSlot Rear
+*UIConstraints: *PageRegion LegalSmall   *InputSlot Rear
+
+*% If Rear Tray is selected disable Tabloid, A3, Legal paper sizes
+*UIConstraints: *InputSlot Rear *PageRegion Tabloid
+*UIConstraints: *InputSlot Rear *PageRegion A3
+*UIConstraints: *InputSlot Rear *PageRegion Legal
+*UIConstraints: *InputSlot Rear *PageRegion LegalSmall
+
+*% =================================
+*% Media Selection
+*% =================================
+*LandscapeOrientation: Plus90
+*VariablePaperSize: False
+*OpenUI *PageSize/Page Size: PickOne
+*OrderDependency: 30 AnySetup *PageSize
+*DefaultPageSize: Letter
+*da.Translation PageSize/Page Size: ""
+*de.Translation PageSize/Papierformat: ""
+*es.Translation PageSize/Tamaño del papel: ""
+*fi.Translation PageSize/Sivukoko: ""
+*fr.Translation PageSize/Format de page: ""
+*it.Translation PageSize/Dimensioni pagina: ""
+*nl.Translation PageSize/Papierformaat: ""
+*nb.Translation PageSize/Papirformat: ""
+*pt.Translation PageSize/Tamanho do papel: ""
+*sv.Translation PageSize/Sidstorlek: ""
+
+*PageSize Letter/US Letter: "
+	<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize Letter/Letter(USA) : ""
+*de.PageSize Letter/US-Letter: ""
+*es.PageSize Letter/US Letter: ""
+*fi.PageSize Letter/US Letter: ""
+*fr.PageSize Letter/LetterUS: ""
+*it.PageSize Letter/Lettera: ""
+*nl.PageSize Letter/US kwarto: ""
+*nb.PageSize Letter/US Letter: ""
+*pt.PageSize Letter/US Letter: ""
+*sv.PageSize Letter/US Letter: ""
+
+*PageSize LetterSmall/US Letter(Small): "
+	<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize LetterSmall/Letter(USA, lille) : ""
+*de.PageSize LetterSmall/US-Letter(klein): ""
+*es.PageSize LetterSmall/US Letter(Pequeño): ""
+*fi.PageSize LetterSmall/US Letter (pieni): ""
+*fr.PageSize LetterSmall/LetterUS (petit): ""
+*it.PageSize LetterSmall/Lettera (ridotto): ""
+*nl.PageSize LetterSmall/US kwarto (klein): ""
+*nb.PageSize LetterSmall/US Letter (lite): ""
+*pt.PageSize LetterSmall/US Letter(Pequeno): ""
+*sv.PageSize LetterSmall/US Letter(litet): ""
+
+*PageSize Legal/US Legal: "
+	<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize Legal/Legal (USA) : ""
+*de.PageSize Legal/US-Legal: ""
+*es.PageSize Legal/US Legal: ""
+*fi.PageSize Legal/US Legal: ""
+*fr.PageSize Legal/Legal US: ""
+*it.PageSize Legal/Legale: ""
+*nl.PageSize Legal/US folio: ""
+*nb.PageSize Legal/US Legal: ""
+*pt.PageSize Legal/US Legal: ""
+*sv.PageSize Legal/US Legal: ""
+
+*PageSize LegalSmall/US Legal (Small): "
+	<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize LegalSmall/Legal (USA, lille) : ""
+*de.PageSize LegalSmall/US-Legal (klein): ""
+*es.PageSize LegalSmall/US Legal (Pequeño): ""
+*fi.PageSize LegalSmall/US Legal (pieni): ""
+*fr.PageSize LegalSmall/Legal US (petit): ""
+*it.PageSize LegalSmall/Legale (ridotto): ""
+*nl.PageSize LegalSmall/US folio (klein): ""
+*nb.PageSize LegalSmall/US Legal (lite): ""
+*pt.PageSize LegalSmall/US Legal (Pequeno): ""
+*sv.PageSize LegalSmall/US Legal (litet): ""
+
+*PageSize Tabloid/11x17: "
+	<</PageSize [792 1224] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize Tabloid/11x17 : ""
+*de.PageSize Tabloid/11x17 Zoll: ""
+*es.PageSize Tabloid/11x17: ""
+*fi.PageSize Tabloid/11x17: ""
+*fr.PageSize Tabloid/11 x 17 pouces: ""
+*it.PageSize Tabloid/11x17: ""
+*nl.PageSize Tabloid/11x17: ""
+*nb.PageSize Tabloid/11x17: ""
+*pt.PageSize Tabloid/11x17: ""
+*sv.PageSize Tabloid/11x17 tum: ""
+
+*PageSize Executive/Executive: "
+	<</PageSize [522 756] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize Executive/Executive : ""
+*de.PageSize Executive/Executive: ""
+*es.PageSize Executive/Exec: ""
+*fi.PageSize Executive/Executive: ""
+*fr.PageSize Executive/Exécutif: ""
+*it.PageSize Executive/Executive: ""
+*nl.PageSize Executive/Executive: ""
+*nb.PageSize Executive/Executive: ""
+*pt.PageSize Executive/Executivo: ""
+*sv.PageSize Executive/Executive: ""
+
+*PageSize A4/A4: "
+	<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize A4/A4: ""
+*de.PageSize A4/A4: ""
+*es.PageSize A4/A4: ""
+*fi.PageSize A4/A4: ""
+*fr.PageSize A4/A4: ""
+*it.PageSize A4/A4: ""
+*nl.PageSize A4/A4: ""
+*nb.PageSize A4/A4: ""
+*pt.PageSize A4/A4: ""
+*sv.PageSize A4/A4: ""
+
+*PageSize A4Small/A4(Small): "
+	<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize A4Small/A4(lille) : ""
+*de.PageSize A4Small/A4(klein): ""
+*es.PageSize A4Small/A4(Pequeño): ""
+*fi.PageSize A4Small/A4 (pieni): ""
+*fr.PageSize A4Small/A4(petit): ""
+*it.PageSize A4Small/A4(ridotto): ""
+*nl.PageSize A4Small/A4(klein): ""
+*nb.PageSize A4Small/A4 (lite): ""
+*pt.PageSize A4Small/A4(Pequeno): ""
+*sv.PageSize A4Small/A4(litet): ""
+
+*PageSize A3/A3: "
+	<</PageSize [842 1191] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageSize A3/A3 : ""
+*de.PageSize A3/A3: ""
+*es.PageSize A3/A3: ""
+*fi.PageSize A3/A3: ""
+*fr.PageSize A3/A3: ""
+*it.PageSize A3/A3: ""
+*nl.PageSize A3/A3: ""
+*nb.PageSize A3/A3: ""
+*pt.PageSize A3/A3: ""
+*sv.PageSize A3/A3: ""
+
+*?PageSize: "
+ save
+   currentpagedevice /PageSize get aload pop
+   2 copy gt {exch} if
+   (Unknown)
+  6 dict
+   dup [612 792] (Letter) put
+   dup [612 1008] (Legal) put
+   dup [792 1224] (Tabloid) put
+   dup [522 756] (Executive) put
+   dup [595 842] (A4) put
+   dup [842 1190] (A3) put
+ { exch aload pop 4 index sub abs 5 le exch
+   5 index sub abs 5 le and
+      {exch pop exit} {pop} ifelse
+   } bind forall
+   = flush pop pop
+restore
+"
+*End
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Page Region:  PickOne
+*OrderDependency: 30 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*da.Translation PageRegion/Page Region: ""
+*de.Translation PageRegion/Seitenbereich: ""
+*es.Translation PageRegion/Dimensión de papel: ""
+*fi.Translation PageRegion/Sivuseutu: ""
+*fr.Translation PageRegion/Région de page: ""
+*it.Translation PageRegion/Dimensioni regione: ""
+*nl.Translation PageRegion/Page Region: ""
+*nb.Translation PageRegion/Page Region: ""
+*pt.Translation PageRegion/Região do papel: ""
+*sv.Translation PageRegion/Page Region: ""
+
+*PageRegion Letter/US Letter: "
+	<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion Letter/Letter(USA) : ""
+*de.PageRegion Letter/US-Letter: ""
+*es.PageRegion Letter/US Letter: ""
+*fi.PageRegion Letter/US Letter: ""
+*fr.PageRegion Letter/LetterUS: ""
+*it.PageRegion Letter/Lettera: ""
+*nl.PageRegion Letter/US kwarto: ""
+*nb.PageRegion Letter/US Letter: ""
+*pt.PageRegion Letter/US Letter: ""
+*sv.PageRegion Letter/US Letter: ""
+
+*PageRegion LetterSmall/US Letter(Small): "
+	<</PageSize [612 792] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion LetterSmall/Letter(USA, lille) : ""
+*de.PageRegion LetterSmall/US-Letter(klein): ""
+*es.PageRegion LetterSmall/US Letter(Pequeño): ""
+*fi.PageRegion LetterSmall/US Letter (pieni): ""
+*fr.PageRegion LetterSmall/LetterUS (petit): ""
+*it.PageRegion LetterSmall/Lettera (ridotto): ""
+*nl.PageRegion LetterSmall/US kwarto (klein): ""
+*nb.PageRegion LetterSmall/US Letter (lite): ""
+*pt.PageRegion LetterSmall/US Letter(Pequeno): ""
+*sv.PageRegion LetterSmall/US Letter(litet): ""
+
+*PageRegion Legal/US Legal: "
+	<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion Legal/Legal (USA) : ""
+*de.PageRegion Legal/US-Legal: ""
+*es.PageRegion Legal/US Legal: ""
+*fi.PageRegion Legal/US Legal: ""
+*fr.PageRegion Legal/Legal US: ""
+*it.PageRegion Legal/Legale: ""
+*nl.PageRegion Legal/US folio: ""
+*nb.PageRegion Legal/US Legal: ""
+*pt.PageRegion Legal/US Legal: ""
+*sv.PageRegion Legal/US Legal: ""
+
+*PageRegion LegalSmall/US Legal (Small): "
+	<</PageSize [612 1008] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion LegalSmall/Legal (USA, lille) : ""
+*de.PageRegion LegalSmall/US-Legal (klein): ""
+*es.PageRegion LegalSmall/US Legal (Pequeño): ""
+*fi.PageRegion LegalSmall/US Legal (pieni): ""
+*fr.PageRegion LegalSmall/Legal US (petit): ""
+*it.PageRegion LegalSmall/Legale (ridotto): ""
+*nl.PageRegion LegalSmall/US folio (klein): ""
+*nb.PageRegion LegalSmall/US Legal (lite): ""
+*pt.PageRegion LegalSmall/US Legal (Pequeno): ""
+*sv.PageRegion LegalSmall/US Legal (litet): ""
+
+*PageRegion Tabloid/11x17: "
+	<</PageSize [792 1224] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion Tabloid/11x17 : ""
+*de.PageRegion Tabloid/11x17 Zoll: ""
+*es.PageRegion Tabloid/11x17: ""
+*fi.PageRegion Tabloid/11x17: ""
+*fr.PageRegion Tabloid/11 x 17 pouces: ""
+*it.PageRegion Tabloid/11x17: ""
+*nl.PageRegion Tabloid/11x17: ""
+*nb.PageRegion Tabloid/11x17: ""
+*pt.PageRegion Tabloid/11x17: ""
+*sv.PageRegion Tabloid/11x17 tum: ""
+
+*PageRegion Executive/Executive: "
+	<</PageSize [522 756] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion Executive/Executive : ""
+*de.PageRegion Executive/Executive: ""
+*es.PageRegion Executive/Exec: ""
+*fi.PageRegion Executive/Executive: ""
+*fr.PageRegion Executive/Exécutif: ""
+*it.PageRegion Executive/Executive: ""
+*nl.PageRegion Executive/Executive: ""
+*nb.PageRegion Executive/Executive: ""
+*pt.PageRegion Executive/Executivo: ""
+*sv.PageRegion Executive/Executive: ""
+
+*PageRegion A4/A4: "
+	<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion A4/A4: ""
+*de.PageRegion A4/A4: ""
+*es.PageRegion A4/A4: ""
+*fi.PageRegion A4/A4: ""
+*fr.PageRegion A4/A4: ""
+*it.PageRegion A4/A4: ""
+*nl.PageRegion A4/A4: ""
+*nb.PageRegion A4/A4: ""
+*pt.PageRegion A4/A4: ""
+*sv.PageRegion A4/A4: ""
+
+*PageRegion A4Small/A4(Small): "
+	<</PageSize [595 842] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion A4Small/A4(lille) : ""
+*de.PageRegion A4Small/A4(klein): ""
+*es.PageRegion A4Small/A4(Pequeño): ""
+*fi.PageRegion A4Small/A4 (pieni): ""
+*fr.PageRegion A4Small/A4(petit): ""
+*it.PageRegion A4Small/A4(ridotto): ""
+*nl.PageRegion A4Small/A4(klein): ""
+*nb.PageRegion A4Small/A4 (lite): ""
+*pt.PageRegion A4Small/A4(Pequeno): ""
+*sv.PageRegion A4Small/A4(litet): ""
+
+*PageRegion A3/A3: "
+	<</PageSize [842 1191] /ImagingBBox null>> setpagedevice"
+*End
+*da.PageRegion A3/A3 : ""
+*de.PageRegion A3/A3: ""
+*es.PageRegion A3/A3: ""
+*fi.PageRegion A3/A3: ""
+*fr.PageRegion A3/A3: ""
+*it.PageRegion A3/A3: ""
+*nl.PageRegion A3/A3: ""
+*nb.PageRegion A3/A3: ""
+*pt.PageRegion A3/A3: ""
+*sv.PageRegion A3/A3: ""
+
+*CloseUI: *PageRegion
+
+*% The following entries provide information about specific paper keywords.
+*DefaultImageableArea: Letter
+*ImageableArea Letter/US Letter:				"11.28 12.00 601.19 779.02"
+*da.ImageableArea Letter/Letter(USA) : ""
+*de.ImageableArea Letter/US-Letter: ""
+*es.ImageableArea Letter/US Letter: ""
+*fi.ImageableArea Letter/US Letter: ""
+*fr.ImageableArea Letter/LetterUS: ""
+*it.ImageableArea Letter/Lettera: ""
+*nl.ImageableArea Letter/US kwarto: ""
+*nb.ImageableArea Letter/US Letter: ""
+*pt.ImageableArea Letter/US Letter: ""
+*sv.ImageableArea Letter/US Letter: ""
+
+*ImageableArea LetterSmall/US Letter(Small):	"30.00 31.00 582.00 761.00 "
+*da.ImageableArea LetterSmall/Letter(USA, lille) : ""
+*de.ImageableArea LetterSmall/US-Letter(klein): ""
+*es.ImageableArea LetterSmall/US Letter(Pequeño): ""
+*fi.ImageableArea LetterSmall/US Letter (pieni): ""
+*fr.ImageableArea LetterSmall/LetterUS (petit): ""
+*it.ImageableArea LetterSmall/Lettera (ridotto): ""
+*nl.ImageableArea LetterSmall/US kwarto (klein): ""
+*nb.ImageableArea LetterSmall/US Letter (lite): ""
+*pt.ImageableArea LetterSmall/US Letter(Pequeno): ""
+*sv.ImageableArea LetterSmall/US Letter(litet): ""
+
+*ImageableArea Legal/US Legal: 					"10.32 10.80 600.71 997.17"
+*da.ImageableArea Legal/Legal (USA) : ""
+*de.ImageableArea Legal/US-Legal: ""
+*es.ImageableArea Legal/US Legal: ""
+*fi.ImageableArea Legal/US Legal: ""
+*fr.ImageableArea Legal/Legal US: ""
+*it.ImageableArea Legal/Legale: ""
+*nl.ImageableArea Legal/US folio: ""
+*nb.ImageableArea Legal/US Legal: ""
+*pt.ImageableArea Legal/US Legal: ""
+*sv.ImageableArea Legal/US Legal: ""
+
+*ImageableArea LegalSmall/US Legal (Small):		"64.00 54.00 548.00 954.00 "
+*da.ImageableArea LegalSmall/Legal (USA, lille) : ""
+*de.ImageableArea LegalSmall/US-Legal (klein): ""
+*es.ImageableArea LegalSmall/US Legal (Pequeño): ""
+*fi.ImageableArea LegalSmall/US Legal (pieni): ""
+*fr.ImageableArea LegalSmall/Legal US (petit): ""
+*it.ImageableArea LegalSmall/Legale (ridotto): ""
+*nl.ImageableArea LegalSmall/US folio (klein): ""
+*nb.ImageableArea LegalSmall/US Legal (lite): ""
+*pt.ImageableArea LegalSmall/US Legal (Pequeno): ""
+*sv.ImageableArea LegalSmall/US Legal (litet): ""
+
+*ImageableArea Tabloid/11x17: 					"12.00 11.28 779.02 1212.68"
+*da.ImageableArea Tabloid/11x17 : ""
+*de.ImageableArea Tabloid/11x17 Zoll: ""
+*es.ImageableArea Tabloid/11x17: ""
+*fi.ImageableArea Tabloid/11x17: ""
+*fr.ImageableArea Tabloid/11 x 17 pouces: ""
+*it.ImageableArea Tabloid/11x17: ""
+*nl.ImageableArea Tabloid/11x17: ""
+*nb.ImageableArea Tabloid/11x17: ""
+*pt.ImageableArea Tabloid/11x17: ""
+*sv.ImageableArea Tabloid/11x17 tum: ""
+
+*ImageableArea Executive/Executive: 			"13.20 13.20 508.79 741.82"
+*da.ImageableArea Executive/Executive: ""
+*de.ImageableArea Executive/Executive: ""
+*es.ImageableArea Executive/Ejecutivo: ""
+*fi.ImageableArea Executive/Executive: ""
+*fr.ImageableArea Executive/Exécutif: ""
+*it.ImageableArea Executive/Executive: ""
+*nl.ImageableArea Executive/Executive: ""
+*nb.ImageableArea Executive/Executive: ""
+*pt.ImageableArea Executive/Executivo: ""
+*sv.ImageableArea Executive/Executive: ""
+
+*ImageableArea A4/A4: 							"12.96 13.92 581.27 827.02"
+*da.ImageableArea A4/A4: ""
+*de.ImageableArea A4/A4: ""
+*es.ImageableArea A4/A4: ""
+*fi.ImageableArea A4/A4: ""
+*fr.ImageableArea A4/A4: ""
+*it.ImageableArea A4/A4: ""
+*nl.ImageableArea A4/A4: ""
+*nb.ImageableArea A4/A4: ""
+*pt.ImageableArea A4/A4: ""
+*sv.ImageableArea A4/A4: ""
+
+*ImageableArea A4Small/A4(Small): 				"28.00 30.00 566.00 811.00 "
+*da.ImageableArea A4Small/A4(lille) : ""
+*de.ImageableArea A4Small/A4(klein): ""
+*es.ImageableArea A4Small/A4(Pequeño): ""
+*fi.ImageableArea A4Small/A4 (pieni): ""
+*fr.ImageableArea A4Small/A4(petit): ""
+*it.ImageableArea A4Small/A4(ridotto): ""
+*nl.ImageableArea A4Small/A4(klein): ""
+*nb.ImageableArea A4Small/A4 (lite): ""
+*pt.ImageableArea A4Small/A4(Pequeno): ""
+*sv.ImageableArea A4Small/A4(litet): ""
+
+*ImageableArea A3/A3: 							"13.92 11.28 827.02 1179.57"
+*da.ImageableArea A3/A3 : ""
+*de.ImageableArea A3/A3: ""
+*es.ImageableArea A3/A3: ""
+*fi.ImageableArea A3/A3: ""
+*fr.ImageableArea A3/A3: ""
+*it.ImageableArea A3/A3: ""
+*nl.ImageableArea A3/A3: ""
+*nb.ImageableArea A3/A3: ""
+*pt.ImageableArea A3/A3: ""
+*sv.ImageableArea A3/A3: ""
+
+*?ImageableArea: "
+ save
+   /cvp { (                ) cvs print ( ) print } bind def
+   /upperright {10000 mul floor 10000 div} bind def
+   /lowerleft {10000 mul ceiling 10000 div} bind def
+   newpath clippath pathbbox
+   4 -2 roll exch 2 {lowerleft cvp} repeat
+   exch 2 {upperright cvp} repeat flush
+ restore
+"
+*End
+
+*% These provide the physical dimensions of the paper (by keyword)
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/US Letter: 				"612 792"
+*da.PaperDimension Letter/Letter(USA) : ""
+*de.PaperDimension Letter/US-Letter: ""
+*es.PaperDimension Letter/US Letter: ""
+*fi.PaperDimension Letter/US Letter: ""
+*fr.PaperDimension Letter/LetterUS: ""
+*it.PaperDimension Letter/Lettera: ""
+*nl.PaperDimension Letter/US kwarto: ""
+*nb.PaperDimension Letter/US Letter: ""
+*pt.PaperDimension Letter/US Letter: ""
+*sv.PaperDimension Letter/US Letter: ""
+
+*PaperDimension LetterSmall/US Letter(Small):	"612 792 "
+*da.PaperDimension LetterSmall/Letter(USA, lille) : ""
+*de.PaperDimension LetterSmall/US-Letter(klein): ""
+*es.PaperDimension LetterSmall/US Letter(Pequeño): ""
+*fi.PaperDimension LetterSmall/US Letter (pieni): ""
+*fr.PaperDimension LetterSmall/LetterUS (petit): ""
+*it.PaperDimension LetterSmall/Lettera (ridotto): ""
+*nl.PaperDimension LetterSmall/US kwarto (klein): ""
+*nb.PaperDimension LetterSmall/US Letter (lite): ""
+*pt.PaperDimension LetterSmall/US Letter(Pequeno): ""
+*sv.PaperDimension LetterSmall/US Letter(litet): ""
+
+*PaperDimension Legal/US Legal: 				"612 1008"
+*da.PaperDimension Legal/Legal (USA) : ""
+*de.PaperDimension Legal/US-Legal: ""
+*es.PaperDimension Legal/US Legal: ""
+*fi.PaperDimension Legal/US Legal: ""
+*fr.PaperDimension Legal/Legal US: ""
+*it.PaperDimension Legal/Legale: ""
+*nl.PaperDimension Legal/US folio: ""
+*nb.PaperDimension Legal/US Legal: ""
+*pt.PaperDimension Legal/US Legal: ""
+*sv.PaperDimension Legal/US Legal: ""
+
+*PaperDimension LegalSmall/US Legal (Small): 	"612 1008 "
+*da.PaperDimension LegalSmall/Legal (USA, lille) : ""
+*de.PaperDimension LegalSmall/US-Legal (klein): ""
+*es.PaperDimension LegalSmall/US Legal (Pequeño): ""
+*fi.PaperDimension LegalSmall/US Legal (pieni): ""
+*fr.PaperDimension LegalSmall/Legal US (petit): ""
+*it.PaperDimension LegalSmall/Legale (ridotto): ""
+*nl.PaperDimension LegalSmall/US folio (klein): ""
+*nb.PaperDimension LegalSmall/US Legal (lite): ""
+*pt.PaperDimension LegalSmall/US Legal (Pequeno): ""
+*sv.PaperDimension LegalSmall/US Legal (litet): ""
+
+*PaperDimension Tabloid/11x17: 					"792 1224"
+*da.PaperDimension Tabloid/11x17 : ""
+*de.PaperDimension Tabloid/11x17 Zoll: ""
+*es.PaperDimension Tabloid/11x17: ""
+*fi.PaperDimension Tabloid/11x17: ""
+*fr.PaperDimension Tabloid/11 x 17 pouces: ""
+*it.PaperDimension Tabloid/11x17: ""
+*nl.PaperDimension Tabloid/11x17: ""
+*nb.PaperDimension Tabloid/11x17: ""
+*pt.PaperDimension Tabloid/11x17: ""
+*sv.PaperDimension Tabloid/11x17 tum: ""
+
+*PaperDimension Executive/Executive: 			"522 756"
+*da.PaperDimension Executive/Executive : ""
+*de.PaperDimension Executive/Executive: ""
+*es.PaperDimension Executive/Exec: ""
+*fi.PaperDimension Executive/Executive: ""
+*fr.PaperDimension Executive/Exécutif: ""
+*it.PaperDimension Executive/Executive: ""
+*nl.PaperDimension Executive/Executive: ""
+*nb.PaperDimension Executive/Executive: ""
+*pt.PaperDimension Executive/Executivo: ""
+*sv.PaperDimension Executive/Executive: ""
+
+*PaperDimension A4/A4: 							"595 842"
+*da.PaperDimension A4/A4: ""
+*de.PaperDimension A4/A4: ""
+*es.PaperDimension A4/A4: ""
+*fi.PaperDimension A4/A4: ""
+*fr.PaperDimension A4/A4: ""
+*it.PaperDimension A4/A4: ""
+*nl.PaperDimension A4/A4: ""
+*nb.PaperDimension A4/A4: ""
+*pt.PaperDimension A4/A4: ""
+*sv.PaperDimension A4/A4: ""
+
+*PaperDimension A4Small/A4(Small): 			"595 842"
+*da.PaperDimension A4Small/A4(lille) : ""
+*de.PaperDimension A4Small/A4(klein): ""
+*es.PaperDimension A4Small/A4(Pequeño): ""
+*fi.PaperDimension A4Small/A4 (pieni): ""
+*fr.PaperDimension A4Small/A4(petit): ""
+*it.PaperDimension A4Small/A4(ridotto): ""
+*nl.PaperDimension A4Small/A4(klein): ""
+*nb.PaperDimension A4Small/A4 (lite): ""
+*pt.PaperDimension A4Small/A4(Pequeno): ""
+*sv.PaperDimension A4Small/A4(litet): ""
+
+*PaperDimension A3/A3: 							"842 1191"
+*da.PaperDimension A3/A3 : ""
+*de.PaperDimension A3/A3: ""
+*es.PaperDimension A3/A3: ""
+*fi.PaperDimension A3/A3: ""
+*fr.PaperDimension A3/A3: ""
+*it.PaperDimension A3/A3: ""
+*nl.PaperDimension A3/A3: ""
+*nb.PaperDimension A3/A3: ""
+*pt.PaperDimension A3/A3: ""
+*sv.PaperDimension A3/A3: ""
+
+*RequiresPageRegion Front: False
+*RequiresPageRegion Rear: True
+*RequiresPageRegion Manual: True
+
+*% ===================================
+*% Gray Levels and Halftoning
+*% ===================================
+*ContoneOnly: True
+*ScreenFreq: "60.0"
+*ScreenAngle: "45.0"
+*DefaultScreenProc: Dot
+*ScreenProc Dot: "
+{abs exch abs 2 copy add 1 gt {1 sub dup mul exch 1 sub dup mul add 1
+sub }{dup mul exch dup mul add 1 exch sub }ifelse }
+"
+*End
+*ScreenProc Line: "{ pop }"
+*ScreenProc Ellipse: "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1 exch sub }"
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+
+*% =================================
+*% Print Color as Gray
+*% Chose NOT to use Adobe's *ColorModel keyword because color on or off is simpler
+*% =================================
+*OpenUI *ColorModel/Print Color as Gray:  PickOne
+*OrderDependency: 40 DocumentSetup *ColorModel
+*DefaultColorModel: CMYK
+*da.Translation ColorModel/Udskriv farve som gråtoner : ""
+*de.Translation ColorModel/Grauton drucken: ""
+*es.Translation ColorModel/Imprimir color como gris: ""
+*fi.Translation ColorModel/Värin tulostus harmaana: ""
+*fr.Translation ColorModel/Imprimer couleur en gris: ""
+*it.Translation ColorModel/Stampa i colori in grigio: ""
+*nl.Translation ColorModel/Druk kleur af als grijs: ""
+*nb.Translation ColorModel/Skriv ut farge som gråtone: ""
+*pt.Translation ColorModel/Imprimir cor como cinza: ""
+*sv.Translation ColorModel/Skriv ut färger som gråtoner: ""
+
+*ColorModel Gray/On: "<</ProcessColorModel /DeviceGray>> setpagedevice"
+*da.ColorModel Gray/Ja : ""
+*de.ColorModel Gray/Ein: ""
+*es.ColorModel Gray/Activado: ""
+*fi.ColorModel Gray/Päällä: ""
+*fr.ColorModel Gray/Activé: ""
+*it.ColorModel Gray/Attiva: ""
+*nl.ColorModel Gray/Aan: ""
+*nb.ColorModel Gray/På: ""
+*pt.ColorModel Gray/Ligado: ""
+*sv.ColorModel Gray/På: ""
+
+*ColorModel CMYK/Off: "<</ProcessColorModel /DeviceRGB>> setpagedevice"
+*da.ColorModel CMYK/Nej : ""
+*de.ColorModel CMYK/Aus: ""
+*es.ColorModel CMYK/Desactivado: ""
+*fi.ColorModel CMYK/Ei: ""
+*fr.ColorModel CMYK/Désactivée: ""
+*it.ColorModel CMYK/Disattiva: ""
+*nl.ColorModel CMYK/Uit: ""
+*nb.ColorModel CMYK/Av: ""
+*pt.ColorModel CMYK/Desligado: ""
+*sv.ColorModel CMYK/Av: ""
+
+*?ColorModel: "
+  save
+    currentpagedevice /ProcessColorModel get
+	/DeviceGray eq {(Gray)}{(CMYK)}ifelse = flush
+  restore
+"
+*End
+*CloseUI: *ColorModel
+
+*% =================================
+*% Media Handling Features
+*% =================================
+*% Media Input Source
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Automatic: "
+	<</ManualFeed false /MediaPosition 7>> setpagedevice"
+*End
+*da.InputSlot Auto/Automatisk: ""
+*de.InputSlot Auto/Automatisch: ""
+*es.InputSlot Auto/Automático: ""
+*fi.InputSlot Auto/Automaattinen: ""
+*fr.InputSlot Auto/Automatique: ""
+*it.InputSlot Auto/Automatico: ""
+*nl.InputSlot Auto/Automatisch: ""
+*nb.InputSlot Auto/Automatisk: ""
+*pt.InputSlot Auto/Automático: ""
+*sv.InputSlot Auto/Automatiskt: ""
+
+*da.Translation InputSlot/Papirkilde: ""
+*de.Translation InputSlot/Papierquelle: ""
+*es.Translation InputSlot/Alimentación de papel: ""
+*fi.Translation InputSlot/Paperilähde: ""
+*fr.Translation InputSlot/Source du papier: ""
+*it.Translation InputSlot/Alimentazione della carta: ""
+*nl.Translation InputSlot/Papierbron: ""
+*nb.Translation InputSlot/Arkmating: ""
+*pt.Translation InputSlot/Fonte de papel: ""
+*sv.Translation InputSlot/Papperskälla: ""
+
+*InputSlot Front/Front Tray: "
+    <</DeferredMediaSelection true
+	  /MediaPosition 0
+	>> setpagedevice"
+*End
+*da.InputSlot Front/Forreste bakke: ""
+*de.InputSlot Front/Vord. Fach Zufuhrfach: ""
+*es.InputSlot Front/Frontal Bandeja: ""
+*fi.InputSlot Front/Etupuolilokero: ""
+*fr.InputSlot Front/Bac Premiére: ""
+*it.InputSlot Front/Cassetto fronte: ""
+*nl.InputSlot Front/Voorsrte lade: ""
+*nb.InputSlot Front/Første Skuff: ""
+*pt.InputSlot Front/Fronte Bandeja: ""
+*sv.InputSlot Front/Fack Främre: ""
+
+*InputSlot Rear/Rear Tray: "
+    <</DeferredMediaSelection true
+	  /MediaPosition 1
+	>> setpagedevice"
+*End
+*da.InputSlot Rear/Bageste bakke: ""
+*de.InputSlot Rear/Hint. Fach Zufuhrfach: ""
+*es.InputSlot Rear/Posterior Bandeja: ""
+*fi.InputSlot Rear/Takalokero: ""
+*fr.InputSlot Rear/Bac Arriére: ""
+*it.InputSlot Rear/Cassetto posteriore: ""
+*nl.InputSlot Rear/Achterste lade: ""
+*nb.InputSlot Rear/Bakre Skuff: ""
+*pt.InputSlot Rear/Traseira Bandeja: ""
+*sv.InputSlot Rear/Fack Bakre: ""
+
+*?InputSlot: "
+save
+	currentpagedevice /InputAttributes get
+	/Priority get
+	aload pop pop
+	0 eq {(Front)} {(Rear)} ifelse
+	= flush
+restore
+"
+*End
+*CloseUI: *InputSlot
+*OpenUI *ManualFeed/Manual Feed:  Boolean
+*OrderDependency: 25 AnySetup *ManualFeed
+*DefaultManualFeed: False
+*da.Translation ManualFeed/Manuel indføring : ""
+*de.Translation ManualFeed/Manuelle Zufuhr: ""
+*es.Translation ManualFeed/Alimentación manual: ""
+*fi.Translation ManualFeed/käsinsyöttö: ""
+*fr.Translation ManualFeed/Alimentation manuelle: ""
+*it.Translation ManualFeed/Alimentazione manuale: ""
+*nl.Translation ManualFeed/Handmatige invoer: ""
+*nb.Translation ManualFeed/Manuell arkmating: ""
+*pt.Translation ManualFeed/Alimentação manual: ""
+*sv.Translation ManualFeed/Manuell matning: ""
+
+*ManualFeed True/True: "1 dict dup /ManualFeed true put setpagedevice"
+*da.ManualFeed True/Sand : ""
+*de.ManualFeed True/Wahr: ""
+*es.ManualFeed True/Verdadero: ""
+*fi.ManualFeed True/Oikein: ""
+*fr.ManualFeed True/Vrai: ""
+*it.ManualFeed True/Vero: ""
+*nl.ManualFeed True/Juist: ""
+*nb.ManualFeed True/Ja: ""
+*pt.ManualFeed True/Verdadeiro: ""
+*sv.ManualFeed True/Sant: ""
+
+*ManualFeed False/False: "1 dict dup /ManualFeed false put setpagedevice"
+*da.ManualFeed False/Falsk : ""
+*de.ManualFeed False/Falsch: ""
+*es.ManualFeed False/Falso: ""
+*fi.ManualFeed False/Väärin: ""
+*fr.ManualFeed False/Faux: ""
+*it.ManualFeed False/Falso: ""
+*nl.ManualFeed False/Onjuist: ""
+*nb.ManualFeed False/Nei: ""
+*pt.ManualFeed False/Falso: ""
+*sv.ManualFeed False/Falskt: ""
+
+*?ManualFeed: "
+  save
+    currentpagedevice /ManualFeed get
+    {(True)}{(False)}ifelse = flush
+  restore
+"
+*End
+*CloseUI: *ManualFeed
+
+*% Media output destination
+*OpenUI *OutputBin/Output Bin: PickOne
+*OrderDependency: 70 AnySetup *OutputBin
+*DefaultOutputBin: Upper
+*da.Translation OutputBin/Udskriftsbakke: ""
+*de.Translation OutputBin/Ausgabefach: ""
+*es.Translation OutputBin/Bandeja de salida: ""
+*fi.Translation OutputBin/Tulostelokero: ""
+*fr.Translation OutputBin/Bac de sortie: ""
+*it.Translation OutputBin/Scomparto di uscita: ""
+*nl.Translation OutputBin/Uitvoerbak: ""
+*nb.Translation OutputBin/Utskuff: ""
+*pt.Translation OutputBin/Compartimento de saída: ""
+*sv.Translation OutputBin/Utmatningsfack: ""
+
+*OutputBin Upper/Upper (Face Down): "1 dict dup /OutputFaceUp false put setpagedevice"
+*da.OutputBin Upper/ÿverste (forside nedad): ""
+*de.OutputBin Upper/Linkes (unten): ""
+*es.OutputBin Upper/Superior (boca abajo): ""
+*fi.OutputBin Upper/Ylälokero (tulostuspuoli lokero): ""
+*fr.OutputBin Upper/Bac supérieur (Verso): ""
+*it.OutputBin Upper/Vassoio superiore (verso il basso): ""
+*nl.OutputBin Upper/Bovenbak (afdrukzijde naar beneden): ""
+*nb.OutputBin Upper/Øvre skuff (fors ned): ""
+*pt.OutputBin Upper/Bandeja superior (Voltado para baixo): ""
+*sv.OutputBin Upper/Övre (texten nedåt): ""
+
+*OutputBin Lower/Lower (Face Up): "1 dict dup /OutputFaceUp true put setpagedevice"
+*da.OutputBin Lower/Nederste (forside opad): ""
+*de.OutputBin Lower/Unteres (oben): ""
+*es.OutputBin Lower/Inferior (boca arriba): ""
+*fi.OutputBin Lower/Alalokero (tulostuspuoli ylös): ""
+*fr.OutputBin Lower/Inférieur (Recto): ""
+*it.OutputBin Lower/Vassoio inferiore (verso l’alto): ""
+*nl.OutputBin Lower/Onder (afdrukzijde naar boven): ""
+*nb.OutputBin Lower/Nedre skuff (fors opp): ""
+*pt.OutputBin Lower/Bandeja inferior (Voltado para cima): ""
+*sv.OutputBin Lower/Nedre fack (texten uppåt): ""
+
+*?OutputBin: "
+save
+	currentpagedevice /OutputFaceUp get
+	{(Lower)}{(Upper)}ifelse = flush
+restore
+"
+*End
+*CloseUI: *OutputBin
+
+*% ===================================
+*% ColorSmart
+*% ===================================
+
+*% ==================================
+*%  ColorSmart Manual Settings
+*% ==================================
+*OpenUI *HPCSText/Manual Text:  PickOne
+*OrderDependency: 50 AnySetup *HPCSText
+*DefaultHPCSText: VividDetail
+*da.Translation HPCSText/Manuel Tekst: ""
+*de.Translation HPCSText/Manuell Text: ""
+*es.Translation HPCSText/Manual Text: ""
+*fi.Translation HPCSText/Manuaalinen teksti: ""
+*fr.Translation HPCSText/Manuel Texte: ""
+*it.Translation HPCSText/Manuale Testo: ""
+*nl.Translation HPCSText/Handmatig Tekst: ""
+*nb.Translation HPCSText/Manuell Tekst: ""
+*pt.Translation HPCSText/Manual Texto: ""
+*sv.Translation HPCSText/Manuell Text: ""
+
+*HPCSText VividDetail/Vivid-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartTextAdjustment
+	Detail ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText VividDetail/Livlig-Detaljer: ""
+*de.HPCSText VividDetail/Leuchtend-Detailliert: ""
+*es.HPCSText VividDetail/Dispositivo-Detalle: ""
+*fi.HPCSText VividDetail/Kirkas-Yksityiskohtainen: ""
+*fr.HPCSText VividDetail/Vive-Détaillées: ""
+*it.HPCSText VividDetail/Vivido-Dettagli: ""
+*nl.HPCSText VividDetail/Levendig-Detail: ""
+*nb.HPCSText VividDetail/Skarp-Detalj: ""
+*pt.HPCSText VividDetail/Víva-Detalhes: ""
+*sv.HPCSText VividDetail/Stark-Detalj: ""
+
+*HPCSText VividSmooth/Vivid-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartTextAdjustment
+	Smooth ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText VividSmooth/Livlig-Jævn: ""
+*de.HPCSText VividSmooth/Leuchtend-Geglättet: ""
+*es.HPCSText VividSmooth/Dispositivo-Uniforme: ""
+*fi.HPCSText VividSmooth/Kirkas-Tasainen: ""
+*fr.HPCSText VividSmooth/Vive-Lisse: ""
+*it.HPCSText VividSmooth/Vivido-Uniformi: ""
+*nl.HPCSText VividSmooth/Levendig-Gelijkmatig: ""
+*nb.HPCSText VividSmooth/Skarp-Utjevning: ""
+*pt.HPCSText VividSmooth/Víva-Nivelamento: ""
+*sv.HPCSText VividSmooth/Stark-Jämnt: ""
+
+*HPCSText VividBasic/Vivid-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartTextAdjustment
+	Basic ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText VividBasic/Livlig-Fundamental: ""
+*de.HPCSText VividBasic/Leuchtend-Grundsätzlich: ""
+*es.HPCSText VividBasic/Dispositivo-básico: ""
+*fi.HPCSText VividBasic/Kirkas-Perus: ""
+*fr.HPCSText VividBasic/Vive-Fondamental: ""
+*it.HPCSText VividBasic/Vivido-Fondamentale: ""
+*nl.HPCSText VividBasic/Levendig-Basis: ""
+*nb.HPCSText VividBasic/Skarp-Basisk: ""
+*pt.HPCSText VividBasic/Víva-Fundamental: ""
+*sv.HPCSText VividBasic/Stark-Fundamental: ""
+
+*HPCSText MatchDetail/Calibrated-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartTextAdjustment
+	Detail ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText MatchDetail/Kalibrer-Detaljer: ""
+*de.HPCSText MatchDetail/Kalibrieren-Detailliert: ""
+*es.HPCSText MatchDetail/Calibrar-Detalle: ""
+*fi.HPCSText MatchDetail/Kalibroi-Yksityiskohtainen: ""
+*fr.HPCSText MatchDetail/Calibrer-Détaillées: ""
+*it.HPCSText MatchDetail/Calibrare-Dettagli: ""
+*nl.HPCSText MatchDetail/Kalibreren-Detail: ""
+*nb.HPCSText MatchDetail/Kalibrere-Detalj: ""
+*pt.HPCSText MatchDetail/Calibre-Detalhes: ""
+*sv.HPCSText MatchDetail/Kalibrera-Detalj: ""
+
+*HPCSText MatchSmooth/Calibrated-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartTextAdjustment
+	Smooth ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText MatchSmooth/Kalibrer-Jævn: ""
+*de.HPCSText MatchSmooth/Kalibrieren-Geglättet: ""
+*es.HPCSText MatchSmooth/Calibrar-Uniforme: ""
+*fi.HPCSText MatchSmooth/Kalibroi-Tasainen: ""
+*fr.HPCSText MatchSmooth/Calibrer-Lisse: ""
+*it.HPCSText MatchSmooth/Calibrare-Uniformi: ""
+*nl.HPCSText MatchSmooth/Kalibreren-Gelijkmatig: ""
+*nb.HPCSText MatchSmooth/Kalibrere-Utjevning: ""
+*pt.HPCSText MatchSmooth/Calibre-Nivelamento: ""
+*sv.HPCSText MatchSmooth/Kalibrera-Jämnt: ""
+
+*HPCSText MatchBasic/Calibrated-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartTextAdjustment
+	Basic ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText MatchBasic/Kalibrer-Fundamental: ""
+*de.HPCSText MatchBasic/Kalibrieren-Grundsätzlich: ""
+*es.HPCSText MatchBasic/Calibrar-básico: ""
+*fi.HPCSText MatchBasic/Kalibroi-Perus: ""
+*fr.HPCSText MatchBasic/Calibrer-Fondamental: ""
+*it.HPCSText MatchBasic/Calibrare-Fondamentale: ""
+*nl.HPCSText MatchBasic/Kalibreren-Basis: ""
+*nb.HPCSText MatchBasic/Kalibrere-Basisk: ""
+*pt.HPCSText MatchBasic/Calibre-Fundamental: ""
+*sv.HPCSText MatchBasic/Kalibrera-Fundamental: ""
+
+*HPCSText NoAdjDetail/No Adjust-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartTextAdjustment
+	Detail ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText NoAdjDetail/Enhed-Detaljer: ""
+*de.HPCSText NoAdjDetail/Kein Anpassung-Detailliert: ""
+*es.HPCSText NoAdjDetail/No Modificación-Detalle: ""
+*fi.HPCSText NoAdjDetail/Ei järjestää-Yksityiskohtainen: ""
+*fr.HPCSText NoAdjDetail/Aucun Ajustage-Détaillées: ""
+*it.HPCSText NoAdjDetail/Nessuna aggiustamento-Dettagli: ""
+*nl.HPCSText NoAdjDetail/Apparaatust-Detail: ""
+*nb.HPCSText NoAdjDetail/No Adjust-Detalj: ""
+*pt.HPCSText NoAdjDetail/Não Ajustamento-Detalhes: ""
+*sv.HPCSText NoAdjDetail/Inget-Detalj: ""
+
+*HPCSText NoAdjSmooth/No Adjust-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartTextAdjustment
+	Smooth ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText NoAdjSmooth/Enhed-Jævn: ""
+*de.HPCSText NoAdjSmooth/Kein Anpassung-Geglättet: ""
+*es.HPCSText NoAdjSmooth/No Modificación-Uniforme: ""
+*fi.HPCSText NoAdjSmooth/Ei järjestää-Tasainen: ""
+*fr.HPCSText NoAdjSmooth/Aucun Ajustage-Lisse: ""
+*it.HPCSText NoAdjSmooth/Nessuna aggiustamento-Uniformi: ""
+*nl.HPCSText NoAdjSmooth/Apparaatust-Gelijkmatig: ""
+*nb.HPCSText NoAdjSmooth/No Adjust-Utjevning: ""
+*pt.HPCSText NoAdjSmooth/Não Ajustamento-Nivelamento: ""
+*sv.HPCSText NoAdjSmooth/Inget-Jämnt: ""
+
+*HPCSText NoAdjBasic/No Adjust-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartTextAdjustment
+	Basic ColorSmartTextHalftone
+} if
+"
+*End
+*da.HPCSText NoAdjBasic/Enhed-Fundamental: ""
+*de.HPCSText NoAdjBasic/Kein Anpassung-Grundsätzlich: ""
+*es.HPCSText NoAdjBasic/No Modificación-básico: ""
+*fi.HPCSText NoAdjBasic/Ei järjestää-Perus: ""
+*fr.HPCSText NoAdjBasic/Aucun Ajustage-Fondamental: ""
+*it.HPCSText NoAdjBasic/Nessuna aggiustamento-Fondamentale: ""
+*nl.HPCSText NoAdjBasic/Apparaatust-Basis: ""
+*nb.HPCSText NoAdjBasic/No Adjust-Basisk: ""
+*pt.HPCSText NoAdjBasic/Não Ajustamento-Fundamental: ""
+*sv.HPCSText NoAdjBasic/Inget-Fundamental: ""
+
+*CloseUI: *HPCSText
+
+*OpenUI *HPCSGraphics/Manual Graphics:  PickOne
+*OrderDependency: 50 AnySetup *HPCSGraphics
+*DefaultHPCSGraphics: VividSmooth
+*da.Translation HPCSGraphics/Manuel Grafiks: ""
+*de.Translation HPCSGraphics/Manuell Grafik: ""
+*es.Translation HPCSGraphics/Manual Gráfico: ""
+*fi.Translation HPCSGraphics/Manuaalinen Kuva: ""
+*fr.Translation HPCSGraphics/Manuel Graphiques: ""
+*it.Translation HPCSGraphics/Manuale Grafici: ""
+*nl.Translation HPCSGraphics/Handmatig Illustraties: ""
+*nb.Translation HPCSGraphics/Manuell Graphics: ""
+*pt.Translation HPCSGraphics/Manual Gráficos: ""
+*sv.Translation HPCSGraphics/Manuell Grafiks: ""
+
+*HPCSGraphics VividDetail/Vivid-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartGraphicsAdjustment
+	Detail ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics VividDetail/Livlig-Detaljer: ""
+*de.HPCSGraphics VividDetail/Leuchtend-Detailliert: ""
+*es.HPCSGraphics VividDetail/Dispositivo-Detalle: ""
+*fi.HPCSGraphics VividDetail/Kirkas-Yksityiskohtainen: ""
+*fr.HPCSGraphics VividDetail/Vive-Détaillées: ""
+*it.HPCSGraphics VividDetail/Vivido-Dettagli: ""
+*nl.HPCSGraphics VividDetail/Levendig-Detail: ""
+*nb.HPCSGraphics VividDetail/Skarp-Detalj: ""
+*pt.HPCSGraphics VividDetail/Víva-Detalhes: ""
+*sv.HPCSGraphics VividDetail/Stark-Detalj: ""
+
+*HPCSGraphics VividSmooth/Vivid-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartGraphicsAdjustment
+	Smooth ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics VividSmooth/Livlig-Jævn: ""
+*de.HPCSGraphics VividSmooth/Leuchtend-Geglättet: ""
+*es.HPCSGraphics VividSmooth/Dispositivo-Uniforme: ""
+*fi.HPCSGraphics VividSmooth/Kirkas-Tasainen: ""
+*fr.HPCSGraphics VividSmooth/Vive-Lisse: ""
+*it.HPCSGraphics VividSmooth/Vivido-Uniformi: ""
+*nl.HPCSGraphics VividSmooth/Levendig-Gelijkmatig: ""
+*nb.HPCSGraphics VividSmooth/Skarp-Utjevning: ""
+*pt.HPCSGraphics VividSmooth/Víva-Nivelamento: ""
+*sv.HPCSGraphics VividSmooth/Stark-Jämnt: ""
+
+*HPCSGraphics VividBasic/Vivid-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartGraphicsAdjustment
+	Basic ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics VividBasic/Livlig-Fundamental: ""
+*de.HPCSGraphics VividBasic/Leuchtend-Grundsätzlich: ""
+*es.HPCSGraphics VividBasic/Dispositivo-básico: ""
+*fi.HPCSGraphics VividBasic/Kirkas-Perus: ""
+*fr.HPCSGraphics VividBasic/Vive-Fondamental: ""
+*it.HPCSGraphics VividBasic/Vivido-Fondamentale: ""
+*nl.HPCSGraphics VividBasic/Levendig-Basis: ""
+*nb.HPCSGraphics VividBasic/Skarp-Basisk: ""
+*pt.HPCSGraphics VividBasic/Víva-Fundamental: ""
+*sv.HPCSGraphics VividBasic/Stark-Fundamental: ""
+
+*HPCSGraphics MatchDetail/Calibrated-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartGraphicsAdjustment
+	Detail ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics MatchDetail/Kalibrer-Detaljer: ""
+*de.HPCSGraphics MatchDetail/Kalibrieren-Detailliert: ""
+*es.HPCSGraphics MatchDetail/Calibrar-Detalle: ""
+*fi.HPCSGraphics MatchDetail/Kalibroi-Yksityiskohtainen: ""
+*fr.HPCSGraphics MatchDetail/Calibrer-Détaillées: ""
+*it.HPCSGraphics MatchDetail/Calibrare-Dettagli: ""
+*nl.HPCSGraphics MatchDetail/Kalibreren-Detail: ""
+*nb.HPCSGraphics MatchDetail/Kalibrere-Detalj: ""
+*pt.HPCSGraphics MatchDetail/Calibre-Detalhes: ""
+*sv.HPCSGraphics MatchDetail/Kalibrera-Detalj: ""
+
+*HPCSGraphics MatchSmooth/Calibrated-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartGraphicsAdjustment
+	Smooth ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics MatchSmooth/Kalibrer-Jævn: ""
+*de.HPCSGraphics MatchSmooth/Kalibrieren-Geglättet: ""
+*es.HPCSGraphics MatchSmooth/Calibrar-Uniforme: ""
+*fi.HPCSGraphics MatchSmooth/Kalibroi-Tasainen: ""
+*fr.HPCSGraphics MatchSmooth/Calibrer-Lisse: ""
+*it.HPCSGraphics MatchSmooth/Calibrare-Uniformi: ""
+*nl.HPCSGraphics MatchSmooth/Kalibreren-Gelijkmatig: ""
+*nb.HPCSGraphics MatchSmooth/Kalibrere-Utjevning: ""
+*pt.HPCSGraphics MatchSmooth/Calibre-Nivelamento: ""
+*sv.HPCSGraphics MatchSmooth/Kalibrera-Jämnt: ""
+
+*HPCSGraphics MatchBasic/Calibrated-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartGraphicsAdjustment
+	Basic ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics MatchBasic/Kalibrer-Fundamental: ""
+*de.HPCSGraphics MatchBasic/Kalibrieren-Grundsätzlich: ""
+*es.HPCSGraphics MatchBasic/Calibrar-básico: ""
+*fi.HPCSGraphics MatchBasic/Kalibroi-Perus: ""
+*fr.HPCSGraphics MatchBasic/Calibrer-Fondamental: ""
+*it.HPCSGraphics MatchBasic/Calibrare-Fondamentale: ""
+*nl.HPCSGraphics MatchBasic/Kalibreren-Basis: ""
+*nb.HPCSGraphics MatchBasic/Kalibrere-Basisk: ""
+*pt.HPCSGraphics MatchBasic/Calibre-Fundamental: ""
+*sv.HPCSGraphics MatchBasic/Kalibrera-Fundamental: ""
+
+*HPCSGraphics NoAdjDetail/No Adjust-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	noAdj ColorSmartGraphicsAdjustment
+	Detail ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics NoAdjDetail/Enhed-Detaljer: ""
+*de.HPCSGraphics NoAdjDetail/Kein Anpassung-Detailliert: ""
+*es.HPCSGraphics NoAdjDetail/No Modificación-Detalle: ""
+*fi.HPCSGraphics NoAdjDetail/Ei järjestää-Yksityiskohtainen: ""
+*fr.HPCSGraphics NoAdjDetail/Aucun Ajustage-Détaillées: ""
+*it.HPCSGraphics NoAdjDetail/Nessuna aggiustamento-Dettagli: ""
+*nl.HPCSGraphics NoAdjDetail/Apparaatust-Detail: ""
+*nb.HPCSGraphics NoAdjDetail/No Adjust-Detalj: ""
+*pt.HPCSGraphics NoAdjDetail/Não Ajustamento-Detalhes: ""
+*sv.HPCSGraphics NoAdjDetail/Inget-Detalj: ""
+
+*HPCSGraphics NoAdjSmooth/No Adjust-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartGraphicsAdjustment
+	Smooth ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics NoAdjSmooth/Enhed-Jævn: ""
+*de.HPCSGraphics NoAdjSmooth/Kein Anpassung-Geglättet: ""
+*es.HPCSGraphics NoAdjSmooth/No Modificación-Uniforme: ""
+*fi.HPCSGraphics NoAdjSmooth/Ei järjestää-Tasainen: ""
+*fr.HPCSGraphics NoAdjSmooth/Aucun Ajustage-Lisse: ""
+*it.HPCSGraphics NoAdjSmooth/Nessuna aggiustamento-Uniformi: ""
+*nl.HPCSGraphics NoAdjSmooth/Apparaatust-Gelijkmatig: ""
+*nb.HPCSGraphics NoAdjSmooth/No Adjust-Utjevning: ""
+*pt.HPCSGraphics NoAdjSmooth/Não Ajustamento-Nivelamento: ""
+*sv.HPCSGraphics NoAdjSmooth/Inget-Jämnt: ""
+
+*HPCSGraphics NoAdjBasic/No Adjust-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartGraphicsAdjustment
+	Basic ColorSmartGraphicsHalftone
+} if
+"
+*End
+*da.HPCSGraphics NoAdjBasic/Enhed-Fundamental: ""
+*de.HPCSGraphics NoAdjBasic/Kein Anpassung-Grundsätzlich: ""
+*es.HPCSGraphics NoAdjBasic/No Modificación-básico: ""
+*fi.HPCSGraphics NoAdjBasic/Ei järjestää-Perus: ""
+*fr.HPCSGraphics NoAdjBasic/Aucun Ajustage-Fondamental: ""
+*it.HPCSGraphics NoAdjBasic/Nessuna aggiustamento-Fondamentale: ""
+*nl.HPCSGraphics NoAdjBasic/Apparaatust-Basis: ""
+*nb.HPCSGraphics NoAdjBasic/No Adjust-Basisk: ""
+*pt.HPCSGraphics NoAdjBasic/Não Ajustamento-Fundamental: ""
+*sv.HPCSGraphics NoAdjBasic/Inget-Fundamental: ""
+
+*CloseUI: *HPCSGraphics
+
+*OpenUI *HPCSImages/Manual Image:  PickOne
+*OrderDependency: 50 AnySetup *HPCSImages
+*DefaultHPCSImages: MatchSmooth
+*da.Translation HPCSImages/Manuel Fotografier: ""
+*de.Translation HPCSImages/Manuell Fotos: ""
+*es.Translation HPCSImages/Manual fotografías: ""
+*fi.Translation HPCSImages/Manuaalinen Valokuvat: ""
+*fr.Translation HPCSImages/Manuel Photographies: ""
+*it.Translation HPCSImages/Manuale Fotografie: ""
+*nl.Translation HPCSImages/Handmatig Foto's: ""
+*nb.Translation HPCSImages/Manuell Image: ""
+*pt.Translation HPCSImages/Manual Fotografias: ""
+*sv.Translation HPCSImages/Manuell Fotos: ""
+
+*HPCSImages VividDetail/Vivid-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartImageAdjustment
+	Detail ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages VividDetail/Livlig-Detaljer: ""
+*de.HPCSImages VividDetail/Leuchtend-Detailliert: ""
+*es.HPCSImages VividDetail/Dispositivo-Detalle: ""
+*fi.HPCSImages VividDetail/Kirkas-Yksityiskohtainen: ""
+*fr.HPCSImages VividDetail/Vive-Détaillées: ""
+*it.HPCSImages VividDetail/Vivido-Dettagli: ""
+*nl.HPCSImages VividDetail/Levendig-Detail: ""
+*nb.HPCSImages VividDetail/Skarp-Detalj: ""
+*pt.HPCSImages VividDetail/Víva-Detalhes: ""
+*sv.HPCSImages VividDetail/Stark-Detalj: ""
+
+*HPCSImages VividSmooth/Vivid-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartImageAdjustment
+	Smooth ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages VividSmooth/Livlig-Jævn: ""
+*de.HPCSImages VividSmooth/Leuchtend-Geglättet: ""
+*es.HPCSImages VividSmooth/Dispositivo-Uniforme: ""
+*fi.HPCSImages VividSmooth/Kirkas-Tasainen: ""
+*fr.HPCSImages VividSmooth/Vive-Lisse: ""
+*it.HPCSImages VividSmooth/Vivido-Uniformi: ""
+*nl.HPCSImages VividSmooth/Levendig-Gelijkmatig: ""
+*nb.HPCSImages VividSmooth/Skarp-Utjevning: ""
+*pt.HPCSImages VividSmooth/Víva-Nivelamento: ""
+*sv.HPCSImages VividSmooth/Stark-Jämnt: ""
+
+*HPCSImages VividBasic/Vivid-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartImageAdjustment
+	Basic ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages VividBasic/Livlig-Fundamental: ""
+*de.HPCSImages VividBasic/Leuchtend-Grundsätzlich: ""
+*es.HPCSImages VividBasic/Dispositivo-básico: ""
+*fi.HPCSImages VividBasic/Kirkas-Perus: ""
+*fr.HPCSImages VividBasic/Vive-Fondamental: ""
+*it.HPCSImages VividBasic/Vivido-Fondamentale: ""
+*nl.HPCSImages VividBasic/Levendig-Basis: ""
+*nb.HPCSImages VividBasic/Skarp-Basisk: ""
+*pt.HPCSImages VividBasic/Víva-Fundamental: ""
+*sv.HPCSImages VividBasic/Stark-Fundamental: ""
+
+*HPCSImages MatchDetail/Calibrated-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartImageAdjustment
+	Detail ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages MatchDetail/Kalibrer-Detaljer: ""
+*de.HPCSImages MatchDetail/Kalibrieren-Detailliert: ""
+*es.HPCSImages MatchDetail/Calibrar-Detalle: ""
+*fi.HPCSImages MatchDetail/Kalibroi-Yksityiskohtainen: ""
+*fr.HPCSImages MatchDetail/Calibrer-Détaillées: ""
+*it.HPCSImages MatchDetail/Calibrare-Dettagli: ""
+*nl.HPCSImages MatchDetail/Kalibreren-Detail: ""
+*nb.HPCSImages MatchDetail/Kalibrere-Detalj: ""
+*pt.HPCSImages MatchDetail/Calibre-Detalhes: ""
+*sv.HPCSImages MatchDetail/Kalibrera-Detalj: ""
+
+*HPCSImages MatchSmooth/Calibrated-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartImageAdjustment
+	Smooth ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages MatchSmooth/Kalibrer-Jævn: ""
+*de.HPCSImages MatchSmooth/Kalibrieren-Geglättet: ""
+*es.HPCSImages MatchSmooth/Calibrar-Uniforme: ""
+*fi.HPCSImages MatchSmooth/Kalibroi-Tasainen: ""
+*fr.HPCSImages MatchSmooth/Calibrer-Lisse: ""
+*it.HPCSImages MatchSmooth/Calibrare-Uniformi: ""
+*nl.HPCSImages MatchSmooth/Kalibreren-Gelijkmatig: ""
+*nb.HPCSImages MatchSmooth/Kalibrere-Utjevning: ""
+*pt.HPCSImages MatchSmooth/Calibre-Nivelamento: ""
+*sv.HPCSImages MatchSmooth/Kalibrera-Jämnt: ""
+
+*HPCSImages MatchBasic/Calibrated-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartImageAdjustment
+	Basic ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages MatchBasic/Kalibrer-Fundamental: ""
+*de.HPCSImages MatchBasic/Kalibrieren-Grundsätzlich: ""
+*es.HPCSImages MatchBasic/Calibrar-básico: ""
+*fi.HPCSImages MatchBasic/Kalibroi-Perus: ""
+*fr.HPCSImages MatchBasic/Calibrer-Fondamental: ""
+*it.HPCSImages MatchBasic/Calibrare-Fondamentale: ""
+*nl.HPCSImages MatchBasic/Kalibreren-Basis: ""
+*nb.HPCSImages MatchBasic/Kalibrere-Basisk: ""
+*pt.HPCSImages MatchBasic/Calibre-Fundamental: ""
+*sv.HPCSImages MatchBasic/Kalibrera-Fundamental: ""
+
+*HPCSImages NoAdjDetail/No Adjust-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartImageAdjustment
+	Detail ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages NoAdjDetail/Enhed-Detaljer: ""
+*de.HPCSImages NoAdjDetail/Kein Anpassung-Detailliert: ""
+*es.HPCSImages NoAdjDetail/No Modificación-Detalle: ""
+*fi.HPCSImages NoAdjDetail/Ei järjestää-Yksityiskohtainen: ""
+*fr.HPCSImages NoAdjDetail/Aucun Ajustage-Détaillées: ""
+*it.HPCSImages NoAdjDetail/Nessuna aggiustamento-Dettagli: ""
+*nl.HPCSImages NoAdjDetail/Apparaatust-Detail: ""
+*nb.HPCSImages NoAdjDetail/No Adjust-Detalj: ""
+*pt.HPCSImages NoAdjDetail/Não Ajustamento-Detalhes: ""
+*sv.HPCSImages NoAdjDetail/Inget-Detalj: ""
+
+*HPCSImages NoAdjSmooth/No Adjust-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartImageAdjustment
+	Smooth ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages NoAdjSmooth/Enhed-Jævn: ""
+*de.HPCSImages NoAdjSmooth/Kein Anpassung-Geglättet: ""
+*es.HPCSImages NoAdjSmooth/No Modificación-Uniforme: ""
+*fi.HPCSImages NoAdjSmooth/Ei järjestää-Tasainen: ""
+*fr.HPCSImages NoAdjSmooth/Aucun Ajustage-Lisse: ""
+*it.HPCSImages NoAdjSmooth/Nessuna aggiustamento-Uniformi: ""
+*nl.HPCSImages NoAdjSmooth/Apparaatust-Gelijkmatig: ""
+*nb.HPCSImages NoAdjSmooth/No Adjust-Utjevning: ""
+*pt.HPCSImages NoAdjSmooth/Não Ajustamento-Nivelamento: ""
+*sv.HPCSImages NoAdjSmooth/Inget-Jämnt: ""
+
+*HPCSImages NoAdjBasic/No Adjust-Basic: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	NoAdj ColorSmartImageAdjustment
+	Basic ColorSmartImageHalftone
+} if
+"
+*End
+*da.HPCSImages NoAdjBasic/Enhed-Fundamental: ""
+*de.HPCSImages NoAdjBasic/Kein Anpassung-Grundsätzlich: ""
+*es.HPCSImages NoAdjBasic/No Modificación-básico: ""
+*fi.HPCSImages NoAdjBasic/Ei järjestää-Perus: ""
+*fr.HPCSImages NoAdjBasic/Aucun Ajustage-Fondamental: ""
+*it.HPCSImages NoAdjBasic/Nessuna aggiustamento-Fondamentale: ""
+*nl.HPCSImages NoAdjBasic/Apparaatust-Basis: ""
+*nb.HPCSImages NoAdjBasic/No Adjust-Basisk: ""
+*pt.HPCSImages NoAdjBasic/Não Ajustamento-Fundamental: ""
+*sv.HPCSImages NoAdjBasic/Inget-Fundamental: ""
+
+*CloseUI: *HPCSImages
+
+*% =================================
+*%  Control
+*% =================================
+*DefaultResolution: 300dpi
+*Resolution 300dpi: ""
+*?Resolution: "
+  save
+    currentpagedevice /HWResolution get
+    0 get
+    (          ) cvs print
+    (dpi)
+    = flush
+  restore
+"
+*End
+
+*% =================================
+*% Font Information
+*% =================================
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.004S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.004S)" Standard ROM
+*Font Bookman-Light: Standard "(001.004S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.004S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Special ROM
+*?FontQuery: "
+ save
+   { count 1 gt
+      { exch dup 127 string cvs (/) print print (:) print
+        /Font resourcestatus {pop pop (Yes)} {(No)} ifelse =
+      } { exit } ifelse
+   } bind loop
+   (*) = flush
+ restore
+"
+*End
+*?FontList: "
+save
+  (*) {cvn ==} 128 string /Font resourceforall
+  (*) = flush
+restore
+"
+*End
+
+*% ===================================
+*% Printer Messages
+*% ===================================
+*% Printer Messages (verbatim from printer):
+*Message: "%%[exitserver: permanent state may be changed]%%"
+*Message: "%%[ Flushing: rest of job (to end-of-file) will be ignored ]%%"
+*Message: "\FontName\ not found, using Courier"
+
+*% Status (format: %%[ status: <one of these> ] %%)
+*Status: "warming up"/warming up
+*Status: "initializing"/initializing
+*Status: "idle"/idle
+*Status: "waiting"/waiting
+*Status: "busy"/busy
+*Status: "printing"/printing
+*Status: "printing test page"/printing test page
+*Status: "PrinterError: needs attention"/PrinterError: needs attention
+*Status: "PrinterError: cover open"/PrinterError: cover open
+*Status: "PrinterError: no toner cartridge"/PrinterError: no toner cartridge
+*Status: "PrinterError: manual feed"/PrinterError: manual feed
+*Status: "PrinterError: out of paper"/PrinterError: out of paper
+*Status: "PrinterError: Paper Jam"/PrinterError: Paper Jam
+*Status: "PrinterError: page protect needed"/PrinterError: page protect needed
+*Status: "PrinterError: out of memory"/PrinterError: out of memory
+*Status: "PrinterError: output bin full"/PrinterError: output bin full
+*Status: "PrinterError: resetting printer"/PrinterError: resetting printer
+*Status: "PrinterError: toner is low"/PrinterError: toner is low
+*Status: "PrinterError: off line"/PrinterError: off line
+
+*% Input Sources (format: %%[ status: <stat>; source: <one of these> ]%% )
+*Source: "other I/O"/other I/O
+*Source: "AppleTalk"/AppleTalk
+*Source: "APPLETALK"/AppleTalk
+*Source: "ATALK"/AppleTalk
+*Source: "LocalTalk"/LocalTalk
+*Source: "Parallel"/Parallel
+*Source: "EtherTalk"/EtherTalk
+*Source: "NOVELL"/NOVELL
+*Source: "DLC/LLC"/DLC/LLC
+*Source: "ETALK"/EtherTalk
+*Source: "TCP/IP"/TCP/IP
+
+*% PrinterError (format: %%[ PrinterError: <one of these> ]%%)
+*PrinterError: "needs attention"/needs attention
+*PrinterError: "cover open"/cover open
+*PrinterError: "no toner cartridge"/no toner cartridge
+*PrinterError: "manual feed"/manual feed
+*PrinterError: "out of paper"/out of paper
+*PrinterError: "Paper Jam"/Paper Jam
+*PrinterError: "page protect needed"/page protect needed
+*PrinterError: "out of memory"/out of memory
+*PrinterError: "output bin full"/output bin full
+*PrinterError: "resetting printer"/resetting printer
+*PrinterError: "toner is low"/toner is low
+*PrinterError: "off line"/off line
+
+*% =================================
+*% Color Separation Information
+*% =================================
+*DefaultColorSep: ProcessBlack.60lpi.300dpi
+*InkName: ProcessBlack/Process Black
+*InkName: ProcessCyan/Process Cyan
+*InkName: ProcessMagenta/Process Magenta
+*InkName: ProcessYellow/Process Yellow
+
+*%  For 60 lpi / 300 dpi  ===============================
+*ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: "45"
+*da.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+*ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: "15"
+*da.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+*ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: "75"
+*da.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+*ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: "0"
+*da.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: "60"
+*da.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: "60"
+*da.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: "60"
+*da.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: "60"
+*da.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: ""
+
+
+*%  For 53 lpi / 300 dpi  ===============================
+*ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: "45.0"
+*da.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+*ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: "71.5651"
+*da.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+*ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: "18.4349"
+*da.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+*ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: "0.0"
+*da.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenAngle ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: "53.033"
+*da.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessBlack.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: "47.4342"
+*da.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessCyan.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: "47.4342"
+*da.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessMagenta.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+*ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: "50.0"
+*da.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*de.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*es.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fi.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*fr.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*it.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nl.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*nb.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*pt.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+*sv.ColorSepScreenFreq ProcessYellow.53lpi.300dpi/53 lpi / 300 dpi: ""
+
+
+*% =================================
+*% System Management
+*% =================================
+*FreeVM: "4000000"
+*VMOption 36Meg/36 - 43 MB RAM: "4000000"
+*da.VMOption 36Meg/36 - 43 MB RAM: ""
+*de.VMOption 36Meg/36 - 43 MB RAM: ""
+*es.VMOption 36Meg/36 - 43 MB RAM: ""
+*fi.VMOption 36Meg/36 - 43 MB RAM: ""
+*fr.VMOption 36Meg/36 - 43 MB RAM: ""
+*it.VMOption 36Meg/36 - 43 MB RAM: ""
+*nl.VMOption 36Meg/36 - 43 MB RAM: ""
+*nb.VMOption 36Meg/36 - 43 MB RAM: ""
+*pt.VMOption 36Meg/36 - 43 MB RAM: ""
+*sv.VMOption 36Meg/36 - 43 MB RAM: ""
+
+*VMOption 44Meg/44 - 51 MB RAM: "12320000"
+*da.VMOption 44Meg/44 - 51 MB RAM: ""
+*de.VMOption 44Meg/44 - 51 MB RAM: ""
+*es.VMOption 44Meg/44 - 51 MB RAM: ""
+*fi.VMOption 44Meg/44 - 51 MB RAM: ""
+*fr.VMOption 44Meg/44 - 51 MB RAM: ""
+*it.VMOption 44Meg/44 - 51 MB RAM: ""
+*nl.VMOption 44Meg/44 - 51 MB RAM: ""
+*nb.VMOption 44Meg/44 - 51 MB RAM: ""
+*pt.VMOption 44Meg/44 - 51 MB RAM: ""
+*sv.VMOption 44Meg/44 - 51 MB RAM: ""
+
+*VMOption 52Meg/52 - 59 MB RAM: "20640000"
+*da.VMOption 52Meg/52 - 59 MB RAM: ""
+*de.VMOption 52Meg/52 - 59 MB RAM: ""
+*es.VMOption 52Meg/52 - 59 MB RAM: ""
+*fi.VMOption 52Meg/52 - 59 MB RAM: ""
+*fr.VMOption 52Meg/52 - 59 MB RAM: ""
+*it.VMOption 52Meg/52 - 59 MB RAM: ""
+*nl.VMOption 52Meg/52 - 59 MB RAM: ""
+*nb.VMOption 52Meg/52 - 59 MB RAM: ""
+*pt.VMOption 52Meg/52 - 59 MB RAM: ""
+*sv.VMOption 52Meg/52 - 59 MB RAM: ""
+
+*VMOption 60Meg/60 - 67 MB RAM: "28960000"
+*da.VMOption 60Meg/60 - 67 MB RAM: ""
+*de.VMOption 60Meg/60 - 67 MB RAM: ""
+*es.VMOption 60Meg/60 - 67 MB RAM: ""
+*fi.VMOption 60Meg/60 - 67 MB RAM: ""
+*fr.VMOption 60Meg/60 - 67 MB RAM: ""
+*it.VMOption 60Meg/60 - 67 MB RAM: ""
+*nl.VMOption 60Meg/60 - 67 MB RAM: ""
+*nb.VMOption 60Meg/60 - 67 MB RAM: ""
+*pt.VMOption 60Meg/60 - 67 MB RAM: ""
+*sv.VMOption 60Meg/60 - 67 MB RAM: ""
+
+*VMOption 68Meg/≥ 68 MB RAM: "37280000"
+*da.VMOption 68Meg/≥ 68 MB RAM: ""
+*de.VMOption 68Meg/≥ 68 MB RAM: ""
+*es.VMOption 68Meg/≥ 68 MB RAM: ""
+*fi.VMOption 68Meg/≥ 68 MB RAM: ""
+*fr.VMOption 68Meg/≥ 68 MB RAM: ""
+*it.VMOption 68Meg/≥ 68 MB RAM: ""
+*nl.VMOption 68Meg/≥ 68 MB RAM: ""
+*nb.VMOption 68Meg/≥ 68 MB RAM: ""
+*pt.VMOption 68Meg/≥ 68 MB RAM: ""
+*sv.VMOption 68Meg/≥ 68 MB RAM: ""
+
+
+*%DeviceAdjustMatrix: "[1 0 0 1 0 0]"
+*SuggestedJobTimeout: "0"
+*SuggestedWaitTimeout: "300"
+*Password: "()"
+*ExitServer: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+     (WARNING: Cannot modify initial VM.) =
+     (Missing or invalid password.) =
+     (Please contact the author of this software.) = flush quit
+     } if
+"
+*End
+*Reset: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+ systemdict /quit get exec
+ (WARNING: Cannot reset printer.) = flush
+"
+*End
+
+*% =================================
+*% For "HP Color LaserJet 5M"
+*% =================================

@@ -1,0 +1,4653 @@
+*PPD-Adobe: "4.3"
+*% =================================
+*% Copyright 1992-2015 HP Company
+*% Permission is hereby granted, free of charge, to any person obtaining
+*% a copy of this software and associated documentation files (the
+*% "Software"), to deal in the Software without restriction, including
+*% without limitation the rights to use, copy, modify, merge, publish,
+*% distribute, sublicense, and/or sell copies of the Software, and to
+*% permit persons to whom the Software is furnished to do so, subject to
+*% the following conditions:
+*%
+*% The above copyright notice and this permission notice shall be
+*% included in all copies or substantial portions of the Software.
+*%
+*% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*% LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*% OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*% WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*%
+*% [this is the MIT open source license -- please see www.opensource.org]
+*%
+*% Disclaimer:  The above statement indicates
+*% that this PPD was written using the Adobe PPD
+*% File Format Specification 4.3, but does not
+*% intend to imply approval and acceptance by
+*% Adobe Systems, Inc.
+*% =======================================================
+*% Printer Description File
+*% (c) Copyright 2000-2015 HP Development Company, L.P.
+*%========================================================
+*% PPD for HP LaserJet 8550 Series
+*% For Macintosh
+*%========================================================
+
+*FormatVersion: "4.3"
+*FileVersion: "1.1"
+*PCFileName: "HP-CLJ85.PPD"
+*LanguageVersion: English
+*cupsLanguages: "de es fr it ja ko pt zh_CN zh_TW"
+*LanguageEncoding: ISOLatin1
+*Product: "(HP Color LaserJet 8550)"
+*Product: "(Hewlett-Packard HP Color LaserJet 8550)"
+*Product: "(HP Color LaserJet 8550 )"
+*Product: "(Hewlett-Packard HP Color LaserJet 8550 )"
+*PSVersion: "(3011.103) 1"
+*ModelName: "HP Color LaserJet 8550"
+*ShortNickName: "HP Color LaserJet 8550"
+*1284DeviceID: "MFG:Hewlett-Packard;MDL:hp color laserjet 8550;"
+*NickName: "HP Color LaserJet 8550 Postscript (recommended)"
+*Manufacturer: "HP"
+
+
+
+*% ===================================
+*% Emulations and Protocols
+*% ===================================
+*Protocols: TBCP
+
+*% Protocols: BCP TBCP
+
+*% ===================================
+*% Installable Options
+*% ===================================
+
+*OpenGroup: InstallableOptions/Options Installed
+*de.Translation InstallableOptions/Installierte Optionen: ""
+*es.Translation InstallableOptions/Opciones instaladas: ""
+*fr.Translation InstallableOptions/Options installées: ""
+*it.Translation InstallableOptions/Opzioni installate: ""
+*ja.Translation InstallableOptions/Options Installed: ""
+*ko.Translation InstallableOptions/설치된 옵션: ""
+*pt.Translation InstallableOptions/Opcionais instalados: ""
+*zh_CN.Translation InstallableOptions/已安装的选项: ""
+*zh_TW.Translation InstallableOptions/安裝的選項: ""
+
+
+*OpenUI *HPOption_Tray2/Optional Tray 2: Boolean
+*DefaultHPOption_Tray2: False
+*de.Translation HPOption_Tray2/Optionales Fach 2: ""
+*es.Translation HPOption_Tray2/Bandeja opcional 2: ""
+*fr.Translation HPOption_Tray2/Bac 2 optionnel: ""
+*it.Translation HPOption_Tray2/Cassetto 2 opzionale: ""
+*ja.Translation HPOption_Tray2/オプション トレイ ２: ""
+*ko.Translation HPOption_Tray2/선택 사양 용지함 2: ""
+*pt.Translation HPOption_Tray2/Bandeja 2 opcional: ""
+*zh_CN.Translation HPOption_Tray2/可选用的纸盘 2: ""
+*zh_TW.Translation HPOption_Tray2/2 號紙匣選項配件: ""
+
+*HPOption_Tray2 True/Installed:   ""
+*de.HPOption_Tray2 True/Installiert: ""
+*es.HPOption_Tray2 True/Instalada: ""
+*fr.HPOption_Tray2 True/Installé: ""
+*it.HPOption_Tray2 True/Installato: ""
+*ja.HPOption_Tray2 True/インストール済: ""
+*ko.HPOption_Tray2 True/설치됐음: ""
+*pt.HPOption_Tray2 True/Instalada: ""
+*zh_CN.HPOption_Tray2 True/已安装: ""
+*zh_TW.HPOption_Tray2 True/已安裝: ""
+
+*HPOption_Tray2 False/Not Installed:   ""
+*de.HPOption_Tray2 False/Nicht installiert: ""
+*es.HPOption_Tray2 False/No instalada: ""
+*fr.HPOption_Tray2 False/Pas installé: ""
+*it.HPOption_Tray2 False/Non installato: ""
+*ja.HPOption_Tray2 False/インストールされていない: ""
+*ko.HPOption_Tray2 False/설치되지 않았음: ""
+*pt.HPOption_Tray2 False/Não Instalada: ""
+*zh_CN.HPOption_Tray2 False/未安装: ""
+*zh_TW.HPOption_Tray2 False/尚未安裝: ""
+
+*?HPOption_Tray2: "
+  save
+	userdict /FieryXJdict known {
+	FieryXJdict /getfierysysdict known
+       	{(%%OPT_CASS2) FieryXJdict /getfierysysdict get exec }
+        { (False) }
+        ifelse
+	}
+	{ (False) } ifelse
+        = flush
+  restore
+"
+*End
+*CloseUI: *HPOption_Tray2
+
+*OpenUI *HPOption_Tray4/Optional Tray 4: PickOne
+*DefaultHPOption_Tray4: False
+*de.Translation HPOption_Tray4/Optionales Fach 4: ""
+*es.Translation HPOption_Tray4/Bandeja opcional 4: ""
+*fr.Translation HPOption_Tray4/Bac 4 optionnel: ""
+*it.Translation HPOption_Tray4/Cassetto 4 opzionale: ""
+*ja.Translation HPOption_Tray4/オプション トレイ ４: ""
+*ko.Translation HPOption_Tray4/선택 사양 용지함 4: ""
+*pt.Translation HPOption_Tray4/Bandeja 4 opcional: ""
+*zh_CN.Translation HPOption_Tray4/可选用的纸盘 4: ""
+*zh_TW.Translation HPOption_Tray4/4 號紙匣選項配件: ""
+
+*HPOption_Tray4 False/Not Installed:   ""
+*de.HPOption_Tray4 False/Nicht installiert: ""
+*es.HPOption_Tray4 False/No instalada: ""
+*fr.HPOption_Tray4 False/Pas installé: ""
+*it.HPOption_Tray4 False/Non installato: ""
+*ja.HPOption_Tray4 False/インストール済: ""
+*ko.HPOption_Tray4 False/설치되지 않았음: ""
+*pt.HPOption_Tray4 False/Não Instalada: ""
+*zh_CN.HPOption_Tray4 False/未安装: ""
+*zh_TW.HPOption_Tray4 False/尚未安裝: ""
+
+*HPOption_Tray4 OPT_HCI1000/1000 sheet input Tray 4:   ""
+*de.HPOption_Tray4 OPT_HCI1000/1000-Blatt-Fach (Fach 4): ""
+*es.HPOption_Tray4 OPT_HCI1000/Bandeja de entrada para 1000 hojas (bandeja 4): ""
+*fr.HPOption_Tray4 OPT_HCI1000/Bac d'alimentation de 1000 feuilles (bac 4): ""
+*it.HPOption_Tray4 OPT_HCI1000/Vassoio di alimentazione da 1000 fogli (vassoio 4): ""
+*ja.HPOption_Tray4 OPT_HCI1000/１０００枚 給紙トレイ ４: ""
+*ko.HPOption_Tray4 OPT_HCI1000/1000장 용지함: ""
+*pt.HPOption_Tray4 OPT_HCI1000/Bandeja de entrada de 1000 folhas (Bandeja 4): ""
+*zh_CN.HPOption_Tray4 OPT_HCI1000/1000 张容量进纸盒 4: ""
+*zh_TW.HPOption_Tray4 OPT_HCI1000/1000 張容量進紙盒: ""
+
+*HPOption_Tray4 OPT_HCI2000/2000 sheet input Tray 4:   ""
+*de.HPOption_Tray4 OPT_HCI2000/2000-Blatt-Fach (Fach 4): ""
+*es.HPOption_Tray4 OPT_HCI2000/Bandeja de entrada para 2000 hojas (bandeja 4): ""
+*fr.HPOption_Tray4 OPT_HCI2000/Bac d'alimentation de 2000 feuilles (bac 4): ""
+*it.HPOption_Tray4 OPT_HCI2000/Vassoio di alimentazione da 2000 fogli (vassoio 4): ""
+*ja.HPOption_Tray4 OPT_HCI2000/２０００枚 給紙トレイ ４: ""
+*ko.HPOption_Tray4 OPT_HCI2000/2000장 용지함: ""
+*pt.HPOption_Tray4 OPT_HCI2000/Bandeja de entrada de 2000 folhas (Bandeja 4): ""
+*zh_CN.HPOption_Tray4 OPT_HCI2000/2000 张容量进纸盒 4: ""
+*zh_TW.HPOption_Tray4 OPT_HCI2000/2000 張容量進紙盒: ""
+
+*?HPOption_Tray4: "
+  save
+	userdict /FieryXJdict known {
+	    FieryXJdict /getfierysysdict known {
+       	   (%%OPT_HCI1000) FieryXJdict /getfierysysdict get exec
+       	     (True) eq { (OPT_HCI1000) }  { (False) } ifelse
+       	   (%%OPT_HCI2000) FieryXJdict /getfierysysdict get exec
+       	     (True) eq { pop (OPT_HCI2000) }  if
+       	}
+        { (False) }
+        ifelse
+	}
+	{ (False) } ifelse
+       = flush
+
+  restore
+"
+*End
+*CloseUI: *HPOption_Tray4
+
+*OpenUI *HPOption_Duplexer/Duplex Printing Accessory: Boolean
+*DefaultHPOption_Duplexer: False
+*de.Translation HPOption_Duplexer/Duplexdruck-Zubehör: ""
+*es.Translation HPOption_Duplexer/Accesorio para impresión dúplex: ""
+*fr.Translation HPOption_Duplexer/Accessoire d'impression recto-verso: ""
+*it.Translation HPOption_Duplexer/Accessorio per stampa duplex: ""
+*ja.Translation HPOption_Duplexer/両面印刷ユニット: ""
+*ko.Translation HPOption_Duplexer/양면 인쇄 부속품: ""
+*pt.Translation HPOption_Duplexer/Acessório de impressão duplex: ""
+*zh_CN.Translation HPOption_Duplexer/双面打印附件: ""
+*zh_TW.Translation HPOption_Duplexer/雙面列印附件: ""
+
+*HPOption_Duplexer True/Installed: ""
+*de.HPOption_Duplexer True/Installiert: ""
+*es.HPOption_Duplexer True/Instalada: ""
+*fr.HPOption_Duplexer True/Installé: ""
+*it.HPOption_Duplexer True/Installato: ""
+*ja.HPOption_Duplexer True/インストール済: ""
+*ko.HPOption_Duplexer True/설치됐음: ""
+*pt.HPOption_Duplexer True/Instalado: ""
+*zh_CN.HPOption_Duplexer True/已安装: ""
+*zh_TW.HPOption_Duplexer True/已安裝: ""
+
+*HPOption_Duplexer False/Not Installed: ""
+*de.HPOption_Duplexer False/Nicht installiert: ""
+*es.HPOption_Duplexer False/No instalada: ""
+*fr.HPOption_Duplexer False/Pas installé: ""
+*it.HPOption_Duplexer False/Non installato: ""
+*ja.HPOption_Duplexer False/インストールされていない: ""
+*ko.HPOption_Duplexer False/설치되지 않았음: ""
+*pt.HPOption_Duplexer False/Não Instalado: ""
+*zh_CN.HPOption_Duplexer False/未安装: ""
+*zh_TW.HPOption_Duplexer False/尚未安裝: ""
+
+*?HPOption_Duplexer: "
+save
+    currentpagedevice /Duplex known
+    {(True)}{(False)}ifelse = flush
+restore"
+*End
+*CloseUI: *HPOption_Duplexer
+
+*%
+*% Note: There are two choices for the 8 bin mailbox depending on mode
+*%
+*OpenUI *HPOption_MBM_Mixed/Accessory Output Bins: PickOne
+*OrderDependency: 10 AnySetup *HPOption_MBM_Mixed
+*DefaultHPOption_MBM_Mixed: Standard
+*de.Translation HPOption_MBM_Mixed/Zusatzausgabefächer: ""
+*es.Translation HPOption_MBM_Mixed/Bandejas de salida accesorias: ""
+*fr.Translation HPOption_MBM_Mixed/Bacs de sortie optionnels: ""
+*it.Translation HPOption_MBM_Mixed/Scomparti di uscita accessori: ""
+*ja.Translation HPOption_MBM_Mixed/排紙ビン アクセサリ: ""
+*ko.Translation HPOption_MBM_Mixed/부속품 출력함: ""
+*pt.Translation HPOption_MBM_Mixed/Compartimentos acessórios de saída: ""
+*zh_CN.Translation HPOption_MBM_Mixed/附加出纸槽: ""
+*zh_TW.Translation HPOption_MBM_Mixed/附件輸出紙槽: ""
+
+*HPOption_MBM_Mixed Standard/Not Installed: ""
+*de.HPOption_MBM_Mixed Standard/Nicht installiert: ""
+*es.HPOption_MBM_Mixed Standard/No instalada: ""
+*fr.HPOption_MBM_Mixed Standard/Pas installé: ""
+*it.HPOption_MBM_Mixed Standard/Non installato: ""
+*ja.HPOption_MBM_Mixed Standard/インストールされていない: ""
+*ko.HPOption_MBM_Mixed Standard/설치되지 않았음: ""
+*pt.HPOption_MBM_Mixed Standard/Nenhum: ""
+*zh_CN.HPOption_MBM_Mixed Standard/未安装: ""
+*zh_TW.HPOption_MBM_Mixed Standard/尚未安裝: ""
+
+*HPOption_MBM_Mixed MBM8MB/8 Bin Mailbox (Mailbox mode): ""
+*de.HPOption_MBM_Mixed MBM8MB/Mailbox mit 8 Fächern (Modus Mailbox): ""
+*es.HPOption_MBM_Mixed MBM8MB/Buzón de 8 bandejas (modo de buzón): ""
+*fr.HPOption_MBM_Mixed MBM8MB/Trieuse à 8 bacs (mode Trieuse): ""
+*it.HPOption_MBM_Mixed MBM8MB/Casella a 8 scomparti (modalità Mailbox): ""
+*ja.HPOption_MBM_Mixed MBM8MB/８ ビン メールボックス （メールボックス モード）: ""
+*ko.HPOption_MBM_Mixed MBM8MB/8 칸 우편함 (우편함 모드): ""
+*pt.HPOption_MBM_Mixed MBM8MB/Escaninho de 8 slots (modo Caixa de correio): ""
+*zh_CN.HPOption_MBM_Mixed MBM8MB/8 槽信箱 (信箱模式): ""
+*zh_TW.HPOption_MBM_Mixed MBM8MB/8 槽式信箱（信箱模式）: ""
+
+*HPOption_MBM_Mixed MBM8ST/8 Bin Mailbox (Stacker-Separator-Collator): ""
+*de.HPOption_MBM_Mixed MBM8ST/Mailbox mit 8 Fächern (Stapel-, Trenn- und Sortiereinheit): ""
+*es.HPOption_MBM_Mixed MBM8ST/Buzón de 8 bandejas (Apilador-Separador-Clasificador): ""
+*fr.HPOption_MBM_Mixed MBM8ST/Trieuse à 8 bacs (Récepteur-Séparateur-Interclasseuse): ""
+*it.HPOption_MBM_Mixed MBM8ST/Casella a 8 scomparti (Carrello-Separatore-Fascicolatore): ""
+*ja.HPOption_MBM_Mixed MBM8ST/スタッカ-セパレータ-コレータ: ""
+*ko.HPOption_MBM_Mixed MBM8ST/8 칸 우편함 (스택커-구분자-조합기): ""
+*pt.HPOption_MBM_Mixed MBM8ST/Escaninho de 8 slots (Empilhador-Separador-Agrupador): ""
+*zh_CN.HPOption_MBM_Mixed MBM8ST/8 槽信箱 (堆栈器-分隔器-分页器): ""
+*zh_TW.HPOption_MBM_Mixed MBM8ST/8 槽式信箱（堆疊器-分隔符-自動分頁器）: ""
+
+*HPOption_MBM_Mixed MBMStaplerStacker/HP 3000-Sheet Stapler-Stacker: "userdict /HPConfigurableStapler 0 put"
+*de.HPOption_MBM_Mixed MBMStaplerStacker/HP 3000-Blatt-Hefter/Ablage: ""
+*es.HPOption_MBM_Mixed MBMStaplerStacker/Grapadora y apilador de 3000 hojas de HP : ""
+*fr.HPOption_MBM_Mixed MBMStaplerStacker/Agrafeuse-empileuse de 3000 feuilles HP: ""
+*it.HPOption_MBM_Mixed MBMStaplerStacker/Cucitrice-Fascicolatrice HP da 3000 fogli: ""
+*ja.HPOption_MBM_Mixed MBMStaplerStacker/HP ３０００枚 ホッチキス付きスタッカ: ""
+*ko.HPOption_MBM_Mixed MBMStaplerStacker/HP 3000매 스테이플러-스택커: ""
+*pt.HPOption_MBM_Mixed MBMStaplerStacker/Empilhador/Grampeador de 3000 Folhas HP: ""
+*zh_CN.HPOption_MBM_Mixed MBMStaplerStacker/HP 3000页装订堆栈器: ""
+*zh_TW.HPOption_MBM_Mixed MBMStaplerStacker/HP 3000紙頁裝訂機/堆疊機: ""
+
+*HPOption_MBM_Mixed MBMStacker/HP 3000-Sheet Stacker: ""
+*de.HPOption_MBM_Mixed MBMStacker/HP 3000-Blatt-Ablage: ""
+*es.HPOption_MBM_Mixed MBMStacker/Apilador de 3000 hojas de HP : ""
+*fr.HPOption_MBM_Mixed MBMStacker/Empileuse de 3000 feuilles HP: ""
+*it.HPOption_MBM_Mixed MBMStacker/Fascicolatrice HP da 3000 fogli: ""
+*ja.HPOption_MBM_Mixed MBMStacker/HP ３０００枚 スタッカ: ""
+*ko.HPOption_MBM_Mixed MBMStacker/HP 3000매 스택커: ""
+*pt.HPOption_MBM_Mixed MBMStacker/Empilhador de 3000 Folhas HP: ""
+*zh_CN.HPOption_MBM_Mixed MBMStacker/HP 3000页堆栈器: ""
+*zh_TW.HPOption_MBM_Mixed MBMStacker/HP 3000紙頁堆疊機: ""
+
+*?HPOption_MBM_Mixed: "
+{ /OptionalOutputDevice /HWOptions findresource } stopped
+{ pop pop (Standard)} if
+dup (MBM8) eq
+{ pop
+	{ /OutputDeviceMode /HWOptions findresource } stopped
+	{ pop pop (MailboxModeMailbox) } if
+	(MailboxModeMailbox) eq {(MBM8MB)}{(MBM8ST)} ifelse
+} if
+=
+"
+*End
+*CloseUI: *HPOption_MBM_Mixed
+
+*OpenUI *HPOption_Disk/Printer Disk: PickOne
+*DefaultHPOption_Disk: None
+*de.Translation HPOption_Disk/Druckerfestplatte: ""
+*es.Translation HPOption_Disk/Disco de la impresora: ""
+*fr.Translation HPOption_Disk/Disque dur de l'imprimante: ""
+*it.Translation HPOption_Disk/Disco rigido stampante: ""
+*ja.Translation HPOption_Disk/プリンタ ハード ディスク: ""
+*ko.Translation HPOption_Disk/프린터 하드 디스크: ""
+*pt.Translation HPOption_Disk/Disco rÌgido da impressora: ""
+*zh_CN.Translation HPOption_Disk/打印机硬盘: ""
+*zh_TW.Translation HPOption_Disk/印表機硬碟: ""
+
+*HPOption_Disk None/None: ""
+*de.HPOption_Disk None/Keine: ""
+*es.HPOption_Disk None/Ninguno: ""
+*fr.HPOption_Disk None/Aucun: ""
+*it.HPOption_Disk None/Nessuno: ""
+*ja.HPOption_Disk None/なし: ""
+*ko.HPOption_Disk None/없음: ""
+*pt.HPOption_Disk None/Nenhuma: ""
+*zh_CN.HPOption_Disk None/无: ""
+*zh_TW.HPOption_Disk None/無: ""
+
+*HPOption_Disk RAMDisk/RAM Disk: ""
+*de.HPOption_Disk RAMDisk/RAM-Disk: ""
+*es.HPOption_Disk RAMDisk/Disco RAM: ""
+*fr.HPOption_Disk RAMDisk/Disque MEV: ""
+*it.HPOption_Disk RAMDisk/Disco RAM: ""
+*ja.HPOption_Disk RAMDisk/RAMディスク: ""
+*ko.HPOption_Disk RAMDisk/RAM 디스크: ""
+*pt.HPOption_Disk RAMDisk/Disco RAM: ""
+*zh_CN.HPOption_Disk RAMDisk/RAM 磁盘: ""
+*zh_TW.HPOption_Disk RAMDisk/RAM 磁碟: ""
+
+*HPOption_Disk HardDisk/Hard Disk: ""
+*de.HPOption_Disk HardDisk/Festplatte: ""
+*es.HPOption_Disk HardDisk/Disco duro: ""
+*fr.HPOption_Disk HardDisk/Disque dur: ""
+*it.HPOption_Disk HardDisk/Disco rigido: ""
+*ja.HPOption_Disk HardDisk/ハードディスク: ""
+*ko.HPOption_Disk HardDisk/하드 디스크: ""
+*pt.HPOption_Disk HardDisk/Disco rígido: ""
+*zh_CN.HPOption_Disk HardDisk/硬盘: ""
+*zh_TW.HPOption_Disk HardDisk/硬碟: ""
+
+*?HPOption_Disk: "
+save
+  /FWMax 2048 def /RAMMax 500000 def
+  (HardDisk) (RAMDisk) (None)
+  0
+  (%disk?%)
+  { currentdevparams dup /Writeable known
+    { dup /Writeable get
+      { /PhysicalSize get dup FWMax gt
+        { RAMMax gt {2}{1} ifelse 2 copy lt { exch }if pop }
+        { pop } ifelse
+      }
+      { pop } ifelse
+    }
+    { pop } ifelse
+  } 100 string /IODevice resourceforall
+  index =  flush pop pop pop
+restore
+"
+*End
+*CloseUI: *HPOption_Disk
+
+*OpenUI *InstalledMemory/Memory Configuration: PickOne
+*DefaultInstalledMemory: 32MB
+*de.Translation InstalledMemory/Speicherkonfiguration: ""
+*es.Translation InstalledMemory/Memoria total de la impresora: ""
+*fr.Translation InstalledMemory/Configuration de la mémoire: ""
+*it.Translation InstalledMemory/Configurazione della memoria: ""
+*ja.Translation InstalledMemory/メモリ構成: ""
+*ko.Translation InstalledMemory/메모리 구성: ""
+*pt.Translation InstalledMemory/Configuração de memória: ""
+*zh_CN.Translation InstalledMemory/内存配置: ""
+*zh_TW.Translation InstalledMemory/記憶體配置: ""
+
+*InstalledMemory 32MB/32: ""
+*de.InstalledMemory 32MB/32 MB: ""
+*es.InstalledMemory 32MB/32: ""
+*fr.InstalledMemory 32MB/32 Mo: ""
+*it.InstalledMemory 32MB/32 MB: ""
+*ja.InstalledMemory 32MB/32 MB: ""
+*ko.InstalledMemory 32MB/32 MB: ""
+*pt.InstalledMemory 32MB/32 MB: ""
+*zh_CN.InstalledMemory 32MB/32 MB: ""
+*zh_TW.InstalledMemory 32MB/32 MB: ""
+
+*InstalledMemory 64MB/64: ""
+*de.InstalledMemory 64MB/64 MB: ""
+*es.InstalledMemory 64MB/64: ""
+*fr.InstalledMemory 64MB/64 Mo: ""
+*it.InstalledMemory 64MB/64 MB: ""
+*ja.InstalledMemory 64MB/64 MB: ""
+*ko.InstalledMemory 64MB/64 MB: ""
+*pt.InstalledMemory 64MB/64 MB: ""
+*zh_CN.InstalledMemory 64MB/64 MB: ""
+*zh_TW.InstalledMemory 64MB/64 MB: ""
+
+*InstalledMemory 96MB/96: ""
+*de.InstalledMemory 96MB/96 MB: ""
+*es.InstalledMemory 96MB/96: ""
+*fr.InstalledMemory 96MB/96 Mo: ""
+*it.InstalledMemory 96MB/96 MB: ""
+*ja.InstalledMemory 96MB/96 MB: ""
+*ko.InstalledMemory 96MB/96 MB: ""
+*pt.InstalledMemory 96MB/96 MB: ""
+*zh_CN.InstalledMemory 96MB/96 MB: ""
+*zh_TW.InstalledMemory 96MB/96 MB: ""
+
+*InstalledMemory 128MB/128: ""
+*de.InstalledMemory 128MB/128 MB: ""
+*es.InstalledMemory 128MB/128: ""
+*fr.InstalledMemory 128MB/128 Mo: ""
+*it.InstalledMemory 128MB/128 MB: ""
+*ja.InstalledMemory 128MB/128 MB: ""
+*ko.InstalledMemory 128MB/128 MB: ""
+*pt.InstalledMemory 128MB/128 MB: ""
+*zh_CN.InstalledMemory 128MB/128 MB: ""
+*zh_TW.InstalledMemory 128MB/128 MB: ""
+
+*InstalledMemory 160MB/160: ""
+*de.InstalledMemory 160MB/160: ""
+*es.InstalledMemory 160MB/160: ""
+*fr.InstalledMemory 160MB/160: ""
+*it.InstalledMemory 160MB/160: ""
+*ja.InstalledMemory 160MB/160: ""
+*ko.InstalledMemory 160MB/160: ""
+*pt.InstalledMemory 160MB/160: ""
+*zh_CN.InstalledMemory 160MB/160: ""
+*zh_TW.InstalledMemory 160MB/160: ""
+
+*InstalledMemory 192MB/192: ""
+*de.InstalledMemory 192MB/192: ""
+*es.InstalledMemory 192MB/192: ""
+*fr.InstalledMemory 192MB/192: ""
+*it.InstalledMemory 192MB/192: ""
+*ja.InstalledMemory 192MB/192: ""
+*ko.InstalledMemory 192MB/192: ""
+*pt.InstalledMemory 192MB/192: ""
+*zh_CN.InstalledMemory 192MB/192: ""
+*zh_TW.InstalledMemory 192MB/192: ""
+
+*InstalledMemory 224MB/224: ""
+*de.InstalledMemory 224MB/224 MB: ""
+*es.InstalledMemory 224MB/224: ""
+*fr.InstalledMemory 224MB/224 Mo: ""
+*it.InstalledMemory 224MB/224 MB: ""
+*ja.InstalledMemory 224MB/224 MB: ""
+*ko.InstalledMemory 224MB/224 MB: ""
+*pt.InstalledMemory 224MB/224 MB: ""
+*zh_CN.InstalledMemory 224MB/224 MB: ""
+*zh_TW.InstalledMemory 224MB/224 MB: ""
+
+*InstalledMemory 256MB/256: ""
+*de.InstalledMemory 256MB/256 MB: ""
+*es.InstalledMemory 256MB/256: ""
+*fr.InstalledMemory 256MB/256 Mo: ""
+*it.InstalledMemory 256MB/256 MB: ""
+*ja.InstalledMemory 256MB/256 MB: ""
+*ko.InstalledMemory 256MB/256 MB: ""
+*pt.InstalledMemory 256MB/256 MB: ""
+*zh_CN.InstalledMemory 256MB/256 MB: ""
+*zh_TW.InstalledMemory 256MB/256 MB: ""
+
+*InstalledMemory 288MB/288: ""
+*de.InstalledMemory 288MB/288: ""
+*es.InstalledMemory 288MB/288: ""
+*fr.InstalledMemory 288MB/288: ""
+*it.InstalledMemory 288MB/288: ""
+*ja.InstalledMemory 288MB/288: ""
+*ko.InstalledMemory 288MB/288: ""
+*pt.InstalledMemory 288MB/288: ""
+*zh_CN.InstalledMemory 288MB/288: ""
+*zh_TW.InstalledMemory 288MB/288: ""
+
+*InstalledMemory 320MB/320: ""
+*de.InstalledMemory 320MB/320: ""
+*es.InstalledMemory 320MB/320: ""
+*fr.InstalledMemory 320MB/320: ""
+*it.InstalledMemory 320MB/320: ""
+*ja.InstalledMemory 320MB/320: ""
+*ko.InstalledMemory 320MB/320: ""
+*pt.InstalledMemory 320MB/320: ""
+*zh_CN.InstalledMemory 320MB/320: ""
+*zh_TW.InstalledMemory 320MB/320: ""
+
+*InstalledMemory 352MB/352: ""
+*de.InstalledMemory 352MB/352 MB: ""
+*es.InstalledMemory 352MB/352: ""
+*fr.InstalledMemory 352MB/352 Mo: ""
+*it.InstalledMemory 352MB/352 MB: ""
+*ja.InstalledMemory 352MB/352 MB: ""
+*ko.InstalledMemory 352MB/352 MB: ""
+*pt.InstalledMemory 352MB/352 MB: ""
+*zh_CN.InstalledMemory 352MB/352 MB: ""
+*zh_TW.InstalledMemory 352MB/352 MB: ""
+
+*InstalledMemory 384MB/384: ""
+*de.InstalledMemory 384MB/384 MB: ""
+*es.InstalledMemory 384MB/384: ""
+*fr.InstalledMemory 384MB/384 Mo: ""
+*it.InstalledMemory 384MB/384 MB: ""
+*ja.InstalledMemory 384MB/384 MB: ""
+*ko.InstalledMemory 384MB/384 MB: ""
+*pt.InstalledMemory 384MB/384 MB: ""
+*zh_CN.InstalledMemory 384MB/384 MB: ""
+*zh_TW.InstalledMemory 384MB/384 MB: ""
+
+*InstalledMemory 416MB/416: ""
+*de.InstalledMemory 416MB/416: ""
+*es.InstalledMemory 416MB/416: ""
+*fr.InstalledMemory 416MB/416: ""
+*it.InstalledMemory 416MB/416: ""
+*ja.InstalledMemory 416MB/416: ""
+*ko.InstalledMemory 416MB/416: ""
+*pt.InstalledMemory 416MB/416: ""
+*zh_CN.InstalledMemory 416MB/416: ""
+*zh_TW.InstalledMemory 416MB/416: ""
+
+*InstalledMemory 448MB/448: ""
+*de.InstalledMemory 448MB/448 MB: ""
+*es.InstalledMemory 448MB/448: ""
+*fr.InstalledMemory 448MB/448 Mo: ""
+*it.InstalledMemory 448MB/448: ""
+*ja.InstalledMemory 448MB/448 MB: ""
+*ko.InstalledMemory 448MB/448 MB: ""
+*pt.InstalledMemory 448MB/448 MB: ""
+*zh_CN.InstalledMemory 448MB/448 MB: ""
+*zh_TW.InstalledMemory 448MB/448 MB: ""
+
+*InstalledMemory 480MB/480: ""
+*de.InstalledMemory 480MB/480 MB: ""
+*es.InstalledMemory 480MB/480: ""
+*fr.InstalledMemory 480MB/480 Mo: ""
+*it.InstalledMemory 480MB/480 MB: ""
+*ja.InstalledMemory 480MB/480 MB: ""
+*ko.InstalledMemory 480MB/480 MB: ""
+*pt.InstalledMemory 480MB/480 MB: ""
+*zh_CN.InstalledMemory 480MB/480 MB: ""
+*zh_TW.InstalledMemory 480MB/480 MB: ""
+
+*InstalledMemory 512MB/512: ""
+*de.InstalledMemory 512MB/512 MB: ""
+*es.InstalledMemory 512MB/512: ""
+*fr.InstalledMemory 512MB/512 Mo: ""
+*it.InstalledMemory 512MB/512 MB: ""
+*ja.InstalledMemory 512MB/512 MB: ""
+*ko.InstalledMemory 512MB/512 MB: ""
+*pt.InstalledMemory 512MB/512 MB: ""
+*zh_CN.InstalledMemory 512MB/512 MB: ""
+*zh_TW.InstalledMemory 512MB/512 MB: ""
+
+*?InstalledMemory: "
+  save
+    currentsystemparams /RamSize get
+    1048576 div ceiling cvi
+    [(32MB) (32MB) (64MB) (96MB) (128MB) (160MB) (192MB) (224MB) (256MB)
+    (288MB) (320MB) (352MB) (384MB) (416MB) (448MB) (480MB) (512MB)]
+    dup length 3 -1 roll 32 idiv dup 2 index  ge { pop 1 sub} {exch pop} ifelse get
+    = flush
+  restore
+"
+*End
+*CloseUI: *InstalledMemory
+
+*CloseGroup: InstallableOptions
+
+
+*% =================================
+*% =================================
+
+
+*%===============================================
+*%       Options and Constraints
+*%===============================================
+
+*%====================================================
+*%   Contraints based on Installable options.
+*%====================================================
+
+*% If optional Duplexer is not installed, disable access to Duplex
+*%----------------------------------------------------------------
+*UIConstraints: *HPOption_Duplexer False *Duplex DuplexTumble
+*UIConstraints: *HPOption_Duplexer False *Duplex DuplexNoTumble
+
+*UIConstraints: *Duplex DuplexTumble   *HPOption_Duplexer False
+*UIConstraints: *Duplex DuplexNoTumble *HPOption_Duplexer False
+
+*%----------------------------------------------------------------
+
+*% If optional tray 2 is not installed, disable access to Tray2
+*%----------------------------------------------------------------
+*UIConstraints: *HPOption_Tray2 False *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *HPOption_Tray2 False
+
+*% If optional HCI tray is not installed, disable access to Tray4
+*%----------------------------------------------------------------------
+*UIConstraints: *HPOption_Tray4 False *InputSlot Tray4
+*UIConstraints: *InputSlot Tray4 *HPOption_Tray4 False
+
+*% Constrain output bins that are not available with Standard configuration
+*%-------------------------------------------------------------------------
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin Stacker
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin StackerSeparator
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin1
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin2
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin3
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin4
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin5
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin6
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin7
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin OutputBin8
+*UIConstraints: *HPOption_MBM_Mixed Standard *OutputBin UStapler
+
+*UIConstraints: *OutputBin Stacker *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin StackerSeparator *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin1 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin2 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin3 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin4 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin5 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin6 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin7 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin OutputBin8 *HPOption_MBM_Mixed Standard
+*UIConstraints: *OutputBin UStapler *HPOption_MBM_Mixed Standard
+
+*% Constrain output bins that are not available with MBM8MB
+*%---------------------------------------------------------
+*UIConstraints: *OutputBin UStapler *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *OutputBin Stacker *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *OutputBin StackerSeparator *HPOption_MBM_Mixed MBM8MB
+
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *OutputBin UStapler
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *OutputBin Stacker
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *OutputBin StackerSeparator
+
+*% Constrain output bins that are not available with MBM8ST
+*%---------------------------------------------------------
+*UIConstraints: *OutputBin OutputBin1 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin OutputBin2 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin OutputBin3 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin OutputBin4 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin OutputBin5 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin OutputBin6 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin OutputBin7 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin OutputBin8 *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin UStapler *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *OutputBin Stacker *HPOption_MBM_Mixed MBM8ST
+
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin1
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin2
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin3
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin4
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin5
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin6
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin7
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin OutputBin8
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin UStapler
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *OutputBin Stacker
+
+*% Constrain output bins that are not available with MBMStaplerStacker
+*%--------------------------------------------------------------------
+*UIConstraints: *OutputBin OutputBin1 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin OutputBin2 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin OutputBin3 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin OutputBin4 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin OutputBin5 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin OutputBin6 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin OutputBin7 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin OutputBin8 *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin StackerSeparator *HPOption_MBM_Mixed MBMStaplerStacker
+*UIConstraints: *OutputBin Stacker *HPOption_MBM_Mixed MBMStaplerStacker
+
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin1
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin2
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin3
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin4
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin5
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin6
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin7
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin OutputBin8
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin StackerSeparator
+*UIConstraints: *HPOption_MBM_Mixed MBMStaplerStacker *OutputBin Stacker
+
+*% Constrain output bins that are not available with MBMStacker
+*%-------------------------------------------------------------
+*UIConstraints: *OutputBin OutputBin1 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin OutputBin2 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin OutputBin3 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin OutputBin4 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin OutputBin5 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin OutputBin6 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin OutputBin7 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin OutputBin8 *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin UStapler *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *OutputBin StackerSeparator *HPOption_MBM_Mixed MBMStacker
+
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin1
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin2
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin3
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin4
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin5
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin6
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin7
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin OutputBin8
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin UStapler
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *OutputBin StackerSeparator
+
+*%==========================================
+*% input tray and media constraints:
+*%==========================================
+*UIConstraints: *MediaType Transparent *InputSlot Tray4
+*UIConstraints: *InputSlot Tray4 *MediaType Transparent
+
+*UIConstraints: *MediaType Labels *InputSlot Tray2
+*UIConstraints: *MediaType Labels *InputSlot Tray3
+*UIConstraints: *MediaType Labels *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *MediaType Labels
+*UIConstraints: *InputSlot Tray3 *MediaType Labels
+*UIConstraints: *InputSlot Tray4 *MediaType Labels
+
+*UIConstraints: *MediaType Cardstock *InputSlot Tray2
+*UIConstraints: *MediaType Cardstock *InputSlot Tray3
+*UIConstraints: *MediaType Cardstock *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *MediaType Cardstock
+*UIConstraints: *InputSlot Tray3 *MediaType Cardstock
+*UIConstraints: *InputSlot Tray4 *MediaType Cardstock
+
+*UIConstraints: *MediaType HeavyMedia *InputSlot Tray2
+*UIConstraints: *MediaType HeavyMedia *InputSlot Tray3
+*UIConstraints: *MediaType HeavyMedia *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *MediaType HeavyMedia
+*UIConstraints: *InputSlot Tray3 *MediaType HeavyMedia
+*UIConstraints: *InputSlot Tray4 *MediaType HeavyMedia
+
+*UIConstraints: *MediaType Envelope *InputSlot Tray2
+*UIConstraints: *MediaType Envelope *InputSlot Tray3
+*UIConstraints: *MediaType Envelope *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *MediaType Envelope
+*UIConstraints: *InputSlot Tray3 *MediaType Envelope
+*UIConstraints: *InputSlot Tray4 *MediaType Envelope
+
+*% input tray and media constraints:
+*UIConstraints: *MediaType Transparent *OutputBin Stacker
+*UIConstraints: *MediaType Transparent *OutputBin StackerSeparator
+*UIConstraints: *MediaType Transparent *OutputBin UStapler
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin1
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin2
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin3
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin4
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin5
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin6
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin7
+*UIConstraints: *MediaType Transparent *OutputBin OutputBin8
+
+*UIConstraints: *OutputBin Stacker *MediaType Transparent
+*UIConstraints: *OutputBin StackerSeparator *MediaType Transparent
+*UIConstraints: *OutputBin UStapler *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin1 *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin2 *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin3 *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin4 *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin5 *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin6 *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin7 *MediaType Transparent
+*UIConstraints: *OutputBin OutputBin8 *MediaType Transparent
+
+*UIConstraints: *MediaType Labels *OutputBin Stacker
+*UIConstraints: *MediaType Labels *OutputBin StackerSeparator
+*UIConstraints: *MediaType Labels *OutputBin UStapler
+*UIConstraints: *MediaType Labels *OutputBin OutputBin1
+*UIConstraints: *MediaType Labels *OutputBin OutputBin2
+*UIConstraints: *MediaType Labels *OutputBin OutputBin3
+*UIConstraints: *MediaType Labels *OutputBin OutputBin4
+*UIConstraints: *MediaType Labels *OutputBin OutputBin5
+*UIConstraints: *MediaType Labels *OutputBin OutputBin6
+*UIConstraints: *MediaType Labels *OutputBin OutputBin7
+*UIConstraints: *MediaType Labels *OutputBin OutputBin8
+
+*UIConstraints: *OutputBin Stacker *MediaType Labels
+*UIConstraints: *OutputBin StackerSeparator *MediaType Labels
+*UIConstraints: *OutputBin UStapler *MediaType Labels
+*UIConstraints: *OutputBin OutputBin1 *MediaType Labels
+*UIConstraints: *OutputBin OutputBin2 *MediaType Labels
+*UIConstraints: *OutputBin OutputBin3 *MediaType Labels
+*UIConstraints: *OutputBin OutputBin4 *MediaType Labels
+*UIConstraints: *OutputBin OutputBin5 *MediaType Labels
+*UIConstraints: *OutputBin OutputBin6 *MediaType Labels
+*UIConstraints: *OutputBin OutputBin7 *MediaType Labels
+*UIConstraints: *OutputBin OutputBin8 *MediaType Labels
+
+*UIConstraints: *MediaType Cardstock *OutputBin Stacker
+*UIConstraints: *MediaType Cardstock *OutputBin StackerSeparator
+*UIConstraints: *MediaType Cardstock *OutputBin UStapler
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin1
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin2
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin3
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin4
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin5
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin6
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin7
+*UIConstraints: *MediaType Cardstock *OutputBin OutputBin8
+
+*UIConstraints: *OutputBin Stacker *MediaType Cardstock
+*UIConstraints: *OutputBin StackerSeparator *MediaType Cardstock
+*UIConstraints: *OutputBin UStapler *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin1 *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin2 *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin3 *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin4 *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin5 *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin6 *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin7 *MediaType Cardstock
+*UIConstraints: *OutputBin OutputBin8 *MediaType Cardstock
+
+*UIConstraints: *MediaType HeavyMedia *OutputBin Stacker
+*UIConstraints: *MediaType HeavyMedia *OutputBin StackerSeparator
+*UIConstraints: *MediaType HeavyMedia *OutputBin UStapler
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin1
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin2
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin3
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin4
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin5
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin6
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin7
+*UIConstraints: *MediaType HeavyMedia *OutputBin OutputBin8
+
+*UIConstraints: *OutputBin Stacker *MediaType HeavyMedia
+*UIConstraints: *OutputBin StackerSeparator *MediaType HeavyMedia
+*UIConstraints: *OutputBin UStapler *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin1 *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin2 *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin3 *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin4 *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin5 *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin6 *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin7 *MediaType HeavyMedia
+*UIConstraints: *OutputBin OutputBin8 *MediaType HeavyMedia
+
+*UIConstraints: *MediaType Envelope *OutputBin Stacker
+*UIConstraints: *MediaType Envelope *OutputBin StackerSeparator
+*UIConstraints: *MediaType Envelope *OutputBin UStapler
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin1
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin2
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin3
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin4
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin5
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin6
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin7
+*UIConstraints: *MediaType Envelope *OutputBin OutputBin8
+
+*UIConstraints: *OutputBin Stacker *MediaType Envelope
+*UIConstraints: *OutputBin StackerSeparator *MediaType Envelope
+*UIConstraints: *OutputBin UStapler *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin1 *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin2 *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin3 *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin4 *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin5 *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin6 *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin7 *MediaType Envelope
+*UIConstraints: *OutputBin OutputBin8 *MediaType Envelope
+
+*%===============================================
+*% Contraints between Trays and PageSize
+*%===============================================
+
+*% Executive/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize Executive *InputSlot Tray2
+*UIConstraints: *PageSize Executive *InputSlot Tray3
+*UIConstraints: *PageSize Executive *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize Executive
+*UIConstraints: *InputSlot Tray3 *PageSize Executive
+*UIConstraints: *InputSlot Tray4 *PageSize Executive
+
+*% A5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize A5 *InputSlot Tray2
+*UIConstraints: *PageSize A5 *InputSlot Tray3
+*UIConstraints: *PageSize A5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize A5
+*UIConstraints: *InputSlot Tray3 *PageSize A5
+*UIConstraints: *InputSlot Tray4 *PageSize A5
+
+*% JIS B5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize B5 *InputSlot Tray2
+*UIConstraints: *PageSize B5 *InputSlot Tray3
+*UIConstraints: *PageSize B5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize B5
+*UIConstraints: *InputSlot Tray3 *PageSize B5
+*UIConstraints: *InputSlot Tray4 *PageSize B5
+
+*% A3/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize A3 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize A3
+
+*% A3 Oversize/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize w869h1304 *InputSlot Tray2
+*UIConstraints: *PageSize w869h1304 *InputSlot Tray3
+*UIConstraints: *PageSize w869h1304 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize w869h1304
+*UIConstraints: *InputSlot Tray3 *PageSize w869h1304
+*UIConstraints: *InputSlot Tray4 *PageSize w869h1304
+
+*% Env10/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize Env10 *InputSlot Tray2
+*UIConstraints: *PageSize Env10 *InputSlot Tray3
+*UIConstraints: *PageSize Env10 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize Env10
+*UIConstraints: *InputSlot Tray3 *PageSize Env10
+*UIConstraints: *InputSlot Tray4 *PageSize Env10
+
+*% EnvDL/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize EnvDL *InputSlot Tray2
+*UIConstraints: *PageSize EnvDL *InputSlot Tray3
+*UIConstraints: *PageSize EnvDL *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize EnvDL
+*UIConstraints: *InputSlot Tray3 *PageSize EnvDL
+*UIConstraints: *InputSlot Tray4 *PageSize EnvDL
+
+*% EnvC5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize EnvC5 *InputSlot Tray2
+*UIConstraints: *PageSize EnvC5 *InputSlot Tray3
+*UIConstraints: *PageSize EnvC5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize EnvC5
+*UIConstraints: *InputSlot Tray3 *PageSize EnvC5
+*UIConstraints: *InputSlot Tray4 *PageSize EnvC5
+
+*% EnvB5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize EnvB5 *InputSlot Tray2
+*UIConstraints: *PageSize EnvB5 *InputSlot Tray3
+*UIConstraints: *PageSize EnvB5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize EnvB5
+*UIConstraints: *InputSlot Tray3 *PageSize EnvB5
+*UIConstraints: *InputSlot Tray4 *PageSize EnvB5
+
+*% EnvMonarch/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize EnvMonarch *InputSlot Tray2
+*UIConstraints: *PageSize EnvMonarch *InputSlot Tray3
+*UIConstraints: *PageSize EnvMonarch *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize EnvMonarch
+*UIConstraints: *InputSlot Tray3 *PageSize EnvMonarch
+*UIConstraints: *InputSlot Tray4 *PageSize EnvMonarch
+
+*% Tabloid/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize Tabloid *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize Tabloid
+
+*% DoublePostcardRotated/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize DoublePostcardRotated *InputSlot Tray2
+*UIConstraints: *PageSize DoublePostcardRotated *InputSlot Tray3
+*UIConstraints: *PageSize DoublePostcardRotated *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize DoublePostcardRotated
+*UIConstraints: *InputSlot Tray3 *PageSize DoublePostcardRotated
+*UIConstraints: *InputSlot Tray4 *PageSize DoublePostcardRotated
+
+*% 16K/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize w558h774 *InputSlot Tray2
+*UIConstraints: *PageSize w558h774 *InputSlot Tray3
+*UIConstraints: *PageSize w558h774 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize w558h774
+*UIConstraints: *InputSlot Tray3 *PageSize w558h774
+*UIConstraints: *InputSlot Tray4 *PageSize w558h774
+
+*% 8K/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize w774h1116 *InputSlot Tray2
+*UIConstraints: *PageSize w774h1116 *InputSlot Tray3
+*UIConstraints: *PageSize w774h1116 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize w774h1116
+*UIConstraints: *InputSlot Tray3 *PageSize w774h1116
+*UIConstraints: *InputSlot Tray4 *PageSize w774h1116
+
+*% Executive JIS/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageSize w612h935 *InputSlot Tray2
+*UIConstraints: *PageSize w612h935 *InputSlot Tray3
+*UIConstraints: *PageSize w612h935 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageSize w612h935
+*UIConstraints: *InputSlot Tray3 *PageSize w612h935
+*UIConstraints: *InputSlot Tray4 *PageSize w612h935
+
+*%==========================================
+*% Contraints between Trays and PageRegion
+*%==========================================
+
+*% Executive/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion Executive *InputSlot Tray2
+*UIConstraints: *PageRegion Executive *InputSlot Tray3
+*UIConstraints: *PageRegion Executive *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion Executive
+*UIConstraints: *InputSlot Tray3 *PageRegion Executive
+*UIConstraints: *InputSlot Tray4 *PageRegion Executive
+
+*% A5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion A5 *InputSlot Tray2
+*UIConstraints: *PageRegion A5 *InputSlot Tray3
+*UIConstraints: *PageRegion A5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion A5
+*UIConstraints: *InputSlot Tray3 *PageRegion A5
+*UIConstraints: *InputSlot Tray4 *PageRegion A5
+
+*% JIS B5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion B5 *InputSlot Tray2
+*UIConstraints: *PageRegion B5 *InputSlot Tray3
+*UIConstraints: *PageRegion B5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion B5
+*UIConstraints: *InputSlot Tray3 *PageRegion B5
+*UIConstraints: *InputSlot Tray4 *PageRegion B5
+
+*% A3/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion A3 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion A3
+
+*% A3 Oversize/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion w869h1304 *InputSlot Tray2
+*UIConstraints: *PageRegion w869h1304 *InputSlot Tray3
+*UIConstraints: *PageRegion w869h1304 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion w869h1304
+*UIConstraints: *InputSlot Tray3 *PageRegion w869h1304
+*UIConstraints: *InputSlot Tray4 *PageRegion w869h1304
+
+
+*% Env10/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion Env10 *InputSlot Tray2
+*UIConstraints: *PageRegion Env10 *InputSlot Tray3
+*UIConstraints: *PageRegion Env10 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion Env10
+*UIConstraints: *InputSlot Tray3 *PageRegion Env10
+*UIConstraints: *InputSlot Tray4 *PageRegion Env10
+
+*% EnvDL/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvDL *InputSlot Tray2
+*UIConstraints: *PageRegion EnvDL *InputSlot Tray3
+*UIConstraints: *PageRegion EnvDL *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvDL
+*UIConstraints: *InputSlot Tray3 *PageRegion EnvDL
+*UIConstraints: *InputSlot Tray4 *PageRegion EnvDL
+
+*% EnvC5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvC5 *InputSlot Tray2
+*UIConstraints: *PageRegion EnvC5 *InputSlot Tray3
+*UIConstraints: *PageRegion EnvC5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvC5
+*UIConstraints: *InputSlot Tray3 *PageRegion EnvC5
+*UIConstraints: *InputSlot Tray4 *PageRegion EnvC5
+
+*% EnvB5/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvB5 *InputSlot Tray2
+*UIConstraints: *PageRegion EnvB5 *InputSlot Tray3
+*UIConstraints: *PageRegion EnvB5 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvB5
+*UIConstraints: *InputSlot Tray3 *PageRegion EnvB5
+*UIConstraints: *InputSlot Tray4 *PageRegion EnvB5
+
+*% EnvMonarch/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvMonarch *InputSlot Tray2
+*UIConstraints: *PageRegion EnvMonarch *InputSlot Tray3
+*UIConstraints: *PageRegion EnvMonarch *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvMonarch
+*UIConstraints: *InputSlot Tray3 *PageRegion EnvMonarch
+*UIConstraints: *InputSlot Tray4 *PageRegion EnvMonarch
+
+*% Tabloid/HPInputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion Tabloid *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion Tabloid
+
+*% DoublePostcardRotated/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion DoublePostcardRotated *InputSlot Tray2
+*UIConstraints: *PageRegion DoublePostcardRotated *InputSlot Tray3
+*UIConstraints: *PageRegion DoublePostcardRotated *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion DoublePostcardRotated
+*UIConstraints: *InputSlot Tray3 *PageRegion DoublePostcardRotated
+*UIConstraints: *InputSlot Tray4 *PageRegion DoublePostcardRotated
+
+*% 16K/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion w558h774 *InputSlot Tray2
+*UIConstraints: *PageRegion w558h774 *InputSlot Tray3
+*UIConstraints: *PageRegion w558h774 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion w558h774
+*UIConstraints: *InputSlot Tray3 *PageRegion w558h774
+*UIConstraints: *InputSlot Tray4 *PageRegion w558h774
+
+*% 8K/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion w774h1116 *InputSlot Tray2
+*UIConstraints: *PageRegion w774h1116 *InputSlot Tray3
+*UIConstraints: *PageRegion w774h1116 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion w774h1116
+*UIConstraints: *InputSlot Tray3 *PageRegion w774h1116
+*UIConstraints: *InputSlot Tray4 *PageRegion w774h1116
+
+*% Executive JIS/InputSlot
+*%-----------------------------------
+*UIConstraints: *PageRegion w612h935 *InputSlot Tray2
+*UIConstraints: *PageRegion w612h935 *InputSlot Tray3
+*UIConstraints: *PageRegion w612h935 *InputSlot Tray4
+*UIConstraints: *InputSlot Tray2 *PageRegion w612h935
+*UIConstraints: *InputSlot Tray3 *PageRegion w612h935
+*UIConstraints: *InputSlot Tray4 *PageRegion w612h935
+
+*%==========================================
+*% Contraints between Bins and PageSize
+*%==========================================
+
+*% JIS B4/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize B4 *OutputBin Stacker
+*UIConstraints: *PageSize B4 *OutputBin UStapler
+*UIConstraints: *OutputBin Stacker *PageSize B4
+*UIConstraints: *OutputBin UStapler *PageSize B4
+
+*% A3 Oversize/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize w869h1304 *OutputBin Stacker
+*UIConstraints: *PageSize w869h1304 *OutputBin StackerSeparator
+*UIConstraints: *PageSize w869h1304 *OutputBin UStapler
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin1
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin2
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin3
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin4
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin5
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin6
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin7
+*UIConstraints: *PageSize w869h1304 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize w869h1304
+*UIConstraints: *OutputBin StackerSeparator *PageSize w869h1304
+*UIConstraints: *OutputBin UStapler *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin1 *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin2 *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin3 *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin4 *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin5 *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin6 *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin7 *PageSize w869h1304
+*UIConstraints: *OutputBin OutputBin8 *PageSize w869h1304
+
+*% Executive JIS/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize w612h935 *OutputBin Stacker
+*UIConstraints: *PageSize w612h935 *OutputBin StackerSeparator
+*UIConstraints: *PageSize w612h935 *OutputBin UStapler
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin1
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin2
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin3
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin4
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin5
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin6
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin7
+*UIConstraints: *PageSize w612h935 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize w612h935
+*UIConstraints: *OutputBin StackerSeparator *PageSize w612h935
+*UIConstraints: *OutputBin UStapler *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin1 *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin2 *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin3 *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin4 *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin5 *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin6 *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin7 *PageSize w612h935
+*UIConstraints: *OutputBin OutputBin8 *PageSize w612h935
+
+*% 16K/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize w558h774 *OutputBin Stacker
+*UIConstraints: *PageSize w558h774 *OutputBin StackerSeparator
+*UIConstraints: *PageSize w558h774 *OutputBin UStapler
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin1
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin2
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin3
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin4
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin5
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin6
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin7
+*UIConstraints: *PageSize w558h774 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize w558h774
+*UIConstraints: *OutputBin StackerSeparator *PageSize w558h774
+*UIConstraints: *OutputBin UStapler *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin1 *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin2 *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin3 *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin4 *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin5 *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin6 *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin7 *PageSize w558h774
+*UIConstraints: *OutputBin OutputBin8 *PageSize w558h774
+
+*% 8K/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize w774h1116 *OutputBin Stacker
+*UIConstraints: *PageSize w774h1116 *OutputBin StackerSeparator
+*UIConstraints: *PageSize w774h1116 *OutputBin UStapler
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin1
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin2
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin3
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin4
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin5
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin6
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin7
+*UIConstraints: *PageSize w774h1116 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize w774h1116
+*UIConstraints: *OutputBin StackerSeparator *PageSize w774h1116
+*UIConstraints: *OutputBin UStapler *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin1 *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin2 *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin3 *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin4 *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin5 *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin6 *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin7 *PageSize w774h1116
+*UIConstraints: *OutputBin OutputBin8 *PageSize w774h1116
+
+*% Env10/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize Env10 *OutputBin Stacker
+*UIConstraints: *PageSize Env10 *OutputBin StackerSeparator
+*UIConstraints: *PageSize Env10 *OutputBin UStapler
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin1
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin2
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin3
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin4
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin5
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin6
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin7
+*UIConstraints: *PageSize Env10 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize Env10
+*UIConstraints: *OutputBin StackerSeparator *PageSize Env10
+*UIConstraints: *OutputBin UStapler *PageSize Env10
+*UIConstraints: *OutputBin OutputBin1 *PageSize Env10
+*UIConstraints: *OutputBin OutputBin2 *PageSize Env10
+*UIConstraints: *OutputBin OutputBin3 *PageSize Env10
+*UIConstraints: *OutputBin OutputBin4 *PageSize Env10
+*UIConstraints: *OutputBin OutputBin5 *PageSize Env10
+*UIConstraints: *OutputBin OutputBin6 *PageSize Env10
+*UIConstraints: *OutputBin OutputBin7 *PageSize Env10
+*UIConstraints: *OutputBin OutputBin8 *PageSize Env10
+
+*% EnvDL/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize EnvDL *OutputBin Stacker
+*UIConstraints: *PageSize EnvDL *OutputBin StackerSeparator
+*UIConstraints: *PageSize EnvDL *OutputBin UStapler
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin1
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin2
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin3
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin4
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin5
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin6
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin7
+*UIConstraints: *PageSize EnvDL *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize EnvDL
+*UIConstraints: *OutputBin StackerSeparator *PageSize EnvDL
+*UIConstraints: *OutputBin UStapler *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin1 *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin2 *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin3 *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin4 *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin5 *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin6 *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin7 *PageSize EnvDL
+*UIConstraints: *OutputBin OutputBin8 *PageSize EnvDL
+
+*% EnvC5/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize EnvC5 *OutputBin Stacker
+*UIConstraints: *PageSize EnvC5 *OutputBin StackerSeparator
+*UIConstraints: *PageSize EnvC5 *OutputBin UStapler
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin1
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin2
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin3
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin4
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin5
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin6
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin7
+*UIConstraints: *PageSize EnvC5 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize EnvC5
+*UIConstraints: *OutputBin StackerSeparator *PageSize EnvC5
+*UIConstraints: *OutputBin UStapler *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin1 *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin2 *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin3 *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin4 *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin5 *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin6 *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin7 *PageSize EnvC5
+*UIConstraints: *OutputBin OutputBin8 *PageSize EnvC5
+
+*% EnvB5/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize EnvB5 *OutputBin Stacker
+*UIConstraints: *PageSize EnvB5 *OutputBin StackerSeparator
+*UIConstraints: *PageSize EnvB5 *OutputBin UStapler
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin1
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin2
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin3
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin4
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin5
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin6
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin7
+*UIConstraints: *PageSize EnvB5 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize EnvB5
+*UIConstraints: *OutputBin StackerSeparator *PageSize EnvB5
+*UIConstraints: *OutputBin UStapler *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin1 *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin2 *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin3 *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin4 *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin5 *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin6 *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin7 *PageSize EnvB5
+*UIConstraints: *OutputBin OutputBin8 *PageSize EnvB5
+
+*% EnvMonarch/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize EnvMonarch *OutputBin Stacker
+*UIConstraints: *PageSize EnvMonarch *OutputBin StackerSeparator
+*UIConstraints: *PageSize EnvMonarch *OutputBin UStapler
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin1
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin2
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin3
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin4
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin5
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin6
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin7
+*UIConstraints: *PageSize EnvMonarch *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize EnvMonarch
+*UIConstraints: *OutputBin StackerSeparator *PageSize EnvMonarch
+*UIConstraints: *OutputBin UStapler *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin1 *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin2 *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin3 *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin4 *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin5 *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin6 *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin7 *PageSize EnvMonarch
+*UIConstraints: *OutputBin OutputBin8 *PageSize EnvMonarch
+
+*% DoublePostcardRotated/OutputBin
+*%-----------------------------------
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin Stacker
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin StackerSeparator
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin UStapler
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin1
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin2
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin3
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin4
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin5
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin6
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin7
+*UIConstraints: *PageSize DoublePostcardRotated *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin StackerSeparator *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin UStapler *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin1 *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin2 *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin3 *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin4 *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin5 *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin6 *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin7 *PageSize DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin8 *PageSize DoublePostcardRotated
+
+*%==========================================
+*% Contraints between Bins and PageRegion
+*%==========================================
+
+*% JIS B4/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion B4 *OutputBin Stacker
+*UIConstraints: *PageRegion B4 *OutputBin UStapler
+*UIConstraints: *OutputBin Stacker *PageRegion B4
+*UIConstraints: *OutputBin UStapler *PageRegion B4
+
+*% A3 Oversize/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion w869h1304 *OutputBin Stacker
+*UIConstraints: *PageRegion w869h1304 *OutputBin StackerSeparator
+*UIConstraints: *PageRegion w869h1304 *OutputBin UStapler
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin1
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin2
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin3
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin4
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin5
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin6
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin7
+*UIConstraints: *PageRegion w869h1304 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion w869h1304
+*UIConstraints: *OutputBin StackerSeparator *PageRegion w869h1304
+*UIConstraints: *OutputBin UStapler *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin1 *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin2 *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin3 *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin4 *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin5 *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin6 *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin7 *PageRegion w869h1304
+*UIConstraints: *OutputBin OutputBin8 *PageRegion w869h1304
+
+*% Executive JIS/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion w612h935 *OutputBin Stacker
+*UIConstraints: *PageRegion w612h935 *OutputBin StackerSeparator
+*UIConstraints: *PageRegion w612h935 *OutputBin UStapler
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin1
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin2
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin3
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin4
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin5
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin6
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin7
+*UIConstraints: *PageRegion w612h935 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion w612h935
+*UIConstraints: *OutputBin StackerSeparator *PageRegion w612h935
+*UIConstraints: *OutputBin UStapler *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin1 *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin2 *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin3 *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin4 *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin5 *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin6 *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin7 *PageRegion w612h935
+*UIConstraints: *OutputBin OutputBin8 *PageRegion w612h935
+
+*% 16K/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion w558h774 *OutputBin Stacker
+*UIConstraints: *PageRegion w558h774 *OutputBin StackerSeparator
+*UIConstraints: *PageRegion w558h774 *OutputBin UStapler
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin1
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin2
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin3
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin4
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin5
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin6
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin7
+*UIConstraints: *PageRegion w558h774 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion w558h774
+*UIConstraints: *OutputBin StackerSeparator *PageRegion w558h774
+*UIConstraints: *OutputBin UStapler *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin1 *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin2 *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin3 *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin4 *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin5 *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin6 *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin7 *PageRegion w558h774
+*UIConstraints: *OutputBin OutputBin8 *PageRegion w558h774
+
+*% 8K/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion w774h1116 *OutputBin Stacker
+*UIConstraints: *PageRegion w774h1116 *OutputBin StackerSeparator
+*UIConstraints: *PageRegion w774h1116 *OutputBin UStapler
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin1
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin2
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin3
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin4
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin5
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin6
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin7
+*UIConstraints: *PageRegion w774h1116 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion w774h1116
+*UIConstraints: *OutputBin StackerSeparator *PageRegion w774h1116
+*UIConstraints: *OutputBin UStapler *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin1 *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin2 *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin3 *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin4 *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin5 *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin6 *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin7 *PageRegion w774h1116
+*UIConstraints: *OutputBin OutputBin8 *PageRegion w774h1116
+
+
+*% Env10/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion Env10 *OutputBin Stacker
+*UIConstraints: *PageRegion Env10 *OutputBin StackerSeparator
+*UIConstraints: *PageRegion Env10 *OutputBin UStapler
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin1
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin2
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin3
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin4
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin5
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin6
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin7
+*UIConstraints: *PageRegion Env10 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion Env10
+*UIConstraints: *OutputBin StackerSeparator *PageRegion Env10
+*UIConstraints: *OutputBin UStapler *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin1 *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin2 *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin3 *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin4 *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin5 *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin6 *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin7 *PageRegion Env10
+*UIConstraints: *OutputBin OutputBin8 *PageRegion Env10
+
+*% EnvDL/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvDL *OutputBin Stacker
+*UIConstraints: *PageRegion EnvDL *OutputBin StackerSeparator
+*UIConstraints: *PageRegion EnvDL *OutputBin UStapler
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin1
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin2
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin3
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin4
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin5
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin6
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin7
+*UIConstraints: *PageRegion EnvDL *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion EnvDL
+*UIConstraints: *OutputBin StackerSeparator *PageRegion EnvDL
+*UIConstraints: *OutputBin UStapler *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin1 *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin2 *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin3 *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin4 *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin5 *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin6 *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin7 *PageRegion EnvDL
+*UIConstraints: *OutputBin OutputBin8 *PageRegion EnvDL
+
+*% EnvC5/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvC5 *OutputBin Stacker
+*UIConstraints: *PageRegion EnvC5 *OutputBin StackerSeparator
+*UIConstraints: *PageRegion EnvC5 *OutputBin UStapler
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin1
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin2
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin3
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin4
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin5
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin6
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin7
+*UIConstraints: *PageRegion EnvC5 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion EnvC5
+*UIConstraints: *OutputBin StackerSeparator *PageRegion EnvC5
+*UIConstraints: *OutputBin UStapler *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin1 *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin2 *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin3 *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin4 *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin5 *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin6 *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin7 *PageRegion EnvC5
+*UIConstraints: *OutputBin OutputBin8 *PageRegion EnvC5
+
+*% EnvB5/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvB5 *OutputBin Stacker
+*UIConstraints: *PageRegion EnvB5 *OutputBin StackerSeparator
+*UIConstraints: *PageRegion EnvB5 *OutputBin UStapler
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin1
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin2
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin3
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin4
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin5
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin6
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin7
+*UIConstraints: *PageRegion EnvB5 *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion EnvB5
+*UIConstraints: *OutputBin StackerSeparator *PageRegion EnvB5
+*UIConstraints: *OutputBin UStapler *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin1 *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin2 *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin3 *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin4 *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin5 *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin6 *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin7 *PageRegion EnvB5
+*UIConstraints: *OutputBin OutputBin8 *PageRegion EnvB5
+
+*% EnvMonarch/HPOutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion EnvMonarch *OutputBin Stacker
+*UIConstraints: *PageRegion EnvMonarch *OutputBin StackerSeparator
+*UIConstraints: *PageRegion EnvMonarch *OutputBin UStapler
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin1
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin2
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin3
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin4
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin5
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin6
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin7
+*UIConstraints: *PageRegion EnvMonarch *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion EnvMonarch
+*UIConstraints: *OutputBin StackerSeparator *PageRegion EnvMonarch
+*UIConstraints: *OutputBin UStapler *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin1 *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin2 *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin3 *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin4 *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin5 *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin6 *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin7 *PageRegion EnvMonarch
+*UIConstraints: *OutputBin OutputBin8 *PageRegion EnvMonarch
+
+*% DoublePostcardRotated/OutputBin
+*%-----------------------------------
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin Stacker
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin StackerSeparator
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin UStapler
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin1
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin2
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin3
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin4
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin5
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin6
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin7
+*UIConstraints: *PageRegion DoublePostcardRotated *OutputBin OutputBin8
+*UIConstraints: *OutputBin Stacker *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin StackerSeparator *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin UStapler *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin1 *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin2 *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin3 *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin4 *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin5 *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin6 *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin7 *PageRegion DoublePostcardRotated
+*UIConstraints: *OutputBin OutputBin8 *PageRegion DoublePostcardRotated
+
+*% High capacity stapler disabled without high capacity output unit
+*%------------------------------------------------------------------
+*UIConstraints: *HPOption_MBM_Mixed Standard *HPStaplerOptions 1diagonal
+*UIConstraints: *HPOption_MBM_Mixed Standard *HPStaplerOptions 1parallel
+*UIConstraints: *HPOption_MBM_Mixed Standard *HPStaplerOptions 2parallel
+*UIConstraints: *HPOption_MBM_Mixed Standard *HPStaplerOptions 3parallel
+*UIConstraints: *HPOption_MBM_Mixed Standard *HPStaplerOptions 6parallel
+*UIConstraints: *HPOption_MBM_Mixed Standard *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *HPOption_MBM_Mixed Standard
+*UIConstraints: *HPStaplerOptions 1parallel *HPOption_MBM_Mixed Standard
+*UIConstraints: *HPStaplerOptions 2parallel *HPOption_MBM_Mixed Standard
+*UIConstraints: *HPStaplerOptions 3parallel *HPOption_MBM_Mixed Standard
+*UIConstraints: *HPStaplerOptions 6parallel *HPOption_MBM_Mixed Standard
+*UIConstraints: *HPStaplerOptions CustomStaple *HPOption_MBM_Mixed Standard
+
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *HPStaplerOptions 1diagonal
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *HPStaplerOptions 1parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *HPStaplerOptions 2parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *HPStaplerOptions 3parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *HPStaplerOptions 6parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8MB *HPStaplerOptions CustomStaple
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *HPStaplerOptions 1diagonal
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *HPStaplerOptions 1parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *HPStaplerOptions 2parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *HPStaplerOptions 3parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *HPStaplerOptions 6parallel
+*UIConstraints: *HPOption_MBM_Mixed MBM8ST *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *HPStaplerOptions 1parallel *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *HPStaplerOptions 2parallel *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *HPStaplerOptions 3parallel *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *HPStaplerOptions 6parallel *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *HPStaplerOptions CustomStaple *HPOption_MBM_Mixed MBM8MB
+*UIConstraints: *HPStaplerOptions 1diagonal *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *HPStaplerOptions 1parallel *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *HPStaplerOptions 2parallel *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *HPStaplerOptions 3parallel *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *HPStaplerOptions 6parallel *HPOption_MBM_Mixed MBM8ST
+*UIConstraints: *HPStaplerOptions CustomStaple *HPOption_MBM_Mixed MBM8ST
+
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *HPStaplerOptions 1diagonal
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *HPStaplerOptions 1parallel
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *HPStaplerOptions 2parallel
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *HPStaplerOptions 3parallel
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *HPStaplerOptions 6parallel
+*UIConstraints: *HPOption_MBM_Mixed MBMStacker *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *HPStaplerOptions 1parallel *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *HPStaplerOptions 2parallel *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *HPStaplerOptions 3parallel *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *HPStaplerOptions 6parallel *HPOption_MBM_Mixed MBMStacker
+*UIConstraints: *HPStaplerOptions CustomStaple *HPOption_MBM_Mixed MBMStacker
+
+*%Constrain stapling to the stapling bin
+*%------------------------------------------------------------------
+*UIConstraints: *OutputBin PrinterDefault *HPStaplerOptions 1diagonal
+*UIConstraints: *OutputBin PrinterDefault *HPStaplerOptions 1parallel
+*UIConstraints: *OutputBin PrinterDefault *HPStaplerOptions 2parallel
+*UIConstraints: *OutputBin PrinterDefault *HPStaplerOptions 3parallel
+*UIConstraints: *OutputBin PrinterDefault *HPStaplerOptions 6parallel
+*UIConstraints: *OutputBin PrinterDefault *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *OutputBin PrinterDefault
+*UIConstraints: *HPStaplerOptions 1parallel *OutputBin PrinterDefault
+*UIConstraints: *HPStaplerOptions 2parallel *OutputBin PrinterDefault
+*UIConstraints: *HPStaplerOptions 3parallel *OutputBin PrinterDefault
+*UIConstraints: *HPStaplerOptions 6parallel *OutputBin PrinterDefault
+*UIConstraints: *HPStaplerOptions CustomStaple *OutputBin PrinterDefault
+
+*UIConstraints: *OutputBin Upper *HPStaplerOptions 1diagonal
+*UIConstraints: *OutputBin Upper *HPStaplerOptions 1parallel
+*UIConstraints: *OutputBin Upper *HPStaplerOptions 2parallel
+*UIConstraints: *OutputBin Upper *HPStaplerOptions 3parallel
+*UIConstraints: *OutputBin Upper *HPStaplerOptions 6parallel
+*UIConstraints: *OutputBin Upper *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *OutputBin Upper
+*UIConstraints: *HPStaplerOptions 1parallel *OutputBin Upper
+*UIConstraints: *HPStaplerOptions 2parallel *OutputBin Upper
+*UIConstraints: *HPStaplerOptions 3parallel *OutputBin Upper
+*UIConstraints: *HPStaplerOptions 6parallel *OutputBin Upper
+*UIConstraints: *HPStaplerOptions CustomStaple *OutputBin Upper
+
+*UIConstraints: *OutputBin Left *HPStaplerOptions 1diagonal
+*UIConstraints: *OutputBin Left *HPStaplerOptions 1parallel
+*UIConstraints: *OutputBin Left *HPStaplerOptions 2parallel
+*UIConstraints: *OutputBin Left *HPStaplerOptions 3parallel
+*UIConstraints: *OutputBin Left *HPStaplerOptions 6parallel
+*UIConstraints: *OutputBin Left *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *OutputBin Left
+*UIConstraints: *HPStaplerOptions 1parallel *OutputBin Left
+*UIConstraints: *HPStaplerOptions 2parallel *OutputBin Left
+*UIConstraints: *HPStaplerOptions 3parallel *OutputBin Left
+*UIConstraints: *HPStaplerOptions 6parallel *OutputBin Left
+*UIConstraints: *HPStaplerOptions CustomStaple *OutputBin Left
+
+*UIConstraints: *OutputBin Stacker *HPStaplerOptions 1diagonal
+*UIConstraints: *OutputBin Stacker *HPStaplerOptions 1parallel
+*UIConstraints: *OutputBin Stacker *HPStaplerOptions 2parallel
+*UIConstraints: *OutputBin Stacker *HPStaplerOptions 3parallel
+*UIConstraints: *OutputBin Stacker *HPStaplerOptions 6parallel
+*UIConstraints: *OutputBin Stacker *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *OutputBin Stacker
+*UIConstraints: *HPStaplerOptions 1parallel *OutputBin Stacker
+*UIConstraints: *HPStaplerOptions 2parallel *OutputBin Stacker
+*UIConstraints: *HPStaplerOptions 3parallel *OutputBin Stacker
+*UIConstraints: *HPStaplerOptions 6parallel *OutputBin Stacker
+*UIConstraints: *HPStaplerOptions CustomStaple *OutputBin Stacker
+
+*UIConstraints: *OutputBin StackerSeparator *HPStaplerOptions 1diagonal
+*UIConstraints: *OutputBin StackerSeparator *HPStaplerOptions 1parallel
+*UIConstraints: *OutputBin StackerSeparator *HPStaplerOptions 2parallel
+*UIConstraints: *OutputBin StackerSeparator *HPStaplerOptions 3parallel
+*UIConstraints: *OutputBin StackerSeparator *HPStaplerOptions 6parallel
+*UIConstraints: *OutputBin StackerSeparator *HPStaplerOptions CustomStaple
+
+*UIConstraints: *HPStaplerOptions 1diagonal *OutputBin StackerSeparator
+*UIConstraints: *HPStaplerOptions 1parallel *OutputBin StackerSeparator
+*UIConstraints: *HPStaplerOptions 2parallel *OutputBin StackerSeparator
+*UIConstraints: *HPStaplerOptions 3parallel *OutputBin StackerSeparator
+*UIConstraints: *HPStaplerOptions 6parallel *OutputBin StackerSeparator
+*UIConstraints: *HPStaplerOptions CustomStaple *OutputBin StackerSeparator
+
+*% Do not staple uncollated documents
+*%------------------------------------------------------------------
+
+
+*% Mopy not available without hard disk
+*%------------------------------------------------------------------
+*UIConstraints: *Collate True *HPOption_Disk RAMDisk
+*UIConstraints: *HPOption_Disk RAMDisk *Collate True
+*UIConstraints: *Collate True *HPOption_Disk None
+*UIConstraints: *HPOption_Disk None *Collate True
+
+*%==========================================
+*% Duplexing & Media Type constraints
+*%==========================================
+
+*UIConstraints: *MediaType Transparent *Duplex DuplexTumble
+*UIConstraints: *MediaType Transparent *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *MediaType Transparent
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Transparent
+
+*UIConstraints: *MediaType HeavyMedia *Duplex DuplexTumble
+*UIConstraints: *MediaType HeavyMedia *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble  *MediaType HeavyMedia
+*UIConstraints: *Duplex DuplexNoTumble *MediaType HeavyMedia
+
+*UIConstraints: *MediaType Labels *Duplex DuplexTumble
+*UIConstraints: *MediaType Labels *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble  *MediaType Labels
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Labels
+
+*UIConstraints: *MediaType Cardstock *Duplex DuplexTumble
+*UIConstraints: *MediaType Cardstock *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble  *MediaType Cardstock
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Cardstock
+
+*UIConstraints: *MediaType Envelope *Duplex DuplexTumble
+*UIConstraints: *MediaType Envelope *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble  *MediaType Envelope
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Envelope
+
+
+*%==========================================
+*% Duplexing & PageSize constraints
+*%==========================================
+
+*% Constrain duplexing A3 Oversize
+*%------------------------------------
+*UIConstraints: *PageSize w869h1304 *Duplex DuplexTumble
+*UIConstraints: *PageSize w869h1304 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize w869h1304
+*UIConstraints: *Duplex DuplexNoTumble *PageSize w869h1304
+
+*% Constrain duplexing Executive JIS
+*%------------------------------------
+*UIConstraints: *PageSize w612h935 *Duplex DuplexTumble
+*UIConstraints: *PageSize w612h935 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize w612h935
+*UIConstraints: *Duplex DuplexNoTumble *PageSize w612h935
+
+*% Constrain duplexing 16K
+*%------------------------------------
+*UIConstraints: *PageSize w558h774 *Duplex DuplexTumble
+*UIConstraints: *PageSize w558h774 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize w558h774
+*UIConstraints: *Duplex DuplexNoTumble *PageSize w558h774
+
+*% Constrain duplexing 8K
+*%------------------------------------
+*UIConstraints: *PageSize w774h1116 *Duplex DuplexTumble
+*UIConstraints: *PageSize w774h1116 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize w774h1116
+*UIConstraints: *Duplex DuplexNoTumble *PageSize w774h1116
+
+*% Constrain duplexing Double Postcard
+*%------------------------------------
+*UIConstraints: *PageSize DoublePostcardRotated *Duplex DuplexTumble
+*UIConstraints: *PageSize DoublePostcardRotated *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize DoublePostcardRotated
+*UIConstraints: *Duplex DuplexNoTumble *PageSize DoublePostcardRotated
+
+*% Constrain duplexing Env10
+*%------------------------------------
+*UIConstraints: *PageSize Env10 *Duplex DuplexTumble
+*UIConstraints: *PageSize Env10 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize Env10
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Env10
+
+*% Constrain duplexing EnvDL
+*%------------------------------------
+*UIConstraints: *PageSize EnvDL *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvDL *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvDL
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvDL
+
+*% Constrain duplexing EnvC5
+*%------------------------------------
+*UIConstraints: *PageSize EnvC5 *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvC5 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvC5
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvC5
+
+*% Constrain duplexing EnvB5
+*%------------------------------------
+*UIConstraints: *PageSize EnvB5 *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvB5 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvB5
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvB5
+
+*% Constrain duplexing EnvMonarch
+*%------------------------------------
+*UIConstraints: *PageSize EnvMonarch *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvMonarch *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvMonarch
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvMonarch
+
+
+*%==========================================
+*% Duplexing & PageRegion constraints
+*%==========================================
+
+*% Constrain duplexing A3 Oversize
+*%------------------------------------
+*UIConstraints: *PageRegion w869h1304 *Duplex DuplexTumble
+*UIConstraints: *PageRegion w869h1304 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion w869h1304
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion w869h1304
+
+*% Constrain duplexing Executive JIS
+*%------------------------------------
+*UIConstraints: *PageRegion w612h935 *Duplex DuplexTumble
+*UIConstraints: *PageRegion w612h935 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion w612h935
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion w612h935
+
+*% Constrain duplexing 16K
+*%------------------------------------
+*UIConstraints: *PageRegion w558h774 *Duplex DuplexTumble
+*UIConstraints: *PageRegion w558h774 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion w558h774
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion w558h774
+
+*% Constrain duplexing 8K
+*%------------------------------------
+*UIConstraints: *PageRegion w774h1116 *Duplex DuplexTumble
+*UIConstraints: *PageRegion w774h1116 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion w774h1116
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion w774h1116
+
+*% Constrain duplexing Double Postcard
+*%------------------------------------
+*UIConstraints: *PageRegion DoublePostcardRotated *Duplex DuplexTumble
+*UIConstraints: *PageRegion DoublePostcardRotated *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion DoublePostcardRotated
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion DoublePostcardRotated
+
+*% Constrain duplexing Env10
+*%------------------------------------
+*UIConstraints: *PageRegion Env10 *Duplex DuplexTumble
+*UIConstraints: *PageRegion Env10 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion Env10
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion Env10
+
+*% Constrain duplexing EnvDL
+*%------------------------------------
+*UIConstraints: *PageRegion EnvDL *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvDL *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvDL
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvDL
+
+*% Constrain duplexing EnvC5
+*%------------------------------------
+*UIConstraints: *PageRegion EnvC5 *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvC5 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvC5
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvC5
+
+*% Constrain duplexing EnvB5
+*%------------------------------------
+*UIConstraints: *PageRegion EnvB5 *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvB5 *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvB5
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvB5
+
+*% Constrain duplexing EnvMonarch
+*%------------------------------------
+*UIConstraints: *PageRegion EnvMonarch *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvMonarch *Duplex DuplexNoTumble
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvMonarch
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvMonarch
+
+
+*%==========================================
+*%  CustomPageSize/InputSlot
+*%==========================================
+*NonUIConstraints: *CustomPageSize True *InputSlot Tray2
+*NonUIConstraints: *CustomPageSize True *InputSlot Tray3
+*NonUIConstraints: *CustomPageSize True *InputSlot Tray4
+*NonUIConstraints: *InputSlot Tray2 *CustomPageSize True
+*NonUIConstraints: *InputSlot Tray3 *CustomPageSize True
+*NonUIConstraints: *InputSlot Tray4 *CustomPageSize True
+
+*%==========================================
+*%  CustomPageSize/Output Bins
+*%==========================================
+*NonUIConstraints: *CustomPageSize True *OutputBin Stacker
+*NonUIConstraints: *CustomPageSize True *OutputBin StackerSeparator
+*NonUIConstraints: *CustomPageSize True *OutputBin UStapler
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin1
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin2
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin3
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin4
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin5
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin6
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin7
+*NonUIConstraints: *CustomPageSize True *OutputBin OutputBin8
+*NonUIConstraints: *OutputBin Stacker *CustomPageSize True
+*NonUIConstraints: *OutputBin StackerSeparator *CustomPageSize True
+*NonUIConstraints: *OutputBin UStapler *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin1 *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin2 *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin3 *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin4 *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin5 *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin6 *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin7 *CustomPageSize True
+*NonUIConstraints: *OutputBin OutputBin8 *CustomPageSize True
+
+*%==========================================
+*%  CustomPageSize/Duplexing
+*%==========================================
+*NonUIConstraints: *CustomPageSize True *Duplex DuplexTumble
+*NonUIConstraints: *CustomPageSize True *Duplex DuplexNoTumble
+*NonUIConstraints: *Duplex DuplexTumble *CustomPageSize True
+*NonUIConstraints: *Duplex DuplexNoTumble *CustomPageSize True
+
+*% General Information and Defaults ===============
+*FreeVM: "2900000"
+*FCacheSize None: 1048576
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: CMYK
+*TTRasterizer: Type42
+*RenderingIntent: Colorimetric
+*ContoneOnly: True
+*ScreenFreq: "100"
+*ScreenAngle: "50"
+*FileSystem: True
+*?FileSystem: "
+    save
+      statusdict /diskstatus known{(True)} {(False)} ifelse = flush
+    restore
+    "
+*End
+*Throughput: "10"
+*Password: "0"
+*ExitServer: "
+   count 0 eq
+   { false } { true exch startjob } ifelse
+   not { (WARNING: Cannot modify initial VM.) =
+            (Missing or invalid password.) =
+            (Please contact the author of this software.) = flush quit
+          } if
+"
+*End
+
+*Reset: "
+   count 0 eq
+   { false } { true exch startjob } ifelse
+   not { (WARNING: Cannot reset printer.) =
+            (Missing or invalid password.) =
+            (Please contact the author of this software.) = flush quit
+          } if
+   systemdict /quit get exec
+   (WARNING: Printer Reset Failed.) = flush
+"
+*End
+
+*DefaultResolution: 600dpi
+*?Resolution: "
+    save
+      initgraphics
+      0 0 moveto currentpoint matrix defaultmatrix transform
+      0 72 lineto currentpoint matrix defaultmatrix transform
+      3 -1 roll sub dup mul
+      3 1 roll exch sub dup mul
+      add sqrt round cvi
+      (          ) cvs print (dpi) = flush
+    restore
+    "
+*End
+
+*AccurateScreensSupport: True
+
+*VMOption 32-63MB/32 - 63 MB : "2900000"
+*de.VMOption 32-63MB/32 - 63 MB : ""
+*es.VMOption 32-63MB/32 - 63 MB : ""
+*fr.VMOption 32-63MB/32 - 63 MB : ""
+*it.VMOption 32-63MB/32 - 63 MB : ""
+*ja.VMOption 32-63MB/32 - 63 MB : ""
+*ko.VMOption 32-63MB/32 - 63 MB : ""
+*pt.VMOption 32-63MB/32 - 63 MB : ""
+*zh_CN.VMOption 32-63MB/32 - 63 MB : ""
+*zh_TW.VMOption 32-63MB/32 - 63 MB : ""
+
+*VMOption 64-95MB/64 - 95 MB : "3800000"
+*de.VMOption 64-95MB/64 - 95 MB : ""
+*es.VMOption 64-95MB/64 - 95 MB : ""
+*fr.VMOption 64-95MB/64 - 95 MB : ""
+*it.VMOption 64-95MB/64 - 95 MB : ""
+*ja.VMOption 64-95MB/64 - 95 MB : ""
+*ko.VMOption 64-95MB/64 - 95 MB : ""
+*pt.VMOption 64-95MB/64 - 95 MB : ""
+*zh_CN.VMOption 64-95MB/64 - 95 MB : ""
+*zh_TW.VMOption 64-95MB/64 - 95 MB : ""
+
+*VMOption 96-127MB/96 - 127 MB : "5900000"
+*de.VMOption 96-127MB/96 - 127 MB : ""
+*es.VMOption 96-127MB/96 - 127 MB : ""
+*fr.VMOption 96-127MB/96 - 127 MB : ""
+*it.VMOption 96-127MB/96 - 127 MB : ""
+*ja.VMOption 96-127MB/96 - 127 MB : ""
+*ko.VMOption 96-127MB/96 - 127 MB : ""
+*pt.VMOption 96-127MB/96 - 127 MB : ""
+*zh_CN.VMOption 96-127MB/96 - 127 MB : ""
+*zh_TW.VMOption 96-127MB/96 - 127 MB : ""
+
+*VMOption 128-191MB/128 - 191 MB: "8000000"
+*de.VMOption 128-191MB/128 - 191 MB: ""
+*es.VMOption 128-191MB/128 - 191 MB: ""
+*fr.VMOption 128-191MB/128 - 191 MB: ""
+*it.VMOption 128-191MB/128 - 191 MB: ""
+*ja.VMOption 128-191MB/128 - 191 MB: ""
+*ko.VMOption 128-191MB/128 - 191 MB: ""
+*pt.VMOption 128-191MB/128 - 191 MB: ""
+*zh_CN.VMOption 128-191MB/128 - 191 MB: ""
+*zh_TW.VMOption 128-191MB/128 - 191 MB: ""
+
+*VMOption 192-255MB/192 - 255 MB : "12200000"
+*de.VMOption 192-255MB/192 - 255 MB : ""
+*es.VMOption 192-255MB/192 - 255 MB : ""
+*fr.VMOption 192-255MB/192 - 255 MB : ""
+*it.VMOption 192-255MB/192 - 255 MB : ""
+*ja.VMOption 192-255MB/192 - 255 MB : ""
+*ko.VMOption 192-255MB/192 - 255 MB : ""
+*pt.VMOption 192-255MB/192 - 255 MB : ""
+*zh_CN.VMOption 192-255MB/192 - 255 MB : ""
+*zh_TW.VMOption 192-255MB/192 - 255 MB : ""
+
+*VMOption 256-383MB/256 - 383 MB : "16400000"
+*de.VMOption 256-383MB/256 - 383 MB : ""
+*es.VMOption 256-383MB/256 - 383 MB : ""
+*fr.VMOption 256-383MB/256 - 383 MB : ""
+*it.VMOption 256-383MB/256 - 383 MB : ""
+*ja.VMOption 256-383MB/256 - 383 MB : ""
+*ko.VMOption 256-383MB/256 - 383 MB : ""
+*pt.VMOption 256-383MB/256 - 383 MB : ""
+*zh_CN.VMOption 256-383MB/256 - 383 MB : ""
+*zh_TW.VMOption 256-383MB/256 - 383 MB : ""
+
+*VMOption 384-512MB/384 - 512 MB : "24800000"
+*de.VMOption 384-512MB/384 - 512 MB : ""
+*es.VMOption 384-512MB/384 - 512 MB : ""
+*fr.VMOption 384-512MB/384 - 512 MB : ""
+*it.VMOption 384-512MB/384 - 512 MB : ""
+*ja.VMOption 384-512MB/384 - 512 MB : ""
+*ko.VMOption 384-512MB/384 - 512 MB : ""
+*pt.VMOption 384-512MB/384 - 512 MB : ""
+*zh_CN.VMOption 384-512MB/384 - 512 MB : ""
+*zh_TW.VMOption 384-512MB/384 - 512 MB : ""
+*% =================================
+*% Print Color as Gray
+*% Chose NOT to use standard *ColorModel keyword because color on or off is simpler
+*% =================================
+*OpenUI *ColorModel/Print Color as Gray:  PickOne
+*OrderDependency: 20 AnySetup *ColorModel
+*DefaultColorModel: CMYK
+*de.Translation ColorModel/Farben als Grau drucken: ""
+*es.Translation ColorModel/Imprimir colores como grises: ""
+*fr.Translation ColorModel/Imprimer couleur en gris: ""
+*it.Translation ColorModel/Stampa colore in grigio: ""
+*ja.Translation ColorModel/グレー印刷: ""
+*ko.Translation ColorModel/컬러를 흑백음영으로 인쇄: ""
+*pt.Translation ColorModel/Imprimir cor como cinza: ""
+*zh_CN.Translation ColorModel/打印颜色为灰色: ""
+*zh_TW.Translation ColorModel/用灰色列印彩色: ""
+
+*ColorModel Gray/On: "<</ProcessColorModel /DeviceGray>> setpagedevice"
+*de.ColorModel Gray/Ein: ""
+*es.ColorModel Gray/Sí: ""
+*fr.ColorModel Gray/Oui: ""
+*it.ColorModel Gray/Attiva: ""
+*ja.ColorModel Gray/オン: ""
+*ko.ColorModel Gray/켜짐: ""
+*pt.ColorModel Gray/Ativo: ""
+*zh_CN.ColorModel Gray/开启: ""
+*zh_TW.ColorModel Gray/開: ""
+
+*ColorModel CMYK/Off: "<</ProcessColorModel /DeviceCMYK>> setpagedevice"
+*de.ColorModel CMYK/Aus: ""
+*es.ColorModel CMYK/No: ""
+*fr.ColorModel CMYK/Non: ""
+*it.ColorModel CMYK/Disattiva: ""
+*ja.ColorModel CMYK/オフ: ""
+*ko.ColorModel CMYK/꺼짐: ""
+*pt.ColorModel CMYK/Inativo: ""
+*zh_CN.ColorModel CMYK/关焙: ""
+*zh_TW.ColorModel CMYK/關: ""
+
+*?ColorModel: "
+  save
+    currentpagedevice /ProcessColorModel get
+	/DeviceGray eq {(Gray)}{(CMYK)}ifelse = flush
+  restore
+"
+*End
+*CloseUI: *ColorModel
+
+*% ===================================
+*% Duplexer definitions
+*% ===================================
+
+*OpenUI *Duplex/2-Sided Printing: PickOne
+*OrderDependency: 20 AnySetup *Duplex
+*DefaultDuplex: None
+*de.Translation Duplex/Zweiseitiger Druck: ""
+*es.Translation Duplex/Impresión por los dos lados: ""
+*fr.Translation Duplex/Impression recto-verso: ""
+*it.Translation Duplex/Stampa su due facciate: ""
+*ja.Translation Duplex/裏面を手差し印刷: ""
+*ko.Translation Duplex/양면 인쇄: ""
+*pt.Translation Duplex/Impressão nos dois lados: ""
+*zh_CN.Translation Duplex/双面打印: ""
+*zh_TW.Translation Duplex/雙面列印: ""
+
+*Duplex DuplexTumble/Short-Edge Binding: "
+	 <</Duplex true /Tumble true >> setpagedevice "
+*End
+*de.Duplex DuplexTumble/Bindung an kurzer Kante: ""
+*es.Duplex DuplexTumble/Encuadernación por el borde corto: ""
+*fr.Duplex DuplexTumble/Reliure courte: ""
+*it.Duplex DuplexTumble/Rilegatura sul lato corto: ""
+*ja.Duplex DuplexTumble/綴じ込み_短い辺: ""
+*ko.Duplex DuplexTumble/짧은 모서리 바인딩: ""
+*pt.Duplex DuplexTumble/Encadernação horizontal: ""
+*zh_CN.Duplex DuplexTumble/短边装订: ""
+*zh_TW.Duplex DuplexTumble/裝釘短邊: ""
+
+*Duplex DuplexNoTumble/Long-Edge Binding: "
+	<</Duplex true /Tumble false >> setpagedevice "
+*End
+*de.Duplex DuplexNoTumble/Bindung an langer Kante: ""
+*es.Duplex DuplexNoTumble/Encuadernación por el borde largo: ""
+*fr.Duplex DuplexNoTumble/Reliure longue: ""
+*it.Duplex DuplexNoTumble/Rilegatura sul lato lungo: ""
+*ja.Duplex DuplexNoTumble/綴じ込み_長い辺: ""
+*ko.Duplex DuplexNoTumble/긴 모서리 바인딩: ""
+*pt.Duplex DuplexNoTumble/Encadernação vertical: ""
+*zh_CN.Duplex DuplexNoTumble/长边装订: ""
+*zh_TW.Duplex DuplexNoTumble/裝釘長邊: ""
+
+*Duplex None/Off: "
+	 <</Duplex false /Tumble false >> setpagedevice "
+*End
+*de.Duplex None/Aus: ""
+*es.Duplex None/No: ""
+*fr.Duplex None/Non: ""
+*it.Duplex None/Disattiva: ""
+*ja.Duplex None/オフ: ""
+*ko.Duplex None/끔: ""
+*pt.Duplex None/Inativo: ""
+*zh_CN.Duplex None/关: ""
+*zh_TW.Duplex None/關: ""
+
+*CloseUI: *Duplex
+
+*% ===================================
+*% Extra Drum Cleaning Pass
+*% ===================================
+*OpenUI *HPClean/High Print Quality: Boolean
+*OrderDependency: 20 AnySetup *HPClean
+*DefaultHPClean: False
+*de.Translation HPClean/Hohe Druckqualität: ""
+*es.Translation HPClean/Calidad de impresión alta: ""
+*fr.Translation HPClean/Qualité d'impression élevée: ""
+*it.Translation HPClean/Qualità di stampa alta: ""
+*ja.Translation HPClean/高印字品質: ""
+*ko.Translation HPClean/고품질 인쇄: ""
+*pt.Translation HPClean/Impressão de alta qualidade: ""
+*zh_CN.Translation HPClean/打印高质量: ""
+*zh_TW.Translation HPClean/高列印品質: ""
+
+*HPClean True/Yes: "<< /Cleaning true >> setpagedevice"
+*de.HPClean True/Ein: ""
+*es.HPClean True/Sí: ""
+*fr.HPClean True/Oui: ""
+*it.HPClean True/Attiva: ""
+*ja.HPClean True/オン: ""
+*ko.HPClean True/예: ""
+*pt.HPClean True/Ativo: ""
+*zh_CN.HPClean True/是: ""
+*zh_TW.HPClean True/是: ""
+
+*HPClean False/No: "<< /Cleaning false >> setpagedevice"
+*de.HPClean False/Aus: ""
+*es.HPClean False/No: ""
+*fr.HPClean False/Non: ""
+*it.HPClean False/Disattiva: ""
+*ja.HPClean False/オフ: ""
+*ko.HPClean False/아니오: ""
+*pt.HPClean False/Inativo: ""
+*zh_CN.HPClean False/否: ""
+*zh_TW.HPClean False/否: ""
+
+*CloseUI: *HPClean
+
+*% ================================================
+*% Spot Colors
+*% ================================================
+*OpenUI *HPPantone/PANTONE(R): Boolean
+*OrderDependency: 35 AnySetup *HPPantone
+*DefaultHPPantone: True
+*en.Translation HPPantone/PANTONE®: ""
+*de.Translation HPPantone/PANTONE®: ""
+*es.Translation HPPantone/PANTONE®: ""
+*fr.Translation HPPantone/PANTONE®: ""
+*it.Translation HPPantone/PANTONE®: ""
+*ja.Translation HPPantone/PANTONE®: ""
+*ko.Translation HPPantone/PANTONE®: ""
+*pt.Translation HPPantone/PANTONE®: ""
+*zh_CN.Translation HPPantone/PANTONE®: ""
+*zh_TW.Translation HPPantone/PANTONE®: ""
+
+*HPPantone True/Yes: "<< /SpotColorMatching true >> setpagedevice"
+*de.HPPantone True/Ein: ""
+*es.HPPantone True/Sí: ""
+*fr.HPPantone True/Oui: ""
+*it.HPPantone True/Attiva: ""
+*ja.HPPantone True/オン: ""
+*ko.HPPantone True/예: ""
+*pt.HPPantone True/Ativo: ""
+*zh_CN.HPPantone True/是: ""
+*zh_TW.HPPantone True/是: ""
+
+*HPPantone False/No: "<< /SpotColorMatching false >> setpagedevice"
+*de.HPPantone False/Aus: ""
+*es.HPPantone False/No: ""
+*fr.HPPantone False/Non: ""
+*it.HPPantone False/Disattiva: ""
+*ja.HPPantone False/オフ: ""
+*ko.HPPantone False/아니오: ""
+*pt.HPPantone False/Inativo: ""
+*zh_CN.HPPantone False/否: ""
+*zh_TW.HPPantone False/否: ""
+
+*?HPPantone: "(True) == flush"
+*CloseUI: *HPPantone
+
+*% ===================================
+*% Press Emulations
+*% ===================================
+*OpenUI *HPCMYKInks/CMYK Inks: PickOne
+*OrderDependency: 20 AnySetup *HPCMYKInks
+*DefaultHPCMYKInks: SWOP
+*de.Translation HPCMYKInks/CMYK-Tinten: ""
+*es.Translation HPCMYKInks/Tintas CMYK: ""
+*fr.Translation HPCMYKInks/Encres CMYK: ""
+*it.Translation HPCMYKInks/Inchiostri CMYK: ""
+*ja.Translation HPCMYKInks/CMYK インク: ""
+*ko.Translation HPCMYKInks/CMYK 잉크: ""
+*pt.Translation HPCMYKInks/Tintas CMYK: ""
+*zh_CN.Translation HPCMYKInks/CMYK 油墨: ""
+*zh_TW.Translation HPCMYKInks/CMYK 墨水: ""
+
+*HPCMYKInks SWOP/SWOP-Coated: "<< /CMYKInkSet 1 >> setpagedevice "
+*de.HPCMYKInks SWOP/SWOP-beschichtet: ""
+*es.HPCMYKInks SWOP/Estucado SWOP: ""
+*fr.HPCMYKInks SWOP/Palette SWOP: ""
+*it.HPCMYKInks SWOP/SWOP-Coated: ""
+*ja.HPCMYKInks SWOP/SWOP: ""
+*ko.HPCMYKInks SWOP/SWOP 코팅 처리: ""
+*pt.HPCMYKInks SWOP/SWOP-Coated: ""
+*zh_CN.HPCMYKInks SWOP/SWOP 涂层: ""
+*zh_TW.HPCMYKInks SWOP/SWOP 套膜: ""
+
+*HPCMYKInks Euroscale/Euroscale: "<< /CMYKInkSet 2 >> setpagedevice "
+*de.HPCMYKInks Euroscale/EuroScale: ""
+*es.HPCMYKInks Euroscale/Euroscale: ""
+*fr.HPCMYKInks Euroscale/Euroscale: ""
+*it.HPCMYKInks Euroscale/Euroscale: ""
+*ja.HPCMYKInks Euroscale/Euroscale: ""
+*ko.HPCMYKInks Euroscale/EuroScale: ""
+*pt.HPCMYKInks Euroscale/Euroscale: ""
+*zh_CN.HPCMYKInks Euroscale/Euroscale: ""
+*zh_TW.HPCMYKInks Euroscale/Euroscale: ""
+
+*HPCMYKInks DIC/DIC: "<< /CMYKInkSet 4 >> setpagedevice "
+*de.HPCMYKInks DIC/DIC: ""
+*es.HPCMYKInks DIC/DIC: ""
+*fr.HPCMYKInks DIC/DIC: ""
+*it.HPCMYKInks DIC/DIC: ""
+*ja.HPCMYKInks DIC/DIC: ""
+*ko.HPCMYKInks DIC/DIC: ""
+*pt.HPCMYKInks DIC/DIC: ""
+*zh_CN.HPCMYKInks DIC/DIC: ""
+*zh_TW.HPCMYKInks DIC/DIC: ""
+
+*HPCMYKInks None/None: "<< /CMYKInkSet 0 >> setpagedevice "
+*de.HPCMYKInks None/Keine: ""
+*es.HPCMYKInks None/Ninguna: ""
+*fr.HPCMYKInks None/Aucun: ""
+*it.HPCMYKInks None/Nessuna: ""
+*ja.HPCMYKInks None/なし: ""
+*ko.HPCMYKInks None/없음: ""
+*pt.HPCMYKInks None/Nenhuma: ""
+*zh_CN.HPCMYKInks None/无: ""
+*zh_TW.HPCMYKInks None/無: ""
+
+*CloseUI: *HPCMYKInks
+
+*% ================================================
+*% ================================================
+
+
+
+
+
+*% ===================================
+*% ColorSmart Stuff
+*% ===================================
+
+*OpenUI *HPCSText/Manual Text: PickOne
+*OrderDependency: 20 AnySetup *HPCSText
+*DefaultHPCSText: VividDetail
+*de.Translation HPCSText/Text manuell: ""
+*es.Translation HPCSText/Texto manual: ""
+*fr.Translation HPCSText/Texte manuel: ""
+*it.Translation HPCSText/Testo manuale: ""
+*ja.Translation HPCSText/手動テキスト: ""
+*ko.Translation HPCSText/수동 텍스트: ""
+*pt.Translation HPCSText/Texto manual: ""
+*zh_CN.Translation HPCSText/手册文本: ""
+*zh_TW.Translation HPCSText/手動文字: ""
+
+*HPCSText VividDetail/Vivid-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartTextAdjustment
+	Detail ColorSmartTextHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSText VividDetail/Leuchtend/Detail: ""
+*es.HPCSText VividDetail/Intenso-Detalle: ""
+*fr.HPCSText VividDetail/Couleur vive-détaillée: ""
+*it.HPCSText VividDetail/Vivido-Dettagli: ""
+*ja.HPCSText VividDetail/鮮やかさ優先_解像度優先: ""
+*ko.HPCSText VividDetail/선명-자세히: ""
+*pt.HPCSText VividDetail/Víva-Detalhe: ""
+*zh_CN.HPCSText VividDetail/逼真鲜明细节: ""
+*zh_TW.HPCSText VividDetail/鮮明-詳細: ""
+
+*HPCSText VividSmooth/Vivid-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartTextAdjustment
+	Smooth ColorSmartTextHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSText VividSmooth/Leuchtend/glatt: ""
+*es.HPCSText VividSmooth/Intenso-Suave: ""
+*fr.HPCSText VividSmooth/Couleur vive-lisse: ""
+*it.HPCSText VividSmooth/Vivido-Uniforme: ""
+*ja.HPCSText VividSmooth/鮮やかさ優先_階調優先: ""
+*ko.HPCSText VividSmooth/선명-매끈하게: ""
+*pt.HPCSText VividSmooth/Viva-Suavizada: ""
+*zh_CN.HPCSText VividSmooth/逼真鲜明平滑: ""
+*zh_TW.HPCSText VividSmooth/鮮明-平滑: ""
+
+*HPCSText MatchDetail/Calibrated-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartTextAdjustment
+	Detail ColorSmartTextHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSText MatchDetail/Kalibriert/Detail: ""
+*es.HPCSText MatchDetail/Calibrado-Detalle: ""
+*fr.HPCSText MatchDetail/Etalonnée-détaillée: ""
+*it.HPCSText MatchDetail/Calibrato-Dettagli: ""
+*ja.HPCSText MatchDetail/画面の色と一致_解像度優先: ""
+*ko.HPCSText MatchDetail/조정-자세히: ""
+*pt.HPCSText MatchDetail/Calibrado-Detalhe: ""
+*zh_CN.HPCSText MatchDetail/定口径细节: ""
+*zh_TW.HPCSText MatchDetail/校正-詳細: ""
+
+*HPCSText MatchSmooth/Calibrated-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartTextAdjustment
+	Smooth ColorSmartTextHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSText MatchSmooth/Kalibriert/glatt: ""
+*es.HPCSText MatchSmooth/Calibrado-Suave: ""
+*fr.HPCSText MatchSmooth/Etalonnée-lisse: ""
+*it.HPCSText MatchSmooth/Calibrato-Uniforme: ""
+*ja.HPCSText MatchSmooth/画面の色と一致_階調優先: ""
+*ko.HPCSText MatchSmooth/조정-매끈하게: ""
+*pt.HPCSText MatchSmooth/Calibrado-Suavizada: ""
+*zh_CN.HPCSText MatchSmooth/定口径平滑: ""
+*zh_TW.HPCSText MatchSmooth/校正-平滑: ""
+
+*CloseUI: *HPCSText
+
+*OpenUI *HPCSGraphics/Manual Graphics: PickOne
+*OrderDependency: 20 AnySetup *HPCSGraphics
+*DefaultHPCSGraphics: VividDetail
+*de.Translation HPCSGraphics/Grafik manuell: ""
+*es.Translation HPCSGraphics/Gráficos manuales: ""
+*fr.Translation HPCSGraphics/Graphiques manuels: ""
+*it.Translation HPCSGraphics/Grafica manuale: ""
+*ja.Translation HPCSGraphics/グラフィック: ""
+*ko.Translation HPCSGraphics/수동 그래픽: ""
+*pt.Translation HPCSGraphics/Gráfico manual: ""
+*zh_CN.Translation HPCSGraphics/手册图形: ""
+*zh_TW.Translation HPCSGraphics/手動圖形: ""
+
+*HPCSGraphics VividDetail/Vivid-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartGraphicsAdjustment
+	Detail ColorSmartGraphicsHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSGraphics VividDetail/Leuchtend/Detail: ""
+*es.HPCSGraphics VividDetail/Intenso-Detalle: ""
+*fr.HPCSGraphics VividDetail/Couleur vive-détaillée: ""
+*it.HPCSGraphics VividDetail/Vivido-Dettagli: ""
+*ja.HPCSGraphics VividDetail/鮮やかさ優先_解像度優先: ""
+*ko.HPCSGraphics VividDetail/선명-자세히: ""
+*pt.HPCSGraphics VividDetail/Víva-Detalhe: ""
+*zh_CN.HPCSGraphics VividDetail/逼真鲜明细节: ""
+*zh_TW.HPCSGraphics VividDetail/鮮明-詳細: ""
+
+*HPCSGraphics VividSmooth/Vivid-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartGraphicsAdjustment
+	Smooth ColorSmartGraphicsHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSGraphics VividSmooth/Leuchtend/glatt: ""
+*es.HPCSGraphics VividSmooth/Intenso-Suave: ""
+*fr.HPCSGraphics VividSmooth/Couleur vive-lisse: ""
+*it.HPCSGraphics VividSmooth/Vivido-Uniforme: ""
+*ja.HPCSGraphics VividSmooth/鮮やかさ優先_階調優先: ""
+*ko.HPCSGraphics VividSmooth/선명-매끈하게: ""
+*pt.HPCSGraphics VividSmooth/Viva-Suavizada: ""
+*zh_CN.HPCSGraphics VividSmooth/逼真鲜明平滑: ""
+*zh_TW.HPCSGraphics VividSmooth/鮮明-平滑: ""
+
+*HPCSGraphics MatchDetail/Calibrated-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartGraphicsAdjustment
+	Detail ColorSmartGraphicsHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSGraphics MatchDetail/Kalibriert/Detail: ""
+*es.HPCSGraphics MatchDetail/Calibrado-Detalle: ""
+*fr.HPCSGraphics MatchDetail/Etalonnée-détaillée: ""
+*it.HPCSGraphics MatchDetail/Calibrato-Dettagli: ""
+*ja.HPCSGraphics MatchDetail/画面の色と一致_解像度優先: ""
+*ko.HPCSGraphics MatchDetail/조정-자세히: ""
+*pt.HPCSGraphics MatchDetail/Calibrado-Detalhe: ""
+*zh_CN.HPCSGraphics MatchDetail/定口径细节: ""
+*zh_TW.HPCSGraphics MatchDetail/校正-詳細: ""
+
+*HPCSGraphics MatchSmooth/Calibrated-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartGraphicsAdjustment
+	Smooth ColorSmartGraphicsHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSGraphics MatchSmooth/Kalibriert/glatt: ""
+*es.HPCSGraphics MatchSmooth/Calibrado-Suave: ""
+*fr.HPCSGraphics MatchSmooth/Etalonnée-lisse: ""
+*it.HPCSGraphics MatchSmooth/Calibrato-Uniforme: ""
+*ja.HPCSGraphics MatchSmooth/画面の色と一致_階調優先: ""
+*ko.HPCSGraphics MatchSmooth/조정-매끈하게: ""
+*pt.HPCSGraphics MatchSmooth/Calibrado-Suavizada: ""
+*zh_CN.HPCSGraphics MatchSmooth/定口径平滑: ""
+*zh_TW.HPCSGraphics MatchSmooth/校正-平滑: ""
+
+*CloseUI: *HPCSGraphics
+
+*OpenUI *HPCSImages/Manual Images: PickOne
+*OrderDependency: 20 AnySetup *HPCSImages
+*DefaultHPCSImages: VividSmooth
+*de.Translation HPCSImages/Bild manuell: ""
+*es.Translation HPCSImages/Imagen manual: ""
+*fr.Translation HPCSImages/Image manuelle: ""
+*it.Translation HPCSImages/Immagine manuale: ""
+*ja.Translation HPCSImages/手動イメージ: ""
+*ko.Translation HPCSImages/수동 이미지: ""
+*pt.Translation HPCSImages/Imagem manual: ""
+*zh_CN.Translation HPCSImages/手册图象: ""
+*zh_TW.Translation HPCSImages/手動影像: ""
+
+*HPCSImages VividDetail/Vivid-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartImageAdjustment
+	Detail ColorSmartImageHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSImages VividDetail/Leuchtend/Detail: ""
+*es.HPCSImages VividDetail/Intenso-Detalle: ""
+*fr.HPCSImages VividDetail/Couleur vive-détaillée: ""
+*it.HPCSImages VividDetail/Vivido-Dettagli: ""
+*ja.HPCSImages VividDetail/鮮やかさ優先_解像度優先: ""
+*ko.HPCSImages VividDetail/선명-자세히: ""
+*pt.HPCSImages VividDetail/Víva-Detalhe: ""
+*zh_CN.HPCSImages VividDetail/逼真鲜明细节: ""
+*zh_TW.HPCSImages VividDetail/鮮明-詳細: ""
+
+*HPCSImages VividSmooth/Vivid-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	Vivid ColorSmartImageAdjustment
+	Smooth ColorSmartImageHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSImages VividSmooth/Leuchtend/glatt: ""
+*es.HPCSImages VividSmooth/Intenso-Suave: ""
+*fr.HPCSImages VividSmooth/Couleur vive-lisse: ""
+*it.HPCSImages VividSmooth/Vivido-Uniforme: ""
+*ja.HPCSImages VividSmooth/鮮やかさ優先_階調優先: ""
+*ko.HPCSImages VividSmooth/선명-매끈하게: ""
+*pt.HPCSImages VividSmooth/Viva-Suavizada: ""
+*zh_CN.HPCSImages VividSmooth/逼真鲜明平滑: ""
+*zh_TW.HPCSImages VividSmooth/鮮明-平滑: ""
+
+*HPCSImages MatchDetail/Calibrated-Detail: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartImageAdjustment
+	Detail ColorSmartImageHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSImages MatchDetail/Kalibriert/Detail: ""
+*es.HPCSImages MatchDetail/Calibrado-Detalle: ""
+*fr.HPCSImages MatchDetail/Etalonnée-détaillée: ""
+*it.HPCSImages MatchDetail/Calibrato-Dettagli: ""
+*ja.HPCSImages MatchDetail/画面の色と一致_解像度優先: ""
+*ko.HPCSImages MatchDetail/조정-자세히: ""
+*pt.HPCSImages MatchDetail/Calibrado-Detalhe: ""
+*zh_CN.HPCSImages MatchDetail/定口径细节: ""
+*zh_TW.HPCSImages MatchDetail/校正-詳細: ""
+
+*HPCSImages MatchSmooth/Calibrated-Smooth: "
+globaldict /ColorSmartColorMatching known {
+	true ColorSmartColorMatching
+	MatchScreen ColorSmartImageAdjustment
+	Smooth ColorSmartImageHalftone
+	true ColorSmartColorMatching
+} if
+"
+*End
+*de.HPCSImages MatchSmooth/Kalibriert/glatt: ""
+*es.HPCSImages MatchSmooth/Calibrado-Suave: ""
+*fr.HPCSImages MatchSmooth/Etalonnée-lisse: ""
+*it.HPCSImages MatchSmooth/Calibrato-Uniforme: ""
+*ja.HPCSImages MatchSmooth/画面の色と一致_階調優先: ""
+*ko.HPCSImages MatchSmooth/조정-매끈하게: ""
+*pt.HPCSImages MatchSmooth/Calibrado-Suavizada: ""
+*zh_CN.HPCSImages MatchSmooth/定口径平滑: ""
+*zh_TW.HPCSImages MatchSmooth/校正-平滑: ""
+
+*CloseUI: *HPCSImages
+
+*% ===================================
+*% Mediatype definitions
+*% ===================================
+
+*OpenUI *MediaType/Media Type: PickOne
+*OrderDependency: 20 AnySetup *MediaType
+*DefaultMediaType: Plain
+*de.Translation MediaType/Medientyp: ""
+*es.Translation MediaType/Tipo de sustrato: ""
+*fr.Translation MediaType/Type de support: ""
+*it.Translation MediaType/Tipo di supporto: ""
+*ja.Translation MediaType/用紙の種類: ""
+*ko.Translation MediaType/용지 종류: ""
+*pt.Translation MediaType/Tipo de mídia: ""
+*zh_CN.Translation MediaType/介质类型: ""
+*zh_TW.Translation MediaType/媒體類型: ""
+
+
+*MediaType Plain/Plain: "
+    <</MediaType (Plain)>> setpagedevice"
+*End
+*de.MediaType Plain/Normal: ""
+*es.MediaType Plain/Estándar: ""
+*fr.MediaType Plain/Ordinaire: ""
+*it.MediaType Plain/Normale: ""
+*ja.MediaType Plain/普通用紙: ""
+*ko.MediaType Plain/일반용지: ""
+*pt.MediaType Plain/Comum: ""
+*zh_CN.MediaType Plain/普通纸: ""
+*zh_TW.MediaType Plain/素面紙: ""
+
+*MediaType Preprinted/Preprinted: "
+    <</MediaType (Preprinted)>> setpagedevice"
+*End
+*de.MediaType Preprinted/Vorgedruckt: ""
+*es.MediaType Preprinted/Preimpreso: ""
+*fr.MediaType Preprinted/Pré-imprimé: ""
+*it.MediaType Preprinted/Prestampata: ""
+*ja.MediaType Preprinted/印刷フォーム: ""
+*ko.MediaType Preprinted/미리 인쇄: ""
+*pt.MediaType Preprinted/Pré-impresso: ""
+*zh_CN.MediaType Preprinted/预先打印纸: ""
+*zh_TW.MediaType Preprinted/預印的: ""
+
+*MediaType Letterhead/Letterhead: "
+    <</MediaType (Letterhead)>> setpagedevice"
+*End
+*de.MediaType Letterhead/Briefkopf: ""
+*es.MediaType Letterhead/Membrete: ""
+*fr.MediaType Letterhead/En-tête: ""
+*it.MediaType Letterhead/Intestata: ""
+*ja.MediaType Letterhead/レターヘッド付き: ""
+*ko.MediaType Letterhead/레터헤드: ""
+*pt.MediaType Letterhead/Timbre: ""
+*zh_CN.MediaType Letterhead/信头纸: ""
+*zh_TW.MediaType Letterhead/信頭紙: ""
+
+*%Note: Use of transparency forces OHT Color Table
+*MediaType Transparent/Transparency: "
+    <</MediaType (Transparency) /OHTIntent 1>> setpagedevice"
+*End
+*de.MediaType Transparent/Transparentfolie: ""
+*es.MediaType Transparent/Transparencias: ""
+*fr.MediaType Transparent/Transparent: ""
+*it.MediaType Transparent/Trasparenza: ""
+*ja.MediaType Transparent/ＯＨＰフィルム: ""
+*ko.MediaType Transparent/투명 용지: ""
+*pt.MediaType Transparent/Transparência: ""
+*zh_CN.MediaType Transparent/透明胶片: ""
+*zh_TW.MediaType Transparent/投影片: ""
+
+*MediaType Prepunched/Prepunched: "
+    <</MediaType (Prepunched)>> setpagedevice"
+*End
+*de.MediaType Prepunched/Vorgelocht: ""
+*es.MediaType Prepunched/Perforado: ""
+*fr.MediaType Prepunched/Perforé: ""
+*it.MediaType Prepunched/Perforata: ""
+*ja.MediaType Prepunched/穴あき用紙: ""
+*ko.MediaType Prepunched/천공 용지: ""
+*pt.MediaType Prepunched/Perfurado: ""
+*zh_CN.MediaType Prepunched/预先打孔纸: ""
+*zh_TW.MediaType Prepunched/打孔過的: ""
+
+*MediaType Labels/Labels: "
+    <</MediaType (Labels)>> setpagedevice"
+*End
+*de.MediaType Labels/Etiketten: ""
+*es.MediaType Labels/Etiquetas: ""
+*fr.MediaType Labels/Etiquettes: ""
+*it.MediaType Labels/Etichette: ""
+*ja.MediaType Labels/ラベル: ""
+*ko.MediaType Labels/레이블: ""
+*pt.MediaType Labels/Etiquetas: ""
+*zh_CN.MediaType Labels/标签: ""
+*zh_TW.MediaType Labels/標籤: ""
+
+*MediaType Bond/Bond: "
+    <</MediaType (Bond)>> setpagedevice"
+*End
+*de.MediaType Bond/Schreibmaschinenpapier: ""
+*es.MediaType Bond/Bond: ""
+*fr.MediaType Bond/Document: ""
+*it.MediaType Bond/Carta fine: ""
+*ja.MediaType Bond/ボンド紙: ""
+*ko.MediaType Bond/본드지: ""
+*pt.MediaType Bond/Superbond: ""
+*zh_CN.MediaType Bond/证券纸: ""
+*zh_TW.MediaType Bond/雪銅紙: ""
+
+*MediaType Recycled/Recycled: "
+    <</MediaType (Recycled)>> setpagedevice"
+*End
+*de.MediaType Recycled/Recycling: ""
+*es.MediaType Recycled/Reciclado: ""
+*fr.MediaType Recycled/Recyclé: ""
+*it.MediaType Recycled/Riciclata: ""
+*ja.MediaType Recycled/再生紙: ""
+*ko.MediaType Recycled/재활용지: ""
+*pt.MediaType Recycled/Reciclado: ""
+*zh_CN.MediaType Recycled/再生纸: ""
+*zh_TW.MediaType Recycled/再生紙: ""
+
+*MediaType Color/Color: "
+    <</MediaType (Color)>> setpagedevice"
+*End
+*de.MediaType Color/Farbig: ""
+*es.MediaType Color/Color: ""
+*fr.MediaType Color/Couleur: ""
+*it.MediaType Color/Colorata: ""
+*ja.MediaType Color/カラー用紙: ""
+*ko.MediaType Color/색: ""
+*pt.MediaType Color/Em cores: ""
+*zh_CN.MediaType Color/颜色: ""
+*zh_TW.MediaType Color/顏色: ""
+
+*MediaType Cardstock/Card Stock: "
+    <</MediaType (Card Stock)>> setpagedevice"
+*End
+*de.MediaType Cardstock/Kartenmaterial: ""
+*es.MediaType Cardstock/Cartulina: ""
+*fr.MediaType Cardstock/Cartonné: ""
+*it.MediaType Cardstock/Cartoncino: ""
+*ja.MediaType Cardstock/カード ストック: ""
+*ko.MediaType Cardstock/카드 용지: ""
+*pt.MediaType Cardstock/Cartolina: ""
+*zh_CN.MediaType Cardstock/卡片纸: ""
+*zh_TW.MediaType Cardstock/卡片紙: ""
+
+*MediaType HeavyMedia/Heavy: "
+    <</MediaType (Heavy)>> setpagedevice"
+*End
+*de.MediaType HeavyMedia/Schwer: ""
+*es.MediaType HeavyMedia/Grueso: ""
+*fr.MediaType HeavyMedia/Fort: ""
+*it.MediaType HeavyMedia/Pesante: ""
+*ja.MediaType HeavyMedia/厚い用紙: ""
+*ko.MediaType HeavyMedia/무거운: ""
+*pt.MediaType HeavyMedia/Espesso: ""
+*zh_CN.MediaType HeavyMedia/重: ""
+*zh_TW.MediaType HeavyMedia/重磅: ""
+
+*MediaType Glossy/Glossy: "
+    <</MediaType (Glossy)>> setpagedevice"
+*End
+*de.MediaType Glossy/Glänzend: ""
+*es.MediaType Glossy/Satinado: ""
+*fr.MediaType Glossy/Glacé: ""
+*it.MediaType Glossy/Lucida: ""
+*ja.MediaType Glossy/光沢紙: ""
+*ko.MediaType Glossy/유광: ""
+*pt.MediaType Glossy/Brilhante: ""
+*zh_CN.MediaType Glossy/光面: ""
+*zh_TW.MediaType Glossy/光面: ""
+
+*MediaType Envelope/Envelope: "
+    <</MediaType (Envelope)>> setpagedevice"
+*End
+*de.MediaType Envelope/Umschlag: ""
+*es.MediaType Envelope/Sobre: ""
+*fr.MediaType Envelope/Enveloppe: ""
+*it.MediaType Envelope/Busta: ""
+*ja.MediaType Envelope/封筒: ""
+*ko.MediaType Envelope/봉투: ""
+*pt.MediaType Envelope/Sobre: ""
+*zh_CN.MediaType Envelope/信封: ""
+*zh_TW.MediaType Envelope/信封: ""
+
+*MediaType HeavyType1/28 Lb Type1: "
+    <</MediaType (28 lb Type1)>> setpagedevice"
+*End
+*de.MediaType HeavyType1/105 g/m2 Typ 1: ""
+*es.MediaType HeavyType1/105g/m2 Tipo1: ""
+*fr.MediaType HeavyType1/12,7 k Type1: ""
+*it.MediaType HeavyType1/Type 1 28 lb: ""
+*ja.MediaType HeavyType1/28 Lb Type1: ""
+*ko.MediaType HeavyType1/28 Lb Type1: ""
+*pt.MediaType HeavyType1/Tipo 1 de 28lbs: ""
+*zh_CN.MediaType HeavyType1/28 Lb 类型 1: ""
+*zh_TW.MediaType HeavyType1/28 磅類型 1: ""
+
+*MediaType HeavyType2/28 Lb Type2: "
+    <</MediaType (28 lb Type2)>> setpagedevice"
+*End
+*de.MediaType HeavyType2/105 g/m2 Typ 2: ""
+*es.MediaType HeavyType2/105g/m2 Tipo2: ""
+*fr.MediaType HeavyType2/12,7 k Type2: ""
+*it.MediaType HeavyType2/Type 2 28 lb: ""
+*ja.MediaType HeavyType2/28 Lb Type2: ""
+*ko.MediaType HeavyType2/28 Lb Type2: ""
+*pt.MediaType HeavyType2/Tipo 2 de 28lbs: ""
+*zh_CN.MediaType HeavyType2/28 Lb 类型 2: ""
+*zh_TW.MediaType HeavyType2/28 磅類型 2: ""
+
+*?MediaType: " (unknown) == flush"
+*CloseUI: *MediaType
+*% ================================================
+*% ================================================
+
+*% ================================================
+*% ================================================
+
+
+
+
+*% These values are set of PageSize settings so we need find
+*% the way to refer on to PageSize values 
+
+
+
+*%=============================================
+*% ================================================
+*% Collate (Mopy)
+*% ================================================
+
+*OpenUI *Collate/Collate: Boolean
+*OrderDependency: 35 AnySetup *Collate
+*DefaultCollate: False
+*de.Translation Collate/Sortieren: ""
+*es.Translation Collate/Clasificar: ""
+*fr.Translation Collate/Assembler: ""
+*it.Translation Collate/Ordina in seq.: ""
+*ja.Translation Collate/照合: ""
+*ko.Translation Collate/한 부씩 인쇄: ""
+*pt.Translation Collate/Intercalar: ""
+*zh_CN.Translation Collate/分页: ""
+*zh_TW.Translation Collate/自動分頁: ""
+
+*Collate True/Yes: "<< /Collate true >> setpagedevice"
+*de.Collate True/Ein: ""
+*es.Collate True/Sí: ""
+*fr.Collate True/Oui: ""
+*it.Collate True/Attiva: ""
+*ja.Collate True/オン (アプリケーションではオフに): ""
+*ko.Collate True/예: ""
+*pt.Collate True/Ativo: ""
+*zh_CN.Collate True/是: ""
+*zh_TW.Collate True/是: ""
+
+*Collate False/No: "<< /Collate false >> setpagedevice"
+*de.Collate False/Aus: ""
+*es.Collate False/No: ""
+*fr.Collate False/Non: ""
+*it.Collate False/Disattiva: ""
+*ja.Collate False/オフ: ""
+*ko.Collate False/아니오: ""
+*pt.Collate False/Inativo: ""
+*zh_CN.Collate False/否: ""
+*zh_TW.Collate False/否: ""
+
+*?Collate: "(True) == flush"
+*CloseUI: *Collate
+
+*% ================================================
+*% Job Retention
+*% ================================================
+*% Job Retention not allowed without Hard disk 
+*%=============================================
+
+
+*% ===================================
+
+*% ================================================
+*% Paper source
+*% ================================================
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Automatic: "
+	<</ManualFeed false /MediaPosition 7>> setpagedevice"
+*End
+*de.InputSlot Auto/Automatisch: ""
+*es.InputSlot Auto/Automático: ""
+*fr.InputSlot Auto/Automatique: ""
+*it.InputSlot Auto/Automatico: ""
+*ja.InputSlot Auto/自動: ""
+*ko.InputSlot Auto/자동: ""
+*pt.InputSlot Auto/Automático: ""
+*zh_CN.InputSlot Auto/自动: ""
+*zh_TW.InputSlot Auto/自動: ""
+
+*de.Translation InputSlot/Papierquelle: ""
+*es.Translation InputSlot/Alimentación de papel: ""
+*fr.Translation InputSlot/Source du papier: ""
+*it.Translation InputSlot/Alimentazione della carta: ""
+*ja.Translation InputSlot/給紙元: ""
+*ko.Translation InputSlot/용지함: ""
+*pt.Translation InputSlot/Fonte de papel: ""
+*zh_CN.Translation InputSlot/纸张来源: ""
+*zh_TW.Translation InputSlot/紙張來源: ""
+
+*InputSlot Tray1/Tray 1: "<</ManualFeed false /MediaPosition 3>> setpagedevice"
+*de.InputSlot Tray1/Zufuhrfach 1: ""
+*es.InputSlot Tray1/Bandeja 1: ""
+*fr.InputSlot Tray1/Bac 1: ""
+*it.InputSlot Tray1/Cassetto 1: ""
+*ja.InputSlot Tray1/トレイ 1: ""
+*ko.InputSlot Tray1/용지함 1: ""
+*pt.InputSlot Tray1/Bandeja 1: ""
+*zh_CN.InputSlot Tray1/纸盒 1: ""
+*zh_TW.InputSlot Tray1/1 號紙匣: ""
+
+*InputSlot Tray2/Tray 2: "<</ManualFeed false /MediaPosition 0>> setpagedevice"
+*de.InputSlot Tray2/Zufuhrfach 2: ""
+*es.InputSlot Tray2/Bandeja 2: ""
+*fr.InputSlot Tray2/Bac 2: ""
+*it.InputSlot Tray2/Cassetto 2: ""
+*ja.InputSlot Tray2/トレイ 2: ""
+*ko.InputSlot Tray2/용지함 2: ""
+*pt.InputSlot Tray2/Bandeja 2: ""
+*zh_CN.InputSlot Tray2/纸盒 2: ""
+*zh_TW.InputSlot Tray2/2 號紙匣: ""
+
+*InputSlot Tray3/Tray 3: "<</ManualFeed false /MediaPosition 1>> setpagedevice"
+*de.InputSlot Tray3/Zufuhrfach 3: ""
+*es.InputSlot Tray3/Bandeja 3: ""
+*fr.InputSlot Tray3/Bac 3: ""
+*it.InputSlot Tray3/Cassetto 3: ""
+*ja.InputSlot Tray3/トレイ 3: ""
+*ko.InputSlot Tray3/용지함 3: ""
+*pt.InputSlot Tray3/Bandeja 3: ""
+*zh_CN.InputSlot Tray3/纸盒 3: ""
+*zh_TW.InputSlot Tray3/3 號紙匣: ""
+
+*InputSlot Tray4/Tray 4: "<</ManualFeed false /MediaPosition 5>> setpagedevice"
+*de.InputSlot Tray4/Zufuhrfach 4: ""
+*es.InputSlot Tray4/Bandeja 4: ""
+*fr.InputSlot Tray4/Bac 4: ""
+*it.InputSlot Tray4/Cassetto 4: ""
+*ja.InputSlot Tray4/トレイ 4: ""
+*ko.InputSlot Tray4/용지함 4: ""
+*pt.InputSlot Tray4/Bandeja 4: ""
+*zh_CN.InputSlot Tray4/纸盒 4: ""
+*zh_TW.InputSlot Tray4/4 號紙匣: ""
+
+*?InputSlot: "(unknown) == flush"
+*CloseUI: *InputSlot
+
+*% ================================================
+*% Manual Feed
+*% ================================================
+*% Enable/Disable Manual Feed
+*OpenUI *ManualFeed/Manual Feed (Tray 1): Boolean
+*OrderDependency: 25 AnySetup *ManualFeed
+*DefaultManualFeed: False
+*de.Translation ManualFeed/Manuelle Zufuhr (Fach 1): ""
+*es.Translation ManualFeed/Alimentación manual (Bandeja 1): ""
+*fr.Translation ManualFeed/Alimentation manuelle (Plateau 1): ""
+*it.Translation ManualFeed/Alimentazione manuale (Cassetto 1): ""
+*ja.Translation ManualFeed/手差し（トレイ　１）: ""
+*ko.Translation ManualFeed/수동 공급 (용지함 1): ""
+*pt.Translation ManualFeed/Alimentação manual (Bandeja 1): ""
+*zh_CN.Translation ManualFeed/手动送纸（纸盒 1）: ""
+*zh_TW.Translation ManualFeed/手動送紙（紙匣 1）: ""
+
+*ManualFeed True/True: "<</ManualFeed true /MediaPosition 3>> setpagedevice"
+*de.ManualFeed True/Ja: ""
+*es.ManualFeed True/Verdadero: ""
+*fr.ManualFeed True/Vrai: ""
+*it.ManualFeed True/Vero: ""
+*ja.ManualFeed True/はい: ""
+*ko.ManualFeed True/참: ""
+*pt.ManualFeed True/Verdadeiro: ""
+*zh_CN.ManualFeed True/真: ""
+*zh_TW.ManualFeed True/真: ""
+
+*ManualFeed False/False: "<</ManualFeed false>> setpagedevice"
+*de.ManualFeed False/Nein: ""
+*es.ManualFeed False/Falso: ""
+*fr.ManualFeed False/Faux: ""
+*it.ManualFeed False/Falso: ""
+*ja.ManualFeed False/いいえ: ""
+*ko.ManualFeed False/거짓: ""
+*pt.ManualFeed False/Falso: ""
+*zh_CN.ManualFeed False/伪: ""
+*zh_TW.ManualFeed False/假: ""
+
+*?ManualFeed: "(unknown) == flush"
+*CloseUI: *ManualFeed
+
+*% ================================================
+*% Paper Destinations  (output trays)
+*% ================================================
+
+*% Media Output Destination
+*OpenUI *OutputBin/Output Bin: PickOne
+*OrderDependency: 95 AnySetup *OutputBin
+*DefaultOutputBin: PrinterDefault
+*de.Translation OutputBin/Ausgabefach: ""
+*es.Translation OutputBin/Bandeja de salida: ""
+*fr.Translation OutputBin/Bac de sortie: ""
+*it.Translation OutputBin/Scomparto di uscita: ""
+*ja.Translation OutputBin/排紙トレイ: ""
+*ko.Translation OutputBin/출력 용지함: ""
+*pt.Translation OutputBin/Compartimento de saída: ""
+*zh_CN.Translation OutputBin/出纸槽: ""
+*zh_TW.Translation OutputBin/出紙槽: ""
+
+*OutputBin PrinterDefault/Printer's Current Setting: ""
+*de.OutputBin PrinterDefault/Aktuelle Druckereinstellung: ""
+*es.OutputBin PrinterDefault/Configuración actual de la impresora: ""
+*fr.OutputBin PrinterDefault/Paramètre courant de l'imprimante: ""
+*it.OutputBin PrinterDefault/Impostazioni correnti della stampante: ""
+*ja.OutputBin PrinterDefault/プリンタの現在の設定: ""
+*ko.OutputBin PrinterDefault/프린터의 현재 설정: ""
+*pt.OutputBin PrinterDefault/Configuração atual da impressora: ""
+*zh_CN.OutputBin PrinterDefault/打印机的当前设置: ""
+*zh_TW.OutputBin PrinterDefault/印表機目前的設定值: ""
+
+*OutputBin Upper/Top Output Bin (Face-Down): "<</Staple 0 /OutputType (TOP OUTPUT BIN)>> setpagedevice"
+*de.OutputBin Upper/Oberes Ausgabefach: ""
+*es.OutputBin Upper/Bandeja de salida superior (boca abajo): ""
+*fr.OutputBin Upper/Bac de sortie supérieur (face vers le bas): ""
+*it.OutputBin Upper/Scomparto superiore: ""
+*ja.OutputBin Upper/上部 排紙ビン（フェイスダウン）: ""
+*ko.OutputBin Upper/맨위 칸: ""
+*pt.OutputBin Upper/Compartimento de Saída superior(Face para baixo): ""
+*zh_CN.OutputBin Upper/顶槽: ""
+*zh_TW.OutputBin Upper/頂端紙槽: ""
+
+*OutputBin Left/Left Output Bin (Face-Up): "
+     <</Staple 0 /OutputType (FACE UP BIN)>> setpagedevice
+     <</Staple 0 /OutputType (LEFT OUTPUT BIN)>> setpagedevice
+"
+*End
+*de.OutputBin Left/Linkes Ausgabefach (Druckseite oben): ""
+*es.OutputBin Left/Bandeja de salida a la izquierda (boca arriba): ""
+*fr.OutputBin Left/Bac de sortie gauche (face vers le haut): ""
+*it.OutputBin Left/Scomparto sinistro (facciata in alto): ""
+*ja.OutputBin Left/左 排紙ビン（フェイスアップ）: ""
+*ko.OutputBin Left/왼쪽 칸 (인쇄면 위로): ""
+*pt.OutputBin Left/Compartimento de Saída esquerdo(Face para cima): ""
+*zh_CN.OutputBin Left/左槽 (面向上): ""
+*zh_TW.OutputBin Left/左紙槽(面朝上): ""
+
+*%This is used by any of the stacker devices, but not the 8 bin mailbox
+*OutputBin Stacker/Stacker: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 2)>> setpagedevice"
+*de.OutputBin Stacker/Stapel: ""
+*es.OutputBin Stacker/Apilador: ""
+*fr.OutputBin Stacker/Réceptacle: ""
+*it.OutputBin Stacker/Accumulatore: ""
+*ja.OutputBin Stacker/スタッカ: ""
+*ko.OutputBin Stacker/용지 쌓이는 판: ""
+*pt.OutputBin Stacker/Empilhador: ""
+*zh_CN.OutputBin Stacker/堆栈器: ""
+*zh_TW.OutputBin Stacker/堆疊器: ""
+
+*%This is only used by the 8 bin mailbox
+*OutputBin StackerSeparator/Stacker-Separator-Collator: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 2)>> setpagedevice"
+*de.OutputBin StackerSeparator/Stapel-, Trenn- und Sortiereinheit: ""
+*es.OutputBin StackerSeparator/Apilador-Separador-Clasificador: ""
+*fr.OutputBin StackerSeparator/Récepteur-Séparateur-Interclasseuse: ""
+*it.OutputBin StackerSeparator/Carrello-Separatore-Fascicolatore: ""
+*ja.OutputBin StackerSeparator/スタッカ-セパレータ-コレータ: ""
+*ko.OutputBin StackerSeparator/스택커-구분자-조합기: ""
+*pt.OutputBin StackerSeparator/Empilhador-Separador-Agrupador: ""
+*zh_CN.OutputBin StackerSeparator/堆栈器-分隔器-分页器: ""
+*zh_TW.OutputBin StackerSeparator/堆疊器-分隔符-自動分頁器: ""
+
+*OutputBin UStapler/Stapler: "
+userdict /HPStapleOption known
+{<</Staple 2 /StapleDetails <</Type 8 /StapleOption HPStapleOption>> >> setpagedevice}
+{<</Staple 2 /StapleDetails <</Type 8 >> /OutputType (OPTIONAL OUTBIN 2) >> setpagedevice}
+ifelse
+"
+*End
+*de.OutputBin UStapler/Hefter: ""
+*es.OutputBin UStapler/Grapadora: ""
+*fr.OutputBin UStapler/Agrafeuse: ""
+*it.OutputBin UStapler/Cucitrice: ""
+*ja.OutputBin UStapler/ホッチキス: ""
+*ko.OutputBin UStapler/스테이플러: ""
+*pt.OutputBin UStapler/Grampeador: ""
+*zh_CN.OutputBin UStapler/装订器: ""
+*zh_TW.OutputBin UStapler/釘書機: ""
+
+*OutputBin OutputBin1/Bin 1: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 2)>> setpagedevice"
+*de.OutputBin OutputBin1/Ausgabefach 1: ""
+*es.OutputBin OutputBin1/Buzón 1: ""
+*fr.OutputBin OutputBin1/Bac 1: ""
+*it.OutputBin OutputBin1/Scomparto 1: ""
+*ja.OutputBin OutputBin1/ビン 1: ""
+*ko.OutputBin OutputBin1/우편함 1: ""
+*pt.OutputBin OutputBin1/Compartimento 1: ""
+*zh_CN.OutputBin OutputBin1/槽 1: ""
+*zh_TW.OutputBin OutputBin1/信箱 1: ""
+
+*OutputBin OutputBin2/Bin 2: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 3)>> setpagedevice"
+*de.OutputBin OutputBin2/Ausgabefach 2: ""
+*es.OutputBin OutputBin2/Buzón 2: ""
+*fr.OutputBin OutputBin2/Bac 2: ""
+*it.OutputBin OutputBin2/Scomparto 2: ""
+*ja.OutputBin OutputBin2/ビン 2: ""
+*ko.OutputBin OutputBin2/우편함 2: ""
+*pt.OutputBin OutputBin2/Compartimento 2: ""
+*zh_CN.OutputBin OutputBin2/槽 2: ""
+*zh_TW.OutputBin OutputBin2/信箱 2: ""
+
+*OutputBin OutputBin3/Bin 3: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 4)>> setpagedevice"
+*de.OutputBin OutputBin3/Ausgabefach 3: ""
+*es.OutputBin OutputBin3/Buzón 3: ""
+*fr.OutputBin OutputBin3/Bac 3: ""
+*it.OutputBin OutputBin3/Scomparto 3: ""
+*ja.OutputBin OutputBin3/ビン 3: ""
+*ko.OutputBin OutputBin3/우편함 3: ""
+*pt.OutputBin OutputBin3/Compartimento 3: ""
+*zh_CN.OutputBin OutputBin3/槽 3: ""
+*zh_TW.OutputBin OutputBin3/信箱 3: ""
+
+*OutputBin OutputBin4/Bin 4: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 5)>> setpagedevice"
+*de.OutputBin OutputBin4/Ausgabefach 4: ""
+*es.OutputBin OutputBin4/Buzón 4: ""
+*fr.OutputBin OutputBin4/Bac 4: ""
+*it.OutputBin OutputBin4/Scomparto 4: ""
+*ja.OutputBin OutputBin4/ビン 4: ""
+*ko.OutputBin OutputBin4/우편함 4: ""
+*pt.OutputBin OutputBin4/Compartimento 4: ""
+*zh_CN.OutputBin OutputBin4/槽 4: ""
+*zh_TW.OutputBin OutputBin4/信箱 4: ""
+
+*OutputBin OutputBin5/Bin 5: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 6)>> setpagedevice"
+*de.OutputBin OutputBin5/Ausgabefach 5: ""
+*es.OutputBin OutputBin5/Buzón 5: ""
+*fr.OutputBin OutputBin5/Bac 5: ""
+*it.OutputBin OutputBin5/Scomparto 5: ""
+*ja.OutputBin OutputBin5/ビン 5: ""
+*ko.OutputBin OutputBin5/우편함 5: ""
+*pt.OutputBin OutputBin5/Compartimento 5: ""
+*zh_CN.OutputBin OutputBin5/槽 5: ""
+*zh_TW.OutputBin OutputBin5/信箱 5: ""
+
+*OutputBin OutputBin6/Bin 6: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 7)>> setpagedevice"
+*de.OutputBin OutputBin6/Ausgabefach 6: ""
+*es.OutputBin OutputBin6/Buzón 6: ""
+*fr.OutputBin OutputBin6/Bac 6: ""
+*it.OutputBin OutputBin6/Scomparto 6: ""
+*ja.OutputBin OutputBin6/ビン 6: ""
+*ko.OutputBin OutputBin6/우편함 6: ""
+*pt.OutputBin OutputBin6/Compartimento 6: ""
+*zh_CN.OutputBin OutputBin6/槽 6: ""
+*zh_TW.OutputBin OutputBin6/信箱 6: ""
+
+*OutputBin OutputBin7/Bin 7: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 8)>> setpagedevice"
+*de.OutputBin OutputBin7/Ausgabefach 7: ""
+*es.OutputBin OutputBin7/Buzón 7: ""
+*fr.OutputBin OutputBin7/Bac 7: ""
+*it.OutputBin OutputBin7/Scomparto 7: ""
+*ja.OutputBin OutputBin7/ビン 7: ""
+*ko.OutputBin OutputBin7/우편함 7: ""
+*pt.OutputBin OutputBin7/Compartimento 7: ""
+*zh_CN.OutputBin OutputBin7/槽 7: ""
+*zh_TW.OutputBin OutputBin7/信箱 7: ""
+
+*OutputBin OutputBin8/Bin 8: "<</Staple 0 /OutputType (OPTIONAL OUTBIN 9)>> setpagedevice"
+*de.OutputBin OutputBin8/Ausgabefach 8: ""
+*es.OutputBin OutputBin8/Buzón 8: ""
+*fr.OutputBin OutputBin8/Bac 8: ""
+*it.OutputBin OutputBin8/Scomparto 8: ""
+*ja.OutputBin OutputBin8/ビン 8: ""
+*ko.OutputBin OutputBin8/우편함 8: ""
+*pt.OutputBin OutputBin8/Compartimento 8: ""
+*zh_CN.OutputBin OutputBin8/槽 8: ""
+*zh_TW.OutputBin OutputBin8/信箱 8: ""
+
+
+*?OutputBin: "
+save
+    errordict /undefined { pop pop (Standard) } put
+    errordict /undefinedresource { pop pop (Standard) } put
+    /OptionalOutputDevice /HWOptions findresource
+    ==
+restore
+"
+*End
+*CloseUI: *OutputBin
+
+*PageStackOrder Upper: Normal
+*PageStackOrder Left: Reverse
+*PageStackOrder Stacker: Normal
+*PageStackOrder StackerSeparator: Normal
+*PageStackOrder Collator: Normal
+*PageStackOrder UStapler: Normal
+*PageStackOrder JetBondHard: Normal
+*PageStackOrder JetBondSoft: Normal
+*PageStackOrder OutputBin1: Normal
+*PageStackOrder OutputBin2: Normal
+*PageStackOrder OutputBin3: Normal
+*PageStackOrder OutputBin4: Normal
+*PageStackOrder OutputBin5: Normal
+*PageStackOrder OutputBin6: Normal
+*PageStackOrder OutputBin7: Normal
+*PageStackOrder OutputBin8: Normal
+
+*%=== 3000 Sheet Stacker/Stapler Stapler Options =========================
+*OpenUI *HPStaplerOptions/Stapler Option: PickOne
+*OrderDependency: 45 AnySetup *HPStaplerOptions
+*DefaultHPStaplerOptions: PrintersDefault
+*de.Translation HPStaplerOptions/Heftoption: ""
+*es.Translation HPStaplerOptions/Opción Grapadora: ""
+*fr.Translation HPStaplerOptions/Option de l'agrafeuse: ""
+*it.Translation HPStaplerOptions/Opzione di cucitura: ""
+*ja.Translation HPStaplerOptions/ホチキス オプション: ""
+*ko.Translation HPStaplerOptions/스테이플러 선택사항: ""
+*pt.Translation HPStaplerOptions/Opção de Grampeador: ""
+*zh_CN.Translation HPStaplerOptions/装订器选项: ""
+*zh_TW.Translation HPStaplerOptions/裝訂機選項: ""
+
+*HPStaplerOptions PrintersDefault/Printer's Current Setting: ""
+*de.HPStaplerOptions PrintersDefault/Aktuelle Einstellung des Druckers: ""
+*es.HPStaplerOptions PrintersDefault/Configuración actual de la impresora: ""
+*fr.HPStaplerOptions PrintersDefault/Paramètre courant de l'imprimante: ""
+*it.HPStaplerOptions PrintersDefault/Impostazione corrente stampante: ""
+*ja.HPStaplerOptions PrintersDefault/プリンタの現在の設定: ""
+*ko.HPStaplerOptions PrintersDefault/프린터의 현재 설정: ""
+*pt.HPStaplerOptions PrintersDefault/Configuração atual da Impressora: ""
+*zh_CN.HPStaplerOptions PrintersDefault/打印机当前设定值: ""
+*zh_TW.HPStaplerOptions PrintersDefault/印表機目前設定值: ""
+
+*HPStaplerOptions 1diagonal/1 Staple, diagonal: "
+  userdict /HPConfigurableStapler known
+  { userdict /HPStapleOption {<</Staple 2 /StapleDetails <</Type 8 /StapleOption (ONEANGLED)>> >> setpagedevice} put }
+  if"
+*End
+*de.HPStaplerOptions 1diagonal/1 Heftklammer, diagonal: ""
+*es.HPStaplerOptions 1diagonal/1 grapa, diagonal: ""
+*fr.HPStaplerOptions 1diagonal/1 agrafe, en diagonale: ""
+*it.HPStaplerOptions 1diagonal/1 punto, diagonale: ""
+*ja.HPStaplerOptions 1diagonal/針1本、斜め: ""
+*ko.HPStaplerOptions 1diagonal/1 스테이플, 사선: ""
+*pt.HPStaplerOptions 1diagonal/1 grampo, diagonal: ""
+*zh_CN.HPStaplerOptions 1diagonal/1针，对角: ""
+*zh_TW.HPStaplerOptions 1diagonal/1個訂書釘，呈斜角: ""
+
+*HPStaplerOptions 1parallel/1 Staple, parallel: "
+  userdict /HPStapleOption {<</Staple 2 /StapleDetails <</Type 8 /StapleOption (ONE)>> >> setpagedevice} put"
+*End
+*de.HPStaplerOptions 1parallel/1 Heftklammer, parallel: ""
+*es.HPStaplerOptions 1parallel/1 grapa, paralela: ""
+*fr.HPStaplerOptions 1parallel/1 agrafe, parallèle: ""
+*it.HPStaplerOptions 1parallel/1 punto, parallelo: ""
+*ja.HPStaplerOptions 1parallel/針1本、平行: ""
+*ko.HPStaplerOptions 1parallel/1 스테이플, 병렬: ""
+*pt.HPStaplerOptions 1parallel/1 grampo, paralelo: ""
+*zh_CN.HPStaplerOptions 1parallel/1针，平行: ""
+*zh_TW.HPStaplerOptions 1parallel/1個訂書釘，平行: ""
+
+*HPStaplerOptions 2parallel/2 Staples, parallel: "
+  userdict /HPStapleOption {<</Staple 2 /StapleDetails <</Type 8 /StapleOption (TWO)>> >> setpagedevice} put"
+*End
+*de.HPStaplerOptions 2parallel/2 Heftklammern, parallel: ""
+*es.HPStaplerOptions 2parallel/2 grapas, paralelas: ""
+*fr.HPStaplerOptions 2parallel/2 agrafes, parallèles: ""
+*it.HPStaplerOptions 2parallel/2 punti, parallelo: ""
+*ja.HPStaplerOptions 2parallel/針2本、平行: ""
+*ko.HPStaplerOptions 2parallel/2 스테이플, 병렬: ""
+*pt.HPStaplerOptions 2parallel/2 grampos, paralelos: ""
+*zh_CN.HPStaplerOptions 2parallel/2 针，平行: ""
+*zh_TW.HPStaplerOptions 2parallel/2個訂書釘，平行: ""
+
+*HPStaplerOptions 3parallel/3 Staples, parallel: "
+  userdict /HPStapleOption {<</Staple 2 /StapleDetails <</Type 8 /StapleOption (THREE)>> >> setpagedevice} put"
+*End
+*de.HPStaplerOptions 3parallel/3 Heftklammern, parallel: ""
+*es.HPStaplerOptions 3parallel/3 grapas, paralelas: ""
+*fr.HPStaplerOptions 3parallel/3 agrafes, parallèles: ""
+*it.HPStaplerOptions 3parallel/3 punti, parallelo: ""
+*ja.HPStaplerOptions 3parallel/針3本、平行: ""
+*ko.HPStaplerOptions 3parallel/3 스테이플, 병렬: ""
+*pt.HPStaplerOptions 3parallel/3 grampos, paralelos: ""
+*zh_CN.HPStaplerOptions 3parallel/3 针，平行: ""
+*zh_TW.HPStaplerOptions 3parallel/3個訂書釘，平行: ""
+
+*HPStaplerOptions 6parallel/6 Staples, parallel: "
+  userdict /HPStapleOption {<</Staple 2 /StapleDetails <</Type 8 /StapleOption (SIX)>> >> setpagedevice} put"
+*End
+*de.HPStaplerOptions 6parallel/6 Heftklammern, parallel: ""
+*es.HPStaplerOptions 6parallel/6 grapas, paralelas: ""
+*fr.HPStaplerOptions 6parallel/6 agrafes, parallèles: ""
+*it.HPStaplerOptions 6parallel/6 punti, parallelo: ""
+*ja.HPStaplerOptions 6parallel/針6本、平行: ""
+*ko.HPStaplerOptions 6parallel/6 스테이플, 병렬: ""
+*pt.HPStaplerOptions 6parallel/6 grampos, paralelos: ""
+*zh_CN.HPStaplerOptions 6parallel/6 针，平行: ""
+*zh_TW.HPStaplerOptions 6parallel/6個訂書釘，平行: ""
+
+*HPStaplerOptions CustomStaple/Custom: "
+  userdict /HPStapleOption {<</Staple 2 /StapleDetails <</Type 8 /StapleOption (CUSTOM)>> >> setpagedevice} put"
+*End
+*de.HPStaplerOptions CustomStaple/Benutzerdefiniert: ""
+*es.HPStaplerOptions CustomStaple/Personalizado: ""
+*fr.HPStaplerOptions CustomStaple/Personnalisée: ""
+*it.HPStaplerOptions CustomStaple/Personalizzata: ""
+*ja.HPStaplerOptions CustomStaple/カスタム: ""
+*ko.HPStaplerOptions CustomStaple/사용자 정의: ""
+*pt.HPStaplerOptions CustomStaple/Personalizar: ""
+*zh_CN.HPStaplerOptions CustomStaple/定制: ""
+*zh_TW.HPStaplerOptions CustomStaple/自訂: ""
+
+*CloseUI: *HPStaplerOptions
+
+
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+
+*% Black substitution is always on.
+*DefaultBlackSubstitution: True
+*BlackSubstitution True: ""
+*?BlackSubstitution: "(True) == flush"
+
+*% Custom Page Sizes ===================
+*% min: 3.874 x 7.48 (as of 3/21/97) (old: 5.83w x  8.27h)
+*% max:12.00w x 18.50h
+*MaxMediaWidth: "864"
+*MaxMediaHeight: "1332"
+*HWMargins: 12 12 12 12
+*ParamCustomPageSize Width:  1 points 278 864
+*ParamCustomPageSize Height: 2 points 539 1332
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+*%CustomPageRegion True: ""
+*CustomPageSize True: "
+	4 dict begin
+		pop
+		2 array astore /Margins exch def
+		2 copy gt {exch} if 2 array astore /PageSize exch def
+		/ImagingBBox null def
+		/MediaType (ShortEdgeFeed) def
+		currentdict
+	end setpagedevice"
+*End
+*% Paper Handling ===================
+*OpenUI *PageSize/Page Size: PickOne
+*OrderDependency: 90 AnySetup *PageSize
+*DefaultPageSize: Letter
+*de.Translation PageSize/Papierformat: ""
+*es.Translation PageSize/Tamaño del papel: ""
+*fr.Translation PageSize/Format de page: ""
+*it.Translation PageSize/Dimensioni pagina: ""
+*ja.Translation PageSize/ページサイズ: ""
+*ko.Translation PageSize/용지 크기: ""
+*pt.Translation PageSize/Tamanho do papel: ""
+*zh_CN.Translation PageSize/页面大小: ""
+*zh_TW.Translation PageSize/頁面尺寸: ""
+
+*PageSize Letter/Letter: "
+    << /PageSize [612 792] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [612 792] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize Letter/Letter: ""
+*es.PageSize Letter/Letter: ""
+*fr.PageSize Letter/Lettre: ""
+*it.PageSize Letter/Letter: ""
+*ja.PageSize Letter/レター: ""
+*ko.PageSize Letter/레터: ""
+*pt.PageSize Letter/Carta: ""
+*zh_CN.PageSize Letter/信纸: ""
+*zh_TW.PageSize Letter/Letter: ""
+
+*PageSize Legal/Legal: "
+    << /PageSize [612 1008] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [522 756] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize Legal/Legal: ""
+*es.PageSize Legal/Legal: ""
+*fr.PageSize Legal/Légal: ""
+*it.PageSize Legal/Legal: ""
+*ja.PageSize Legal/リーガル: ""
+*ko.PageSize Legal/리갈: ""
+*pt.PageSize Legal/Legal: ""
+*zh_CN.PageSize Legal/Legal: ""
+*zh_TW.PageSize Legal/Legal: ""
+
+*PageSize Executive/Executive: "
+    << /PageSize [522 756] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [522 756] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize Executive/Executive: ""
+*es.PageSize Executive/Ejecutivo: ""
+*fr.PageSize Executive/Exécutif: ""
+*it.PageSize Executive/Executive: ""
+*ja.PageSize Executive/エグゼクティブ: ""
+*ko.PageSize Executive/Executive: ""
+*pt.PageSize Executive/Executivo: ""
+*zh_CN.PageSize Executive/Executive: ""
+*zh_TW.PageSize Executive/Executive: ""
+
+*PageSize Tabloid/11x17: "
+    << /PageSize [792 1224] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [792 1224] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize Tabloid/11x17 Zoll: ""
+*es.PageSize Tabloid/11x17: ""
+*fr.PageSize Tabloid/11 x 17 pouces: ""
+*it.PageSize Tabloid/11x17: ""
+*ja.PageSize Tabloid/11x17: ""
+*ko.PageSize Tabloid/11x17: ""
+*pt.PageSize Tabloid/11x17: ""
+*zh_CN.PageSize Tabloid/11x17: ""
+*zh_TW.PageSize Tabloid/11x17 : ""
+
+*PageSize A4/A4: "
+    << /PageSize [595 842] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [595 842] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize A4/A4: ""
+*es.PageSize A4/A4: ""
+*fr.PageSize A4/A4: ""
+*it.PageSize A4/A4: ""
+*ja.PageSize A4/A4: ""
+*ko.PageSize A4/A4: ""
+*pt.PageSize A4/A4: ""
+*zh_CN.PageSize A4/A4: ""
+*zh_TW.PageSize A4/A4: ""
+
+*PageSize B4/JIS B4: "
+    << /PageSize [729 1032] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [729 1032] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize B4/B4 (JIS): ""
+*es.PageSize B4/JIS B4: ""
+*fr.PageSize B4/JIS B4: ""
+*it.PageSize B4/JIS B4: ""
+*ja.PageSize B4/B4 (JIS): ""
+*ko.PageSize B4/JIS B4: ""
+*pt.PageSize B4/B4 JIS: ""
+*zh_CN.PageSize B4/JIS B4: ""
+*zh_TW.PageSize B4/JIS B4: ""
+
+*PageSize B5/JIS B5: "
+    << /PageSize [516 729] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [516 729] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize B5/JIS B5: ""
+*es.PageSize B5/JIS B5: ""
+*fr.PageSize B5/JIS B5: ""
+*it.PageSize B5/JIS B5: ""
+*ja.PageSize B5/JIS B5: ""
+*ko.PageSize B5/JIS B5: ""
+*pt.PageSize B5/JIS B5: ""
+*zh_CN.PageSize B5/JIS B5: ""
+*zh_TW.PageSize B5/JIS B5: ""
+
+*PageSize A3/A3: "
+    << /PageSize [842 1191] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [842 1191] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize A3/A3: ""
+*es.PageSize A3/A3: ""
+*fr.PageSize A3/A3: ""
+*it.PageSize A3/A3: ""
+*ja.PageSize A3/A3: ""
+*ko.PageSize A3/A3: ""
+*pt.PageSize A3/A3: ""
+*zh_CN.PageSize A3/A3: ""
+*zh_TW.PageSize A3/A3: ""
+
+*PageSize w869h1304/A3 (Oversize 12x18.11): "
+    << /PageSize [869 1304] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [869 1304] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize w869h1304/A3 (Übergröße 12x18,11 Zoll): ""
+*es.PageSize w869h1304/A3 (Extra 12x18,11): ""
+*fr.PageSize w869h1304/A3 (grand) [12 x 18,11 pouces]: ""
+*it.PageSize w869h1304/A3 (oversize 12x18,11): ""
+*ja.PageSize w869h1304/A3 (大 12x18.11): ""
+*ko.PageSize w869h1304/A3 (특대12x18.11): ""
+*pt.PageSize w869h1304/A3 (extra 12x18,11 pol.): ""
+*zh_CN.PageSize w869h1304/A3 (超大尺寸 12x18.11): ""
+*zh_TW.PageSize w869h1304/A3 (Oversize 12x18.11): ""
+
+*PageSize w612h935/Executive (JIS): "
+    << /PageSize [612 935] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [612 935] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize w612h935/Executive (JIS): ""
+*es.PageSize w612h935/Ejecutivo (JIS): ""
+*fr.PageSize w612h935/Executive (JIS): ""
+*it.PageSize w612h935/Executive (JIS): ""
+*ja.PageSize w612h935/エグゼクティブ (JIS): ""
+*ko.PageSize w612h935/Executive (JIS): ""
+*pt.PageSize w612h935/Executivo (JIS): ""
+*zh_CN.PageSize w612h935/Executive (JIS): ""
+*zh_TW.PageSize w612h935/Executive (JIS): ""
+
+*PageSize w558h774/16K: "
+    << /PageSize [558 774] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [558 774] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize w558h774/16K: ""
+*es.PageSize w558h774/16K: ""
+*fr.PageSize w558h774/16 Ko: ""
+*it.PageSize w558h774/16K: ""
+*ja.PageSize w558h774/16K: ""
+*ko.PageSize w558h774/16K: ""
+*pt.PageSize w558h774/16K: ""
+*zh_CN.PageSize w558h774/16K: ""
+*zh_TW.PageSize w558h774/16K: ""
+
+*PageSize w774h1116/8K: "
+    << /PageSize [774 1116] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [774 1116] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize w774h1116/8K: ""
+*es.PageSize w774h1116/8K: ""
+*fr.PageSize w774h1116/8 Ko: ""
+*it.PageSize w774h1116/8K: ""
+*ja.PageSize w774h1116/8K: ""
+*ko.PageSize w774h1116/8K: ""
+*pt.PageSize w774h1116/8K: ""
+*zh_CN.PageSize w774h1116/8K: ""
+*zh_TW.PageSize w774h1116/8K: ""
+
+*PageSize Env10/Env Comm10: "
+    << /PageSize [297 684] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [297 684] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize Env10/Umschlag Comm10: ""
+*es.PageSize Env10/Sobre Comm10: ""
+*fr.PageSize Env10/Enveloppe Comm10: ""
+*it.PageSize Env10/Busta Comm10: ""
+*ja.PageSize Env10/封筒 Comm10: ""
+*ko.PageSize Env10/Comm10 봉투: ""
+*pt.PageSize Env10/Envelope Comm10: ""
+*zh_CN.PageSize Env10/Comm10号信封: ""
+*zh_TW.PageSize Env10/Comm10 信封: ""
+
+*PageSize EnvDL/Env DL: "
+    << /PageSize [312 624] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [312 624] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize EnvDL/Umschlag DL: ""
+*es.PageSize EnvDL/Sobre DL: ""
+*fr.PageSize EnvDL/Enveloppe DL: ""
+*it.PageSize EnvDL/Busta DL: ""
+*ja.PageSize EnvDL/封筒 DL: ""
+*ko.PageSize EnvDL/DL 봉투: ""
+*pt.PageSize EnvDL/Envelope DL: ""
+*zh_CN.PageSize EnvDL/DL号信封: ""
+*zh_TW.PageSize EnvDL/DL 信封: ""
+
+*PageSize EnvMonarch/Env Monarch: "
+    << /PageSize [279 540] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [279 540] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize EnvMonarch/Umschlag Monarch: ""
+*es.PageSize EnvMonarch/Sobre Monarch: ""
+*fr.PageSize EnvMonarch/Enveloppe Monarch: ""
+*it.PageSize EnvMonarch/Busta Monarch: ""
+*ja.PageSize EnvMonarch/封筒 Monarch: ""
+*ko.PageSize EnvMonarch/Monarch 봉투: ""
+*pt.PageSize EnvMonarch/Envelope Monarch: ""
+*zh_CN.PageSize EnvMonarch/Monarch号信封: ""
+*zh_TW.PageSize EnvMonarch/Monarch 信封: ""
+
+*PageSize EnvC5/Env C5: "
+    << /PageSize [459 649] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [459 649] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize EnvC5/Umschlag C5: ""
+*es.PageSize EnvC5/Sobre C5: ""
+*fr.PageSize EnvC5/Enveloppe C5: ""
+*it.PageSize EnvC5/Busta C5: ""
+*ja.PageSize EnvC5/封筒 C5: ""
+*ko.PageSize EnvC5/C5 봉투: ""
+*pt.PageSize EnvC5/Envelope C5: ""
+*zh_CN.PageSize EnvC5/C5号信封: ""
+*zh_TW.PageSize EnvC5/C5 信封: ""
+
+*PageSize EnvB5/Env ISO B5: "
+    << /PageSize [499 709] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [499 709] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize EnvB5/Umschlag ISO B5: ""
+*es.PageSize EnvB5/Sobre ISO B5: ""
+*fr.PageSize EnvB5/Env ISO B5: ""
+*it.PageSize EnvB5/Busta ISO B5: ""
+*ja.PageSize EnvB5/封筒 ISO B5: ""
+*ko.PageSize EnvB5/ISO B5 봉투: ""
+*pt.PageSize EnvB5/Env ISO B5: ""
+*zh_CN.PageSize EnvB5/ISO B5号信封: ""
+*zh_TW.PageSize EnvB5/Env ISO B5: ""
+
+*PageSize DoublePostcardRotated/Double Postcard (JIS): "
+    << /PageSize [420 567] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [420 567] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize DoublePostcardRotated/Doppelte Postkarte (JIS): ""
+*es.PageSize DoublePostcardRotated/Tarjeta postal doble (JIS): ""
+*fr.PageSize DoublePostcardRotated/Carte postale double (JIS): ""
+*it.PageSize DoublePostcardRotated/Cartolina doppia (JIS): ""
+*ja.PageSize DoublePostcardRotated/往復はがき (JIS): ""
+*ko.PageSize DoublePostcardRotated/양면 엽서 (JIS): ""
+*pt.PageSize DoublePostcardRotated/Postal duplo (JIS): ""
+*zh_CN.PageSize DoublePostcardRotated/大号明信片 (JIS): ""
+*zh_TW.PageSize DoublePostcardRotated/雙聯明信片(JIS): ""
+
+*PageSize A5/A5: "
+    << /PageSize [420 595] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [420 595] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageSize A5/A5: ""
+*es.PageSize A5/A5: ""
+*fr.PageSize A5/A5: ""
+*it.PageSize A5/A5: ""
+*ja.PageSize A5/A5: ""
+*ko.PageSize A5/A5: ""
+*pt.PageSize A5/A5: ""
+*zh_CN.PageSize A5/A5: ""
+*zh_TW.PageSize A5/A5: ""
+
+
+*?PageSize: "
+    save currentpagedevice /PageSize get aload pop
+    2 copy gt {exch} if (Unknown)
+    19 dict
+    dup [612 792] (Letter) put
+    dup [612 1008] (Legal) put
+    dup [522 756] (Executive) put
+    dup [595 842] (A4) put
+    dup [792 1224] (Tabloid) put
+    dup [842 1191] (A3) put
+    dup [869 1304] (w869h1304) put
+    dup [729 1032] (B4) put
+    dup [516 729] (B5) put
+    dup [420 567] (DoublePostcardRotated) put
+    dup [612 935] (w612h935) put
+    dup [558 774] (w558h774) put
+    dup [774 1116] (w774h1116) put
+    dup [297 684] (Env10) put
+    dup [279 540] (EnvMonarch) put
+    dup [312 624] (EnvDL) put
+    dup [459 649] (EnvC5) put
+    dup [499 709] (EnvB5) put
+    dup [420 595] (A5) put
+    { exch aload pop 4 index sub abs 5 le exch 5 index sub abs 5 le and
+      { exch pop exit } { pop } ifelse
+    } bind forall = flush pop pop
+    restore "
+*End
+*CloseUI: *PageSize
+
+*% These entries will set up the frame buffer. Usually used with manual feed.
+*OpenUI *PageRegion/Page Region: PickOne
+*OrderDependency: 95 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*de.Translation PageRegion/Seitenbereich: ""
+*es.Translation PageRegion/Dimensión de papel: ""
+*fr.Translation PageRegion/Région de page: ""
+*it.Translation PageRegion/Dimensioni regione: ""
+*ja.Translation PageRegion/Page Region: ""
+*ko.Translation PageRegion/Page Region: ""
+*pt.Translation PageRegion/Região do papel: ""
+*zh_CN.Translation PageRegion/Page Region: ""
+*zh_TW.Translation PageRegion/Page Region: ""
+
+*PageRegion Letter/Letter: "
+    << /PageSize [612 792] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [612 792] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion Letter/Letter: ""
+*es.PageRegion Letter/Letter: ""
+*fr.PageRegion Letter/Lettre: ""
+*it.PageRegion Letter/Letter: ""
+*ja.PageRegion Letter/レター: ""
+*ko.PageRegion Letter/레터: ""
+*pt.PageRegion Letter/Carta: ""
+*zh_CN.PageRegion Letter/信纸: ""
+*zh_TW.PageRegion Letter/Letter: ""
+
+*PageRegion Legal/Legal: "
+    << /PageSize [612 1008] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [612 1008] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion Legal/Legal: ""
+*es.PageRegion Legal/Legal: ""
+*fr.PageRegion Legal/Légal: ""
+*it.PageRegion Legal/Legal: ""
+*ja.PageRegion Legal/リーガル: ""
+*ko.PageRegion Legal/리갈: ""
+*pt.PageRegion Legal/Legal: ""
+*zh_CN.PageRegion Legal/Legal: ""
+*zh_TW.PageRegion Legal/Legal: ""
+
+*PageRegion Executive/Executive: "
+    << /PageSize [522 756] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [522 756] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion Executive/Executive: ""
+*es.PageRegion Executive/Ejecutivo: ""
+*fr.PageRegion Executive/Exécutif: ""
+*it.PageRegion Executive/Executive: ""
+*ja.PageRegion Executive/エグゼクティブ: ""
+*ko.PageRegion Executive/Executive: ""
+*pt.PageRegion Executive/Executivo: ""
+*zh_CN.PageRegion Executive/Executive: ""
+*zh_TW.PageRegion Executive/Executive: ""
+
+*PageRegion Tabloid/11x17: "
+    << /PageSize [792 1224] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [792 1224] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion Tabloid/11x17 Zoll: ""
+*es.PageRegion Tabloid/11x17: ""
+*fr.PageRegion Tabloid/11 x 17 pouces: ""
+*it.PageRegion Tabloid/11x17: ""
+*ja.PageRegion Tabloid/11x17: ""
+*ko.PageRegion Tabloid/11x17: ""
+*pt.PageRegion Tabloid/11x17: ""
+*zh_CN.PageRegion Tabloid/11x17: ""
+*zh_TW.PageRegion Tabloid/11x17 : ""
+
+*PageRegion A4/A4: "
+    << /PageSize [595 842] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [595 842] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion A4/A4: ""
+*es.PageRegion A4/A4: ""
+*fr.PageRegion A4/A4: ""
+*it.PageRegion A4/A4: ""
+*ja.PageRegion A4/A4: ""
+*ko.PageRegion A4/A4: ""
+*pt.PageRegion A4/A4: ""
+*zh_CN.PageRegion A4/A4: ""
+*zh_TW.PageRegion A4/A4: ""
+
+*PageRegion B4/JIS B4: "
+    << /PageSize [729 1032] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [729 1032] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion B4/B4 (JIS): ""
+*es.PageRegion B4/JIS B4: ""
+*fr.PageRegion B4/JIS B4: ""
+*it.PageRegion B4/JIS B4: ""
+*ja.PageRegion B4/B4 (JIS): ""
+*ko.PageRegion B4/JIS B4: ""
+*pt.PageRegion B4/B4 JIS: ""
+*zh_CN.PageRegion B4/JIS B4: ""
+*zh_TW.PageRegion B4/JIS B4: ""
+
+*PageRegion B5/JIS B5: "
+    << /PageSize [516 729] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [516 729] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion B5/JIS B5: ""
+*es.PageRegion B5/JIS B5: ""
+*fr.PageRegion B5/JIS B5: ""
+*it.PageRegion B5/JIS B5: ""
+*ja.PageRegion B5/JIS B5: ""
+*ko.PageRegion B5/JIS B5: ""
+*pt.PageRegion B5/JIS B5: ""
+*zh_CN.PageRegion B5/JIS B5: ""
+*zh_TW.PageRegion B5/JIS B5: ""
+
+*PageRegion A3/A3: "
+    << /PageSize [842 1191] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [842 1191] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion A3/A3: ""
+*es.PageRegion A3/A3: ""
+*fr.PageRegion A3/A3: ""
+*it.PageRegion A3/A3: ""
+*ja.PageRegion A3/A3: ""
+*ko.PageRegion A3/A3: ""
+*pt.PageRegion A3/A3: ""
+*zh_CN.PageRegion A3/A3: ""
+*zh_TW.PageRegion A3/A3: ""
+
+*PageRegion w869h1304/A3 (Oversize 12x18.11): "
+    << /PageSize [869 1304] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [869 1304] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion w869h1304/A3 (Übergröße 12x18,11 Zoll): ""
+*es.PageRegion w869h1304/A3 (Extra 12x18,11): ""
+*fr.PageRegion w869h1304/A3 (grand) [12 x 18,11 pouces]: ""
+*it.PageRegion w869h1304/A3 (oversize 12x18,11): ""
+*ja.PageRegion w869h1304/A3 (大 12x18.11): ""
+*ko.PageRegion w869h1304/A3 (특대12x18.11): ""
+*pt.PageRegion w869h1304/A3 (extra 12x18,11 pol.): ""
+*zh_CN.PageRegion w869h1304/A3 (超大尺寸 12x18.11): ""
+*zh_TW.PageRegion w869h1304/A3 (Oversize 12x18.11): ""
+
+*PageRegion w612h935/Executive (JIS): "
+    << /PageSize [612 935] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [612 935] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion w612h935/Executive (JIS): ""
+*es.PageRegion w612h935/Ejecutivo (JIS): ""
+*fr.PageRegion w612h935/Executive (JIS): ""
+*it.PageRegion w612h935/Executive (JIS): ""
+*ja.PageRegion w612h935/エグゼクティブ (JIS): ""
+*ko.PageRegion w612h935/Executive (JIS): ""
+*pt.PageRegion w612h935/Executivo (JIS): ""
+*zh_CN.PageRegion w612h935/Executive (JIS): ""
+*zh_TW.PageRegion w612h935/Executive (JIS): ""
+
+*PageRegion w558h774/16K: "
+    << /PageSize [558 774] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [558 774] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion w558h774/16K: ""
+*es.PageRegion w558h774/16K: ""
+*fr.PageRegion w558h774/16 Ko: ""
+*it.PageRegion w558h774/16K: ""
+*ja.PageRegion w558h774/16K: ""
+*ko.PageRegion w558h774/16K: ""
+*pt.PageRegion w558h774/16K: ""
+*zh_CN.PageRegion w558h774/16K: ""
+*zh_TW.PageRegion w558h774/16K: ""
+
+*PageRegion w774h1116/8K: "
+    << /PageSize [774 1116] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [774 1116] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion w774h1116/8K: ""
+*es.PageRegion w774h1116/8K: ""
+*fr.PageRegion w774h1116/8 Ko: ""
+*it.PageRegion w774h1116/8K: ""
+*ja.PageRegion w774h1116/8K: ""
+*ko.PageRegion w774h1116/8K: ""
+*pt.PageRegion w774h1116/8K: ""
+*zh_CN.PageRegion w774h1116/8K: ""
+*zh_TW.PageRegion w774h1116/8K: ""
+
+*PageRegion Env10/Env Comm10: "
+    << /PageSize [297 684] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [297 684] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion Env10/Umschlag Comm10: ""
+*es.PageRegion Env10/Sobre Comm10: ""
+*fr.PageRegion Env10/Enveloppe Comm10: ""
+*it.PageRegion Env10/Busta Comm10: ""
+*ja.PageRegion Env10/封筒 Comm10: ""
+*ko.PageRegion Env10/Comm10 봉투: ""
+*pt.PageRegion Env10/Envelope Comm10: ""
+*zh_CN.PageRegion Env10/Comm10号信封: ""
+*zh_TW.PageRegion Env10/Comm10 信封: ""
+
+*PageRegion EnvDL/Env DL: "
+    << /PageSize [312 624] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [312 624] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion EnvDL/Umschlag DL: ""
+*es.PageRegion EnvDL/Sobre DL: ""
+*fr.PageRegion EnvDL/Enveloppe DL: ""
+*it.PageRegion EnvDL/Busta DL: ""
+*ja.PageRegion EnvDL/封筒 DL: ""
+*ko.PageRegion EnvDL/DL 봉투: ""
+*pt.PageRegion EnvDL/Envelope DL: ""
+*zh_CN.PageRegion EnvDL/DL号信封: ""
+*zh_TW.PageRegion EnvDL/DL 信封: ""
+
+*PageRegion EnvMonarch/Env Monarch: "
+    << /PageSize [279 540] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [279 540] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion EnvMonarch/Umschlag Monarch: ""
+*es.PageRegion EnvMonarch/Sobre Monarch: ""
+*fr.PageRegion EnvMonarch/Enveloppe Monarch: ""
+*it.PageRegion EnvMonarch/Busta Monarch: ""
+*ja.PageRegion EnvMonarch/封筒 Monarch: ""
+*ko.PageRegion EnvMonarch/Monarch 봉투: ""
+*pt.PageRegion EnvMonarch/Envelope Monarch: ""
+*zh_CN.PageRegion EnvMonarch/Monarch号信封: ""
+*zh_TW.PageRegion EnvMonarch/Monarch 信封: ""
+
+*PageRegion EnvC5/Env C5: "
+    << /PageSize [459 649] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [459 649] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion EnvC5/Umschlag C5: ""
+*es.PageRegion EnvC5/Sobre C5: ""
+*fr.PageRegion EnvC5/Enveloppe C5: ""
+*it.PageRegion EnvC5/Busta C5: ""
+*ja.PageRegion EnvC5/封筒 C5: ""
+*ko.PageRegion EnvC5/C5 봉투: ""
+*pt.PageRegion EnvC5/Envelope C5: ""
+*zh_CN.PageRegion EnvC5/C5号信封: ""
+*zh_TW.PageRegion EnvC5/C5 信封: ""
+
+*PageRegion EnvB5/Env ISO B5: "
+    << /PageSize [499 709] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [499 709] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion EnvB5/Umschlag ISO B5: ""
+*es.PageRegion EnvB5/Sobre ISO B5: ""
+*fr.PageRegion EnvB5/Env ISO B5: ""
+*it.PageRegion EnvB5/Busta ISO B5: ""
+*ja.PageRegion EnvB5/封筒 ISO B5: ""
+*ko.PageRegion EnvB5/ISO B5 봉투: ""
+*pt.PageRegion EnvB5/Env ISO B5: ""
+*zh_CN.PageRegion EnvB5/ISO B5号信封: ""
+*zh_TW.PageRegion EnvB5/Env ISO B5: ""
+
+*PageRegion DoublePostcardRotated/Double Postcard (JIS): "
+    << /PageSize [420 567] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [420 567] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion DoublePostcardRotated/Doppelte Postkarte (JIS): ""
+*es.PageRegion DoublePostcardRotated/Tarjeta postal doble (JIS): ""
+*fr.PageRegion DoublePostcardRotated/Carte postale double (JIS): ""
+*it.PageRegion DoublePostcardRotated/Cartolina doppia (JIS): ""
+*ja.PageRegion DoublePostcardRotated/往復はがき (JIS): ""
+*ko.PageRegion DoublePostcardRotated/양면 엽서 (JIS): ""
+*pt.PageRegion DoublePostcardRotated/Postal duplo (JIS): ""
+*zh_CN.PageRegion DoublePostcardRotated/大号明信片 (JIS): ""
+*zh_TW.PageRegion DoublePostcardRotated/雙聯明信片(JIS): ""
+
+*PageRegion A5/A5: "
+    << /PageSize [420 595] /MediaType (null)
+	/InputAttributes << 0 << /PageSize [420 595] /MediaType (null) >> >> >> setpagedevice "
+*End
+*de.PageRegion A5/A5: ""
+*es.PageRegion A5/A5: ""
+*fr.PageRegion A5/A5: ""
+*it.PageRegion A5/A5: ""
+*ja.PageRegion A5/A5: ""
+*ko.PageRegion A5/A5: ""
+*pt.PageRegion A5/A5: ""
+*zh_CN.PageRegion A5/A5: ""
+*zh_TW.PageRegion A5/A5: ""
+
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Letter
+*ImageableArea Letter/Letter: "12 12 600 780"
+*de.ImageableArea Letter/Letter: ""
+*es.ImageableArea Letter/Letter: ""
+*fr.ImageableArea Letter/Lettre: ""
+*it.ImageableArea Letter/Letter: ""
+*ja.ImageableArea Letter/レター: ""
+*ko.ImageableArea Letter/레터: ""
+*pt.ImageableArea Letter/Carta: ""
+*zh_CN.ImageableArea Letter/信纸: ""
+*zh_TW.ImageableArea Letter/Letter: ""
+
+*ImageableArea Legal/Legal: "12 12 600 996"
+*de.ImageableArea Legal/Legal: ""
+*es.ImageableArea Legal/Legal: ""
+*fr.ImageableArea Legal/Légal: ""
+*it.ImageableArea Legal/Legal: ""
+*ja.ImageableArea Legal/リーガル: ""
+*ko.ImageableArea Legal/리갈: ""
+*pt.ImageableArea Legal/Legal: ""
+*zh_CN.ImageableArea Legal/Legal: ""
+*zh_TW.ImageableArea Legal/Legal: ""
+
+*ImageableArea Executive/Executive: "12 12 510 744"
+*de.ImageableArea Executive/Executive: ""
+*es.ImageableArea Executive/Ejecutivo: ""
+*fr.ImageableArea Executive/Exécutif: ""
+*it.ImageableArea Executive/Executive: ""
+*ja.ImageableArea Executive/エグゼクティブ: ""
+*ko.ImageableArea Executive/Executive: ""
+*pt.ImageableArea Executive/Executivo: ""
+*zh_CN.ImageableArea Executive/Executive: ""
+*zh_TW.ImageableArea Executive/Executive: ""
+
+*ImageableArea Tabloid/11x17: "12 12 780 1212"
+*de.ImageableArea Tabloid/11x17 Zoll: ""
+*es.ImageableArea Tabloid/11x17: ""
+*fr.ImageableArea Tabloid/11 x 17 pouces: ""
+*it.ImageableArea Tabloid/11x17: ""
+*ja.ImageableArea Tabloid/11x17: ""
+*ko.ImageableArea Tabloid/11x17: ""
+*pt.ImageableArea Tabloid/11x17: ""
+*zh_CN.ImageableArea Tabloid/11x17: ""
+*zh_TW.ImageableArea Tabloid/11x17 : ""
+
+*ImageableArea A4/A4: "12 12 583 830"
+*de.ImageableArea A4/A4: ""
+*es.ImageableArea A4/A4: ""
+*fr.ImageableArea A4/A4: ""
+*it.ImageableArea A4/A4: ""
+*ja.ImageableArea A4/A4: ""
+*ko.ImageableArea A4/A4: ""
+*pt.ImageableArea A4/A4: ""
+*zh_CN.ImageableArea A4/A4: ""
+*zh_TW.ImageableArea A4/A4: ""
+
+*ImageableArea B4/JIS B4: "12 12 717 1020"
+*de.ImageableArea B4/B4 (JIS): ""
+*es.ImageableArea B4/JIS B4: ""
+*fr.ImageableArea B4/JIS B4: ""
+*it.ImageableArea B4/JIS B4: ""
+*ja.ImageableArea B4/B4 (JIS): ""
+*ko.ImageableArea B4/JIS B4: ""
+*pt.ImageableArea B4/B4 JIS: ""
+*zh_CN.ImageableArea B4/JIS B4: ""
+*zh_TW.ImageableArea B4/JIS B4: ""
+
+*ImageableArea B5/JIS B5: "12 12 504 717"
+*de.ImageableArea B5/JIS B5: ""
+*es.ImageableArea B5/JIS B5: ""
+*fr.ImageableArea B5/JIS B5: ""
+*it.ImageableArea B5/JIS B5: ""
+*ja.ImageableArea B5/JIS B5: ""
+*ko.ImageableArea B5/JIS B5: ""
+*pt.ImageableArea B5/JIS B5: ""
+*zh_CN.ImageableArea B5/JIS B5: ""
+*zh_TW.ImageableArea B5/JIS B5: ""
+
+*ImageableArea A3/A3: "12 12 830 1179"
+*de.ImageableArea A3/A3: ""
+*es.ImageableArea A3/A3: ""
+*fr.ImageableArea A3/A3: ""
+*it.ImageableArea A3/A3: ""
+*ja.ImageableArea A3/A3: ""
+*ko.ImageableArea A3/A3: ""
+*pt.ImageableArea A3/A3: ""
+*zh_CN.ImageableArea A3/A3: ""
+*zh_TW.ImageableArea A3/A3: ""
+
+*ImageableArea w869h1304/A3 (Oversize 12x18.11): "12 12 857 1292"
+*de.ImageableArea w869h1304/A3 (Übergröße 12x18,11 Zoll): ""
+*es.ImageableArea w869h1304/A3 (Extra 12x18,11): ""
+*fr.ImageableArea w869h1304/A3 (grand) [12 x 18,11 pouces]: ""
+*it.ImageableArea w869h1304/A3 (oversize 12x18,11): ""
+*ja.ImageableArea w869h1304/A3 (大 12x18.11): ""
+*ko.ImageableArea w869h1304/A3 (특대12x18.11): ""
+*pt.ImageableArea w869h1304/A3 (extra 12x18,11 pol.): ""
+*zh_CN.ImageableArea w869h1304/A3 (超大尺寸 12x18.11): ""
+*zh_TW.ImageableArea w869h1304/A3 (Oversize 12x18.11): ""
+
+*ImageableArea w612h935/Executive (JIS): "12.00 12.00 599.76 922.76"
+*de.ImageableArea w612h935/Executive (JIS): ""
+*es.ImageableArea w612h935/Ejecutivo (JIS): ""
+*fr.ImageableArea w612h935/Executive (JIS): ""
+*it.ImageableArea w612h935/Executive (JIS): ""
+*ja.ImageableArea w612h935/エグゼクティブ (JIS): ""
+*ko.ImageableArea w612h935/Executive (JIS): ""
+*pt.ImageableArea w612h935/Executivo (JIS): ""
+*zh_CN.ImageableArea w612h935/Executive (JIS): ""
+*zh_TW.ImageableArea w612h935/Executive (JIS): ""
+
+*ImageableArea w558h774/16K: "12.00 12.00 545.76 761.76"
+*de.ImageableArea w558h774/16K: ""
+*es.ImageableArea w558h774/16K: ""
+*fr.ImageableArea w558h774/16 Ko: ""
+*it.ImageableArea w558h774/16K: ""
+*ja.ImageableArea w558h774/16K: ""
+*ko.ImageableArea w558h774/16K: ""
+*pt.ImageableArea w558h774/16K: ""
+*zh_CN.ImageableArea w558h774/16K: ""
+*zh_TW.ImageableArea w558h774/16K: ""
+
+*ImageableArea w774h1116/8K: "12.00 12.00 761.76 1103.76"
+*de.ImageableArea w774h1116/8K: ""
+*es.ImageableArea w774h1116/8K: ""
+*fr.ImageableArea w774h1116/8 Ko: ""
+*it.ImageableArea w774h1116/8K: ""
+*ja.ImageableArea w774h1116/8K: ""
+*ko.ImageableArea w774h1116/8K: ""
+*pt.ImageableArea w774h1116/8K: ""
+*zh_CN.ImageableArea w774h1116/8K: ""
+*zh_TW.ImageableArea w774h1116/8K: ""
+
+*ImageableArea Env10/Env Comm10: "12 12 285 672"
+*de.ImageableArea Env10/Umschlag Comm10: ""
+*es.ImageableArea Env10/Sobre Comm10: ""
+*fr.ImageableArea Env10/Enveloppe Comm10: ""
+*it.ImageableArea Env10/Busta Comm10: ""
+*ja.ImageableArea Env10/封筒 Comm10: ""
+*ko.ImageableArea Env10/Comm10 봉투: ""
+*pt.ImageableArea Env10/Envelope Comm10: ""
+*zh_CN.ImageableArea Env10/Comm10号信封: ""
+*zh_TW.ImageableArea Env10/Comm10 信封: ""
+
+*ImageableArea EnvDL/Env DL: "12 12 300 612"
+*de.ImageableArea EnvDL/Umschlag DL: ""
+*es.ImageableArea EnvDL/Sobre DL: ""
+*fr.ImageableArea EnvDL/Enveloppe DL: ""
+*it.ImageableArea EnvDL/Busta DL: ""
+*ja.ImageableArea EnvDL/封筒 DL: ""
+*ko.ImageableArea EnvDL/DL 봉투: ""
+*pt.ImageableArea EnvDL/Envelope DL: ""
+*zh_CN.ImageableArea EnvDL/DL号信封: ""
+*zh_TW.ImageableArea EnvDL/DL 信封: ""
+
+*ImageableArea EnvMonarch/Env Monarch: "12 12 267 528"
+*de.ImageableArea EnvMonarch/Umschlag Monarch: ""
+*es.ImageableArea EnvMonarch/Sobre Monarch: ""
+*fr.ImageableArea EnvMonarch/Enveloppe Monarch: ""
+*it.ImageableArea EnvMonarch/Busta Monarch: ""
+*ja.ImageableArea EnvMonarch/封筒 Monarch: ""
+*ko.ImageableArea EnvMonarch/Monarch 봉투: ""
+*pt.ImageableArea EnvMonarch/Envelope Monarch: ""
+*zh_CN.ImageableArea EnvMonarch/Monarch号信封: ""
+*zh_TW.ImageableArea EnvMonarch/Monarch 信封: ""
+
+*ImageableArea EnvC5/Env C5: "12 12 447 637"
+*de.ImageableArea EnvC5/Umschlag C5: ""
+*es.ImageableArea EnvC5/Sobre C5: ""
+*fr.ImageableArea EnvC5/Enveloppe C5: ""
+*it.ImageableArea EnvC5/Busta C5: ""
+*ja.ImageableArea EnvC5/封筒 C5: ""
+*ko.ImageableArea EnvC5/C5 봉투: ""
+*pt.ImageableArea EnvC5/Envelope C5: ""
+*zh_CN.ImageableArea EnvC5/C5号信封: ""
+*zh_TW.ImageableArea EnvC5/C5 信封: ""
+
+*ImageableArea EnvB5/Env ISO B5: "12 12 487 697"
+*de.ImageableArea EnvB5/Umschlag ISO B5: ""
+*es.ImageableArea EnvB5/Sobre ISO B5: ""
+*fr.ImageableArea EnvB5/Env ISO B5: ""
+*it.ImageableArea EnvB5/Busta ISO B5: ""
+*ja.ImageableArea EnvB5/封筒 ISO B5: ""
+*ko.ImageableArea EnvB5/ISO B5 봉투: ""
+*pt.ImageableArea EnvB5/Env ISO B5: ""
+*zh_CN.ImageableArea EnvB5/ISO B5号信封: ""
+*zh_TW.ImageableArea EnvB5/Env ISO B5: ""
+
+*ImageableArea DoublePostcardRotated/Double Postcard (JIS): "12 12 408 555"
+*de.ImageableArea DoublePostcardRotated/Doppelte Postkarte (JIS): ""
+*es.ImageableArea DoublePostcardRotated/Tarjeta postal doble (JIS): ""
+*fr.ImageableArea DoublePostcardRotated/Carte postale double (JIS): ""
+*it.ImageableArea DoublePostcardRotated/Cartolina doppia (JIS): ""
+*ja.ImageableArea DoublePostcardRotated/往復はがき (JIS): ""
+*ko.ImageableArea DoublePostcardRotated/양면 엽서 (JIS): ""
+*pt.ImageableArea DoublePostcardRotated/Postal duplo (JIS): ""
+*zh_CN.ImageableArea DoublePostcardRotated/大号明信片 (JIS): ""
+*zh_TW.ImageableArea DoublePostcardRotated/雙聯明信片(JIS): ""
+
+*ImageableArea A5/A5: "12 12 408 583"
+*de.ImageableArea A5/A5: ""
+*es.ImageableArea A5/A5: ""
+*fr.ImageableArea A5/A5: ""
+*it.ImageableArea A5/A5: ""
+*ja.ImageableArea A5/A5: ""
+*ko.ImageableArea A5/A5: ""
+*pt.ImageableArea A5/A5: ""
+*zh_CN.ImageableArea A5/A5: ""
+*zh_TW.ImageableArea A5/A5: ""
+
+
+*?ImageableArea: "
+ save /cvp { cvi (            ) cvs print ( ) print } bind def
+  newpath clippath pathbbox
+  4 -2 roll exch 2 {ceiling cvp} repeat
+  exch 2 {floor cvp} repeat flush
+ restore
+"
+*End
+
+*% These provide the physical dimensions of the paper (by keyword)
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/Letter: "612 792"
+*de.PaperDimension Letter/Letter: ""
+*es.PaperDimension Letter/Letter: ""
+*fr.PaperDimension Letter/Lettre: ""
+*it.PaperDimension Letter/Letter: ""
+*ja.PaperDimension Letter/レター: ""
+*ko.PaperDimension Letter/레터: ""
+*pt.PaperDimension Letter/Carta: ""
+*zh_CN.PaperDimension Letter/信纸: ""
+*zh_TW.PaperDimension Letter/Letter: ""
+
+*PaperDimension Legal/Legal:     "612 1008"
+*de.PaperDimension Legal/Legal: ""
+*es.PaperDimension Legal/Legal: ""
+*fr.PaperDimension Legal/Légal: ""
+*it.PaperDimension Legal/Legal: ""
+*ja.PaperDimension Legal/リーガル: ""
+*ko.PaperDimension Legal/리갈: ""
+*pt.PaperDimension Legal/Legal: ""
+*zh_CN.PaperDimension Legal/Legal: ""
+*zh_TW.PaperDimension Legal/Legal: ""
+
+*PaperDimension Executive/Executive: "522 756"
+*de.PaperDimension Executive/Executive: ""
+*es.PaperDimension Executive/Ejecutivo: ""
+*fr.PaperDimension Executive/Exécutif: ""
+*it.PaperDimension Executive/Executive: ""
+*ja.PaperDimension Executive/エグゼクティブ: ""
+*ko.PaperDimension Executive/Executive: ""
+*pt.PaperDimension Executive/Executivo: ""
+*zh_CN.PaperDimension Executive/Executive: ""
+*zh_TW.PaperDimension Executive/Executive: ""
+
+*PaperDimension Tabloid/11x17:        "792 1224"
+*de.PaperDimension Tabloid/11x17 Zoll: ""
+*es.PaperDimension Tabloid/11x17: ""
+*fr.PaperDimension Tabloid/11 x 17 pouces: ""
+*it.PaperDimension Tabloid/11x17: ""
+*ja.PaperDimension Tabloid/11x17: ""
+*ko.PaperDimension Tabloid/11x17: ""
+*pt.PaperDimension Tabloid/11x17: ""
+*zh_CN.PaperDimension Tabloid/11x17: ""
+*zh_TW.PaperDimension Tabloid/11x17 : ""
+
+*PaperDimension A4/A4: "595 842"
+*de.PaperDimension A4/A4: ""
+*es.PaperDimension A4/A4: ""
+*fr.PaperDimension A4/A4: ""
+*it.PaperDimension A4/A4: ""
+*ja.PaperDimension A4/A4: ""
+*ko.PaperDimension A4/A4: ""
+*pt.PaperDimension A4/A4: ""
+*zh_CN.PaperDimension A4/A4: ""
+*zh_TW.PaperDimension A4/A4: ""
+
+*PaperDimension B4/JIS B4: "729 1032"
+*de.PaperDimension B4/B4 (JIS): ""
+*es.PaperDimension B4/JIS B4: ""
+*fr.PaperDimension B4/JIS B4: ""
+*it.PaperDimension B4/B4 JIS: ""
+*ja.PaperDimension B4/B4 (JIS): ""
+*ko.PaperDimension B4/JIS B4: ""
+*pt.PaperDimension B4/B4 JIS: ""
+*zh_CN.PaperDimension B4/JIS B4: ""
+*zh_TW.PaperDimension B4/JIS B4: ""
+
+*PaperDimension B5/JIS B5: "516 729"
+*de.PaperDimension B5/JIS B5: ""
+*es.PaperDimension B5/JIS B5: ""
+*fr.PaperDimension B5/JIS B5: ""
+*it.PaperDimension B5/JIS B5: ""
+*ja.PaperDimension B5/JIS B5: ""
+*ko.PaperDimension B5/JIS B5: ""
+*pt.PaperDimension B5/JIS B5: ""
+*zh_CN.PaperDimension B5/JIS B5: ""
+*zh_TW.PaperDimension B5/JIS B5: ""
+
+*PaperDimension A3/A3:     "842 1191"
+*de.PaperDimension A3/A3: ""
+*es.PaperDimension A3/A3: ""
+*fr.PaperDimension A3/A3: ""
+*it.PaperDimension A3/A3: ""
+*ja.PaperDimension A3/A3: ""
+*ko.PaperDimension A3/A3: ""
+*pt.PaperDimension A3/A3: ""
+*zh_CN.PaperDimension A3/A3: ""
+*zh_TW.PaperDimension A3/A3: ""
+
+*PaperDimension w869h1304/A3 (Oversize 12x18.11): "869 1304"
+*de.PaperDimension w869h1304/A3 (Übergröße 12x18,11 Zoll): ""
+*es.PaperDimension w869h1304/A3 (Extra 12x18,11): ""
+*fr.PaperDimension w869h1304/A3 (grand) [12 x 18,11 pouces]: ""
+*it.PaperDimension w869h1304/A3 (oversize 12x18,11): ""
+*ja.PaperDimension w869h1304/A3 (大 12x18.11): ""
+*ko.PaperDimension w869h1304/A3 (특대12x18.11): ""
+*pt.PaperDimension w869h1304/A3 (extra 12x18,11 pol.): ""
+*zh_CN.PaperDimension w869h1304/A3 (超大尺寸 12x18.11): ""
+*zh_TW.PaperDimension w869h1304/A3 (Oversize 12x18.11): ""
+
+*PaperDimension w612h935/Executive (JIS): "612 935"
+*de.PaperDimension w612h935/Executive (JIS): ""
+*es.PaperDimension w612h935/Ejecutivo (JIS): ""
+*fr.PaperDimension w612h935/Executive (JIS): ""
+*it.PaperDimension w612h935/Executive (JIS): ""
+*ja.PaperDimension w612h935/エグゼクティブ (JIS): ""
+*ko.PaperDimension w612h935/Executive (JIS): ""
+*pt.PaperDimension w612h935/Executivo (JIS): ""
+*zh_CN.PaperDimension w612h935/Executive (JIS): ""
+*zh_TW.PaperDimension w612h935/Executive (JIS): ""
+
+*PaperDimension w558h774/16K: "558 774"
+*de.PaperDimension w558h774/16K: ""
+*es.PaperDimension w558h774/16K: ""
+*fr.PaperDimension w558h774/16 Ko: ""
+*it.PaperDimension w558h774/16K: ""
+*ja.PaperDimension w558h774/16K: ""
+*ko.PaperDimension w558h774/16K: ""
+*pt.PaperDimension w558h774/16K: ""
+*zh_CN.PaperDimension w558h774/16K: ""
+*zh_TW.PaperDimension w558h774/16K: ""
+
+*PaperDimension w774h1116/8K: "774 1116"
+*de.PaperDimension w774h1116/8K: ""
+*es.PaperDimension w774h1116/8K: ""
+*fr.PaperDimension w774h1116/8 Ko: ""
+*it.PaperDimension w774h1116/8K: ""
+*ja.PaperDimension w774h1116/8K: ""
+*ko.PaperDimension w774h1116/8K: ""
+*pt.PaperDimension w774h1116/8K: ""
+*zh_CN.PaperDimension w774h1116/8K: ""
+*zh_TW.PaperDimension w774h1116/8K: ""
+
+*PaperDimension Env10/Env Comm10: "297 684"
+*de.PaperDimension Env10/Umschlag Comm10: ""
+*es.PaperDimension Env10/Sobre Comm10: ""
+*fr.PaperDimension Env10/Enveloppe Comm10: ""
+*it.PaperDimension Env10/Busta Comm10: ""
+*ja.PaperDimension Env10/封筒 Comm10: ""
+*ko.PaperDimension Env10/Comm10 봉투: ""
+*pt.PaperDimension Env10/Envelope Comm10: ""
+*zh_CN.PaperDimension Env10/Comm10号信封: ""
+*zh_TW.PaperDimension Env10/Comm10 信封: ""
+
+*PaperDimension EnvDL/Env DL: "312 624"
+*de.PaperDimension EnvDL/Umschlag DL: ""
+*es.PaperDimension EnvDL/Sobre DL: ""
+*fr.PaperDimension EnvDL/Enveloppe DL: ""
+*it.PaperDimension EnvDL/Busta DL: ""
+*ja.PaperDimension EnvDL/封筒 DL: ""
+*ko.PaperDimension EnvDL/DL 봉투: ""
+*pt.PaperDimension EnvDL/Envelope DL: ""
+*zh_CN.PaperDimension EnvDL/DL号信封: ""
+*zh_TW.PaperDimension EnvDL/DL 信封: ""
+
+*PaperDimension EnvMonarch/Env Monarch: "279 540"
+*de.PaperDimension EnvMonarch/Umschlag Monarch: ""
+*es.PaperDimension EnvMonarch/Sobre Monarch: ""
+*fr.PaperDimension EnvMonarch/Enveloppe Monarch: ""
+*it.PaperDimension EnvMonarch/Busta Monarch: ""
+*ja.PaperDimension EnvMonarch/封筒 Monarch: ""
+*ko.PaperDimension EnvMonarch/Monarch 봉투: ""
+*pt.PaperDimension EnvMonarch/Envelope Monarch: ""
+*zh_CN.PaperDimension EnvMonarch/Monarch号信封: ""
+*zh_TW.PaperDimension EnvMonarch/Monarch 信封: ""
+
+*PaperDimension EnvC5/Env C5: "459 649"
+*de.PaperDimension EnvC5/Umschlag C5: ""
+*es.PaperDimension EnvC5/Sobre C5: ""
+*fr.PaperDimension EnvC5/Enveloppe C5: ""
+*it.PaperDimension EnvC5/Busta C5: ""
+*ja.PaperDimension EnvC5/封筒 C5: ""
+*ko.PaperDimension EnvC5/C5 봉투: ""
+*pt.PaperDimension EnvC5/Envelope C5: ""
+*zh_CN.PaperDimension EnvC5/C5号信封: ""
+*zh_TW.PaperDimension EnvC5/C5 信封: ""
+
+*PaperDimension EnvB5/Env ISO B5: "499 709"
+*de.PaperDimension EnvB5/Umschlag ISO B5: ""
+*es.PaperDimension EnvB5/Sobre ISO B5: ""
+*fr.PaperDimension EnvB5/Env ISO B5: ""
+*it.PaperDimension EnvB5/Busta ISO B5: ""
+*ja.PaperDimension EnvB5/封筒 ISO B5: ""
+*ko.PaperDimension EnvB5/ISO B5 봉투: ""
+*pt.PaperDimension EnvB5/Env ISO B5: ""
+*zh_CN.PaperDimension EnvB5/ISO B5号信封: ""
+*zh_TW.PaperDimension EnvB5/Env ISO B5: ""
+
+*PaperDimension DoublePostcardRotated/Double Postcard (JIS): "420 567"
+*de.PaperDimension DoublePostcardRotated/Doppelte Postkarte (JIS): ""
+*es.PaperDimension DoublePostcardRotated/Tarjeta postal doble (JIS): ""
+*fr.PaperDimension DoublePostcardRotated/Carte postale double (JIS): ""
+*it.PaperDimension DoublePostcardRotated/Cartolina doppia (JIS): ""
+*ja.PaperDimension DoublePostcardRotated/往復はがき (JIS): ""
+*ko.PaperDimension DoublePostcardRotated/양면 엽서 (JIS): ""
+*pt.PaperDimension DoublePostcardRotated/Postal duplo (JIS): ""
+*zh_CN.PaperDimension DoublePostcardRotated/大号明信片 (JIS): ""
+*zh_TW.PaperDimension DoublePostcardRotated/雙聯明信片(JIS): ""
+
+*PaperDimension A5/A5: "420 595"
+*de.PaperDimension A5/A5: ""
+*es.PaperDimension A5/A5: ""
+*fr.PaperDimension A5/A5: ""
+*it.PaperDimension A5/A5: ""
+*ja.PaperDimension A5/A5: ""
+*ko.PaperDimension A5/A5: ""
+*pt.PaperDimension A5/A5: ""
+*zh_CN.PaperDimension A5/A5: ""
+*zh_TW.PaperDimension A5/A5: ""
+
+
+*RequiresPageRegion All: True
+*% =================================
+*% Specials for Quark
+*% =================================
+*QRKDoNonLocalDCS: False
+*QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*de.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*es.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*fr.QRKCustomHalftone HP/HP Color LaserJet 8500: ""
+*it.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*ja.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*ko.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*pt.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*zh_CN.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+*zh_TW.QRKCustomHalftone HP/HP Color LaserJet 8550: ""
+
+
+*% Font Information =========================
+*DefaultFont: Courier
+*Font AlbertusMT: Standard "(001.000)" Standard Disk
+*Font AlbertusMT-Italic: Standard "(001.000)" Standard Disk
+*Font AlbertusMT-Light: Standard "(001.000)" Standard Disk
+*Font AntiqueOlive-Bold: Standard "(001.001)" Standard Disk
+*Font AntiqueOlive-Compact: Standard "(001.001)" Standard Disk
+*Font AntiqueOlive-Italic: Standard "(001.001)" Standard Disk
+*Font AntiqueOlive-Roman: Standard "(001.001)" Standard Disk
+*Font Apple-Chancery: Standard "(002.000)" Standard Disk
+*Font Arial-BoldItalicMT: Standard "(002.000)" Standard Disk
+*Font Arial-BoldMT: Standard "(002.000)" Standard Disk
+*Font Arial-ItalicMT: Standard "(002.000)" Standard Disk
+*Font ArialMT: Standard "(002.000)" Standard Disk
+*Font AvantGarde-Book: Standard "(002.000)" Standard Disk
+*Font AvantGarde-BookOblique: Standard "(002.000)" Standard Disk
+*Font AvantGarde-Demi: Standard "(002.000)" Standard Disk
+*Font AvantGarde-DemiOblique: Standard "(002.000)" Standard Disk
+*Font Bodoni: Standard "(001.002)" Standard Disk
+*Font Bodoni-Bold: Standard "(001.002)" Standard Disk
+*Font Bodoni-BoldItalic: Standard "(001.002)" Standard Disk
+*Font Bodoni-Italic: Standard "(001.002)" Standard Disk
+*Font Bodoni-Poster: Standard "(001.002)" Standard Disk
+*Font Bodoni-PosterCompressed: Standard "(001.001)" Standard Disk
+*Font Bookman-Demi: Standard "(002.000)" Standard Disk
+*Font Bookman-DemiItalic: Standard "(002.000)" Standard Disk
+*Font Bookman-Light: Standard "(002.000)" Standard Disk
+*Font Bookman-LightItalic: Standard "(002.000)" Standard Disk
+*Font Carta: Standard "(001.001)" Standard Disk
+*Font Chicago: Standard "(002.000)" Standard Disk
+*Font Clarendon: Standard "(001.001)" Standard Disk
+*Font Clarendon-Bold: Standard "(001.001)" Standard Disk
+*Font Clarendon-Light: Standard "(001.001)" Standard Disk
+*Font CooperBlack: Standard "(001.003)" Standard Disk
+*Font CooperBlack-Italic: Standard "(001.003)" Standard Disk
+*Font Copperplate-ThirtyThreeBC: Standard "(001.002)" Standard Disk
+*Font Copperplate-ThirtyTwoBC: Standard "(001.002)" Standard Disk
+*Font Coronet-Regular: Standard "(001.000)" Standard Disk
+*Font Courier: Standard "(003.000)" Standard Disk
+*Font Courier-Bold: Standard "(003.000)" Standard Disk
+*Font Courier-BoldOblique: Standard "(003.000)" Standard Disk
+*Font Courier-Oblique: Standard "(003.000)" Standard Disk
+*Font Eurostile: Standard "(001.002)" Standard Disk
+*Font Eurostile-Bold: Standard "(001.001)" Standard Disk
+*Font Eurostile-BoldExtendedTwo: Standard "(001.002)" Standard Disk
+*Font Eurostile-ExtendedTwo: Standard "(001.002)" Standard Disk
+*Font Geneva: Standard "(002.000)" Standard Disk
+*Font GillSans: Standard "(001.002)" Standard Disk
+*Font GillSans-Bold: Standard "(001.001)" Standard Disk
+*Font GillSans-BoldCondensed: Standard "(001.001)" Standard Disk
+*Font GillSans-BoldItalic: Standard "(001.002)" Standard Disk
+*Font GillSans-Condensed: Standard "(001.001)" Standard Disk
+*Font GillSans-ExtraBold: Standard "(001.001)" Standard Disk
+*Font GillSans-Italic: Standard "(001.002)" Standard Disk
+*Font GillSans-Light: Standard "(001.001)" Standard Disk
+*Font GillSans-LightItalic: Standard "(001.002)" Standard Disk
+*Font Goudy: Standard "(001.003)" Standard Disk
+*Font Goudy-Bold: Standard "(001.002)" Standard Disk
+*Font Goudy-BoldItalic: Standard "(001.002)" Standard Disk
+*Font Goudy-ExtraBold: Standard "(001.001)" Standard Disk
+*Font Goudy-Italic: Standard "(001.002)" Standard Disk
+*Font Helvetica: Standard "(002.000)" Standard Disk
+*Font Helvetica-Bold: Standard "(002.000)" Standard Disk
+*Font Helvetica-BoldOblique: Standard "(002.000)" Standard Disk
+*Font Helvetica-Condensed: Standard "(002.000)" Standard Disk
+*Font Helvetica-Condensed-Bold: Standard "(002.000)" Standard Disk
+*Font Helvetica-Condensed-BoldObl: Standard "(002.000)" Standard Disk
+*Font Helvetica-Condensed-Oblique: Standard "(002.000)" Standard Disk
+*Font Helvetica-Narrow: Standard "(002.000)" Standard Disk
+*Font Helvetica-Narrow-Bold: Standard "(002.000)" Standard Disk
+*Font Helvetica-Narrow-BoldOblique: Standard "(002.000)" Standard Disk
+*Font Helvetica-Narrow-Oblique: Standard "(002.000)" Standard Disk
+*Font Helvetica-Oblique: Standard "(002.000)" Standard Disk
+*Font HoeflerText-Black: Standard "(002.000)" Standard Disk
+*Font HoeflerText-BlackItalic: Standard "(002.000)" Standard Disk
+*Font HoeflerText-Italic: Standard "(002.000)" Standard Disk
+*Font HoeflerText-Ornaments: Standard "(002.000)" Standard Disk
+*Font HoeflerText-Regular: Standard "(002.000)" Standard Disk
+*Font JoannaMT: Standard "(001.000)" Standard Disk
+*Font JoannaMT-Bold: Standard "(001.000)" Standard Disk
+*Font JoannaMT-BoldItalic: Standard "(001.000)" Standard Disk
+*Font JoannaMT-Italic: Standard "(001.000)" Standard Disk
+*Font LetterGothic: Standard "(001.004)" Standard Disk
+*Font LetterGothic-Bold: Standard "(001.006)" Standard Disk
+*Font LetterGothic-BoldSlanted: Standard "(001.005)" Standard Disk
+*Font LetterGothic-Slanted: Standard "(001.004)" Standard Disk
+*Font LubalinGraph-Book: Standard "(001.002)" Standard Disk
+*Font LubalinGraph-BookOblique: Standard "(001.002)" Standard Disk
+*Font LubalinGraph-Demi: Standard "(001.002)" Standard Disk
+*Font LubalinGraph-DemiOblique: Standard "(001.002)" Standard Disk
+*Font Marigold: Standard "(001.000)" Standard Disk
+*Font Monaco: Standard "(002.000)" Standard Disk
+*Font MonaLisa-Recut: Standard "(001.000)" Standard Disk
+*Font NewCenturySchlbk-Bold: Standard "(002.000)" Standard Disk
+*Font NewCenturySchlbk-BoldItalic: Standard "(002.000)" Standard Disk
+*Font NewCenturySchlbk-Italic: Standard "(002.000)" Standard Disk
+*Font NewCenturySchlbk-Roman: Standard "(002.000)" Standard Disk
+*Font NewYork: Standard "(002.000)" Standard Disk
+*Font Optima: Standard "(001.005)" Standard Disk
+*Font Optima-Bold: Standard "(001.005)" Standard Disk
+*Font Optima-BoldItalic: Standard "(001.000)" Standard Disk
+*Font Optima-Italic: Standard "(001.000)" Standard Disk
+*Font Oxford: Standard "(001.000)" Standard Disk
+*Font Palatino-Bold: Standard "(002.000)" Standard Disk
+*Font Palatino-BoldItalic: Standard "(002.000)" Standard Disk
+*Font Palatino-Italic: Standard "(002.000)" Standard Disk
+*Font Palatino-Roman: Standard "(002.000)" Standard Disk
+*Font StempelGaramond-Bold: Standard "(001.002)" Standard Disk
+*Font StempelGaramond-BoldItalic: Standard "(001.002)" Standard Disk
+*Font StempelGaramond-Italic: Standard "(001.002)" Standard Disk
+*Font StempelGaramond-Roman: Standard "(001.002)" Standard Disk
+*Font Symbol: Standard "(001.008)" Standard Disk
+*Font Tekton: Standard "(001.001)" Standard Disk
+*Font Times-Bold: Standard "(002.000)" Standard Disk
+*Font Times-BoldItalic: Standard "(002.000)" Standard Disk
+*Font Times-Italic: Standard "(002.000)" Standard Disk
+*Font Times-Roman: Standard "(002.000)" Standard Disk
+*Font TimesNewRomanPS-BoldItalicMT: Standard "(002.000)" Standard Disk
+*Font TimesNewRomanPS-BoldMT: Standard "(002.000)" Standard Disk
+*Font TimesNewRomanPS-ItalicMT: Standard "(002.000)" Standard Disk
+*Font TimesNewRomanPSMT: Standard "(002.000)" Standard Disk
+*Font Univers: Standard "(001.003)" Standard Disk
+*Font Univers-Bold: Standard "(001.003)" Standard Disk
+*Font Univers-BoldExt: Standard "(001.000)" Standard Disk
+*Font Univers-BoldExtObl: Standard "(001.000)" Standard Disk
+*Font Univers-BoldOblique: Standard "(001.003)" Standard Disk
+*Font Univers-Condensed: Standard "(001.002)" Standard Disk
+*Font Univers-CondensedBold: Standard "(001.001)" Standard Disk
+*Font Univers-CondensedBoldOblique: Standard "(001.001)" Standard Disk
+*Font Univers-CondensedOblique: Standard "(001.002)" Standard Disk
+*Font Univers-Extended: Standard "(001.000)" Standard Disk
+*Font Univers-ExtendedObl: Standard "(001.000)" Standard Disk
+*Font Univers-Light: Standard "(001.003)" Standard Disk
+*Font Univers-LightOblique: Standard "(001.003)" Standard Disk
+*Font Univers-Oblique: Standard "(001.003)" Standard Disk
+*Font Wingdings-Regular: Standard "(002.000)" Standard Disk
+*Font ZapfChancery-MediumItalic: Standard "(002.000)" Standard Disk
+*Font ZapfDingbats: Standard "(002.000)" Standard Disk
+*?FontQuery: "
+   save
+   { count 1 gt
+      { exch dup 127 string cvs (/) print print (:) print
+       /Font resourcestatus {pop pop (Yes)} {(No)} ifelse =
+      } { exit } ifelse
+   } bind loop
+   (*) = flush
+   restore"
+*End
+
+*?FontList: "
+   save (*) {cvn ==} 128 string /Font resourceforall
+   (*) = flush restore"
+*End
+
+*% =================================
+*% For "HP Color LaserJet 8550"

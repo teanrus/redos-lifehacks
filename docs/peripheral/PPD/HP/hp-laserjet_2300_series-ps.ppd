@@ -1,0 +1,3458 @@
+*PPD-Adobe: "4.3"
+*% =================================
+*% Copyright 1992-2015 HP Company
+*% Permission is hereby granted, free of charge, to any person obtaining
+*% a copy of this software and associated documentation files (the
+*% "Software"), to deal in the Software without restriction, including
+*% without limitation the rights to use, copy, modify, merge, publish,
+*% distribute, sublicense, and/or sell copies of the Software, and to
+*% permit persons to whom the Software is furnished to do so, subject to
+*% the following conditions:
+*%
+*% The above copyright notice and this permission notice shall be
+*% included in all copies or substantial portions of the Software.
+*%
+*% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*% LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*% OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*% WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*%
+*% [this is the MIT open source license -- please see www.opensource.org]
+*%
+*% Disclaimer:  The above statement indicates
+*% that this PPD was written using the Adobe PPD
+*% File Format Specification 4.3, but does not
+*% intend to imply approval and acceptance by
+*% Adobe Systems, Inc.
+*% =======================================================
+*% Printer Description File
+*% (c) Copyright 1992-2015 HP Development Company, L.P.
+*% PPD for hp LaserJet 2300 Series
+*% For Macintosh only
+*%========================================================
+*%=================================================
+*% 		 PPD File Version Information
+*%=================================================
+*FileVersion: "1.1"
+*HPBuildNumber: "006"
+*FormatVersion: "4.3"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*cupsLanguages: "da de es fi fr it ja ko nl nb pt sv zh_CN zh_TW"
+*PCFileName: "HP2300_6.PPD"
+
+
+
+*%=================================================
+*% 		 Product Version Information
+*%=================================================
+*ModelName: "HP LaserJet 2300"
+*ShortNickName: "HP LaserJet 2300"
+*1284DeviceID: "MFG:Hewlett-Packard;MDL:hp laserjet 2300 series;"
+*NickName: "HP LaserJet 2300 Postscript (recommended)"
+*Product: "(hp LaserJet 2300 series)"
+*Product: "(Hewlett-Packard hp LaserJet 2300 series)"
+*Product: "(HP LaserJet 2300 series)"
+*Product: "(hp LaserJet 2300L)"
+*Product: "(Hewlett-Packard hp LaserJet 2300L)"
+*Product: "(HP LaserJet 2300L)"
+*Manufacturer: "HP"
+*PSVersion: "(3010.107) 0"
+
+*%=================================================
+*%		 Device Capabilities
+*%=================================================
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+
+*LanguageLevel: "2"
+*Throughput: "20"
+*TTRasterizer: Type42
+*?TTRasterizer: "
+   save
+      42 /FontType resourcestatus
+      { pop pop (Type42)} {pop pop (None)} ifelse = flush
+   restore
+"
+*End
+
+*%=================================================
+*%		 Emulations and Protocols
+*%=================================================
+*Protocols: TBCP
+
+*SuggestedJobTimeout:  "0"
+*SuggestedWaitTimeout: "120"
+*PrintPSErrors: True
+
+*%==============================================
+*%			 Installable Options
+*%==============================================
+*OpenGroup: InstallableOptions/Installed Options
+*da.Translation InstallableOptions/Installed Options: ""
+*de.Translation InstallableOptions/Installed Options: ""
+*es.Translation InstallableOptions/Installed Options: ""
+*fi.Translation InstallableOptions/Installed Options: ""
+*fr.Translation InstallableOptions/Installed Options: ""
+*it.Translation InstallableOptions/Installed Options: ""
+*ja.Translation InstallableOptions/Installed Options: ""
+*ko.Translation InstallableOptions/Installed Options: ""
+*nl.Translation InstallableOptions/Installed Options: ""
+*nb.Translation InstallableOptions/Installed Options: ""
+*pt.Translation InstallableOptions/Installed Options: ""
+*sv.Translation InstallableOptions/Installed Options: ""
+*zh_CN.Translation InstallableOptions/Installed Options: ""
+*zh_TW.Translation InstallableOptions/Installed Options: ""
+
+
+*%Tray 3
+*%======
+*OpenUI *HPOption_Tray3/Tray 3: PickOne
+*DefaultHPOption_Tray3: False
+*da.Translation HPOption_Tray3/Bakke 3: ""
+*de.Translation HPOption_Tray3/Zufuhrfach 3: ""
+*es.Translation HPOption_Tray3/Bandeja 3: ""
+*fi.Translation HPOption_Tray3/Lokero 3: ""
+*fr.Translation HPOption_Tray3/Bac 3: ""
+*it.Translation HPOption_Tray3/Vassoio 3: ""
+*ja.Translation HPOption_Tray3/トレイ 3: ""
+*ko.Translation HPOption_Tray3/용지함 3: ""
+*nl.Translation HPOption_Tray3/Lade 3: ""
+*nb.Translation HPOption_Tray3/Skuff 3: ""
+*pt.Translation HPOption_Tray3/Bandeja 3: ""
+*sv.Translation HPOption_Tray3/Fack 3: ""
+*zh_CN.Translation HPOption_Tray3/纸盒3: ""
+*zh_TW.Translation HPOption_Tray3/紙匣3: ""
+
+*HPOption_Tray3 False/Not Installed: ""
+*da.HPOption_Tray3 False/Ikke installeret: ""
+*de.HPOption_Tray3 False/Nicht installiert: ""
+*es.HPOption_Tray3 False/No instalada: ""
+*fi.HPOption_Tray3 False/Ei asennettu: ""
+*fr.HPOption_Tray3 False/Non installé: ""
+*it.HPOption_Tray3 False/Non installato: ""
+*ja.HPOption_Tray3 False/インストールされていない: ""
+*ko.HPOption_Tray3 False/설치되지 않았음: ""
+*nl.HPOption_Tray3 False/Niet geïnstalleerd: ""
+*nb.HPOption_Tray3 False/Ikke installert: ""
+*pt.HPOption_Tray3 False/Não instalada: ""
+*sv.HPOption_Tray3 False/Ej installerat: ""
+*zh_CN.HPOption_Tray3 False/未安装: ""
+*zh_TW.HPOption_Tray3 False/尚未安裝: ""
+
+*HPOption_Tray3 Tray3_500/500-Sheet Input Tray: ""
+*da.HPOption_Tray3 Tray3_500/Bakke til 500 ark: ""
+*de.HPOption_Tray3 Tray3_500/500-Blatt-Zufuhrfach: ""
+*es.HPOption_Tray3 Tray3_500/Bandeja de entrada de 500 hojas: ""
+*fi.HPOption_Tray3 Tray3_500/500 arkin syöttölokero: ""
+*fr.HPOption_Tray3 Tray3_500/Bac d'alimentation de 500 feuilles: ""
+*it.HPOption_Tray3 Tray3_500/Cassetto da 500 fogli: ""
+*ja.HPOption_Tray3 Tray3_500/500 枚収納給紙トレイ: ""
+*ko.HPOption_Tray3 Tray3_500/500매 입력 용지함: ""
+*nl.HPOption_Tray3 Tray3_500/500-vel Invoerlade: ""
+*nb.HPOption_Tray3 Tray3_500/500-arks innskuff: ""
+*pt.HPOption_Tray3 Tray3_500/Bandeja de entrada para 500 folhas: ""
+*sv.HPOption_Tray3 Tray3_500/Pappersfack för 500 ark: ""
+*zh_CN.HPOption_Tray3 Tray3_500/500 页进纸盒: ""
+*zh_TW.HPOption_Tray3 Tray3_500/可容納 500 張紙的進紙匣: ""
+
+*HPOption_Tray3 Tray3_250/250-Sheet Input Tray: ""
+*da.HPOption_Tray3 Tray3_250/Bakke til 250 ark: ""
+*de.HPOption_Tray3 Tray3_250/250-Blatt-Zufuhrfach: ""
+*es.HPOption_Tray3 Tray3_250/Bandeja de entrada de 250 hojas: ""
+*fi.HPOption_Tray3 Tray3_250/250 arkin syöttölokero: ""
+*fr.HPOption_Tray3 Tray3_250/Bac d'alimentation de 250 feuilles: ""
+*it.HPOption_Tray3 Tray3_250/Cassetto da 250 fogli: ""
+*ja.HPOption_Tray3 Tray3_250/250 枚収納給紙トレイ: ""
+*ko.HPOption_Tray3 Tray3_250/250-Sheet Input Tray: ""
+*nl.HPOption_Tray3 Tray3_250/250-vel Invoerlade: ""
+*nb.HPOption_Tray3 Tray3_250/250-arks innskuff: ""
+*pt.HPOption_Tray3 Tray3_250/Bandeja de entrada para 250 folhas: ""
+*sv.HPOption_Tray3 Tray3_250/Pappersfack för 250 ark: ""
+*zh_CN.HPOption_Tray3 Tray3_250/250 页进纸盒: ""
+*zh_TW.HPOption_Tray3 Tray3_250/可容納 250 張紙的進紙匣: ""
+
+*?HPOption_Tray3: "
+	save
+		currentpagedevice dup /InputAttributes known
+		{/InputAttributes get 1 known {(Tray3_500)}{(False)} ifelse}
+		{pop (False)} ifelse
+		= flush
+	restore
+"
+*End
+*CloseUI: *HPOption_Tray3
+
+*OpenUI *HPOption_Duplexer/Duplex Unit: Boolean
+*DefaultHPOption_Duplexer: False
+*da.Translation HPOption_Duplexer/Dupleksenhed: ""
+*de.Translation HPOption_Duplexer/Duplexer: ""
+*es.Translation HPOption_Duplexer/Unidad de impresión dúplex: ""
+*fi.Translation HPOption_Duplexer/Paperinkääntöyksikkö: ""
+*fr.Translation HPOption_Duplexer/Unité d'impression recto verso: ""
+*it.Translation HPOption_Duplexer/Unità duplex: ""
+*ja.Translation HPOption_Duplexer/両面印刷ユニット: ""
+*ko.Translation HPOption_Duplexer/양면인쇄 장치: ""
+*nl.Translation HPOption_Duplexer/Duplex-eenheid: ""
+*nb.Translation HPOption_Duplexer/Tosidig-enhet: ""
+*pt.Translation HPOption_Duplexer/Unidade dúplex: ""
+*sv.Translation HPOption_Duplexer/Enhet för dubbelsidig utskrift: ""
+*zh_CN.Translation HPOption_Duplexer/双面打印单元: ""
+*zh_TW.Translation HPOption_Duplexer/雙面列印裝置: ""
+
+*HPOption_Duplexer True/Installed: ""
+*da.HPOption_Duplexer True/Installeret: ""
+*de.HPOption_Duplexer True/Installiert: ""
+*es.HPOption_Duplexer True/Instalada: ""
+*fi.HPOption_Duplexer True/Asennettu: ""
+*fr.HPOption_Duplexer True/Installée: ""
+*it.HPOption_Duplexer True/Installata: ""
+*ja.HPOption_Duplexer True/インストール済: ""
+*ko.HPOption_Duplexer True/설치됐음: ""
+*nl.HPOption_Duplexer True/Geïnstalleerd: ""
+*nb.HPOption_Duplexer True/Installert: ""
+*pt.HPOption_Duplexer True/Instalada: ""
+*sv.HPOption_Duplexer True/Installerad: ""
+*zh_CN.HPOption_Duplexer True/已安装: ""
+*zh_TW.HPOption_Duplexer True/已安裝: ""
+
+*HPOption_Duplexer False/Not Installed: ""
+*da.HPOption_Duplexer False/Ikke installeret: ""
+*de.HPOption_Duplexer False/Nicht installiert: ""
+*es.HPOption_Duplexer False/No instalada: ""
+*fi.HPOption_Duplexer False/Ei asennettu: ""
+*fr.HPOption_Duplexer False/Non installée: ""
+*it.HPOption_Duplexer False/Non installata: ""
+*ja.HPOption_Duplexer False/インストールされていない: ""
+*ko.HPOption_Duplexer False/설치되지 않았음: ""
+*nl.HPOption_Duplexer False/Niet geïnstalleerd: ""
+*nb.HPOption_Duplexer False/Ikke installert: ""
+*pt.HPOption_Duplexer False/Não instalada: ""
+*sv.HPOption_Duplexer False/Ej installerad: ""
+*zh_CN.HPOption_Duplexer False/未安装: ""
+*zh_TW.HPOption_Duplexer False/尚未安裝: ""
+
+*?HPOption_Duplexer: "
+  save
+    currentpagedevice /Duplex known
+    {(True)}{(False)}ifelse = flush
+  restore
+"
+*End
+*CloseUI: *HPOption_Duplexer
+
+*%====================================
+*%         Fit to Page
+*%====================================
+*OpenUI *HPPaperPolicy/Fit to Page: PickOne
+*OrderDependency: 10 AnySetup *HPPaperPolicy
+*DefaultHPPaperPolicy: PromptUser
+*da.Translation HPPaperPolicy/Tilpas til siden: ""
+*de.Translation HPPaperPolicy/An Seite anpassen: ""
+*es.Translation HPPaperPolicy/Hacer que quepa en la hoja: ""
+*fi.Translation HPPaperPolicy/Sovita sivulle: ""
+*fr.Translation HPPaperPolicy/Ajuster à la page: ""
+*it.Translation HPPaperPolicy/Adatta alle dimensioni della pagina: ""
+*ja.Translation HPPaperPolicy/用紙のマッチング: ""
+*ko.Translation HPPaperPolicy/페이지에 맞게: ""
+*nl.Translation HPPaperPolicy/Passend maken: ""
+*nb.Translation HPPaperPolicy/Tilpass til side: ""
+*pt.Translation HPPaperPolicy/Ajustar à página: ""
+*sv.Translation HPPaperPolicy/Anpassa till sida: ""
+*zh_CN.Translation HPPaperPolicy/适合页面: ""
+*zh_TW.Translation HPPaperPolicy/調整至適於頁面: ""
+
+*HPPaperPolicy PromptUser/Prompt User: "
+   <</DeferredMediaSelection true>> setpagedevice"
+*End
+*da.HPPaperPolicy PromptUser/Spørg brugeren: ""
+*de.HPPaperPolicy PromptUser/Benutzer auffordern: ""
+*es.HPPaperPolicy PromptUser/Informar al usuario: ""
+*fi.HPPaperPolicy PromptUser/Kysy käyttäjältä: ""
+*fr.HPPaperPolicy PromptUser/Demander à l'utilisateur: ""
+*it.HPPaperPolicy PromptUser/Avvisa utente: ""
+*ja.HPPaperPolicy PromptUser/正しいサイズを入力するように要求: ""
+*ko.HPPaperPolicy PromptUser/프롬프트 사용자: ""
+*nl.HPPaperPolicy PromptUser/Gebruiker waarschuwen: ""
+*nb.HPPaperPolicy PromptUser/Gi beskjed til bruker: ""
+*pt.HPPaperPolicy PromptUser/Avisar usuário: ""
+*sv.HPPaperPolicy PromptUser/Meddela användaren: ""
+*zh_CN.HPPaperPolicy PromptUser/提示用户: ""
+*zh_TW.HPPaperPolicy PromptUser/提示使用者: ""
+
+*HPPaperPolicy NearestSizeAdjust/Nearest Size and Scale: "
+   <</DeferredMediaSelection false>> setpagedevice
+   <</Policies << /PageSize 3 >> >> setpagedevice"
+*End
+*da.HPPaperPolicy NearestSizeAdjust/Nærmeste størrelse og skalering: ""
+*de.HPPaperPolicy NearestSizeAdjust/Nächstkleineres/größeres Format mit Skalierung: ""
+*es.HPPaperPolicy NearestSizeAdjust/Usar tamaño más parecido y cambiar a escala: ""
+*fi.HPPaperPolicy NearestSizeAdjust/Lähin koko ja skaalaus: ""
+*fr.HPPaperPolicy NearestSizeAdjust/Format et échelle les plus proches: ""
+*it.HPPaperPolicy NearestSizeAdjust/Usa le dimensioni più vicine e adatta: ""
+*ja.HPPaperPolicy NearestSizeAdjust/近似サイズに拡大/縮小: ""
+*ko.HPPaperPolicy NearestSizeAdjust/근사 크기와 축소/확대: ""
+*nl.HPPaperPolicy NearestSizeAdjust/Dichtst benaderende afmeting en schaal: ""
+*nb.HPPaperPolicy NearestSizeAdjust/Nærmeste størrelse og skala: ""
+*pt.HPPaperPolicy NearestSizeAdjust/Tamanho mais próximo e ajusta a escala: ""
+*sv.HPPaperPolicy NearestSizeAdjust/Närmaste storlek och skala: ""
+*zh_CN.HPPaperPolicy NearestSizeAdjust/最接近之尺寸和缩放度: ""
+*zh_TW.HPPaperPolicy NearestSizeAdjust/最接近的尺寸並按比例縮放: ""
+
+*HPPaperPolicy NearestSizeNoAdjust/Nearest Size and Crop: "
+   <</DeferredMediaSelection false>> setpagedevice
+   <</Policies << /PageSize 5 >> >> setpagedevice"
+*End
+*da.HPPaperPolicy NearestSizeNoAdjust/Nærmeste størrelse og beskæring: ""
+*de.HPPaperPolicy NearestSizeNoAdjust/Nächstkleineres/größeres Format mit Beschnitt: ""
+*es.HPPaperPolicy NearestSizeNoAdjust/Usar tamaño más parecido y recortar: ""
+*fi.HPPaperPolicy NearestSizeNoAdjust/Lähin koko ja rajaus: ""
+*fr.HPPaperPolicy NearestSizeNoAdjust/Format et coupe les plus proches: ""
+*it.HPPaperPolicy NearestSizeNoAdjust/Usa le dimensioni più vicine e taglia: ""
+*ja.HPPaperPolicy NearestSizeNoAdjust/近似サイズにトリミング: ""
+*ko.HPPaperPolicy NearestSizeNoAdjust/근사 크기와 자르기: ""
+*nl.HPPaperPolicy NearestSizeNoAdjust/Dichtst benaderende grootte en trim: ""
+*nb.HPPaperPolicy NearestSizeNoAdjust/Nærmeste størrelse og beskjæring: ""
+*pt.HPPaperPolicy NearestSizeNoAdjust/Tamanho mais próximo e corta: ""
+*sv.HPPaperPolicy NearestSizeNoAdjust/Närmaste storlek och beskär: ""
+*zh_CN.HPPaperPolicy NearestSizeNoAdjust/最接近之尺寸和剪裁: ""
+*zh_TW.HPPaperPolicy NearestSizeNoAdjust/最接近的尺寸並裁剪: ""
+
+*?HPPaperPolicy: "(PromptUser) = flush"
+*CloseUI: *HPPaperPolicy
+
+
+*OpenUI *InstalledMemory/Total Printer Memory: PickOne
+*DefaultInstalledMemory: 32MB
+*da.Translation InstalledMemory/Printerhukommelse i alt: ""
+*de.Translation InstalledMemory/Druckerspeicher insgesamt: ""
+*es.Translation InstalledMemory/Memoria total de la impresora: ""
+*fi.Translation InstalledMemory/Kirjoittimen kokonaismuisti: ""
+*fr.Translation InstalledMemory/Mémoire totale de l'imprimante: ""
+*it.Translation InstalledMemory/Memoria totale della stampante: ""
+*ja.Translation InstalledMemory/プリンタ総メモリ容量: ""
+*ko.Translation InstalledMemory/전체 프린터 메모리: ""
+*nl.Translation InstalledMemory/Totaal printergeheugen: ""
+*nb.Translation InstalledMemory/Total skriverhukommelse: ""
+*pt.Translation InstalledMemory/Memória total da impressora: ""
+*sv.Translation InstalledMemory/Totalt skrivarminne: ""
+*zh_CN.Translation InstalledMemory/打印机内存总量: ""
+*zh_TW.Translation InstalledMemory/印表機記憶體總數: ""
+
+*InstalledMemory 32MB/32 - 47 MB: ""
+*da.InstalledMemory 32MB/32 - 47 MB: ""
+*de.InstalledMemory 32MB/32 - 47 MB: ""
+*es.InstalledMemory 32MB/32 a 47 MB: ""
+*fi.InstalledMemory 32MB/32 - 47 megatavua: ""
+*fr.InstalledMemory 32MB/32 à 47 Mo: ""
+*it.InstalledMemory 32MB/32 - 47 MB: ""
+*ja.InstalledMemory 32MB/32 - 47 MB: ""
+*ko.InstalledMemory 32MB/32 - 47 MB: ""
+*nl.InstalledMemory 32MB/32 - 47 MB: ""
+*nb.InstalledMemory 32MB/32 - 47 MB: ""
+*pt.InstalledMemory 32MB/32 - 47 MB: ""
+*sv.InstalledMemory 32MB/32 - 47 MB: ""
+*zh_CN.InstalledMemory 32MB/32 - 47 MB: ""
+*zh_TW.InstalledMemory 32MB/32 - 47 MB: ""
+
+*InstalledMemory 48MB/48 - 63 MB: ""
+*da.InstalledMemory 48MB/48 - 63 MB: ""
+*de.InstalledMemory 48MB/48 - 63 MB: ""
+*es.InstalledMemory 48MB/48 a 63 MB: ""
+*fi.InstalledMemory 48MB/48 - 63 megatavua: ""
+*fr.InstalledMemory 48MB/48 à 63 Mo: ""
+*it.InstalledMemory 48MB/48 - 63 MB: ""
+*ja.InstalledMemory 48MB/48 - 63 MB: ""
+*ko.InstalledMemory 48MB/48 - 63 MB: ""
+*nl.InstalledMemory 48MB/48 - 63 MB: ""
+*nb.InstalledMemory 48MB/48 - 63 MB: ""
+*pt.InstalledMemory 48MB/48 - 63 MB: ""
+*sv.InstalledMemory 48MB/48 - 63 MB: ""
+*zh_CN.InstalledMemory 48MB/48 - 63 MB: ""
+*zh_TW.InstalledMemory 48MB/48 - 63 MB: ""
+
+*InstalledMemory 64MB/64 - 95 MB: ""
+*da.InstalledMemory 64MB/64 - 95 MB: ""
+*de.InstalledMemory 64MB/64 - 95 MB: ""
+*es.InstalledMemory 64MB/64 a 95 MB: ""
+*fi.InstalledMemory 64MB/64 - 95 megatavua: ""
+*fr.InstalledMemory 64MB/64 à 95 Mo: ""
+*it.InstalledMemory 64MB/64 - 95 MB: ""
+*ja.InstalledMemory 64MB/64 - 95 MB: ""
+*ko.InstalledMemory 64MB/64 - 95 MB: ""
+*nl.InstalledMemory 64MB/64 - 95 MB: ""
+*nb.InstalledMemory 64MB/64 - 95 MB: ""
+*pt.InstalledMemory 64MB/64 - 95 MB: ""
+*sv.InstalledMemory 64MB/64 - 95 MB: ""
+*zh_CN.InstalledMemory 64MB/64 - 95 MB: ""
+*zh_TW.InstalledMemory 64MB/64 - 95 MB: ""
+
+*InstalledMemory 96MB/96 - 159 MB: ""
+*da.InstalledMemory 96MB/96 - 159 MB: ""
+*de.InstalledMemory 96MB/96 - 159 MB: ""
+*es.InstalledMemory 96MB/96 a 159 MB: ""
+*fi.InstalledMemory 96MB/96 - 159 megatavua: ""
+*fr.InstalledMemory 96MB/96 à 159 Mo: ""
+*it.InstalledMemory 96MB/96 - 159 MB: ""
+*ja.InstalledMemory 96MB/96 - 159 MB: ""
+*ko.InstalledMemory 96MB/96 - 159 MB: ""
+*nl.InstalledMemory 96MB/96 - 159 MB: ""
+*nb.InstalledMemory 96MB/96 - 159 MB: ""
+*pt.InstalledMemory 96MB/96 - 159 MB: ""
+*sv.InstalledMemory 96MB/96 - 159 MB: ""
+*zh_CN.InstalledMemory 96MB/96 - 159 MB: ""
+*zh_TW.InstalledMemory 96MB/96 - 159 MB: ""
+
+*InstalledMemory 160MB/160 - 255 MB: ""
+*da.InstalledMemory 160MB/160 - 255 MB: ""
+*de.InstalledMemory 160MB/160 - 255 MB: ""
+*es.InstalledMemory 160MB/160 a 255 MB: ""
+*fi.InstalledMemory 160MB/160 - 255 megatavua: ""
+*fr.InstalledMemory 160MB/160 à 255 Mo: ""
+*it.InstalledMemory 160MB/160 - 255 MB: ""
+*ja.InstalledMemory 160MB/160 - 255 MB: ""
+*ko.InstalledMemory 160MB/160 - 255 MB: ""
+*nl.InstalledMemory 160MB/160 - 255 MB: ""
+*nb.InstalledMemory 160MB/160 - 255 MB: ""
+*pt.InstalledMemory 160MB/160 - 255 MB: ""
+*sv.InstalledMemory 160MB/160 - 255 MB: ""
+*zh_CN.InstalledMemory 160MB/160 - 255 MB: ""
+*zh_TW.InstalledMemory 160MB/160 - 255 MB: ""
+
+*InstalledMemory 256MB/256 MB or more: ""
+*da.InstalledMemory 256MB/256 MB eller mere: ""
+*de.InstalledMemory 256MB/256 MB oder mehr: ""
+*es.InstalledMemory 256MB/256 MB o más: ""
+*fi.InstalledMemory 256MB/256 megatavua tai enemmän: ""
+*fr.InstalledMemory 256MB/256 Mo ou plus: ""
+*it.InstalledMemory 256MB/256 MB o più: ""
+*ja.InstalledMemory 256MB/256 MB MB 以上: ""
+*ko.InstalledMemory 256MB/256 혹은 그 이상: ""
+*nl.InstalledMemory 256MB/256 MB of meer: ""
+*nb.InstalledMemory 256MB/256 MB eller mer: ""
+*pt.InstalledMemory 256MB/256 MB ou mais: ""
+*sv.InstalledMemory 256MB/256 MB eller mer: ""
+*zh_CN.InstalledMemory 256MB/256 MB 或更多: ""
+*zh_TW.InstalledMemory 256MB/256 MB 或更大: ""
+
+*?InstalledMemory: "
+  save
+    currentsystemparams /RamSize get
+    524288 div ceiling cvi 2 div
+    /size exch def
+    size 256 ge
+      {(256MB)}
+       {size 160 ge
+          {(160MB)}
+          {size 96 ge
+             {(96MB)}
+             {size 64 ge
+                {(64MB)}
+                {size 48 ge
+                   {(48MB)}
+                   {(32MB)} ifelse
+             } ifelse
+          } ifelse
+       } ifelse
+    } ifelse = flush
+  restore
+"
+*End
+*CloseUI: *InstalledMemory
+
+
+*CloseGroup: InstallableOptions
+
+*OpenUI *HPStraightPaperPath/Use Straight Paper Path: Boolean
+*DefaultHPStraightPaperPath: False
+*da.Translation HPStraightPaperPath/Benyt lige papirgang: ""
+*de.Translation HPStraightPaperPath/Geraden Papierpfad verwenden: ""
+*es.Translation HPStraightPaperPath/Utilizar ruta de papel recta: ""
+*fi.Translation HPStraightPaperPath/Käytä suoraa paperireittiä: ""
+*fr.Translation HPStraightPaperPath/Insérer le papier droit: ""
+*it.Translation HPStraightPaperPath/Usa percorso carta diretto: ""
+*ja.Translation HPStraightPaperPath/直線用紙経路の使用: ""
+*ko.Translation HPStraightPaperPath/곧은 용지 경로를 사용하십시오: ""
+*nl.Translation HPStraightPaperPath/Recht papierpad gebruiken: ""
+*nb.Translation HPStraightPaperPath/Bruk rett papirbane: ""
+*pt.Translation HPStraightPaperPath/Usar caminho reto de papel: ""
+*sv.Translation HPStraightPaperPath/Använd rak pappersbana: ""
+*zh_CN.Translation HPStraightPaperPath/使用直线馈纸路径: ""
+*zh_TW.Translation HPStraightPaperPath/使用直接出紙路徑: ""
+
+*HPStraightPaperPath True/On: ""
+*da.HPStraightPaperPath True/På: ""
+*de.HPStraightPaperPath True/Ein: ""
+*es.HPStraightPaperPath True/Activado: ""
+*fi.HPStraightPaperPath True/Käytössä: ""
+*fr.HPStraightPaperPath True/Activé: ""
+*it.HPStraightPaperPath True/Attiva: ""
+*ja.HPStraightPaperPath True/オン: ""
+*ko.HPStraightPaperPath True/켜짐: ""
+*nl.HPStraightPaperPath True/Aan: ""
+*nb.HPStraightPaperPath True/På: ""
+*pt.HPStraightPaperPath True/Ativado: ""
+*sv.HPStraightPaperPath True/På: ""
+*zh_CN.HPStraightPaperPath True/开: ""
+*zh_TW.HPStraightPaperPath True/開啟: ""
+
+*HPStraightPaperPath False/Off: ""
+*da.HPStraightPaperPath False/Fra: ""
+*de.HPStraightPaperPath False/Aus: ""
+*es.HPStraightPaperPath False/Desactivado: ""
+*fi.HPStraightPaperPath False/Ei käytössä: ""
+*fr.HPStraightPaperPath False/Désactivé: ""
+*it.HPStraightPaperPath False/Disattivata: ""
+*ja.HPStraightPaperPath False/オフ: ""
+*ko.HPStraightPaperPath False/꺼짐: ""
+*nl.HPStraightPaperPath False/Uit: ""
+*nb.HPStraightPaperPath False/Av: ""
+*pt.HPStraightPaperPath False/Desativado: ""
+*sv.HPStraightPaperPath False/Av: ""
+*zh_CN.HPStraightPaperPath False/关: ""
+*zh_TW.HPStraightPaperPath False/關閉: ""
+
+*CloseUI: *HPStraightPaperPath
+*HPStraightPaperPathDS True: "HPSTRAIGHTPAPERPATH_DS"
+*HPStraightPaperPathDS False: "HPSTRAIGHTPAPERPATH_DS"
+
+
+*% =================================
+*% =================================
+
+*%=================================================
+*%        Resolution Enhancement
+*%=================================================
+*OpenUI *Smoothing/Resolution Enhancement:  PickOne
+*OrderDependency: 20 DocumentSetup *Smoothing
+*DefaultSmoothing: PrinterDefault
+*da.Translation Smoothing/Opløsningsforbedring: ""
+*de.Translation Smoothing/Auflösungsoptimierung: ""
+*es.Translation Smoothing/Resolución Enhancement: ""
+*fi.Translation Smoothing/Tarkkuuden parannus: ""
+*fr.Translation Smoothing/Amélioration résolution: ""
+*it.Translation Smoothing/Miglioramento risoluzione: ""
+*ja.Translation Smoothing/解像度エンハンスメント: ""
+*ko.Translation Smoothing/해상도 향상: ""
+*nl.Translation Smoothing/Resolutieverbetering: ""
+*nb.Translation Smoothing/Oppløsningsfremheving: ""
+*pt.Translation Smoothing/Resolução avançada: ""
+*sv.Translation Smoothing/Förbättring av upplösning: ""
+*zh_CN.Translation Smoothing/分辨率增强: ""
+*zh_TW.Translation Smoothing/解析度增強: ""
+
+*Smoothing PrinterDefault/Printer's Current Setting: ""
+*da.Smoothing PrinterDefault/Printerens aktuelle indstilling: ""
+*de.Smoothing PrinterDefault/Aktuelle Druckereinstellung: ""
+*es.Smoothing PrinterDefault/Configuración actual de la impresora: ""
+*fi.Smoothing PrinterDefault/Kirjoittimen nykyinen asetus: ""
+*fr.Smoothing PrinterDefault/Paramétrage actuel de l'imprimante: ""
+*it.Smoothing PrinterDefault/Impostazioni correnti della stampante: ""
+*ja.Smoothing PrinterDefault/プリンタの現在の設定: ""
+*ko.Smoothing PrinterDefault/프린터의 현재 설정: ""
+*nl.Smoothing PrinterDefault/Huidige instelling van de printer: ""
+*nb.Smoothing PrinterDefault/Skriverens gjeldende innstilling: ""
+*pt.Smoothing PrinterDefault/Configuração atual da impressora: ""
+*sv.Smoothing PrinterDefault/Skrivarens inställning: ""
+*zh_CN.Smoothing PrinterDefault/打印机的当前设置: ""
+*zh_TW.Smoothing PrinterDefault/印表機目前的設定值: ""
+
+*Smoothing On/On: "
+<< /PostRenderingEnhance true
+    /PostRenderingEnhanceDetails << /REValue 2 /Type 8 >>
+>>  setpagedevice"
+*End
+*da.Smoothing On/Til: ""
+*de.Smoothing On/Ein: ""
+*es.Smoothing On/Sí: ""
+*fi.Smoothing On/Kyllä: ""
+*fr.Smoothing On/Activée: ""
+*it.Smoothing On/Attivata: ""
+*ja.Smoothing On/オン: ""
+*ko.Smoothing On/켜짐: ""
+*nl.Smoothing On/Aan: ""
+*nb.Smoothing On/På: ""
+*pt.Smoothing On/Ligado: ""
+*sv.Smoothing On/På: ""
+*zh_CN.Smoothing On/开: ""
+*zh_TW.Smoothing On/開: ""
+
+*Smoothing Off/Off: "
+<< /PostRenderingEnhance true
+    /PostRenderingEnhanceDetails << /REValue 0 /Type 8 >>
+>>  setpagedevice"
+*End
+*da.Smoothing Off/Fra: ""
+*de.Smoothing Off/Aus: ""
+*es.Smoothing Off/No: ""
+*fi.Smoothing Off/Ei: ""
+*fr.Smoothing Off/Désactivée: ""
+*it.Smoothing Off/Disattivata: ""
+*ja.Smoothing Off/オフ: ""
+*ko.Smoothing Off/끔: ""
+*nl.Smoothing Off/Uit: ""
+*nb.Smoothing Off/Av: ""
+*pt.Smoothing Off/Desligado: ""
+*sv.Smoothing Off/Av: ""
+*zh_CN.Smoothing Off/关: ""
+*zh_TW.Smoothing Off/關: ""
+
+*?Smoothing: "
+  save
+    currentpagedevice /PostRenderingEnhanceDetails get /REValue get
+    [(Off) (On) (On) (On)]  exch get print
+  restore
+"
+*End
+*CloseUI: *Smoothing
+
+
+*FreeVM: "4000000"
+*VMOption 32MB/32 - 63 MB: "4000000"
+*da.VMOption 32MB/32 - 63 MB: ""
+*de.VMOption 32MB/32 - 63 MB: ""
+*es.VMOption 32MB/32 - 63 MB: ""
+*fi.VMOption 32MB/32 - 63 MB: ""
+*fr.VMOption 32MB/32 - 63 MB: ""
+*it.VMOption 32MB/32 - 63 MB: ""
+*ja.VMOption 32MB/32 - 63 MB: ""
+*ko.VMOption 32MB/32 - 63 MB: ""
+*nl.VMOption 32MB/32 - 63 MB: ""
+*nb.VMOption 32MB/32 - 63 MB: ""
+*pt.VMOption 32MB/32 - 63 MB: ""
+*sv.VMOption 32MB/32 - 63 MB: ""
+*zh_CN.VMOption 32MB/32 - 63 MB: ""
+*zh_TW.VMOption 32MB/32 - 63 MB: ""
+
+*VMOption 64MB/64 - 95 MB: "11000000"
+*da.VMOption 64MB/64 - 95 MB: ""
+*de.VMOption 64MB/64 - 95 MB: ""
+*es.VMOption 64MB/64 - 95 MB: ""
+*fi.VMOption 64MB/64 - 95 MB: ""
+*fr.VMOption 64MB/64 - 95 MB: ""
+*it.VMOption 64MB/64 - 95 MB: ""
+*ja.VMOption 64MB/64 - 95 MB: ""
+*ko.VMOption 64MB/64 - 95 MB: ""
+*nl.VMOption 64MB/64 - 95 MB: ""
+*nb.VMOption 64MB/64 - 95 MB: ""
+*pt.VMOption 64MB/64 - 95 MB: ""
+*sv.VMOption 64MB/64 - 95 MB: ""
+*zh_CN.VMOption 64MB/64 - 95 MB: ""
+*zh_TW.VMOption 64MB/64 - 95 MB: ""
+
+*VMOption 96MB/96 - 127 MB: "18000000"
+*da.VMOption 96MB/96 - 127 MB: ""
+*de.VMOption 96MB/96 - 127 MB: ""
+*es.VMOption 96MB/96 - 127 MB: ""
+*fi.VMOption 96MB/96 - 127 MB: ""
+*fr.VMOption 96MB/96 - 127 MB: ""
+*it.VMOption 96MB/96 - 127 MB: ""
+*ja.VMOption 96MB/96 - 127 MB: ""
+*ko.VMOption 96MB/96 - 127 MB: ""
+*nl.VMOption 96MB/96 - 127 MB: ""
+*nb.VMOption 96MB/96 - 127 MB: ""
+*pt.VMOption 96MB/96 - 127 MB: ""
+*sv.VMOption 96MB/96 - 127 MB: ""
+*zh_CN.VMOption 96MB/96 - 127 MB: ""
+*zh_TW.VMOption 96MB/96 - 127 MB: ""
+
+*VMOption 128MB/128 - 159 MB: "25000000"
+*da.VMOption 128MB/128 - 159 MB: ""
+*de.VMOption 128MB/128 - 159 MB: ""
+*es.VMOption 128MB/128 - 159 MB: ""
+*fi.VMOption 128MB/128 - 159 MB: ""
+*fr.VMOption 128MB/128 - 159 MB: ""
+*it.VMOption 128MB/128 - 159 MB: ""
+*ja.VMOption 128MB/128 - 159 MB: ""
+*ko.VMOption 128MB/128 - 159 MB: ""
+*nl.VMOption 128MB/128 - 159 MB: ""
+*nb.VMOption 128MB/128 - 159 MB: ""
+*pt.VMOption 128MB/128 - 159 MB: ""
+*sv.VMOption 128MB/128 - 159 MB: ""
+*zh_CN.VMOption 128MB/128 - 159 MB: ""
+*zh_TW.VMOption 128MB/128 - 159 MB: ""
+
+*VMOption 160MB/160 - 192 MB: "39000000"
+*da.VMOption 160MB/160 - 192 MB: ""
+*de.VMOption 160MB/160 - 192 MB: ""
+*es.VMOption 160MB/160 - 192 MB: ""
+*fi.VMOption 160MB/160 - 192 MB: ""
+*fr.VMOption 160MB/160 - 192 MB: ""
+*it.VMOption 160MB/160 - 192 MB: ""
+*ja.VMOption 160MB/160 - 192 MB: ""
+*ko.VMOption 160MB/160 - 192 MB: ""
+*nl.VMOption 160MB/160 - 192 MB: ""
+*nb.VMOption 160MB/160 - 192 MB: ""
+*pt.VMOption 160MB/160 - 192 MB: ""
+*sv.VMOption 160MB/160 - 192 MB: ""
+*zh_CN.VMOption 160MB/160 - 192 MB: ""
+*zh_TW.VMOption 160MB/160 - 192 MB: ""
+
+*VMOption 193MB/193 MB or more: "53000000"
+*da.VMOption 193MB/193 MB or more: ""
+*de.VMOption 193MB/193 MB or more: ""
+*es.VMOption 193MB/193 MB or more: ""
+*fi.VMOption 193MB/193 MB or more: ""
+*fr.VMOption 193MB/193 MB or more: ""
+*it.VMOption 193MB/193 MB or more: ""
+*ja.VMOption 193MB/193 MB or more: ""
+*ko.VMOption 193MB/193 MB or more: ""
+*nl.VMOption 193MB/193 MB or more: ""
+*nb.VMOption 193MB/193 MB or more: ""
+*pt.VMOption 193MB/193 MB or more: ""
+*sv.VMOption 193MB/193 MB or more: ""
+*zh_CN.VMOption 193MB/193 MB or more: ""
+*zh_TW.VMOption 193MB/193 MB or more: ""
+
+
+*%=================================================
+*%		 UI Constraints
+*%=================================================
+*% If A than not B  (Also include the reverse constraints if appropriate)
+*%
+
+*% No 1200 dpi HPEconoMode.
+*UIConstraints: *Resolution 1200x1200dpi *HPEconoMode True
+
+*% If the duplexer is not installed disable duplex modes.
+*%------------------------------------------------------------
+*UIConstraints: *HPOption_Duplexer False *Duplex DuplexNoTumble
+*UIConstraints: *HPOption_Duplexer False *Duplex DuplexTumble
+*UIConstraints: *Duplex DuplexTumble   *HPOption_Duplexer False
+*UIConstraints: *Duplex DuplexNoTumble *HPOption_Duplexer False
+
+*%  These sizes can't be duplexed
+*%------------------------------------------------------------
+*UIConstraints: *PageSize DoublePostcard *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Env10          *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvMonarch     *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvDL          *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvC5          *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvISOB5       *Duplex DuplexNoTumble
+*UIConstraints: *PageSize w612h935       *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Executive      *Duplex DuplexNoTumble
+*UIConstraints: *PageSize ISOB5          *Duplex DuplexNoTumble
+*UIConstraints: *PageSize B5             *Duplex DuplexNoTumble
+*UIConstraints: *PageSize A5         	 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize w558h774    	 *Duplex DuplexNoTumble
+
+*UIConstraints: *PageSize DoublePostcard *Duplex DuplexTumble
+*UIConstraints: *PageSize Env10          *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvMonarch     *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvDL          *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvC5          *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvISOB5       *Duplex DuplexTumble
+*UIConstraints: *PageSize w612h935       *Duplex DuplexTumble
+*UIConstraints: *PageSize Executive      *Duplex DuplexTumble
+*UIConstraints: *PageSize ISOB5          *Duplex DuplexTumble
+*UIConstraints: *PageSize B5             *Duplex DuplexTumble
+*UIConstraints: *PageSize A5             *Duplex DuplexTumble
+*UIConstraints: *PageSize w558h774       *Duplex DuplexTumble
+
+*UIConstraints: *PageRegion DoublePostcard *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion Env10          *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvMonarch     *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvDL          *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvC5          *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvISOB5       *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion w612h935       *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion Executive      *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion ISOB5          *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion B5             *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion A5             *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion w558h774       *Duplex DuplexNoTumble
+
+*UIConstraints: *PageRegion DoublePostcard *Duplex DuplexTumble
+*UIConstraints: *PageRegion Env10          *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvMonarch     *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvDL          *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvC5          *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvISOB5       *Duplex DuplexTumble
+*UIConstraints: *PageRegion w612h935       *Duplex DuplexTumble
+*UIConstraints: *PageRegion Executive      *Duplex DuplexTumble
+*UIConstraints: *PageRegion ISOB5          *Duplex DuplexTumble
+*UIConstraints: *PageRegion B5             *Duplex DuplexTumble
+*UIConstraints: *PageRegion A5             *Duplex DuplexTumble
+*UIConstraints: *PageRegion w558h774       *Duplex DuplexTumble
+
+*% Tray Constraints
+*% ==================================================
+
+*% Tray 2
+*% ======
+*UIConstraints: *PageSize Env10       		*InputSlot Tray2
+*UIConstraints: *PageSize EnvMonarch  		*InputSlot Tray2
+*UIConstraints: *PageSize EnvDL       		*InputSlot Tray2
+*UIConstraints: *PageSize EnvC5       		*InputSlot Tray2
+*UIConstraints: *PageSize EnvISOB5    		*InputSlot Tray2
+*UIConstraints: *PageSize DoublePostcard  	*InputSlot Tray2
+
+*UIConstraints: *PageRegion Env10       	*InputSlot Tray2
+*UIConstraints: *PageRegion EnvMonarch  	*InputSlot Tray2
+*UIConstraints: *PageRegion EnvDL       	*InputSlot Tray2
+*UIConstraints: *PageRegion EnvC5       	*InputSlot Tray2
+*UIConstraints: *PageRegion EnvISOB5    	*InputSlot Tray2
+*UIConstraints: *PageRegion DoublePostcard  *InputSlot Tray2
+
+*% Tray 3_500
+*% ==========
+*UIConstraints: *HPOption_Tray3 Tray3_500 *InputSlot Tray3_250
+*UIConstraints: *HPOption_Tray3 False *InputSlot Tray3_500
+
+*UIConstraints: *PageSize Legal       		*InputSlot Tray3_500
+*UIConstraints: *PageSize Executive  		*InputSlot Tray3_500
+*UIConstraints: *PageSize A5       			*InputSlot Tray3_500
+*UIConstraints: *PageSize B5		  		*InputSlot Tray3_500
+*UIConstraints: *PageSize ISOB5       		*InputSlot Tray3_500
+*UIConstraints: *PageSize Env10       		*InputSlot Tray3_500
+*UIConstraints: *PageSize EnvMonarch  		*InputSlot Tray3_500
+*UIConstraints: *PageSize EnvDL       		*InputSlot Tray3_500
+*UIConstraints: *PageSize EnvC5       		*InputSlot Tray3_500
+*UIConstraints: *PageSize EnvISOB5    		*InputSlot Tray3_500
+*UIConstraints: *PageSize DoublePostcard  	*InputSlot Tray3_500
+*UIConstraints: *PageSize w558h774       	*InputSlot Tray3_500
+*UIConstraints: *PageSize w612h935    		*InputSlot Tray3_500
+
+*UIConstraints: *PageRegion Legal      		*InputSlot Tray3_500
+*UIConstraints: *PageRegion Executive  		*InputSlot Tray3_500
+*UIConstraints: *PageRegion A5       		*InputSlot Tray3_500
+*UIConstraints: *PageRegion B5		  		*InputSlot Tray3_500
+*UIConstraints: *PageRegion ISOB5       	*InputSlot Tray3_500
+*UIConstraints: *PageRegion Env10       	*InputSlot Tray3_500
+*UIConstraints: *PageRegion EnvMonarch  	*InputSlot Tray3_500
+*UIConstraints: *PageRegion EnvDL       	*InputSlot Tray3_500
+*UIConstraints: *PageRegion EnvC5       	*InputSlot Tray3_500
+*UIConstraints: *PageRegion EnvISOB5    	*InputSlot Tray3_500
+*UIConstraints: *PageRegion DoublePostcard  *InputSlot Tray3_500
+*UIConstraints: *PageRegion w558h774       	*InputSlot Tray3_500
+*UIConstraints: *PageRegion w612h935    	*InputSlot Tray3_500
+
+*NonUIConstraints: *CustomPageSize True 	*InputSlot Tray3_500
+
+*% Tray 3_250
+*% ==========
+
+*UIConstraints: *HPOption_Tray3 Tray3_250 *InputSlot Tray3_500
+*UIConstraints: *HPOption_Tray3 False *InputSlot Tray3_250
+
+*UIConstraints: *PageSize Env10       		*InputSlot Tray3_250
+*UIConstraints: *PageSize EnvMonarch  		*InputSlot Tray3_250
+*UIConstraints: *PageSize EnvDL       		*InputSlot Tray3_250
+*UIConstraints: *PageSize EnvC5       		*InputSlot Tray3_250
+*UIConstraints: *PageSize EnvISOB5    		*InputSlot Tray3_250
+*UIConstraints: *PageSize DoublePostcard  	*InputSlot Tray3_250
+
+*UIConstraints: *PageRegion Env10       	*InputSlot Tray3_250
+*UIConstraints: *PageRegion EnvMonarch  	*InputSlot Tray3_250
+*UIConstraints: *PageRegion EnvDL       	*InputSlot Tray3_250
+*UIConstraints: *PageRegion EnvC5       	*InputSlot Tray3_250
+*UIConstraints: *PageRegion EnvISOB5    	*InputSlot Tray3_250
+*UIConstraints: *PageRegion DoublePostcard  *InputSlot Tray3_250
+
+*NonUIConstraints: *CustomPageSize True 	*InputSlot Tray3_250
+
+
+*% MediaType constraints
+*%------------------------------------------------------------
+*UIConstraints: *MediaType Transparency *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Labels       *Duplex DuplexNoTumble
+
+*UIConstraints: *MediaType Transparency *Duplex DuplexTumble
+*UIConstraints: *MediaType Labels       *Duplex DuplexTumble
+
+*UIConstraints: *MediaType Labels       *InputSlot Tray2
+*UIConstraints: *MediaType Transparency *InputSlot Tray3_500
+*UIConstraints: *MediaType Labels       *InputSlot Tray3_500
+*UIConstraints: *MediaType Envelope     *InputSlot Tray3_500
+*UIConstraints: *MediaType Labels       *InputSlot Tray3_250
+*UIConstraints: *MediaType Envelope     *InputSlot Tray3_250
+
+*% Fills not allowed with overlays
+*%------------------------------------------------------------
+
+*%------------------------------------------------------------
+
+
+*% ===================================
+*%           Paper Sizes
+*% ===================================
+*OpenUI *PageSize/Page Size: PickOne
+*OrderDependency: 30 AnySetup *PageSize
+*DefaultPageSize: Letter
+*da.Translation PageSize/Page Size: ""
+*de.Translation PageSize/Papierformat: ""
+*es.Translation PageSize/Tamaño del papel: ""
+*fi.Translation PageSize/Sivukoko: ""
+*fr.Translation PageSize/Format de page: ""
+*it.Translation PageSize/Dimensioni pagina: ""
+*ja.Translation PageSize/ページサイズ: ""
+*ko.Translation PageSize/용지 크기: ""
+*nl.Translation PageSize/Papierformaat: ""
+*nb.Translation PageSize/Papirformat: ""
+*pt.Translation PageSize/Tamanho do papel: ""
+*sv.Translation PageSize/Sidstorlek: ""
+*zh_CN.Translation PageSize/页面大小: ""
+*zh_TW.Translation PageSize/頁面尺寸: ""
+
+*PageSize Letter/Letter: "
+    <</DeferredMediaSelection true /PageSize [612 792] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize Letter/Letter: ""
+*de.PageSize Letter/Letter: ""
+*es.PageSize Letter/Letter: ""
+*fi.PageSize Letter/Letter: ""
+*fr.PageSize Letter/Lettre: ""
+*it.PageSize Letter/Letter: ""
+*ja.PageSize Letter/レター: ""
+*ko.PageSize Letter/레터: ""
+*nl.PageSize Letter/Letter: ""
+*nb.PageSize Letter/Letter: ""
+*pt.PageSize Letter/Carta EUA: ""
+*sv.PageSize Letter/Letter: ""
+*zh_CN.PageSize Letter/信纸: ""
+*zh_TW.PageSize Letter/Letter: ""
+
+*PageSize LetterSmall/Letter (Small): "
+	<</DeferredMediaSelection true /PageSize [612 792] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize LetterSmall/Letter (lille): ""
+*de.PageSize LetterSmall/Letter (Klein): ""
+*es.PageSize LetterSmall/Letter (pequeño): ""
+*fi.PageSize LetterSmall/Letter (pieni): ""
+*fr.PageSize LetterSmall/Lettre (Réduit): ""
+*it.PageSize LetterSmall/Letter (piccola): ""
+*ja.PageSize LetterSmall/レター (小): ""
+*ko.PageSize LetterSmall/레터 (소형): ""
+*nl.PageSize LetterSmall/Letter (klein): ""
+*nb.PageSize LetterSmall/Letter (liten): ""
+*pt.PageSize LetterSmall/Carta EUA (pequeno): ""
+*sv.PageSize LetterSmall/Letter (litet): ""
+*zh_CN.PageSize LetterSmall/信纸 (小): ""
+*zh_TW.PageSize LetterSmall/Letter（小型）: ""
+
+*PageSize Executive/Executive: "
+    <</DeferredMediaSelection true /PageSize [522 756] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize Executive/Executive: ""
+*de.PageSize Executive/Executive: ""
+*es.PageSize Executive/Exec: ""
+*fi.PageSize Executive/Executive: ""
+*fr.PageSize Executive/Administratif: ""
+*it.PageSize Executive/Executive: ""
+*ja.PageSize Executive/エグゼクティブ: ""
+*ko.PageSize Executive/Executive: ""
+*nl.PageSize Executive/Executive: ""
+*nb.PageSize Executive/Executive: ""
+*pt.PageSize Executive/Executivo: ""
+*sv.PageSize Executive/Executive: ""
+*zh_CN.PageSize Executive/Executive: ""
+*zh_TW.PageSize Executive/Executive: ""
+
+*PageSize DoublePostcard/Double Postcard (JIS): "
+  	<</DeferredMediaSelection true /PageSize [419.5 567] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize DoublePostcard/Dobbelt postkort (JIS): ""
+*de.PageSize DoublePostcard/Doppelte Postkarte (JIS): ""
+*es.PageSize DoublePostcard/Tarjeta postal doble (JIS): ""
+*fi.PageSize DoublePostcard/Kaksinkert. postikortti (JIS): ""
+*fr.PageSize DoublePostcard/Carte postale double (JIS): ""
+*it.PageSize DoublePostcard/Cartolina doppia (JIS): ""
+*ja.PageSize DoublePostcard/往復はがき (JIS): ""
+*ko.PageSize DoublePostcard/양면 엽서 (JIS): ""
+*nl.PageSize DoublePostcard/Dubbele briefkaart (JIS): ""
+*nb.PageSize DoublePostcard/Dobbelt postkort (JIS): ""
+*pt.PageSize DoublePostcard/Postal duplo (JIS): ""
+*sv.PageSize DoublePostcard/Dubbelt brevkort (JIS): ""
+*zh_CN.PageSize DoublePostcard/大号明信片 (JIS): ""
+*zh_TW.PageSize DoublePostcard/雙聯明信片(JIS): ""
+
+*PageSize Legal/Legal: "
+    <</DeferredMediaSelection true /PageSize [612 1008] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize Legal/Legal: ""
+*de.PageSize Legal/Legal: ""
+*es.PageSize Legal/Legal: ""
+*fi.PageSize Legal/Legal: ""
+*fr.PageSize Legal/Légal: ""
+*it.PageSize Legal/Legale: ""
+*ja.PageSize Legal/リーガル: ""
+*ko.PageSize Legal/리갈: ""
+*nl.PageSize Legal/Legal: ""
+*nb.PageSize Legal/Legal: ""
+*pt.PageSize Legal/Ofício EUA: ""
+*sv.PageSize Legal/Legal: ""
+*zh_CN.PageSize Legal/Legal: ""
+*zh_TW.PageSize Legal/Legal: ""
+
+*PageSize LegalSmall/Legal (Small): "
+	<</DeferredMediaSelection true /PageSize [612 1008] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize LegalSmall/Legal (lille): ""
+*de.PageSize LegalSmall/Legal (Klein): ""
+*es.PageSize LegalSmall/Legal (pequeño): ""
+*fi.PageSize LegalSmall/Legal (pieni): ""
+*fr.PageSize LegalSmall/Légal (Réduit): ""
+*it.PageSize LegalSmall/Legale (piccola): ""
+*ja.PageSize LegalSmall/リーガル (小): ""
+*ko.PageSize LegalSmall/Legal (소형): ""
+*nl.PageSize LegalSmall/Legal (klein): ""
+*nb.PageSize LegalSmall/Legal (liten): ""
+*pt.PageSize LegalSmall/Ofício EUA (pequeno): ""
+*sv.PageSize LegalSmall/Legal (litet): ""
+*zh_CN.PageSize LegalSmall/Legal (小): ""
+*zh_TW.PageSize LegalSmall/Legal（小型）: ""
+
+*PageSize A4/A4: "
+    <</DeferredMediaSelection true /PageSize [595 842] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize A4/A4: ""
+*de.PageSize A4/A4: ""
+*es.PageSize A4/A4: ""
+*fi.PageSize A4/A4: ""
+*fr.PageSize A4/A4: ""
+*it.PageSize A4/A4: ""
+*ja.PageSize A4/A4: ""
+*ko.PageSize A4/A4: ""
+*nl.PageSize A4/A4: ""
+*nb.PageSize A4/A4: ""
+*pt.PageSize A4/A4: ""
+*sv.PageSize A4/A4: ""
+*zh_CN.PageSize A4/A4: ""
+*zh_TW.PageSize A4/A4: ""
+
+*PageSize A4Small/A4 (Small): "
+	<</DeferredMediaSelection true /PageSize [595 842] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize A4Small/A4 (lille): ""
+*de.PageSize A4Small/A4 (Klein): ""
+*es.PageSize A4Small/A4 (pequeño): ""
+*fi.PageSize A4Small/A4 (pieni): ""
+*fr.PageSize A4Small/A4 (Réduit): ""
+*it.PageSize A4Small/A4 (piccola): ""
+*ja.PageSize A4Small/A4 (小): ""
+*ko.PageSize A4Small/A4 (소형): ""
+*nl.PageSize A4Small/A4 (klein): ""
+*nb.PageSize A4Small/A4 (liten): ""
+*pt.PageSize A4Small/A4 (pequeno): ""
+*sv.PageSize A4Small/A4 (litet): ""
+*zh_CN.PageSize A4Small/A4 (小): ""
+*zh_TW.PageSize A4Small/A4（小型）: ""
+
+*PageSize A5/A5: "
+    <</DeferredMediaSelection true /PageSize [420 595] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize A5/A5: ""
+*de.PageSize A5/A5: ""
+*es.PageSize A5/A5: ""
+*fi.PageSize A5/A5: ""
+*fr.PageSize A5/A5: ""
+*it.PageSize A5/A5: ""
+*ja.PageSize A5/A5: ""
+*ko.PageSize A5/A5: ""
+*nl.PageSize A5/A5: ""
+*nb.PageSize A5/A5: ""
+*pt.PageSize A5/A5: ""
+*sv.PageSize A5/A5: ""
+*zh_CN.PageSize A5/A5: ""
+*zh_TW.PageSize A5/A5: ""
+
+*PageSize ISOB5/B5 (ISO): "
+  	<</DeferredMediaSelection true /PageSize [499 709] /ImagingBBox null /MediaClass (CutSheet) >> setpagedevice"
+*End
+*da.PageSize ISOB5/B5 (ISO): ""
+*de.PageSize ISOB5/B5 (ISO): ""
+*es.PageSize ISOB5/B5 (ISO): ""
+*fi.PageSize ISOB5/B5 (ISO): ""
+*fr.PageSize ISOB5/B5 (ISO): ""
+*it.PageSize ISOB5/B5 (ISO): ""
+*ja.PageSize ISOB5/B5 (ISO): ""
+*ko.PageSize ISOB5/B5 (ISO): ""
+*nl.PageSize ISOB5/B5 (ISO): ""
+*nb.PageSize ISOB5/B5 (ISO): ""
+*pt.PageSize ISOB5/B5 (ISO): ""
+*sv.PageSize ISOB5/B5 (ISO): ""
+*zh_CN.PageSize ISOB5/B5 (ISO): ""
+*zh_TW.PageSize ISOB5/B5 (ISO): ""
+
+*PageSize B5/JIS B5: "
+    <</DeferredMediaSelection true /PageSize [516 729] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize B5/JIS B5: ""
+*de.PageSize B5/JIS B5: ""
+*es.PageSize B5/JIS B5: ""
+*fi.PageSize B5/JIS B5: ""
+*fr.PageSize B5/JIS B5: ""
+*it.PageSize B5/JIS B5: ""
+*ja.PageSize B5/JIS B5: ""
+*ko.PageSize B5/JIS B5: ""
+*nl.PageSize B5/JIS B5: ""
+*nb.PageSize B5/JIS B5: ""
+*pt.PageSize B5/JIS B5: ""
+*sv.PageSize B5/JIS B5: ""
+*zh_CN.PageSize B5/JIS B5: ""
+*zh_TW.PageSize B5/JIS B5: ""
+
+*PageSize w612h935/Executive (JIS): "
+  	<</DeferredMediaSelection true /PageSize [612 935] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize w612h935/Executive (JIS): ""
+*de.PageSize w612h935/Executive (JIS): ""
+*es.PageSize w612h935/Exec (JIS): ""
+*fi.PageSize w612h935/Executive (JIS): ""
+*fr.PageSize w612h935/Administratif (JIS): ""
+*it.PageSize w612h935/Executive (JIS): ""
+*ja.PageSize w612h935/エグゼクティブ (JIS): ""
+*ko.PageSize w612h935/Executive(JIS): ""
+*nl.PageSize w612h935/Executive (JIS): ""
+*nb.PageSize w612h935/Executive (JIS): ""
+*pt.PageSize w612h935/Executivo (JIS): ""
+*sv.PageSize w612h935/Executive (JIS): ""
+*zh_CN.PageSize w612h935/Executive (JIS): ""
+*zh_TW.PageSize w612h935/Executive (JIS): ""
+
+*PageSize w558h774/16K: "
+  	<</DeferredMediaSelection true /PageSize [558 774] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize w558h774/16K: ""
+*de.PageSize w558h774/16K: ""
+*es.PageSize w558h774/16K: ""
+*fi.PageSize w558h774/16 K: ""
+*fr.PageSize w558h774/16 Ko: ""
+*it.PageSize w558h774/16K: ""
+*ja.PageSize w558h774/16K: ""
+*ko.PageSize w558h774/16K: ""
+*nl.PageSize w558h774/16K: ""
+*nb.PageSize w558h774/16K: ""
+*pt.PageSize w558h774/16K: ""
+*sv.PageSize w558h774/16K: ""
+*zh_CN.PageSize w558h774/16K: ""
+*zh_TW.PageSize w558h774/16K: ""
+
+*PageSize Env10/Env Comm10: "
+    <</DeferredMediaSelection true /PageSize [297 684] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize Env10/Konvolut Comm10: ""
+*de.PageSize Env10/Umschlag Comm10: ""
+*es.PageSize Env10/Sobre Comm10: ""
+*fi.PageSize Env10/Kirjekuori Comm10: ""
+*fr.PageSize Env10/Enveloppe Comm10: ""
+*it.PageSize Env10/Busta Comm10: ""
+*ja.PageSize Env10/封筒 Comm10: ""
+*ko.PageSize Env10/Comm10 봉투: ""
+*nl.PageSize Env10/Comm10-envelop: ""
+*nb.PageSize Env10/Comm10-konvolutt: ""
+*pt.PageSize Env10/Envelope Comm10: ""
+*sv.PageSize Env10/Comm10-kuvert: ""
+*zh_CN.PageSize Env10/Comm10号信封: ""
+*zh_TW.PageSize Env10/Comm10 信封: ""
+
+*PageSize EnvMonarch/Env Monarch: "
+    <</DeferredMediaSelection true /PageSize [279 540] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize EnvMonarch/Konvolut Monarch: ""
+*de.PageSize EnvMonarch/Umschlag Monarch: ""
+*es.PageSize EnvMonarch/Sobre Monarch: ""
+*fi.PageSize EnvMonarch/Kirjekuori Monarch: ""
+*fr.PageSize EnvMonarch/Enveloppe Monarch: ""
+*it.PageSize EnvMonarch/Busta Monarch: ""
+*ja.PageSize EnvMonarch/封筒 Monarch: ""
+*ko.PageSize EnvMonarch/Monarch 봉투: ""
+*nl.PageSize EnvMonarch/Monarch-envelop: ""
+*nb.PageSize EnvMonarch/Monarch-konvolutt: ""
+*pt.PageSize EnvMonarch/Envelope Monarch: ""
+*sv.PageSize EnvMonarch/Monarch-kuvert: ""
+*zh_CN.PageSize EnvMonarch/Monarch号信封: ""
+*zh_TW.PageSize EnvMonarch/Monarch 信封: ""
+
+*PageSize EnvDL/Env DL: "
+    <</DeferredMediaSelection true /PageSize [312 624] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize EnvDL/Konvolut DL: ""
+*de.PageSize EnvDL/Umschlag DL: ""
+*es.PageSize EnvDL/Sobre DL: ""
+*fi.PageSize EnvDL/Kirjekuori DL: ""
+*fr.PageSize EnvDL/Enveloppe DL: ""
+*it.PageSize EnvDL/Busta DL: ""
+*ja.PageSize EnvDL/封筒 DL: ""
+*ko.PageSize EnvDL/DL 봉투: ""
+*nl.PageSize EnvDL/DL-envelop: ""
+*nb.PageSize EnvDL/DL-konvolutt: ""
+*pt.PageSize EnvDL/Envelope DL: ""
+*sv.PageSize EnvDL/E65-kuvert: ""
+*zh_CN.PageSize EnvDL/DL号信封: ""
+*zh_TW.PageSize EnvDL/DL 信封: ""
+
+*PageSize EnvC5/Env C5: "
+    <</DeferredMediaSelection true /PageSize [459 649] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageSize EnvC5/Konvolut C5: ""
+*de.PageSize EnvC5/Umschlag C5: ""
+*es.PageSize EnvC5/Sobre C5: ""
+*fi.PageSize EnvC5/Kirjekuori C5: ""
+*fr.PageSize EnvC5/Enveloppe C5: ""
+*it.PageSize EnvC5/Busta C5: ""
+*ja.PageSize EnvC5/封筒 C5: ""
+*ko.PageSize EnvC5/C5 봉투: ""
+*nl.PageSize EnvC5/C5-envelop: ""
+*nb.PageSize EnvC5/C5-konvolutt: ""
+*pt.PageSize EnvC5/Envelope C5: ""
+*sv.PageSize EnvC5/C5-kuvert: ""
+*zh_CN.PageSize EnvC5/C5号信封: ""
+*zh_TW.PageSize EnvC5/C5 信封: ""
+
+*PageSize EnvISOB5/Env ISO B5: "
+    <</DeferredMediaSelection true /PageSize [499 709] /ImagingBBox null /MediaClass (Envelope) >> setpagedevice"
+*End
+*da.PageSize EnvISOB5/Konvolut ISO B5: ""
+*de.PageSize EnvISOB5/Umschlag ISO B5: ""
+*es.PageSize EnvISOB5/Sobre ISO B5: ""
+*fi.PageSize EnvISOB5/Kirjekuori ISO B5: ""
+*fr.PageSize EnvISOB5/Enveloppe ISO B5: ""
+*it.PageSize EnvISOB5/Busta ISO B5: ""
+*ja.PageSize EnvISOB5/封筒 B5 (ISO): ""
+*ko.PageSize EnvISOB5/ISO B5 봉투: ""
+*nl.PageSize EnvISOB5/ISO B5-envelop: ""
+*nb.PageSize EnvISOB5/B5-konvolutt: ""
+*pt.PageSize EnvISOB5/Envelope ISO B5: ""
+*sv.PageSize EnvISOB5/ISO B5-kuvert: ""
+*zh_CN.PageSize EnvISOB5/ISO B5号信封: ""
+*zh_TW.PageSize EnvISOB5/ISO B5 信封: ""
+
+*?PageSize: "
+  save
+   currentpagedevice /DeferredMediaSelection true /PageSize get aload pop
+   2 copy gt {exch} if
+   (Unknown)
+   15 dict
+   dup [499 709] (EnvISOB5) put
+   dup [312 624] (EnvDL) put
+   dup [459 649] (EnvC5) put
+   dup [279 540] (EnvMonarch) put
+   dup [297 684] (Env10) put
+   dup [558 774] (w558h774) put
+   dup [612 935] (w612h935) put
+   dup [516 729] (B5) put
+   dup [499 709] (ISOB5) put
+   dup [420 595] (A5) put
+   dup [595 842] (A4) put
+   dup [522 756] (Executive) put
+   dup [419 567] (DoublePostcard) put
+   dup [612 1008] (Legal) put
+   dup [612 792] (Letter) put
+{ exch aload pop 4 index sub abs 5 le exch
+   5 index sub abs 5 le and
+      {exch pop exit} {pop} ifelse
+   } bind forall
+   = flush pop pop
+  restore
+"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion/Page Region: PickOne
+*OrderDependency: 40 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*da.Translation PageRegion/Page Region: ""
+*de.Translation PageRegion/Seitenbereich: ""
+*es.Translation PageRegion/Dimensión de papel: ""
+*fi.Translation PageRegion/Sivuseutu: ""
+*fr.Translation PageRegion/Région de page: ""
+*it.Translation PageRegion/Dimensioni regione: ""
+*ja.Translation PageRegion/Page Region: ""
+*ko.Translation PageRegion/Page Region: ""
+*nl.Translation PageRegion/Page Region: ""
+*nb.Translation PageRegion/Page Region: ""
+*pt.Translation PageRegion/Região do papel: ""
+*sv.Translation PageRegion/Page Region: ""
+*zh_CN.Translation PageRegion/Page Region: ""
+*zh_TW.Translation PageRegion/Page Region: ""
+
+*PageRegion Letter/Letter: "
+    <</DeferredMediaSelection true /PageSize [612 792] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion Letter/Letter: ""
+*de.PageRegion Letter/Letter: ""
+*es.PageRegion Letter/Letter: ""
+*fi.PageRegion Letter/Letter: ""
+*fr.PageRegion Letter/Lettre: ""
+*it.PageRegion Letter/Letter: ""
+*ja.PageRegion Letter/レター: ""
+*ko.PageRegion Letter/레터: ""
+*nl.PageRegion Letter/Letter: ""
+*nb.PageRegion Letter/Letter: ""
+*pt.PageRegion Letter/Carta EUA: ""
+*sv.PageRegion Letter/Letter: ""
+*zh_CN.PageRegion Letter/信纸: ""
+*zh_TW.PageRegion Letter/Letter: ""
+
+*PageRegion LetterSmall/Letter (Small): "
+	<</DeferredMediaSelection true /PageSize [612 792] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion LetterSmall/Letter (lille): ""
+*de.PageRegion LetterSmall/Letter (Klein): ""
+*es.PageRegion LetterSmall/Letter (pequeño): ""
+*fi.PageRegion LetterSmall/Letter (pieni): ""
+*fr.PageRegion LetterSmall/Lettre (Réduit): ""
+*it.PageRegion LetterSmall/Letter (piccola): ""
+*ja.PageRegion LetterSmall/レター (小): ""
+*ko.PageRegion LetterSmall/레터 (소형): ""
+*nl.PageRegion LetterSmall/Letter (klein): ""
+*nb.PageRegion LetterSmall/Letter (liten): ""
+*pt.PageRegion LetterSmall/Carta EUA (pequeno): ""
+*sv.PageRegion LetterSmall/Letter (litet): ""
+*zh_CN.PageRegion LetterSmall/信纸 (小): ""
+*zh_TW.PageRegion LetterSmall/Letter（小型）: ""
+
+*PageRegion Legal/Legal: "
+    <</DeferredMediaSelection true /PageSize [612 1008] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion Legal/Legal: ""
+*de.PageRegion Legal/Legal: ""
+*es.PageRegion Legal/Legal: ""
+*fi.PageRegion Legal/Legal: ""
+*fr.PageRegion Legal/Légal: ""
+*it.PageRegion Legal/Legale: ""
+*ja.PageRegion Legal/リーガル: ""
+*ko.PageRegion Legal/리갈: ""
+*nl.PageRegion Legal/Legal: ""
+*nb.PageRegion Legal/Legal: ""
+*pt.PageRegion Legal/Ofício EUA: ""
+*sv.PageRegion Legal/Legal: ""
+*zh_CN.PageRegion Legal/Legal: ""
+*zh_TW.PageRegion Legal/Legal: ""
+
+*PageRegion LegalSmall/Legal (Small): "
+	<</DeferredMediaSelection true /PageSize [612 1008] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion LegalSmall/Legal (lille): ""
+*de.PageRegion LegalSmall/Legal (Klein): ""
+*es.PageRegion LegalSmall/Legal (pequeño): ""
+*fi.PageRegion LegalSmall/Legal (pieni): ""
+*fr.PageRegion LegalSmall/Légal (Réduit): ""
+*it.PageRegion LegalSmall/Legale (piccola): ""
+*ja.PageRegion LegalSmall/リーガル (小): ""
+*ko.PageRegion LegalSmall/Legal (소형): ""
+*nl.PageRegion LegalSmall/Legal (klein): ""
+*nb.PageRegion LegalSmall/Legal (liten): ""
+*pt.PageRegion LegalSmall/Ofício EUA (pequeno): ""
+*sv.PageRegion LegalSmall/Legal (litet): ""
+*zh_CN.PageRegion LegalSmall/Legal (小): ""
+*zh_TW.PageRegion LegalSmall/Legal（小型）: ""
+
+*PageRegion Executive/Executive: "
+    <</DeferredMediaSelection true /PageSize [522 756] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion Executive/Executive: ""
+*de.PageRegion Executive/Executive: ""
+*es.PageRegion Executive/Exec: ""
+*fi.PageRegion Executive/Executive: ""
+*fr.PageRegion Executive/Administratif: ""
+*it.PageRegion Executive/Executive: ""
+*ja.PageRegion Executive/エグゼクティブ: ""
+*ko.PageRegion Executive/Executive: ""
+*nl.PageRegion Executive/Executive: ""
+*nb.PageRegion Executive/Executive: ""
+*pt.PageRegion Executive/Executivo: ""
+*sv.PageRegion Executive/Executive: ""
+*zh_CN.PageRegion Executive/Executive: ""
+*zh_TW.PageRegion Executive/Executive: ""
+
+*PageRegion DoublePostcard/Double Postcard (JIS): "
+  	<</DeferredMediaSelection true /PageSize [419.5 567] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion DoublePostcard/Dobbelt postkort (JIS): ""
+*de.PageRegion DoublePostcard/Doppelte Postkarte (JIS): ""
+*es.PageRegion DoublePostcard/Tarjeta postal doble (JIS): ""
+*fi.PageRegion DoublePostcard/Kaksinkert. postikortti (JIS): ""
+*fr.PageRegion DoublePostcard/Carte postale double (JIS): ""
+*it.PageRegion DoublePostcard/Cartolina doppia (JIS): ""
+*ja.PageRegion DoublePostcard/往復はがき (JIS): ""
+*ko.PageRegion DoublePostcard/양면 엽서 (JIS): ""
+*nl.PageRegion DoublePostcard/Dubbele briefkaart (JIS): ""
+*nb.PageRegion DoublePostcard/Dobbelt postkort (JIS): ""
+*pt.PageRegion DoublePostcard/Postal duplo (JIS): ""
+*sv.PageRegion DoublePostcard/Dubbelt brevkort (JIS): ""
+*zh_CN.PageRegion DoublePostcard/大号明信片 (JIS): ""
+*zh_TW.PageRegion DoublePostcard/雙聯明信片(JIS): ""
+
+*PageRegion A4/A4: "
+    <</DeferredMediaSelection true /PageSize [595 842] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion A4/A4: ""
+*de.PageRegion A4/A4: ""
+*es.PageRegion A4/A4: ""
+*fi.PageRegion A4/A4: ""
+*fr.PageRegion A4/A4: ""
+*it.PageRegion A4/A4: ""
+*ja.PageRegion A4/A4: ""
+*ko.PageRegion A4/A4: ""
+*nl.PageRegion A4/A4: ""
+*nb.PageRegion A4/A4: ""
+*pt.PageRegion A4/A4: ""
+*sv.PageRegion A4/A4: ""
+*zh_CN.PageRegion A4/A4: ""
+*zh_TW.PageRegion A4/A4: ""
+
+*PageRegion A4Small/A4 (Small): "
+	<</DeferredMediaSelection true /PageSize [595 842] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion A4Small/A4 (lille): ""
+*de.PageRegion A4Small/A4 (Klein): ""
+*es.PageRegion A4Small/A4 (pequeño): ""
+*fi.PageRegion A4Small/A4 (pieni): ""
+*fr.PageRegion A4Small/A4 (Réduit): ""
+*it.PageRegion A4Small/A4 (piccola): ""
+*ja.PageRegion A4Small/A4 (小): ""
+*ko.PageRegion A4Small/A4 (소형): ""
+*nl.PageRegion A4Small/A4 (klein): ""
+*nb.PageRegion A4Small/A4 (liten): ""
+*pt.PageRegion A4Small/A4 (pequeno): ""
+*sv.PageRegion A4Small/A4 (litet): ""
+*zh_CN.PageRegion A4Small/A4 (小): ""
+*zh_TW.PageRegion A4Small/A4（小型）: ""
+
+*PageRegion A5/A5: "
+    <</DeferredMediaSelection true /PageSize [420 595] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion A5/A5: ""
+*de.PageRegion A5/A5: ""
+*es.PageRegion A5/A5: ""
+*fi.PageRegion A5/A5: ""
+*fr.PageRegion A5/A5: ""
+*it.PageRegion A5/A5: ""
+*ja.PageRegion A5/A5: ""
+*ko.PageRegion A5/A5: ""
+*nl.PageRegion A5/A5: ""
+*nb.PageRegion A5/A5: ""
+*pt.PageRegion A5/A5: ""
+*sv.PageRegion A5/A5: ""
+*zh_CN.PageRegion A5/A5: ""
+*zh_TW.PageRegion A5/A5: ""
+
+*PageRegion ISOB5/B5 (ISO): "
+  	<</DeferredMediaSelection true /PageSize [499 709] /ImagingBBox null /MediaClass (CutSheet) >> setpagedevice"
+*End
+*da.PageRegion ISOB5/B5 (ISO): ""
+*de.PageRegion ISOB5/B5 (ISO): ""
+*es.PageRegion ISOB5/B5 (ISO): ""
+*fi.PageRegion ISOB5/B5 (ISO): ""
+*fr.PageRegion ISOB5/B5 (ISO): ""
+*it.PageRegion ISOB5/B5 (ISO): ""
+*ja.PageRegion ISOB5/B5 (ISO): ""
+*ko.PageRegion ISOB5/B5 (ISO): ""
+*nl.PageRegion ISOB5/B5 (ISO): ""
+*nb.PageRegion ISOB5/B5 (ISO): ""
+*pt.PageRegion ISOB5/B5 (ISO): ""
+*sv.PageRegion ISOB5/B5 (ISO): ""
+*zh_CN.PageRegion ISOB5/B5 (ISO): ""
+*zh_TW.PageRegion ISOB5/B5 (ISO): ""
+
+*PageRegion B5/JIS B5: "
+    <</DeferredMediaSelection true /PageSize [516 729] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion B5/JIS B5: ""
+*de.PageRegion B5/JIS B5: ""
+*es.PageRegion B5/JIS B5: ""
+*fi.PageRegion B5/JIS B5: ""
+*fr.PageRegion B5/JIS B5: ""
+*it.PageRegion B5/JIS B5: ""
+*ja.PageRegion B5/JIS B5: ""
+*ko.PageRegion B5/JIS B5: ""
+*nl.PageRegion B5/JIS B5: ""
+*nb.PageRegion B5/JIS B5: ""
+*pt.PageRegion B5/JIS B5: ""
+*sv.PageRegion B5/JIS B5: ""
+*zh_CN.PageRegion B5/JIS B5: ""
+*zh_TW.PageRegion B5/JIS B5: ""
+
+*PageRegion w612h935/Executive (JIS): "
+  	<</DeferredMediaSelection true /PageSize [612 935] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion w612h935/Executive (JIS): ""
+*de.PageRegion w612h935/Executive (JIS): ""
+*es.PageRegion w612h935/Exec (JIS): ""
+*fi.PageRegion w612h935/Executive (JIS): ""
+*fr.PageRegion w612h935/Administratif (JIS): ""
+*it.PageRegion w612h935/Executive (JIS): ""
+*ja.PageRegion w612h935/エグゼクティブ (JIS): ""
+*ko.PageRegion w612h935/Executive(JIS): ""
+*nl.PageRegion w612h935/Executive (JIS): ""
+*nb.PageRegion w612h935/Executive (JIS): ""
+*pt.PageRegion w612h935/Executivo (JIS): ""
+*sv.PageRegion w612h935/Executive (JIS): ""
+*zh_CN.PageRegion w612h935/Executive (JIS): ""
+*zh_TW.PageRegion w612h935/Executive (JIS): ""
+
+*PageRegion w558h774/16K: "
+  	<</DeferredMediaSelection true /PageSize [558 774] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion w558h774/16K: ""
+*de.PageRegion w558h774/16K: ""
+*es.PageRegion w558h774/16K: ""
+*fi.PageRegion w558h774/16 K: ""
+*fr.PageRegion w558h774/16 Ko: ""
+*it.PageRegion w558h774/16K: ""
+*ja.PageRegion w558h774/16K: ""
+*ko.PageRegion w558h774/16K: ""
+*nl.PageRegion w558h774/16K: ""
+*nb.PageRegion w558h774/16K: ""
+*pt.PageRegion w558h774/16K: ""
+*sv.PageRegion w558h774/16K: ""
+*zh_CN.PageRegion w558h774/16K: ""
+*zh_TW.PageRegion w558h774/16K: ""
+
+*PageRegion Env10/Env Comm10: "
+    <</DeferredMediaSelection true /PageSize [297 684] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion Env10/Konvolut Comm10: ""
+*de.PageRegion Env10/Umschlag Comm10: ""
+*es.PageRegion Env10/Sobre Comm10: ""
+*fi.PageRegion Env10/Kirjekuori Comm10: ""
+*fr.PageRegion Env10/Enveloppe Comm10: ""
+*it.PageRegion Env10/Busta Comm10: ""
+*ja.PageRegion Env10/封筒 Comm10: ""
+*ko.PageRegion Env10/Comm10 봉투: ""
+*nl.PageRegion Env10/Comm10-envelop: ""
+*nb.PageRegion Env10/Comm10-konvolutt: ""
+*pt.PageRegion Env10/Envelope Comm10: ""
+*sv.PageRegion Env10/Comm10-kuvert: ""
+*zh_CN.PageRegion Env10/Comm10号信封: ""
+*zh_TW.PageRegion Env10/Comm10 信封: ""
+
+*PageRegion EnvMonarch/Env Monarch: "
+    <</DeferredMediaSelection true /PageSize [279 540] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion EnvMonarch/Konvolut Monarch: ""
+*de.PageRegion EnvMonarch/Umschlag Monarch: ""
+*es.PageRegion EnvMonarch/Sobre Monarch: ""
+*fi.PageRegion EnvMonarch/Kirjekuori Monarch: ""
+*fr.PageRegion EnvMonarch/Enveloppe Monarch: ""
+*it.PageRegion EnvMonarch/Busta Monarch: ""
+*ja.PageRegion EnvMonarch/封筒 Monarch: ""
+*ko.PageRegion EnvMonarch/Monarch 봉투: ""
+*nl.PageRegion EnvMonarch/Monarch-envelop: ""
+*nb.PageRegion EnvMonarch/Monarch-konvolutt: ""
+*pt.PageRegion EnvMonarch/Envelope Monarch: ""
+*sv.PageRegion EnvMonarch/Monarch-kuvert: ""
+*zh_CN.PageRegion EnvMonarch/Monarch号信封: ""
+*zh_TW.PageRegion EnvMonarch/Monarch 信封: ""
+
+*PageRegion EnvDL/Env DL: "
+    <</DeferredMediaSelection true /PageSize [312 624] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion EnvDL/Konvolut DL: ""
+*de.PageRegion EnvDL/Umschlag DL: ""
+*es.PageRegion EnvDL/Sobre DL: ""
+*fi.PageRegion EnvDL/Kirjekuori DL: ""
+*fr.PageRegion EnvDL/Enveloppe DL: ""
+*it.PageRegion EnvDL/Busta DL: ""
+*ja.PageRegion EnvDL/封筒 DL: ""
+*ko.PageRegion EnvDL/DL 봉투: ""
+*nl.PageRegion EnvDL/DL-envelop: ""
+*nb.PageRegion EnvDL/DL-konvolutt: ""
+*pt.PageRegion EnvDL/Envelope DL: ""
+*sv.PageRegion EnvDL/E65-kuvert: ""
+*zh_CN.PageRegion EnvDL/DL号信封: ""
+*zh_TW.PageRegion EnvDL/DL 信封: ""
+
+*PageRegion EnvC5/Env C5: "
+    <</DeferredMediaSelection true /PageSize [459 649] /ImagingBBox null /MediaClass null >> setpagedevice"
+*End
+*da.PageRegion EnvC5/Konvolut C5: ""
+*de.PageRegion EnvC5/Umschlag C5: ""
+*es.PageRegion EnvC5/Sobre C5: ""
+*fi.PageRegion EnvC5/Kirjekuori C5: ""
+*fr.PageRegion EnvC5/Enveloppe C5: ""
+*it.PageRegion EnvC5/Busta C5: ""
+*ja.PageRegion EnvC5/封筒 C5: ""
+*ko.PageRegion EnvC5/C5 봉투: ""
+*nl.PageRegion EnvC5/C5-envelop: ""
+*nb.PageRegion EnvC5/C5-konvolutt: ""
+*pt.PageRegion EnvC5/Envelope C5: ""
+*sv.PageRegion EnvC5/C5-kuvert: ""
+*zh_CN.PageRegion EnvC5/C5号信封: ""
+*zh_TW.PageRegion EnvC5/C5 信封: ""
+
+*PageRegion EnvISOB5/Env ISO B5: "
+    <</DeferredMediaSelection true /PageSize [499 709] /ImagingBBox null /MediaClass (Envelope) >> setpagedevice"
+*End
+*da.PageRegion EnvISOB5/Konvolut ISO B5: ""
+*de.PageRegion EnvISOB5/Umschlag ISO B5: ""
+*es.PageRegion EnvISOB5/Sobre ISO B5: ""
+*fi.PageRegion EnvISOB5/Kirjekuori ISO B5: ""
+*fr.PageRegion EnvISOB5/Enveloppe ISO B5: ""
+*it.PageRegion EnvISOB5/Busta ISO B5: ""
+*ja.PageRegion EnvISOB5/封筒 B5 (ISO): ""
+*ko.PageRegion EnvISOB5/ISO B5 봉투: ""
+*nl.PageRegion EnvISOB5/ISO B5-envelop: ""
+*nb.PageRegion EnvISOB5/B5-konvolutt: ""
+*pt.PageRegion EnvISOB5/Envelope ISO B5: ""
+*sv.PageRegion EnvISOB5/ISO B5-kuvert: ""
+*zh_CN.PageRegion EnvISOB5/ISO B5号信封: ""
+*zh_TW.PageRegion EnvISOB5/ISO B5 信封: ""
+
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Letter
+*ImageableArea Letter/Letter: 				"12.00 12.12 599.88 780.00"
+*da.ImageableArea Letter/Letter: ""
+*de.ImageableArea Letter/Letter: ""
+*es.ImageableArea Letter/Letter: ""
+*fi.ImageableArea Letter/Letter: ""
+*fr.ImageableArea Letter/Lettre: ""
+*it.ImageableArea Letter/Letter: ""
+*ja.ImageableArea Letter/レター: ""
+*ko.ImageableArea Letter/레터: ""
+*nl.ImageableArea Letter/Letter: ""
+*nb.ImageableArea Letter/Letter: ""
+*pt.ImageableArea Letter/Carta EUA: ""
+*sv.ImageableArea Letter/Letter: ""
+*zh_CN.ImageableArea Letter/信纸: ""
+*zh_TW.ImageableArea Letter/Letter: ""
+
+*ImageableArea LetterSmall/Letter (Small): 	"30.00 31.00 582.00 761.00"
+*da.ImageableArea LetterSmall/Letter (lille): ""
+*de.ImageableArea LetterSmall/Letter (Klein): ""
+*es.ImageableArea LetterSmall/Letter (pequeño): ""
+*fi.ImageableArea LetterSmall/Letter (pieni): ""
+*fr.ImageableArea LetterSmall/Lettre (Réduit): ""
+*it.ImageableArea LetterSmall/Letter (piccola): ""
+*ja.ImageableArea LetterSmall/レター (小): ""
+*ko.ImageableArea LetterSmall/레터 (소형): ""
+*nl.ImageableArea LetterSmall/Letter (klein): ""
+*nb.ImageableArea LetterSmall/Letter (liten): ""
+*pt.ImageableArea LetterSmall/Carta EUA (pequeno): ""
+*sv.ImageableArea LetterSmall/Letter (litet): ""
+*zh_CN.ImageableArea LetterSmall/Letter (小): ""
+*zh_TW.ImageableArea LetterSmall/Letter（小型）: ""
+
+*ImageableArea Legal/Legal: 				"12.00 12.12 599.88 996.00"
+*da.ImageableArea Legal/Legal: ""
+*de.ImageableArea Legal/Legal: ""
+*es.ImageableArea Legal/Legal: ""
+*fi.ImageableArea Legal/Legal: ""
+*fr.ImageableArea Legal/Légal: ""
+*it.ImageableArea Legal/Legale: ""
+*ja.ImageableArea Legal/リーガル: ""
+*ko.ImageableArea Legal/리갈: ""
+*nl.ImageableArea Legal/Legal: ""
+*nb.ImageableArea Legal/Legal: ""
+*pt.ImageableArea Legal/Ofício EUA: ""
+*sv.ImageableArea Legal/Legal: ""
+*zh_CN.ImageableArea Legal/Legal: ""
+*zh_TW.ImageableArea Legal/Legal: ""
+
+*ImageableArea LegalSmall/Legal (Small): 	"64.00 54.00 548.00 954.00"
+*da.ImageableArea LegalSmall/Legal (lille): ""
+*de.ImageableArea LegalSmall/Legal (Klein): ""
+*es.ImageableArea LegalSmall/Legal (pequeño): ""
+*fi.ImageableArea LegalSmall/Legal (pieni): ""
+*fr.ImageableArea LegalSmall/Légal (Réduit): ""
+*it.ImageableArea LegalSmall/Legale (piccola): ""
+*ja.ImageableArea LegalSmall/リーガル (小): ""
+*ko.ImageableArea LegalSmall/Legal (소형): ""
+*nl.ImageableArea LegalSmall/Legal (klein): ""
+*nb.ImageableArea LegalSmall/Legal (liten): ""
+*pt.ImageableArea LegalSmall/Ofício EUA (pequeno): ""
+*sv.ImageableArea LegalSmall/Legal (litet): ""
+*zh_CN.ImageableArea LegalSmall/Legal (小): ""
+*zh_TW.ImageableArea LegalSmall/Legal（小型）: ""
+
+*ImageableArea Executive/Executive: 		"12.00 12.12 509.88 744.00"
+*da.ImageableArea Executive/Executive: ""
+*de.ImageableArea Executive/Executive: ""
+*es.ImageableArea Executive/Ejecutivo: ""
+*fi.ImageableArea Executive/Executive: ""
+*fr.ImageableArea Executive/Administratif: ""
+*it.ImageableArea Executive/Executive: ""
+*ja.ImageableArea Executive/エグゼクティブ: ""
+*ko.ImageableArea Executive/Executive: ""
+*nl.ImageableArea Executive/Executive: ""
+*nb.ImageableArea Executive/Executive: ""
+*pt.ImageableArea Executive/Executivo: ""
+*sv.ImageableArea Executive/Executive: ""
+*zh_CN.ImageableArea Executive/Executive: ""
+*zh_TW.ImageableArea Executive/Executive: ""
+
+*ImageableArea DoublePostcard/Double Postcard (JIS): "12.00 12.12 407.28 554.64"
+*da.ImageableArea DoublePostcard/Dobbelt postkort (JIS): ""
+*de.ImageableArea DoublePostcard/Doppelte Postkarte (JIS): ""
+*es.ImageableArea DoublePostcard/Tarjeta postal doble (JIS): ""
+*fi.ImageableArea DoublePostcard/Kaksinkert. postikortti (JIS): ""
+*fr.ImageableArea DoublePostcard/Carte postale double (JIS): ""
+*it.ImageableArea DoublePostcard/Cartolina doppia (JIS): ""
+*ja.ImageableArea DoublePostcard/往復はがき (JIS): ""
+*ko.ImageableArea DoublePostcard/양면 엽서 (JIS): ""
+*nl.ImageableArea DoublePostcard/Dubbele briefkaart (JIS): ""
+*nb.ImageableArea DoublePostcard/Dobbelt postkort (JIS): ""
+*pt.ImageableArea DoublePostcard/Postal duplo (JIS): ""
+*sv.ImageableArea DoublePostcard/Dubbelt brevkort (JIS): ""
+*zh_CN.ImageableArea DoublePostcard/大号明信片 (JIS): ""
+*zh_TW.ImageableArea DoublePostcard/雙聯明信片 (JIS): ""
+
+*ImageableArea A4/A4: 						"12.00 12.12 583.08 829.68"
+*da.ImageableArea A4/A4: ""
+*de.ImageableArea A4/A4: ""
+*es.ImageableArea A4/A4: ""
+*fi.ImageableArea A4/A4: ""
+*fr.ImageableArea A4/A4: ""
+*it.ImageableArea A4/A4: ""
+*ja.ImageableArea A4/A4: ""
+*ko.ImageableArea A4/A4: ""
+*nl.ImageableArea A4/A4: ""
+*nb.ImageableArea A4/A4: ""
+*pt.ImageableArea A4/A4: ""
+*sv.ImageableArea A4/A4: ""
+*zh_CN.ImageableArea A4/A4: ""
+*zh_TW.ImageableArea A4/A4: ""
+
+*ImageableArea A4Small/A4 (Small): 			"28.00 30.00 566.00 811.00"
+*da.ImageableArea A4Small/A4 (lille): ""
+*de.ImageableArea A4Small/A4 (Klein): ""
+*es.ImageableArea A4Small/A4 (pequeño): ""
+*fi.ImageableArea A4Small/A4 (pieni): ""
+*fr.ImageableArea A4Small/A4 (Réduit): ""
+*it.ImageableArea A4Small/A4 (piccola): ""
+*ja.ImageableArea A4Small/A4 (小): ""
+*ko.ImageableArea A4Small/A4 (소형): ""
+*nl.ImageableArea A4Small/A4 (klein): ""
+*nb.ImageableArea A4Small/A4 (liten): ""
+*pt.ImageableArea A4Small/A4 (pequeno): ""
+*sv.ImageableArea A4Small/A4 (litet): ""
+*zh_CN.ImageableArea A4Small/A4 (小): ""
+*zh_TW.ImageableArea A4Small/A4（小型）: ""
+
+*ImageableArea A5/A5: 						"12.00 12.12 407.40 583.20"
+*da.ImageableArea A5/A5: ""
+*de.ImageableArea A5/A5: ""
+*es.ImageableArea A5/A5: ""
+*fi.ImageableArea A5/A5: ""
+*fr.ImageableArea A5/A5: ""
+*it.ImageableArea A5/A5: ""
+*ja.ImageableArea A5/A5: ""
+*ko.ImageableArea A5/A5: ""
+*nl.ImageableArea A5/A5: ""
+*nb.ImageableArea A5/A5: ""
+*pt.ImageableArea A5/A5: ""
+*sv.ImageableArea A5/A5: ""
+*zh_CN.ImageableArea A5/A5: ""
+*zh_TW.ImageableArea A5/A5: ""
+
+*ImageableArea ISOB5/B5 (ISO): 				"12.00 12.12 488.00 698.00"
+*da.ImageableArea ISOB5/B5 (ISO): ""
+*de.ImageableArea ISOB5/B5 (ISO): ""
+*es.ImageableArea ISOB5/B5 (ISO): ""
+*fi.ImageableArea ISOB5/B5 (ISO): ""
+*fr.ImageableArea ISOB5/B5 (ISO): ""
+*it.ImageableArea ISOB5/B5 (ISO): ""
+*ja.ImageableArea ISOB5/B5 (ISO): ""
+*ko.ImageableArea ISOB5/B5 (ISO): ""
+*nl.ImageableArea ISOB5/B5 (ISO): ""
+*nb.ImageableArea ISOB5/B5 (ISO): ""
+*pt.ImageableArea ISOB5/B5 (ISO): ""
+*sv.ImageableArea ISOB5/B5 (ISO): ""
+*zh_CN.ImageableArea ISOB5/B5 (ISO): ""
+*zh_TW.ImageableArea ISOB5/B5 (ISO): ""
+
+*ImageableArea B5/JIS B5: 					"12.00 12.12 503.88 715.92"
+*da.ImageableArea B5/JIS B5: ""
+*de.ImageableArea B5/JIS B5: ""
+*es.ImageableArea B5/JIS B5: ""
+*fi.ImageableArea B5/JIS B5: ""
+*fr.ImageableArea B5/JIS B5: ""
+*it.ImageableArea B5/JIS B5: ""
+*ja.ImageableArea B5/JIS B5: ""
+*ko.ImageableArea B5/JIS B5: ""
+*nl.ImageableArea B5/JIS B5: ""
+*nb.ImageableArea B5/JIS B5: ""
+*pt.ImageableArea B5/JIS B5: ""
+*sv.ImageableArea B5/JIS B5: ""
+*zh_CN.ImageableArea B5/JIS B5: ""
+*zh_TW.ImageableArea B5/JIS B5: ""
+
+*ImageableArea w612h935/Executive (JIS): 	"12.00 12.12 599.76 923.76"
+*da.ImageableArea w612h935/Executive (JIS): ""
+*de.ImageableArea w612h935/Executive (JIS): ""
+*es.ImageableArea w612h935/Ejecutivo (JIS): ""
+*fi.ImageableArea w612h935/Executive (JIS): ""
+*fr.ImageableArea w612h935/Administratif (JIS): ""
+*it.ImageableArea w612h935/Executive (JIS): ""
+*ja.ImageableArea w612h935/エグゼクティブ (JIS): ""
+*ko.ImageableArea w612h935/Executive (JIS): ""
+*nl.ImageableArea w612h935/Executive (JIS): ""
+*nb.ImageableArea w612h935/Executive (JIS): ""
+*pt.ImageableArea w612h935/Executivo (JIS): ""
+*sv.ImageableArea w612h935/Executive (JIS): ""
+*zh_CN.ImageableArea w612h935/Executive (JIS): ""
+*zh_TW.ImageableArea w612h935/Executive (JIS): ""
+
+*ImageableArea w558h774/16K: 				"12.00 12.12 545.76 761.76"
+*da.ImageableArea w558h774/16K: ""
+*de.ImageableArea w558h774/16K: ""
+*es.ImageableArea w558h774/16K: ""
+*fi.ImageableArea w558h774/16K: ""
+*fr.ImageableArea w558h774/16K: ""
+*it.ImageableArea w558h774/16K: ""
+*ja.ImageableArea w558h774/16K: ""
+*ko.ImageableArea w558h774/16K: ""
+*nl.ImageableArea w558h774/16K: ""
+*nb.ImageableArea w558h774/16K: ""
+*pt.ImageableArea w558h774/16K: ""
+*sv.ImageableArea w558h774/16K: ""
+*zh_CN.ImageableArea w558h774/16K: ""
+*zh_TW.ImageableArea w558h774/16K: ""
+
+*ImageableArea Env10/Env Comm10: 			"12.00 12.12 284.76 672.00"
+*da.ImageableArea Env10/Konvolut Comm10: ""
+*de.ImageableArea Env10/Umschlag Comm10: ""
+*es.ImageableArea Env10/Sobre Comm10: ""
+*fi.ImageableArea Env10/Kirjekuori Comm10: ""
+*fr.ImageableArea Env10/Enveloppe Comm10: ""
+*it.ImageableArea Env10/Busta Comm10: ""
+*ja.ImageableArea Env10/封筒 Comm10: ""
+*ko.ImageableArea Env10/Comm10 봉투: ""
+*nl.ImageableArea Env10/Comm10-envelop: ""
+*nb.ImageableArea Env10/Comm10-konvolutt: ""
+*pt.ImageableArea Env10/Envelope Comm10: ""
+*sv.ImageableArea Env10/Comm10-kuvert: ""
+*zh_CN.ImageableArea Env10/Comm10 号信封: ""
+*zh_TW.ImageableArea Env10/Comm10 信封: ""
+
+*ImageableArea EnvMonarch/Env Monarch: 		"12.00 12.12 266.76 528.00"
+*da.ImageableArea EnvMonarch/Konvolut Monarch: ""
+*de.ImageableArea EnvMonarch/Umschlag Monarch: ""
+*es.ImageableArea EnvMonarch/Sobre Monarch: ""
+*fi.ImageableArea EnvMonarch/Kirjekuori Monarch: ""
+*fr.ImageableArea EnvMonarch/Enveloppe Monarch: ""
+*it.ImageableArea EnvMonarch/Busta Monarch: ""
+*ja.ImageableArea EnvMonarch/封筒 Monarch: ""
+*ko.ImageableArea EnvMonarch/Monarch 봉투: ""
+*nl.ImageableArea EnvMonarch/Monarch-envelop: ""
+*nb.ImageableArea EnvMonarch/Monarch-konvolutt: ""
+*pt.ImageableArea EnvMonarch/Envelope Monarch: ""
+*sv.ImageableArea EnvMonarch/Monarch-kuvert: ""
+*zh_CN.ImageableArea EnvMonarch/Monarch 号信封: ""
+*zh_TW.ImageableArea EnvMonarch/Monarch 信封: ""
+
+*ImageableArea EnvDL/Env DL: 				"12.00 12.12 299.64 611.52"
+*da.ImageableArea EnvDL/Konvolut DL: ""
+*de.ImageableArea EnvDL/Umschlag DL: ""
+*es.ImageableArea EnvDL/Sobre DL: ""
+*fi.ImageableArea EnvDL/Kirjekuori DL: ""
+*fr.ImageableArea EnvDL/Enveloppe DL: ""
+*it.ImageableArea EnvDL/Busta DL: ""
+*ja.ImageableArea EnvDL/封筒 DL: ""
+*ko.ImageableArea EnvDL/DL 봉투: ""
+*nl.ImageableArea EnvDL/DL-envelop: ""
+*nb.ImageableArea EnvDL/DL-konvolutt: ""
+*pt.ImageableArea EnvDL/Envelope DL: ""
+*sv.ImageableArea EnvDL/DL-kuvert: ""
+*zh_CN.ImageableArea EnvDL/DL 号信封: ""
+*zh_TW.ImageableArea EnvDL/DL 信封: ""
+
+*ImageableArea EnvC5/Env C5: 				"12.00 12.12 447.00 636.96"
+*da.ImageableArea EnvC5/Konvolut C5: ""
+*de.ImageableArea EnvC5/Umschlag C5: ""
+*es.ImageableArea EnvC5/Sobre C5: ""
+*fi.ImageableArea EnvC5/Kirjekuori C5: ""
+*fr.ImageableArea EnvC5/Enveloppe C5: ""
+*it.ImageableArea EnvC5/Busta C5: ""
+*ja.ImageableArea EnvC5/封筒 C5: ""
+*ko.ImageableArea EnvC5/C5 봉투: ""
+*nl.ImageableArea EnvC5/C5-envelop: ""
+*nb.ImageableArea EnvC5/C5-konvolutt: ""
+*pt.ImageableArea EnvC5/Envelope C5: ""
+*sv.ImageableArea EnvC5/C5-kuvert: ""
+*zh_CN.ImageableArea EnvC5/C5 号信封: ""
+*zh_TW.ImageableArea EnvC5/C5 信封: ""
+
+*ImageableArea EnvISOB5/Env ISO B5: 		"12.00 12.12 486.60 696.48"
+*da.ImageableArea EnvISOB5/Konvolut ISO B5: ""
+*de.ImageableArea EnvISOB5/Umschlag ISO B5: ""
+*es.ImageableArea EnvISOB5/Sobre ISO B5: ""
+*fi.ImageableArea EnvISOB5/Kirjekuori ISO B5: ""
+*fr.ImageableArea EnvISOB5/Enveloppe ISO B5: ""
+*it.ImageableArea EnvISOB5/Busta ISO B5: ""
+*ja.ImageableArea EnvISOB5/封筒 B5 (ISO): ""
+*ko.ImageableArea EnvISOB5/ISO B5 봉투: ""
+*nl.ImageableArea EnvISOB5/ISO B5-envelop: ""
+*nb.ImageableArea EnvISOB5/B5-konvolutt: ""
+*pt.ImageableArea EnvISOB5/Envelope ISO B5: ""
+*sv.ImageableArea EnvISOB5/ISO B5-kuvert: ""
+*zh_CN.ImageableArea EnvISOB5/ISO B5 号信封: ""
+*zh_TW.ImageableArea EnvISOB5/ISO B5 信封: ""
+
+*?ImageableArea: "
+  save
+   /cvp { (                ) cvs print ( ) print } bind def
+   /upperright {10000 mul floor 10000 div} bind def
+   /lowerleft {10000 mul ceiling 10000 div} bind def
+   newpath clippath pathbbox
+   4 -2 roll exch 2 {lowerleft cvp} repeat
+   exch 2 {upperright cvp} repeat flush
+   restore
+"
+*End
+
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/Letter: "612 792"
+*da.PaperDimension Letter/Letter: ""
+*de.PaperDimension Letter/Letter: ""
+*es.PaperDimension Letter/Letter: ""
+*fi.PaperDimension Letter/Letter: ""
+*fr.PaperDimension Letter/Lettre: ""
+*it.PaperDimension Letter/Letter: ""
+*ja.PaperDimension Letter/レター: ""
+*ko.PaperDimension Letter/레터: ""
+*nl.PaperDimension Letter/Letter: ""
+*nb.PaperDimension Letter/Letter: ""
+*pt.PaperDimension Letter/Carta EUA: ""
+*sv.PaperDimension Letter/Letter: ""
+*zh_CN.PaperDimension Letter/信纸: ""
+*zh_TW.PaperDimension Letter/Letter: ""
+
+*PaperDimension LetterSmall/Letter (Small): "612 792"
+*da.PaperDimension LetterSmall/Letter (lille): ""
+*de.PaperDimension LetterSmall/Letter (Klein): ""
+*es.PaperDimension LetterSmall/Letter (pequeño): ""
+*fi.PaperDimension LetterSmall/Letter (pieni): ""
+*fr.PaperDimension LetterSmall/Lettre (Réduit): ""
+*it.PaperDimension LetterSmall/Letter (piccola): ""
+*ja.PaperDimension LetterSmall/レター (小): ""
+*ko.PaperDimension LetterSmall/레터 (소형): ""
+*nl.PaperDimension LetterSmall/Letter (klein): ""
+*nb.PaperDimension LetterSmall/Letter (liten): ""
+*pt.PaperDimension LetterSmall/Carta EUA (pequeno): ""
+*sv.PaperDimension LetterSmall/Letter (litet): ""
+*zh_CN.PaperDimension LetterSmall/信纸 (小): ""
+*zh_TW.PaperDimension LetterSmall/Letter（小型）: ""
+
+*PaperDimension Legal/Legal: "612 1008"
+*da.PaperDimension Legal/Legal: ""
+*de.PaperDimension Legal/Legal: ""
+*es.PaperDimension Legal/Legal: ""
+*fi.PaperDimension Legal/Legal: ""
+*fr.PaperDimension Legal/Légal: ""
+*it.PaperDimension Legal/Legale: ""
+*ja.PaperDimension Legal/リーガル: ""
+*ko.PaperDimension Legal/리갈: ""
+*nl.PaperDimension Legal/Legal: ""
+*nb.PaperDimension Legal/Legal: ""
+*pt.PaperDimension Legal/Ofício EUA: ""
+*sv.PaperDimension Legal/Legal: ""
+*zh_CN.PaperDimension Legal/Legal: ""
+*zh_TW.PaperDimension Legal/Legal: ""
+
+*PaperDimension LegalSmall/Legal (Small): "612 1008"
+*da.PaperDimension LegalSmall/Legal (lille): ""
+*de.PaperDimension LegalSmall/Legal (Klein): ""
+*es.PaperDimension LegalSmall/Legal (pequeño): ""
+*fi.PaperDimension LegalSmall/Legal (pieni): ""
+*fr.PaperDimension LegalSmall/Légal (Réduit): ""
+*it.PaperDimension LegalSmall/Legale (piccola): ""
+*ja.PaperDimension LegalSmall/リーガル (小): ""
+*ko.PaperDimension LegalSmall/Legal (소형): ""
+*nl.PaperDimension LegalSmall/Legal (klein): ""
+*nb.PaperDimension LegalSmall/Legal (liten): ""
+*pt.PaperDimension LegalSmall/Ofício EUA (pequeno): ""
+*sv.PaperDimension LegalSmall/Legal (litet): ""
+*zh_CN.PaperDimension LegalSmall/Legal (小): ""
+*zh_TW.PaperDimension LegalSmall/Legal（小型）: ""
+
+*PaperDimension Executive/Executive: "522 756"
+*da.PaperDimension Executive/Executive: ""
+*de.PaperDimension Executive/Executive: ""
+*es.PaperDimension Executive/Exec: ""
+*fi.PaperDimension Executive/Executive: ""
+*fr.PaperDimension Executive/Administratif: ""
+*it.PaperDimension Executive/Executive: ""
+*ja.PaperDimension Executive/エグゼクティブ: ""
+*ko.PaperDimension Executive/Executive: ""
+*nl.PaperDimension Executive/Executive: ""
+*nb.PaperDimension Executive/Executive: ""
+*pt.PaperDimension Executive/Executivo: ""
+*sv.PaperDimension Executive/Executive: ""
+*zh_CN.PaperDimension Executive/Executive: ""
+*zh_TW.PaperDimension Executive/Executive: ""
+
+*PaperDimension DoublePostcard/Double Postcard (JIS): "419.5 567"
+*da.PaperDimension DoublePostcard/Dobbelt postkort (JIS): ""
+*de.PaperDimension DoublePostcard/Doppelte Postkarte (JIS): ""
+*es.PaperDimension DoublePostcard/Tarjeta postal doble (JIS): ""
+*fi.PaperDimension DoublePostcard/Kaksinkert. postikortti (JIS): ""
+*fr.PaperDimension DoublePostcard/Carte postale double (JIS): ""
+*it.PaperDimension DoublePostcard/Cartolina doppia (JIS): ""
+*ja.PaperDimension DoublePostcard/往復はがき (JIS): ""
+*ko.PaperDimension DoublePostcard/양면 엽서 (JIS): ""
+*nl.PaperDimension DoublePostcard/Dubbele briefkaart (JIS): ""
+*nb.PaperDimension DoublePostcard/Dobbelt postkort (JIS): ""
+*pt.PaperDimension DoublePostcard/Postal duplo (JIS): ""
+*sv.PaperDimension DoublePostcard/Dubbelt brevkort (JIS): ""
+*zh_CN.PaperDimension DoublePostcard/大号明信片 (JIS): ""
+*zh_TW.PaperDimension DoublePostcard/雙聯明信片(JIS): ""
+
+*PaperDimension A4/A4: "595 842"
+*da.PaperDimension A4/A4: ""
+*de.PaperDimension A4/A4: ""
+*es.PaperDimension A4/A4: ""
+*fi.PaperDimension A4/A4: ""
+*fr.PaperDimension A4/A4: ""
+*it.PaperDimension A4/A4: ""
+*ja.PaperDimension A4/A4: ""
+*ko.PaperDimension A4/A4: ""
+*nl.PaperDimension A4/A4: ""
+*nb.PaperDimension A4/A4: ""
+*pt.PaperDimension A4/A4: ""
+*sv.PaperDimension A4/A4: ""
+*zh_CN.PaperDimension A4/A4: ""
+*zh_TW.PaperDimension A4/A4: ""
+
+*PaperDimension A4Small/A4 (Small): "595 842"
+*da.PaperDimension A4Small/A4 (lille): ""
+*de.PaperDimension A4Small/A4 (Klein): ""
+*es.PaperDimension A4Small/A4 (pequeño): ""
+*fi.PaperDimension A4Small/A4 (pieni): ""
+*fr.PaperDimension A4Small/A4 (Réduit): ""
+*it.PaperDimension A4Small/A4 (piccola): ""
+*ja.PaperDimension A4Small/A4 (小): ""
+*ko.PaperDimension A4Small/A4 (소형): ""
+*nl.PaperDimension A4Small/A4 (klein): ""
+*nb.PaperDimension A4Small/A4 (liten): ""
+*pt.PaperDimension A4Small/A4 (pequeno): ""
+*sv.PaperDimension A4Small/A4 (litet): ""
+*zh_CN.PaperDimension A4Small/A4 (小): ""
+*zh_TW.PaperDimension A4Small/A4（小型）: ""
+
+*PaperDimension A5/A5: "420 595"
+*da.PaperDimension A5/A5: ""
+*de.PaperDimension A5/A5: ""
+*es.PaperDimension A5/A5: ""
+*fi.PaperDimension A5/A5: ""
+*fr.PaperDimension A5/A5: ""
+*it.PaperDimension A5/A5: ""
+*ja.PaperDimension A5/A5: ""
+*ko.PaperDimension A5/A5: ""
+*nl.PaperDimension A5/A5: ""
+*nb.PaperDimension A5/A5: ""
+*pt.PaperDimension A5/A5: ""
+*sv.PaperDimension A5/A5: ""
+*zh_CN.PaperDimension A5/A5: ""
+*zh_TW.PaperDimension A5/A5: ""
+
+*PaperDimension ISOB5/B5 (ISO): "499 709"
+*da.PaperDimension ISOB5/B5 (ISO): ""
+*de.PaperDimension ISOB5/B5 (ISO): ""
+*es.PaperDimension ISOB5/B5 (ISO): ""
+*fi.PaperDimension ISOB5/B5 (ISO): ""
+*fr.PaperDimension ISOB5/B5 (ISO): ""
+*it.PaperDimension ISOB5/B5 (ISO): ""
+*ja.PaperDimension ISOB5/B5 (ISO): ""
+*ko.PaperDimension ISOB5/B5 (ISO): ""
+*nl.PaperDimension ISOB5/B5 (ISO): ""
+*nb.PaperDimension ISOB5/B5 (ISO): ""
+*pt.PaperDimension ISOB5/B5 (ISO): ""
+*sv.PaperDimension ISOB5/B5 (ISO): ""
+*zh_CN.PaperDimension ISOB5/B5 (ISO): ""
+*zh_TW.PaperDimension ISOB5/B5 (ISO): ""
+
+*PaperDimension B5/JIS B5: "516 729"
+*da.PaperDimension B5/JIS B5: ""
+*de.PaperDimension B5/JIS B5: ""
+*es.PaperDimension B5/JIS B5: ""
+*fi.PaperDimension B5/JIS B5: ""
+*fr.PaperDimension B5/JIS B5: ""
+*it.PaperDimension B5/JIS B5: ""
+*ja.PaperDimension B5/JIS B5: ""
+*ko.PaperDimension B5/JIS B5: ""
+*nl.PaperDimension B5/JIS B5: ""
+*nb.PaperDimension B5/JIS B5: ""
+*pt.PaperDimension B5/JIS B5: ""
+*sv.PaperDimension B5/JIS B5: ""
+*zh_CN.PaperDimension B5/JIS B5: ""
+*zh_TW.PaperDimension B5/JIS B5: ""
+
+*PaperDimension w612h935/Executive (JIS): "612 935"
+*da.PaperDimension w612h935/Executive (JIS): ""
+*de.PaperDimension w612h935/Executive (JIS): ""
+*es.PaperDimension w612h935/Exec (JIS): ""
+*fi.PaperDimension w612h935/Executive (JIS): ""
+*fr.PaperDimension w612h935/Administratif (JIS): ""
+*it.PaperDimension w612h935/Executive (JIS): ""
+*ja.PaperDimension w612h935/エグゼクティブ (JIS): ""
+*ko.PaperDimension w612h935/Executive(JIS): ""
+*nl.PaperDimension w612h935/Executive (JIS): ""
+*nb.PaperDimension w612h935/Executive (JIS): ""
+*pt.PaperDimension w612h935/Executivo (JIS): ""
+*sv.PaperDimension w612h935/Executive (JIS): ""
+*zh_CN.PaperDimension w612h935/Executive (JIS): ""
+*zh_TW.PaperDimension w612h935/Executive (JIS): ""
+
+*PaperDimension w558h774/16K: "558 774"
+*da.PaperDimension w558h774/16K: ""
+*de.PaperDimension w558h774/16K: ""
+*es.PaperDimension w558h774/16K: ""
+*fi.PaperDimension w558h774/16 K: ""
+*fr.PaperDimension w558h774/16 Ko: ""
+*it.PaperDimension w558h774/16K: ""
+*ja.PaperDimension w558h774/16K: ""
+*ko.PaperDimension w558h774/16K: ""
+*nl.PaperDimension w558h774/16K: ""
+*nb.PaperDimension w558h774/16K: ""
+*pt.PaperDimension w558h774/16K: ""
+*sv.PaperDimension w558h774/16K: ""
+*zh_CN.PaperDimension w558h774/16K: ""
+*zh_TW.PaperDimension w558h774/16K: ""
+
+*PaperDimension Env10/Env Comm10: "297 684"
+*da.PaperDimension Env10/Konvolut Comm10: ""
+*de.PaperDimension Env10/Umschlag Comm10: ""
+*es.PaperDimension Env10/Sobre Comm10: ""
+*fi.PaperDimension Env10/Kirjekuori Comm10: ""
+*fr.PaperDimension Env10/Enveloppe Comm10: ""
+*it.PaperDimension Env10/Busta Comm10: ""
+*ja.PaperDimension Env10/封筒 Comm10: ""
+*ko.PaperDimension Env10/Comm10 봉투: ""
+*nl.PaperDimension Env10/Comm10-envelop: ""
+*nb.PaperDimension Env10/Comm10-konvolutt: ""
+*pt.PaperDimension Env10/Envelope Comm10: ""
+*sv.PaperDimension Env10/Comm10-kuvert: ""
+*zh_CN.PaperDimension Env10/Comm10号信封: ""
+*zh_TW.PaperDimension Env10/Comm10 信封: ""
+
+*PaperDimension EnvMonarch/Env Monarch: "279 540"
+*da.PaperDimension EnvMonarch/Konvolut Monarch: ""
+*de.PaperDimension EnvMonarch/Umschlag Monarch: ""
+*es.PaperDimension EnvMonarch/Sobre Monarch: ""
+*fi.PaperDimension EnvMonarch/Kirjekuori Monarch: ""
+*fr.PaperDimension EnvMonarch/Enveloppe Monarch: ""
+*it.PaperDimension EnvMonarch/Busta Monarch: ""
+*ja.PaperDimension EnvMonarch/封筒 Monarch: ""
+*ko.PaperDimension EnvMonarch/Monarch 봉투: ""
+*nl.PaperDimension EnvMonarch/Monarch-envelop: ""
+*nb.PaperDimension EnvMonarch/Monarch-konvolutt: ""
+*pt.PaperDimension EnvMonarch/Envelope Monarch: ""
+*sv.PaperDimension EnvMonarch/Monarch-kuvert: ""
+*zh_CN.PaperDimension EnvMonarch/Monarch号信封: ""
+*zh_TW.PaperDimension EnvMonarch/Env C: ""
+
+*PaperDimension EnvDL/Env DL: "312 624"
+*da.PaperDimension EnvDL/Konvolut DL: ""
+*de.PaperDimension EnvDL/Umschlag DL: ""
+*es.PaperDimension EnvDL/Sobre DL: ""
+*fi.PaperDimension EnvDL/Kirjekuori DL: ""
+*fr.PaperDimension EnvDL/Enveloppe DL: ""
+*it.PaperDimension EnvDL/Busta DL: ""
+*ja.PaperDimension EnvDL/封筒 DL: ""
+*ko.PaperDimension EnvDL/DL 봉투: ""
+*nl.PaperDimension EnvDL/DL-envelop: ""
+*nb.PaperDimension EnvDL/DL-konvolutt: ""
+*pt.PaperDimension EnvDL/Envelope DL: ""
+*sv.PaperDimension EnvDL/E65-kuvert: ""
+*zh_CN.PaperDimension EnvDL/DL号信封: ""
+*zh_TW.PaperDimension EnvDL/DL 信封: ""
+
+*PaperDimension EnvC5/Env C5: "459 649"
+*da.PaperDimension EnvC5/Konvolut C5: ""
+*de.PaperDimension EnvC5/Umschlag C5: ""
+*es.PaperDimension EnvC5/Sobre C5: ""
+*fi.PaperDimension EnvC5/Kirjekuori C5: ""
+*fr.PaperDimension EnvC5/Enveloppe C5: ""
+*it.PaperDimension EnvC5/Busta C5: ""
+*ja.PaperDimension EnvC5/封筒 C5: ""
+*ko.PaperDimension EnvC5/C5 봉투: ""
+*nl.PaperDimension EnvC5/C5-envelop: ""
+*nb.PaperDimension EnvC5/C5-konvolutt: ""
+*pt.PaperDimension EnvC5/Envelope C5: ""
+*sv.PaperDimension EnvC5/C5-kuvert: ""
+*zh_CN.PaperDimension EnvC5/C5号信封: ""
+*zh_TW.PaperDimension EnvC5/C5 信封: ""
+
+*PaperDimension EnvISOB5/Env ISO B5: "499 709"
+*da.PaperDimension EnvISOB5/Konvolut ISO B5: ""
+*de.PaperDimension EnvISOB5/Umschlag ISO B5: ""
+*es.PaperDimension EnvISOB5/Sobre ISO B5: ""
+*fi.PaperDimension EnvISOB5/Kirjekuori ISO B5: ""
+*fr.PaperDimension EnvISOB5/Enveloppe ISO B5: ""
+*it.PaperDimension EnvISOB5/Busta ISO B5: ""
+*ja.PaperDimension EnvISOB5/封筒 B5 (ISO): ""
+*ko.PaperDimension EnvISOB5/ISO B5 봉투: ""
+*nl.PaperDimension EnvISOB5/ISO B5-envelop: ""
+*nb.PaperDimension EnvISOB5/B5-konvolutt: ""
+*pt.PaperDimension EnvISOB5/Envelope ISO B5: ""
+*sv.PaperDimension EnvISOB5/ISO B5-kuvert: ""
+*zh_CN.PaperDimension EnvISOB5/ISO B5号信封: ""
+*zh_TW.PaperDimension EnvISOB5/ISO B5 信封: ""
+
+
+*LandscapeOrientation: Plus90
+
+*%=================================================
+*%		 Custom Paper Support
+*%=================================================
+*%Orientation and Margin (offsets) values are not utilized
+
+*VariablePaperSize: True
+
+*LeadingEdge PreferLong: ""
+*DefaultLeadingEdge: PreferLong
+
+*% Smallest = 3x5, Largest = 8.5 x 14
+*MaxMediaWidth:  "612"
+*MaxMediaHeight: "1008"
+*HWMargins:      12 12 12 12
+*%CustomPageRegion True: ""
+*CustomPageSize True: "
+  pop pop pop
+  <</DeferredMediaSelection true /PageSize [ 7 -2 roll ] /ImagingBBox null >>
+  setpagedevice
+"
+*End
+
+
+*ParamCustomPageSize Width:        1 points 216 612
+*ParamCustomPageSize Height:       2 points 360 1008
+*ParamCustomPageSize WidthOffset:  3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation:  5 int 0 0
+
+*RequiresPageRegion All: True
+
+*%==========================================
+*%		Media Type
+*%=========================================
+*OpenUI *MediaType/Media Type: PickOne
+*OrderDependency: 20 AnySetup *MediaType
+*DefaultMediaType: None
+*da.Translation MediaType/Medietype: ""
+*de.Translation MediaType/Medientyp: ""
+*es.Translation MediaType/Tipo de sustrato: ""
+*fi.Translation MediaType/Tulostusmateriaali: ""
+*fr.Translation MediaType/Type de support: ""
+*it.Translation MediaType/Tipo di supporto: ""
+*ja.Translation MediaType/用紙の種類: ""
+*ko.Translation MediaType/용지 종류: ""
+*nl.Translation MediaType/Type afdrukmateriaal: ""
+*nb.Translation MediaType/Utskriftsmateriale: ""
+*pt.Translation MediaType/Tipo de mídia: ""
+*sv.Translation MediaType/Material: ""
+*zh_CN.Translation MediaType/介质类型: ""
+*zh_TW.Translation MediaType/媒體類型: ""
+
+*MediaType None/None:  "
+    <</ManualFeed false /MediaType null >> setpagedevice"
+*End
+*da.MediaType None/Ingen: ""
+*de.MediaType None/Kein: ""
+*es.MediaType None/Ninguno: ""
+*fi.MediaType None/Ei mitään: ""
+*fr.MediaType None/Aucun: ""
+*it.MediaType None/Nessuno: ""
+*ja.MediaType None/なし: ""
+*ko.MediaType None/없음: ""
+*nl.MediaType None/Geen: ""
+*nb.MediaType None/Ingen: ""
+*pt.MediaType None/Nenhum: ""
+*sv.MediaType None/Inget: ""
+*zh_CN.MediaType None/无: ""
+*zh_TW.MediaType None/無: ""
+
+*MediaType Plain/Plain:  "
+    <</ManualFeed false /MediaType (Plain)>> setpagedevice"
+*End
+*da.MediaType Plain/Almindeligt: ""
+*de.MediaType Plain/Normal: ""
+*es.MediaType Plain/Estándar: ""
+*fi.MediaType Plain/Tavallinen: ""
+*fr.MediaType Plain/Ordinaire: ""
+*it.MediaType Plain/Normale: ""
+*ja.MediaType Plain/普通用紙: ""
+*ko.MediaType Plain/일반용지: ""
+*nl.MediaType Plain/Gewoon: ""
+*nb.MediaType Plain/Vanlig: ""
+*pt.MediaType Plain/Comum: ""
+*sv.MediaType Plain/Vanligt: ""
+*zh_CN.MediaType Plain/普通纸: ""
+*zh_TW.MediaType Plain/素面紙: ""
+
+*MediaType Preprinted/Preprinted:  "
+    <</ManualFeed false /MediaType (Preprinted)>> setpagedevice"
+*End
+*da.MediaType Preprinted/Fortrykt: ""
+*de.MediaType Preprinted/Vordruckpapier: ""
+*es.MediaType Preprinted/Preimpreso: ""
+*fi.MediaType Preprinted/Esipainettu: ""
+*fr.MediaType Preprinted/Préimprimé: ""
+*it.MediaType Preprinted/Prestampata: ""
+*ja.MediaType Preprinted/印刷フォーム: ""
+*ko.MediaType Preprinted/미리 인쇄: ""
+*nl.MediaType Preprinted/Voorbedrukt: ""
+*nb.MediaType Preprinted/Forhåndstrykt: ""
+*pt.MediaType Preprinted/Pré-impresso: ""
+*sv.MediaType Preprinted/Förtryckt: ""
+*zh_CN.MediaType Preprinted/预先打印纸: ""
+*zh_TW.MediaType Preprinted/預印的: ""
+
+*MediaType Letterhead/Letterhead:  "
+    <</ManualFeed false /MediaType (Letterhead)>> setpagedevice"
+*End
+*da.MediaType Letterhead/Brevpapir: ""
+*de.MediaType Letterhead/Briefkopfpapier: ""
+*es.MediaType Letterhead/Membrete: ""
+*fi.MediaType Letterhead/Kirjelomake: ""
+*fr.MediaType Letterhead/Papier à en-tête: ""
+*it.MediaType Letterhead/Carta intestata: ""
+*ja.MediaType Letterhead/レターヘッド付き: ""
+*ko.MediaType Letterhead/레터헤드: ""
+*nl.MediaType Letterhead/Briefpapier: ""
+*nb.MediaType Letterhead/Brevhode: ""
+*pt.MediaType Letterhead/Timbrado: ""
+*sv.MediaType Letterhead/Brevpapper: ""
+*zh_CN.MediaType Letterhead/信头纸: ""
+*zh_TW.MediaType Letterhead/信頭紙: ""
+
+*MediaType Transparency/Transparency:  "
+    <</ManualFeed false /MediaType (Transparency)>> setpagedevice"
+*End
+*da.MediaType Transparency/Transparent: ""
+*de.MediaType Transparency/Transparentfolie: ""
+*es.MediaType Transparency/Transparencia: ""
+*fi.MediaType Transparency/Kalvo: ""
+*fr.MediaType Transparency/Transparent: ""
+*it.MediaType Transparency/Lucido: ""
+*ja.MediaType Transparency/OHP ﾌｨﾙﾑ: ""
+*ko.MediaType Transparency/투명 용지: ""
+*nl.MediaType Transparency/Transparant: ""
+*nb.MediaType Transparency/Transparent: ""
+*pt.MediaType Transparency/Transparência: ""
+*sv.MediaType Transparency/OH-film: ""
+*zh_CN.MediaType Transparency/透明胶片: ""
+*zh_TW.MediaType Transparency/投影片: ""
+
+*MediaType Prepunched/Prepunched:  "
+    <</ManualFeed false /MediaType (Prepunched)>> setpagedevice"
+*End
+*da.MediaType Prepunched/Hullet: ""
+*de.MediaType Prepunched/Gelochtes Papier: ""
+*es.MediaType Prepunched/Preperforado: ""
+*fi.MediaType Prepunched/Rei'itetty: ""
+*fr.MediaType Prepunched/Perforé: ""
+*it.MediaType Prepunched/Perforata: ""
+*ja.MediaType Prepunched/穴あき用紙: ""
+*ko.MediaType Prepunched/천공 용지: ""
+*nl.MediaType Prepunched/Geperforeerd: ""
+*nb.MediaType Prepunched/Hullark: ""
+*pt.MediaType Prepunched/Perfurado: ""
+*sv.MediaType Prepunched/Hålat: ""
+*zh_CN.MediaType Prepunched/预先打孔纸: ""
+*zh_TW.MediaType Prepunched/打孔過的: ""
+
+*MediaType Labels/Labels:  "
+    <</ManualFeed false /MediaType (Labels)>> setpagedevice"
+*End
+*da.MediaType Labels/Etiketter: ""
+*de.MediaType Labels/Etiketten: ""
+*es.MediaType Labels/Etiquetas: ""
+*fi.MediaType Labels/Tarrat: ""
+*fr.MediaType Labels/Etiquette: ""
+*it.MediaType Labels/Etichette: ""
+*ja.MediaType Labels/ラベル: ""
+*ko.MediaType Labels/레이블: ""
+*nl.MediaType Labels/Etiketten: ""
+*nb.MediaType Labels/Etiketter: ""
+*pt.MediaType Labels/Etiquetas: ""
+*sv.MediaType Labels/Etiketter: ""
+*zh_CN.MediaType Labels/标签: ""
+*zh_TW.MediaType Labels/標籤: ""
+
+*MediaType Bond/Bond:  "
+    <</ManualFeed false /MediaType (Bond)>> setpagedevice"
+*End
+*da.MediaType Bond/Bond: ""
+*de.MediaType Bond/Schreibmaschinenpapier: ""
+*es.MediaType Bond/Bond: ""
+*fi.MediaType Bond/Kova asiakirjapaperi: ""
+*fr.MediaType Bond/Document: ""
+*it.MediaType Bond/Carta fine: ""
+*ja.MediaType Bond/ボンド紙: ""
+*ko.MediaType Bond/본드지: ""
+*nl.MediaType Bond/Zwaar: ""
+*nb.MediaType Bond/Bond: ""
+*pt.MediaType Bond/Superbond: ""
+*sv.MediaType Bond/Finpapper: ""
+*zh_CN.MediaType Bond/证券纸: ""
+*zh_TW.MediaType Bond/雪銅紙: ""
+
+*MediaType Recycled/Recycled:  "
+    <</ManualFeed false /MediaType (Recycled)>> setpagedevice"
+*End
+*da.MediaType Recycled/Genbrug: ""
+*de.MediaType Recycled/Recyclingpapier: ""
+*es.MediaType Recycled/Reciclado: ""
+*fi.MediaType Recycled/Uusiopaperi: ""
+*fr.MediaType Recycled/Recyclé: ""
+*it.MediaType Recycled/Riciclata: ""
+*ja.MediaType Recycled/再生紙: ""
+*ko.MediaType Recycled/재활용지: ""
+*nl.MediaType Recycled/Gerecycled: ""
+*nb.MediaType Recycled/Resirkulert: ""
+*pt.MediaType Recycled/Reciclado: ""
+*sv.MediaType Recycled/Returpapper: ""
+*zh_CN.MediaType Recycled/再生纸: ""
+*zh_TW.MediaType Recycled/再生紙: ""
+
+*MediaType Color/Color:  "
+    <</ManualFeed false /MediaType (Color)>> setpagedevice"
+*End
+*da.MediaType Color/Farvet: ""
+*de.MediaType Color/Farbpapier: ""
+*es.MediaType Color/Color: ""
+*fi.MediaType Color/Väri: ""
+*fr.MediaType Color/Couleur: ""
+*it.MediaType Color/Colorata: ""
+*ja.MediaType Color/カラー: ""
+*ko.MediaType Color/색: ""
+*nl.MediaType Color/Gekleurd: ""
+*nb.MediaType Color/Farge: ""
+*pt.MediaType Color/Colorido: ""
+*sv.MediaType Color/Färgat: ""
+*zh_CN.MediaType Color/颜色: ""
+*zh_TW.MediaType Color/顏色: ""
+
+*MediaType Rough/Rough:  "
+    <</ManualFeed false /MediaType (Rough)>> setpagedevice"
+*End
+*da.MediaType Rough/Ujævnt: ""
+*de.MediaType Rough/Raupapier: ""
+*es.MediaType Rough/Rugoso: ""
+*fi.MediaType Rough/Karkea: ""
+*fr.MediaType Rough/Rugueux: ""
+*it.MediaType Rough/Ruvida: ""
+*ja.MediaType Rough/ざら紙: ""
+*ko.MediaType Rough/거친 용지: ""
+*nl.MediaType Rough/Ruw: ""
+*nb.MediaType Rough/Grovt: ""
+*pt.MediaType Rough/Áspero: ""
+*sv.MediaType Rough/Grovt: ""
+*zh_CN.MediaType Rough/粗糙: ""
+*zh_TW.MediaType Rough/粗糙紙: ""
+
+*MediaType Card_Stock/Card Stock <3e>164 g/m2:  "
+    <</ManualFeed false /MediaType (Card Stock)>> setpagedevice"
+*End
+*da.MediaType Card_Stock/Karton <3e>164 g/m2: ""
+*de.MediaType Card_Stock/Karton <3e>164 g/m2: ""
+*es.MediaType Card_Stock/Cartulina <3e>164 g/m2: ""
+*fi.MediaType Card_Stock/Korttipaperi <3e>164 g/m2: ""
+*fr.MediaType Card_Stock/Cartonné: ""
+*it.MediaType Card_Stock/Cartoncino <3e>164 g/m2: ""
+*ja.MediaType Card_Stock/カード ストック: ""
+*ko.MediaType Card_Stock/카드 용지 <3e>164 g/m2: ""
+*nl.MediaType Card_Stock/Kartonkaart <3e>164 g/m2: ""
+*nb.MediaType Card_Stock/Kort <3e>164 g/m2: ""
+*pt.MediaType Card_Stock/Cartolina(<3e>164 g/m2): ""
+*sv.MediaType Card_Stock/Kort <3e>164 g/m2: ""
+*zh_CN.MediaType Card_Stock/卡片纸: ""
+*zh_TW.MediaType Card_Stock/卡片紙 <3e>164 g/m2: ""
+
+*MediaType Envelope/Envelope:  "
+    <</ManualFeed false /MediaType (Envelope)>> setpagedevice"
+*End
+*da.MediaType Envelope/Konvolutfremfører: ""
+*de.MediaType Envelope/Umschlag: ""
+*es.MediaType Envelope/Sobre: ""
+*fi.MediaType Envelope/Kirjekuorilokero: ""
+*fr.MediaType Envelope/Enveloppe: ""
+*it.MediaType Envelope/Buste: ""
+*ja.MediaType Envelope/封筒フィーダ: ""
+*ko.MediaType Envelope/봉투: ""
+*nl.MediaType Envelope/Enveloppe: ""
+*nb.MediaType Envelope/Konvolutt: ""
+*pt.MediaType Envelope/Envelope: ""
+*sv.MediaType Envelope/Kuvertmatare: ""
+*zh_CN.MediaType Envelope/信封输送器: ""
+*zh_TW.MediaType Envelope/信封: ""
+
+*?MediaType: "
+  save
+    currentpagedevice /InputAttributes get dup
+    /Priority get
+    0 get get
+    /MediaType get
+    (Card Stock) anchorsearch
+      {pop pop (Card_Stock)} if
+    = flush
+  restore
+"
+*End
+*CloseUI: *MediaType
+*% ================================================
+*% ================================================
+
+*% ================================================
+*% ================================================
+
+
+
+
+*% These values are set of PageSize settings so we need find
+*% the way to refer on to PageSize values 
+
+
+
+*%=============================================
+*%=================================================
+*%		 Paper Sources
+*%=================================================
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Automatic: "
+	<</ManualFeed false /MediaPosition 7>> setpagedevice"
+*End
+*da.InputSlot Auto/Automatisk: ""
+*de.InputSlot Auto/Automatisch: ""
+*es.InputSlot Auto/Automático: ""
+*fi.InputSlot Auto/Automaattinen: ""
+*fr.InputSlot Auto/Automatique: ""
+*it.InputSlot Auto/Automatico: ""
+*ja.InputSlot Auto/自動: ""
+*ko.InputSlot Auto/자동: ""
+*nl.InputSlot Auto/Automatisch: ""
+*nb.InputSlot Auto/Automatisk: ""
+*pt.InputSlot Auto/Automático: ""
+*sv.InputSlot Auto/Automatiskt: ""
+*zh_CN.InputSlot Auto/自动: ""
+*zh_TW.InputSlot Auto/自動: ""
+
+*da.Translation InputSlot/Papirkilde: ""
+*de.Translation InputSlot/Papierquelle: ""
+*es.Translation InputSlot/Alimentación de papel: ""
+*fi.Translation InputSlot/Paperilähde: ""
+*fr.Translation InputSlot/Source du papier: ""
+*it.Translation InputSlot/Alimentazione della carta: ""
+*ja.Translation InputSlot/給紙元: ""
+*ko.Translation InputSlot/용지함: ""
+*nl.Translation InputSlot/Papierbron: ""
+*nb.Translation InputSlot/Arkmating: ""
+*pt.Translation InputSlot/Fonte de papel: ""
+*sv.Translation InputSlot/Papperskälla: ""
+*zh_CN.Translation InputSlot/纸张来源: ""
+*zh_TW.Translation InputSlot/紙張來源: ""
+
+*InputSlot Tray1/Tray 1: "<</ManualFeed false /MediaPosition 3>> setpagedevice"
+*da.InputSlot Tray1/Bakke 1: ""
+*de.InputSlot Tray1/Zufuhrfach 1: ""
+*es.InputSlot Tray1/Bandeja 1: ""
+*fi.InputSlot Tray1/Lokero 1: ""
+*fr.InputSlot Tray1/Bac 1: ""
+*it.InputSlot Tray1/Cassetto 1: ""
+*ja.InputSlot Tray1/トレイ 1: ""
+*ko.InputSlot Tray1/용지함 1: ""
+*nl.InputSlot Tray1/Lade 1: ""
+*nb.InputSlot Tray1/Skuff 1: ""
+*pt.InputSlot Tray1/Bandeja 1: ""
+*sv.InputSlot Tray1/Fack 1: ""
+*zh_CN.InputSlot Tray1/纸盒 1: ""
+*zh_TW.InputSlot Tray1/1 號紙匣: ""
+
+*InputSlot Tray2/Tray 2: "<</ManualFeed false /MediaPosition 0>> setpagedevice"
+*da.InputSlot Tray2/Bakke 2: ""
+*de.InputSlot Tray2/Zufuhrfach 2: ""
+*es.InputSlot Tray2/Bandeja 2: ""
+*fi.InputSlot Tray2/Lokero 2: ""
+*fr.InputSlot Tray2/Bac 2: ""
+*it.InputSlot Tray2/Cassetto 2: ""
+*ja.InputSlot Tray2/トレイ 2: ""
+*ko.InputSlot Tray2/용지함 2: ""
+*nl.InputSlot Tray2/Lade 2: ""
+*nb.InputSlot Tray2/Skuff 2: ""
+*pt.InputSlot Tray2/Bandeja 2: ""
+*sv.InputSlot Tray2/Fack 2: ""
+*zh_CN.InputSlot Tray2/纸盒 2: ""
+*zh_TW.InputSlot Tray2/2 號紙匣: ""
+
+*InputSlot Tray3_500/Tray 3 (500-Sheet): "<</ManualFeed false /MediaPosition 1>> setpagedevice"
+*da.InputSlot Tray3_500/Bakke 3 (500 ark): ""
+*de.InputSlot Tray3_500/Zufuhrfach 3 (500-Blatt: ""
+*es.InputSlot Tray3_500/Bandeja 3 (500 hojas): ""
+*fi.InputSlot Tray3_500/Lokero 3 (500 arkkia): ""
+*fr.InputSlot Tray3_500/Bac 3 (500 feuilles): ""
+*it.InputSlot Tray3_500/Cassetto 3 (500 fogli): ""
+*ja.InputSlot Tray3_500/トレイ 3 (500-枚収納): ""
+*ko.InputSlot Tray3_500/용지함 3(500매): ""
+*nl.InputSlot Tray3_500/Lade 3 (500-vel): ""
+*nb.InputSlot Tray3_500/Skuff 3 (500-arks): ""
+*pt.InputSlot Tray3_500/Bandeja 3 (500 folhas): ""
+*sv.InputSlot Tray3_500/Fack 3 (500 ark): ""
+*zh_CN.InputSlot Tray3_500/纸盒 3（500 页）: ""
+*zh_TW.InputSlot Tray3_500/3 號紙匣 (可容納 500 張紙): ""
+
+*InputSlot Tray3_250/Tray 3 (250 sheet): "<</ManualFeed false /MediaPosition 1>> setpagedevice"
+*da.InputSlot Tray3_250/Bakke 3 (250 ark): ""
+*de.InputSlot Tray3_250/Zufuhrfach 3 (250-Blatt): ""
+*es.InputSlot Tray3_250/Bandeja 3 (250 hojas): ""
+*fi.InputSlot Tray3_250/Lokero 3 (500 arkkia): ""
+*fr.InputSlot Tray3_250/Bac 3 (250 feuilles): ""
+*it.InputSlot Tray3_250/Cassetto 3 (250 fogli): ""
+*ja.InputSlot Tray3_250/トレイ 3 (250-枚収納): ""
+*ko.InputSlot Tray3_250/용지함 3 (250-Sheet): ""
+*nl.InputSlot Tray3_250/Lade 3 (250-vel): ""
+*nb.InputSlot Tray3_250/Skuff 3 (250-arks): ""
+*pt.InputSlot Tray3_250/Bandeja 3 (250 folhas): ""
+*sv.InputSlot Tray3_250/Fack 3 (250 ark): ""
+*zh_CN.InputSlot Tray3_250/纸盒 3 (250-页): ""
+*zh_TW.InputSlot Tray3_250/3 號紙匣（可容納 250 張紙）: ""
+
+*?InputSlot: "
+   save
+     [(Tray2) (Tray3_500) (None)(Tray1)]
+     statusdict /papertray get exec
+     {get exec} stopped { pop pop (unknown) } if = flush
+   restore
+"
+*End
+*CloseUI: *InputSlot
+
+*% Enable/Disable Manual Feed
+*OpenUI *ManualFeed/Tray 1 (Manual): Boolean
+*OrderDependency: 20 AnySetup *ManualFeed
+*DefaultManualFeed: False
+*da.Translation ManualFeed/Bakke 1 (manuel): ""
+*de.Translation ManualFeed/Zufuhrfach 1 (Manuell): ""
+*es.Translation ManualFeed/Bandeja 1 (manual): ""
+*fi.Translation ManualFeed/Lokero 1 (Käsinsyttö): ""
+*fr.Translation ManualFeed/Bac 1 (manuel): ""
+*it.Translation ManualFeed/Cassetto 1 (Manuale): ""
+*ja.Translation ManualFeed/トレイ 1 (手動): ""
+*ko.Translation ManualFeed/용지함 1(수동): ""
+*nl.Translation ManualFeed/Lade 1 (handmatig): ""
+*nb.Translation ManualFeed/Skuff 1 (manuell): ""
+*pt.Translation ManualFeed/Bandeja 1 (manual): ""
+*sv.Translation ManualFeed/Fack 1 (manuell): ""
+*zh_CN.Translation ManualFeed/纸盒1 (手工): ""
+*zh_TW.Translation ManualFeed/紙匣1 ( 手動): ""
+
+*ManualFeed True/True: "
+	<</ManualFeed true>> setpagedevice"
+*End
+*da.ManualFeed True/Sand: ""
+*de.ManualFeed True/Ja: ""
+*es.ManualFeed True/Verdadero: ""
+*fi.ManualFeed True/Käytössä: ""
+*fr.ManualFeed True/Vrai: ""
+*it.ManualFeed True/Vero: ""
+*ja.ManualFeed True/はい: ""
+*ko.ManualFeed True/참: ""
+*nl.ManualFeed True/Waar: ""
+*nb.ManualFeed True/Sann: ""
+*pt.ManualFeed True/Verdadeiro: ""
+*sv.ManualFeed True/Sant: ""
+*zh_CN.ManualFeed True/真: ""
+*zh_TW.ManualFeed True/真: ""
+
+*ManualFeed False/False: "
+	<</ManualFeed false>> setpagedevice"
+*End
+*da.ManualFeed False/Falsk: ""
+*de.ManualFeed False/Nein: ""
+*es.ManualFeed False/Falso: ""
+*fi.ManualFeed False/Ei käytössä: ""
+*fr.ManualFeed False/Faux: ""
+*it.ManualFeed False/Falso: ""
+*ja.ManualFeed False/いいえ: ""
+*ko.ManualFeed False/거짓: ""
+*nl.ManualFeed False/Onwaar: ""
+*nb.ManualFeed False/Usann: ""
+*pt.ManualFeed False/Falso: ""
+*sv.ManualFeed False/Falskt: ""
+*zh_CN.ManualFeed False/伪: ""
+*zh_TW.ManualFeed False/假: ""
+
+*?ManualFeed: "
+	save
+		currentpagedevice /ManualFeed get
+		{(True)}{(False)}ifelse = flush
+	restore
+"
+*End
+*CloseUI: *ManualFeed
+
+*% ===================================
+*%      Gray Levels and Halftone
+*% ===================================
+
+*ScreenFreq:  "212.0"
+*ScreenAngle: "45.0"
+
+*ResScreenFreq 300x300dpi/300 dpi:  "60.0"
+*da.ResScreenFreq 300x300dpi/300 dpi: ""
+*de.ResScreenFreq 300x300dpi/300 dpi: ""
+*es.ResScreenFreq 300x300dpi/300 dpi: ""
+*fi.ResScreenFreq 300x300dpi/300 dpi: ""
+*fr.ResScreenFreq 300x300dpi/300 dpi: ""
+*it.ResScreenFreq 300x300dpi/300 dpi: ""
+*ja.ResScreenFreq 300x300dpi/300 dpi: ""
+*ko.ResScreenFreq 300x300dpi/300 dpi: ""
+*nl.ResScreenFreq 300x300dpi/300 dpi: ""
+*nb.ResScreenFreq 300x300dpi/300 dpi: ""
+*pt.ResScreenFreq 300x300dpi/300 dpi: ""
+*sv.ResScreenFreq 300x300dpi/300 dpi: ""
+*zh_CN.ResScreenFreq 300x300dpi/300 dpi: ""
+*zh_TW.ResScreenFreq 300x300dpi/300 dpi: ""
+
+*ResScreenAngle 300x300dpi/300 dpi: "45.0"
+*da.ResScreenAngle 300x300dpi/300 dpi: ""
+*de.ResScreenAngle 300x300dpi/300 dpi: ""
+*es.ResScreenAngle 300x300dpi/300 dpi: ""
+*fi.ResScreenAngle 300x300dpi/300 dpi: ""
+*fr.ResScreenAngle 300x300dpi/300 dpi: ""
+*it.ResScreenAngle 300x300dpi/300 dpi: ""
+*ja.ResScreenAngle 300x300dpi/300 dpi: ""
+*ko.ResScreenAngle 300x300dpi/300 dpi: ""
+*nl.ResScreenAngle 300x300dpi/300 dpi: ""
+*nb.ResScreenAngle 300x300dpi/300 dpi: ""
+*pt.ResScreenAngle 300x300dpi/300 dpi: ""
+*sv.ResScreenAngle 300x300dpi/300 dpi: ""
+*zh_CN.ResScreenAngle 300x300dpi/300 dpi: ""
+*zh_TW.ResScreenAngle 300x300dpi/300 dpi: ""
+
+*ResScreenFreq 600x600dpi/600 dpi:  "106.0"
+*da.ResScreenFreq 600x600dpi/600 dpi: ""
+*de.ResScreenFreq 600x600dpi/600 dpi: ""
+*es.ResScreenFreq 600x600dpi/600 dpi: ""
+*fi.ResScreenFreq 600x600dpi/600 dpi: ""
+*fr.ResScreenFreq 600x600dpi/600 dpi: ""
+*it.ResScreenFreq 600x600dpi/600 dpi: ""
+*ja.ResScreenFreq 600x600dpi/600 dpi: ""
+*ko.ResScreenFreq 600x600dpi/600 dpi: ""
+*nl.ResScreenFreq 600x600dpi/600 dpi: ""
+*nb.ResScreenFreq 600x600dpi/600 dpi: ""
+*pt.ResScreenFreq 600x600dpi/600 dpi: ""
+*sv.ResScreenFreq 600x600dpi/600 dpi: ""
+*zh_CN.ResScreenFreq 600x600dpi/600 dpi: ""
+*zh_TW.ResScreenFreq 600x600dpi/600 dpi: ""
+
+*ResScreenAngle 600x600dpi/600 dpi: "45.0"
+*da.ResScreenAngle 600x600dpi/600 dpi: ""
+*de.ResScreenAngle 600x600dpi/600 dpi: ""
+*es.ResScreenAngle 600x600dpi/600 dpi: ""
+*fi.ResScreenAngle 600x600dpi/600 dpi: ""
+*fr.ResScreenAngle 600x600dpi/600 dpi: ""
+*it.ResScreenAngle 600x600dpi/600 dpi: ""
+*ja.ResScreenAngle 600x600dpi/600 dpi: ""
+*ko.ResScreenAngle 600x600dpi/600 dpi: ""
+*nl.ResScreenAngle 600x600dpi/600 dpi: ""
+*nb.ResScreenAngle 600x600dpi/600 dpi: ""
+*pt.ResScreenAngle 600x600dpi/600 dpi: ""
+*sv.ResScreenAngle 600x600dpi/600 dpi: ""
+*zh_CN.ResScreenAngle 600x600dpi/600 dpi: ""
+*zh_TW.ResScreenAngle 600x600dpi/600 dpi: ""
+
+*ResScreenFreq 1200x1200dpi/1200 dpi:  "212.0"
+*da.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*de.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*es.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*fi.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*fr.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*it.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*ja.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*ko.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*nl.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*nb.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*pt.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*sv.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*zh_CN.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+*zh_TW.ResScreenFreq 1200x1200dpi/1200 dpi: ""
+
+*ResScreenAngle 1200x1200dpi/1200 dpi: "45.0"
+*da.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*de.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*es.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*fi.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*fr.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*it.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*ja.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*ko.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*nl.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*nb.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*pt.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*sv.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*zh_CN.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+*zh_TW.ResScreenAngle 1200x1200dpi/1200 dpi: ""
+
+
+*DefaultScreenProc: Dot
+*ScreenProc HPEnhanced: "
+	{ /EnhancedHalftone /Halftone findresource }"
+*End
+*ScreenProc Dot: "
+        {abs exch abs 2 copy add 1 gt {1 sub dup mul exch 1 sub dup mul add 1
+        sub }{dup mul exch dup mul add 1 exch sub }ifelse }
+"
+*End
+*ScreenProc Line: "{ pop }"
+*ScreenProc Ellipse: "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1 exch sub }"
+
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+
+*DefaultHalftoneType:    9
+*AccurateScreensSupport: False
+
+*OpenUI *HPHalftone/Levels of Gray: PickOne
+*OrderDependency: 10 DocumentSetup *HPHalftone
+*DefaultHPHalftone: PrinterDefault
+*da.Translation HPHalftone/Grå niveauer: ""
+*de.Translation HPHalftone/Graustufen: ""
+*es.Translation HPHalftone/Niveles de gris: ""
+*fi.Translation HPHalftone/Harmaan asteet: ""
+*fr.Translation HPHalftone/Niveaux de gris: ""
+*it.Translation HPHalftone/Tipi di grigio: ""
+*ja.Translation HPHalftone/階調色数: ""
+*ko.Translation HPHalftone/명암 수준: ""
+*nl.Translation HPHalftone/Grijswaarden: ""
+*nb.Translation HPHalftone/Grånyanser: ""
+*pt.Translation HPHalftone/Níveis de cinza: ""
+*sv.Translation HPHalftone/Grånivåer: ""
+*zh_CN.Translation HPHalftone/灰度级别: ""
+*zh_TW.Translation HPHalftone/灰度等級: ""
+
+*HPHalftone PrinterDefault/Printer's Current Setting: ""
+*da.HPHalftone PrinterDefault/Printerens aktuelle indstilling: ""
+*de.HPHalftone PrinterDefault/Aktuelle Druckereinstellung: ""
+*es.HPHalftone PrinterDefault/Configuración actual de la impresora: ""
+*fi.HPHalftone PrinterDefault/Kirjoittimen nykyinen asetus: ""
+*fr.HPHalftone PrinterDefault/Paramétrage actuel de l'imprimante: ""
+*it.HPHalftone PrinterDefault/Impostazioni correnti della stampante: ""
+*ja.HPHalftone PrinterDefault/プリンタの現在の設定: ""
+*ko.HPHalftone PrinterDefault/프린터의 현재 설정: ""
+*nl.HPHalftone PrinterDefault/Huidige instelling van de printer: ""
+*nb.HPHalftone PrinterDefault/Skriverens gjeldende innstilling: ""
+*pt.HPHalftone PrinterDefault/Configuração atual da impressora: ""
+*sv.HPHalftone PrinterDefault/Skrivarens inställning: ""
+*zh_CN.HPHalftone PrinterDefault/打印机的当前设置: ""
+*zh_TW.HPHalftone PrinterDefault/印表機目前的設定值: ""
+
+*HPHalftone Enhanced/Enhanced: "
+   << /Install {
+     currentpagedevice /HWResolution get
+     dup 0 get 600 eq exch 1 get 600 eq and
+     { /EnhancedColorRendering600 } { /EnhancedColorRendering } ifelse
+     /ColorRendering findresource setcolorrendering
+     /EnhancedHalftone /Halftone findresource sethalftone
+     { } settransfer false setstrokeadjust
+   }
+   >> setpagedevice
+   currentpagedevice /HWResolution get dup 0 get 600 eq exch 1 get 600 eq and
+   {
+       << /PostRenderingEnhance true
+            /PostRenderingEnhanceDetails << /REValue 0 /Type 8 >>
+       >> setpagedevice
+   } if
+   /setscreen { pop pop pop } def
+   /setcolorscreen { pop pop pop pop pop pop pop pop pop pop pop pop } def
+   /sethalftone { pop } def
+"
+*End
+*da.HPHalftone Enhanced/Udvidet: ""
+*de.HPHalftone Enhanced/Erweitert: ""
+*es.HPHalftone Enhanced/Mejorado: ""
+*fi.HPHalftone Enhanced/Parannettu: ""
+*fr.HPHalftone Enhanced/Etendus: ""
+*it.HPHalftone Enhanced/Migliorata: ""
+*ja.HPHalftone Enhanced/拡張: ""
+*ko.HPHalftone Enhanced/향상: ""
+*nl.HPHalftone Enhanced/Verbeterd: ""
+*nb.HPHalftone Enhanced/Forbedret: ""
+*pt.HPHalftone Enhanced/Aperfeiçoado: ""
+*sv.HPHalftone Enhanced/Förbättrade: ""
+*zh_CN.HPHalftone Enhanced/增强: ""
+*zh_TW.HPHalftone Enhanced/增強的: ""
+
+*HPHalftone Standard/Standard: "
+   << /Install {
+     currentpagedevice /HWResolution get
+     dup 0 get 600 eq exch 1 get 600 eq and dup
+     currentpagedevice /PostRenderingEnhance get
+     currentpagedevice /PostRenderingEnhanceDetails get /REValue get 0 ne and
+     { {/DefaultColorRenderingRE600} {/DefaultColorRenderingRE} ifelse}
+     { {/DefaultColorRendering600} {/DefaultColorRendering} ifelse} ifelse
+     /ColorRendering findresource setcolorrendering
+     { /DefaultHalftone600 } {/DefaultHalftone} ifelse
+     /Halftone findresource sethalftone
+     {} settransfer false setstrokeadjust
+   } >> setpagedevice
+   currentpagedevice /HWResolution get dup 0 get 600 eq exch 1 get 600 eq and
+   {
+     << /PostRenderingEnhance true /PostRenderingEnhanceDetails
+     << /REValue 0 /Type 8 >> >> setpagedevice
+   } if
+"
+*End
+*da.HPHalftone Standard/Standard: ""
+*de.HPHalftone Standard/Standard: ""
+*es.HPHalftone Standard/Normal: ""
+*fi.HPHalftone Standard/Normaali: ""
+*fr.HPHalftone Standard/Standard: ""
+*it.HPHalftone Standard/Standard: ""
+*ja.HPHalftone Standard/標準: ""
+*ko.HPHalftone Standard/표준: ""
+*nl.HPHalftone Standard/Standaard: ""
+*nb.HPHalftone Standard/Bakoverkompatibilitet: ""
+*pt.HPHalftone Standard/Padrão: ""
+*sv.HPHalftone Standard/Standard: ""
+*zh_CN.HPHalftone Standard/标准: ""
+*zh_TW.HPHalftone Standard/標準: ""
+
+*?HPHalftone: "
+   save
+      currenthalftone /HalftoneType get 9 eq
+     {(Enhanced)} {(Standard)} ifelse = flush
+   restore
+"
+*End
+*CloseUI: *HPHalftone
+
+
+*%===================================
+*%		Resolution
+*%===================================
+*% Select Printer Resolution
+*OpenUI *Resolution/Printer Resolution: PickOne
+*DefaultResolution: 1200dpi
+*da.Translation Resolution/Opløsning: ""
+*de.Translation Resolution/Druckerauflösung: ""
+*es.Translation Resolution/Resol. de la impresora: ""
+*fi.Translation Resolution/Kirjoittimen tarkkuus: ""
+*fr.Translation Resolution/Résolution d’imprimante: ""
+*it.Translation Resolution/Risoluzione: ""
+*ja.Translation Resolution/プリンタの解像度: ""
+*ko.Translation Resolution/프린터 해상도: ""
+*nl.Translation Resolution/Printer-resolutie: ""
+*nb.Translation Resolution/Skriveroppløsning: ""
+*pt.Translation Resolution/Resolução da impressora: ""
+*sv.Translation Resolution/Skrivarupplösning: ""
+*zh_CN.Translation Resolution/打印机分辨率: ""
+*zh_TW.Translation Resolution/印表機解析度: ""
+
+*OrderDependency: 5 DocumentSetup  *Resolution
+*Resolution 1200x1200dpi/ProRes 1200: "
+    <</HWResolution [1200 1200] /PreRenderingEnhance false>> setpagedevice"
+*End
+*da.Resolution 1200x1200dpi/ProRes 1200: ""
+*de.Resolution 1200x1200dpi/ProRes 1200: ""
+*es.Resolution 1200x1200dpi/ProRes 1200: ""
+*fi.Resolution 1200x1200dpi/ProRes 1200: ""
+*fr.Resolution 1200x1200dpi/ProRes 1200: ""
+*it.Resolution 1200x1200dpi/ProRes 1200: ""
+*ja.Resolution 1200x1200dpi/ProRes 1200: ""
+*ko.Resolution 1200x1200dpi/ProRes 1200: ""
+*nl.Resolution 1200x1200dpi/ProRes 1200: ""
+*nb.Resolution 1200x1200dpi/ProRes 1200: ""
+*pt.Resolution 1200x1200dpi/ProRes 1200: ""
+*sv.Resolution 1200x1200dpi/ProRes 1200: ""
+*zh_CN.Resolution 1200x1200dpi/ProRes 1200: ""
+*zh_TW.Resolution 1200x1200dpi/ProRes 1200: ""
+
+*Resolution 1200dpi/FastRes 1200: "
+	<</HWResolution [600 600] /PreRenderingEnhance true>> setpagedevice"
+*End
+*da.Resolution 1200dpi/FastRes 1200: ""
+*de.Resolution 1200dpi/FastRes 1200: ""
+*es.Resolution 1200dpi/FastRes 1200: ""
+*fi.Resolution 1200dpi/FastRes 1200: ""
+*fr.Resolution 1200dpi/FastRes 1200: ""
+*it.Resolution 1200dpi/FastRes 1200: ""
+*ja.Resolution 1200dpi/FastRes 1200: ""
+*ko.Resolution 1200dpi/FastRes 1200: ""
+*nl.Resolution 1200dpi/FastRes 1200: ""
+*nb.Resolution 1200dpi/FastRes 1200: ""
+*pt.Resolution 1200dpi/FastRes 1200: ""
+*sv.Resolution 1200dpi/FastRes 1200: ""
+*zh_CN.Resolution 1200dpi/FastRes 1200: ""
+*zh_TW.Resolution 1200dpi/FastRes 1200: ""
+
+*Resolution 600x600dpi/600 dpi: "
+    <</HWResolution [600 600] /PreRenderingEnhance false>> setpagedevice"
+*End
+*da.Resolution 600x600dpi/600 dpi: ""
+*de.Resolution 600x600dpi/600 dpi: ""
+*es.Resolution 600x600dpi/600 ppp: ""
+*fi.Resolution 600x600dpi/600 dpi: ""
+*fr.Resolution 600x600dpi/600 ppp: ""
+*it.Resolution 600x600dpi/600 dpi: ""
+*ja.Resolution 600x600dpi/600 dpi: ""
+*ko.Resolution 600x600dpi/600 dpi: ""
+*nl.Resolution 600x600dpi/600 dpi: ""
+*nb.Resolution 600x600dpi/600 dpi: ""
+*pt.Resolution 600x600dpi/600 ppp: ""
+*sv.Resolution 600x600dpi/600 dpi: ""
+*zh_CN.Resolution 600x600dpi/600 dpi: ""
+*zh_TW.Resolution 600x600dpi/600 dpi: ""
+
+*?Resolution: "
+  save
+    currentpagedevice /HWResolution get
+    0 get
+    (          ) cvs print
+    (dpi)
+    = flush
+  restore
+"
+*End
+*CloseUI: *Resolution
+
+*%==================================
+*%          HPEconoMode
+*%==================================
+*OpenUI *HPEconoMode/Economode: PickOne
+*DefaultHPEconoMode: PrinterDefault
+*da.Translation HPEconoMode/Economode: ""
+*de.Translation HPEconoMode/Economode: ""
+*es.Translation HPEconoMode/Economode: ""
+*fi.Translation HPEconoMode/Economode: ""
+*fr.Translation HPEconoMode/Economode: ""
+*it.Translation HPEconoMode/EconoMode: ""
+*ja.Translation HPEconoMode/Economode: ""
+*ko.Translation HPEconoMode/Economode: ""
+*nl.Translation HPEconoMode/Economode: ""
+*nb.Translation HPEconoMode/Economode: ""
+*pt.Translation HPEconoMode/Economode: ""
+*sv.Translation HPEconoMode/Economode: ""
+*zh_CN.Translation HPEconoMode/Economode: ""
+*zh_TW.Translation HPEconoMode/Economode: ""
+
+*OrderDependency: 10 AnySetup *HPEconoMode
+*HPEconoMode PrinterDefault/Printer's Current Setting: ""
+*da.HPEconoMode PrinterDefault/Printerens aktuelle indstilling: ""
+*de.HPEconoMode PrinterDefault/Aktuelle Druckereinstellung: ""
+*es.HPEconoMode PrinterDefault/Configuración actual de la impresora: ""
+*fi.HPEconoMode PrinterDefault/Kirjoittimen nykyinen asetus: ""
+*fr.HPEconoMode PrinterDefault/Paramétrage actuel de l'imprimante: ""
+*it.HPEconoMode PrinterDefault/Impostazioni correnti della stampante: ""
+*ja.HPEconoMode PrinterDefault/プリンタの現在の設定: ""
+*ko.HPEconoMode PrinterDefault/프린터의 현재 설정: ""
+*nl.HPEconoMode PrinterDefault/Huidige instelling van de printer: ""
+*nb.HPEconoMode PrinterDefault/Skriverens gjeldende innstilling: ""
+*pt.HPEconoMode PrinterDefault/Configuração atual da impressora: ""
+*sv.HPEconoMode PrinterDefault/Skrivarens inställning: ""
+*zh_CN.HPEconoMode PrinterDefault/打印机的当前设置: ""
+*zh_TW.HPEconoMode PrinterDefault/印表機目前的設定值: ""
+
+*HPEconoMode True/Save Toner: "
+    <</EconoMode true>> setpagedevice"
+*End
+*da.HPEconoMode True/Spar toner: ""
+*de.HPEconoMode True/Toner sparen: ""
+*es.HPEconoMode True/Ahorrar tóner: ""
+*fi.HPEconoMode True/Säästä väriainetta: ""
+*fr.HPEconoMode True/Economiser l'encre: ""
+*it.HPEconoMode True/Salva toner: ""
+*ja.HPEconoMode True/トナー節約: ""
+*ko.HPEconoMode True/토너 절약: ""
+*nl.HPEconoMode True/Toner besparen: ""
+*nb.HPEconoMode True/Spar toner: ""
+*pt.HPEconoMode True/Economizar toner: ""
+*sv.HPEconoMode True/Spara toner: ""
+*zh_CN.HPEconoMode True/节省碳粉: ""
+*zh_TW.HPEconoMode True/節約碳粉: ""
+
+*HPEconoMode False/Highest Quality: "
+    <</EconoMode false>> setpagedevice"
+*End
+*da.HPEconoMode False/Højeste kvalitet: ""
+*de.HPEconoMode False/Beste Qualität: ""
+*es.HPEconoMode False/Calidad óptima: ""
+*fi.HPEconoMode False/Korkein laatu: ""
+*fr.HPEconoMode False/Meilleure qualité: ""
+*it.HPEconoMode False/Qualità superiore: ""
+*ja.HPEconoMode False/最品位: ""
+*ko.HPEconoMode False/최고품질: ""
+*nl.HPEconoMode False/Beste kwaliteit: ""
+*nb.HPEconoMode False/Høyeste kvalitet: ""
+*pt.HPEconoMode False/Melhor qualidade: ""
+*sv.HPEconoMode False/Högsta kvalitet: ""
+*zh_CN.HPEconoMode False/最高质量: ""
+*zh_TW.HPEconoMode False/最高品質: ""
+
+*?HPEconoMode: "
+  save
+    currentpagedevice /HPEconoMode get
+    {(True)}{(False)}ifelse = flush
+  restore
+"
+*End
+*CloseUI: *HPEconoMode
+
+*%====================================
+*%         Duplex
+*%====================================
+*OpenUI *Duplex/2-Sided Printing:  PickOne
+*OrderDependency: 50 AnySetup *Duplex
+*DefaultDuplex: None
+*da.Translation Duplex/Dupleks: ""
+*de.Translation Duplex/Duplex: ""
+*es.Translation Duplex/Dúplex: ""
+*fi.Translation Duplex/Kaksipuolinen tulostus: ""
+*fr.Translation Duplex/Recto verso: ""
+*it.Translation Duplex/Duplex: ""
+*ja.Translation Duplex/両面印刷: ""
+*ko.Translation Duplex/양면인쇄: ""
+*nl.Translation Duplex/Duplex: ""
+*nb.Translation Duplex/Tosidig: ""
+*pt.Translation Duplex/Dúplex: ""
+*sv.Translation Duplex/Dubbelsidig: ""
+*zh_CN.Translation Duplex/双面打印: ""
+*zh_TW.Translation Duplex/雙面列印: ""
+
+*Duplex None/Off (1-Sided): "
+    <</Duplex false>> setpagedevice"
+*End
+*da.Duplex None/Fra (1-sidet): ""
+*de.Duplex None/Aus (einseitig): ""
+*es.Duplex None/Des (por un solo lado): ""
+*fi.Duplex None/Ei (1-puolinen): ""
+*fr.Duplex None/Non (recto): ""
+*it.Duplex None/Disattivato (facciata singola): ""
+*ja.Duplex None/オフ (片面印刷): ""
+*ko.Duplex None/끔 (한 면): ""
+*nl.Duplex None/Uit (enkelzijdig): ""
+*nb.Duplex None/Av (1-sidig): ""
+*pt.Duplex None/Desligado (face única): ""
+*sv.Duplex None/Av (enkelsidig): ""
+*zh_CN.Duplex None/关 (1面): ""
+*zh_TW.Duplex None/關( 單面): ""
+
+*Duplex DuplexNoTumble/Flip on Long Edge (Standard): "
+    <</Duplex true /Tumble false>> setpagedevice"
+*End
+*da.Duplex DuplexNoTumble/Vend på langs(Standard): ""
+*de.Duplex DuplexNoTumble/Lange Kante spiegeln (Standard): ""
+*es.Duplex DuplexNoTumble/Dar vuelta - borde largo (estándar): ""
+*fi.Duplex DuplexNoTumble/Käännä pystyreunan ympäri (normaali): ""
+*fr.Duplex DuplexNoTumble/Retourner sur les bords longs (standard): ""
+*it.Duplex DuplexNoTumble/Ruota sul lato lungo (Standard): ""
+*ja.Duplex DuplexNoTumble/長辺綴じ (標準): ""
+*ko.Duplex DuplexNoTumble/긴 가장자리로 뒤집기(표준): ""
+*nl.Duplex DuplexNoTumble/Over lange zijde spiegelen (standaard): ""
+*nb.Duplex DuplexNoTumble/Vend på langsiden (standard): ""
+*pt.Duplex DuplexNoTumble/Inversão na margem longa (padrão): ""
+*sv.Duplex DuplexNoTumble/Vänd längs långsidan (standard): ""
+*zh_CN.Duplex DuplexNoTumble/长边翻转（标准）: ""
+*zh_TW.Duplex DuplexNoTumble/在長邊緣倒轉( 標準): ""
+
+*Duplex DuplexTumble/Flip on Short Edge: "
+    <</Duplex true /Tumble true>> setpagedevice"
+*End
+*da.Duplex DuplexTumble/Vend på tværs: ""
+*de.Duplex DuplexTumble/Kurze Kante spiegeln: ""
+*es.Duplex DuplexTumble/Dar vuelta - borde corto: ""
+*fi.Duplex DuplexTumble/Käännä vaakareunan ympäri: ""
+*fr.Duplex DuplexTumble/Retourner sur les bords courts: ""
+*it.Duplex DuplexTumble/Ruota sul lato corto: ""
+*ja.Duplex DuplexTumble/短辺綴じ: ""
+*ko.Duplex DuplexTumble/짧은 가장자리로 뒤집기: ""
+*nl.Duplex DuplexTumble/Over korte zijde spiegelen: ""
+*nb.Duplex DuplexTumble/Vend på kortsiden: ""
+*pt.Duplex DuplexTumble/Inversão na margem curta: ""
+*sv.Duplex DuplexTumble/Vänd längs kortsidan: ""
+*zh_CN.Duplex DuplexTumble/短边翻转: ""
+*zh_TW.Duplex DuplexTumble/在短邊緣倒轉: ""
+
+*?Duplex: "
+  save
+   currentpagedevice /Duplex known
+	false ne
+    {  currentpagedevice /Duplex get
+        { currentpagedevice /Tumble get
+            {(DuplexTumble)}{(DuplexNoTumble)}ifelse
+         } { (None)}    ifelse
+     }{(None)}  ifelse = flush
+   restore
+"
+*End
+*CloseUI: *Duplex
+
+*%=================================================
+*%		 Color Control
+*%=================================================
+*DefaultColorSep: ProcessBlack.212lpi.1200dpi/212 lpi / 1200 dpi
+*InkName: ProcessBlack/Process Black
+*InkName: CustomColor/Custom Color
+*InkName: ProcessCyan/Process Cyan
+*InkName: ProcessMagenta/Process Magenta
+*InkName: ProcessYellow/Process Yellow
+
+*%  For 60 lpi / 300 dpi  =========================
+*ColorSepScreenAngle ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: "45"
+
+*ColorSepScreenAngle CustomColor.60lpi.300dpi/60 lpi / 300 dpi: "45"
+
+*ColorSepScreenAngle ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: "15"
+
+*ColorSepScreenAngle ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: "75"
+
+*ColorSepScreenAngle ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: "0"
+
+
+*ColorSepScreenFreq ProcessBlack.60lpi.300dpi/60 lpi / 300 dpi: "60"
+
+*ColorSepScreenFreq CustomColor.60lpi.300dpi/60 lpi / 300 dpi: "60"
+
+*ColorSepScreenFreq ProcessCyan.60lpi.300dpi/60 lpi / 300 dpi: "60"
+
+*ColorSepScreenFreq ProcessMagenta.60lpi.300dpi/60 lpi / 300 dpi: "60"
+
+*ColorSepScreenFreq ProcessYellow.60lpi.300dpi/60 lpi / 300 dpi: "60"
+
+
+*%  For 85 lpi / 600 dpi  (5,5,2,6,6,2,20/3,0) ====
+*ColorSepScreenAngle ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: "45.0"
+
+*ColorSepScreenAngle CustomColor.85lpi.600dpi/85 lpi / 600 dpi: "45.0"
+
+*ColorSepScreenAngle ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: "71.5651"
+
+*ColorSepScreenAngle ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: "18.4349"
+
+*ColorSepScreenAngle ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: "0.0"
+
+
+*ColorSepScreenFreq ProcessBlack.85lpi.600dpi/85 lpi / 600 dpi: "84.8528"
+
+*ColorSepScreenFreq CustomColor.85lpi.600dpi/85 lpi / 600 dpi: "84.8528"
+
+*ColorSepScreenFreq ProcessCyan.85lpi.600dpi/85 lpi / 600 dpi: "94.8683"
+
+*ColorSepScreenFreq ProcessMagenta.85lpi.600dpi/85 lpi / 600 dpi: "94.8683"
+
+*ColorSepScreenFreq ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: "30.0"
+
+*ColorSepScreenProc ProcessYellow.85lpi.600dpi/85 lpi / 600 dpi: "
+{1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch
+1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch
+abs exch abs 2 copy add 1 gt {1 sub dup mul exch 1 sub dup mul add 1
+sub }{dup mul exch dup mul add 1 exch sub }ifelse }"
+*End
+
+
+*%  For 106 lpi / 300 dpi  =========================
+*ColorSepScreenAngle ProcessBlack.106lpi.300dpi/106 lpi / 300 dpi: "45.0"
+
+*ColorSepScreenAngle CustomColor.106lpi.300dpi/106 lpi / 300 dpi: "45.0"
+
+*ColorSepScreenAngle ProcessCyan.106lpi.300dpi/106 lpi / 300 dpi: "71.5651"
+
+*ColorSepScreenAngle ProcessMagenta.106lpi.300dpi/106 lpi / 300 dpi: "18.4349"
+
+*ColorSepScreenAngle ProcessYellow.106lpi.300dpi/106 lpi / 300 dpi: "0.0"
+
+
+*ColorSepScreenFreq ProcessBlack.106lpi.300dpi/106 lpi / 300 dpi: "106.066"
+
+*ColorSepScreenFreq CustomColor.106lpi.300dpi/106 lpi / 300 dpi: "106.066"
+
+*ColorSepScreenFreq ProcessCyan.106lpi.300dpi/106 lpi / 300 dpi: "94.8683"
+
+*ColorSepScreenFreq ProcessMagenta.106lpi.300dpi/106 lpi / 300 dpi: "94.8683"
+
+*ColorSepScreenFreq ProcessYellow.106lpi.300dpi/106 lpi / 300 dpi: "100.0"
+
+
+*%  For 106 lpi / 600 dpi  =========================
+*ColorSepScreenAngle ProcessBlack.106lpi.600dpi/106 lpi / 600 dpi: "45.0"
+
+*ColorSepScreenAngle CustomColor.106lpi.600dpi/106 lpi / 600 dpi: "45.0"
+
+*ColorSepScreenAngle ProcessCyan.106lpi.600dpi/106 lpi / 600 dpi: "71.5651"
+
+*ColorSepScreenAngle ProcessMagenta.106lpi.600dpi/106 lpi / 600 dpi: "18.4349"
+
+*ColorSepScreenAngle ProcessYellow.106lpi.600dpi/106 lpi / 600 dpi: "0.0"
+
+
+*ColorSepScreenFreq ProcessBlack.106lpi.600dpi/106 lpi / 600 dpi: "106.066"
+
+*ColorSepScreenFreq CustomColor.106lpi.600dpi/106 lpi / 600 dpi: "106.066"
+
+*ColorSepScreenFreq ProcessCyan.106lpi.600dpi/106 lpi / 600 dpi: "94.8683"
+
+*ColorSepScreenFreq ProcessMagenta.106lpi.600dpi/106 lpi / 600 dpi: "94.8683"
+
+*ColorSepScreenFreq ProcessYellow.106lpi.600dpi/106 lpi / 600 dpi: "100.0"
+
+
+*%  For 212 lpi / 1200 dpi  =========================
+*ColorSepScreenAngle ProcessBlack.212lpi.1200dpi/212 lpi / 1200 dpi: "45.0"
+
+*ColorSepScreenAngle CustomColor.212lpi.1200dpi/212 lpi / 1200 dpi: "45.0"
+
+*ColorSepScreenAngle ProcessCyan.212lpi.1200dpi/212 lpi / 1200 dpi: "71.5651"
+
+*ColorSepScreenAngle ProcessMagenta.212lpi.1200dpi/212 lpi / 1200 dpi: "18.4349"
+
+*ColorSepScreenAngle ProcessYellow.212lpi.1200dpi/212 lpi / 1200 dpi: "0.0"
+
+
+*ColorSepScreenFreq ProcessBlack.212lpi.1200dpi/212 lpi / 1200 dpi: "212"
+
+*ColorSepScreenFreq CustomColor.212lpi.1200dpi/212 lpi / 1200 dpi: "212"
+
+*ColorSepScreenFreq ProcessCyan.212lpi.1200dpi/212 lpi / 1200 dpi: "190"
+
+*ColorSepScreenFreq ProcessMagenta.212lpi.1200dpi/212 lpi / 1200 dpi: "190"
+
+*ColorSepScreenFreq ProcessYellow.212lpi.1200dpi/212 lpi / 1200 dpi: "200"
+
+
+*%=================================================
+*%		 Font Information
+*%=================================================
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.004S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.004S)" Standard ROM
+*Font Bookman-Light: Standard "(001.004S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.004S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Special ROM
+*?FontQuery: "
+   save
+   { count 1 gt
+      { exch dup 127 string cvs (/) print print (:) print
+      /Font resourcestatus {pop pop (Yes)} {(No)} ifelse =
+      } { exit } ifelse
+   } bind loop
+   (*) = flush
+   restore
+"
+*End
+
+*?FontList: "
+   save
+     (*) {cvn ==} 128 string /Font resourceforall
+     (*) = flush
+   restore
+"
+*End
+
+*%=================================================
+*%		 Printer Messages (verbatim from printer):
+*%=================================================
+*Message: "%%[ exitserver: permanent state may be changed ]%%"
+*Message: "%%[ Flushing: rest of job (to end-of-file) will be ignored ]%%"
+*Message: "\FontName\ not found, using Courier"
+
+*% Status (format: %%[ status: <one of these> ] %%)
+*Status: "warming up"/warming up
+*Status: "idle"/idle
+*Status: "busy"/busy
+*Status: "waiting"/waiting
+*Status: "printing"/printing
+*Status: "initializing"/initializing
+*Status: "printing test page"/printing test page
+*Status: "PrinterError: cover open or no toner cartridge"/cover open or no toner cartridge
+*Status: "PrinterError: cover open"/cover open
+*Status: "PrinterError: needs attention"/needs attention
+*Status: "PrinterError: no toner cartridge"/no toner cartridge
+*Status: "PrinterError: warming up"/warming up
+*Status: "PrinterError: manual feed"/manual feed
+*Status: "PrinterError: out of paper"/out of paper
+*Status: "PrinterError: Paper Jam"/Paper Jam
+*Status: "PrinterError: paper jam"/paper jam
+*Status: "PrinterError: page protect needed"/page protect needed
+*Status: "PrinterError: out of memory"/out of memory
+*Status: "PrinterError: output bin full"/output bin full
+*Status: "PrinterError: resetting printer"/resetting printer
+*Status: "PrinterError: toner is low"/toner is low
+*Status: "PrinterError: off line"/off line
+
+*% Printer Error (format: %%[ PrinterError: <one of these> ]%%)
+*PrinterError: "cover open or no toner cartridge"/cover open or no toner cartridge
+*PrinterError: "cover open"/cover open
+*PrinterError: "needs attention"/needs attention
+*PrinterError: "no toner cartridge"/no toner cartridge
+*PrinterError: "warming up"/warming up
+*PrinterError: "manual feed"/manual feed
+*PrinterError: "out of paper"/out of paper
+*PrinterError: "Paper Jam"/Paper Jam
+*PrinterError: "paper jam"/paper jam
+*PrinterError: "page protect needed"/page protect needed
+*PrinterError: "out of memory"/out of memory
+*PrinterError: "output bin full"/output bin full
+*PrinterError: "resetting printer"/resetting printer
+*PrinterError: "toner is low"/toner is low
+*PrinterError: "off line"/off line
+
+*% Input Sources (format: %%[ status: <stat>; source: <one of these> ]%% )
+*Source: "BiTronics"/BiTronics
+*Source: "other I/O"/other I/O
+*Source: "AppleTalk"/AppleTalk
+*Source: "APPLETALK"/AppleTalk
+*Source: "ATALK"/AppleTalk
+*Source: "LocalTalk"/LocalTalk
+*Source: "Parallel"/Parallel
+*Source: "EtherTalk"/EtherTalk
+*Source: "NOVELL"/NOVELL
+*Source: "DLC/LLC"/DLC/LLC
+*Source: "ETALK"/EtherTalk
+*Source: "TCP/IP"/TCP/IP
+
+*Password: "()"
+*ExitServer: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+     (WARNING: Cannot modify initial VM.) =
+     (Missing or invalid password.) =
+     (Please contact the author of this software.) = flush quit
+     } if
+"
+*End
+*Reset: "
+  count 0 eq { false } { true exch startjob } ifelse
+  not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+  systemdict /quit get exec
+  (WARNING : Printer Reset Failed.) = flush
+"
+*End
+
+*% =======================================
+*% For "hp LaserJet 2300 Series"

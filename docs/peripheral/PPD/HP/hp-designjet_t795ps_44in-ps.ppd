@@ -1,0 +1,2233 @@
+*PPD-Adobe: "4.3"
+*% =================================
+*% Copyright 1992-2007 HP Company
+*% Permission is hereby granted, free of charge, to any person obtaining
+*% a copy of this software and associated documentation files (the
+*% "Software"), to deal in the Software without restriction, including
+*% without limitation the rights to use, copy, modify, merge, publish,
+*% distribute, sublicense, and/or sell copies of the Software, and to
+*% permit persons to whom the Software is furnished to do so, subject to
+*% the following conditions:
+*% 
+*% The above copyright notice and this permission notice shall be
+*% included in all copies or substantial portions of the Software.
+*% 
+*% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*% LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*% OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*% WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*% 
+*% [this is the MIT open source license -- please see www.opensource.org]
+*%
+*% Adobe Systems PostScript(R) Printer Description File
+*% (c) Copyright 2002-2015 HP Development Company, L.P.
+*% PPD Version for Apple Macintosh
+*% =================================
+*FormatVersion: "4.3"
+*FileVersion: "4.0.1"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*PCFileName: "HPPD0010.PPD"
+*PSVersion: "(3016.102) 1"
+*Product: "(HP Designjet T795ps 44in)"
+*Product: "(HP Designjet T795ps 44in (44'' sized))"
+*ModelName: "HP Designjet T795ps 44in"
+*ShortNickName: "HP Designjet T795ps 44in"
+*1284DeviceID: "MFG:Hewlett-Packard;MDL:hp designjet t795ps 44in;"
+*NickName: "HP Designjet T795ps 44in Postscript (recommended)"
+*Manufacturer: "HP"
+
+
+*% =============== Device Capabilities And Keywords for supporting Alert and Status Mechanism =============== 
+*LanguageLevel: "3"
+*cupsProtocol: "TBCP"
+*Protocols:TBCP
+
+
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*VariablePaperSize: True
+*TTRasterizer: Type42
+*?TTRasterizer: "
+  save
+  42 /FontType resourcestatus
+  { pop pop (Type42)} {pop pop (None)} ifelse = flush
+  restore"
+*End
+*Throughput: "1"
+*Password: "()"
+*ExitServer: "
+  count 0 eq
+  { false } { true exch startjob } ifelse
+  not {
+    (WARNING: Cannot modify initial VM.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if"
+
+*End
+*Reset: "
+  count 0 eq
+  { false } { true exch startjob } ifelse
+  not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+  systemdict /quit get exec
+  (WARNING : Printer Reset Failed.) = flush"
+*End
+
+
+
+
+
+*% =============== All the UIConstraints =============== 
+
+*% =============== Constraints for the output profiles =============== 
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation ISOCoatedv2-ECI
+*UIConstraints: *HPCMYKEmulation ISOCoatedv2-ECI *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation CoatedGRACoL2006-ISO12647
+*UIConstraints: *HPCMYKEmulation CoatedGRACoL2006-ISO12647 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation PSOUncoatedISO12647-ECI
+*UIConstraints: *HPCMYKEmulation PSOUncoatedISO12647-ECI *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation PSOLWCImproved-ECI
+*UIConstraints: *HPCMYKEmulation PSOLWCImproved-ECI *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation WebCoatedSWOP2006Grade3
+*UIConstraints: *HPCMYKEmulation WebCoatedSWOP2006Grade3 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation WebCoatedSWOP2006Grade5
+*UIConstraints: *HPCMYKEmulation WebCoatedSWOP2006Grade5 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation USWebCoated(SWOP)v2
+*UIConstraints: *HPCMYKEmulation USWebCoated(SWOP)v2 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation USWebUncoatedv2
+*UIConstraints: *HPCMYKEmulation USWebUncoatedv2 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation USSheetfedCoatedv2
+*UIConstraints: *HPCMYKEmulation USSheetfedCoatedv2 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation USSheetfedUncoatedv2
+*UIConstraints: *HPCMYKEmulation USSheetfedUncoatedv2 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation EuroscaleUncoatedv2
+*UIConstraints: *HPCMYKEmulation EuroscaleUncoatedv2 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation JapanWebCoated
+*UIConstraints: *HPCMYKEmulation JapanWebCoated *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation JapanStandardv2
+*UIConstraints: *HPCMYKEmulation JapanStandardv2 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation JapanUncoated2
+*UIConstraints: *HPCMYKEmulation JapanUncoated2 *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation JapanColor2002Newspaper
+*UIConstraints: *HPCMYKEmulation JapanColor2002Newspaper *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation JapanColor2003WebCoated
+*UIConstraints: *HPCMYKEmulation JapanColor2003WebCoated *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation JMPA
+*UIConstraints: *HPCMYKEmulation JMPA *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation TOYO
+*UIConstraints: *HPCMYKEmulation TOYO *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPCMYKEmulation DIC
+*UIConstraints: *HPCMYKEmulation DIC *HPColorMan ApplicationManagedColors
+
+
+*% =============== Constraints for the input profiles =============== 
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPRGBEmulation sRGB_HP_colormap
+*UIConstraints: *HPRGBEmulation sRGB_HP_colormap *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPRGBEmulation AdobeRGB_HP_colormap
+*UIConstraints: *HPRGBEmulation AdobeRGB_HP_colormap *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPRGBEmulation AppleRGB
+*UIConstraints: *HPRGBEmulation AppleRGB *HPColorMan ApplicationManagedColors
+*UIConstraints: *HPColorMan ApplicationManagedColors *HPRGBEmulation ColorMatchRGB
+*UIConstraints: *HPRGBEmulation ColorMatchRGB *HPColorMan ApplicationManagedColors
+
+
+*% =============== Max Detail over Media Type Constraints =============== 
+*UIConstraints: *HPPaperType BondAndCoatedPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType BondAndCoatedPaper
+*UIConstraints: *HPPaperType HPCoatedPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HPCoatedPaper
+*UIConstraints: *HPPaperType CoatedPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType CoatedPaper 
+*UIConstraints: *HPPaperType HPHvwCoatedPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HPHvwCoatedPaper
+*UIConstraints: *HPPaperType HPSuperHvwPlus *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HPSuperHvwPlus
+*UIConstraints: *HPPaperType HPRecycledBond *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HPRecycledBond
+*UIConstraints: *HPPaperType HeavyweightCoated *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HeavyweightCoated
+*UIConstraints: *HPPaperType SuperHvwCoatedPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType SuperHvwCoatedPaper
+*UIConstraints: *HPPaperType HPBrhtWhtInkjetBond *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HPBrhtWhtInkjetBond
+*UIConstraints: *HPPaperType HPUniversalInkjetBond *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HPUniversalInkjetBond
+*UIConstraints: *HPPaperType PlainPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType PlainPaper
+*UIConstraints: *HPPaperType BrightWhiteBond *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType BrightWhiteBond
+*UIConstraints: *HPPaperType SelfAdhesiveMaterial *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType SelfAdhesiveMaterial
+*UIConstraints: *HPPaperType AdhesivePolypMatte *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType AdhesivePolypMatte
+*UIConstraints: *HPPaperType AdhesivePolypSatin *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType AdhesivePolypSatin
+*UIConstraints: *HPPaperType AdhesiveVinyl *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType AdhesiveVinyl
+*UIConstraints: *HPPaperType TechnicalPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType TechnicalPaper
+*UIConstraints: *HPPaperType HPNaturalTracing *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType HPNaturalTracing
+*UIConstraints: *HPPaperType NaturalTracingLess *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType NaturalTracingLess
+*UIConstraints: *HPPaperType NaturalTracingMore *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType NaturalTracingMore
+*UIConstraints: *HPPaperType TranslucentBond *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType TranslucentBond
+*UIConstraints: *HPPaperType Vellum *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType Vellum
+*UIConstraints: *HPPaperType Film *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType Film
+*UIConstraints: *HPPaperType TransparentClearFilm *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType TransparentClearFilm
+*UIConstraints: *HPPaperType MatteFilm *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType MatteFilm
+*UIConstraints: *HPPaperType PhotoPaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType PhotoPaper
+*UIConstraints: *HPPaperType PhotoMattePaper *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPPaperType PhotoMattePaper
+
+
+*% =============== Output Mode over Max Detail Constraints =============== 
+*UIConstraints: *HPOutputQuality Fast *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPOutputQuality Fast
+*UIConstraints: *HPOutputQuality Normal *HPMaxDetail True
+*UIConstraints: *HPMaxDetail True *HPOutputQuality Normal
+
+
+*% =============== Output Mode & Econo Mode Constraints =============== 
+*UIConstraints: *HPOutputQuality Normal *HPEconomic True
+*UIConstraints: *HPEconomic True *HPOutputQuality Normal
+*UIConstraints: *HPOutputQuality Best *HPEconomic True
+*UIConstraints: *HPEconomic True *HPOutputQuality Best
+
+
+*% =============== Manual Feed over (Bordless, Save Roll, Auto Cutter) constraints =============== 
+*UIConstraints: *HPPaperSource ManualFeed *HPSaveRollPaper True
+*UIConstraints: *HPSaveRollPaper True *HPPaperSource ManualFeed
+*UIConstraints: *HPPaperSource ManualFeed *HPDisableAutoCutter True
+*UIConstraints: *HPDisableAutoCutter True *HPPaperSource ManualFeed
+
+
+*% =============== Auto Rotate over (Save Roll & Manual Feed) constraints =============== 
+*UIConstraints: *HPAutorotate True *HPSaveRollPaper True
+*UIConstraints: *HPSaveRollPaper True *HPAutorotate True
+*UIConstraints: *HPAutorotate True *HPPaperSource ManualFeed
+*UIConstraints: *HPPaperSource ManualFeed *HPAutorotate True
+*UIConstraints: *HPAutorotate True *HPTransverse True
+*UIConstraints: *HPTransverse True *HPAutorotate True
+
+
+*% =============== General Options =============== 
+*OpenGroup: HPGeneralOptions/General
+
+*% =============== Paper Handling =============== 
+*OpenUI *PageSize: PickOne
+*OrderDependency: 30.0 AnySetup *PageSize
+*DefaultPageSize: Letter
+
+*% =============== Page Sizes Roll =============== 
+*PageSize Letter/US Letter: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize Legal/US Legal: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize Tabloid/Tabloid: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiC/C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiD/D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize AnsiE/E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize AnsiF/F: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHA/Arch A: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHB/Arch B: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE/Arch E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE1/Arch E1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE2/Arch E2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE3/Arch E3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A4/A4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A3/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A2/A2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A1/A1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A0/A0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB4/B4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB3/B3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB2/B2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB1/B1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB0/B0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2835 4008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B4/JB4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B3/JB3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B2/JB2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B1/JB1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B0/JB0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2920 4127]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperB/Super B/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperC/Super C/A2, Arch C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperD/Super D/A1, Arch D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice" 
+*End
+
+*% =============== Sheet Sizes =============== 
+*PageSize LetterSH/US Letter on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize LegalSH/US Legal on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize TabloidSH/Tabloid on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiCSH/C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiDSH/D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize AnsiESH/E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize AnsiFSH/F on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHASH/Arch A on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHBSH/Arch B on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHESH/Arch E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE1SH/Arch E1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE2SH/Arch E2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE3SH/Arch E3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A4SH/A4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A3SH/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A2SH/A2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A1SH/A1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A0SH/A0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB4SH/B4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB3SH/B3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB2SH/B2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB1SH/B1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB0SH/B0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2835 4008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B4SH/JB4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B3SH/JB3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B2SH/JB2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B1SH/JB1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B0SH/JB0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2920 4127]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperBSH/Super B/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperCSH/Super C/A2, Arch C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperDSH/Super D/A1, Arch D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice" 
+*End
+
+
+*% =============== No margins paper =============== 
+*PageSize LetterNM/US Letter no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize LegalNM/US Legal no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize TabloidNM/Tabloid no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiCNM/C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageSize AnsiDNM/D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize AnsiENM/E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize AnsiFNM/F no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHANM/Arch A no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHBNM/Arch B no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHENM/Arch E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE1NM/Arch E1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE2NM/Arch E2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ARCHE3NM/Arch E3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A4NM/A4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A3NM/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A2NM/A2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A1NM/A1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize A0NM/A0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB4NM/B4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB3NM/B3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB2NM/B2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB1NM/B1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize ISOB0NM/B0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2835 4008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B4NM/JB4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B3NM/JB3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B2NM/JB2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B1NM/JB1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize B0NM/JB0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2920 4127]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperBNM/Super B/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperCNM/Super C/A2, Arch C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice" 
+*End
+*PageSize SuperDNM/Super D/A1, Arch D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice" 
+*End
+
+*?PageSize: "
+  save
+  currentpagedevice /PageSize get aload pop
+  2 copy gt {exch} if
+  (Unknown)
+  93 dict
+    dup [612 792]    (Letter) put
+    dup [612 1008]   (Legal) put
+    dup [792 1224]   (Tabloid) put
+    dup [1224 1584]  (AnsiC) put
+    dup [1584 2448]  (AnsiD) put
+    dup [2448 3168]  (AnsiE) put
+    dup [2016 2880]  (AnsiF) put
+    dup [648 864]    (ARCHA) put
+    dup [864 1297]   (ARCHB) put
+    dup [2592 3456]  (ARCHE) put
+    dup [2160 3024]  (ARCHE1) put
+    dup [1872 2736]  (ARCHE2) put
+    dup [1944 2808]  (ARCHE3) put
+    dup [595 842]    (A4) put
+    dup [842 1191]   (A3) put
+    dup [1191 1684]  (A2) put
+    dup [1684 2384]  (A1) put
+    dup [2384 3370]  (A0) put
+    dup [709 1001]   (ISOB4) put
+    dup [1001 1417]  (ISOB3) put
+    dup [1417 2004]  (ISOB2) put
+    dup [2004 2835]  (ISOB1) put
+    dup [2835 4008]  (ISOB0) put
+    dup [729 1032]   (B4) put
+    dup [1032 1460]  (B3) put
+    dup [1460 2064]  (B2) put
+    dup [2064 2920]  (B1) put
+    dup [2920 4127]  (B0) put
+    dup [936 1368]   (SuperB) put
+    dup [1296 1728]  (SuperC) put
+    dup [1728 2592]  (SuperD) put
+    dup [612 792]    (LetterSH) put
+    dup [612 1008]   (LegalSH) put
+    dup [792 1224]   (TabloidSH) put
+    dup [1224 1584]  (AnsiCSH) put
+    dup [1584 2448]  (AnsiDSH) put
+    dup [2448 3168]  (AnsiESH) put
+    dup [2016 2880]  (AnsiFSH) put
+    dup [648 864]    (ARCHASH) put
+    dup [864 1297]   (ARCHBSH) put
+    dup [2592 3456]  (ARCHESH) put
+    dup [2160 3024]  (ARCHE1SH) put
+    dup [1872 2736]  (ARCHE2SH) put
+    dup [1944 2808]  (ARCHE3SH) put
+    dup [595 842]    (A4SH) put
+    dup [842 1191]   (A3SH) put
+    dup [1191 1684]  (A2SH) put
+    dup [1684 2384]  (A1SH) put
+    dup [2384 3370]  (A0SH) put
+    dup [709 1001]   (ISOB4SH) put
+    dup [1001 1417]  (ISOB3SH) put
+    dup [1417 2004]  (ISOB2SH) put
+    dup [2004 2835]  (ISOB1SH) put
+    dup [2835 4008]  (ISOB0SH) put
+    dup [729 1032]   (B4SH) put
+    dup [1032 1460]  (B3SH) put
+    dup [1460 2064]  (B2SH) put
+    dup [2064 2920]  (B1SH) put
+    dup [2920 4127]  (B0SH) put
+    dup [936 1368]   (SuperBSH) put
+    dup [1296 1728]  (SuperCSH) put
+    dup [1728 2592]  (SuperDSH) put
+    dup [612 792]    (LetterNM) put
+    dup [612 1008]   (LegalNM) put
+    dup [792 1224]   (TabloidNM) put
+    dup [1224 1584]  (AnsiCNM) put
+    dup [1584 2448]  (AnsiDNM) put
+    dup [2448 3168]  (AnsiENM) put
+    dup [2016 2880]  (AnsiFNM) put
+    dup [648 864]    (ARCHANM) put
+    dup [864 1297]   (ARCHBNM) put
+    dup [2592 3456]  (ARCHENM) put
+    dup [2160 3024]  (ARCHE1NM) put
+    dup [1872 2736]  (ARCHE2NM) put
+    dup [1944 2808]  (ARCHE3NM) put
+    dup [595 842]    (A4NM) put
+    dup [842 1191]   (A3NM) put
+    dup [1191 1684]  (A2NM) put
+    dup [1684 2384]  (A1NM) put
+    dup [2384 3370]  (A0NM) put
+    dup [709 1001]   (ISOB4NM) put
+    dup [1001 1417]  (ISOB3NM) put
+    dup [1417 2004]  (ISOB2NM) put
+    dup [2004 2835]  (ISOB1NM) put
+    dup [2835 4008]  (ISOB0NM) put
+    dup [729 1032]   (B4NM) put
+    dup [1032 1460]  (B3NM) put
+    dup [1460 2064]  (B2NM) put
+    dup [2064 2920]  (B1NM) put
+    dup [2920 4127]  (B0NM) put
+    dup [936 1368]   (SuperBNM) put
+    dup [1296 1728]  (SuperCNM) put
+    dup [1728 2592]  (SuperDNM) put
+  { exch aload pop 4 index sub abs 5 le exch
+    5 index sub abs 5 le and
+    {exch pop exit} {pop} ifelse
+  } bind forall
+  = flush pop pop
+  restore"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 40.0 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+
+*% =============== Page Region Roll =============== 
+*PageRegion Letter/US Letter: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion Legal/US Legal: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion Tabloid/Tabloid: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiE/E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion AnsiF/F: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHA/Arch A: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHB/Arch B: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion AnsiC/C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiD/D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE/Arch E: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE1/Arch E1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE2/Arch E2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE3/Arch E3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A4/A4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A3/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A2/A2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A1/A1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A0/A0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB4/B4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB3/B3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB2/B2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB1/B1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB0/B0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2835 4008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B4/JB4: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B3/JB3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B2/JB2: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B1/JB1: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B0/JB0: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[2920 4127]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperB/Super B/A3: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperC/Super C/A2, Arch C: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperD/Super D/A1, Arch D: "/HPDict /ProcSet findresource /SetMargins get [ 14 14 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice" 
+*End
+
+*% =============== Sheet Sizes =============== 
+*PageRegion LetterSH/US Letter on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion LegalSH/US Legal on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion TabloidSH/Tabloid on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiCSH/C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiDSH/D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion AnsiESH/E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion AnsiFSH/F on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHASH/Arch A on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHBSH/Arch B on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHESH/Arch E on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE1SH/Arch E1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE2SH/Arch E2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE3SH/Arch E3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A4SH/A4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A3SH/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A2SH/A2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A1SH/A1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A0SH/A0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB4SH/B4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB3SH/B3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB2SH/B2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB1SH/B1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB0SH/B0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2835 4008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B4SH/JB4 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B3SH/JB3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B2SH/JB2 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B1SH/JB1 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B0SH/JB0 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[2920 4127]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperBSH/Super B/A3 on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperCSH/Super C/A2, Arch C on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperDSH/Super D/A1, Arch D on sheet media: "/HPDict /ProcSet findresource /SetMargins get [ 14 48 14 14 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice" 
+*End
+
+
+*% =============== No margins paper =============== 
+*PageRegion LetterNM/US Letter no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 792]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion LegalNM/US Legal no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[612 1008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion TabloidNM/Tabloid no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[792 1224]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiCNM/C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1224 1584]/ImagingBBox null>>setpagedevice"
+*End
+*PageRegion AnsiDNM/D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1584 2448]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion AnsiENM/E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2448 3168]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion AnsiFNM/F no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2016 2880]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHANM/Arch A no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[648 864]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHBNM/Arch B no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[864 1296]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHENM/Arch E no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2592 3456]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE1NM/Arch E1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2160 3024]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE2NM/Arch E2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1872 2736]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ARCHE3NM/Arch E3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1944 2808]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A4NM/A4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[595 842]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A3NM/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[842 1191]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A2NM/A2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1191 1684]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A1NM/A1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1684 2384]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion A0NM/A0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2384 3370]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB4NM/B4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[709 1001]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB3NM/B3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1001 1417]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB2NM/B2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1417 2004]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB1NM/B1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2004 2835]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion ISOB0NM/B0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2835 4008]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B4NM/JB4 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[729 1032]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B3NM/JB3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1032 1460]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B2NM/JB2 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1460 2064]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B1NM/JB1 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2064 2920]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion B0NM/JB0 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[2920 4127]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperBNM/Super B/A3 no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[936 1368]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperCNM/Super C/A2, Arch C no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1296 1728]/ImagingBBox null>>setpagedevice" 
+*End
+*PageRegion SuperDNM/Super D/A1, Arch D no margins: "/HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+ <</PageSize[1728 2592]/ImagingBBox null>>setpagedevice" 
+*End
+*CloseUI: *PageRegion
+
+
+*% The following entries provide information about specific paper keywords.
+*DefaultImageableArea: Letter
+*ImageableArea Letter/US Letter: "14 14 598 778"
+*ImageableArea Legal/US Legal: "14 14 598 994"
+*ImageableArea Tabloid/Tabloid: "14 14 778 1210"
+*ImageableArea AnsiC/C: "14 14 1210 1570"
+*ImageableArea AnsiD/D: "14 14 1570 2434"
+*ImageableArea AnsiE/E: "14 14 2434 3154"
+*ImageableArea AnsiF/F: "14 14 2002 2866"
+*ImageableArea ARCHA/Arch A: "14 14 634 850"
+*ImageableArea ARCHB/Arch B: "14 14 850 1282"
+*ImageableArea ARCHE/Arch E: "14 14 2578 3442"
+*ImageableArea ARCHE1/Arch E1: "14 14 2146 3010"
+*ImageableArea ARCHE2/Arch E2: "14 14 1858 2722"
+*ImageableArea ARCHE3/Arch E3: "14 14 1930 2794"
+*ImageableArea A4/A4: "14 14 581 828"
+*ImageableArea A3/A3: "14 14 828 1177"
+*ImageableArea A2/A2: "14 14 1177 1670"
+*ImageableArea A1/A1: "14 14 1670 2370"
+*ImageableArea A0/A0: "14 14 2370 3356"
+*ImageableArea ISOB4/B4: "14 14 695 987"
+*ImageableArea ISOB3/B3: "14 14 987 1403"
+*ImageableArea ISOB2/B2: "14 14 1403 1990"
+*ImageableArea ISOB1/B1: "14 14 1990 2821"
+*ImageableArea ISOB0/B0: "14 14 2821 3994"
+*ImageableArea B4/JB4: "14 14 715 1018"
+*ImageableArea B3/JB3: "14 14 1018 1446"
+*ImageableArea B2/JB2: "14 14 1446 2050"
+*ImageableArea B1/JB1: "14 14 2050 2906"
+*ImageableArea B0/JB0: "14 14 2906 4113"
+*ImageableArea SuperB/Super B/A3: "14 14 922 1354"
+*ImageableArea SuperC/Super C/A2, Arch C: "14 14 1282 1714"
+*ImageableArea SuperD/Super D/A1, Arch D: "14 14 1714 2578"
+*ImageableArea LetterSH/US Letter on sheet media: "14 48 598 778"
+*ImageableArea LegalSH/US Legal on sheet media: "14 48 598 994"
+*ImageableArea TabloidSH/Tabloid on sheet media: "14 48 778 1210"
+*ImageableArea AnsiCSH/C on sheet media: "14 48 1210 1570"
+*ImageableArea AnsiDSH/D on sheet media: "14 48 1570 2434"
+*ImageableArea AnsiESH/E on sheet media: "14 48 2434 3154"
+*ImageableArea AnsiFSH/F on sheet media: "14 48 2002 2866"
+*ImageableArea ARCHASH/Arch A on sheet media: "14 48 634 850"
+*ImageableArea ARCHBSH/Arch B on sheet media: "14 48 850 1282"
+*ImageableArea ARCHESH/Arch E on sheet media: "14 48 2578 3442"
+*ImageableArea ARCHE1SH/Arch E1 on sheet media: "14 48 2146 3010"
+*ImageableArea ARCHE2SH/Arch E2 on sheet media: "14 48 1858 2722"
+*ImageableArea ARCHE3SH/Arch E3 on sheet media: "14 48 1930 2794"
+*ImageableArea A4SH/A4 on sheet media: "14 48 581 828"
+*ImageableArea A3SH/A3 on sheet media: "14 48 828 1177"
+*ImageableArea A2SH/A2 on sheet media: "14 48 1177 1670"
+*ImageableArea A1SH/A1 on sheet media: "14 48 1670 2370"
+*ImageableArea A0SH/A0 on sheet media: "14 48 2370 3356"
+*ImageableArea ISOB4SH/B4 on sheet media: "14 48 695 987"
+*ImageableArea ISOB3SH/B3 on sheet media: "14 48 987 1403"
+*ImageableArea ISOB2SH/B2 on sheet media: "14 48 1403 1990"
+*ImageableArea ISOB1SH/B1 on sheet media: "14 48 1990 2821"
+*ImageableArea ISOB0SH/B0 on sheet media: "14 48 2821 3994"
+*ImageableArea B4SH/JB4 on sheet media: "14 48 715 1018"
+*ImageableArea B3SH/JB3 on sheet media: "14 48 1018 1446"
+*ImageableArea B2SH/JB2 on sheet media: "14 48 1446 2050"
+*ImageableArea B1SH/JB1 on sheet media: "14 48 2050 2906"
+*ImageableArea B0SH/JB0 on sheet media: "14 48 2906 4113"
+*ImageableArea SuperBSH/Super B/A3 on sheet media: "14 48 922 1354"
+*ImageableArea SuperCSH/Super C/A2, Arch C on sheet media: "14 48 1282 1714"
+*ImageableArea SuperDSH/Super D/A1, Arch D on sheet media: "14 48 1714 2578"
+*ImageableArea LetterNM/US Letter no margins:"0 0 612 792"
+*ImageableArea LegalNM/US Legal no margins: "0 0 612 1008"
+*ImageableArea TabloidNM/Tabloid no margins:"0 0 792 1224"
+*ImageableArea AnsiCNM/C no margins: "0 0 1224 1584"
+*ImageableArea AnsiDNM/D no margins: "0 0 1584 2448"
+*ImageableArea AnsiENM/E no margins: "0 0 2448 3168"
+*ImageableArea AnsiFNM/F no margins: "0 0 2016 2880"
+*ImageableArea ARCHANM/Arch A no margins: "0 0 648 864"
+*ImageableArea ARCHBNM/Arch B no margins: "0 0 864 1296"
+*ImageableArea ARCHENM/Arch E no margins: "0 0 2592 3456"
+*ImageableArea ARCHE1NM/Arch E1 on sheet media: "0 0 2160 3024"
+*ImageableArea ARCHE2NM/Arch E2 on sheet media: "0 0 1872 2736"
+*ImageableArea ARCHE3NM/Arch E3 on sheet media: "0 0 1944 2808"
+*ImageableArea A4NM/A4 no margins: "0 0 595 842"
+*ImageableArea A3NM/A3 no margins: "0 0 842 1191"
+*ImageableArea A2NM/A2 no margins: "0 0 1191 1684"
+*ImageableArea A1NM/A1 no margins: "0 0 1684 2384"
+*ImageableArea A0NM/A0 no margins: "0 0 2384 3370"
+*ImageableArea ISOB4NM/B4 no margins: "0 0 709 1001"
+*ImageableArea ISOB3NM/B3 no margins: "0 0 1001 1417"
+*ImageableArea ISOB2NM/B2 no margins: "0 0 1417 2004"
+*ImageableArea ISOB1NM/B1 no margins: "0 0 2004 2835"
+*ImageableArea ISOB0NM/B0 no margins: "0 0 2835 4008"
+*ImageableArea B4NM/JB4 no margins: "0 0 729 1032"
+*ImageableArea B3NM/JB3 no margins: "0 0 1032 1460"
+*ImageableArea B2NM/JB2 no margins: "0 0 1460 2064"
+*ImageableArea B1NM/JB1 no margins: "0 0 2064 2920"
+*ImageableArea B0NM/JB0 no margins: "0 0 2920 4127"
+*ImageableArea SuperBNM/Super B/A3 no margins: "0 0 936 1368"
+*ImageableArea SuperCNM/Super C/A2, Arch C no margins: "0 0 1296 1728"
+*ImageableArea SuperDNM/Super D/A1, Arch D no margins: "0 0 1728 2592"
+*?ImageableArea: "
+  save
+  /cvp {cvi (     ) cvs
+  print ( ) print} bind def
+  newpath clippath pathbbox
+  4 -2 roll exch 2 {ceiling cvp} repeat
+  exch 2 {floor cvp} repeat flush
+  restore"
+*End
+
+*% These provide the physical dimensions of the paper (by keyword)
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/US Letter: "612 792"
+*PaperDimension Legal/US Legal: "612 1008"
+*PaperDimension Tabloid/Tabloid: "792 1224"
+*PaperDimension AnsiC/C: "1224 1584"
+*PaperDimension AnsiD/D: "1584 2448"
+*PaperDimension AnsiE/E: "2448 3168"
+*PaperDimension AnsiF/F: "2016 2880"
+*PaperDimension ARCHA/Arch A: "648 864"
+*PaperDimension ARCHB/Arch B: "864 1296"
+*PaperDimension ARCHE/Arch E: "2592 3456"
+*PaperDimension ARCHE1/Arch E1: "2160 3024"
+*PaperDimension ARCHE2/Arch E2: "1872 2736"
+*PaperDimension ARCHE3/Arch E3: "1944 2808"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A3/A3: "842 1191"
+*PaperDimension A2/A2: "1191 1684"
+*PaperDimension A1/A1: "1684 2384"
+*PaperDimension A0/A0: "2384 3370"
+*PaperDimension ISOB4/B4: "709 1001"
+*PaperDimension ISOB3/B3: "1001 1417"
+*PaperDimension ISOB2/B2: "1417 2004"
+*PaperDimension ISOB1/B1: "2004 2835"
+*PaperDimension ISOB0/B0: "2835 4008"
+*PaperDimension B4/JB4: "729 1032"
+*PaperDimension B3/JB3: "1032 1460"
+*PaperDimension B2/JB2: "1460 2064"
+*PaperDimension B1/JB1: "2064 2920"
+*PaperDimension B0/JB0: "2920 4127"
+*PaperDimension SuperB/Super B/A3: "936 1368"
+*PaperDimension SuperC/Super C/A2, Arch C: "1296 1728"
+*PaperDimension SuperD/Super D/A1, Arch D: "1728 2592"
+*PaperDimension LetterSH/US Letter on sheet media: "612 792"
+*PaperDimension LegalSH/US Legal on sheet media: "612 1008"
+*PaperDimension TabloidSH/Tabloid on sheet media: "792 1224"
+*PaperDimension AnsiCSH/C on sheet media: "1224 1584"
+*PaperDimension AnsiDSH/D: "1584 2448"
+*PaperDimension AnsiESH/E on sheet media: "2448 3168"
+*PaperDimension AnsiFSH/F on sheet media: "2016 2880"
+*PaperDimension ARCHASH/Arch A on sheet media: "648 864"
+*PaperDimension ARCHBSH/Arch B on sheet media: "864 1296"
+*PaperDimension ARCHESH/Arch E on sheet media: "2592 3456"
+*PaperDimension ARCHE1SH/Arch E1 on sheet media: "2160 3024"
+*PaperDimension ARCHE2SH/Arch E2 on sheet media: "1872 2736"
+*PaperDimension ARCHE3SH/Arch E3 on sheet media: "1944 2808"
+*PaperDimension A4SH/A4 on sheet media: "595 842"
+*PaperDimension A3SH/A3 on sheet media: "842 1191"
+*PaperDimension A2SH/A2 on sheet media: "1191 1684"
+*PaperDimension A1SH/A1 on sheet media: "1684 2384"
+*PaperDimension A0SH/A0 on sheet media: "2384 3370"
+*PaperDimension ISOB4SH/B4 on sheet media: "709 1001"
+*PaperDimension ISOB3SH/B3 on sheet media: "1001 1417"
+*PaperDimension ISOB2SH/B2 on sheet media: "1417 2004"
+*PaperDimension ISOB1SH/B1 on sheet media: "2004 2835"
+*PaperDimension ISOB0SH/B0 on sheet media: "2835 4008"
+*PaperDimension B4SH/JB4 on sheet media: "729 1032"
+*PaperDimension B3SH/JB3 on sheet media: "1032 1460"
+*PaperDimension B2SH/JB2 on sheet media: "1460 2064"
+*PaperDimension B1SH/JB1 on sheet media: "2064 2920"
+*PaperDimension B0SH/JB0 on sheet media: "2920 4127"
+*PaperDimension SuperBSH/Super B/A3 on sheet media: "936 1368"
+*PaperDimension SuperCSH/Super C/A2, Arch C on sheet media: "1296 1728"
+*PaperDimension SuperDSH/Super D/A1, Arch D on sheet media: "1728 2592"
+*PaperDimension LetterNM/US Letter no margins: "612 792"
+*PaperDimension LegalNM/US Legal no margins: "612 1008"
+*PaperDimension TabloidNM/Tabloid no margins: "792 1224"
+*PaperDimension AnsiCNM/C no margins: "1224 1584"
+*PaperDimension AnsiDNM/D: "1584 2448"
+*PaperDimension AnsiENM/E no margins: "2448 3168"
+*PaperDimension AnsiFNM/F no margins: "2016 2880"
+*PaperDimension ARCHANM/Arch A no margins: "648 864"
+*PaperDimension ARCHBNM/Arch B no margins: "864 1296"
+*PaperDimension ARCHENM/Arch E no margins: "2592 3456"
+*PaperDimension ARCHE1NM/Arch E1 no margins: "2160 3024"
+*PaperDimension ARCHE2NM/Arch E2 no margins: "1872 2736"
+*PaperDimension ARCHE3NM/Arch E3 no margins: "1944 2808"
+*PaperDimension A4NM/A4 no margins: "595 842"
+*PaperDimension A3NM/A3 no margins: "842 1191"
+*PaperDimension A2NM/A2 no margins: "1191 1684"
+*PaperDimension A1NM/A1 no margins: "1684 2384"
+*PaperDimension A0NM/A0 no margins: "2384 3370"
+*PaperDimension ISOB4NM/B4 no margins: "709 1001"
+*PaperDimension ISOB3NM/B3 no margins: "1001 1417"
+*PaperDimension ISOB2NM/B2 no margins: "1417 2004"
+*PaperDimension ISOB1NM/B1 no margins: "2004 2835"
+*PaperDimension ISOB0NM/B0 no margins: "2835 4008"
+*PaperDimension B4NM/JB4 no margins: "729 1032"
+*PaperDimension B3NM/JB3 no margins: "1032 1460"
+*PaperDimension B2NM/JB2 no margins: "1460 2064"
+*PaperDimension B1NM/JB1 no margins: "2064 2920"
+*PaperDimension B0NM/JB0 no margins: "2920 4127"
+*PaperDimension SuperBNM/Super B/A3 no margins: "936 1368"
+*PaperDimension SuperCNM/Super C/A2, Arch C no margins: "1296 1728"
+*PaperDimension SuperDNM/Super D/A1, Arch D no margins: "1728 2592"
+
+
+*% =============== Input Tray =============== 
+*RequiresPageRegion All: True
+
+
+*% =============== Custom Page Sizes =============== 
+*MaxMediaWidth: "3186"
+*MaxMediaHeight: "257953"
+*HWMargins: 0 0 0 0
+*ADUseHWMargins: True
+*ParamCustomPageSize Width/Width: 1 points 216 3186
+*ParamCustomPageSize Height/Height: 2 points 396 257953
+*ParamCustomPageSize WidthOffset/WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset/HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation/Orientation: 5 int 1 1
+*NonUIOrderDependency: 30.0 AnySetup *CustomPageSize
+*CustomPageSize True: "
+   pop pop pop   % discard offsets
+    3 dict begin
+    /PageSize [ 4 -2 roll ] def
+    /ImagingBBox null def
+    currentdict end setpagedevice
+  /HPDict /ProcSet findresource /SetMargins get [ 0 0 0 0 ] exch exec
+  <<>> setpagedevice"
+*End
+
+
+*% =============== Min media size =============== 
+*MinMediaWidth: "216"
+*MinMediaHeight: "396"
+
+
+*% =============== Paper Source =============== 
+*OpenUI *HPPaperSource/Paper Source is: PickOne
+*OrderDependency: 50.0 AnySetup *HPPaperSource
+*DefaultHPPaperSource: Roll
+
+*HPPaperSource ManualFeed/Manual Feed: "
+    /HPDict /ProcSet findresource /SetMediaSource get (ManualFeed) exch exec"
+*End
+
+*HPPaperSource Roll/Roll: "
+    /HPDict /ProcSet findresource /SetMediaSource get (Roll) exch exec"
+*End
+
+*?HPPaperSource: "
+save
+   [(ManualFeed)(Roll)(Unknown)]
+   statusdict /papertray get exec
+   {get exec} stopped { pop pop (Unknown) } if =
+   currentpagedevice /InputAttributes get dup
+   /Priority get 0 get get /MediaType get = flush
+restore"
+*End
+*CloseUI: *HPPaperSource
+
+
+*% =============== Media Type =============== 
+*OpenUI *HPPaperType/Paper Type is: PickOne
+*OrderDependency: 50.0 AnySetup *HPPaperType
+*DefaultHPPaperType:HPAnyPaper
+*% --- Any Paper ---
+*HPPaperType HPAnyPaper/ - Any Paper -:""
+
+*% --- Bond and Coated Paper ---
+*HPPaperType BondAndCoatedPaper/ > Bond And Coated Paper :"
+	/HPDict /ProcSet findresource /SetMediaId get (1000) exch exec"
+*End
+
+*HPPaperType HPBrhtWhtInkjetBond/       HP Bright White Inkjet Paper: "
+	/HPDict /ProcSet findresource /SetMediaId get (1011) exch exec"
+*End
+
+*HPPaperType HPUniversalInkjetBond/       HP Universal Bond Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1012) exch exec"
+*End
+
+*HPPaperType HPCoatedPaper/       HP Coated Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1101) exch exec"
+*End
+
+*HPPaperType HPHvwCoatedPaper/       HP Heavyweight Coated Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1111) exch exec"
+*End
+
+*HPPaperType HPSuperHvwPlus/       HP Super Heavyweight Plus Matte Paper: "
+	/HPDict /ProcSet findresource /SetMediaId get (1121) exch exec"
+*End
+
+*HPPaperType HPRecycledBond/       HP Recycled Bond Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1221) exch exec"
+*End
+
+*HPPaperType PlainPaper/       Plain Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1000) exch exec"
+*End
+
+*HPPaperType BrightWhiteBond/       Bright White Bond Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1010) exch exec"
+*End
+
+*HPPaperType CoatedPaper/       Coated Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1100) exch exec"
+*End
+
+*HPPaperType HeavyweightCoated/       Heavyweight Coated Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1110) exch exec"
+*End
+
+*HPPaperType SuperHvwCoatedPaper/       Super Heavyweight Coated Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (1120) exch exec"
+*End
+
+*% --- Photo Paper ---
+*HPPaperType PhotoPaper/ > Photo Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (2020) exch exec"
+*End
+*HPPaperType HPUniversalHighGloss/       HP Universal High-Gloss Photo Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (2002) exch exec"
+*End
+
+*HPPaperType HPUniversalSemiGloss/       HP Universal Semi-Gloss Photo Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (2013) exch exec"
+*End
+
+*HPPaperType PhotoGlossPaper/       Photo Gloss Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (2000) exch exec"
+*End
+
+*HPPaperType PhotoSemiGlossSatin/       Photo Semi-Gloss/Satin Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (2010) exch exec"
+*End
+
+*HPPaperType PhotoMattePaper/       Photo Matte Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (2020) exch exec"
+*End
+
+*% --- Film ---
+*HPPaperType Film/ > Film-Transparent:"
+	/HPDict /ProcSet findresource /SetMediaId get (3100) exch exec"
+*End
+
+*HPPaperType TransparentClearFilm/       Transparent/Clear Film:"
+	/HPDict /ProcSet findresource /SetMediaId get (3100) exch exec"
+*End
+
+*HPPaperType MatteFilm/       Matte Film:"
+	/HPDict /ProcSet findresource /SetMediaId get (3110) exch exec"
+*End
+
+*% --- Technical Paper ---
+*HPPaperType TechnicalPaper/ > Technical Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (3030) exch exec"
+*End
+
+*HPPaperType HPNaturalTracing/       HP Natural Tracing Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (3001) exch exec"
+*End
+
+*HPPaperType NaturalTracingLess/       Generic Natural Tracing Paper <3C>65g/m2:"
+	/HPDict /ProcSet findresource /SetMediaId get (3030) exch exec"
+*End
+
+*HPPaperType NaturalTracingMore/       Generic Natural Tracing Paper >65g/m2:"
+	/HPDict /ProcSet findresource /SetMediaId get (3040) exch exec"
+*End
+
+*HPPaperType TranslucentBond/       Translucent Bond:"
+	/HPDict /ProcSet findresource /SetMediaId get (3010) exch exec"
+*End
+
+*HPPaperType Vellum/       Vellum:"
+	/HPDict /ProcSet findresource /SetMediaId get (3020) exch exec"
+*End
+
+*% --- Blacklit Material ---
+*HPPaperType BacklitMaterial/ > Backlit Material:"
+/HPDict /ProcSet findresource /SetMediaId get (3200) exch exec"
+*End
+
+*% --- Self Adhesive Material ---
+*HPPaperType SelfAdhesiveMaterial/ > Self Adhesive Material:"
+	/HPDict /ProcSet findresource /SetMediaId get (5120) exch exec"
+*End
+
+*HPPaperType Cling/       Cling:"
+	/HPDict /ProcSet findresource /SetMediaId get (5100) exch exec"
+*End
+
+*HPPaperType AdhesivePaper/       Adhesive Paper:"
+	/HPDict /ProcSet findresource /SetMediaId get (5120) exch exec"
+*End
+
+*HPPaperType AdhesivePolypMatte/       Adhesive Polypropylene Matte:"
+	/HPDict /ProcSet findresource /SetMediaId get (5110) exch exec"
+*End
+
+*HPPaperType AdhesivePolypSatin/       Adhesive Polypropylene Satin:"
+	/HPDict /ProcSet findresource /SetMediaId get (5140) exch exec"
+*End
+
+*HPPaperType AdhesiveVinyl/       Adhesive Vinyl:"
+	/HPDict /ProcSet findresource /SetMediaId get (5130) exch exec"
+*End
+*CloseUI: *HPPaperType
+*CloseGroup: HPGeneralOptions
+
+
+
+
+*% =============== Image Quality Options =============== 
+*OpenGroup: HPPrintQualityOptions/Image Quality Options
+
+*% =============== EconoMode =============== 
+*OpenUI *HPEconomic/EconoMode:  Boolean
+*OrderDependency: 50.0 AnySetup *HPEconomic
+*DefaultHPEconomic: False
+*HPEconomic True/On: "/HPDict /ProcSet findresource /SetEconofast get true exch exec"
+*End
+*HPEconomic False/Off: "/HPDict /ProcSet findresource /SetEconofast get false exch exec"
+*End
+*CloseUI: *HPEconomic
+
+
+*% =============== Print Quality =============== 
+*OpenUI *HPOutputQuality/Print Quality: PickOne
+*OrderDependency: 50.0 AnySetup *HPOutputQuality
+*DefaultHPOutputQuality: Fast
+*HPOutputQuality Fast/Fast: "
+  << /PostRenderingEnhance true
+     /PostRenderingEnhanceDetails
+     << /PrintQuality 1
+     /Type 36 >>
+  >> systemdict /setpagedevice get exec"
+*End
+*HPOutputQuality Normal/Normal: "
+  << /PostRenderingEnhance true
+     /PostRenderingEnhanceDetails
+     << /PrintQuality 2
+     /Type 36 >>
+  >> systemdict /setpagedevice get exec"
+
+*End
+*HPOutputQuality Best/Best: "
+  << /PostRenderingEnhance true
+     /PostRenderingEnhanceDetails
+     << /PrintQuality 3
+     /Type 36 >>
+  >> systemdict /setpagedevice get exec"
+*End
+
+*?HPOutputQuality: "
+  save
+  3 dict
+  dup 1 (Fast) put
+  dup 2 (Normal) put
+  dup 3 (Best) put
+  currentpagedevice /PostRenderingEnhanceDetails get
+  /PrintQuality get get = flush
+  restore"
+*End
+*CloseUI: *HPOutputQuality
+
+
+*% =============== Maximum Detail =============== 
+*OpenUI *HPMaxDetail/Maximum Detail: Boolean
+*OrderDependency: 60.0 AnySetup *HPMaxDetail
+*DefaultHPMaxDetail: False
+*HPMaxDetail True/On: "
+  << /PostRenderingEnhance true
+     /PostRenderingEnhanceDetails
+     << /MaxQualityResolution true
+     /Type 36 >>
+  >> systemdict /setpagedevice get exec"
+*End
+
+*HPMaxDetail False/Off: "
+  << /PostRenderingEnhance true
+     /PostRenderingEnhanceDetails
+     << /MaxQualityResolution false
+     /Type 36 >>
+  >> systemdict /setpagedevice get exec"
+
+*End
+
+*?HPMaxDetail: "
+  save
+  2 dict
+  dup true (True) put
+  dup false (False) put
+  currentpagedevice /PostRenderingEnhanceDetails get
+  /MaxQualityResolution get get = flush
+  restore"
+*End
+*CloseUI: *HPMaxDetail
+*CloseGroup: HPPrintQualityOptions
+
+
+
+
+
+*% =============== Color Options Group =============== 
+*OpenGroup: HPColorOptions/Color Options
+
+*% =============== HP Color Output Mode =============== 
+*OpenUI *HPColorOutput/Color Mode: PickOne
+*OrderDependency: 40.0 AnySetup *HPColorOutput
+*DefaultHPColorOutput: ColorPrint
+*HPColorOutput ColorPrint/Print In Color:"<< /ProcessColorModel /DeviceCMYK >> setpagedevice"
+*End
+*HPColorOutput GrayscalePrint/Print In Grayscale:"
+	<< /ProcessColorModel /DeviceGray >> setpagedevice
+	userdict /GrayscaleMode (BlackOnly) put <<>> setpagedevice"
+*End
+*HPColorOutput BlackAndWhitPrint/Print in Pure Black and White:"
+	<< /ProcessColorModel /DeviceGray >> setpagedevice
+	userdict /GrayscaleMode (BlackAndWhite) put <<>> setpagedevice"
+*End
+*CloseUI: *HPColorOutput
+
+
+*% =============== HP Color Management =============== 
+*OpenUI *HPColorMan/Color Management: PickOne
+*OrderDependency: 40.0 AnySetup *HPColorMan
+*DefaultHPColorMan: InputProfiles
+*HPColorMan ApplicationManagedColors/Application Managed Colors:"
+      /CMYKColorManagement where {
+      pop
+     /None CMYKColorManagement
+     } if
+     /RGBColorManagement where {
+     pop 
+     /None RGBColorManagement
+     } if"
+*End
+*HPColorMan InputProfiles/Printer Managed Colors:"  "
+*End
+*CloseUI: *HPColorMan
+
+
+*% =============== HP Printer Emulation =============== 
+*OpenUI *HPPRinterEmulation/Printer emulation: PickOne
+*OrderDependency: 40.0 AnySetup *HPPRinterEmulation
+*DefaultHPPRinterEmulation: Off
+
+*HPPRinterEmulation Off/Off:"
+	/HPDict /ProcSet findresource /SetPrinterEmulation get /None exch exec"
+*End
+
+*HPPRinterEmulation hpdj800/HP Designjet 500/800 series:"
+	/HPDict /ProcSet findresource /SetPrinterEmulation get /hpdj800  exch exec"
+*End
+
+*HPPRinterEmulation hpdj1055/HP Designjet 1000 series:"
+	/HPDict /ProcSet findresource /SetPrinterEmulation get /hpdj1055  exch exec"
+*End
+
+*HPPRinterEmulation hpdj4500/HP Designjet 4000/4500 Series:"
+	/HPDict /ProcSet findresource /SetPrinterEmulation get /hpdj4500  exch exec"
+*End
+*CloseUI: *HPPRinterEmulation
+
+
+*% =============== HP CMYK Emulation =============== 
+*OpenUI *HPCMYKEmulation/Default CMYK Source Profile: PickOne
+*OrderDependency: 40.0 AnySetup *HPCMYKEmulation
+*DefaultHPCMYKEmulation: ISOCoatedv2-ECI
+
+*HPCMYKEmulation None/None:"
+       /CMYKColorManagement where {
+       pop
+       /None CMYKColorManagement
+       } if"
+*End
+
+*HPCMYKEmulation ISOCoatedv2-ECI/ISO Coated v2 (ECI): "
+     /CMYKColorManagement where {
+     pop
+     /ISOCoatedv2-ECI CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation CoatedGRACoL2006-ISO12647/Coated GRACoL 2006 (ISO 12647-2<3A>2004): "
+     /CMYKColorManagement where {
+     pop
+     /CoatedGRACoL2006-ISO12647 CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation PSOUncoatedISO12647-ECI/PSO Uncoated ISO12647 (ECI): "
+     /CMYKColorManagement where {
+     pop
+     /PSOUncoatedISO12647-ECI CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation PSOLWCImproved-ECI/PSO LWC Improved (ECI): "
+     /CMYKColorManagement where {
+     pop
+     /PSOLWCImproved-ECI CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation WebCoatedSWOP2006Grade3/Web Coated SWOP 2006 Grade 3 Paper: "
+     /CMYKColorManagement where {
+     pop
+     /WebCoatedSWOP2006Grade3 CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation WebCoatedSWOP2006Grade5/Web Coated SWOP 2006 Grade 5 Paper: "
+     /CMYKColorManagement where {
+     pop
+     /WebCoatedSWOP2006Grade5 CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation USSheetfedCoatedv2/US Sheetfed Coated v2:"
+     /CMYKColorManagement where {
+      pop
+      /USSheetfedCoated-v2  CMYKColorManagement
+      } if"
+*End
+
+*HPCMYKEmulation USSheetfedUncoatedv2/US Sheetfed Uncoated v2:"
+     /CMYKColorManagement where {
+      pop
+      /USSheetfedUncoated-v2 CMYKColorManagement
+      } if"
+*End
+
+*HPCMYKEmulation  USWebCoated(SWOP)v2/US Web Coated (SWOP) v2:"
+     /CMYKColorManagement where { 
+     pop
+     /USWebCoatedSWOP-v2 CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation USWebUncoatedv2/US Web Uncoated v2:"
+     /CMYKColorManagement where {
+     pop
+     /USWebUncoated-v2 CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation EuroscaleUncoatedv2/Euroscale Uncoated v2:"
+     /CMYKColorManagement where {
+      pop
+      /EuroscaleUncoated-v2 CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation JapanWebCoated/Japan Web Coated (Ad):"
+     /CMYKColorManagement where {
+      pop
+      /JapanWebCoated-Ad CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation JapanStandardv2/Japan Color 2001 Coated:"
+     /CMYKColorManagement where {
+      pop
+      /JapanColor2001Coated CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation JapanUncoated2/Japan Color 2001 Uncoated:"
+     /CMYKColorManagement where {
+      pop
+      /JapanColor2001Uncoated CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation JapanColor2002Newspaper/Japan Color 2002 Newspaper:"
+     /CMYKColorManagement where {
+      pop
+      /JapanColor2002Newspaper CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation JapanColor2003WebCoated/Japan Color 2003 Web Coated: "
+     /CMYKColorManagement where {
+     pop
+     /JapanColor2003WebCoated CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation JMPA/JMPA:"
+     /CMYKColorManagement where {
+      pop
+      /JMPA CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation TOYO/TOYO:"
+     /CMYKColorManagement where {
+      pop
+      /TOYO CMYKColorManagement
+     } if"
+*End
+
+*HPCMYKEmulation DIC/DIC:"
+     /CMYKColorManagement where {
+      pop
+      /DIC CMYKColorManagement
+     } if"
+*End
+*CloseUI: *HPCMYKEmulation
+
+
+*% =============== HP RGB Emulation =============== 
+*OpenUI *HPRGBEmulation/Default RGB Source Profile: PickOne
+*OrderDependency: 40.0 AnySetup *HPRGBEmulation
+*DefaultHPRGBEmulation: sRGB_HP_colormap
+*HPRGBEmulation None/None:" 
+      /RGBColorManagement where {
+      pop
+      /None RGBColorManagement
+      } if"
+*End
+
+*HPRGBEmulation sRGB_HP_colormap/sRGB (HP):"
+    /RGBColorManagement where {
+    pop
+    /sRGB_HP_colormap RGBColorManagement
+    } if"
+*End
+
+*HPRGBEmulation AdobeRGB_HP_colormap/Adobe RGB (HP):"
+    /RGBColorManagement where {
+    pop
+    /AdobeRGB_HP_colormap RGBColorManagement
+    } if"
+*End
+
+*HPRGBEmulation AppleRGB/Apple RGB:"
+     /RGBColorManagement where {
+     pop
+     /AppleRGB RGBColorManagement
+     } if"
+*End
+
+*HPRGBEmulation ColorMatchRGB/ColorMatch RGB:"
+    /RGBColorManagement where {
+    pop
+    /ColorMatchRGB RGBColorManagement
+    } if"
+*End
+*CloseUI: *HPRGBEmulation
+
+
+*% =============== Pantone Color As Spot =============== 
+*OpenUI *HPPantone/HP Professional PANTONE Emulation: Boolean
+*OrderDependency: 40.0 AnySetup *HPPantone
+*DefaultHPPantone: True
+*HPPantone False/Off: "
+/SpotColorMatching where {
+pop
+false SpotColorMatching
+} if"
+*End
+
+*HPPantone True/On: "
+/SpotColorMatching where {
+pop
+true SpotColorMatching
+} if"
+*End
+*CloseUI: *HPPantone
+*CloseGroup: HPColorOptions
+
+
+
+
+
+*% =============== Finishing Layout =============== 
+*OpenGroup: HPMarginAndLayout/Margin/Layout Options
+
+*OpenUI *HPMarginsUsing/Print With Margins: PickOne
+*OrderDependency: 50.0 AnySetup *HPMarginsUsing
+*DefaultHPMarginsUsing: Standard
+
+*HPMarginsUsing Standard/Standard:"
+	/HPDict /ProcSet findresource /SetMarginLayout get 
+	/MarginLayoutStandard exch exec
+	/HPDict /ProcSet findresource /SetMarginType get (Normal) exch exec"
+*End
+
+*HPMarginsUsing Oversize/Oversize:"
+	/HPDict /ProcSet findresource /SetMarginLayout get 
+	/MarginLayoutOversize exch exec
+	/HPDict /ProcSet findresource /SetMarginType get (Normal) exch exec"
+*End
+
+*HPMarginsUsing ClipContentsByMargins/Clip contents by margins:"
+	/HPDict /ProcSet findresource /SetMarginLayout get 
+	/MarginLayoutClipInside exch exec	
+	/HPDict /ProcSet findresource /SetMarginType get (Normal) exch exec"
+*End
+
+*CloseUI: *HPMarginsUsing
+
+
+*% =============== Save Roll Paper =============== 
+*OpenUI *HPSaveRollPaper/Remove Top/Bottom Blank Areas: Boolean
+*OrderDependency: 50.0 AnySetup *HPSaveRollPaper
+*DefaultHPSaveRollPaper: False
+*HPSaveRollPaper True/On: "/HPDict /ProcSet findresource /SetInkedArea get true exch exec
+  <<>> setpagedevice"
+*End
+
+*HPSaveRollPaper False/Off: "/HPDict /ProcSet findresource /SetInkedArea get false exch exec
+  <<>> setpagedevice"
+*End
+*CloseUI: *HPSaveRollPaper
+
+
+*% =============== Auto Scaling =============== 
+*OpenUI *HPAutoScaling/Print Document on: PickOne
+*OrderDependency: 50.0 AnySetup *HPAutoScaling
+*DefaultHPAutoScaling: Off
+
+*HPAutoScaling Off/No Change:" "
+
+*HPAutoScaling Letter/US Letter: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [612 792] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling Legal/US Legal: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [612 1008] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling Tabloid/Tabloid: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [792 1224] exch exec
+  <<>> setpagedevice"
+*End
+
+*HPAutoScaling AnsiC/C: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1224 1584] exch exec
+  <<>> setpagedevice"
+*End
+
+*HPAutoScaling AnsiD/D: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1584 2448] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling AnsiE/E: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2448 3168] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling AnsiF/F: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2016 2880] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ARCHA/Arch A: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [648 864] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ARCHB/Arch B: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [864 1296] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ARCHE/Arch E: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2592 3456] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ARCHE1/Arch E1: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2160 3024] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ARCHE2/Arch E2: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1872 2736] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ARCHE3/Arch E3: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1944 2808] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling A4/A4: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [595 842] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling A3/A3: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [842 1191] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling A2/A2: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1191 1684] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling A1/A1: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1684 2384] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling A0/A0: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2384 3370] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ISOB4/B4: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [709 1001] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ISOB3/B3: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1001 1417] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ISOB2/B2: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1417 2004] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ISOB1/B1: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2004 2835] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling ISOB0/B0: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2835 4008] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling B4/JB4: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [729 1032] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling B3/JB3: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1032 1460] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling B2/JB2: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1460 2064] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling B1/JB1: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2064 2920] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling B0/JB0: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [2920 4127] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling SuperB/Super B/A3: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [936 1368] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling SuperC/Super C/A2, Arch C: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1296 1728] exch exec
+  <<>> setpagedevice" 
+*End
+
+*HPAutoScaling SuperD/Super D/A1, Arch D: "
+  /HPDict /ProcSet findresource /SetAutoScale get true exch exec /HPDict /ProcSet findresource /SetDestinationPageSize get [1728 2592] exch exec
+  <<>> setpagedevice" 
+*End
+*CloseUI: *HPAutoScaling
+
+
+*CloseGroup: HPMarginAndLayout
+
+
+
+
+
+*% =============== Finishing Panel Extended =============== 
+*OpenGroup: HPFinishingOptions/Finishing Options
+
+*% =============== Transverse =============== 
+*OpenUI *HPTransverse/Rotate by 90 Degrees:  Boolean
+*OrderDependency: 60.0 AnySetup *HPTransverse
+*DefaultHPTransverse: False
+*HPTransverse True/On: " <</Orientation 1>> setpagedevice"
+*End
+
+*HPTransverse False/Off: "<</Orientation 0>> setpagedevice"
+*End
+
+*?HPTransverse: "
+  save
+  currentpagedevice /Orientation get 0 eq
+  { (False) }
+  {
+    currentpagedevice /Orientation get 1 eq
+    { (True) }
+    { (Unknown) } ifelse
+  } ifelse = flush
+  restore"
+*End
+*CloseUI: *HPTransverse
+
+
+*% =============== Auto Rotate =============== 
+*OpenUI *HPAutorotate/Auto rotate: Boolean
+*OrderDependency: 50 AnySetup *HPAutorotate
+*DefaultHPAutorotate: False
+*HPAutorotate True/On: "/HPDict /ProcSet findresource /SetAutorotate get true exch exec"
+*HPAutorotate False/Off: "/HPDict /ProcSet findresource /SetAutorotate get false exch exec"
+*CloseUI: *HPAutorotate
+
+
+*% =============== Mirror Output Image =============== 
+*OpenUI *HPMirrorOutput/Mirror Image:  Boolean
+*OrderDependency: 60.0 AnySetup *HPMirrorOutput
+*DefaultHPMirrorOutput: False
+*HPMirrorOutput True/On: "<</MirrorPrint true>>setpagedevice"
+*HPMirrorOutput False/Off: "<</MirrorPrint false>>setpagedevice"
+*?HPMirrorOutput: "
+  save
+  currentpagedevice /MirrorPrint get
+  {(True)}{(False)}ifelse = flush
+  restore"
+*End
+*CloseUI: *HPMirrorOutput
+
+
+*% =============== Enable/Disable Cutter =============== 
+*OpenUI *HPDisableAutoCutter/Disable Automatic Cutter:  Boolean
+*OrderDependency: 60.0 AnySetup *HPDisableAutoCutter
+*DefaultHPDisableAutoCutter: False
+
+*HPDisableAutoCutter True/On: "/HPDict /ProcSet findresource /SetCutMedia get false exch exec
+<<>>setpagedevice"
+*End
+
+*HPDisableAutoCutter False/Off: "/HPDict /ProcSet findresource /SetCutMedia get true exch exec
+<<>>setpagedevice"
+*End
+*CloseUI: *HPDisableAutoCutter
+*CloseGroup: HPFinishingOptions
+
+
+
+
+
+*% =============== Font Information =============== 
+*DefaultFont: Courier
+*Font AdobeSansMM: Standard "(001.002)" Standard ROM
+*Font AdobeSerifMM: Standard "(001.003)" Standard ROM
+*Font AlbertusMT: Standard "(001.001)" Standard ROM
+*Font AlbertusMT-Italic: Standard "(001.001)" Standard ROM
+*Font AlbertusMT-Light: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Bold: Standard "(001.002)" Standard ROM
+*Font AntiqueOlive-Compact: Standard "(001.002)" Standard ROM
+*Font AntiqueOlive-Italic: Standard "(001.002)" Standard ROM
+*Font AntiqueOlive-Roman: Standard "(001.002)" Standard ROM
+*Font Apple-Chancery: Standard "(3.0)" Standard ROM
+*Font Arial-BoldItalicMT: Standard "(001.003)" Standard ROM
+*Font Arial-BoldMT: Standard "(001.003)" Standard ROM
+*Font Arial-ItalicMT: Standard "(001.003)" Standard ROM
+*Font ArialMT: Standard "(001.003)" Standard ROM
+*Font AvantGarde-Book: Standard "(003.000)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(003.000)" Standard ROM
+*Font AvantGarde-Demi: Standard "(003.000)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(003.000)" Standard ROM
+*Font Bodoni: Standard "(001.003)" Standard ROM
+*Font Bodoni-Bold: Standard "(001.003)" Standard ROM
+*Font Bodoni-BoldItalic: Standard "(001.003)" Standard ROM
+*Font Bodoni-Italic: Standard "(001.003)" Standard ROM
+*Font Bodoni-Poster: Standard "(001.003)" Standard ROM
+*Font Bodoni-PosterCompressed: Standard "(001.002)" Standard ROM
+*Font Bookman-Demi: Standard "(003.000)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(003.000)" Standard ROM
+*Font Bookman-Light: Standard "(003.000)" Standard ROM
+*Font Bookman-LightItalic: Standard "(003.000)" Standard ROM
+*Font Carta: Special "(001.001)" Special ROM
+*Font Chicago: Standard "(3.0)" Standard ROM
+*Font Clarendon: Standard "(001.002)" Standard ROM
+*Font Clarendon-Bold: Standard "(001.002)" Standard ROM
+*Font Clarendon-Light: Standard "(001.002)" Standard ROM
+*Font CooperBlack: Standard "(001.004)" Standard ROM
+*Font CooperBlack-Italic: Standard "(001.004)" Standard ROM
+*Font Copperplate-ThirtyThreeBC: Standard "(001.003)" Standard ROM
+*Font Copperplate-ThirtyTwoBC: Standard "(001.003)" Standard ROM
+*Font Coronet-Regular: Standard "(001.002)" Standard ROM
+*Font Courier: Standard "(004.000)" Standard ROM
+*Font Courier-Bold: Standard "(004.000)" Standard ROM
+*Font Courier-BoldOblique: Standard "(004.000)" Standard ROM
+*Font Courier-Oblique: Standard "(004.000)" Standard ROM
+*Font Eurostile: Standard "(001.003)" Standard ROM
+*Font Eurostile-Bold: Standard "(001.002)" Standard ROM
+*Font Eurostile-BoldExtendedTwo: Standard "(001.003)" Standard ROM
+*Font Eurostile-ExtendedTwo: Standard "(001.003)" Standard ROM
+*Font Geneva: Standard "(3.0)" Standard ROM
+*Font GillSans: Standard "(001.003)" Standard ROM
+*Font GillSans-Bold: Standard "(001.002)" Standard ROM
+*Font GillSans-BoldCondensed: Standard "(001.002)" Standard ROM
+*Font GillSans-BoldItalic: Standard "(001.003)" Standard ROM
+*Font GillSans-Condensed: Standard "(001.002)" Standard ROM
+*Font GillSans-ExtraBold: Standard "(001.002)" Standard ROM
+*Font GillSans-Italic: Standard "(001.003)" Standard ROM
+*Font GillSans-Light: Standard "(001.002)" Standard ROM
+*Font GillSans-LightItalic: Standard "(001.003)" Standard ROM
+*Font Goudy: Standard "(001.004)" Standard ROM
+*Font Goudy-Bold: Standard "(001.003)" Standard ROM
+*Font Goudy-BoldItalic: Standard "(001.003)" Standard ROM
+*Font Goudy-ExtraBold: Standard "(001.002)" Standard ROM
+*Font Goudy-Italic: Standard "(001.003)" Standard ROM
+*Font Helvetica: Standard "(003.000)" Standard ROM
+*Font Helvetica-Bold: Standard "(003.000)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed-Bold: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed-BoldObl: Standard "(003.000)" Standard ROM
+*Font Helvetica-Condensed-Oblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(003.000)" Standard ROM
+*Font Helvetica-Oblique: Standard "(003.000)" Standard ROM
+*Font HoeflerText-Black: Standard "(1.0)" Unknown ROM
+*Font HoeflerText-BlackItalic: Standard "(1.0)" Unknown ROM
+*Font HoeflerText-Italic: Standard "(1.0)" Unknown ROM
+*Font HoeflerText-Ornaments: Special "(001.001)" Special ROM
+*Font HoeflerText-Regular: Standard "(1.0)" Unknown ROM
+*Font JoannaMT: Standard "(001.001)" Standard ROM
+*Font JoannaMT-Bold: Standard "(001.001)" Standard ROM
+*Font JoannaMT-BoldItalic: Standard "(001.001)" Standard ROM
+*Font JoannaMT-Italic: Standard "(001.001)" Standard ROM
+*Font LetterGothic: Standard "(001.005)" Standard ROM
+*Font LetterGothic-Bold: Standard "(001.007)" Standard ROM
+*Font LetterGothic-BoldSlanted: Standard "(001.006)" Standard ROM
+*Font LetterGothic-Slanted: Standard "(001.005)" Standard ROM
+*Font LubalinGraph-Book: Standard "(001.004)" Standard ROM
+*Font LubalinGraph-BookOblique: Standard "(001.004)" Standard ROM
+*Font LubalinGraph-Demi: Standard "(001.004)" Standard ROM
+*Font LubalinGraph-DemiOblique: Standard "(001.004)" Standard ROM
+*Font Marigold: Standard "(001.001)" Standard ROM
+*Font Monaco: Standard "(3.0)" Standard ROM
+*Font MonaLisa-Recut: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(003.000)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(003.000)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(003.000)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(003.000)" Standard ROM
+*Font NewYork: Standard "(001.000)" ExtendedRoman ROM
+*Font Optima: Standard "(001.006)" Standard ROM
+*Font Optima-Bold: Standard "(001.007)" Standard ROM
+*Font Optima-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Optima-Italic: Standard "(001.001)" Standard ROM
+*Font Oxford: Standard "(001.001)" Standard ROM
+*Font Palatino-Bold: Standard "(003.000)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(003.000)" Standard ROM
+*Font Palatino-Italic: Standard "(003.000)" Standard ROM
+*Font Palatino-Roman: Standard "(003.000)" Standard ROM
+*Font StempelGaramond-Bold: Standard "(001.003)" Standard ROM
+*Font StempelGaramond-BoldItalic: Standard "(001.003)" Standard ROM
+*Font StempelGaramond-Italic: Standard "(001.003)" Standard ROM
+*Font StempelGaramond-Roman: Standard "(001.003)" Standard ROM
+*Font Symbol: Special "(001.008)" Special ROM
+*Font Tekton: Standard "(001.002)" Standard ROM
+*Font Times-Bold: Standard "(003.000)" Standard ROM
+*Font Times-BoldItalic: Standard "(003.000)" Standard ROM
+*Font Times-Italic: Standard "(003.000)" Standard ROM
+*Font TimesNewRomanPS-BoldItalicMT: Standard "(001.003)" Standard ROM
+*Font TimesNewRomanPS-BoldMT: Standard "(001.004)" Standard ROM
+*Font TimesNewRomanPS-ItalicMT: Standard "(001.003)" Standard ROM
+*Font TimesNewRomanPSMT: Standard "(001.003)" Standard ROM
+*Font Times-Roman: Standard "(003.000)" Standard ROM
+*Font Univers: Standard "(001.004)" Standard ROM
+*Font Univers-Bold: Standard "(001.004)" Standard ROM
+*Font Univers-BoldExt: Standard "(001.001)" Standard ROM
+*Font Univers-BoldExtObl: Standard "(001.001)" Standard ROM
+*Font Univers-BoldOblique: Standard "(001.004)" Standard ROM
+*Font Univers-Condensed: Standard "(001.003)" Standard ROM
+*Font Univers-CondensedBold: Standard "(001.002)" Standard ROM
+*Font Univers-CondensedBoldOblique: Standard "(001.002)" Standard ROM
+*Font Univers-CondensedOblique: Standard "(001.003)" Standard ROM
+*Font Univers-Extended: Standard "(001.001)" Standard ROM
+*Font Univers-ExtendedObl: Standard "(001.001)" Standard ROM
+*Font Univers-Light: Standard "(001.004)" Standard ROM
+*Font Univers-LightOblique: Standard "(001.004)" Standard ROM
+*Font Univers-Oblique: Standard "(001.004)" Standard ROM
+*Font Wingdings: Unknown "(001.001)" Unknown ROM
+*Font Wingdings-Regular: Special "(Version 2.00)" Special ROM
+*Font ZapfChancery-MediumItalic: Standard "(003.000)" Standard ROM
+*Font ZapfDingbats: Special "(002.000)" Special ROM
+
+*?FontQuery: "
+  save
+  {count 1 gt
+    { exch dup 127 string cvs (/) print print (:) print
+      /Font resourcestatus {pop pop (Yes)} {(No)} ifelse =
+    } { exit } ifelse
+  } bind loop
+  (*) = flush
+  restore"
+*End
+
+*?FontList: "
+  save
+  (*) {cvn ==} 128 string /Font resourceforall
+  (*) = flush
+  restore"
+*End
+
+
+*% =============== Printer Messages (verbatim from printer) =============== 
+*Message: "%%[ exitserver: permanent state may be changed ]%%"
+*Message: "%%[ Flushing: rest of job (to end-of-file) will be ignored ]%%"
+*Message: "\FontName\ not found, using Courier"
+*% Status (format: %%[ status: <one of these> ] %%)
+*Status: "idle"
+*Status: "busy"
+*Status: "waiting"
+*Status: "printing"
+*Status: "initializing"
+*Status: "printing test page"
+*Status: "PrinterError: needs attention"
+*Status: "PrinterError: cover open"
+*Status: "PrinterError: warming up"
+*Status: "PrinterError: resetting printer"
+*Status: "PrinterError: output bin full"
+*Status: "PrinterError: Paper Jam"
+*Status: "PrinterError: no toner cartridge"
+*Status: "PrinterError: manual feed"
+*Status: "PrinterError: out of paper"
+*Status: "PrinterError: page protect needed"
+*Status: "PrinterError: out of memory"
+*Status: "PrinterError: off line"
+
+
+*% =============== Input Sources (format: %%[ status: <stat>; source: <one of these> ]%% ) =============== 
+*Source: "Parallel"
+*Source: "OptionalIO"
+*% Printer Error (format: %%[ PrinterError: <one of these> ]%%)
+*PrinterError: "needs attention"
+*PrinterError: "cover open"
+*PrinterError: "warming up"
+*PrinterError: "resetting printer"
+*PrinterError: "output bin full"
+*PrinterError: "Paper Jam"
+*PrinterError: "no toner cartridge"
+*PrinterError: "manual feed"
+*PrinterError: "out of paper"
+*PrinterError: "page protect needed"
+*PrinterError: "out of memory"
+*PrinterError: "off line"
+
+
+*% =============== Separation And Screening ===============
+*ScreenFreq: "60.0"
+*ScreenAngle: "0.0"
+*DefaultScreenProc: Dot
+*ScreenProc Dot: "
+  {abs   exch   abs   2 copy   add   1 gt   {1 sub   dup   mul   exch
+  1 sub   dup   mul   add   1 sub  } {dup   mul   exch   dup   mul
+  add   1 exch   sub  } ifelse  }"
+*End
+*ScreenProc Line: "{ pop }"
+*ScreenProc Ellipse: "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1
+  exch sub }"
+*End
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+*%DeviceAdjustMatrix: "[1 0 0 1 0 0]"
+*%=============== Color Separation Information ===============
+*DefaultColorSep: ProcessBlack.60lpi.600dpi/60 lpi / 600 dpi
+*InkName: ProcessBlack/Process Black
+*InkName: CustomColor/Custom Color
+*InkName: ProcessCyan/Process Cyan
+*InkName: ProcessMagenta/Process Magenta
+*InkName: ProcessYellow/Process Yellow
+*% =============== For 60 lpi / 600 dpi ===============
+*ColorSepScreenAngle ProcessBlack.60lpi.600dpi/60 lpi / 600 dpi: "45"
+*ColorSepScreenAngle CustomColor.60lpi.600dpi/60 lpi / 600 dpi: "45"
+*ColorSepScreenAngle ProcessCyan.60lpi.600dpi/60 lpi / 600 dpi: "15"
+*ColorSepScreenAngle ProcessMagenta.60lpi.600dpi/60 lpi / 600 dpi: "75"
+*ColorSepScreenAngle ProcessYellow.60lpi.600dpi/60 lpi / 600 dpi: "0"
+*ColorSepScreenFreq ProcessBlack.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq CustomColor.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq ProcessCyan.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq ProcessMagenta.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*ColorSepScreenFreq ProcessYellow.60lpi.600dpi/60 lpi / 600 dpi: "60"
+*% =============== For 53 lpi / 600 dpi ===============
+*ColorSepScreenAngle ProcessBlack.53lpi.600dpi/53 lpi / 600 dpi: "45.0"
+*ColorSepScreenAngle CustomColor.53lpi.600dpi/53 lpi / 600 dpi: "45.0"
+*ColorSepScreenAngle ProcessCyan.53lpi.600dpi/53 lpi / 600 dpi: "71.5651"
+*ColorSepScreenAngle ProcessMagenta.53lpi.600dpi/53 lpi / 600 dpi: "18.4349"
+*ColorSepScreenAngle ProcessYellow.53lpi.600dpi/53 lpi / 600 dpi: "0.0"
+*ColorSepScreenFreq ProcessBlack.53lpi.600dpi/53 lpi / 600 dpi: "53.033"
+*ColorSepScreenFreq CustomColor.53lpi.600dpi/53 lpi / 600 dpi: "53.033"
+*ColorSepScreenFreq ProcessCyan.53lpi.600dpi/53 lpi / 600 dpi: "47.4342"
+*ColorSepScreenFreq ProcessMagenta.53lpi.600dpi/53 lpi / 600 dpi: "47.4342"
+*ColorSepScreenFreq ProcessYellow.53lpi.600dpi/53 lpi / 600 dpi: "50.0"
+
+
+*% End of PPD file for HP Designjet T795 44in PostScript Printers
