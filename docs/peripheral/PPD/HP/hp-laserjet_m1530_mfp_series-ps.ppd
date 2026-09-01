@@ -1,0 +1,1327 @@
+*PPD-Adobe: "4.3"
+*% =================================
+*% Copyright 1992-2015 HP Company
+*% Permission is hereby granted, free of charge, to any person obtaining
+*% a copy of this software and associated documentation files (the
+*% "Software"), to deal in the Software without restriction, including
+*% without limitation the rights to use, copy, modify, merge, publish,
+*% distribute, sublicense, and/or sell copies of the Software, and to
+*% permit persons to whom the Software is furnished to do so, subject to
+*% the following conditions:
+*%
+*% The above copyright notice and this permission notice shall be
+*% included in all copies or substantial portions of the Software.
+*%
+*% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*% LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*% OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*% WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*%
+*% [this is the MIT open source license -- please see www.opensource.org]
+*%
+*%%%% Created by the CUPS PPD Compiler CUPS v1.5svn.
+*% (c) Copyright 2009-2015 HP Development Company, L.P.
+*FormatVersion: "4.3"
+*FileVersion: "17.3"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "HPP00003.PPD"
+*Product: "(HP LaserJet M1536dnf MFP)"
+*Product: "(HP LaserJet M1537dnf MFP)"
+*Product: "(HP LaserJet M1538dnf MFP)"
+*Product: "(HP LaserJet M1539dnf MFP)"
+*Manufacturer: "HP"
+*ModelName: "HP LaserJet M1536dnf MFP"
+*ShortNickName: "HP LaserJet M1536dnf MFP"
+*1284DeviceID: "MFG:Hewlett-Packard;MDL:hp laserjet m1536dnf mfp;"
+*NickName: "HP LaserJet M1536dnf MFP Postscript (recommended)"
+*PSVersion: "(3010.107) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "26"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*% Driver-defined attributes...
+*HPBuildNumber: "001"
+*Protocols: TBCP
+*FreeVM: "104857600"
+*RequiresPageRegion All: True
+*HPConstraintsSchemeVersion: "2"
+*HPAccountingInfo: "1"
+*HPJobAttirubtesEncoding: "7Bit"
+*HPManualFeedPrintsOnBottom: False
+*HPManDupTumbleFirstSides: False
+*HPGuidePageExtraTumble: True
+*HPEasyColor: True
+*HPEasyColorJPEGArtifactReduction: True
+*HPEasyColorPhotoEnhancement: True
+*HPEasyColorAdjustColor: True
+*HPEasyColorReduceImageThreshold: "1.5"
+*cupsVersion: 1.3
+*cupsModelNumber: 0
+*cupsManualCopies: False
+*cupsLanguages: "en da de es fi fr it ja ko nb nl pt ru sv zh_CN zh_TW"
+*cupsFilter: "application/vnd.cups-postscript 0 hpps"
+*UIConstraints: *Duplex *MediaType Heavy111130
+*UIConstraints: *MediaType Heavy111130 *Duplex
+*UIConstraints: *Duplex *MediaType ExtraHeavy131175
+*UIConstraints: *MediaType ExtraHeavy131175 *Duplex
+*UIConstraints: *Duplex *MediaType MonochromeLaserTransparency
+*UIConstraints: *MediaType MonochromeLaserTransparency *Duplex
+*UIConstraints: *Duplex *MediaType Labels
+*UIConstraints: *MediaType Labels *Duplex
+*UIConstraints: *Duplex *MediaType Letterhead
+*UIConstraints: *MediaType Letterhead *Duplex
+*UIConstraints: *Duplex *MediaType Envelope
+*UIConstraints: *MediaType Envelope *Duplex
+*UIConstraints: *Duplex *MediaType Preprinted
+*UIConstraints: *MediaType Preprinted *Duplex
+*UIConstraints: *Duplex *MediaType Prepunched
+*UIConstraints: *MediaType Prepunched *Duplex
+*UIConstraints: *Duplex *MediaType Colored
+*UIConstraints: *MediaType Colored *Duplex
+*UIConstraints: *Duplex *MediaType Bond
+*UIConstraints: *MediaType Bond *Duplex
+*UIConstraints: *Duplex *MediaType Recycled
+*UIConstraints: *MediaType Recycled *Duplex
+*UIConstraints: *Duplex *MediaType Rough
+*UIConstraints: *MediaType Rough *Duplex
+*UIConstraints: *Duplex *MediaType Vellum
+*UIConstraints: *MediaType Vellum *Duplex
+*NonUIConstraints: *Duplex *CustomPageSize True
+*NonUIConstraints: *CustomPageSize True *Duplex
+*UIConstraints: *Duplex *PageRegion Executive
+*UIConstraints: *PageRegion Executive *Duplex
+*UIConstraints: *Duplex *PageSize Executive
+*UIConstraints: *PageSize Executive *Duplex
+*UIConstraints: *Duplex *PageRegion A5
+*UIConstraints: *PageRegion A5 *Duplex
+*UIConstraints: *Duplex *PageSize A5
+*UIConstraints: *PageSize A5 *Duplex
+*UIConstraints: *Duplex *PageRegion B5
+*UIConstraints: *PageRegion B5 *Duplex
+*UIConstraints: *Duplex *PageSize B5
+*UIConstraints: *PageSize B5 *Duplex
+*UIConstraints: *Duplex *PageRegion w553h765
+*UIConstraints: *PageRegion w553h765 *Duplex
+*UIConstraints: *Duplex *PageSize w553h765
+*UIConstraints: *PageSize w553h765 *Duplex
+*UIConstraints: *Duplex *PageRegion w522h737
+*UIConstraints: *PageRegion w522h737 *Duplex
+*UIConstraints: *Duplex *PageSize w522h737
+*UIConstraints: *PageSize w522h737 *Duplex
+*UIConstraints: *Duplex *PageRegion w558h774
+*UIConstraints: *PageRegion w558h774 *Duplex
+*UIConstraints: *Duplex *PageSize w558h774
+*UIConstraints: *PageSize w558h774 *Duplex
+*UIConstraints: *Duplex *PageRegion Postcard
+*UIConstraints: *PageRegion Postcard *Duplex
+*UIConstraints: *Duplex *PageSize Postcard
+*UIConstraints: *PageSize Postcard *Duplex
+*UIConstraints: *Duplex *PageRegion DoublePostcardRotated
+*UIConstraints: *PageRegion DoublePostcardRotated *Duplex
+*UIConstraints: *Duplex *PageSize DoublePostcardRotated
+*UIConstraints: *PageSize DoublePostcardRotated *Duplex
+*UIConstraints: *Duplex *PageRegion Env10
+*UIConstraints: *PageRegion Env10 *Duplex
+*UIConstraints: *Duplex *PageSize Env10
+*UIConstraints: *PageSize Env10 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvMonarch
+*UIConstraints: *PageRegion EnvMonarch *Duplex
+*UIConstraints: *Duplex *PageSize EnvMonarch
+*UIConstraints: *PageSize EnvMonarch *Duplex
+*UIConstraints: *Duplex *PageRegion EnvISOB5
+*UIConstraints: *PageRegion EnvISOB5 *Duplex
+*UIConstraints: *Duplex *PageSize EnvISOB5
+*UIConstraints: *PageSize EnvISOB5 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvC5
+*UIConstraints: *PageRegion EnvC5 *Duplex
+*UIConstraints: *Duplex *PageSize EnvC5
+*UIConstraints: *PageSize EnvC5 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvDL
+*UIConstraints: *PageRegion EnvDL *Duplex
+*UIConstraints: *Duplex *PageSize EnvDL
+*UIConstraints: *PageSize EnvDL *Duplex
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize FanFoldGermanLegal/8.5x13: "<</PageSize [612 936]  /ImagingBBox null /MediaClass (8.5X13)>> setpagedevice"
+*PageSize Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize Legal/US Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageSize Executive/US Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageSize A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize B5/B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageSize w553h765/16K 195x270 mm: "<</PageSize[553 765]/ImagingBBox null>>setpagedevice"
+*PageSize w522h737/16K 184x260 mm: "<</PageSize[522 737]/ImagingBBox null>>setpagedevice"
+*PageSize w558h774/16K 197x273 mm: "<</PageSize[558 774]/ImagingBBox null>>setpagedevice"
+*PageSize Postcard/Postcard (JIS): "<</PageSize[283 420]/ImagingBBox null>>setpagedevice"
+*PageSize DoublePostcardRotated/Double Postcard (JIS): "<</PageSize[420 567]/ImagingBBox null>>setpagedevice"
+*PageSize Env10/Envelope #10: "<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageSize EnvMonarch/Envelope Monarch: "<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageSize EnvISOB5/Envelope B5: "<</PageSize[499 709]/ImagingBBox null>>setpagedevice"
+*PageSize EnvC5/Envelope C5: "<</PageSize[459 649]/ImagingBBox null>>setpagedevice"
+*PageSize EnvDL/Envelope DL: "<</PageSize[312 624]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion FanFoldGermanLegal/8.5x13: "<</PageSize [612 936] /ImagingBBox null /MediaClass (8.5X13)>> setpagedevice"
+*PageRegion Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion Legal/US Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageRegion Executive/US Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageRegion A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion B5/B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageRegion w553h765/16K 195x270 mm: "<</PageSize[553 765]/ImagingBBox null>>setpagedevice"
+*PageRegion w522h737/16K 184x260 mm: "<</PageSize[522 737]/ImagingBBox null>>setpagedevice"
+*PageRegion w558h774/16K 197x273 mm: "<</PageSize[558 774]/ImagingBBox null>>setpagedevice"
+*PageRegion Postcard/Postcard (JIS): "<</PageSize[283 420]/ImagingBBox null>>setpagedevice"
+*PageRegion DoublePostcardRotated/Double Postcard (JIS): "<</PageSize[420 567]/ImagingBBox null>>setpagedevice"
+*PageRegion Env10/Envelope #10: "<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvMonarch/Envelope Monarch: "<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvISOB5/Envelope B5: "<</PageSize[499 709]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvC5/Envelope C5: "<</PageSize[459 649]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvDL/Envelope DL: "<</PageSize[312 624]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: Letter
+*ImageableArea FanFoldGermanLegal/8.5x13: "12 12 600 924"
+*ImageableArea Letter/US Letter: "12 12 600 780"
+*ImageableArea Legal/US Legal: "12 12 600 996"
+*ImageableArea Executive/US Executive: "12 12 510 744"
+*ImageableArea A4/A4: "12 12 583 830"
+*ImageableArea A5/A5: "12 12 408 583"
+*ImageableArea B5/B5: "12 12 504 717"
+*ImageableArea w553h765/16K 195x270 mm: "12 12 541 753"
+*ImageableArea w522h737/16K 184x260 mm: "12 12 510 725"
+*ImageableArea w558h774/16K 197x273 mm: "12 12 546 762"
+*ImageableArea Postcard/Postcard (JIS): "12 12 271 408"
+*ImageableArea DoublePostcardRotated/Double Postcard (JIS): "12 12 408 555"
+*ImageableArea Env10/Envelope #10: "12 12 285 672"
+*ImageableArea EnvMonarch/Envelope Monarch: "12 12 267 528"
+*ImageableArea EnvISOB5/Envelope B5: "12 12 487 697"
+*ImageableArea EnvC5/Envelope C5: "12 12 447 637"
+*ImageableArea EnvDL/Envelope DL: "12 12 300 612"
+*DefaultPaperDimension: Letter
+*PaperDimension FanFoldGermanLegal/8.5x13: "612 936"
+*PaperDimension Letter/US Letter: "612 792"
+*PaperDimension Legal/US Legal: "612 1008"
+*PaperDimension Executive/US Executive: "522 756"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension B5/B5: "516 729"
+*PaperDimension w553h765/16K 195x270 mm: "553 765"
+*PaperDimension w522h737/16K 184x260 mm: "522 737"
+*PaperDimension w558h774/16K 197x273 mm: "558 774"
+*PaperDimension Postcard/Postcard (JIS): "283 420"
+*PaperDimension DoublePostcardRotated/Double Postcard (JIS): "420 567"
+*PaperDimension Env10/Envelope #10: "297 684"
+*PaperDimension EnvMonarch/Envelope Monarch: "279 540"
+*PaperDimension EnvISOB5/Envelope B5: "499 709"
+*PaperDimension EnvC5/Envelope C5: "459 649"
+*PaperDimension EnvDL/Envelope DL: "312 624"
+*MaxMediaWidth: "612"
+*MaxMediaHeight: "1008"
+*HWMargins: 12 12 12 12
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 216 612
+*ParamCustomPageSize Height: 2 points 360 1008
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 40 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Automatic: "
+	<</ManualFeed false /MediaPosition 7>> setpagedevice"
+*End
+*da.InputSlot Auto/Automatisk: ""
+*de.InputSlot Auto/Automatisch: ""
+*es.InputSlot Auto/Automático: ""
+*fi.InputSlot Auto/Automaattinen: ""
+*fr.InputSlot Auto/Automatique: ""
+*it.InputSlot Auto/Automatico: ""
+*ja.InputSlot Auto/自動: ""
+*ko.InputSlot Auto/자동: ""
+*nl.InputSlot Auto/Automatisch: ""
+*nb.InputSlot Auto/Automatisk: ""
+*pt.InputSlot Auto/Automático: ""
+*ru.InputSlot Auto/Автоматически: ""
+*sv.InputSlot Auto/Automatiskt: ""
+*zh_CN.InputSlot Auto/自动: ""
+*zh_TW.InputSlot Auto/自動: ""
+*InputSlot Tray1/Tray 1: "<</MediaPosition 3 /ManualFeed false>> setpagedevice"
+*InputSlot Tray1_Man/Tray 1 (Manual): "<</MediaPosition 3 /ManualFeed true>> setpagedevice"
+*CloseUI: *InputSlot
+*OpenUI *Duplex/Two-Sided: PickOne
+*OrderDependency: 50 AnySetup *Duplex
+*DefaultDuplex: None
+*Duplex None/Off: "<</Duplex false /Tumble false>> setpagedevice"
+*Duplex DuplexNoTumble/Long-Edge Binding: "<</Duplex true /Tumble false>> setpagedevice"
+*Duplex DuplexTumble/Short-Edge Binding: "<</Duplex true /Tumble true>> setpagedevice"
+*CloseUI: *Duplex
+
+*OpenGroup: InstallableOptions/Installable Options
+*OpenUI *OptionDuplex/Duplexer Installed: Boolean
+*OrderDependency: 10 AnySetup *OptionDuplex
+*DefaultOptionDuplex: False
+*OptionDuplex False/Not Installed: ""
+*OptionDuplex True/Installed: ""
+*CloseUI: *OptionDuplex
+*CloseGroup: InstallableOptions
+
+
+*OpenGroup: HPColorOptionsPanel/Color Options
+*OpenUI *HPPrintQuality/Print Quality: PickOne
+*OrderDependency: 5 DocumentSetup *HPPrintQuality
+*DefaultHPPrintQuality: 600dpi
+*HPPrintQuality FastRes1200/FastRes 1200: "<</HWResolution [600 600] /PreRenderingEnhance true>> setpagedevice"
+*HPPrintQuality 600dpi/600 dpi: "<</HWResolution [600 600] /PreRenderingEnhance false>> setpagedevice"
+*CloseUI: *HPPrintQuality
+*OpenUI *HPEconoMode/EconoMode: Boolean
+*OrderDependency: 5 DocumentSetup *HPEconoMode
+*DefaultHPEconoMode: False
+*HPEconoMode True/On: "<</EconoMode true>> setpagedevice"
+*HPEconoMode False/Off: "<</EconoMode false>> setpagedevice"
+*CloseUI: *HPEconoMode
+*CloseGroup: HPColorOptionsPanel
+*OpenGroup: HPFinishingPanel/Finishing Panel
+*OpenUI *HPRotate180/Rotate Page 180 deg: Boolean
+*OrderDependency: 48 AnySetup *HPRotate180
+*DefaultHPRotate180: False
+*HPRotate180 False/Off: ""
+*HPRotate180 True/On: "
+		<<	/BeginPage
+			{ userdict begin
+				pop
+				currentpagedevice /PageSize get dup 0 get exch 1 get translate
+				0 0 moveto
+				180 rotate
+			end } bind
+		>> setpagedevice
+	"
+*End
+*CloseUI: *HPRotate180
+*OpenUI *MediaType/Media Type: PickOne
+*OrderDependency: 20 AnySetup *MediaType
+*DefaultMediaType: Unspecified
+*MediaType Unspecified/Unspecified: "<</ManualFeed false /MediaType null >> setpagedevice"
+*MediaType Plain/Plain: "<</ManualFeed false /MediaType (Plain)>> setpagedevice"
+*MediaType Light6074/Light 60-74g: "<</ManualFeed false /MediaType (Light)>> setpagedevice"
+*MediaType MidWeight96110/Mid-Weight 96-110g: "<</ManualFeed false /MediaType (Mid Weight)>> setpagedevice"
+*MediaType Heavy111130/Heavy 111-130g: "<</ManualFeed false /MediaType (Heavy)>> setpagedevice"
+*MediaType ExtraHeavy131175/Extra Heavy 131-175g: "<</ManualFeed false /MediaType (Extra Heavy)>> setpagedevice"
+*MediaType MonochromeLaserTransparency/Monochrome Laser Transparency: "<</ManualFeed false /MediaType (Transparency)>> setpagedevice"
+*MediaType Labels/Labels: "<</ManualFeed false /MediaType (Labels)>> setpagedevice"
+*MediaType Letterhead/Letterhead: "<</ManualFeed false /MediaType (Letterhead)>> setpagedevice"
+*MediaType Envelope/Envelope: "<</ManualFeed false /MediaType (Envelope)>> setpagedevice"
+*MediaType Preprinted/Preprinted: "<</ManualFeed false /MediaType (Preprinted)>> setpagedevice"
+*MediaType Prepunched/Prepunched: "<</ManualFeed false /MediaType (Prepunched)>> setpagedevice"
+*MediaType Colored/Colored: "<</ManualFeed false /MediaType (Color)>> setpagedevice"
+*MediaType Bond/Bond: "<</ManualFeed false /MediaType (Bond)>> setpagedevice"
+*MediaType Recycled/Recycled: "<</ManualFeed false /MediaType (Recycled)>> setpagedevice"
+*MediaType Rough/Rough: "<</ManualFeed false /MediaType (Rough)>> setpagedevice"
+*MediaType Vellum/Vellum: "<</ManualFeed false /MediaType (Vellum)>> setpagedevice"
+*CloseUI: *MediaType
+*CloseGroup: HPFinishingPanel
+*da.Translation Manufacturer/HP: ""
+*da.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*da.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*da.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*da.Translation PageSize/Mediestørrelse: ""
+*da.PageSize FanFoldGermanLegal/8.5x13: ""
+*da.PageSize Letter/8,5 x 11": ""
+*da.PageSize Legal/8,5 x 14": ""
+*da.PageSize Executive/7,25 x 10,5": ""
+*da.PageSize A4/A4: ""
+*da.PageSize A5/A5: ""
+*da.PageSize B5/B5: ""
+*da.PageSize w553h765/16K 195x270 mm: ""
+*da.PageSize w522h737/16K 184x260 mm: ""
+*da.PageSize w558h774/16K 197x273 mm: ""
+*da.PageSize Postcard/Postkort (JIS): ""
+*da.PageSize DoublePostcardRotated/Dobbelt postkort (JIS): ""
+*da.PageSize Env10/Konv Comm10: ""
+*da.PageSize EnvMonarch/Konv Monarch: ""
+*da.PageSize EnvISOB5/Konv ISO B5: ""
+*da.PageSize EnvC5/Konv C5: ""
+*da.PageSize EnvDL/Konv DL: ""
+*da.Translation InputSlot/Papirkilde: ""
+*da.InputSlot Tray1/Bakke 1: ""
+*da.InputSlot Tray1_Man/Bakke 1 (Manuel): ""
+*da.Translation Duplex/Dupleks: ""
+*da.Duplex None/Fra: ""
+*da.Duplex DuplexNoTumble/Indbinding på den lange led: ""
+*da.Duplex DuplexTumble/Indbinding på den korte led: ""
+*da.OptionDuplex True/Til: ""
+*da.OptionDuplex False/Fra: ""
+*da.Translation HPColorOptionsPanel/Farveindstillinger: ""
+*da.Translation HPPrintQuality/Udskriftskvalitet: ""
+*da.HPPrintQuality FastRes1200/FastRes 1200: ""
+*da.HPPrintQuality 600dpi/600 dpi: ""
+*da.Translation HPEconoMode/EconoMode: ""
+*da.HPEconoMode True/Til: ""
+*da.HPEconoMode False/Fra: ""
+*da.Translation HPFinishingPanel/Finisher-indstillinger: ""
+*da.Translation HPRotate180/Roter 180°: ""
+*da.HPRotate180 False/Fra: ""
+*da.HPRotate180 True/Til: ""
+*da.Translation MediaType/Medietype: ""
+*da.MediaType Unspecified/Uspecificeret: ""
+*da.MediaType Plain/Almindeligt: ""
+*da.MediaType Light6074/Let 60-74g: ""
+*da.MediaType MidWeight96110/Mellemkraftigt 96-110g: ""
+*da.MediaType Heavy111130/Kraftigt 111-130g: ""
+*da.MediaType ExtraHeavy131175/Ekstra kraftigt 131-175g: ""
+*da.MediaType MonochromeLaserTransparency/Monokrom lasertransparent: ""
+*da.MediaType Labels/Etiketter: ""
+*da.MediaType Letterhead/Brevpapir: ""
+*da.MediaType Envelope/Konvolut: ""
+*da.MediaType Preprinted/Fortrykt: ""
+*da.MediaType Prepunched/Hullet: ""
+*da.MediaType Colored/Farvet: ""
+*da.MediaType Bond/Bankpost: ""
+*da.MediaType Recycled/Genbrug: ""
+*da.MediaType Rough/Groft: ""
+*da.MediaType Vellum/Vellum: ""
+*de.Translation Manufacturer/HP: ""
+*de.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*de.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*de.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*de.Translation PageSize/Mediengröße: ""
+*de.PageSize FanFoldGermanLegal/8.5x13: ""
+*de.PageSize Letter/US Brief: ""
+*de.PageSize Legal/US Lang: ""
+*de.PageSize Executive/US Executive: ""
+*de.PageSize A4/A4: ""
+*de.PageSize A5/A5: ""
+*de.PageSize B5/DIN B5: ""
+*de.PageSize w553h765/16K 195x270 mm: ""
+*de.PageSize w522h737/16K 184x260 mm: ""
+*de.PageSize w558h774/16K 197x273 mm: ""
+*de.PageSize Postcard/Postkarte (JIS): ""
+*de.PageSize DoublePostcardRotated/Doppelte Postkarte (JIS): ""
+*de.PageSize Env10/Umschlag Comm10: ""
+*de.PageSize EnvMonarch/Umschlag Monarch: ""
+*de.PageSize EnvISOB5/Umschlag ISO B5: ""
+*de.PageSize EnvC5/Umschlag C5: ""
+*de.PageSize EnvDL/Umschlag DL: ""
+*de.Translation InputSlot/Papierquelle: ""
+*de.InputSlot Tray1/Zufuhrfach 1: ""
+*de.InputSlot Tray1_Man/Zufuhrfach 1 (Manuell): ""
+*de.Translation Duplex/Beidseitig: ""
+*de.Duplex None/Aus: ""
+*de.Duplex DuplexNoTumble/Bindung oben: ""
+*de.Duplex DuplexTumble/Bindung links: ""
+*de.OptionDuplex True/Ein: ""
+*de.OptionDuplex False/Aus: ""
+*de.Translation HPColorOptionsPanel/Farboptionen: ""
+*de.Translation HPPrintQuality/Druckqualität: ""
+*de.HPPrintQuality FastRes1200/FastRes 1200: ""
+*de.HPPrintQuality 600dpi/600 dpi: ""
+*de.Translation HPEconoMode/EconoMode: ""
+*de.HPEconoMode True/Ein: ""
+*de.HPEconoMode False/Aus: ""
+*de.Translation HPFinishingPanel/Optionen zum Fertigstellen: ""
+*de.Translation HPRotate180/Um 180 Grad drehen: ""
+*de.HPRotate180 False/Aus: ""
+*de.HPRotate180 True/Ein: ""
+*de.Translation MediaType/Druckmedientyp: ""
+*de.MediaType Unspecified/Nicht bestimmt: ""
+*de.MediaType Plain/Normalpapier: ""
+*de.MediaType Light6074/Leicht 60-74g: ""
+*de.MediaType MidWeight96110/Mittleres Gewicht 96-110g: ""
+*de.MediaType Heavy111130/Schwer 111-130g: ""
+*de.MediaType ExtraHeavy131175/Sehr schwer 131-175g: ""
+*de.MediaType MonochromeLaserTransparency/Einfarbige Laser-Transparentfolie: ""
+*de.MediaType Labels/Etiketten: ""
+*de.MediaType Letterhead/Briefkopfpapier: ""
+*de.MediaType Envelope/Briefumschlag: ""
+*de.MediaType Preprinted/Vordruckpapier: ""
+*de.MediaType Prepunched/Vorgelochtes Papier: ""
+*de.MediaType Colored/Farbig: ""
+*de.MediaType Bond/Briefpapier: ""
+*de.MediaType Recycled/Recyclingpapier: ""
+*de.MediaType Rough/Rauhpapier: ""
+*de.MediaType Vellum/Pergament: ""
+*es.Translation Manufacturer/HP: ""
+*es.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*es.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*es.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*es.Translation PageSize/Tamaño de papel: ""
+*es.PageSize FanFoldGermanLegal/8.5x13: ""
+*es.PageSize Letter/Carta EE.UU.: ""
+*es.PageSize Legal/Legal EE.UU.: ""
+*es.PageSize Executive/Ejecutivo de EE.UU: ""
+*es.PageSize A4/A4: ""
+*es.PageSize A5/A5: ""
+*es.PageSize B5/B5: ""
+*es.PageSize w553h765/16K 195x270 mm: ""
+*es.PageSize w522h737/16K 184x260 mm: ""
+*es.PageSize w558h774/16K 197x273 mm: ""
+*es.PageSize Postcard/Tarjeta postal (JIS): ""
+*es.PageSize DoublePostcardRotated/Tarjeta postal doble (JIS): ""
+*es.PageSize Env10/Sobre Comm10: ""
+*es.PageSize EnvMonarch/Sobre Monarch: ""
+*es.PageSize EnvISOB5/Sobre ISO B5: ""
+*es.PageSize EnvC5/Sobre C5: ""
+*es.PageSize EnvDL/Sobre DL: ""
+*es.Translation InputSlot/Alimentación de papel: ""
+*es.InputSlot Tray1/Bandeja 1: ""
+*es.InputSlot Tray1_Man/Bandeja 1 (Manual): ""
+*es.Translation Duplex/A doble cara: ""
+*es.Duplex None/Desactivado: ""
+*es.Duplex DuplexNoTumble/Encuadernación de borde largo: ""
+*es.Duplex DuplexTumble/Encuadernación de borde corto: ""
+*es.OptionDuplex True/Sí: ""
+*es.OptionDuplex False/Desactivado: ""
+*es.Translation HPColorOptionsPanel/Opciones de color: ""
+*es.Translation HPPrintQuality/Calidad de impresión: ""
+*es.HPPrintQuality FastRes1200/FastRes 1200: ""
+*es.HPPrintQuality 600dpi/600 dpi: ""
+*es.Translation HPEconoMode/EconoMode: ""
+*es.HPEconoMode True/Sí: ""
+*es.HPEconoMode False/Desactivado: ""
+*es.Translation HPFinishingPanel/Acabado: ""
+*es.Translation HPRotate180/Girar 180°: ""
+*es.HPRotate180 False/Desactivado: ""
+*es.HPRotate180 True/Sí: ""
+*es.Translation MediaType/Tipo de sustrato: ""
+*es.MediaType Unspecified/No especificado: ""
+*es.MediaType Plain/Estándar: ""
+*es.MediaType Light6074/Ligero 60-74g: ""
+*es.MediaType MidWeight96110/Peso medio 96-110g: ""
+*es.MediaType Heavy111130/Pesado 111-130g: ""
+*es.MediaType ExtraHeavy131175/Pesado extra 131-175g: ""
+*es.MediaType MonochromeLaserTransparency/Transparencia para láser monocromo: ""
+*es.MediaType Labels/Etiquetas: ""
+*es.MediaType Letterhead/Membrete: ""
+*es.MediaType Envelope/Sobre: ""
+*es.MediaType Preprinted/Preimpreso: ""
+*es.MediaType Prepunched/Preperforado: ""
+*es.MediaType Colored/Coloreado: ""
+*es.MediaType Bond/Bond: ""
+*es.MediaType Recycled/Reciclado: ""
+*es.MediaType Rough/Rugoso: ""
+*es.MediaType Vellum/Vitela: ""
+*fi.Translation Manufacturer/HP: ""
+*fi.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*fi.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*fi.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*fi.Translation PageSize/Median koko: ""
+*fi.PageSize FanFoldGermanLegal/8.5x13: ""
+*fi.PageSize Letter/US Letter: ""
+*fi.PageSize Legal/US Legal: ""
+*fi.PageSize Executive/US Executive: ""
+*fi.PageSize A4/A4: ""
+*fi.PageSize A5/A5: ""
+*fi.PageSize B5/B5: ""
+*fi.PageSize w553h765/16K 195x270 mm: ""
+*fi.PageSize w522h737/16K 184x260 mm: ""
+*fi.PageSize w558h774/16K 197x273 mm: ""
+*fi.PageSize Postcard/Postikortti (JIS): ""
+*fi.PageSize DoublePostcardRotated/Kaksinkert. postikortti (JIS): ""
+*fi.PageSize Env10/Kirjekuori Comm10: ""
+*fi.PageSize EnvMonarch/Kirjekuori Monarch: ""
+*fi.PageSize EnvISOB5/Kirjekuori ISO B5: ""
+*fi.PageSize EnvC5/Kirjekuori C5: ""
+*fi.PageSize EnvDL/Kirjekuori DL: ""
+*fi.Translation InputSlot/Paperilähde: ""
+*fi.InputSlot Tray1/Lokero 1: ""
+*fi.InputSlot Tray1_Man/Lokero 1 (Käsinsyöttö): ""
+*fi.Translation Duplex/Kaksipuolinen: ""
+*fi.Duplex None/Ei: ""
+*fi.Duplex DuplexNoTumble/Sidonta-pitkäreuna: ""
+*fi.Duplex DuplexTumble/Sidonta-lyhytreuna: ""
+*fi.OptionDuplex True/Päällä: ""
+*fi.OptionDuplex False/Ei: ""
+*fi.Translation HPColorOptionsPanel/Väriasetukset: ""
+*fi.Translation HPPrintQuality/Tulostuslaatu: ""
+*fi.HPPrintQuality FastRes1200/FastRes 1200: ""
+*fi.HPPrintQuality 600dpi/600 dpi: ""
+*fi.Translation HPEconoMode/EconoMode: ""
+*fi.HPEconoMode True/Päällä: ""
+*fi.HPEconoMode False/Ei: ""
+*fi.Translation HPFinishingPanel/Viimeistelyasetukset: ""
+*fi.Translation HPRotate180/Kierrä 180°: ""
+*fi.HPRotate180 False/Ei: ""
+*fi.HPRotate180 True/Päällä: ""
+*fi.Translation MediaType/Tulostusmateriaali: ""
+*fi.MediaType Unspecified/Määrittämätön: ""
+*fi.MediaType Plain/Tavallinen: ""
+*fi.MediaType Light6074/Kevyt 60-74g: ""
+*fi.MediaType MidWeight96110/Keskipaksu 96-110g: ""
+*fi.MediaType Heavy111130/Paksu 111-130g: ""
+*fi.MediaType ExtraHeavy131175/Erittäin paksu 131-175g: ""
+*fi.MediaType MonochromeLaserTransparency/Mustavalkolaserkalvo: ""
+*fi.MediaType Labels/Tarrat: ""
+*fi.MediaType Letterhead/Kirjelomake: ""
+*fi.MediaType Envelope/Kirjekuori: ""
+*fi.MediaType Preprinted/Esipainettu: ""
+*fi.MediaType Prepunched/Rei’itetty: ""
+*fi.MediaType Colored/Värillinen: ""
+*fi.MediaType Bond/Kova asiakirjapaperi: ""
+*fi.MediaType Recycled/Uusiopaperi: ""
+*fi.MediaType Rough/Karkea: ""
+*fi.MediaType Vellum/Silopaperi: ""
+*fr.Translation Manufacturer/HP: ""
+*fr.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*fr.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*fr.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*fr.Translation PageSize/Taille du papier: ""
+*fr.PageSize FanFoldGermanLegal/8.5x13: ""
+*fr.PageSize Letter/US Lettre: ""
+*fr.PageSize Legal/US Légal: ""
+*fr.PageSize Executive/US Executive: ""
+*fr.PageSize A4/A4: ""
+*fr.PageSize A5/A5: ""
+*fr.PageSize B5/B5: ""
+*fr.PageSize w553h765/16K 195x270 mm: ""
+*fr.PageSize w522h737/16K 184x260 mm: ""
+*fr.PageSize w558h774/16K 197x273 mm: ""
+*fr.PageSize Postcard/Carte postale (JIS): ""
+*fr.PageSize DoublePostcardRotated/Carte postale double (JIS): ""
+*fr.PageSize Env10/Enveloppe Comm10: ""
+*fr.PageSize EnvMonarch/Enveloppe Monarch: ""
+*fr.PageSize EnvISOB5/Enveloppe ISO B5: ""
+*fr.PageSize EnvC5/Enveloppe C5: ""
+*fr.PageSize EnvDL/Enveloppe DL: ""
+*fr.Translation InputSlot/Source du papier: ""
+*fr.InputSlot Tray1/Bac 1: ""
+*fr.InputSlot Tray1_Man/Bac 1 (Manuel): ""
+*fr.Translation Duplex/Recto verso: ""
+*fr.Duplex None/Désactivé: ""
+*fr.Duplex DuplexNoTumble/Reliure côté long: ""
+*fr.Duplex DuplexTumble/Reliure côté court: ""
+*fr.OptionDuplex True/Oui: ""
+*fr.OptionDuplex False/Désactivé: ""
+*fr.Translation HPColorOptionsPanel/Options de couleur: ""
+*fr.Translation HPPrintQuality/Qualité d'impression: ""
+*fr.HPPrintQuality FastRes1200/FastRes 1200: ""
+*fr.HPPrintQuality 600dpi/600 dpi: ""
+*fr.Translation HPEconoMode/EconoMode: ""
+*fr.HPEconoMode True/Oui: ""
+*fr.HPEconoMode False/Désactivé: ""
+*fr.Translation HPFinishingPanel/Finition: ""
+*fr.Translation HPRotate180/Faire pivoter de 180˚: ""
+*fr.HPRotate180 False/Désactivé: ""
+*fr.HPRotate180 True/Oui: ""
+*fr.Translation MediaType/Type de support: ""
+*fr.MediaType Unspecified/Non spécifié: ""
+*fr.MediaType Plain/Ordinaire: ""
+*fr.MediaType Light6074/Fin 60-74g: ""
+*fr.MediaType MidWeight96110/Grammage moyen 96-110g: ""
+*fr.MediaType Heavy111130/Epais 111-130g: ""
+*fr.MediaType ExtraHeavy131175/Trés épais 131-175g: ""
+*fr.MediaType MonochromeLaserTransparency/Transparent laser monochrome: ""
+*fr.MediaType Labels/Étiquettes: ""
+*fr.MediaType Letterhead/Papier à en-tête: ""
+*fr.MediaType Envelope/Enveloppe: ""
+*fr.MediaType Preprinted/Préimprimé: ""
+*fr.MediaType Prepunched/Perforé: ""
+*fr.MediaType Colored/Coloré: ""
+*fr.MediaType Bond/Document: ""
+*fr.MediaType Recycled/Recyclé: ""
+*fr.MediaType Rough/Rugueux: ""
+*fr.MediaType Vellum/Vélin: ""
+*it.Translation Manufacturer/HP: ""
+*it.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*it.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*it.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*it.Translation PageSize/Dimensione media: ""
+*it.PageSize FanFoldGermanLegal/8.5x13: ""
+*it.PageSize Letter/Lettera USA: ""
+*it.PageSize Legal/Legale USA: ""
+*it.PageSize Executive/Executive USA: ""
+*it.PageSize A4/A4: ""
+*it.PageSize A5/A5: ""
+*it.PageSize B5/B5: ""
+*it.PageSize w553h765/16K 195x270 mm: ""
+*it.PageSize w522h737/16K 184x260 mm: ""
+*it.PageSize w558h774/16K 197x273 mm: ""
+*it.PageSize Postcard/Cartolina (JIS): ""
+*it.PageSize DoublePostcardRotated/Cartolina doppia (JIS): ""
+*it.PageSize Env10/Busta Comm10: ""
+*it.PageSize EnvMonarch/Busta Monarch: ""
+*it.PageSize EnvISOB5/Busta ISO B5: ""
+*it.PageSize EnvC5/Busta C5: ""
+*it.PageSize EnvDL/Busta DL: ""
+*it.Translation InputSlot/Alimentazione della carta: ""
+*it.InputSlot Tray1/Vassoio 1: ""
+*it.InputSlot Tray1_Man/Vassoio 1 (Manuale): ""
+*it.Translation Duplex/Fronte-retro: ""
+*it.Duplex None/Disattivata: ""
+*it.Duplex DuplexNoTumble/Rilegatura con taglio largo: ""
+*it.Duplex DuplexTumble/Rilegatura con taglio stretto: ""
+*it.OptionDuplex True/Attiva: ""
+*it.OptionDuplex False/Disattivata: ""
+*it.Translation HPColorOptionsPanel/Opzioni colore: ""
+*it.Translation HPPrintQuality/Qualità di stampa: ""
+*it.HPPrintQuality FastRes1200/FastRes 1200: ""
+*it.HPPrintQuality 600dpi/600 dpi: ""
+*it.Translation HPEconoMode/EconoMode: ""
+*it.HPEconoMode True/Attiva: ""
+*it.HPEconoMode False/Disattivata: ""
+*it.Translation HPFinishingPanel/Finitura: ""
+*it.Translation HPRotate180/Ruota di 180°: ""
+*it.HPRotate180 False/Disattivata: ""
+*it.HPRotate180 True/Attiva: ""
+*it.Translation MediaType/Tipo di supporto: ""
+*it.MediaType Unspecified/Non specificato: ""
+*it.MediaType Plain/Normale: ""
+*it.MediaType Light6074/Leggera 60-74g: ""
+*it.MediaType MidWeight96110/Medio spessore 96-110g: ""
+*it.MediaType Heavy111130/Pesante 111-130g: ""
+*it.MediaType ExtraHeavy131175/Extra Pesante 131-175g: ""
+*it.MediaType MonochromeLaserTransparency/Lucido per stampanti laser in bianco e nero: ""
+*it.MediaType Labels/Etichette: ""
+*it.MediaType Letterhead/Carta intestata: ""
+*it.MediaType Envelope/Busta: ""
+*it.MediaType Preprinted/Prestampata: ""
+*it.MediaType Prepunched/Perforata: ""
+*it.MediaType Colored/Colorata: ""
+*it.MediaType Bond/Carta fine: ""
+*it.MediaType Recycled/Riciclata: ""
+*it.MediaType Rough/Ruvida: ""
+*it.MediaType Vellum/Carta pergamena: ""
+*ja.Translation Manufacturer/HP: ""
+*ja.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*ja.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*ja.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*ja.Translation PageSize/用紙サイズ: ""
+*ja.PageSize FanFoldGermanLegal/8.5x13: ""
+*ja.PageSize Letter/US レター: ""
+*ja.PageSize Legal/US リーガル: ""
+*ja.PageSize Executive/US エグゼクティブ: ""
+*ja.PageSize A4/A4: ""
+*ja.PageSize A5/A5: ""
+*ja.PageSize B5/B5: ""
+*ja.PageSize w553h765/16K 195x270 mm: ""
+*ja.PageSize w522h737/16K 184x260 mm: ""
+*ja.PageSize w558h774/16K 197x273 mm: ""
+*ja.PageSize Postcard/はがき (JIS): ""
+*ja.PageSize DoublePostcardRotated/往復はがき (JIS): ""
+*ja.PageSize Env10/封筒 Comm10: ""
+*ja.PageSize EnvMonarch/封筒 Monarch: ""
+*ja.PageSize EnvISOB5/封筒 ISO B5: ""
+*ja.PageSize EnvC5/封筒 C5: ""
+*ja.PageSize EnvDL/封筒 DL: ""
+*ja.Translation InputSlot/給紙元: ""
+*ja.InputSlot Tray1/トレイ 1: ""
+*ja.InputSlot Tray1_Man/トレイ 1 (手動): ""
+*ja.Translation Duplex/両面: ""
+*ja.Duplex None/オフ: ""
+*ja.Duplex DuplexNoTumble/長辺とじ: ""
+*ja.Duplex DuplexTumble/短辺とじ: ""
+*ja.OptionDuplex True/オン: ""
+*ja.OptionDuplex False/オフ: ""
+*ja.Translation HPColorOptionsPanel/カラー オプション: ""
+*ja.Translation HPPrintQuality/印刷品質: ""
+*ja.HPPrintQuality FastRes1200/FastRes 1200: ""
+*ja.HPPrintQuality 600dpi/600 dpi: ""
+*ja.Translation HPEconoMode/EconoMode: ""
+*ja.HPEconoMode True/オン: ""
+*ja.HPEconoMode False/オフ: ""
+*ja.Translation HPFinishingPanel/仕上げオプション: ""
+*ja.Translation HPRotate180/印刷の向きを 180°回転: ""
+*ja.HPRotate180 False/オフ: ""
+*ja.HPRotate180 True/オン: ""
+*ja.Translation MediaType/用紙の種類: ""
+*ja.MediaType Unspecified/指定なし: ""
+*ja.MediaType Plain/普通用紙: ""
+*ja.MediaType Light6074/軽い用紙 60-74g: ""
+*ja.MediaType MidWeight96110/中厚手用紙 96-110g: ""
+*ja.MediaType Heavy111130/重い用紙 111-130g: ""
+*ja.MediaType ExtraHeavy131175/重い用紙 131-175g: ""
+*ja.MediaType MonochromeLaserTransparency/モノクロ レーザー OHP フィルム: ""
+*ja.MediaType Labels/ラベル: ""
+*ja.MediaType Letterhead/レターヘッド付き: ""
+*ja.MediaType Envelope/封筒: ""
+*ja.MediaType Preprinted/印刷フォーム: ""
+*ja.MediaType Prepunched/穴あき用紙: ""
+*ja.MediaType Colored/カラー: ""
+*ja.MediaType Bond/ボンド紙: ""
+*ja.MediaType Recycled/再生紙: ""
+*ja.MediaType Rough/ざら紙: ""
+*ja.MediaType Vellum/ベラム紙: ""
+*ko.Translation Manufacturer/HP: ""
+*ko.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*ko.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*ko.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*ko.Translation PageSize/미디어 크기: ""
+*ko.PageSize FanFoldGermanLegal/8.5x13: ""
+*ko.PageSize Letter/US 편지지: ""
+*ko.PageSize Legal/US 공문서: ""
+*ko.PageSize Executive/US 행정 용지: ""
+*ko.PageSize A4/A4: ""
+*ko.PageSize A5/A5: ""
+*ko.PageSize B5/B5: ""
+*ko.PageSize w553h765/16K 195x270 mm: ""
+*ko.PageSize w522h737/16K 184x260 mm: ""
+*ko.PageSize w558h774/16K 197x273 mm: ""
+*ko.PageSize Postcard/우편엽서 (JIS): ""
+*ko.PageSize DoublePostcardRotated/양면 엽서 (JIS): ""
+*ko.PageSize Env10/Comm10 봉투: ""
+*ko.PageSize EnvMonarch/Monarch 봉투: ""
+*ko.PageSize EnvISOB5/ISO B5 봉투: ""
+*ko.PageSize EnvC5/C5 봉투: ""
+*ko.PageSize EnvDL/DL 봉투: ""
+*ko.Translation InputSlot/용지함: ""
+*ko.InputSlot Tray1/용지함 1: ""
+*ko.InputSlot Tray1_Man/용지함 1(수동): ""
+*ko.Translation Duplex/양면: ""
+*ko.Duplex None/끔: ""
+*ko.Duplex DuplexNoTumble/긴-가장자리 제본선: ""
+*ko.Duplex DuplexTumble/짧은-가장자리 제본선: ""
+*ko.OptionDuplex True/켜짐: ""
+*ko.OptionDuplex False/끔: ""
+*ko.Translation HPColorOptionsPanel/색상 옵션: ""
+*ko.Translation HPPrintQuality/인쇄 품질: ""
+*ko.HPPrintQuality FastRes1200/FastRes 1200: ""
+*ko.HPPrintQuality 600dpi/600 dpi: ""
+*ko.Translation HPEconoMode/EconoMode: ""
+*ko.HPEconoMode True/켜짐: ""
+*ko.HPEconoMode False/끔: ""
+*ko.Translation HPFinishingPanel/마감장치 옵션: ""
+*ko.Translation HPRotate180/180도 회전된 방향: ""
+*ko.HPRotate180 False/끔: ""
+*ko.HPRotate180 True/켜짐: ""
+*ko.Translation MediaType/용지 종류: ""
+*ko.MediaType Unspecified/지정되지 않음: ""
+*ko.MediaType Plain/일반용지: ""
+*ko.MediaType Light6074/경량지 60-74g: ""
+*ko.MediaType MidWeight96110/보통 중량지 96-110g: ""
+*ko.MediaType Heavy111130/중량지 111-130g: ""
+*ko.MediaType ExtraHeavy131175/초중량지 131-175g: ""
+*ko.MediaType MonochromeLaserTransparency/Monochrome Laser 투명: ""
+*ko.MediaType Labels/레이블: ""
+*ko.MediaType Letterhead/레터헤드: ""
+*ko.MediaType Envelope/봉투: ""
+*ko.MediaType Preprinted/미리 인쇄: ""
+*ko.MediaType Prepunched/천공 용지: ""
+*ko.MediaType Colored/색상지: ""
+*ko.MediaType Bond/본드지: ""
+*ko.MediaType Recycled/재활용지: ""
+*ko.MediaType Rough/거친 용지: ""
+*ko.MediaType Vellum/모조 피지: ""
+*nb.Translation Manufacturer/HP: ""
+*nb.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*nb.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*nb.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*nb.Translation PageSize/Media Size: ""
+*nb.PageSize FanFoldGermanLegal/8.5x13: ""
+*nb.PageSize Letter/US Letter: ""
+*nb.PageSize Legal/US Legal: ""
+*nb.PageSize Executive/US Executive: ""
+*nb.PageSize A4/A4: ""
+*nb.PageSize A5/A5: ""
+*nb.PageSize B5/B5: ""
+*nb.PageSize w553h765/16K 195x270 mm: ""
+*nb.PageSize w522h737/16K 184x260 mm: ""
+*nb.PageSize w558h774/16K 197x273 mm: ""
+*nb.PageSize Postcard/Postkort (JIS): ""
+*nb.PageSize DoublePostcardRotated/Dobbelt postkort (JIS): ""
+*nb.PageSize Env10/Comm10-konvolutt: ""
+*nb.PageSize EnvMonarch/Monarch-konvolutt: ""
+*nb.PageSize EnvISOB5/B5-konvolutt: ""
+*nb.PageSize EnvC5/C5-konvolutt: ""
+*nb.PageSize EnvDL/DL-konvolutt: ""
+*nb.Translation InputSlot/Arkmating: ""
+*nb.InputSlot Tray1/Skuff 1: ""
+*nb.InputSlot Tray1_Man/Skuff 1 (Manuell): ""
+*nb.Translation Duplex/Tosidig: ""
+*nb.Duplex None/Av: ""
+*nb.Duplex DuplexNoTumble/Innbinding på langsiden: ""
+*nb.Duplex DuplexTumble/Innbinding på kortsiden: ""
+*nb.OptionDuplex True/På: ""
+*nb.OptionDuplex False/Av: ""
+*nb.Translation HPColorOptionsPanel/Fargealternativer: ""
+*nb.Translation HPPrintQuality/Utskriftskvalitet: ""
+*nb.HPPrintQuality FastRes1200/FastRes 1200: ""
+*nb.HPPrintQuality 600dpi/600 dpi: ""
+*nb.Translation HPEconoMode/EconoMode: ""
+*nb.HPEconoMode True/På: ""
+*nb.HPEconoMode False/Av: ""
+*nb.Translation HPFinishingPanel/Etterbeh.alternativer: ""
+*nb.Translation HPRotate180/Roter 180°: ""
+*nb.HPRotate180 False/Av: ""
+*nb.HPRotate180 True/På: ""
+*nb.Translation MediaType/Utskriftsmateriale: ""
+*nb.MediaType Unspecified/Uspesifisert: ""
+*nb.MediaType Plain/Vanlig: ""
+*nb.MediaType Light6074/Lys 60-74g: ""
+*nb.MediaType MidWeight96110/Mellomtungt, 96-110g: ""
+*nb.MediaType Heavy111130/Tungt 111-130g: ""
+*nb.MediaType ExtraHeavy131175/Ekstra Tung 131-175g: ""
+*nb.MediaType MonochromeLaserTransparency/Transparent for svart-hvitt-laser: ""
+*nb.MediaType Labels/Etiketter: ""
+*nb.MediaType Letterhead/Brevhode: ""
+*nb.MediaType Envelope/Konvolutt: ""
+*nb.MediaType Preprinted/Forhåndstrykt: ""
+*nb.MediaType Prepunched/Hullark: ""
+*nb.MediaType Colored/Farget: ""
+*nb.MediaType Bond/Bond: ""
+*nb.MediaType Recycled/Resirkulert: ""
+*nb.MediaType Rough/Grovt: ""
+*nb.MediaType Vellum/Vellum: ""
+*nl.Translation Manufacturer/HP: ""
+*nl.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*nl.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*nl.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*nl.Translation PageSize/Materiaalgrootte: ""
+*nl.PageSize FanFoldGermanLegal/8.5x13: ""
+*nl.PageSize Letter/US Letter: ""
+*nl.PageSize Legal/US Legal: ""
+*nl.PageSize Executive/US Executive: ""
+*nl.PageSize A4/A4: ""
+*nl.PageSize A5/A5: ""
+*nl.PageSize B5/B5: ""
+*nl.PageSize w553h765/16K 195x270 mm: ""
+*nl.PageSize w522h737/16K 184x260 mm: ""
+*nl.PageSize w558h774/16K 197x273 mm: ""
+*nl.PageSize Postcard/Briefkaart (JIS): ""
+*nl.PageSize DoublePostcardRotated/Dubbele briefkaart (JIS): ""
+*nl.PageSize Env10/Comm10-envelop: ""
+*nl.PageSize EnvMonarch/Monarch-envelop: ""
+*nl.PageSize EnvISOB5/ISO B5-envelop: ""
+*nl.PageSize EnvC5/C5-envelop: ""
+*nl.PageSize EnvDL/DL-envelop: ""
+*nl.Translation InputSlot/Papierbron: ""
+*nl.InputSlot Tray1/Lade 1: ""
+*nl.InputSlot Tray1_Man/Lade 1 (Handmatig): ""
+*nl.Translation Duplex/Dubbelzijdig: ""
+*nl.Duplex None/Uit: ""
+*nl.Duplex DuplexNoTumble/Lange kant binden: ""
+*nl.Duplex DuplexTumble/Korte kant binden: ""
+*nl.OptionDuplex True/Aan: ""
+*nl.OptionDuplex False/Uit: ""
+*nl.Translation HPColorOptionsPanel/Kleurenopties: ""
+*nl.Translation HPPrintQuality/Afdrukkwaliteit: ""
+*nl.HPPrintQuality FastRes1200/FastRes 1200: ""
+*nl.HPPrintQuality 600dpi/600 dpi: ""
+*nl.Translation HPEconoMode/EconoMode: ""
+*nl.HPEconoMode True/Aan: ""
+*nl.HPEconoMode False/Uit: ""
+*nl.Translation HPFinishingPanel/Afwerkingsopties: ""
+*nl.Translation HPRotate180/Draaien met 180°: ""
+*nl.HPRotate180 False/Uit: ""
+*nl.HPRotate180 True/Aan: ""
+*nl.Translation MediaType/Type afdrukmateriaal: ""
+*nl.MediaType Unspecified/Onbekend: ""
+*nl.MediaType Plain/Gewoon: ""
+*nl.MediaType Light6074/Licht 60-74g: ""
+*nl.MediaType MidWeight96110/Middengewicht 96-110g: ""
+*nl.MediaType Heavy111130/Zwaar 111-130g: ""
+*nl.MediaType ExtraHeavy131175/Extra Zwaar 131-175g: ""
+*nl.MediaType MonochromeLaserTransparency/Transparant voor monochroomlaser: ""
+*nl.MediaType Labels/Etiketten: ""
+*nl.MediaType Letterhead/Briefpapier: ""
+*nl.MediaType Envelope/Enveloppen: ""
+*nl.MediaType Preprinted/Voorbedrukt: ""
+*nl.MediaType Prepunched/Geperforeerd: ""
+*nl.MediaType Colored/Gekleurd: ""
+*nl.MediaType Bond/Bankpost: ""
+*nl.MediaType Recycled/Gerecycled: ""
+*nl.MediaType Rough/Ruw: ""
+*nl.MediaType Vellum/Velijnpapier: ""
+*pt.Translation Manufacturer/HP: ""
+*pt.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*pt.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*pt.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*pt.Translation PageSize/Tamanho do suporte: ""
+*pt.PageSize FanFoldGermanLegal/8.5x13: ""
+*pt.PageSize Letter/Carta EUA: ""
+*pt.PageSize Legal/Legal EUA: ""
+*pt.PageSize Executive/Executivo EUA: ""
+*pt.PageSize A4/A4: ""
+*pt.PageSize A5/A5: ""
+*pt.PageSize B5/B5: ""
+*pt.PageSize w553h765/16K 195x270 mm: ""
+*pt.PageSize w522h737/16K 184x260 mm: ""
+*pt.PageSize w558h774/16K 197x273 mm: ""
+*pt.PageSize Postcard/Postal (JIS): ""
+*pt.PageSize DoublePostcardRotated/Postal duplo (JIS): ""
+*pt.PageSize Env10/Envelope Comm10: ""
+*pt.PageSize EnvMonarch/Envelope Monarch: ""
+*pt.PageSize EnvISOB5/Envelope B5: ""
+*pt.PageSize EnvC5/Envelope C5: ""
+*pt.PageSize EnvDL/Envelope DL: ""
+*pt.Translation InputSlot/Fonte de papel: ""
+*pt.InputSlot Tray1/Bandeja 1: ""
+*pt.InputSlot Tray1_Man/Bandeja 1 (Manual): ""
+*pt.Translation Duplex/Frente e verso: ""
+*pt.Duplex None/Desligado: ""
+*pt.Duplex DuplexNoTumble/Encadernação com Margem Longa: ""
+*pt.Duplex DuplexTumble/Encadernação com Margem Curta: ""
+*pt.OptionDuplex True/Ativo: ""
+*pt.OptionDuplex False/Desligado: ""
+*pt.Translation HPColorOptionsPanel/Opções de cores: ""
+*pt.Translation HPPrintQuality/Qualidade de impressão: ""
+*pt.HPPrintQuality FastRes1200/FastRes 1200: ""
+*pt.HPPrintQuality 600dpi/600 dpi: ""
+*pt.Translation HPEconoMode/EconoMode: ""
+*pt.HPEconoMode True/Ativo: ""
+*pt.HPEconoMode False/Desligado: ""
+*pt.Translation HPFinishingPanel/Acabamento: ""
+*pt.Translation HPRotate180/Girar em 180°: ""
+*pt.HPRotate180 False/Desligado: ""
+*pt.HPRotate180 True/Ativo: ""
+*pt.Translation MediaType/Tipo de mídia: ""
+*pt.MediaType Unspecified/Não especificado: ""
+*pt.MediaType Plain/Comum: ""
+*pt.MediaType Light6074/Leve 60-74g: ""
+*pt.MediaType MidWeight96110/Semipesado 96-110g: ""
+*pt.MediaType Heavy111130/Pesado 111-130g: ""
+*pt.MediaType ExtraHeavy131175/Extrapesado 131-175g: ""
+*pt.MediaType MonochromeLaserTransparency/Transparência monocrom. laser: ""
+*pt.MediaType Labels/Etiquetas: ""
+*pt.MediaType Letterhead/Timbrado: ""
+*pt.MediaType Envelope/Envelope: ""
+*pt.MediaType Preprinted/Pré-impresso: ""
+*pt.MediaType Prepunched/Perfurado: ""
+*pt.MediaType Colored/Colorido: ""
+*pt.MediaType Bond/Superbond: ""
+*pt.MediaType Recycled/Reciclado: ""
+*pt.MediaType Rough/Áspero: ""
+*pt.MediaType Vellum/Velino: ""
+*ru.Translation Manufacturer/HP: ""
+*ru.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*ru.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*ru.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*ru.Translation PageSize/Размер бумаги: ""
+*ru.PageSize FanFoldGermanLegal/8.5X13: ""
+*ru.PageSize Letter/US Letter: ""
+*ru.PageSize Legal/US Legal: ""
+*ru.PageSize Executive/US Executive: ""
+*ru.PageSize A4/A4: ""
+*ru.PageSize A5/A5: ""
+*ru.PageSize B5/B5: ""
+*ru.PageSize w553h765/16K 195 x 270 мм: ""
+*ru.PageSize w522h737/16K 184 x 260 мм: ""
+*ru.PageSize w558h774/16K 197 x 273 мм: ""
+*ru.PageSize Postcard/Почтовая карточка (JIS): ""
+*ru.PageSize DoublePostcardRotated/Двойная почтовая карточка (JIS): ""
+*ru.PageSize Env10/Конверт Comm10: ""
+*ru.PageSize EnvMonarch/Конверт Monarch: ""
+*ru.PageSize EnvISOB5/Конверт B5: ""
+*ru.PageSize EnvC5/Конверт C5: ""
+*ru.PageSize EnvDL/Конверт DL: ""
+*ru.Translation InputSlot/Источник бумаги: ""
+*ru.InputSlot Tray1/Лоток 1: ""
+*ru.InputSlot Tray1_Man/Лоток 1 (вручную): ""
+*ru.Translation Duplex/Двусторонняя: ""
+*ru.Duplex None/Выкл.: ""
+*ru.Duplex DuplexNoTumble/Прошивка вдоль длинного края: ""
+*ru.Duplex DuplexTumble/Прошивка вдоль короткого края: ""
+*ru.OptionDuplex True/Вкл.: ""
+*ru.OptionDuplex False/Выкл.: ""
+*ru.Translation HPColorOptionsPanel/Параметры цвета: ""
+*ru.Translation HPPrintQuality/Качество печати: ""
+*ru.HPPrintQuality FastRes1200/FastRes 1200: ""
+*ru.HPPrintQuality 600dpi/600 dpi: ""
+*ru.Translation HPEconoMode/EconoMode: ""
+*ru.HPEconoMode True/Вкл.: ""
+*ru.HPEconoMode False/Выкл.: ""
+*ru.Translation HPFinishingPanel/Окончательная обработка: ""
+*ru.Translation HPRotate180/Поворот на 180 градусов: ""
+*ru.HPRotate180 False/Выкл.: ""
+*ru.HPRotate180 True/Вкл.: ""
+*ru.Translation MediaType/Тип носителя: ""
+*ru.MediaType Unspecified/Не указано: ""
+*ru.MediaType Plain/Обычная бумага: ""
+*ru.MediaType Light6074/Легкая 60-74г: ""
+*ru.MediaType MidWeight96110/Среднеплотная 96-110г: ""
+*ru.MediaType Heavy111130/Плотная 111-130г: ""
+*ru.MediaType ExtraHeavy131175/Сверхплотная 131-175г: ""
+*ru.MediaType MonochromeLaserTransparency/Проз. пленка для монохр. лазер. печ.: ""
+*ru.MediaType Labels/Этикетки: ""
+*ru.MediaType Letterhead/Фирменный бланк: ""
+*ru.MediaType Envelope/Конверт: ""
+*ru.MediaType Preprinted/Печатный бланк: ""
+*ru.MediaType Prepunched/Перфорированная бумага: ""
+*ru.MediaType Colored/Цветная: ""
+*ru.MediaType Bond/Высокосортная: ""
+*ru.MediaType Recycled/Бумага из вторсырья: ""
+*ru.MediaType Rough/Грубая бумага: ""
+*ru.MediaType Vellum/Калька: ""
+*sv.Translation Manufacturer/HP: ""
+*sv.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*sv.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*sv.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*sv.Translation PageSize/Mediestorlek: ""
+*sv.PageSize FanFoldGermanLegal/8.5x13: ""
+*sv.PageSize Letter/US Letter: ""
+*sv.PageSize Legal/US Legal: ""
+*sv.PageSize Executive/US Executive: ""
+*sv.PageSize A4/A4: ""
+*sv.PageSize A5/A5: ""
+*sv.PageSize B5/B5: ""
+*sv.PageSize w553h765/16K 195x270 mm: ""
+*sv.PageSize w522h737/16K 184x260 mm: ""
+*sv.PageSize w558h774/16K 197x273 mm: ""
+*sv.PageSize Postcard/Brevkort (JIS): ""
+*sv.PageSize DoublePostcardRotated/Dubbelt brevkort (JIS): ""
+*sv.PageSize Env10/Comm10-kuvert: ""
+*sv.PageSize EnvMonarch/Monarch-kuvert: ""
+*sv.PageSize EnvISOB5/ISO B5-kuvert: ""
+*sv.PageSize EnvC5/C5-kuvert: ""
+*sv.PageSize EnvDL/DL-kuvert: ""
+*sv.Translation InputSlot/Papperskälla: ""
+*sv.InputSlot Tray1/Fack 1: ""
+*sv.InputSlot Tray1_Man/Fack 1 (Manuell): ""
+*sv.Translation Duplex/Dubbelsidig: ""
+*sv.Duplex None/Av: ""
+*sv.Duplex DuplexNoTumble/Häftning långsida: ""
+*sv.Duplex DuplexTumble/Häftning kortsida: ""
+*sv.OptionDuplex True/På: ""
+*sv.OptionDuplex False/Av: ""
+*sv.Translation HPColorOptionsPanel/Färgalternativ: ""
+*sv.Translation HPPrintQuality/Utskriftskvalitet: ""
+*sv.HPPrintQuality FastRes1200/FastRes 1200: ""
+*sv.HPPrintQuality 600dpi/600 dpi: ""
+*sv.Translation HPEconoMode/EconoMode: ""
+*sv.HPEconoMode True/På: ""
+*sv.HPEconoMode False/Av: ""
+*sv.Translation HPFinishingPanel/Efterbehandling: ""
+*sv.Translation HPRotate180/Rotera sedan 180°: ""
+*sv.HPRotate180 False/Av: ""
+*sv.HPRotate180 True/På: ""
+*sv.Translation MediaType/Material: ""
+*sv.MediaType Unspecified/Ospecificerad: ""
+*sv.MediaType Plain/Vanligt: ""
+*sv.MediaType Light6074/Lätt 60-74g: ""
+*sv.MediaType MidWeight96110/Mellanvikt 96-110g: ""
+*sv.MediaType Heavy111130/Tungt 111-130g: ""
+*sv.MediaType ExtraHeavy131175/Extra Tungt 131-175g: ""
+*sv.MediaType MonochromeLaserTransparency/Enfärgad OH-film för laser: ""
+*sv.MediaType Labels/Etiketter: ""
+*sv.MediaType Letterhead/Brevpapper: ""
+*sv.MediaType Envelope/Kuvert: ""
+*sv.MediaType Preprinted/Förtryckt: ""
+*sv.MediaType Prepunched/Hålat: ""
+*sv.MediaType Colored/Färgat: ""
+*sv.MediaType Bond/Finpapper: ""
+*sv.MediaType Recycled/Returpapper: ""
+*sv.MediaType Rough/Grovt: ""
+*sv.MediaType Vellum/Veläng: ""
+*zh_CN.Translation Manufacturer/HP: ""
+*zh_CN.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*zh_CN.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*zh_CN.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*zh_CN.Translation PageSize/介质大小: ""
+*zh_CN.PageSize FanFoldGermanLegal/8.5x13: ""
+*zh_CN.PageSize Letter/美国信纸: ""
+*zh_CN.PageSize Legal/美国法定用纸: ""
+*zh_CN.PageSize Executive/美国行政用纸: ""
+*zh_CN.PageSize A4/A4: ""
+*zh_CN.PageSize A5/A5: ""
+*zh_CN.PageSize B5/B5: ""
+*zh_CN.PageSize w553h765/16K 195x270 毫米: ""
+*zh_CN.PageSize w522h737/16K 184x260 毫米: ""
+*zh_CN.PageSize w558h774/16K 197x273 毫米: ""
+*zh_CN.PageSize Postcard/明信片 (JIS): ""
+*zh_CN.PageSize DoublePostcardRotated/大号明信片 (JIS): ""
+*zh_CN.PageSize Env10/信封 Comm10: ""
+*zh_CN.PageSize EnvMonarch/信封 Monarch: ""
+*zh_CN.PageSize EnvISOB5/信封 ISO B5: ""
+*zh_CN.PageSize EnvC5/信封 C5: ""
+*zh_CN.PageSize EnvDL/信封 DL: ""
+*zh_CN.Translation InputSlot/纸张来源: ""
+*zh_CN.InputSlot Tray1/纸盒 1: ""
+*zh_CN.InputSlot Tray1_Man/纸盒 1（手动）: ""
+*zh_CN.Translation Duplex/双面打印: ""
+*zh_CN.Duplex None/关: ""
+*zh_CN.Duplex DuplexNoTumble/长边装订: ""
+*zh_CN.Duplex DuplexTumble/短边装订: ""
+*zh_CN.OptionDuplex True/开启: ""
+*zh_CN.OptionDuplex False/关: ""
+*zh_CN.Translation HPColorOptionsPanel/颜色选项: ""
+*zh_CN.Translation HPPrintQuality/打印质量: ""
+*zh_CN.HPPrintQuality FastRes1200/FastRes 1200: ""
+*zh_CN.HPPrintQuality 600dpi/600 dpi: ""
+*zh_CN.Translation HPEconoMode/EconoMode: ""
+*zh_CN.HPEconoMode True/开启: ""
+*zh_CN.HPEconoMode False/关: ""
+*zh_CN.Translation HPFinishingPanel/完成选项: ""
+*zh_CN.Translation HPRotate180/方向旋转 180 度: ""
+*zh_CN.HPRotate180 False/关: ""
+*zh_CN.HPRotate180 True/开启: ""
+*zh_CN.Translation MediaType/介质类型: ""
+*zh_CN.MediaType Unspecified/未指定: ""
+*zh_CN.MediaType Plain/普通纸: ""
+*zh_CN.MediaType Light6074/轻磅 60-74g: ""
+*zh_CN.MediaType MidWeight96110/中等重量纸 96-110g: ""
+*zh_CN.MediaType Heavy111130/重磅 111-130g: ""
+*zh_CN.MediaType ExtraHeavy131175/超级重磅纸 131-175g: ""
+*zh_CN.MediaType MonochromeLaserTransparency/黑白激光投影胶片: ""
+*zh_CN.MediaType Labels/标签: ""
+*zh_CN.MediaType Letterhead/信头纸: ""
+*zh_CN.MediaType Envelope/信封: ""
+*zh_CN.MediaType Preprinted/预先打印纸: ""
+*zh_CN.MediaType Prepunched/预先打孔纸: ""
+*zh_CN.MediaType Colored/彩纸: ""
+*zh_CN.MediaType Bond/证券纸: ""
+*zh_CN.MediaType Recycled/再生纸: ""
+*zh_CN.MediaType Rough/粗糙: ""
+*zh_CN.MediaType Vellum/仿羊皮纸: ""
+*zh_TW.Translation Manufacturer/HP: ""
+*zh_TW.Translation ModelName/HP LaserJet M1536dnf MFP: ""
+*zh_TW.Translation ShortNickName/HP LaserJet M1536dnf MFP: ""
+*zh_TW.Translation NickName/HP LaserJet M1536dnf MFP: ""
+*zh_TW.Translation PageSize/媒體大小: ""
+*zh_TW.PageSize FanFoldGermanLegal/8.5x13: ""
+*zh_TW.PageSize Letter/美式信紙（US Letter）: ""
+*zh_TW.PageSize Legal/美式法定紙（US Legal）: ""
+*zh_TW.PageSize Executive/美式行政用紙（US Executive）: ""
+*zh_TW.PageSize A4/A4: ""
+*zh_TW.PageSize A5/A5: ""
+*zh_TW.PageSize B5/B5: ""
+*zh_TW.PageSize w553h765/16K 195x270 公釐: ""
+*zh_TW.PageSize w522h737/16K 184x260 公釐: ""
+*zh_TW.PageSize w558h774/16K 197x273 公釐: ""
+*zh_TW.PageSize Postcard/明信片(JIS): ""
+*zh_TW.PageSize DoublePostcardRotated/雙面明信片 (JIS): ""
+*zh_TW.PageSize Env10/Comm10 信封: ""
+*zh_TW.PageSize EnvMonarch/Monarch 信封: ""
+*zh_TW.PageSize EnvISOB5/ISO B5 信封: ""
+*zh_TW.PageSize EnvC5/C5 信封: ""
+*zh_TW.PageSize EnvDL/DL 信封: ""
+*zh_TW.Translation InputSlot/紙張來源: ""
+*zh_TW.InputSlot Tray1/1 號紙匣: ""
+*zh_TW.InputSlot Tray1_Man/1 號紙匣 ( 手動): ""
+*zh_TW.Translation Duplex/雙面: ""
+*zh_TW.Duplex None/關: ""
+*zh_TW.Duplex DuplexNoTumble/沿長邊裝訂: ""
+*zh_TW.Duplex DuplexTumble/沿短邊裝訂: ""
+*zh_TW.OptionDuplex True/開: ""
+*zh_TW.OptionDuplex False/關: ""
+*zh_TW.Translation HPColorOptionsPanel/色彩選項: ""
+*zh_TW.Translation HPPrintQuality/列印品質: ""
+*zh_TW.HPPrintQuality FastRes1200/FastRes 1200: ""
+*zh_TW.HPPrintQuality 600dpi/600 dpi: ""
+*zh_TW.Translation HPEconoMode/EconoMode: ""
+*zh_TW.HPEconoMode True/開: ""
+*zh_TW.HPEconoMode False/關: ""
+*zh_TW.Translation HPFinishingPanel/外觀選項: ""
+*zh_TW.Translation HPRotate180/旋轉 180 度: ""
+*zh_TW.HPRotate180 False/關: ""
+*zh_TW.HPRotate180 True/開: ""
+*zh_TW.Translation MediaType/媒體類型: ""
+*zh_TW.MediaType Unspecified/未指定: ""
+*zh_TW.MediaType Plain/素面紙: ""
+*zh_TW.MediaType Light6074/輕磅紙 60-74g: ""
+*zh_TW.MediaType MidWeight96110/中磅紙 96-110g: ""
+*zh_TW.MediaType Heavy111130/重磅紙 111-130g: ""
+*zh_TW.MediaType ExtraHeavy131175/超重磅紙 131-175g: ""
+*zh_TW.MediaType MonochromeLaserTransparency/單色雷射投影片: ""
+*zh_TW.MediaType Labels/標籤: ""
+*zh_TW.MediaType Letterhead/信頭紙: ""
+*zh_TW.MediaType Envelope/信封: ""
+*zh_TW.MediaType Preprinted/預印的: ""
+*zh_TW.MediaType Prepunched/打孔過的: ""
+*zh_TW.MediaType Colored/彩紙: ""
+*zh_TW.MediaType Bond/雪銅紙: ""
+*zh_TW.MediaType Recycled/再生紙: ""
+*zh_TW.MediaType Rough/粗糙紙: ""
+*zh_TW.MediaType Vellum/羊皮紙: ""
+*da.Translation OptionDuplex/OptionDuplex: ""
+*de.Translation OptionDuplex/OptionDuplex: ""
+*es.Translation OptionDuplex/OptionDuplex: ""
+*fi.Translation OptionDuplex/OptionDuplex: ""
+*fr.Translation OptionDuplex/OptionDuplex: ""
+*it.Translation OptionDuplex/OptionDuplex: ""
+*ja.Translation OptionDuplex/OptionDuplex: ""
+*ko.Translation OptionDuplex/OptionDuplex: ""
+*nl.Translation OptionDuplex/OptionDuplex: ""
+*nb.Translation OptionDuplex/OptionDuplex: ""
+*pt.Translation OptionDuplex/OptionDuplex: ""
+*ru.Translation OptionDuplex/OptionDuplex: ""
+*sv.Translation OptionDuplex/OptionDuplex: ""
+*zh_CN.Translation OptionDuplex/OptionDuplex: ""
+*zh_TW.Translation OptionDuplex/OptionDuplex: ""
+*DefaultFont: Courier
+*Font Albertus-ExtraBold: Standard "(001.001)" Standard ROM
+*Font Albertus-Medium: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Bold: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Italic: Standard "(001.001)" Standard ROM
+*Font Arial: Standard "(001.001)" Standard ROM
+*Font Arial-Bold: Standard "(001.001)" Standard ROM
+*Font Arial-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Arial-Italic: Standard "(001.001)" Standard ROM
+*Font AvantGarde-Book: Standard "(001.001)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.001)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.001)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.001)" Standard ROM
+*Font Bookman-Demi: Standard "(001.001)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.001)" Standard ROM
+*Font Bookman-Light: Standard "(001.001)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.001)" Standard ROM
+*Font CGOmega: Standard "(001.001)" Standard ROM
+*Font CGOmega-Bold: Standard "(001.001)" Standard ROM
+*Font CGOmega-BoldItalic: Standard "(001.001)" Standard ROM
+*Font CGOmega-Italic: Standard "(001.001)" Standard ROM
+*Font CGTimes: Standard "(001.001)" Standard ROM
+*Font CGTimes-Bold: Standard "(001.001)" Standard ROM
+*Font CGTimes-BoldItalic: Standard "(001.001)" Standard ROM
+*Font CGTimes-Italic: Standard "(001.001)" Standard ROM
+*Font Clarendon-Condensed-Bold: Standard "(001.001)" Standard ROM
+*Font Coronet: Standard "(001.001)" Standard ROM
+*Font Courier: Standard "(001.001)" Standard ROM
+*Font Courier-Bold: Standard "(001.001)" Standard ROM
+*Font Courier-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Courier-Oblique: Standard "(001.001)" Standard ROM
+*Font CourierHP: Standard "(001.001)" Standard ROM
+*Font CourierHP-Bold: Standard "(001.001)" Standard ROM
+*Font CourierHP-BoldItalic: Standard "(001.001)" Standard ROM
+*Font CourierHP-Italic: Standard "(001.001)" Standard ROM
+*Font Garamond-Antiqua: Standard "(001.001)" Standard ROM
+*Font Garamond-Halbfett: Standard "(001.001)" Standard ROM
+*Font Garamond-Kursiv: Standard "(001.001)" Standard ROM
+*Font Garamond-KursivHalbfett: Standard "(001.001)" Standard ROM
+*Font Helvetica: Standard "(001.001)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.001)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.001)" Standard ROM
+*Font LetterGothic: Standard "(001.001)" Standard ROM
+*Font LetterGothic-Bold: Standard "(001.001)" Standard ROM
+*Font LetterGothic-Italic: Standard "(001.001)" Standard ROM
+*Font Marigold: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.001)" Standard ROM
+*Font Palatino-Bold: Standard "(001.001)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Palatino-Italic: Standard "(001.001)" Standard ROM
+*Font Palatino-Roman: Standard "(001.001)" Standard ROM
+*Font Symbol: Special "(001.001)" Special ROM
+*Font Times-Bold: Standard "(001.001)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Times-Italic: Standard "(001.001)" Standard ROM
+*Font Times-Roman: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman-Bold: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman-BoldItalic: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman-Italic: Standard "(001.001)" Standard ROM
+*Font Univers-Bold: Standard "(001.001)" Standard ROM
+*Font Univers-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-Bold: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-Medium: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-MediumItalic: Standard "(001.001)" Standard ROM
+*Font Univers-Medium: Standard "(001.001)" Standard ROM
+*Font Univers-MediumItalic: Standard "(001.001)" Standard ROM
+*Font Wingdings-Regular: Standard "(001.001)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.001)" Standard ROM
+*Font ZapfDingbats: Special "(001.001)" Special ROM
+*% End of HPP00003.PPD, 146801 bytes.

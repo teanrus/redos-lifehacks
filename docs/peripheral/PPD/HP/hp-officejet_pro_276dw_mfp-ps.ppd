@@ -1,0 +1,2553 @@
+*PPD-Adobe: "4.3"
+*% =================================
+*% Copyright 1992-2015 HP Company
+*% Permission is hereby granted, free of charge, to any person obtaining
+*% a copy of this software and associated documentation files (the
+*% "Software"), to deal in the Software without restriction, including
+*% without limitation the rights to use, copy, modify, merge, publish,
+*% distribute, sublicense, and/or sell copies of the Software, and to
+*% permit persons to whom the Software is furnished to do so, subject to
+*% the following conditions:
+*%
+*% The above copyright notice and this permission notice shall be
+*% included in all copies or substantial portions of the Software.
+*%
+*% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+*% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+*% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+*% NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+*% LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+*% OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+*% WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*%
+*% [this is the MIT open source license -- please see www.opensource.org]
+*%
+*%%%% Created by the CUPS PPD Compiler CUPS v1.5.3.
+*% Copyright (c) 2015 HP Development Company, L.P.
+*FormatVersion: "4.3"
+*FileVersion: "19.3"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "HPP00024.PPD"
+*Product: "(HP Officejet Pro 276dw MFP)"
+*Manufacturer: "HP"
+*ModelName: "HP Officejet Pro 276dw MFP"
+*ShortNickName: "HP Officejet Pro 276dw MFP"
+*1284DeviceID: "MFG:HP;MDL:hp officejet pro 276dw mfp;"
+*NickName: "HP Officejet Pro 276dw MFP Postscript (recommended)"
+*PSVersion: "(3010.107) 0"
+*LanguageLevel: "3"
+*ColorDevice: True
+*DefaultColorSpace: RGB
+*FileSystem: False
+*Throughput: "11"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*% Driver-defined attributes...
+*FreeVM: "209715200"
+*Protocols: TBCP PJL
+*JCLBegin: "<1B>%-12345X@PJL JOB<0A>"
+*JCLToPSInterpreter: "@PJL ENTER LANGUAGE = PostScript <0A>"
+*JCLEnd: "<1B>%-12345X@PJL EOJ <0A><1B>%-12345X"
+*cupsPJLCharset: "UTF-8"
+*cupsCommands: "ReportLevels"
+*cupsSNMPSupplies: False
+*cupsIPPSupplies: False
+*cupsMarkerName black/Black: ""
+*cupsMarkerName yellow/Yellow: ""
+*cupsMarkerName magenta/Magenta: ""
+*cupsMarkerName cyan/Cyan: ""
+*RequiresPageRegion All: True
+*HPConstraintsSchemeVersion: "2"
+*HPBOD: "1"
+*HPAccountingInfo: "4"
+*HPJobAttirubtesEncoding: "UTF8"
+*en.PageSize EnvChou3/Envelope Choukei 3: ""
+*da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*es.PageSize EnvChou3/Sobre Choukei 3: ""
+*fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*it.PageSize EnvChou3/Busta Choukei 3: ""
+*ja.PageSize EnvChou3/封筒 長形 3: ""
+*ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*en.PageSize EnvChou4/Envelope Choukei 4: ""
+*da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*es.PageSize EnvChou4/Sobre Choukei 4: ""
+*fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*it.PageSize EnvChou4/Busta Choukei 4: ""
+*ja.PageSize EnvChou4/封筒 長形 4: ""
+*ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*HPConditionMediaType HPAdvancedPhotoPapers: "
+	PageSize 3x5;;
+	PageSize 4x6;;
+	PageSize 5x7;;
+	PageSize 100x150mm;;
+	PageSize Env3.5x5
+"
+*End
+*HPConditionMediaType Cardstock: "
+	PageSize 5x8
+"
+*End
+*HPConditionMediaType HPBrochureGlossy180: "
+	PageSize Postcard;;
+	PageSize DoublePostcardRotated;;
+	PageSize A4.FullBleed;;
+	PageSize Letter.FullBleed
+"
+*End
+*HPConditionMediaType Plain: "
+	PageSize Letter;;
+	PageSize Legal;;
+	PageSize Executive;;
+	PageSize Statement;;
+	PageSize FanFoldGermanLegal;;
+	PageSize A4;;
+	PageSize A5;;
+	PageSize A6;;
+	PageSize B5;;
+	PageSize 216x340mm;;
+	PageSize 195x270mm;;
+	PageSize 184x260mm;;
+	PageSize 7.75x10.75;;
+	PageSize Env10;;
+	PageSize EnvMonarch;;
+	PageSize EnvISOB5;;
+	PageSize EnvC5;;
+	PageSize EnvC6;;
+	PageSize EnvDL;;
+	PageSize EnvChou3;;
+	PageSize EnvChou4
+"
+*End
+
+*OutputModeTT Draft: "OUTPUTMODE_TT_FAST"
+*OutputModeDS Draft: "OUTPUTMODE_DS_COLORINPUT_BLACKRENDER_600X600DPI_OUTPUT_AUTOMATIC"
+*OutputModeDS Normal: "OUTPUTMODE_DS_COLORINPUT_BLACKRENDER_600X600DPI_OUTPUT_AUTOMATIC"
+*OutputModeDS Best: "OUTPUTMODE_DS_COLORINPUT_BLACKRENDER_600X600DPI_OUTPUT_AUTOMATIC"
+*HPTrueBlackTT HighQuality: "HPNEUTRALGRAYS_TT_PROCESSBLACK"
+*HPTrueBlackTT BlackInkOnly: "HPNEUTRALGRAYS_TT_BLACK"
+*cupsVersion: 1.5
+*cupsModelNumber: 0
+*cupsManualCopies: False
+*cupsLanguages: "en da de es fi fr it ja ko no nl pt ru sv zh_CN zh_TW"
+*cupsFilter: "application/vnd.cups-postscript 0 hpps"
+*UIConstraints: *HPOption_Tray2 False *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *HPOption_Tray2 False
+*UIConstraints: *Duplex *PageRegion Legal
+*UIConstraints: *PageRegion Legal *Duplex
+*UIConstraints: *Duplex *PageSize Legal
+*UIConstraints: *PageSize Legal *Duplex
+*UIConstraints: *Duplex *PageRegion Statement
+*UIConstraints: *PageRegion Statement *Duplex
+*UIConstraints: *Duplex *PageSize Statement
+*UIConstraints: *PageSize Statement *Duplex
+*UIConstraints: *Duplex *PageRegion FanFoldGermanLegal
+*UIConstraints: *PageRegion FanFoldGermanLegal *Duplex
+*UIConstraints: *Duplex *PageSize FanFoldGermanLegal
+*UIConstraints: *PageSize FanFoldGermanLegal *Duplex
+*UIConstraints: *Duplex *PageRegion 3x5
+*UIConstraints: *PageRegion 3x5 *Duplex
+*UIConstraints: *Duplex *PageSize 3x5
+*UIConstraints: *PageSize 3x5 *Duplex
+*UIConstraints: *Duplex *PageRegion 4x6
+*UIConstraints: *PageRegion 4x6 *Duplex
+*UIConstraints: *Duplex *PageSize 4x6
+*UIConstraints: *PageSize 4x6 *Duplex
+*UIConstraints: *Duplex *PageRegion 5x7
+*UIConstraints: *PageRegion 5x7 *Duplex
+*UIConstraints: *Duplex *PageSize 5x7
+*UIConstraints: *PageSize 5x7 *Duplex
+*UIConstraints: *Duplex *PageRegion 5x8
+*UIConstraints: *PageRegion 5x8 *Duplex
+*UIConstraints: *Duplex *PageSize 5x8
+*UIConstraints: *PageSize 5x8 *Duplex
+*UIConstraints: *Duplex *PageRegion A5
+*UIConstraints: *PageRegion A5 *Duplex
+*UIConstraints: *Duplex *PageSize A5
+*UIConstraints: *PageSize A5 *Duplex
+*UIConstraints: *Duplex *PageRegion A6
+*UIConstraints: *PageRegion A6 *Duplex
+*UIConstraints: *Duplex *PageSize A6
+*UIConstraints: *PageSize A6 *Duplex
+*UIConstraints: *Duplex *PageRegion 100x150mm
+*UIConstraints: *PageRegion 100x150mm *Duplex
+*UIConstraints: *Duplex *PageSize 100x150mm
+*UIConstraints: *PageSize 100x150mm *Duplex
+*UIConstraints: *Duplex *PageRegion 216x340mm
+*UIConstraints: *PageRegion 216x340mm *Duplex
+*UIConstraints: *Duplex *PageSize 216x340mm
+*UIConstraints: *PageSize 216x340mm *Duplex
+*UIConstraints: *Duplex *PageRegion 195x270mm
+*UIConstraints: *PageRegion 195x270mm *Duplex
+*UIConstraints: *Duplex *PageSize 195x270mm
+*UIConstraints: *PageSize 195x270mm *Duplex
+*UIConstraints: *Duplex *PageRegion 184x260mm
+*UIConstraints: *PageRegion 184x260mm *Duplex
+*UIConstraints: *Duplex *PageSize 184x260mm
+*UIConstraints: *PageSize 184x260mm *Duplex
+*UIConstraints: *Duplex *PageRegion 7.75x10.75
+*UIConstraints: *PageRegion 7.75x10.75 *Duplex
+*UIConstraints: *Duplex *PageSize 7.75x10.75
+*UIConstraints: *PageSize 7.75x10.75 *Duplex
+*UIConstraints: *Duplex *PageRegion Postcard
+*UIConstraints: *PageRegion Postcard *Duplex
+*UIConstraints: *Duplex *PageSize Postcard
+*UIConstraints: *PageSize Postcard *Duplex
+*UIConstraints: *Duplex *PageRegion DoublePostcardRotated
+*UIConstraints: *PageRegion DoublePostcardRotated *Duplex
+*UIConstraints: *Duplex *PageSize DoublePostcardRotated
+*UIConstraints: *PageSize DoublePostcardRotated *Duplex
+*UIConstraints: *Duplex *PageRegion Env10
+*UIConstraints: *PageRegion Env10 *Duplex
+*UIConstraints: *Duplex *PageSize Env10
+*UIConstraints: *PageSize Env10 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvMonarch
+*UIConstraints: *PageRegion EnvMonarch *Duplex
+*UIConstraints: *Duplex *PageSize EnvMonarch
+*UIConstraints: *PageSize EnvMonarch *Duplex
+*UIConstraints: *Duplex *PageRegion EnvISOB5
+*UIConstraints: *PageRegion EnvISOB5 *Duplex
+*UIConstraints: *Duplex *PageSize EnvISOB5
+*UIConstraints: *PageSize EnvISOB5 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvC5
+*UIConstraints: *PageRegion EnvC5 *Duplex
+*UIConstraints: *Duplex *PageSize EnvC5
+*UIConstraints: *PageSize EnvC5 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvC6
+*UIConstraints: *PageRegion EnvC6 *Duplex
+*UIConstraints: *Duplex *PageSize EnvC6
+*UIConstraints: *PageSize EnvC6 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvDL
+*UIConstraints: *PageRegion EnvDL *Duplex
+*UIConstraints: *Duplex *PageSize EnvDL
+*UIConstraints: *PageSize EnvDL *Duplex
+*UIConstraints: *Duplex *PageRegion EnvChou3
+*UIConstraints: *PageRegion EnvChou3 *Duplex
+*UIConstraints: *Duplex *PageSize EnvChou3
+*UIConstraints: *PageSize EnvChou3 *Duplex
+*UIConstraints: *Duplex *PageRegion EnvChou4
+*UIConstraints: *PageRegion EnvChou4 *Duplex
+*UIConstraints: *Duplex *PageSize EnvChou4
+*UIConstraints: *PageSize EnvChou4 *Duplex
+*UIConstraints: *Duplex *PageRegion Env3.5x5
+*UIConstraints: *PageRegion Env3.5x5 *Duplex
+*UIConstraints: *Duplex *PageSize Env3.5x5
+*UIConstraints: *PageSize Env3.5x5 *Duplex
+*NonUIConstraints: *Duplex *CustomPageSize True
+*NonUIConstraints: *CustomPageSize True *Duplex
+*UIConstraints: *InputSlot Tray2 *PageRegion Executive
+*UIConstraints: *PageRegion Executive *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize Executive
+*UIConstraints: *PageSize Executive *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion Statement
+*UIConstraints: *PageRegion Statement *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize Statement
+*UIConstraints: *PageSize Statement *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion FanFoldGermanLegal
+*UIConstraints: *PageRegion FanFoldGermanLegal *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize FanFoldGermanLegal
+*UIConstraints: *PageSize FanFoldGermanLegal *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 3x5
+*UIConstraints: *PageRegion 3x5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 3x5
+*UIConstraints: *PageSize 3x5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 4x6
+*UIConstraints: *PageRegion 4x6 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 4x6
+*UIConstraints: *PageSize 4x6 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 5x7
+*UIConstraints: *PageRegion 5x7 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 5x7
+*UIConstraints: *PageSize 5x7 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 5x8
+*UIConstraints: *PageRegion 5x8 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 5x8
+*UIConstraints: *PageSize 5x8 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion A5
+*UIConstraints: *PageRegion A5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize A5
+*UIConstraints: *PageSize A5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion A6
+*UIConstraints: *PageRegion A6 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize A6
+*UIConstraints: *PageSize A6 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion B5
+*UIConstraints: *PageRegion B5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize B5
+*UIConstraints: *PageSize B5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 100x150mm
+*UIConstraints: *PageRegion 100x150mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 100x150mm
+*UIConstraints: *PageSize 100x150mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 216x340mm
+*UIConstraints: *PageRegion 216x340mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 216x340mm
+*UIConstraints: *PageSize 216x340mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 195x270mm
+*UIConstraints: *PageRegion 195x270mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 195x270mm
+*UIConstraints: *PageSize 195x270mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 184x260mm
+*UIConstraints: *PageRegion 184x260mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 184x260mm
+*UIConstraints: *PageSize 184x260mm *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion 7.75x10.75
+*UIConstraints: *PageRegion 7.75x10.75 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize 7.75x10.75
+*UIConstraints: *PageSize 7.75x10.75 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion Postcard
+*UIConstraints: *PageRegion Postcard *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize Postcard
+*UIConstraints: *PageSize Postcard *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion DoublePostcardRotated
+*UIConstraints: *PageRegion DoublePostcardRotated *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize DoublePostcardRotated
+*UIConstraints: *PageSize DoublePostcardRotated *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion Env10
+*UIConstraints: *PageRegion Env10 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize Env10
+*UIConstraints: *PageSize Env10 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvMonarch
+*UIConstraints: *PageRegion EnvMonarch *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize EnvMonarch
+*UIConstraints: *PageSize EnvMonarch *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvISOB5
+*UIConstraints: *PageRegion EnvISOB5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize EnvISOB5
+*UIConstraints: *PageSize EnvISOB5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvC5
+*UIConstraints: *PageRegion EnvC5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize EnvC5
+*UIConstraints: *PageSize EnvC5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvC6
+*UIConstraints: *PageRegion EnvC6 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize EnvC6
+*UIConstraints: *PageSize EnvC6 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvDL
+*UIConstraints: *PageRegion EnvDL *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize EnvDL
+*UIConstraints: *PageSize EnvDL *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvChou3
+*UIConstraints: *PageRegion EnvChou3 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize EnvChou3
+*UIConstraints: *PageSize EnvChou3 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion EnvChou4
+*UIConstraints: *PageRegion EnvChou4 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize EnvChou4
+*UIConstraints: *PageSize EnvChou4 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageRegion Env3.5x5
+*UIConstraints: *PageRegion Env3.5x5 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *PageSize Env3.5x5
+*UIConstraints: *PageSize Env3.5x5 *InputSlot Tray2
+*NonUIConstraints: *InputSlot Tray2 *CustomPageSize True
+*NonUIConstraints: *CustomPageSize True *InputSlot Tray2
+*UIConstraints: *Duplex *MediaType HPEverydayPhotoPaperMatte
+*UIConstraints: *MediaType HPEverydayPhotoPaperMatte *Duplex
+*UIConstraints: *Duplex *MediaType HPAdvancedPhotoPapers
+*UIConstraints: *MediaType HPAdvancedPhotoPapers *Duplex
+*UIConstraints: *Duplex *MediaType OtherPhotoPaper
+*UIConstraints: *MediaType OtherPhotoPaper *Duplex
+*UIConstraints: *Duplex *MediaType Cardstock
+*UIConstraints: *MediaType Cardstock *Duplex
+*UIConstraints: *Duplex *MediaType HPPremiumPlusPhotoPapers
+*UIConstraints: *MediaType HPPremiumPlusPhotoPapers *Duplex
+*UIConstraints: *OutputMode Draft *MediaType HPPremiumPresentationMatte120
+*UIConstraints: *MediaType HPPremiumPresentationMatte120 *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType HPBrochureAndFlyerMatte180
+*UIConstraints: *MediaType HPBrochureAndFlyerMatte180 *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType HPBrochureMatte180
+*UIConstraints: *MediaType HPBrochureMatte180 *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType HPBrochureGlossy180
+*UIConstraints: *MediaType HPBrochureGlossy180 *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType HPEverydayPhotoPaperMatte
+*UIConstraints: *MediaType HPEverydayPhotoPaperMatte *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType HPAdvancedPhotoPapers
+*UIConstraints: *MediaType HPAdvancedPhotoPapers *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType OtherPhotoPaper
+*UIConstraints: *MediaType OtherPhotoPaper *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType Cardstock
+*UIConstraints: *MediaType Cardstock *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType ThickPlainPaper
+*UIConstraints: *MediaType ThickPlainPaper *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType HPPremiumPlusPhotoPapers
+*UIConstraints: *MediaType HPPremiumPlusPhotoPapers *OutputMode Draft
+*UIConstraints: *OutputMode Draft *MediaType HPTrifoldBrochureGlossy180
+*UIConstraints: *MediaType HPTrifoldBrochureGlossy180 *OutputMode Draft
+*UIConstraints: *InputSlot Tray2 *MediaType HPPremiumPresentationMatte120
+*UIConstraints: *MediaType HPPremiumPresentationMatte120 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType HPBrochureAndFlyerMatte180
+*UIConstraints: *MediaType HPBrochureAndFlyerMatte180 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType HPBrochureMatte180
+*UIConstraints: *MediaType HPBrochureMatte180 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType HPBrochureGlossy180
+*UIConstraints: *MediaType HPBrochureGlossy180 *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType HPEverydayPhotoPaperMatte
+*UIConstraints: *MediaType HPEverydayPhotoPaperMatte *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType HPAdvancedPhotoPapers
+*UIConstraints: *MediaType HPAdvancedPhotoPapers *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType OtherPhotoPaper
+*UIConstraints: *MediaType OtherPhotoPaper *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType Cardstock
+*UIConstraints: *MediaType Cardstock *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType ThickPlainPaper
+*UIConstraints: *MediaType ThickPlainPaper *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType HPPremiumPlusPhotoPapers
+*UIConstraints: *MediaType HPPremiumPlusPhotoPapers *InputSlot Tray2
+*UIConstraints: *InputSlot Tray2 *MediaType HPTrifoldBrochureGlossy180
+*UIConstraints: *MediaType HPTrifoldBrochureGlossy180 *InputSlot Tray2
+*OpenUI *PageSize/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize Legal/US Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageSize Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageSize Statement/Statement: "<</PageSize[396 612]/ImagingBBox null>>setpagedevice"
+*PageSize FanFoldGermanLegal/Oficio 8.5x13: "<</PageSize [612 936]  /ImagingBBox null /MediaClass (8.5X13)>> setpagedevice"
+*PageSize 3x5/3x5: "<</PageSize[216 360]/ImagingBBox null>>setpagedevice"
+*PageSize 4x6/4x6: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageSize 5x7/5x7: "<</PageSize[360 504]/ImagingBBox null>>setpagedevice"
+*PageSize 5x8/5x8: "<</PageSize[360 576]/ImagingBBox null>>setpagedevice"
+*PageSize A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize A6/A6: "<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageSize B5/JIS B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageSize 100x150mm/10x15cm: "<</PageSize [288 432]  /ImagingBBox null /MediaClass (10x15cm)>> setpagedevice"
+*PageSize 216x340mm/Oficio 216x340 mm: "<</PageSize[612 964]/ImagingBBox null>>setpagedevice"
+*PageSize 195x270mm/16K 195x270 mm: "<</PageSize[553 765]/ImagingBBox null>>setpagedevice"
+*PageSize 184x260mm/16K 184x260 mm: "<</PageSize[522 737]/ImagingBBox null>>setpagedevice"
+*PageSize 7.75x10.75/16K 197x273 mm: "<</PageSize[558 774]/ImagingBBox null>>setpagedevice"
+*PageSize Postcard/Postcard (JIS): "<</PageSize[283 420]/ImagingBBox null>>setpagedevice"
+*PageSize DoublePostcardRotated/Double Postcard (JIS): "<</PageSize[420 567]/ImagingBBox null>>setpagedevice"
+*PageSize Env10/Envelope #10: "<</PageSize [297 684]  /ImagingBBox null>> setpagedevice"
+*PageSize EnvMonarch/Envelope Monarch: "<</PageSize [279 540]  /ImagingBBox null>> setpagedevice"
+*PageSize EnvISOB5/Envelope B5: "<</PageSize [499 709]  /ImagingBBox null>> setpagedevice"
+*PageSize EnvC5/Envelope C5: "<</PageSize [459 649]  /ImagingBBox null>> setpagedevice"
+*PageSize EnvC6/Envelope C6: "<</PageSize [324 460]  /ImagingBBox null>> setpagedevice"
+*PageSize EnvDL/Envelope DL: "<</PageSize [312 624]  /ImagingBBox null>> setpagedevice"
+*PageSize EnvChou3/Envelope Choukei 3: "<</PageSize [340 666]  /ImagingBBox null>> setpagedevice"
+*PageSize EnvChou4/Envelope Choukei 4: "<</PageSize [255 581]  /ImagingBBox null>> setpagedevice"
+*PageSize Env3.5x5/L 9x13 cm: "<</PageSize[252 360]/ImagingBBox null>>setpagedevice"
+*PageSize A4.FullBleed/Edge-to-Edge A4: "setmargins [0 0 0 0] <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize Letter.FullBleed/Edge-to-Edge Letter: "setmargins [0 0 0 0] <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+*OpenUI *PageRegion/Media Size: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion Letter/US Letter: "<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion Legal/US Legal: "<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageRegion Executive/Executive: "<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageRegion Statement/Statement: "<</PageSize[396 612]/ImagingBBox null>>setpagedevice"
+*PageRegion FanFoldGermanLegal/Oficio 8.5x13: "<</PageSize [612 936] /ImagingBBox null /MediaClass (8.5X13)>> setpagedevice"
+*PageRegion 3x5/3x5: "<</PageSize[216 360]/ImagingBBox null>>setpagedevice"
+*PageRegion 4x6/4x6: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageRegion 5x7/5x7: "<</PageSize[360 504]/ImagingBBox null>>setpagedevice"
+*PageRegion 5x8/5x8: "<</PageSize[360 576]/ImagingBBox null>>setpagedevice"
+*PageRegion A4/A4: "<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion A5/A5: "<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion A6/A6: "<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageRegion B5/JIS B5: "<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageRegion 100x150mm/10x15cm: "<</PageSize [288 432] /ImagingBBox null /MediaClass (10x15cm)>> setpagedevice"
+*PageRegion 216x340mm/Oficio 216x340 mm: "<</PageSize[612 964]/ImagingBBox null>>setpagedevice"
+*PageRegion 195x270mm/16K 195x270 mm: "<</PageSize[553 765]/ImagingBBox null>>setpagedevice"
+*PageRegion 184x260mm/16K 184x260 mm: "<</PageSize[522 737]/ImagingBBox null>>setpagedevice"
+*PageRegion 7.75x10.75/16K 197x273 mm: "<</PageSize[558 774]/ImagingBBox null>>setpagedevice"
+*PageRegion Postcard/Postcard (JIS): "<</PageSize[283 420]/ImagingBBox null>>setpagedevice"
+*PageRegion DoublePostcardRotated/Double Postcard (JIS): "<</PageSize[420 567]/ImagingBBox null>>setpagedevice"
+*PageRegion Env10/Envelope #10: "<</PageSize [297 684] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvMonarch/Envelope Monarch: "<</PageSize [279 540] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvISOB5/Envelope B5: "<</PageSize [499 709] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvC5/Envelope C5: "<</PageSize [459 649] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvC6/Envelope C6: "<</PageSize [324 460] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvDL/Envelope DL: "<</PageSize [312 624] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvChou3/Envelope Choukei 3: "<</PageSize [340 666] /ImagingBBox null>> setpagedevice"
+*PageRegion EnvChou4/Envelope Choukei 4: "<</PageSize [255 581] /ImagingBBox null>> setpagedevice"
+*PageRegion Env3.5x5/L 9x13 cm: "<</PageSize[252 360]/ImagingBBox null>>setpagedevice"
+*PageRegion A4.FullBleed/Edge-to-Edge A4: "setmargins [0 0 0 0] <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion Letter.FullBleed/Edge-to-Edge Letter: "setmargins [0 0 0 0] <</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+*DefaultImageableArea: Letter
+*ImageableArea Letter/US Letter: "9.359999656677 9.359999656677 602.640014648438 782.640014648438"
+*ImageableArea Legal/US Legal: "9.359999656677 9.359999656677 602.640014648438 998.640014648438"
+*ImageableArea Executive/Executive: "9.359999656677 9.359999656677 512.640014648438 746.640014648438"
+*ImageableArea Statement/Statement: "9.359999656677 9.359999656677 386.640014648438 602.640014648438"
+*ImageableArea FanFoldGermanLegal/Oficio 8.5x13: "9.359999656677 9.359999656677 602.640014648438 926.640014648438"
+*ImageableArea 3x5/3x5: "9.359999656677 9.359999656677 206.639999389648 350.640014648438"
+*ImageableArea 4x6/4x6: "9.359999656677 9.359999656677 278.640014648438 422.640014648438"
+*ImageableArea 5x7/5x7: "9.359999656677 9.359999656677 350.640014648438 494.640014648438"
+*ImageableArea 5x8/5x8: "9.359999656677 9.359999656677 350.640014648438 566.640014648438"
+*ImageableArea A4/A4: "9.359999656677 9.359999656677 585.640014648438 832.640014648438"
+*ImageableArea A5/A5: "9.359999656677 9.359999656677 410.640014648438 585.640014648438"
+*ImageableArea A6/A6: "9.359999656677 9.359999656677 287.640014648438 410.640014648438"
+*ImageableArea B5/JIS B5: "9.359999656677 9.359999656677 506.640014648438 719.640014648438"
+*ImageableArea 100x150mm/10x15cm: "9.359999656677 9.359999656677 278.640014648438 421.640014648438"
+*ImageableArea 216x340mm/Oficio 216x340 mm: "9.359999656677 9.359999656677 602.640014648438 954.640014648438"
+*ImageableArea 195x270mm/16K 195x270 mm: "9.359999656677 9.359999656677 543.640014648438 755.640014648438"
+*ImageableArea 184x260mm/16K 184x260 mm: "9.359999656677 9.359999656677 512.640014648438 727.640014648438"
+*ImageableArea 7.75x10.75/16K 197x273 mm: "9.359999656677 9.359999656677 548.640014648438 764.640014648438"
+*ImageableArea Postcard/Postcard (JIS): "9.359999656677 9.359999656677 273.640014648438 410.640014648438"
+*ImageableArea DoublePostcardRotated/Double Postcard (JIS): "9.359999656677 9.359999656677 410.640014648438 557.640014648438"
+*ImageableArea Env10/Envelope #10: "9.359999656677 9.359999656677 287.640014648438 648"
+*ImageableArea EnvMonarch/Envelope Monarch: "9.359999656677 9.359999656677 269.640014648438 504"
+*ImageableArea EnvISOB5/Envelope B5: "9.359999656677 9.359999656677 489.640014648438 673"
+*ImageableArea EnvC5/Envelope C5: "9.359999656677 9.359999656677 449.640014648438 613"
+*ImageableArea EnvC6/Envelope C6: "9.359999656677 9.359999656677 314.640014648438 424"
+*ImageableArea EnvDL/Envelope DL: "9.359999656677 9.359999656677 302.640014648438 588"
+*ImageableArea EnvChou3/Envelope Choukei 3: "9.359999656677 9.359999656677 330.640014648438 630"
+*ImageableArea EnvChou4/Envelope Choukei 4: "9.359999656677 9.359999656677 245.639999389648 545"
+*ImageableArea Env3.5x5/L 9x13 cm: "9.359999656677 9.359999656677 242.639999389648 350.640014648438"
+*ImageableArea A4.FullBleed/Edge-to-Edge A4: "0 0 595 842"
+*ImageableArea Letter.FullBleed/Edge-to-Edge Letter: "0 0 612 792"
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/US Letter: "612 792"
+*PaperDimension Legal/US Legal: "612 1008"
+*PaperDimension Executive/Executive: "522 756"
+*PaperDimension Statement/Statement: "396 612"
+*PaperDimension FanFoldGermanLegal/Oficio 8.5x13: "612 936"
+*PaperDimension 3x5/3x5: "216 360"
+*PaperDimension 4x6/4x6: "288 432"
+*PaperDimension 5x7/5x7: "360 504"
+*PaperDimension 5x8/5x8: "360 576"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension A6/A6: "297 420"
+*PaperDimension B5/JIS B5: "516 729"
+*PaperDimension 100x150mm/10x15cm: "288 431"
+*PaperDimension 216x340mm/Oficio 216x340 mm: "612 964"
+*PaperDimension 195x270mm/16K 195x270 mm: "553 765"
+*PaperDimension 184x260mm/16K 184x260 mm: "522 737"
+*PaperDimension 7.75x10.75/16K 197x273 mm: "558 774"
+*PaperDimension Postcard/Postcard (JIS): "283 420"
+*PaperDimension DoublePostcardRotated/Double Postcard (JIS): "420 567"
+*PaperDimension Env10/Envelope #10: "297 684"
+*PaperDimension EnvMonarch/Envelope Monarch: "279 540"
+*PaperDimension EnvISOB5/Envelope B5: "499 709"
+*PaperDimension EnvC5/Envelope C5: "459 649"
+*PaperDimension EnvC6/Envelope C6: "324 460"
+*PaperDimension EnvDL/Envelope DL: "312 624"
+*PaperDimension EnvChou3/Envelope Choukei 3: "340 666"
+*PaperDimension EnvChou4/Envelope Choukei 4: "255 581"
+*PaperDimension Env3.5x5/L 9x13 cm: "252 360"
+*PaperDimension A4.FullBleed/Edge-to-Edge A4: "595 842"
+*PaperDimension Letter.FullBleed/Edge-to-Edge Letter: "612 792"
+*MaxMediaWidth: "612"
+*MaxMediaHeight: "1008"
+*HWMargins: 9.359999656677 9.359999656677 9.359999656677 9.359999656677
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 216 612
+*ParamCustomPageSize Height: 2 points 360 1008
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+*OpenUI *InputSlot/Paper Source: PickOne
+*OrderDependency: 40 AnySetup *InputSlot
+*DefaultInputSlot: Auto
+*InputSlot Auto/Automatic: "
+	<</ManualFeed false /MediaPosition 7>> setpagedevice"
+*End
+*da.InputSlot Auto/Automatisk: ""
+*de.InputSlot Auto/Automatisch: ""
+*es.InputSlot Auto/Automático: ""
+*fi.InputSlot Auto/Automaattinen: ""
+*fr.InputSlot Auto/Automatique: ""
+*it.InputSlot Auto/Automatico: ""
+*ja.InputSlot Auto/自動: ""
+*ko.InputSlot Auto/자동: ""
+*nl.InputSlot Auto/Automatisch: ""
+*no.InputSlot Auto/Automatisk: ""
+*pt.InputSlot Auto/Automático: ""
+*ru.InputSlot Auto/Автоматически: ""
+*sv.InputSlot Auto/Automatiskt: ""
+*zh_CN.InputSlot Auto/自动: ""
+*zh_TW.InputSlot Auto/自動: ""
+
+*InputSlot Tray1/Tray 1: "<</MediaPosition 3 /ManualFeed false>> setpagedevice"
+*InputSlot Tray2/Tray 2: "<</MediaPosition 0 /ManualFeed false>> setpagedevice"
+*CloseUI: *InputSlot
+*OpenUI *Duplex/Two-Sided: PickOne
+*OrderDependency: 50 AnySetup *Duplex
+*DefaultDuplex: None
+*Duplex None/Off: "<</Duplex false /Tumble false>> setpagedevice"
+*Duplex DuplexNoTumble/Long-Edge Binding: "<</Duplex true /Tumble false>> setpagedevice"
+*Duplex DuplexTumble/Short-Edge Binding: "<</Duplex true /Tumble true>> setpagedevice"
+*CloseUI: *Duplex
+*OpenGroup: InstallableOptions/Installable Options
+*OpenUI *HPOption_Tray2/Tray 2: Boolean
+*OrderDependency: 0 AnySetup *HPOption_Tray2
+*DefaultHPOption_Tray2: False
+*HPOption_Tray2 True/Installed: ""
+*HPOption_Tray2 False/Not Installed: ""
+*CloseUI: *HPOption_Tray2
+*CloseGroup: InstallableOptions
+*OpenGroup: HPColorOptionsPanel/Color Options
+
+*OpenUI *OutputMode/Print Quality: PickOne
+*OrderDependency: 5 JCLSetup *OutputMode
+*DefaultOutputMode: Normal
+*OutputMode Draft/Draft: "%%"
+*OutputMode Normal/Normal: "%%"
+*OutputMode Best/Best: "%%"
+*CloseUI: *OutputMode
+
+*OpenUI *HPColorAsGray/Print Color as Gray: PickOne
+*OrderDependency: 20 JCLSetup *HPColorAsGray
+*DefaultHPColorAsGray: Off
+*HPColorAsGray Off/Off: "%%"
+*HPColorAsGray HighQuality/High Quality GrayScale: "%%"
+*HPColorAsGray BlackInkOnly/Black Ink Only: "%%"
+*CloseUI: *HPColorAsGray
+
+
+*OpenUI *HPRGBEmulation/RGB Color: PickOne
+*OrderDependency: 57 AnySetup *HPRGBEmulation
+*DefaultHPRGBEmulation: sRGB
+*HPRGBEmulation sRGB/Default (sRGB): "
+			globaldict /ColorSmartColorMatching known {
+				(MatchScreen) ColorSmartTextAdjustment
+				(MatchScreen) ColorSmartGraphicsAdjustment
+				(MatchScreen) ColorSmartImageAdjustment  } if
+			globaldict /HPTextCMYKInkSetEmulation known {
+				(SWOP) HPTextCMYKInkSetEmulation
+				(SWOP) HPGraphicsCMYKInkSetEmulation
+				(SWOP) HPImageCMYKInkSetEmulation
+			} if
+		"
+*End
+*HPRGBEmulation PhotoSRGB/Photo (sRGB): "
+			globaldict /ColorSmartColorMatching known {
+				(ImageSRGB) ColorSmartTextAdjustment
+				(ImageSRGB) ColorSmartGraphicsAdjustment
+				(ImageSRGB) ColorSmartImageAdjustment  } if
+			globaldict /HPTextCMYKInkSetEmulation known {
+				(SWOP) HPTextCMYKInkSetEmulation
+				(SWOP) HPGraphicsCMYKInkSetEmulation
+				(SWOP) HPImageCMYKInkSetEmulation
+			} if
+		"
+*End
+*HPRGBEmulation Adobe/Photo (Adobe RGB 1998): "
+			globaldict /ColorSmartColorMatching known {
+				(AdobeRGB) ColorSmartTextAdjustment
+				(AdobeRGB) ColorSmartGraphicsAdjustment
+				(AdobeRGB) ColorSmartImageAdjustment  } if
+			globaldict /HPTextCMYKInkSetEmulation known {
+				(SWOP) HPTextCMYKInkSetEmulation
+				(SWOP) HPGraphicsCMYKInkSetEmulation
+				(SWOP) HPImageCMYKInkSetEmulation
+			} if
+		"
+*End
+*HPRGBEmulation VividSRGB/Vivid (sRGB): "
+			globaldict /ColorSmartColorMatching known {
+				(Vivid) ColorSmartTextAdjustment
+				(Vivid) ColorSmartGraphicsAdjustment
+				(Vivid) ColorSmartImageAdjustment  } if
+			globaldict /HPTextCMYKInkSetEmulation known {
+				(SWOP) HPTextCMYKInkSetEmulation
+				(SWOP) HPGraphicsCMYKInkSetEmulation
+				(SWOP) HPImageCMYKInkSetEmulation
+			} if
+		"
+*End
+*CloseUI: *HPRGBEmulation
+*CloseGroup: HPColorOptionsPanel
+*OpenGroup: HPFinishingPanel/Finishing Panel
+*OpenUI *MediaType/Media Type: PickOne
+*OrderDependency: 20 AnySetup *MediaType
+*DefaultMediaType: Unspecified
+*MediaType Unspecified/Unspecified: "<</ManualFeed false /MediaType null >> setpagedevice"
+*MediaType Plain/Plain: "<</ManualFeed false /MediaType (Plain)>> setpagedevice"
+*MediaType HPPremiumPresentationMatte120/HP Premium Presentation Matte 120g: "
+		<</ManualFeed false /MediaType (HPPremMatte)>> setpagedevice"
+*End
+*MediaType HPBrochureAndFlyerMatte180/HP Brochure & Flyer Matte 180g: "
+		<</ManualFeed false /MediaType (HPBrochMatte)>> setpagedevice"
+*End
+*MediaType HPBrochureMatte180/HP Brochure Matte 180g: "
+		<</ManualFeed false /MediaType (matteBrochure)>> setpagedevice"
+*End
+*MediaType HPBrochureGlossy180/HP Brochure Glossy 180g: "
+		<</ManualFeed false /MediaType (glossyBrochure)>> setpagedevice"
+*End
+*MediaType HPEverydayPhotoPaperMatte/HP Everyday Photo Paper, Matte: "
+		<</ManualFeed false /MediaType (HPEverydayPhotoMatte)>> setpagedevice"
+*End
+*MediaType HPAdvancedPhotoPapers/HP Advanced Photo Papers: "
+		<</ManualFeed false /MediaType (HPAdvancedPhoto)>> setpagedevice"
+*End
+*MediaType OtherPhotoPaper/Other photo paper: "<</ManualFeed false /MediaType (OtherPhoto)>> setpagedevice"
+*MediaType Cardstock/Cardstock: "<</ManualFeed false /MediaType (Cardstock)>> setpagedevice"
+*MediaType ThickPlainPaper/Thick Plain Paper: "<</ManualFeed false /MediaType (thickPlain)>> setpagedevice"
+*MediaType HPPremiumPlusPhotoPapers/HP Premium Plus Photo Papers: "<</ManualFeed false /MediaType (HPPremPlusPhoto)>> setpagedevice"
+*MediaType HPTrifoldBrochureGlossy180/HP Tri-fold Brochure Glossy 180g: "<</ManualFeed false /MediaType (HP Tri Glossy 180)>> setpagedevice"
+*CloseUI: *MediaType
+*CloseGroup: HPFinishingPanel
+*da.Translation Manufacturer/HP: ""
+*da.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*da.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*da.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*da.Translation PageSize/Media Size: ""
+*da.PageSize Letter/US Letter: ""
+*da.PageSize Legal/US Legal: ""
+*da.PageSize Executive/Executive: ""
+*da.PageSize Statement/Statement: ""
+*da.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*da.PageSize 3x5/3x5: ""
+*da.PageSize 4x6/4x6: ""
+*da.PageSize 5x7/5x7: ""
+*da.PageSize 5x8/5x8: ""
+*da.PageSize A4/A4: ""
+*da.PageSize A5/A5: ""
+*da.PageSize A6/A6: ""
+*da.PageSize B5/JIS B5: ""
+*da.PageSize 100x150mm/10x15cm: ""
+*da.PageSize 216x340mm/Oficio 216x340 mm: ""
+*da.PageSize 195x270mm/16K 195x270 mm: ""
+*da.PageSize 184x260mm/16K 184x260 mm: ""
+*da.PageSize 7.75x10.75/16K 197x273 mm: ""
+*da.PageSize Postcard/Postkort (JIS): ""
+*da.PageSize DoublePostcardRotated/Dobbelt postkort (JIS): ""
+*da.PageSize Env10/Konv Comm10: ""
+*da.PageSize EnvMonarch/Konv Monarch: ""
+*da.PageSize EnvISOB5/Konv ISO B5: ""
+*da.PageSize EnvC5/Konv C5: ""
+*da.PageSize EnvC6/Konv C6: ""
+*da.PageSize EnvDL/Konv DL: ""
+*da.PageSize EnvChou3/Envelope Choukei 3: ""
+*da.PageSize EnvChou4/Envelope Choukei 4: ""
+*da.PageSize Env3.5x5/L 9x13 cm: ""
+*da.PageSize A4.FullBleed/Kant-til-kant A4: ""
+*da.PageSize Letter.FullBleed/Kant-til-kant Letter: ""
+*da.Translation InputSlot/Papirkilde: ""
+*da.InputSlot Tray1/Bakke 1: ""
+*da.InputSlot Tray2/Bakke 2: ""
+*da.Translation Duplex/Dupleks: ""
+*da.Duplex None/Fra: ""
+*da.Duplex DuplexNoTumble/Indbinding på den lange led: ""
+*da.Duplex DuplexTumble/Indbinding på den korte led: ""
+*da.Translation InstallableOptions/Installable Options: ""
+*da.Translation HPOption_Tray2/Bakke 2: ""
+*da.HPOption_Tray2 True/Installeret: ""
+*da.HPOption_Tray2 False/Ikke installeret: ""
+*da.Translation HPColorOptionsPanel/Farveindstillinger: ""
+*da.Translation HPEasyColor/HP EasyColor: ""
+*da.HPEasyColor True/Til: ""
+*da.HPEasyColor False/Fra: ""
+*da.Translation OutputMode/Udskriftskvalitet: ""
+*da.OutputMode Draft/Kladde: ""
+*da.OutputMode Normal/Normal: ""
+*da.OutputMode Best/Bedst: ""
+*da.Translation HPColorAsGray/Udskriv farve som grå: ""
+*da.HPColorAsGray Off/Fra: ""
+*da.HPColorAsGray  HighQuality/Høj kvalitet: ""
+*da.HPColorAsGray  BlackInkOnly/Kun sort blæk: ""
+*da.Translation HPRGBEmulation/RGB-farve: ""
+*da.HPRGBEmulation sRGB/Standard (sRGB): ""
+*da.HPRGBEmulation PhotoSRGB/Foto (sRGB): ""
+*da.HPRGBEmulation Adobe/Foto (Adobe RGB 1998): ""
+*da.HPRGBEmulation VividSRGB/Livlig (sRGB): ""
+*da.Translation HPFinishingPanel/Finisher-indstillinger: ""
+*da.Translation MediaType/Medietype: ""
+*da.MediaType Unspecified/Uspecificeret: ""
+*da.MediaType Plain/Almindeligt: ""
+*da.MediaType HPPremiumPresentationMatte120/HP Premium-præsentationspapir, mat 120g: ""
+*da.MediaType HPBrochureAndFlyerMatte180/HP Brochure- og reklamepapir, mat 180g: ""
+*da.MediaType HPBrochureMatte180/HP Brochure Matte 180g: ""
+*da.MediaType HPBrochureGlossy180/HP brochurepapir, Blankt 180g: ""
+*da.MediaType HPEverydayPhotoPaperMatte/HP Papir til Daglig Brug, Mat: ""
+*da.MediaType HPAdvancedPhotoPapers/HP Avanceret fotopapir: ""
+*da.MediaType OtherPhotoPaper/Andet fotopapir: ""
+*da.MediaType Cardstock/Karton: ""
+*da.MediaType ThickPlainPaper/Tykt almindeligt papir: ""
+*da.MediaType HPPremiumPlusPhotoPapers/HP Premium Plus fotopapir: ""
+*da.MediaType HPTrifoldBrochureGlossy180/HP brochurepapir foldet tre gange, Blankt, 180g: ""
+*da.cupsICCProfile RGB../sRGB Matching Profile: ""
+*da.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*da.cupsICCProfile Gray../Gray Matching Profile: ""
+*da.cupsMarkerName black/Sort: ""
+*da.cupsMarkerName yellow/Gul: ""
+*da.cupsMarkerName magenta/Magenta: ""
+*da.cupsMarkerName cyan/Cyan: ""
+*da.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*da.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*da.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*da.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*da.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*da.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*da.it.PageSize EnvChou3/Busta Choukei 3: ""
+*da.ja.PageSize EnvChou3/封筒 長形 3: ""
+*da.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*da.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*da.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*da.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*da.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*da.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*da.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*da.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*da.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*da.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*da.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*da.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*da.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*da.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*da.it.PageSize EnvChou4/Busta Choukei 4: ""
+*da.ja.PageSize EnvChou4/封筒 長形 4: ""
+*da.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*da.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*da.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*da.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*da.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*da.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*da.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*da.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*da.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*da.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*de.Translation Manufacturer/HP: ""
+*de.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*de.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*de.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*de.Translation PageSize/Media Size: ""
+*de.PageSize Letter/US Letter: ""
+*de.PageSize Legal/US Legal: ""
+*de.PageSize Executive/Executive: ""
+*de.PageSize Statement/Statement: ""
+*de.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*de.PageSize 3x5/3x5: ""
+*de.PageSize 4x6/4x6: ""
+*de.PageSize 5x7/5x7: ""
+*de.PageSize 5x8/5x8: ""
+*de.PageSize A4/A4: ""
+*de.PageSize A5/A5: ""
+*de.PageSize A6/A6: ""
+*de.PageSize B5/JIS B5: ""
+*de.PageSize 100x150mm/10x15cm: ""
+*de.PageSize 216x340mm/Oficio 216x340 mm: ""
+*de.PageSize 195x270mm/16K 195x270 mm: ""
+*de.PageSize 184x260mm/16K 184x260 mm: ""
+*de.PageSize 7.75x10.75/16K 197x273 mm: ""
+*de.PageSize Postcard/Postkarte (JIS): ""
+*de.PageSize DoublePostcardRotated/Doppelte Postkarte (JIS): ""
+*de.PageSize Env10/Umschlag Comm10: ""
+*de.PageSize EnvMonarch/Umschlag Monarch: ""
+*de.PageSize EnvISOB5/Umschlag ISO B5: ""
+*de.PageSize EnvC5/Umschlag C5: ""
+*de.PageSize EnvC6/Umschlag C6: ""
+*de.PageSize EnvDL/Umschlag DL: ""
+*de.PageSize EnvChou3/Envelope Choukei 3: ""
+*de.PageSize EnvChou4/Envelope Choukei 4: ""
+*de.PageSize Env3.5x5/L 9x13 cm: ""
+*de.PageSize A4.FullBleed/Randlos A4: ""
+*de.PageSize Letter.FullBleed/Randlos Letter: ""
+*de.Translation InputSlot/Papierquelle: ""
+*de.InputSlot Tray1/Zufuhrfach 1: ""
+*de.InputSlot Tray2/Zufuhrfach 2: ""
+*de.Translation Duplex/Beidseitig: ""
+*de.Duplex None/Aus: ""
+*de.Duplex DuplexNoTumble/Bindung oben: ""
+*de.Duplex DuplexTumble/Bindung links: ""
+*de.Translation InstallableOptions/Installable Options: ""
+*de.Translation HPOption_Tray2/Zufuhrfach 2: ""
+*de.HPOption_Tray2 True/Installiert: ""
+*de.HPOption_Tray2 False/Nicht installiert: ""
+*de.Translation HPColorOptionsPanel/Farboptionen: ""
+*de.Translation HPEasyColor/HP EasyColor: ""
+*de.HPEasyColor True/Ein: ""
+*de.HPEasyColor False/Aus: ""
+*de.Translation OutputMode/Druckqualität: ""
+*de.OutputMode Draft/Entwurf: ""
+*de.OutputMode Normal/Normal: ""
+*de.OutputMode Best/Optimal: ""
+*de.Translation HPColorAsGray/In Graustufen drucken: ""
+*de.HPColorAsGray Off/Aus: ""
+*de.HPColorAsGray  HighQuality/Hohe Qualität: ""
+*de.HPColorAsGray  BlackInkOnly/Nur schwarze Tinte: ""
+*de.Translation HPRGBEmulation/RGB-Farbe: ""
+*de.HPRGBEmulation sRGB/Standard (sRGB): ""
+*de.HPRGBEmulation PhotoSRGB/Foto (sRGB): ""
+*de.HPRGBEmulation Adobe/Foto (Adobe RGB 1998): ""
+*de.HPRGBEmulation VividSRGB/Leuchtend (sRGB): ""
+*de.Translation HPFinishingPanel/Optionen zum Fertigstellen: ""
+*de.Translation MediaType/Druckmedientyp: ""
+*de.MediaType Unspecified/Nicht bestimmt: ""
+*de.MediaType Plain/Normalpapier: ""
+*de.MediaType HPPremiumPresentationMatte120/HP Premium Präsentationspapier 120g, matt: ""
+*de.MediaType HPBrochureAndFlyerMatte180/HP Broschüren & Flyer-Papier 180g, matt: ""
+*de.MediaType HPBrochureMatte180/HP Broschürenpapier matt 180g: ""
+*de.MediaType HPBrochureGlossy180/HP Broschürenpapier, hochglänzend 180g: ""
+*de.MediaType HPEverydayPhotoPaperMatte/HP Fotopapier für den täglichen Gebrauch, matt: ""
+*de.MediaType HPAdvancedPhotoPapers/HP Advanced Fotopapier: ""
+*de.MediaType OtherPhotoPaper/Anderes Fotopapier: ""
+*de.MediaType Cardstock/Karton: ""
+*de.MediaType ThickPlainPaper/Dickes Normalpapier: ""
+*de.MediaType HPPremiumPlusPhotoPapers/HP Premium Plus Fotopapier: ""
+*de.MediaType HPTrifoldBrochureGlossy180/HP Broschürenpapier, dreifach gefaltet, hochglänzend 180g: ""
+*de.cupsICCProfile RGB../sRGB Matching Profile: ""
+*de.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*de.cupsICCProfile Gray../Gray Matching Profile: ""
+*de.cupsMarkerName black/Schwarz: ""
+*de.cupsMarkerName yellow/Gelb: ""
+*de.cupsMarkerName magenta/Magenta: ""
+*de.cupsMarkerName cyan/Zyan: ""
+*de.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*de.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*de.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*de.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*de.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*de.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*de.it.PageSize EnvChou3/Busta Choukei 3: ""
+*de.ja.PageSize EnvChou3/封筒 長形 3: ""
+*de.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*de.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*de.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*de.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*de.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*de.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*de.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*de.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*de.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*de.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*de.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*de.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*de.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*de.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*de.it.PageSize EnvChou4/Busta Choukei 4: ""
+*de.ja.PageSize EnvChou4/封筒 長形 4: ""
+*de.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*de.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*de.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*de.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*de.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*de.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*de.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*de.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*de.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*de.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*es.Translation Manufacturer/HP: ""
+*es.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*es.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*es.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*es.Translation PageSize/Media Size: ""
+*es.PageSize Letter/US Letter: ""
+*es.PageSize Legal/US Legal: ""
+*es.PageSize Executive/Ejecutivo: ""
+*es.PageSize Statement/Declaración: ""
+*es.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*es.PageSize 3x5/3x5: ""
+*es.PageSize 4x6/4x6: ""
+*es.PageSize 5x7/5x7: ""
+*es.PageSize 5x8/5x8: ""
+*es.PageSize A4/A4: ""
+*es.PageSize A5/A5: ""
+*es.PageSize A6/A6: ""
+*es.PageSize B5/JIS B5: ""
+*es.PageSize 100x150mm/10x15cm: ""
+*es.PageSize 216x340mm/Oficio 216x340 mm: ""
+*es.PageSize 195x270mm/16K 195x270 mm: ""
+*es.PageSize 184x260mm/16K 184x260 mm: ""
+*es.PageSize 7.75x10.75/16K 197x273 mm: ""
+*es.PageSize Postcard/Tarjeta postal (JIS): ""
+*es.PageSize DoublePostcardRotated/Tarjeta postal doble (JIS): ""
+*es.PageSize Env10/Sobre Comm10: ""
+*es.PageSize EnvMonarch/Sobre Monarch: ""
+*es.PageSize EnvISOB5/Sobre ISO B5: ""
+*es.PageSize EnvC5/Sobre C5: ""
+*es.PageSize EnvC6/Sobre C6: ""
+*es.PageSize EnvDL/Sobre DL: ""
+*es.PageSize EnvChou3/Envelope Choukei 3: ""
+*es.PageSize EnvChou4/Envelope Choukei 4: ""
+*es.PageSize Env3.5x5/L 9x13 cm: ""
+*es.PageSize A4.FullBleed/Borde a borde A4: ""
+*es.PageSize Letter.FullBleed/Borde a borde Carta: ""
+*es.Translation InputSlot/Alimentación de papel: ""
+*es.InputSlot Tray1/Bandeja 1: ""
+*es.InputSlot Tray2/Bandeja 2: ""
+*es.Translation Duplex/A doble cara: ""
+*es.Duplex None/Desactivado: ""
+*es.Duplex DuplexNoTumble/Encuadernación de borde largo: ""
+*es.Duplex DuplexTumble/Encuadernación de borde corto: ""
+*es.Translation InstallableOptions/Installable Options: ""
+*es.Translation HPOption_Tray2/Bandeja 2: ""
+*es.HPOption_Tray2 True/Instalado: ""
+*es.HPOption_Tray2 False/No Instalado: ""
+*es.Translation HPColorOptionsPanel/Opciones de color: ""
+*es.Translation HPEasyColor/HP EasyColor: ""
+*es.HPEasyColor True/Activado: ""
+*es.HPEasyColor False/Desactivado: ""
+*es.Translation OutputMode/Calidad de impresión: ""
+*es.OutputMode Draft/Borrador: ""
+*es.OutputMode Normal/Normal: ""
+*es.OutputMode Best/Óptima: ""
+*es.Translation HPColorAsGray/Imprimir colores en gris: ""
+*es.HPColorAsGray Off/Desactivado: ""
+*es.HPColorAsGray  HighQuality/Alta calidad: ""
+*es.HPColorAsGray  BlackInkOnly/Sólo tinta negra: ""
+*es.Translation HPRGBEmulation/Color RGB: ""
+*es.HPRGBEmulation sRGB/Predeterminado (sRGB): ""
+*es.HPRGBEmulation PhotoSRGB/Fotografía (sRGB): ""
+*es.HPRGBEmulation Adobe/Fotografía (Adobe RGB 1998): ""
+*es.HPRGBEmulation VividSRGB/Intenso (sRGB): ""
+*es.Translation HPFinishingPanel/Acabado: ""
+*es.Translation MediaType/Tipo de sustrato: ""
+*es.MediaType Unspecified/No especificado: ""
+*es.MediaType Plain/Estándar: ""
+*es.MediaType HPPremiumPresentationMatte120/Presentaciones mate HP Premium 120g: ""
+*es.MediaType HPBrochureAndFlyerMatte180/Prospecto y octavilla HP mate 180g: ""
+*es.MediaType HPBrochureMatte180/Papel para folletos HP mate 180g: ""
+*es.MediaType HPBrochureGlossy180/Prospecto HP satinado 180g: ""
+*es.MediaType HPEverydayPhotoPaperMatte/Papel fotográfico cotidiano HP, mate: ""
+*es.MediaType HPAdvancedPhotoPapers/Papel fotográfico avanzado HP: ""
+*es.MediaType OtherPhotoPaper/Otro papel fotográfico: ""
+*es.MediaType Cardstock/Cartulina: ""
+*es.MediaType ThickPlainPaper/Papel normal grueso: ""
+*es.MediaType HPPremiumPlusPhotoPapers/Papel fotográfico HP Premium Plus: ""
+*es.MediaType HPTrifoldBrochureGlossy180/Prospecto estilo tríptico HP satinado 180g: ""
+*es.cupsICCProfile RGB../sRGB Matching Profile: ""
+*es.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*es.cupsICCProfile Gray../Gray Matching Profile: ""
+*es.cupsMarkerName black/Negro: ""
+*es.cupsMarkerName yellow/Amarillo: ""
+*es.cupsMarkerName magenta/Magenta: ""
+*es.cupsMarkerName cyan/Cian: ""
+*es.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*es.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*es.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*es.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*es.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*es.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*es.it.PageSize EnvChou3/Busta Choukei 3: ""
+*es.ja.PageSize EnvChou3/封筒 長形 3: ""
+*es.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*es.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*es.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*es.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*es.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*es.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*es.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*es.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*es.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*es.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*es.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*es.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*es.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*es.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*es.it.PageSize EnvChou4/Busta Choukei 4: ""
+*es.ja.PageSize EnvChou4/封筒 長形 4: ""
+*es.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*es.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*es.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*es.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*es.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*es.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*es.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*es.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*es.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*es.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*fi.Translation Manufacturer/HP: ""
+*fi.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*fi.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*fi.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*fi.Translation PageSize/Media Size: ""
+*fi.PageSize Letter/US Letter: ""
+*fi.PageSize Legal/US Legal: ""
+*fi.PageSize Executive/Executive: ""
+*fi.PageSize Statement/Statement: ""
+*fi.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*fi.PageSize 3x5/3x5: ""
+*fi.PageSize 4x6/4x6: ""
+*fi.PageSize 5x7/5x7: ""
+*fi.PageSize 5x8/5x8: ""
+*fi.PageSize A4/A4: ""
+*fi.PageSize A5/A5: ""
+*fi.PageSize A6/A6: ""
+*fi.PageSize B5/JIS B5: ""
+*fi.PageSize 100x150mm/10x15cm: ""
+*fi.PageSize 216x340mm/Oficio 216x340 mm: ""
+*fi.PageSize 195x270mm/16K 195x270 mm: ""
+*fi.PageSize 184x260mm/16K 184x260 mm: ""
+*fi.PageSize 7.75x10.75/16K 197x273 mm: ""
+*fi.PageSize Postcard/Postikortti (JIS): ""
+*fi.PageSize DoublePostcardRotated/Kaksinkert. postikortti (JIS): ""
+*fi.PageSize Env10/Kirjekuori Comm10: ""
+*fi.PageSize EnvMonarch/Kirjekuori Monarch: ""
+*fi.PageSize EnvISOB5/Kirjekuori ISO B5: ""
+*fi.PageSize EnvC5/Kirjekuori C5: ""
+*fi.PageSize EnvC6/Kirjekuori C6: ""
+*fi.PageSize EnvDL/Kirjekuori DL: ""
+*fi.PageSize EnvChou3/Envelope Choukei 3: ""
+*fi.PageSize EnvChou4/Envelope Choukei 4: ""
+*fi.PageSize Env3.5x5/L 9x13 cm: ""
+*fi.PageSize A4.FullBleed/Reunasta reunaan A4: ""
+*fi.PageSize Letter.FullBleed/Reunasta reunaan letter: ""
+*fi.Translation InputSlot/Paperilähde: ""
+*fi.InputSlot Tray1/Lokero 1: ""
+*fi.InputSlot Tray2/Lokero 2: ""
+*fi.Translation Duplex/Kaksipuolinen: ""
+*fi.Duplex None/Ei käytössä: ""
+*fi.Duplex DuplexNoTumble/Sidonta-pitkäreuna: ""
+*fi.Duplex DuplexTumble/Sidonta-lyhytreuna: ""
+*fi.Translation InstallableOptions/Installable Options: ""
+*fi.Translation HPOption_Tray2/Lokero 2: ""
+*fi.HPOption_Tray2 True/Asennettu: ""
+*fi.HPOption_Tray2 False/Ei asennettu: ""
+*fi.Translation HPColorOptionsPanel/Väriasetukset: ""
+*fi.Translation OutputMode/Tulostuslaatu: ""
+*fi.OutputMode Draft/Vedos: ""
+*fi.OutputMode Normal/Normaali: ""
+*fi.OutputMode Best/Paras: ""
+*fi.Translation HPColorAsGray/Tulosta värit harmaina: ""
+*fi.HPColorAsGray True/Käytössä: ""
+*fi.HPColorAsGray Off/Ei käytössä: ""
+*fi.HPColorAsGray  HighQuality/Korkea laatu: ""
+*fi.HPColorAsGray  BlackInkOnly/Vain musta muste: ""
+*fi.Translation HPRGBEmulation/RGB-väri: ""
+*fi.HPRGBEmulation sRGB/Oletus (sRGB): ""
+*fi.HPRGBEmulation PhotoSRGB/Valokuva (sRGB): ""
+*fi.HPRGBEmulation Adobe/Valokuva (Adobe RGB 1998): ""
+*fi.HPRGBEmulation VividSRGB/Kirkas (sRGB): ""
+*fi.Translation HPFinishingPanel/Viimeistelyasetukset: ""
+*fi.Translation MediaType/Tulostusmateriaali: ""
+*fi.MediaType Unspecified/Määrittämätön: ""
+*fi.MediaType Plain/Tavallinen: ""
+*fi.MediaType HPPremiumPresentationMatte120/HP Premium -esitysmattapaperi 120g: ""
+*fi.MediaType HPBrochureAndFlyerMatte180/HP<3A>n matta esite- ja mainospaperi 180g: ""
+*fi.MediaType HPBrochureMatte180/HP<3A>n esite, matta, 180g: ""
+*fi.MediaType HPBrochureGlossy180/HP<3A>n kiiltävä esite 180g: ""
+*fi.MediaType HPEverydayPhotoPaperMatte/HP<3A>n tavallinen valokuvapaperi, matta: ""
+*fi.MediaType HPAdvancedPhotoPapers/HP<3A>n erikoisvalokuvapaperit: ""
+*fi.MediaType OtherPhotoPaper/Otro papel fotográfico: ""
+*fi.MediaType Cardstock/Korttipaperi: ""
+*fi.MediaType ThickPlainPaper/Paksu paperi: ""
+*fi.MediaType HPPremiumPlusPhotoPapers/HP Premium Plus -valokuvapaperit: ""
+*fi.MediaType HPTrifoldBrochureGlossy180/HP<3A>n kolminkertainen esite 180g: ""
+*fi.cupsICCProfile RGB../sRGB Matching Profile: ""
+*fi.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*fi.cupsICCProfile Gray../Gray Matching Profile: ""
+*fi.cupsMarkerName black/Musta: ""
+*fi.cupsMarkerName yellow/Keltainen: ""
+*fi.cupsMarkerName magenta/Magenta: ""
+*fi.cupsMarkerName cyan/Syaani: ""
+*fi.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*fi.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*fi.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*fi.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*fi.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*fi.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*fi.it.PageSize EnvChou3/Busta Choukei 3: ""
+*fi.ja.PageSize EnvChou3/封筒 長形 3: ""
+*fi.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*fi.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*fi.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*fi.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*fi.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*fi.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*fi.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*fi.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*fi.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*fi.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*fi.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*fi.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*fi.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*fi.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*fi.it.PageSize EnvChou4/Busta Choukei 4: ""
+*fi.ja.PageSize EnvChou4/封筒 長形 4: ""
+*fi.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*fi.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*fi.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*fi.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*fi.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*fi.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*fi.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*fi.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*fi.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*fi.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*fr.Translation Manufacturer/HP: ""
+*fr.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*fr.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*fr.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*fr.Translation PageSize/Media Size: ""
+*fr.PageSize Letter/US Letter: ""
+*fr.PageSize Legal/US Legal: ""
+*fr.PageSize Executive/Exécutif: ""
+*fr.PageSize Statement/Relevé: ""
+*fr.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*fr.PageSize 3x5/3x5: ""
+*fr.PageSize 4x6/4x6: ""
+*fr.PageSize 5x7/5x7: ""
+*fr.PageSize 5x8/5x8: ""
+*fr.PageSize A4/A4: ""
+*fr.PageSize A5/A5: ""
+*fr.PageSize A6/A6: ""
+*fr.PageSize B5/JIS B5: ""
+*fr.PageSize 100x150mm/10x15cm: ""
+*fr.PageSize 216x340mm/Oficio 216x340 mm: ""
+*fr.PageSize 195x270mm/16K 195x270 mm: ""
+*fr.PageSize 184x260mm/16K 184x260 mm: ""
+*fr.PageSize 7.75x10.75/16K 197x273 mm: ""
+*fr.PageSize Postcard/Carte postale (JIS): ""
+*fr.PageSize DoublePostcardRotated/Carte postale double (JIS): ""
+*fr.PageSize Env10/Enveloppe Comm10: ""
+*fr.PageSize EnvMonarch/Enveloppe Monarch: ""
+*fr.PageSize EnvISOB5/Enveloppe ISO B5: ""
+*fr.PageSize EnvC5/Enveloppe C5: ""
+*fr.PageSize EnvC6/Enveloppe C6: ""
+*fr.PageSize EnvDL/Enveloppe DL: ""
+*fr.PageSize EnvChou3/Envelope Choukei 3: ""
+*fr.PageSize EnvChou4/Envelope Choukei 4: ""
+*fr.PageSize Env3.5x5/L 9x13 cm: ""
+*fr.PageSize A4.FullBleed/A4 bord à bord: ""
+*fr.PageSize Letter.FullBleed/Letter bord à bord: ""
+*fr.Translation InputSlot/Source du papier: ""
+*fr.InputSlot Tray1/Bac 1: ""
+*fr.InputSlot Tray2/Bac 2: ""
+*fr.Translation Duplex/Recto verso: ""
+*fr.Duplex None/Désactivé: ""
+*fr.Duplex DuplexNoTumble/Reliure côté long: ""
+*fr.Duplex DuplexTumble/Reliure côté court: ""
+*fr.Translation InstallableOptions/Installable Options: ""
+*fr.Translation HPOption_Tray2/Bac 2: ""
+*fr.HPOption_Tray2 True/Installé: ""
+*fr.HPOption_Tray2 False/Non installé: ""
+*fr.Translation HPColorOptionsPanel/Options de couleur: ""
+*fr.Translation OutputMode/Qualité d'impression: ""
+*fr.OutputMode Draft/Ebauche: ""
+*fr.OutputMode Normal/Normal: ""
+*fr.OutputMode Best/Optimale: ""
+*fr.Translation HPColorAsGray/Imprimer couleur en gris: ""
+*fr.HPColorAsGray Off/Désactivé: ""
+*fr.HPColorAsGray  HighQuality/Qualité élevée: ""
+*fr.HPColorAsGray  BlackInkOnly/Encre noire uniquement: ""
+*fr.Translation HPRGBEmulation/Couleur RGB: ""
+*fr.HPRGBEmulation sRGB/Par défaut (sRGB): ""
+*fr.HPRGBEmulation PhotoSRGB/Photo (sRGB): ""
+*fr.HPRGBEmulation Adobe/Photo (Adobe RGB 1998): ""
+*fr.HPRGBEmulation VividSRGB/Vive (sRGB): ""
+*fr.Translation HPFinishingPanel/Finition: ""
+*fr.Translation MediaType/Type de support: ""
+*fr.MediaType Unspecified/Non spécifié: ""
+*fr.MediaType Plain/Ordinaire: ""
+*fr.MediaType HPPremiumPresentationMatte120/Papier mat pour présentation HP Premium 120g: ""
+*fr.MediaType HPBrochureAndFlyerMatte180/Papier pour brochure et dépliant HP, mat 180g: ""
+*fr.MediaType HPBrochureMatte180/Papier mat HP Brochure 180g: ""
+*fr.MediaType HPBrochureGlossy180/HP Brochure Brillant 180g: ""
+*fr.MediaType HPEverydayPhotoPaperMatte/Papier photo polyvalent HP, mat: ""
+*fr.MediaType HPAdvancedPhotoPapers/Papiers photo avancés HP: ""
+*fr.MediaType OtherPhotoPaper/Autre papier photo: ""
+*fr.MediaType Cardstock/Papier cartonné: ""
+*fr.MediaType ThickPlainPaper/Papier ordinaire épais: ""
+*fr.MediaType HPPremiumPlusPhotoPapers/Papier photo HP Premium Plus: ""
+*fr.MediaType HPTrifoldBrochureGlossy180/Papier pour brochure plié en trois HP, brillant, 180g: ""
+*fr.cupsICCProfile RGB../sRGB Matching Profile: ""
+*fr.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*fr.cupsICCProfile Gray../Gray Matching Profile: ""
+*fr.cupsMarkerName black/Noir: ""
+*fr.cupsMarkerName yellow/Jaune: ""
+*fr.cupsMarkerName magenta/Magenta: ""
+*fr.cupsMarkerName cyan/Cyan: ""
+*fr.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*fr.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*fr.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*fr.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*fr.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*fr.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*fr.it.PageSize EnvChou3/Busta Choukei 3: ""
+*fr.ja.PageSize EnvChou3/封筒 長形 3: ""
+*fr.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*fr.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*fr.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*fr.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*fr.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*fr.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*fr.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*fr.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*fr.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*fr.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*fr.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*fr.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*fr.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*fr.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*fr.it.PageSize EnvChou4/Busta Choukei 4: ""
+*fr.ja.PageSize EnvChou4/封筒 長形 4: ""
+*fr.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*fr.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*fr.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*fr.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*fr.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*fr.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*fr.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*fr.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*fr.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*fr.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*it.Translation Manufacturer/HP: ""
+*it.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*it.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*it.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*it.Translation PageSize/Media Size: ""
+*it.PageSize Letter/US Letter: ""
+*it.PageSize Legal/US Legal: ""
+*it.PageSize Executive/Executive: ""
+*it.PageSize Statement/Dichiarazione: ""
+*it.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*it.PageSize 3x5/3x5: ""
+*it.PageSize 4x6/4x6: ""
+*it.PageSize 5x7/5x7: ""
+*it.PageSize 5x8/5x8: ""
+*it.PageSize A4/A4: ""
+*it.PageSize A5/A5: ""
+*it.PageSize A6/A6: ""
+*it.PageSize B5/JIS B5: ""
+*it.PageSize 100x150mm/10x15cm: ""
+*it.PageSize 216x340mm/Oficio 216x340 mm: ""
+*it.PageSize 195x270mm/16K 195x270 mm: ""
+*it.PageSize 184x260mm/16K 184x260 mm: ""
+*it.PageSize 7.75x10.75/16K 197x273 mm: ""
+*it.PageSize Postcard/Cartolina (JIS): ""
+*it.PageSize DoublePostcardRotated/Cartolina doppia (JIS): ""
+*it.PageSize Env10/Busta Comm10: ""
+*it.PageSize EnvMonarch/Busta Monarch: ""
+*it.PageSize EnvISOB5/Busta ISO B5: ""
+*it.PageSize EnvC5/Busta C5: ""
+*it.PageSize EnvC6/Busta C6: ""
+*it.PageSize EnvDL/Busta DL: ""
+*it.PageSize EnvChou3/Envelope Choukei 3: ""
+*it.PageSize EnvChou4/Envelope Choukei 4: ""
+*it.PageSize Env3.5x5/L 9x13 cm: ""
+*it.PageSize A4.FullBleed/Bordo a bordo A4: ""
+*it.PageSize Letter.FullBleed/Bordo a bordo Lettera: ""
+*it.Translation InputSlot/Alimentazione della carta: ""
+*it.InputSlot Tray1/Vassoio 1: ""
+*it.InputSlot Tray2/Vassoio 2: ""
+*it.Translation Duplex/Fronte-retro: ""
+*it.Duplex None/Disattivato: ""
+*it.Duplex DuplexNoTumble/Rilegatura con taglio largo: ""
+*it.Duplex DuplexTumble/Rilegatura con taglio stretto: ""
+*it.Translation InstallableOptions/Installable Options: ""
+*it.Translation HPOption_Tray2/Vassoio 2: ""
+*it.HPOption_Tray2 True/Installato: ""
+*it.HPOption_Tray2 False/Non installato: ""
+*it.Translation HPColorOptionsPanel/Opzioni colore: ""
+*it.Translation OutputMode/Qualità di stampa: ""
+*it.OutputMode Draft/Bozza: ""
+*it.OutputMode Normal/Normale: ""
+*it.OutputMode Best/Ottima: ""
+*it.Translation HPColorAsGray/Stampa colore in grigio: ""
+*it.HPColorAsGray Off/Disattivato: ""
+*it.HPColorAsGray  HighQuality/Alta qualità: ""
+*it.HPColorAsGray  BlackInkOnly/Solo inchiostro nero: ""
+*it.Translation HPRGBEmulation/Colore RGB: ""
+*it.HPRGBEmulation sRGB/Predefinito (sRGB): ""
+*it.HPRGBEmulation PhotoSRGB/Foto (sRGB): ""
+*it.HPRGBEmulation Adobe/Foto (Adobe RGB 1998): ""
+*it.HPRGBEmulation VividSRGB/Brillante (sRGB): ""
+*it.Translation HPFinishingPanel/Finitura: ""
+*it.Translation MediaType/Tipo di supporto: ""
+*it.MediaType Unspecified/Non specificato: ""
+*it.MediaType Plain/Normale: ""
+*it.MediaType HPPremiumPresentationMatte120/Carta opaca per presentazioni HP alta qual 120g: ""
+*it.MediaType HPBrochureAndFlyerMatte180/Carta HP per brochure e pieghevoli, opaca 180g: ""
+*it.MediaType HPBrochureMatte180/Carta HP per brochure opaca 180g: ""
+*it.MediaType HPBrochureGlossy180/Brochure lucida 180g HP: ""
+*it.MediaType HPEverydayPhotoPaperMatte/Carta fotografica per uso quotidiano HP, opaca: ""
+*it.MediaType HPAdvancedPhotoPapers/Carte fotografiche ottimizzate HP: ""
+*it.MediaType OtherPhotoPaper/Altra carta fotografica: ""
+*it.MediaType Cardstock/Cartoncino: ""
+*it.MediaType ThickPlainPaper/Carta comune spessa: ""
+*it.MediaType HPPremiumPlusPhotoPapers/Carta fotografica HP massima qualità: ""
+*it.MediaType HPTrifoldBrochureGlossy180/Brochure lucida piegata in tre 180g HP: ""
+*it.cupsICCProfile RGB../sRGB Matching Profile: ""
+*it.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*it.cupsICCProfile Gray../Gray Matching Profile: ""
+*it.cupsMarkerName black/Nero: ""
+*it.cupsMarkerName yellow/Giallo: ""
+*it.cupsMarkerName magenta/Magenta: ""
+*it.cupsMarkerName cyan/Ciano: ""
+*it.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*it.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*it.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*it.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*it.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*it.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*it.it.PageSize EnvChou3/Busta Choukei 3: ""
+*it.ja.PageSize EnvChou3/封筒 長形 3: ""
+*it.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*it.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*it.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*it.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*it.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*it.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*it.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*it.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*it.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*it.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*it.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*it.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*it.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*it.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*it.it.PageSize EnvChou4/Busta Choukei 4: ""
+*it.ja.PageSize EnvChou4/封筒 長形 4: ""
+*it.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*it.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*it.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*it.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*it.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*it.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*it.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*it.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*it.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*it.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*ja.Translation Manufacturer/HP: ""
+*ja.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*ja.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*ja.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*ja.Translation PageSize/Media Size: ""
+*ja.PageSize Letter/US Letter: ""
+*ja.PageSize Legal/US Legal: ""
+*ja.PageSize Executive/エグゼクティブ: ""
+*ja.PageSize Statement/ステートメント: ""
+*ja.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*ja.PageSize 3x5/3x5: ""
+*ja.PageSize 4x6/4x6: ""
+*ja.PageSize 5x7/5x7: ""
+*ja.PageSize 5x8/5x8: ""
+*ja.PageSize A4/A4: ""
+*ja.PageSize A5/A5: ""
+*ja.PageSize A6/A6: ""
+*ja.PageSize B5/JIS B5: ""
+*ja.PageSize 100x150mm/10x15cm: ""
+*ja.PageSize 216x340mm/Oficio 216x340 mm: ""
+*ja.PageSize 195x270mm/16K 195x270 mm: ""
+*ja.PageSize 184x260mm/16K 184x260 mm: ""
+*ja.PageSize 7.75x10.75/16K 197x273 mm: ""
+*ja.PageSize Postcard/はがき (JIS): ""
+*ja.PageSize DoublePostcardRotated/往復はがき (JIS): ""
+*ja.PageSize Env10/封筒 Comm10: ""
+*ja.PageSize EnvMonarch/封筒 Monarch: ""
+*ja.PageSize EnvISOB5/封筒 ISO B5: ""
+*ja.PageSize EnvC5/封筒 C5: ""
+*ja.PageSize EnvC6/封筒 C6: ""
+*ja.PageSize EnvDL/封筒 DL: ""
+*ja.PageSize EnvChou3/Envelope Choukei 3: ""
+*ja.PageSize EnvChou4/Envelope Choukei 4: ""
+*ja.PageSize Env3.5x5/L 9x13 cm: ""
+*ja.PageSize A4.FullBleed/最小マージン A4: ""
+*ja.PageSize Letter.FullBleed/最小マージン レター: ""
+*ja.Translation InputSlot/給紙元: ""
+*ja.InputSlot Tray1/トレイ 1: ""
+*ja.InputSlot Tray2/トレイ 2: ""
+*ja.Translation Duplex/両面: ""
+*ja.Duplex None/オフ: ""
+*ja.Duplex DuplexNoTumble/長辺とじ: ""
+*ja.Duplex DuplexTumble/短辺とじ: ""
+*ja.Translation InstallableOptions/Installable Options: ""
+*ja.Translation HPOption_Tray2/トレイ 2: ""
+*ja.HPOption_Tray2 True/インストール済: ""
+*ja.HPOption_Tray2 False/インストールされていない: ""
+*ja.Translation HPColorOptionsPanel/カラー オプション: ""
+*ja.Translation OutputMode/印刷品質: ""
+*ja.OutputMode Draft/ドラフト: ""
+*ja.OutputMode Normal/標準: ""
+*ja.OutputMode Best/高品質: ""
+*ja.Translation HPColorAsGray/グレー印刷: ""
+*ja.HPColorAsGray Off/オフ: ""
+*ja.HPColorAsGray  HighQuality/高品質: ""
+*ja.HPColorAsGray  BlackInkOnly/黒プリントカートリッジのみ: ""
+*ja.Translation HPRGBEmulation/RGB カラー: ""
+*ja.HPRGBEmulation sRGB/デフォルト (sRGB): ""
+*ja.HPRGBEmulation PhotoSRGB/フォト (sRGB): ""
+*ja.HPRGBEmulation Adobe/フォト (Adobe RGB 1998): ""
+*ja.HPRGBEmulation VividSRGB/鮮明 (sRGB): ""
+*ja.Translation HPFinishingPanel/仕上げオプション: ""
+*ja.Translation MediaType/用紙の種類: ""
+*ja.MediaType Unspecified/指定なし: ""
+*ja.MediaType Plain/普通用紙: ""
+*ja.MediaType HPPremiumPresentationMatte120/HP プレミアムプレゼンテーションつや消し用紙 120g: ""
+*ja.MediaType HPBrochureAndFlyerMatte180/HP ブローシャ & フライヤ用紙 (つや消し): ""
+*ja.MediaType HPBrochureMatte180/HP ブローシャ用紙 (つや消し) 180g: ""
+*ja.MediaType HPBrochureGlossy180/HP ブローシャ用紙 (光沢) 180g: ""
+*ja.MediaType HPEverydayPhotoPaperMatte/エヴリデイフォト用紙 (つや消し): ""
+*ja.MediaType HPAdvancedPhotoPapers/HP アドバンスフォト用紙: ""
+*ja.MediaType OtherPhotoPaper/その他のフォト用紙: ""
+*ja.MediaType Cardstock/厚紙: ""
+*ja.MediaType ThickPlainPaper/厚手普通用紙: ""
+*ja.MediaType HPPremiumPlusPhotoPapers/プレミアムプラスフォト用紙: ""
+*ja.MediaType HPTrifoldBrochureGlossy180/HP 3 つ折りブローシャ用紙 (光沢) 180g: ""
+*ja.cupsICCProfile RGB../sRGB Matching Profile: ""
+*ja.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*ja.cupsICCProfile Gray../Gray Matching Profile: ""
+*ja.cupsMarkerName black/黒: ""
+*ja.cupsMarkerName yellow/イエロー: ""
+*ja.cupsMarkerName magenta/マゼンタ: ""
+*ja.cupsMarkerName cyan/シアン: ""
+*ja.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*ja.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*ja.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*ja.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*ja.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*ja.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*ja.it.PageSize EnvChou3/Busta Choukei 3: ""
+*ja.ja.PageSize EnvChou3/封筒 長形 3: ""
+*ja.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*ja.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*ja.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*ja.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*ja.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*ja.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*ja.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*ja.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*ja.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*ja.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*ja.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*ja.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*ja.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*ja.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*ja.it.PageSize EnvChou4/Busta Choukei 4: ""
+*ja.ja.PageSize EnvChou4/封筒 長形 4: ""
+*ja.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*ja.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*ja.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*ja.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*ja.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*ja.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*ja.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*ja.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*ja.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*ja.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*ko.Translation Manufacturer/HP: ""
+*ko.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*ko.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*ko.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*ko.Translation PageSize/Media Size: ""
+*ko.PageSize Letter/US Letter: ""
+*ko.PageSize Legal/US Legal: ""
+*ko.PageSize Executive/Executive: ""
+*ko.PageSize Statement/2절 레터: ""
+*ko.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*ko.PageSize 3x5/3x5: ""
+*ko.PageSize 4x6/4x6: ""
+*ko.PageSize 5x7/5x7: ""
+*ko.PageSize 5x8/5x8: ""
+*ko.PageSize A4/A4: ""
+*ko.PageSize A5/A5: ""
+*ko.PageSize A6/A6: ""
+*ko.PageSize B5/JIS B5: ""
+*ko.PageSize 100x150mm/10x15cm: ""
+*ko.PageSize 216x340mm/Oficio 216x340 mm: ""
+*ko.PageSize 195x270mm/16K 195x270 mm: ""
+*ko.PageSize 184x260mm/16K 184x260 mm: ""
+*ko.PageSize 7.75x10.75/16K 197x273 mm: ""
+*ko.PageSize Postcard/우편엽서 (JIS): ""
+*ko.PageSize DoublePostcardRotated/양면 엽서 (JIS): ""
+*ko.PageSize Env10/Comm10 봉투: ""
+*ko.PageSize EnvMonarch/Monarch 봉투: ""
+*ko.PageSize EnvISOB5/ISO B5 봉투: ""
+*ko.PageSize EnvC5/C5 봉투: ""
+*ko.PageSize EnvC6/C6 봉투: ""
+*ko.PageSize EnvDL/DL 봉투: ""
+*ko.PageSize EnvChou3/Envelope Choukei 3: ""
+*ko.PageSize EnvChou4/Envelope Choukei 4: ""
+*ko.PageSize Env3.5x5/L 9x13 cm: ""
+*ko.PageSize A4.FullBleed/A4 가장자리까지 인쇄: ""
+*ko.PageSize Letter.FullBleed/레터 가장자리까지 인쇄: ""
+*ko.Translation InputSlot/용지함: ""
+*ko.InputSlot Tray1/용지함 1: ""
+*ko.InputSlot Tray2/용지함 2: ""
+*ko.Translation Duplex/양면: ""
+*ko.Duplex None/꺼짐: ""
+*ko.Duplex DuplexNoTumble/긴-가장자리 제본선: ""
+*ko.Duplex DuplexTumble/짧은-가장자리 제본선: ""
+*ko.Translation InstallableOptions/Installable Options: ""
+*ko.Translation HPOption_Tray2/용지함 2: ""
+*ko.HPOption_Tray2 True/설치됨: ""
+*ko.HPOption_Tray2 False/설치되지 않음: ""
+*ko.Translation HPColorOptionsPanel/색상 옵션: ""
+*ko.Translation OutputMode/인쇄 품질: ""
+*ko.OutputMode Draft/초안: ""
+*ko.OutputMode Normal/보통: ""
+*ko.OutputMode Best/최상: ""
+*ko.Translation HPColorAsGray/컬러를 흑백음영으로 인쇄: ""
+*ko.HPColorAsGray Off/꺼짐: ""
+*ko.HPColorAsGray  HighQuality/고품질: ""
+*ko.HPColorAsGray  BlackInkOnly/검정 잉크만: ""
+*ko.Translation HPRGBEmulation/RGB 색상: ""
+*ko.HPRGBEmulation sRGB/기본값(sRGB): ""
+*ko.HPRGBEmulation PhotoSRGB/사진(sRGB): ""
+*ko.HPRGBEmulation Adobe/사진(Adobe RGB 1998): ""
+*ko.HPRGBEmulation VividSRGB/선명하게 (sRGB): ""
+*ko.Translation HPFinishingPanel/마감장치 옵션: ""
+*ko.Translation MediaType/용지 종류: ""
+*ko.MediaType Unspecified/지정되지 않음: ""
+*ko.MediaType Plain/일반용지: ""
+*ko.MediaType HPPremiumPresentationMatte120/HP 프리미엄 프리젠테이션 무광 120g: ""
+*ko.MediaType HPBrochureAndFlyerMatte180/HP 브로셔 및 플라이어 무광 180g: ""
+*ko.MediaType HPBrochureMatte180/HP 브로셔 무광택지 180g: ""
+*ko.MediaType HPBrochureGlossy180/HP 광택 브로셔 180g: ""
+*ko.MediaType HPEverydayPhotoPaperMatte/HP 고속표준 인화지, 무광택: ""
+*ko.MediaType HPAdvancedPhotoPapers/HP 어드밴스드 포토용지: ""
+*ko.MediaType OtherPhotoPaper/기타 인화지: ""
+*ko.MediaType Cardstock/마분지: ""
+*ko.MediaType ThickPlainPaper/두꺼운 일반 용지: ""
+*ko.MediaType HPPremiumPlusPhotoPapers/HP 최고급 인화지: ""
+*ko.MediaType HPTrifoldBrochureGlossy180/HP 3중 접기 광택 브로셔 180g: ""
+*ko.cupsICCProfile RGB../sRGB Matching Profile: ""
+*ko.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*ko.cupsICCProfile Gray../Gray Matching Profile: ""
+*ko.cupsMarkerName black/검정색: ""
+*ko.cupsMarkerName yellow/노랑색: ""
+*ko.cupsMarkerName magenta/마젠타색: ""
+*ko.cupsMarkerName cyan/시안색: ""
+*ko.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*ko.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*ko.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*ko.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*ko.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*ko.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*ko.it.PageSize EnvChou3/Busta Choukei 3: ""
+*ko.ja.PageSize EnvChou3/封筒 長形 3: ""
+*ko.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*ko.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*ko.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*ko.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*ko.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*ko.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*ko.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*ko.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*ko.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*ko.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*ko.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*ko.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*ko.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*ko.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*ko.it.PageSize EnvChou4/Busta Choukei 4: ""
+*ko.ja.PageSize EnvChou4/封筒 長形 4: ""
+*ko.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*ko.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*ko.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*ko.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*ko.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*ko.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*ko.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*ko.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*ko.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*ko.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*no.Translation Manufacturer/HP: ""
+*no.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*no.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*no.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*no.Translation PageSize/Media Size: ""
+*no.PageSize Letter/US Letter: ""
+*no.PageSize Legal/US Legal: ""
+*no.PageSize Executive/Executive: ""
+*no.PageSize Statement/1/2 Letter: ""
+*no.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*no.PageSize 3x5/3x5: ""
+*no.PageSize 4x6/4x6: ""
+*no.PageSize 5x7/5x7: ""
+*no.PageSize 5x8/5x8: ""
+*no.PageSize A4/A4: ""
+*no.PageSize A5/A5: ""
+*no.PageSize A6/A6: ""
+*no.PageSize B5/JIS B5: ""
+*no.PageSize 100x150mm/10x15cm: ""
+*no.PageSize 216x340mm/Oficio 216x340 mm: ""
+*no.PageSize 195x270mm/16K 195x270 mm: ""
+*no.PageSize 184x260mm/16K 184x260 mm: ""
+*no.PageSize 7.75x10.75/16K 197x273 mm: ""
+*no.PageSize Postcard/Postkort (JIS): ""
+*no.PageSize DoublePostcardRotated/Dobbelt postkort (JIS): ""
+*no.PageSize Env10/Comm10-konvolutt: ""
+*no.PageSize EnvMonarch/Monarch-konvolutt: ""
+*no.PageSize EnvISOB5/B5-konvolutt: ""
+*no.PageSize EnvC5/C5-konvolutt: ""
+*no.PageSize EnvC6/C6-konvolutt: ""
+*no.PageSize EnvDL/DL-konvolutt: ""
+*no.PageSize EnvChou3/Envelope Choukei 3: ""
+*no.PageSize EnvChou4/Envelope Choukei 4: ""
+*no.PageSize Env3.5x5/L 9x13 cm: ""
+*no.PageSize A4.FullBleed/Kant til kant A4: ""
+*no.PageSize Letter.FullBleed/Kant til kant Letter: ""
+*no.Translation InputSlot/Arkmating: ""
+*no.InputSlot Tray1/Skuff 1: ""
+*no.InputSlot Tray2/Skuff 2: ""
+*no.Translation Duplex/Tosidig: ""
+*no.Duplex None/Av: ""
+*no.Duplex DuplexNoTumble/Innbinding på langsiden: ""
+*no.Duplex DuplexTumble/Innbinding på kortsiden: ""
+*no.Translation InstallableOptions/Installable Options: ""
+*no.Translation HPOption_Tray2/Skuff 2: ""
+*no.HPOption_Tray2 True/Installert: ""
+*no.HPOption_Tray2 False/Ikke installert: ""
+*no.Translation HPColorOptionsPanel/Fargealternativer: ""
+*no.Translation OutputMode/Utskriftskvalitet: ""
+*no.OutputMode Draft/Kladd: ""
+*no.OutputMode Normal/Normal: ""
+*no.OutputMode Best/Best: ""
+*no.Translation HPColorAsGray/Skriv ut farger i grått: ""
+*no.HPColorAsGray Off/Av: ""
+*no.HPColorAsGray  HighQuality/Høy kvalitet: ""
+*no.HPColorAsGray  BlackInkOnly/Bare svart blekk: ""
+*no.Translation HPRGBEmulation/RGB-farge: ""
+*no.HPRGBEmulation sRGB/Standard (sRGB): ""
+*no.HPRGBEmulation PhotoSRGB/Foto (sRGB): ""
+*no.HPRGBEmulation Adobe/Foto (Adobe RGB 1998): ""
+*no.HPRGBEmulation VividSRGB/Sterk (sRGB): ""
+*no.Translation HPFinishingPanel/Etterbeh.alternativer: ""
+*no.Translation MediaType/Utskriftsmateriale: ""
+*no.MediaType Unspecified/Uspesifisert: ""
+*no.MediaType Plain/Vanlig: ""
+*no.MediaType HPPremiumPresentationMatte120/HP Premium presentasjon matt, 120g: ""
+*no.MediaType HPBrochureAndFlyerMatte180/HP Brosjyre og flygeblad matt, 180g: ""
+*no.MediaType HPBrochureMatte180/HP Brochure, matt 180g: ""
+*no.MediaType HPBrochureGlossy180/HP-brosjyre, glanset, 180g: ""
+*no.MediaType HPEverydayPhotoPaperMatte/HP Fotopapir for daglig bruk, matt: ""
+*no.MediaType HPAdvancedPhotoPapers/HP Avansert fotopapir: ""
+*no.MediaType OtherPhotoPaper/Andre fotopapirtyper: ""
+*no.MediaType Cardstock/Kartong: ""
+*no.MediaType ThickPlainPaper/Tykt vanlig papir: ""
+*no.MediaType HPPremiumPlusPhotoPapers/HP Premium Plus fotopapir: ""
+*no.MediaType HPTrifoldBrochureGlossy180/HP-brosjyre, glanset, brettet i tre, 180g: ""
+*no.cupsICCProfile RGB../sRGB Matching Profile: ""
+*no.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*no.cupsICCProfile Gray../Gray Matching Profile: ""
+*no.cupsMarkerName black/Svart: ""
+*no.cupsMarkerName yellow/Gul: ""
+*no.cupsMarkerName magenta/Magenta: ""
+*no.cupsMarkerName cyan/Cyan: ""
+*no.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*no.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*no.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*no.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*no.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*no.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*no.it.PageSize EnvChou3/Busta Choukei 3: ""
+*no.ja.PageSize EnvChou3/封筒 長形 3: ""
+*no.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*no.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*no.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*no.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*no.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*no.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*no.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*no.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*no.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*no.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*no.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*no.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*no.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*no.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*no.it.PageSize EnvChou4/Busta Choukei 4: ""
+*no.ja.PageSize EnvChou4/封筒 長形 4: ""
+*no.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*no.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*no.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*no.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*no.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*no.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*no.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*no.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*no.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*no.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*nl.Translation Manufacturer/HP: ""
+*nl.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*nl.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*nl.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*nl.Translation PageSize/Media Size: ""
+*nl.PageSize Letter/US Letter: ""
+*nl.PageSize Legal/US Legal: ""
+*nl.PageSize Executive/Executive: ""
+*nl.PageSize Statement/1/2 Letter : ""
+*nl.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*nl.PageSize 3x5/3x5: ""
+*nl.PageSize 4x6/4x6: ""
+*nl.PageSize 5x7/5x7: ""
+*nl.PageSize 5x8/5x8: ""
+*nl.PageSize A4/A4: ""
+*nl.PageSize A5/A5: ""
+*nl.PageSize A6/A6: ""
+*nl.PageSize B5/JIS B5: ""
+*nl.PageSize 100x150mm/10x15cm: ""
+*nl.PageSize 216x340mm/Oficio 216x340 mm: ""
+*nl.PageSize 195x270mm/16K 195x270 mm: ""
+*nl.PageSize 184x260mm/16K 184x260 mm: ""
+*nl.PageSize 7.75x10.75/16K 197x273 mm: ""
+*nl.PageSize Postcard/Briefkaart (JIS): ""
+*nl.PageSize DoublePostcardRotated/Dubbele briefkaart (JIS): ""
+*nl.PageSize Env10/Comm10-envelop: ""
+*nl.PageSize EnvMonarch/Monarch-envelop: ""
+*nl.PageSize EnvISOB5/ISO B5-envelop: ""
+*nl.PageSize EnvC5/C5-envelop: ""
+*nl.PageSize EnvC6/C6-envelop: ""
+*nl.PageSize EnvDL/DL-envelop: ""
+*nl.PageSize EnvChou3/Envelope Choukei 3: ""
+*nl.PageSize EnvChou4/Envelope Choukei 4: ""
+*nl.PageSize Env3.5x5/L 9x13 cm: ""
+*nl.PageSize A4.FullBleed/Van rand tot rand A4: ""
+*nl.PageSize Letter.FullBleed/Van rand tot rand Letter: ""
+*nl.Translation InputSlot/Papierbron: ""
+*nl.InputSlot Tray1/Lade 1: ""
+*nl.InputSlot Tray2/Lade 2: ""
+*nl.Translation Duplex/Dubbelzijdig: ""
+*nl.Duplex None/Uit: ""
+*nl.Duplex DuplexNoTumble/Lange kant binden: ""
+*nl.Duplex DuplexTumble/Korte kant binden: ""
+*nl.Translation InstallableOptions/Installable Options: ""
+*nl.Translation HPOption_Tray2/Lade 2: ""
+*nl.HPOption_Tray2 True/Geïnstalleerd: ""
+*nl.HPOption_Tray2 False/Niet geïnstalleerd: ""
+*nl.Translation HPColorOptionsPanel/Kleurenopties: ""
+*nl.Translation OutputMode/Afdrukkwaliteit: ""
+*nl.OutputMode Draft/Klad: ""
+*nl.OutputMode Normal/Normaal: ""
+*nl.OutputMode Best/Optimaal: ""
+*nl.Translation HPColorAsGray/Kleuren afdr. in grijs: ""
+*nl.HPColorAsGray Off/Uit: ""
+*nl.HPColorAsGray  HighQuality/Hoogste kwaliteit: ""
+*nl.HPColorAsGray  BlackInkOnly/Alleen zwarte inkt: ""
+*nl.Translation HPRGBEmulation/RGB-kleur: ""
+*nl.HPRGBEmulation sRGB/Standaard (sRGB): ""
+*nl.HPRGBEmulation PhotoSRGB/Foto (sRGB): ""
+*nl.HPRGBEmulation Adobe/Foto (Adobe RGB 1998): ""
+*nl.HPRGBEmulation VividSRGB/Levendig (sRGB): ""
+*nl.Translation HPFinishingPanel/Afwerkingsopties: ""
+*nl.Translation MediaType/Type afdrukmateriaal: ""
+*nl.MediaType Unspecified/Onbekend: ""
+*nl.MediaType Plain/Gewoon: ""
+*nl.MediaType HPPremiumPresentationMatte120/HP Premium Presentatiepapier, Mat 120g: ""
+*nl.MediaType HPBrochureAndFlyerMatte180/HP Brochure- en flyerpapier, Mat 180g: ""
+*nl.MediaType HPBrochureMatte180/HP Brochure Mat 180g: ""
+*nl.MediaType HPBrochureGlossy180/HP glanzend brochurepapier 180g: ""
+*nl.MediaType HPEverydayPhotoPaperMatte/HP Everyday Fotopapier, Mat: ""
+*nl.MediaType HPAdvancedPhotoPapers/HP Geavanceerd Fotopapier: ""
+*nl.MediaType OtherPhotoPaper/Ander fotopapiersoort: ""
+*nl.MediaType Cardstock/Karton: ""
+*nl.MediaType ThickPlainPaper/Dik gewoon papier: ""
+*nl.MediaType HPPremiumPlusPhotoPapers/HP Premium Plus Fotopapier: ""
+*nl.MediaType HPTrifoldBrochureGlossy180/HP in drieën gevouwen glanzend brochurepapier 180g: ""
+*nl.cupsICCProfile RGB../sRGB Matching Profile: ""
+*nl.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*nl.cupsICCProfile Gray../Gray Matching Profile: ""
+*nl.cupsMarkerName black/Zwart: ""
+*nl.cupsMarkerName yellow/Geel: ""
+*nl.cupsMarkerName magenta/Magenta: ""
+*nl.cupsMarkerName cyan/Cyaan: ""
+*nl.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*nl.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*nl.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*nl.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*nl.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*nl.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*nl.it.PageSize EnvChou3/Busta Choukei 3: ""
+*nl.ja.PageSize EnvChou3/封筒 長形 3: ""
+*nl.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*nl.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*nl.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*nl.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*nl.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*nl.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*nl.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*nl.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*nl.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*nl.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*nl.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*nl.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*nl.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*nl.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*nl.it.PageSize EnvChou4/Busta Choukei 4: ""
+*nl.ja.PageSize EnvChou4/封筒 長形 4: ""
+*nl.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*nl.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*nl.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*nl.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*nl.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*nl.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*nl.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*nl.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*nl.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*nl.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*pt.Translation Manufacturer/HP: ""
+*pt.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*pt.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*pt.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*pt.Translation PageSize/Media Size: ""
+*pt.PageSize Letter/US Letter: ""
+*pt.PageSize Legal/US Legal: ""
+*pt.PageSize Executive/Executivo: ""
+*pt.PageSize Statement/Declaração: ""
+*pt.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*pt.PageSize 3x5/3x5: ""
+*pt.PageSize 4x6/4x6: ""
+*pt.PageSize 5x7/5x7: ""
+*pt.PageSize 5x8/5x8: ""
+*pt.PageSize A4/A4: ""
+*pt.PageSize A5/A5: ""
+*pt.PageSize A6/A6: ""
+*pt.PageSize B5/JIS B5: ""
+*pt.PageSize 100x150mm/10x15cm: ""
+*pt.PageSize 216x340mm/Oficio 216x340 mm: ""
+*pt.PageSize 195x270mm/16K 195x270 mm: ""
+*pt.PageSize 184x260mm/16K 184x260 mm: ""
+*pt.PageSize 7.75x10.75/16K 197x273 mm: ""
+*pt.PageSize Postcard/Postal (JIS): ""
+*pt.PageSize DoublePostcardRotated/Postal duplo (JIS): ""
+*pt.PageSize Env10/Envelope Comm10: ""
+*pt.PageSize EnvMonarch/Envelope Monarch: ""
+*pt.PageSize EnvISOB5/Envelope B5: ""
+*pt.PageSize EnvC5/Envelope C5: ""
+*pt.PageSize EnvC6/Envelope C6: ""
+*pt.PageSize EnvDL/Envelope DL: ""
+*pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*pt.PageSize Env3.5x5/L 9x13 cm: ""
+*pt.PageSize A4.FullBleed/A4 margem a margem: ""
+*pt.PageSize Letter.FullBleed/Carta margem a margem: ""
+*pt.Translation InputSlot/Fonte de papel: ""
+*pt.InputSlot Tray1/Bandeja 1: ""
+*pt.InputSlot Tray2/Bandeja 2: ""
+*pt.Translation Duplex/Frente e verso: ""
+*pt.Duplex None/Desativado: ""
+*pt.Duplex DuplexNoTumble/Encadernação com Margem Longa: ""
+*pt.Duplex DuplexTumble/Encadernação com Margem Curta: ""
+*pt.Translation InstallableOptions/Installable Options: ""
+*pt.Translation HPOption_Tray2/Bandeja 2: ""
+*pt.HPOption_Tray2 True/Instalada: ""
+*pt.HPOption_Tray2 False/Não instalada: ""
+*pt.Translation HPColorOptionsPanel/Opções de cores: ""
+*pt.Translation OutputMode/Qualidade de impressão: ""
+*pt.OutputMode Draft/Rascunho: ""
+*pt.OutputMode Normal/Normal: ""
+*pt.OutputMode Best/Melhor: ""
+*pt.Translation HPColorAsGray/Imprimir cor como cinza: ""
+*pt.HPColorAsGray Off/Desativado: ""
+*pt.HPColorAsGray  HighQuality/Alta qualidade: ""
+*pt.HPColorAsGray  BlackInkOnly/Somente tinta preta: ""
+*pt.Translation HPRGBEmulation/Cor RGB: ""
+*pt.HPRGBEmulation sRGB/Padrão (sRGB): ""
+*pt.HPRGBEmulation PhotoSRGB/Foto (sRGB): ""
+*pt.HPRGBEmulation Adobe/Foto (Adobe RGB 1998): ""
+*pt.HPRGBEmulation VividSRGB/Víva (sRGB): ""
+*pt.Translation HPFinishingPanel/Acabamento: ""
+*pt.Translation MediaType/Tipo de mídia: ""
+*pt.MediaType Unspecified/Não especificado: ""
+*pt.MediaType Plain/Comum: ""
+*pt.MediaType HPPremiumPresentationMatte120/Papel HP Premium p/ Apresentação 120g, fosco: ""
+*pt.MediaType HPBrochureAndFlyerMatte180/Papel para brochura e folheto HP, fosco: ""
+*pt.MediaType HPBrochureMatte180/Brochura Fosco 180g HP: ""
+*pt.MediaType HPBrochureGlossy180/Brochura HP brilhante, 180g: ""
+*pt.MediaType HPEverydayPhotoPaperMatte/Papel Fotográfico Uso Diário HP, Fosco: ""
+*pt.MediaType HPAdvancedPhotoPapers/Papéis fotográficos HP Advanced: ""
+*pt.MediaType OtherPhotoPaper/Outro papel fotográfico: ""
+*pt.MediaType Cardstock/Cartolina: ""
+*pt.MediaType ThickPlainPaper/Papel comum espesso: ""
+*pt.MediaType HPPremiumPlusPhotoPapers/Papel Fotográfico HP Premium Plus: ""
+*pt.MediaType HPTrifoldBrochureGlossy180/Brochura HP brilhante com três dobras, 180g: ""
+*pt.cupsICCProfile RGB../sRGB Matching Profile: ""
+*pt.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*pt.cupsICCProfile Gray../Gray Matching Profile: ""
+*pt.cupsMarkerName black/Preto: ""
+*pt.cupsMarkerName yellow/Amarelo: ""
+*pt.cupsMarkerName magenta/Magenta: ""
+*pt.cupsMarkerName cyan/Ciano: ""
+*pt.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*pt.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*pt.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*pt.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*pt.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*pt.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*pt.it.PageSize EnvChou3/Busta Choukei 3: ""
+*pt.ja.PageSize EnvChou3/封筒 長形 3: ""
+*pt.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*pt.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*pt.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*pt.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*pt.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*pt.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*pt.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*pt.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*pt.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*pt.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*pt.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*pt.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*pt.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*pt.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*pt.it.PageSize EnvChou4/Busta Choukei 4: ""
+*pt.ja.PageSize EnvChou4/封筒 長形 4: ""
+*pt.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*pt.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*pt.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*pt.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*pt.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*pt.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*pt.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*pt.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*pt.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*pt.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*ru.Translation Manufacturer/HP: ""
+*ru.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*ru.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*ru.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*ru.Translation PageSize/Media Size: ""
+*ru.PageSize Letter/US Letter: ""
+*ru.PageSize Legal/US Legal: ""
+*ru.PageSize Executive/Executive: ""
+*ru.PageSize Statement/Положение: ""
+*ru.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*ru.PageSize 3x5/3x5: ""
+*ru.PageSize 4x6/4 x 6: ""
+*ru.PageSize 5x7/5 x 7: ""
+*ru.PageSize 5x8/5 x 8: ""
+*ru.PageSize A4/A4: ""
+*ru.PageSize A5/A5: ""
+*ru.PageSize A6/A6: ""
+*ru.PageSize B5/JIS B5: ""
+*ru.PageSize 100x150mm/10 x 15 см: ""
+*ru.PageSize 216x340mm/Oficio 216x340 mm: ""
+*ru.PageSize 195x270mm/16K 195 x 270 мм: ""
+*ru.PageSize 184x260mm/16K 184 x 260 мм: ""
+*ru.PageSize 7.75x10.75/16K 197 x 273 мм: ""
+*ru.PageSize Postcard/Почтовая карточка (JIS): ""
+*ru.PageSize DoublePostcardRotated/Двойная почтовая карточка (JIS): ""
+*ru.PageSize Env10/Конверт Comm10: ""
+*ru.PageSize EnvMonarch/Конверт Monarch: ""
+*ru.PageSize EnvISOB5/Конверт B5: ""
+*ru.PageSize EnvC5/Конверт C5: ""
+*ru.PageSize EnvC6/Конверт C6: ""
+*ru.PageSize EnvDL/Конверт DL: ""
+*ru.PageSize EnvChou3/Envelope Choukei 3: ""
+*ru.PageSize EnvChou4/Envelope Choukei 4: ""
+*ru.PageSize Env3.5x5/L 9x13 cm: ""
+*ru.PageSize A4.FullBleed/В обрез листа A4: ""
+*ru.PageSize Letter.FullBleed/В обрез листа Letter: ""
+*ru.Translation InputSlot/Источник бумаги: ""
+*ru.InputSlot Tray1/Лоток 1: ""
+*ru.InputSlot Tray2/Лоток 2: ""
+*ru.Translation Duplex/Двусторонняя: ""
+*ru.Duplex None/Выкл.: ""
+*ru.Duplex DuplexNoTumble/Прошивка вдоль длинного края: ""
+*ru.Duplex DuplexTumble/Прошивка вдоль короткого края: ""
+*ru.Translation InstallableOptions/Installable Options: ""
+*ru.Translation HPOption_Tray2/Лоток 2: ""
+*ru.HPOption_Tray2 True/Установлен: ""
+*ru.HPOption_Tray2 False/Не установлен: ""
+*ru.Translation HPColorOptionsPanel/Параметры цвета: ""
+*ru.Translation OutputMode/Качество печати: ""
+*ru.OutputMode Draft/Черновик: ""
+*ru.OutputMode Normal/Обычное: ""
+*ru.OutputMode Best/Наилучшее: ""
+*ru.Translation HPColorAsGray/Печать цвета серым: ""
+*ru.HPColorAsGray Off/Выкл.: ""
+*ru.HPColorAsGray  HighQuality/Высокое качество: ""
+*ru.HPColorAsGray  BlackInkOnly/Только черные чернила: ""
+*ru.Translation HPRGBEmulation/Цвет RGB: ""
+*ru.HPRGBEmulation sRGB/По умолчанию (sRGB): ""
+*ru.HPRGBEmulation PhotoSRGB/Фото (sRGB): ""
+*ru.HPRGBEmulation Adobe/Фото (Adobe RGB 1998): ""
+*ru.HPRGBEmulation VividSRGB/Яркое (sRGB): ""
+*ru.Translation HPFinishingPanel/Окончательная обработка: ""
+*ru.Translation MediaType/Тип носителя: ""
+*ru.MediaType Unspecified/Не указано: ""
+*ru.MediaType Plain/Обычная бумага: ""
+*ru.MediaType HPPremiumPresentationMatte120/Бумага HP повыш. кач. для презентаций, мат. 120г: ""
+*ru.MediaType HPBrochureAndFlyerMatte180/Бумага HP для брошюр, реклам.листовок, мат.180г: ""
+*ru.MediaType HPBrochureMatte180/Матовая бумага HP для брошюр 180г: ""
+*ru.MediaType HPBrochureGlossy180/Бумага HP для брошюр, глянцевая, 180г: ""
+*ru.MediaType HPEverydayPhotoPaperMatte/Повседневная матовая фотобумага HP: ""
+*ru.MediaType HPAdvancedPhotoPapers/Улучшенная фотобумага HP: ""
+*ru.MediaType OtherPhotoPaper/Другая фотобумага: ""
+*ru.MediaType Cardstock/Карточки: ""
+*ru.MediaType ThickPlainPaper/Толстая обычная бумага: ""
+*ru.MediaType HPPremiumPlusPhotoPapers/Фотобумага HP высшего качества: ""
+*ru.MediaType HPTrifoldBrochureGlossy180/Бум. HP для склад-х в 3 слоя брошюр, глянц. 180г: ""
+*ru.cupsICCProfile RGB../sRGB Matching Profile: ""
+*ru.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*ru.cupsICCProfile Gray../Gray Matching Profile: ""
+*ru.cupsMarkerName black/Черный: ""
+*ru.cupsMarkerName yellow/Желтый: ""
+*ru.cupsMarkerName magenta/Пурпурный: ""
+*ru.cupsMarkerName cyan/Голубой: ""
+*ru.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*ru.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*ru.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*ru.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*ru.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*ru.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*ru.it.PageSize EnvChou3/Busta Choukei 3: ""
+*ru.ja.PageSize EnvChou3/封筒 長形 3: ""
+*ru.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*ru.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*ru.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*ru.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*ru.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*ru.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*ru.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*ru.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*ru.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*ru.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*ru.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*ru.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*ru.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*ru.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*ru.it.PageSize EnvChou4/Busta Choukei 4: ""
+*ru.ja.PageSize EnvChou4/封筒 長形 4: ""
+*ru.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*ru.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*ru.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*ru.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*ru.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*ru.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*ru.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*ru.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*ru.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*ru.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*sv.Translation Manufacturer/HP: ""
+*sv.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*sv.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*sv.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*sv.Translation PageSize/Media Size: ""
+*sv.PageSize Letter/US Letter: ""
+*sv.PageSize Legal/US Legal: ""
+*sv.PageSize Executive/Executive: ""
+*sv.PageSize Statement/Declaración: ""
+*sv.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*sv.PageSize 3x5/3x5: ""
+*sv.PageSize 4x6/4x6: ""
+*sv.PageSize 5x7/5x7: ""
+*sv.PageSize 5x8/5x8: ""
+*sv.PageSize A4/A4: ""
+*sv.PageSize A5/A5: ""
+*sv.PageSize A6/A6: ""
+*sv.PageSize B5/JIS B5: ""
+*sv.PageSize 100x150mm/10x15cm: ""
+*sv.PageSize 216x340mm/Oficio 216x340 mm: ""
+*sv.PageSize 195x270mm/16K 195x270 mm: ""
+*sv.PageSize 184x260mm/16K 184x260 mm: ""
+*sv.PageSize 7.75x10.75/16K 197x273 mm: ""
+*sv.PageSize Postcard/Brevkort (JIS): ""
+*sv.PageSize DoublePostcardRotated/Dubbelt brevkort (JIS): ""
+*sv.PageSize Env10/Comm10-kuvert: ""
+*sv.PageSize EnvMonarch/Monarch-kuvert: ""
+*sv.PageSize EnvISOB5/ISO B5-kuvert: ""
+*sv.PageSize EnvC5/C5-kuvert: ""
+*sv.PageSize EnvC6/C6-kuvert: ""
+*sv.PageSize EnvDL/DL-kuvert: ""
+*sv.PageSize EnvChou3/Envelope Choukei 3: ""
+*sv.PageSize EnvChou4/Envelope Choukei 4: ""
+*sv.PageSize Env3.5x5/L 9x13 cm: ""
+*sv.PageSize A4.FullBleed/Kant till kant, A4: ""
+*sv.PageSize Letter.FullBleed/Kant till kant, Letter: ""
+*sv.Translation InputSlot/Papperskälla: ""
+*sv.InputSlot Tray1/Fack 1: ""
+*sv.InputSlot Tray2/Fack 2: ""
+*sv.Translation Duplex/Dubbelsidig: ""
+*sv.Duplex None/Av: ""
+*sv.Duplex DuplexNoTumble/Häftning långsida: ""
+*sv.Duplex DuplexTumble/Häftning kortsida: ""
+*sv.Translation InstallableOptions/Installable Options: ""
+*sv.Translation HPOption_Tray2/Fack 2: ""
+*sv.HPOption_Tray2 True/Installerat: ""
+*sv.HPOption_Tray2 False/Ej installerat: ""
+*sv.Translation HPColorOptionsPanel/Färgalternativ: ""
+*sv.Translation OutputMode/Utskriftskvalitet: ""
+*sv.OutputMode Draft/Enkel: ""
+*sv.OutputMode Normal/Normal: ""
+*sv.OutputMode Best/Bästa: ""
+*sv.Translation HPColorAsGray/Skriv ut färg i grått: ""
+*sv.HPColorAsGray Off/Av: ""
+*sv.HPColorAsGray  HighQuality/Hög kvalitet: ""
+*sv.HPColorAsGray  BlackInkOnly/Endast svart bläck: ""
+*sv.Translation HPRGBEmulation/RGB-färg: ""
+*sv.HPRGBEmulation sRGB/Standard (sRGB): ""
+*sv.HPRGBEmulation PhotoSRGB/Foto (sRGB): ""
+*sv.HPRGBEmulation Adobe/Foto (Adobe RGB 1998): ""
+*sv.HPRGBEmulation VividSRGB/Stark (sRGB): ""
+*sv.Translation HPFinishingPanel/Efterbehandling: ""
+*sv.Translation MediaType/Material: ""
+*sv.MediaType Unspecified/Ospecificerad: ""
+*sv.MediaType Plain/Vanligt: ""
+*sv.MediaType HPPremiumPresentationMatte120/HP Premium presentation matt 120g: ""
+*sv.MediaType HPBrochureAndFlyerMatte180/HP papper för broschyrer och flygblad, matt 180g: ""
+*sv.MediaType HPBrochureMatte180/HP matt broschyrpapper 180g: ""
+*sv.MediaType HPBrochureGlossy180/HP-broschyr, glättat, 180g: ""
+*sv.MediaType HPEverydayPhotoPaperMatte/HP fotopapper för vardagsbruk, matt: ""
+*sv.MediaType HPAdvancedPhotoPapers/HP avancerat fotopapper: ""
+*sv.MediaType OtherPhotoPaper/Annat fotopapper: ""
+*sv.MediaType Cardstock/Vykort: ""
+*sv.MediaType ThickPlainPaper/Tjockt vanligt papper: ""
+*sv.MediaType HPPremiumPlusPhotoPapers/HP Premium Plus-fotopapper: ""
+*sv.MediaType HPTrifoldBrochureGlossy180/HP trippelvikt broschyr, glättat, 180g: ""
+*sv.cupsICCProfile RGB../sRGB Matching Profile: ""
+*sv.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*sv.cupsICCProfile Gray../Gray Matching Profile: ""
+*sv.cupsMarkerName black/Svart: ""
+*sv.cupsMarkerName yellow/Gul: ""
+*sv.cupsMarkerName magenta/Magenta: ""
+*sv.cupsMarkerName cyan/Cyan: ""
+*sv.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*sv.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*sv.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*sv.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*sv.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*sv.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*sv.it.PageSize EnvChou3/Busta Choukei 3: ""
+*sv.ja.PageSize EnvChou3/封筒 長形 3: ""
+*sv.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*sv.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*sv.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*sv.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*sv.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*sv.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*sv.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*sv.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*sv.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*sv.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*sv.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*sv.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*sv.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*sv.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*sv.it.PageSize EnvChou4/Busta Choukei 4: ""
+*sv.ja.PageSize EnvChou4/封筒 長形 4: ""
+*sv.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*sv.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*sv.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*sv.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*sv.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*sv.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*sv.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*sv.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*sv.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*sv.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*zh_CN.Translation Manufacturer/HP: ""
+*zh_CN.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*zh_CN.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*zh_CN.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*zh_CN.Translation PageSize/Media Size: ""
+*zh_CN.PageSize Letter/US Letter: ""
+*zh_CN.PageSize Legal/US Legal: ""
+*zh_CN.PageSize Executive/Executive: ""
+*zh_CN.PageSize Statement/结算单: ""
+*zh_CN.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*zh_CN.PageSize 3x5/3x5: ""
+*zh_CN.PageSize 4x6/4x6: ""
+*zh_CN.PageSize 5x7/5x7: ""
+*zh_CN.PageSize 5x8/5x8: ""
+*zh_CN.PageSize A4/A4: ""
+*zh_CN.PageSize A5/A5: ""
+*zh_CN.PageSize A6/A6: ""
+*zh_CN.PageSize B5/JIS B5: ""
+*zh_CN.PageSize 100x150mm/10x15cm: ""
+*zh_CN.PageSize 216x340mm/Oficio 216x340 mm: ""
+*zh_CN.PageSize 195x270mm/16K 195x270 毫米: ""
+*zh_CN.PageSize 184x260mm/16K 184x260 毫米: ""
+*zh_CN.PageSize 7.75x10.75/16K 197x273 毫米: ""
+*zh_CN.PageSize Postcard/明信片 (JIS): ""
+*zh_CN.PageSize DoublePostcardRotated/大号明信片 (JIS): ""
+*zh_CN.PageSize Env10/信封 Comm10: ""
+*zh_CN.PageSize EnvMonarch/信封 Monarch: ""
+*zh_CN.PageSize EnvISOB5/信封 ISO B5: ""
+*zh_CN.PageSize EnvC5/信封 C5: ""
+*zh_CN.PageSize EnvC6/信封 C6: ""
+*zh_CN.PageSize EnvDL/信封 DL: ""
+*zh_CN.PageSize EnvChou3/Envelope Choukei 3: ""
+*zh_CN.PageSize EnvChou4/Envelope Choukei 4: ""
+*zh_CN.PageSize Env3.5x5/L 9x13 cm: ""
+*zh_CN.PageSize A4.FullBleed/边到边 A4: ""
+*zh_CN.PageSize Letter.FullBleed/边到边 Letter: ""
+*zh_CN.Translation InputSlot/纸张来源: ""
+*zh_CN.InputSlot Tray1/纸盒 1: ""
+*zh_CN.InputSlot Tray2/纸盒 2: ""
+*zh_CN.Translation Duplex/双面打印: ""
+*zh_CN.Duplex None/关: ""
+*zh_CN.Duplex DuplexNoTumble/长边装订: ""
+*zh_CN.Duplex DuplexTumble/短边装订: ""
+*zh_CN.Translation InstallableOptions/Installable Options: ""
+*zh_CN.Translation HPOption_Tray2/纸盒 2: ""
+*zh_CN.HPOption_Tray2 True/已安装: ""
+*zh_CN.HPOption_Tray2 False/未安装: ""
+*zh_CN.Translation HPColorOptionsPanel/颜色选项: ""
+*zh_CN.Translation OutputMode/打印质量: ""
+*zh_CN.OutputMode Draft/草稿: ""
+*zh_CN.OutputMode Normal/正常: ""
+*zh_CN.OutputMode Best/最佳: ""
+*zh_CN.Translation HPColorAsGray/打印颜色为灰色: ""
+*zh_CN.HPColorAsGray Off/关: ""
+*zh_CN.HPColorAsGray  HighQuality/高质量: ""
+*zh_CN.HPColorAsGray  BlackInkOnly/仅黑色墨水: ""
+*zh_CN.Translation HPRGBEmulation/RGB 颜色: ""
+*zh_CN.HPRGBEmulation sRGB/默认 (sRGB): ""
+*zh_CN.HPRGBEmulation PhotoSRGB/照片 (sRGB): ""
+*zh_CN.HPRGBEmulation Adobe/照片 (Adobe RGB 1998): ""
+*zh_CN.HPRGBEmulation VividSRGB/鲜明 (sRGB): ""
+*zh_CN.Translation HPFinishingPanel/完成选项: ""
+*zh_CN.Translation MediaType/介质类型: ""
+*zh_CN.MediaType Unspecified/未指定: ""
+*zh_CN.MediaType Plain/普通纸: ""
+*zh_CN.MediaType HPPremiumPresentationMatte120/HP 特异表现无光泽纸 120g: ""
+*zh_CN.MediaType HPBrochureAndFlyerMatte180/HP 小册子和传单用无光泽纸 180g: ""
+*zh_CN.MediaType HPBrochureMatte180/HP 无光泽小册子纸 180g: ""
+*zh_CN.MediaType HPBrochureGlossy180/HP 小册子光泽纸 180g: ""
+*zh_CN.MediaType HPEverydayPhotoPaperMatte/HP 日常用照片纸，无光泽: ""
+*zh_CN.MediaType HPAdvancedPhotoPapers/HP 高级照片纸: ""
+*zh_CN.MediaType OtherPhotoPaper/其它照片纸: ""
+*zh_CN.MediaType Cardstock/卡片纸: ""
+*zh_CN.MediaType ThickPlainPaper/加厚普通纸: ""
+*zh_CN.MediaType HPPremiumPlusPhotoPapers/HP 超高级照片纸: ""
+*zh_CN.MediaType HPTrifoldBrochureGlossy180/HP 三折小册子光泽纸 180g: ""
+*zh_CN.cupsICCProfile RGB../sRGB Matching Profile: ""
+*zh_CN.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*zh_CN.cupsICCProfile Gray../Gray Matching Profile: ""
+*zh_CN.cupsMarkerName black/黑色: ""
+*zh_CN.cupsMarkerName yellow/黄色: ""
+*zh_CN.cupsMarkerName magenta/品红色: ""
+*zh_CN.cupsMarkerName cyan/青色: ""
+*zh_CN.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*zh_CN.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*zh_CN.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*zh_CN.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*zh_CN.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*zh_CN.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*zh_CN.it.PageSize EnvChou3/Busta Choukei 3: ""
+*zh_CN.ja.PageSize EnvChou3/封筒 長形 3: ""
+*zh_CN.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*zh_CN.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*zh_CN.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*zh_CN.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*zh_CN.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*zh_CN.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*zh_CN.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*zh_CN.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*zh_CN.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*zh_CN.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*zh_CN.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*zh_CN.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*zh_CN.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*zh_CN.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*zh_CN.it.PageSize EnvChou4/Busta Choukei 4: ""
+*zh_CN.ja.PageSize EnvChou4/封筒 長形 4: ""
+*zh_CN.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*zh_CN.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*zh_CN.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*zh_CN.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*zh_CN.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*zh_CN.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*zh_CN.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*zh_CN.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*zh_CN.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*zh_CN.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*zh_TW.Translation Manufacturer/HP: ""
+*zh_TW.Translation ModelName/HP Officejet Pro 276dw MFP: ""
+*zh_TW.Translation ShortNickName/HP Officejet Pro 276dw MFP: ""
+*zh_TW.Translation NickName/HP Officejet Pro 276dw MFP: ""
+*zh_TW.Translation PageSize/Media Size: ""
+*zh_TW.PageSize Letter/US Letter: ""
+*zh_TW.PageSize Legal/US Legal: ""
+*zh_TW.PageSize Executive/Executive: ""
+*zh_TW.PageSize Statement/報表紙: ""
+*zh_TW.PageSize FanFoldGermanLegal/Oficio 8.5x13: ""
+*zh_TW.PageSize 3x5/3x5: ""
+*zh_TW.PageSize 4x6/4x6: ""
+*zh_TW.PageSize 5x7/5x7: ""
+*zh_TW.PageSize 5x8/5x8: ""
+*zh_TW.PageSize A4/A4: ""
+*zh_TW.PageSize A5/A5: ""
+*zh_TW.PageSize A6/A6: ""
+*zh_TW.PageSize B5/JIS B5: ""
+*zh_TW.PageSize 100x150mm/10x15cm: ""
+*zh_TW.PageSize 216x340mm/Oficio 216x340 mm: ""
+*zh_TW.PageSize 195x270mm/16K 195x270 公釐: ""
+*zh_TW.PageSize 184x260mm/16K 184x260 公釐: ""
+*zh_TW.PageSize 7.75x10.75/16K 197x273 公釐: ""
+*zh_TW.PageSize Postcard/明信片(JIS): ""
+*zh_TW.PageSize DoublePostcardRotated/雙面明信片 (JIS): ""
+*zh_TW.PageSize Env10/Comm10 信封: ""
+*zh_TW.PageSize EnvMonarch/Monarch 信封: ""
+*zh_TW.PageSize EnvISOB5/ISO B5 信封: ""
+*zh_TW.PageSize EnvC5/C5 信封: ""
+*zh_TW.PageSize EnvC6/C6 信封: ""
+*zh_TW.PageSize EnvDL/DL 信封: ""
+*zh_TW.PageSize EnvChou3/Envelope Choukei 3: ""
+*zh_TW.PageSize EnvChou4/Envelope Choukei 4: ""
+*zh_TW.PageSize Env3.5x5/L 9x13 cm: ""
+*zh_TW.PageSize A4.FullBleed/邊緣到邊緣 A4: ""
+*zh_TW.PageSize Letter.FullBleed/邊緣到邊緣 Letter: ""
+*zh_TW.Translation InputSlot/紙張來源: ""
+*zh_TW.InputSlot Tray1/1 號紙匣: ""
+*zh_TW.InputSlot Tray2/2 號紙匣: ""
+*zh_TW.Translation Duplex/雙面: ""
+*zh_TW.Duplex None/關閉: ""
+*zh_TW.Duplex DuplexNoTumble/沿長邊裝訂: ""
+*zh_TW.Duplex DuplexTumble/沿短邊裝訂: ""
+*zh_TW.Translation InstallableOptions/Installable Options: ""
+*zh_TW.Translation HPOption_Tray2/2 號紙匣: ""
+*zh_TW.HPOption_Tray2 True/已安裝: ""
+*zh_TW.HPOption_Tray2 False/未安裝: ""
+*zh_TW.Translation HPColorOptionsPanel/色彩選項: ""
+*zh_TW.Translation OutputMode/列印品質: ""
+*zh_TW.OutputMode Draft/草稿: ""
+*zh_TW.OutputMode Normal/正常: ""
+*zh_TW.OutputMode Best/最佳: ""
+*zh_TW.Translation HPColorAsGray/用灰色列印彩色: ""
+*zh_TW.HPColorAsGray Off/關閉: ""
+*zh_TW.HPColorAsGray  HighQuality/高品質: ""
+*zh_TW.HPColorAsGray  BlackInkOnly/僅限於黑色墨水: ""
+*zh_TW.Translation HPRGBEmulation/RGB 色彩: ""
+*zh_TW.HPRGBEmulation sRGB/預設 (sRGB): ""
+*zh_TW.HPRGBEmulation PhotoSRGB/相紙 (sRGB): ""
+*zh_TW.HPRGBEmulation Adobe/相紙 (Adobe RGB 1998): ""
+*zh_TW.HPRGBEmulation VividSRGB/鮮明 (sRGB): ""
+*zh_TW.Translation HPFinishingPanel/外觀選項: ""
+*zh_TW.Translation MediaType/媒體類型: ""
+*zh_TW.MediaType Unspecified/未指定: ""
+*zh_TW.MediaType Plain/素面紙: ""
+*zh_TW.MediaType HPPremiumPresentationMatte120/HP 高級霧面簡報紙 120g: ""
+*zh_TW.MediaType HPBrochureAndFlyerMatte180/HP 霧面型錄與傳單紙 180g: ""
+*zh_TW.MediaType HPBrochureMatte180/HP 消光冊子紙 180g: ""
+*zh_TW.MediaType HPBrochureGlossy180/HP 光面型錄紙 180g: ""
+*zh_TW.MediaType HPEverydayPhotoPaperMatte/HP 粗面常用相紙: ""
+*zh_TW.MediaType HPAdvancedPhotoPapers/HP 進階相紙: ""
+*zh_TW.MediaType OtherPhotoPaper/其他相紙: ""
+*zh_TW.MediaType Cardstock/卡片紙: ""
+*zh_TW.MediaType ThickPlainPaper/普通厚紙: ""
+*zh_TW.MediaType HPPremiumPlusPhotoPapers/HP 超級相紙: ""
+*zh_TW.MediaType HPTrifoldBrochureGlossy180/HP 光面三摺型錄紙 180g: ""
+*zh_TW.cupsICCProfile RGB../sRGB Matching Profile: ""
+*zh_TW.cupsICCProfile CMYK../CMYK Matching Profile: ""
+*zh_TW.cupsICCProfile Gray../Gray Matching Profile: ""
+*zh_TW.cupsMarkerName black/黑色: ""
+*zh_TW.cupsMarkerName yellow/黃色: ""
+*zh_TW.cupsMarkerName magenta/洋紅色: ""
+*zh_TW.cupsMarkerName cyan/青藍色: ""
+*zh_TW.en.PageSize EnvChou3/Envelope Choukei 3: ""
+*zh_TW.da.PageSize EnvChou3/Choukei 3-kuvert: ""
+*zh_TW.de.PageSize EnvChou3/Choukei 3 Umschlag: ""
+*zh_TW.es.PageSize EnvChou3/Sobre Choukei 3: ""
+*zh_TW.fi.PageSize EnvChou3/Choukei 3 -kirjekuori: ""
+*zh_TW.fr.PageSize EnvChou3/Enveloppe Choukei 3: ""
+*zh_TW.it.PageSize EnvChou3/Busta Choukei 3: ""
+*zh_TW.ja.PageSize EnvChou3/封筒 長形 3: ""
+*zh_TW.ko.PageSize EnvChou3/봉투 Choukei 3: ""
+*zh_TW.nl.PageSize EnvChou3/Choukei 3-envelop: ""
+*zh_TW.no.PageSize EnvChou3/Konvolutt Choukei 3: ""
+*zh_TW.pt.PageSize EnvChou3/Envelope Choukei 3: ""
+*zh_TW.ru.PageSize EnvChou3/Конверт Choukei 3: ""
+*zh_TW.sv.PageSize EnvChou3/Choukei 3-kuvert: ""
+*zh_TW.zh_CN.PageSize EnvChou3/信封 Choukei 3: ""
+*zh_TW.zh_TW.PageSize EnvChou3/信封 Choukei 3: ""
+*zh_TW.en.PageSize EnvChou4/Envelope Choukei 4: ""
+*zh_TW.da.PageSize EnvChou4/Choukei 4-kuvert: ""
+*zh_TW.de.PageSize EnvChou4/Choukei 4 Umschlag: ""
+*zh_TW.es.PageSize EnvChou4/Sobre Choukei 4: ""
+*zh_TW.fi.PageSize EnvChou4/Choukei 4 -kirjekuori: ""
+*zh_TW.fr.PageSize EnvChou4/Enveloppe Choukei 4: ""
+*zh_TW.it.PageSize EnvChou4/Busta Choukei 4: ""
+*zh_TW.ja.PageSize EnvChou4/封筒 長形 4: ""
+*zh_TW.ko.PageSize EnvChou4/봉투 Choukei 4: ""
+*zh_TW.nl.PageSize EnvChou4/Choukei 4-envelop: ""
+*zh_TW.no.PageSize EnvChou4/Konvolutt Choukei 4: ""
+*zh_TW.pt.PageSize EnvChou4/Envelope Choukei 4: ""
+*zh_TW.ru.PageSize EnvChou4/Конверт Choukei 4: ""
+*zh_TW.sv.PageSize EnvChou4/Choukei 4-kuvert: ""
+*zh_TW.zh_CN.PageSize EnvChou4/信封 Choukei 4: ""
+*zh_TW.zh_TW.PageSize EnvChou4/信封 Choukei 4: ""
+*zh_TW.cupsICCProfile .HPAdvancedPhotoPapers./HP Officejet Pro 276dw MFP Advanced Photo Matching Profile: ""
+*zh_TW.cupsICCProfile .HPBrochureGlossy180./HP Officejet Pro 276dw MFP Glossy Brochure Matching Profile: ""
+*DefaultFont: Courier
+*Font Albertus-ExtraBold: Standard "(001.001)" Standard ROM
+*Font Albertus-Medium: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Bold: Standard "(001.001)" Standard ROM
+*Font AntiqueOlive-Italic: Standard "(001.001)" Standard ROM
+*Font Arial: Standard "(001.001)" Standard ROM
+*Font Arial-Bold: Standard "(001.001)" Standard ROM
+*Font Arial-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Arial-Italic: Standard "(001.001)" Standard ROM
+*Font AvantGarde-Book: Standard "(001.001)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.001)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.001)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.001)" Standard ROM
+*Font Bookman-Demi: Standard "(001.001)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.001)" Standard ROM
+*Font Bookman-Light: Standard "(001.001)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.001)" Standard ROM
+*Font BookmanCE-Demi: Win1250 "(001.001)" ExtendedRoman ROM
+*Font BookmanCE-DemiItalic: Win1250 "(001.001)" ExtendedRoman ROM
+*Font BookmanCE-Light: Win1250 "(001.001)" ExtendedRoman ROM
+*Font BookmanCE-LightItalic: Win1250 "(001.001)" ExtendedRoman ROM
+*Font CGOmega: Standard "(001.001)" Standard ROM
+*Font CGOmega-Bold: Standard "(001.001)" Standard ROM
+*Font CGOmega-BoldItalic: Standard "(001.001)" Standard ROM
+*Font CGOmega-Italic: Standard "(001.001)" Standard ROM
+*Font CGTimes: Standard "(001.001)" Standard ROM
+*Font CGTimes-Bold: Standard "(001.001)" Standard ROM
+*Font CGTimes-BoldItalic: Standard "(001.001)" Standard ROM
+*Font CGTimes-Italic: Standard "(001.001)" Standard ROM
+*Font Clarendon-Condensed-Bold: Standard "(001.001)" Standard ROM
+*Font Coronet: Standard "(001.001)" Standard ROM
+*Font Courier: Standard "(001.001)" Standard ROM
+*Font Courier-Bold: Standard "(001.001)" Standard ROM
+*Font Courier-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Courier-Oblique: Standard "(001.001)" Standard ROM
+*Font CourierHP: Standard "(001.001)" Standard ROM
+*Font CourierHP-Bold: Standard "(001.001)" Standard ROM
+*Font CourierHP-BoldItalic: Standard "(001.001)" Standard ROM
+*Font CourierHP-Italic: Standard "(001.001)" Standard ROM
+*Font Garamond-Antiqua: Standard "(001.001)" Standard ROM
+*Font Garamond-Halbfett: Standard "(001.001)" Standard ROM
+*Font Garamond-Kursiv: Standard "(001.001)" Standard ROM
+*Font Garamond-KursivHalbfett: Standard "(001.001)" Standard ROM
+*Font Helvetica: Standard "(001.001)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.001)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.001)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.001)" Standard ROM
+*Font LetterGothic: Standard "(001.001)" Standard ROM
+*Font LetterGothic-Bold: Standard "(001.001)" Standard ROM
+*Font LetterGothic-Italic: Standard "(001.001)" Standard ROM
+*Font Marigold: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.001)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.001)" Standard ROM
+*Font Palatino-Bold: Standard "(001.001)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Palatino-Italic: Standard "(001.001)" Standard ROM
+*Font Palatino-Roman: Standard "(001.001)" Standard ROM
+*Font Symbol: Special "(001.001)" Special ROM
+*Font SymbolMT: Standard "(001.001)" Standard ROM
+*Font Times-Bold: Standard "(001.001)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Times-Italic: Standard "(001.001)" Standard ROM
+*Font Times-Roman: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman-Bold: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman-BoldItalic: Standard "(001.001)" Standard ROM
+*Font TimesNewRoman-Italic: Standard "(001.001)" Standard ROM
+*Font Univers-Bold: Standard "(001.001)" Standard ROM
+*Font Univers-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-Bold: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-BoldItalic: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-Medium: Standard "(001.001)" Standard ROM
+*Font Univers-Condensed-MediumItalic: Standard "(001.001)" Standard ROM
+*Font Univers-Medium: Standard "(001.001)" Standard ROM
+*Font Univers-MediumItalic: Standard "(001.001)" Standard ROM
+*Font Wingdings-Regular: Special "(001.001)" Special ROM
+*Font Wingdings-Regular: Standard "(001.001)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.001)" Standard ROM
+*Font ZapfDingbats: Special "(001.001)" Special ROM
+*% End of HPP00024.PPD, 211994 bytes.

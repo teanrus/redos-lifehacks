@@ -1,0 +1,568 @@
+*PPD-Adobe: "4.3"
+
+*% ======================================
+*% Product/PPD Version Information
+*% ======================================
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "hpiXL3900PSMFP.ppd"
+
+*% ======================================
+*% Product Name and Version Information
+*% ======================================
+*Manufacturer: "HP"
+*Product: "(HP PageWide XL 3900PS MFP PS3)"
+*ModelName: "HP PageWide XL 3900PS MFP"
+*ShortNickName: "HP PageWide XL 3900PS MFP PS3"
+*NickName: "HP PageWide XL 3900PS MFP PS3"
+*PSVersion: "(3010.108) 0"
+*MSIsXPSDriver: True
+
+*MSPrintSchemaPrivateNamespaceURI: "http://schemas.hp.com/lfp/ptpc/2006/1"
+
+*% ======================================
+*% Basic Device Capabilities
+*% ======================================
+*LanguageLevel: "3"
+*FileSystem: False
+*Protocols: PJL TBCP
+*FreeVM: "268435456"
+*MSXPSMaxCopies: "9999"
+*ColorDevice: True
+
+*% ======================================
+*% Collate
+*% ======================================
+*OpenUI *Collate/Collate: PickOne
+*OrderDependency: 50 AnySetup *Collate
+*DefaultCollate: Off
+*Collate Off/Off: "/HPDict /ProcSet findresource /SetCollateScope get (None) exch exec"
+*Collate On/On: "/HPDict /ProcSet findresource /SetCollateScope get (Document) exch exec"
+*CloseUI: *Collate
+
+*MSPrintSchemaKeywordMap: DocumentCollate *Collate
+*MSPrintSchemaKeywordMap: DocumentCollate Uncollated *Collate Off
+*MSPrintSchemaKeywordMap: DocumentCollate Collated *Collate On
+
+*% ======================================
+*% InputSlot
+*% ======================================
+*OpenUI *InputSlot/Paper source: PickOne
+*OrderDependency: 50 AnySetup *InputSlot
+*DefaultInputSlot: AutoSelect
+*InputSlot AutoSelect/Use printer settings: "/HPDict /ProcSet findresource /SetMediaSource get (Automatic) exch exec"
+*InputSlot Roll1/Roll 1: "/HPDict /ProcSet findresource /SetMediaSource get (Roll1) exch exec"
+*InputSlot Roll2/Roll 2: "/HPDict /ProcSet findresource /SetMediaSource get (Roll2) exch exec"
+*InputSlot Roll3/Roll 3: "/HPDict /ProcSet findresource /SetMediaSource get (Roll3) exch exec"
+*InputSlot Roll4/Roll 4: "/HPDict /ProcSet findresource /SetMediaSource get (Roll4) exch exec"
+*CloseUI: *InputSlot
+
+*% ======================================
+*% JobEnableMultiPageCutter
+*% ======================================
+*OpenUI *JobEnableMultiPageCutter/Cutter in multi<2D>page job: PickOne
+*OrderDependency: 50 AnySetup *JobEnableMultiPageCutter
+*DefaultJobEnableMultiPageCutter: ON
+*JobEnableMultiPageCutter OFF/Job Off: "/HPDict /ProcSet findresource /SetCutMedia get /JobOff exch exec"
+*JobEnableMultiPageCutter ON/On: "/HPDict /ProcSet findresource /SetCutMedia get /On exch exec"
+*CloseUI: *JobEnableMultiPageCutter
+
+*% ======================================
+*% JobFolderStyle
+*% ======================================
+*OpenUI *JobFolderStyle/Folding styles: PickOne
+*OrderDependency: 50 AnySetup *JobFolderStyle
+*DefaultJobFolderStyle: UsePrinterDefault
+*JobFolderStyle UsePrinterDefault/Use printer default: ""
+*JobFolderStyle DINB210x297/DIN B 210×297: ""
+*JobFolderStyle DINC210x297/DIN C 210×297: ""
+*JobFolderStyle DINB210x305/DIN B 210×305: ""
+*JobFolderStyle FanFoldOnly210/Fan Fold Only 210: ""
+*JobFolderStyle DINA19020x297/DIN A 190<2F>20×297: ""
+*JobFolderStyle Predefined1/Predefined 1: ""
+*JobFolderStyle Predefined2/Predefined 2: ""
+*JobFolderStyle Predefined3/Predefined 3: ""
+*JobFolderStyle Predefined4/Predefined 4: ""
+*JobFolderStyle Predefined5/Predefined 5: ""
+*JobFolderStyle Predefined6/Predefined 6: ""
+*JobFolderStyle Predefined7/Predefined 7: ""
+*JobFolderStyle Predefined8/Predefined 8: ""
+*JobFolderStyle Predefined9/Predefined 9: ""
+*JobFolderStyle Predefined10/Predefined 10: ""
+*JobFolderStyle NotFolded/Not folded: ""
+*CloseUI: *JobFolderStyle
+
+*% ======================================
+*% JobMarginsLayout
+*% ======================================
+*OpenUI *JobMarginsLayout/Margins<2F>Layout: PickOne
+*OrderDependency: 50 AnySetup *JobMarginsLayout
+*DefaultJobMarginsLayout: Standard
+*JobMarginsLayout Standard/Standard: "/HPDict /ProcSet findresource /SetMarginLayout get /MarginLayoutStandard exch exec"
+*JobMarginsLayout Oversize/Oversize: "/HPDict /ProcSet findresource /SetMarginLayout get /MarginLayoutOversize exch exec"
+*JobMarginsLayout ClipContentsByMargins/Clip contents by margins: "/HPDict /ProcSet findresource /SetMarginLayout get /MarginLayoutClipInside exch exec"
+*CloseUI: *JobMarginsLayout
+
+*% ======================================
+*% JobOutputBin
+*% ======================================
+*OpenUI *JobOutputBin/Output destination: PickOne
+*OrderDependency: 50 AnySetup *JobOutputBin
+*DefaultJobOutputBin: AutoSelect
+*JobOutputBin AutoSelect/Use printer default: "/HPDict /ProcSet findresource /SetMediaDest get (Default) exch exec"
+*JobOutputBin Basket/Basket: "/HPDict /ProcSet findresource /SetMediaDest get (Bin) exch exec"
+*JobOutputBin Stacker/Stacker: "/HPDict /ProcSet findresource /SetMediaDest get (Stacker) exch exec"
+*JobOutputBin Folder/Folder: ""
+*JobOutputBin HighCapacityStacker/High<2D>capacity stacker: "/HPDict /ProcSet findresource /SetMediaDest get (Accessory_Stacker) exch exec"
+*JobOutputBin Genericaccessory/Generic accessory: "/HPDict /ProcSet findresource /SetMediaDest get (Generic_Accessory) exch exec"
+*CloseUI: *JobOutputBin
+
+*% ======================================
+*% JobPageOrder
+*% ======================================
+*OpenUI *JobPageOrder/Page order: PickOne
+*OrderDependency: 50 AnySetup *JobPageOrder
+*DefaultJobPageOrder: FirstPageOnTop
+*JobPageOrder FirstPageOnTop/First page on top : "/HPDict /ProcSet findresource /SetPrintingOrder get (First_Page_On_Top) exch exec"
+*JobPageOrder LastPageOnTop/Last page on top: "/HPDict /ProcSet findresource /SetPrintingOrder get (Last_Page_On_Top) exch exec"
+*CloseUI: *JobPageOrder
+
+*% ======================================
+*% JobPrintQualitySettings
+*% ======================================
+*OpenUI *JobPrintQualitySettings/Print Quality Settings: PickOne
+*OrderDependency: 50 AnySetup *JobPrintQualitySettings
+*DefaultJobPrintQualitySettings: Standard
+*JobPrintQualitySettings Standard/Standard: ""
+*JobPrintQualitySettings Custom/Custom: ""
+*CloseUI: *JobPrintQualitySettings
+
+*% ======================================
+*% JobRemoveBlankAreas
+*% ======================================
+*OpenUI *JobRemoveBlankAreas/Remove blank areas: PickOne
+*OrderDependency: 50 AnySetup *JobRemoveBlankAreas
+*DefaultJobRemoveBlankAreas: OFF
+*JobRemoveBlankAreas OFF/Off: "/HPDict /ProcSet findresource /SetInkedArea get false exch exec"
+*JobRemoveBlankAreas ON/On: "/HPDict /ProcSet findresource /SetInkedArea get true exch exec"
+*CloseUI: *JobRemoveBlankAreas
+
+*% ======================================
+*% JobRotate
+*% ======================================
+*OpenUI *JobRotate/Rotate: PickOne
+*OrderDependency: 50 AnySetup *JobRotate
+*DefaultJobRotate: None
+*JobRotate None/Rotate off: "<</Orientation 0>> setpagedevice"
+*JobRotate Rotate0/Rotate by 0 degrees: "<</Orientation -1>> setpagedevice"
+*JobRotate Rotate90/Rotate by 90 degrees: "<</Orientation 1>> setpagedevice"
+*JobRotate Rotate180/Rotate by 180 degrees: "<</Orientation 2>> setpagedevice"
+*JobRotate Rotate270/Rotate by 270 degrees: "<</Orientation 3>> setpagedevice"
+*CloseUI: *JobRotate
+
+*% ======================================
+*% JobUserMargin
+*% ======================================
+*OpenUI *JobUserMargin/Margin: PickOne
+*OrderDependency: 50 AnySetup *JobUserMargin
+*DefaultJobUserMargin: 3mm
+*JobUserMargin 3mm/3 mm: ""
+*JobUserMargin 5mm/5 mm: ""
+*CloseUI: *JobUserMargin
+
+*% ======================================
+*% MediaType
+*% ======================================
+*OpenUI *MediaType/Paper type: PickOne
+*OrderDependency: 50 AnySetup *MediaType
+*DefaultMediaType: AutoSelect
+*MediaType AutoSelect/Use printer settings: "/HPDict /ProcSet findresource /SetMediaId get (0) exch exec"
+*MediaType CoatedPaper/Coated Paper: "/HPDict /ProcSet findresource /SetMediaId get (1100) exch exec"
+*MediaType HPUniversalHeavyweightCoatedPaper/HP Universal Heavyweight Coated Paper: "/HPDict /ProcSet findresource /SetMediaId get (1112) exch exec"
+*MediaType HeavyweightCoatedpaper/Heavyweight Coated Paper: "/HPDict /ProcSet findresource /SetMediaId get (1110) exch exec"
+*MediaType HPBrightWhiteInkjetPaper/HP Bright White Inkjet Paper: "/HPDict /ProcSet findresource /SetMediaId get (1011) exch exec"
+*MediaType HPPremiumBondPaper2C3inCore/HP Premium Bond Paper<2C> 3<2D>in Core: "/HPDict /ProcSet findresource /SetMediaId get (1015) exch exec"
+*MediaType HPUniversalBondPaper/HP Universal Bond Paper: "/HPDict /ProcSet findresource /SetMediaId get (1012) exch exec"
+*MediaType Polypropylene/Polypropylene: "/HPDict /ProcSet findresource /SetMediaId get (5030) exch exec"
+*MediaType HPPolypropylene/HP Matte Polypropylene: "/HPDict /ProcSet findresource /SetMediaId get (5033) exch exec"
+*MediaType PlainPaper283C90gsm29/Plain Paper <28><3C>90 g<2F>m2<29>: "/HPDict /ProcSet findresource /SetMediaId get (1002) exch exec"
+*MediaType PlainPaper283C90110gsm29/Plain Paper <28>90<2D>110 g<2F>m2<29>: "/HPDict /ProcSet findresource /SetMediaId get (1003) exch exec"
+*MediaType PlainPaper283E220gsm29/Plain Paper <28><3E>110 g<2F>m2<29>: "/HPDict /ProcSet findresource /SetMediaId get (1004) exch exec"
+*MediaType PlainPaper2870gsm29/Plain Paper <28>70 g<2F>m2<29>: "/HPDict /ProcSet findresource /SetMediaId get (1007) exch exec"
+*MediaType PosterPlain/Poster Plain: "/HPDict /ProcSet findresource /SetMediaId get (1008) exch exec"
+*MediaType RecycledPaper/Recycled Paper: "/HPDict /ProcSet findresource /SetMediaId get (1222) exch exec"
+*MediaType ColouredPaper/Coloured Paper: "/HPDict /ProcSet findresource /SetMediaId get (1200) exch exec"
+*MediaType TranslucentBond/Translucent Bond Paper: "/HPDict /ProcSet findresource /SetMediaId get (3010) exch exec"
+*MediaType VellumPaper/Vellum: "/HPDict /ProcSet findresource /SetMediaId get (3020) exch exec"
+*MediaType DigitalBlueprintPaper/Digital Blueprint Paper: "/HPDict /ProcSet findresource /SetMediaId get (1108) exch exec"
+*MediaType PosterMattePaper/Poster matte paper: "/HPDict /ProcSet findresource /SetMediaId get (6000) exch exec"
+*MediaType HPPostermattesatinpaper/HP Production Matte Poster Paper<2C> 3<2D>in Core: "/HPDict /ProcSet findresource /SetMediaId get (6001) exch exec"
+*MediaType Posterglossypaper/Poster gloss paper: "/HPDict /ProcSet findresource /SetMediaId get (6010) exch exec"
+*MediaType HPPosterglossypaper/HP Gloss Poster Paper<2C> 3<2D>in Core: "/HPDict /ProcSet findresource /SetMediaId get (6011) exch exec"
+*MediaType PhotoSemiGloss/Poster semi<2D>gloss paper: "/HPDict /ProcSet findresource /SetMediaId get (6020) exch exec"
+*MediaType Postersatinpaper/Poster satin paper: "/HPDict /ProcSet findresource /SetMediaId get (6030) exch exec"
+*MediaType HPProductionSatinPosterPaper2C3inCore/HP Production Satin Poster Paper<2C> 3<2D>in Core: "/HPDict /ProcSet findresource /SetMediaId get (6031) exch exec"
+*MediaType Bluebackpaper/Blueback Paper: "/HPDict /ProcSet findresource /SetMediaId get (5160) exch exec"
+*MediaType PET/PET: "/HPDict /ProcSet findresource /SetMediaId get (5035) exch exec"
+*MediaType BannerwithDuPontTyvek/Banner with DuPont Tyvek: "/HPDict /ProcSet findresource /SetMediaId get (5004) exch exec"
+*MediaType MohawkwideformatinkjetDuPontTyvek/Mohawk wide format inkjet DuPont Tyvek: "/HPDict /ProcSet findresource /SetMediaId get (5005) exch exec"
+*MediaType DigitalBlueprintPaper28highusage29/Digital Blueprint Paper<2C> High Usage: "/HPDict /ProcSet findresource /SetMediaId get (1181) exch exec"
+*CloseUI: *MediaType
+
+*% ======================================
+*% Orientation
+*% ======================================
+*OpenUI *Orientation/Orientation: PickOne
+*OrderDependency: 50 AnySetup *Orientation
+*DefaultOrientation: PORTRAIT
+*Orientation PORTRAIT/Portrait: ""
+*Orientation LANDSCAPE_CC270/Landscape: ""
+*CloseUI: *Orientation
+
+*MSPrintSchemaKeywordMap: PageOrientation *Orientation
+*MSPrintSchemaKeywordMap: PageOrientation Portrait *Orientation PORTRAIT
+*MSPrintSchemaKeywordMap: PageOrientation Landscape *Orientation LANDSCAPE_CC270
+
+*% ======================================
+*% PageCMYKColorManagement
+*% ======================================
+*OpenUI *PageCMYKColorManagement/Default CMYK source profile: PickOne
+*OrderDependency: 50 AnySetup *PageCMYKColorManagement
+*DefaultPageCMYKColorManagement: None
+*PageCMYKColorManagement None/None: "/CMYKColorManagement where { pop /None CMYKColorManagement } if"
+*PageCMYKColorManagement ISOCoatedv2ECI/ISO Coated v2 <28>ECI<29>: "/CMYKColorManagement where { pop /ISOCoatedv2-ECI CMYKColorManagement } if"
+*PageCMYKColorManagement CoatedGRACol2006ISO12647/Coated GRACoL 2006 <28>ISO 12647<2D>2<3A>2004<29>: "/CMYKColorManagement where { pop /CoatedGRACol2006-ISO12647 CMYKColorManagement } if"
+*PageCMYKColorManagement COATED_FOGRA39/Coated FOGRA39 <28>ISO 12647<2D>2<3A>2004<29>: "/CMYKColorManagement where { pop /CoatedFOGRA39 CMYKColorManagement } if"
+*PageCMYKColorManagement PSOUncoatedISO12647ECI/PSO Uncoated ISO12647 <28>ECI<29>: "/CMYKColorManagement where { pop /PSOUncoatedISO12647-ECI CMYKColorManagement } if"
+*PageCMYKColorManagement PSOLWCImprovedECI/PSO LWC Improved <28>ECI<29>: "/CMYKColorManagement where { pop /PSOLWCImproved-ECI CMYKColorManagement } if"
+*PageCMYKColorManagement WebCoatedSWOP2006Grade3/Web Coated SWOP 2006 Grade 3 Paper: "/CMYKColorManagement where { pop /WebCoatedSWOP2006Grade3 CMYKColorManagement } if"
+*PageCMYKColorManagement WebCoatedSWOP2006Grade5/Web Coated SWOP 2006 Grade 5 Paper: "/CMYKColorManagement where { pop /WebCoatedSWOP2006Grade5 CMYKColorManagement } if"
+*PageCMYKColorManagement USSheetfedCoatedv2/US Sheetfed Coated v2: "/CMYKColorManagement where { pop /USSheetfedCoated-v2 CMYKColorManagement } if"
+*PageCMYKColorManagement USSheetfedUncoatedv2/US Sheetfed Uncoated v2: "/CMYKColorManagement where { pop /USSheetfedUncoated-v2 CMYKColorManagement } if"
+*PageCMYKColorManagement USWebCoatedSWOPv2/US Web Coated <28>SWOP<29> v2: "/CMYKColorManagement where { pop /USWebCoatedSWOP-v2 CMYKColorManagement } if"
+*PageCMYKColorManagement USWebUncoatedv2/US Web Uncoated v2: "/CMYKColorManagement where { pop /USWebUncoated-v2 CMYKColorManagement } if"
+*PageCMYKColorManagement EuroscaleUncoatedv2/Euroscale Uncoated v2: "/CMYKColorManagement where { pop /EuroscaleUncoated-v2 CMYKColorManagement } if"
+*PageCMYKColorManagement JapanWebCoatedAd/Japan Web Coated <28>Ad<29>: "/CMYKColorManagement where { pop /JapanWebCoated-Ad CMYKColorManagement } if"
+*PageCMYKColorManagement JapanColor2001Coated/Japan Color 2001 Coated: "/CMYKColorManagement where { pop /JapanColor2001Coated CMYKColorManagement } if"
+*PageCMYKColorManagement JapanColor2001Uncoated/Japan Color 2001 Uncoated: "/CMYKColorManagement where { pop /JapanColor2001Uncoated CMYKColorManagement } if"
+*PageCMYKColorManagement JapanColor2002Newspaper/Japan Color 2002 Newspaper: "/CMYKColorManagement where { pop /JapanColor2002Newspaper CMYKColorManagement } if"
+*PageCMYKColorManagement JapanColor2003WebCoated/Japan Color 2003 Web Coated: "/CMYKColorManagement where { pop /JapanColor2003WebCoated CMYKColorManagement } if"
+*PageCMYKColorManagement JMPA/JMPA: "/CMYKColorManagement where { pop /JMPA CMYKColorManagement } if"
+*PageCMYKColorManagement TOYO/TOYO: "/CMYKColorManagement where { pop /TOYO CMYKColorManagement } if"
+*PageCMYKColorManagement DIC/DIC: "/CMYKColorManagement where { pop /DIC CMYKColorManagement } if"
+*CloseUI: *PageCMYKColorManagement
+
+*% ======================================
+*% PageColorManagement
+*% ======================================
+*OpenUI *PageColorManagement/Color management: PickOne
+*OrderDependency: 50 AnySetup *PageColorManagement
+*DefaultPageColorManagement: Device
+*PageColorManagement None/Application managed colors: ""
+*PageColorManagement Device/Printer managed colors: ""
+*CloseUI: *PageColorManagement
+
+*MSPrintSchemaKeywordMap: PageColorManagement *PageColorManagement
+*MSPrintSchemaKeywordMap: PageColorManagement None *PageColorManagement None
+*MSPrintSchemaKeywordMap: PageColorManagement Device *PageColorManagement Device
+
+*% ======================================
+*% PageMirrorImage
+*% ======================================
+*OpenUI *PageMirrorImage/Mirror image: PickOne
+*OrderDependency: 50 AnySetup *PageMirrorImage
+*DefaultPageMirrorImage: None
+*PageMirrorImage None/Off: ""
+*PageMirrorImage Width/Width: ""
+*PageMirrorImage Height/Height: ""
+*CloseUI: *PageMirrorImage
+
+*MSPrintSchemaKeywordMap: PageMirrorImage *PageMirrorImage
+*MSPrintSchemaKeywordMap: PageMirrorImage None *PageMirrorImage None
+*MSPrintSchemaKeywordMap: PageMirrorImage MirrorImageWidth *PageMirrorImage Width
+*MSPrintSchemaKeywordMap: PageMirrorImage MirrorImageHeight *PageMirrorImage Height
+
+*% ======================================
+*% PageOutputColor
+*% ======================================
+*OpenUI *PageOutputColor/Color Options: PickOne
+*OrderDependency: 50 AnySetup *PageOutputColor
+*DefaultPageOutputColor: Color
+*PageOutputColor Color/Print in color: "<</ProcessColorModel /DeviceCMYK >> setpagedevice"
+*PageOutputColor Grayscale/Print in grayscale: "<</ProcessColorModel /DeviceGray>> setpagedevice userdict /GrayscaleMode (BlackOnly) put << >> setpagedevice"
+*CloseUI: *PageOutputColor
+
+*MSPrintSchemaKeywordMap: PageOutputColor *PageOutputColor
+*MSPrintSchemaKeywordMap: PageOutputColor Color *PageOutputColor Color
+*MSPrintSchemaKeywordMap: PageOutputColor Grayscale *PageOutputColor Grayscale
+
+*% ======================================
+*% PageRGBColorManagement
+*% ======================================
+*OpenUI *PageRGBColorManagement/Default RGB source profile: PickOne
+*OrderDependency: 50 AnySetup *PageRGBColorManagement
+*DefaultPageRGBColorManagement: sRGB
+*PageRGBColorManagement None/None: "/RGBColorManagement where {  pop  /None RGBColorManagement } if"
+*PageRGBColorManagement sRGB/sRGB: "/RGBColorManagement where {  pop  /sRGB RGBColorManagement } if"
+*PageRGBColorManagement AdobeRGB/AdobeRGB: "/RGBColorManagement where {  pop  /AdobeRGB RGBColorManagement } if"
+*PageRGBColorManagement AppleRGB/Apple RGB: "/RGBColorManagement where {  pop  /AppleRGB RGBColorManagement } if"
+*PageRGBColorManagement ColorMatchRGB/ColorMatch RGB: "/RGBColorManagement where {  pop  /ColorMatchRGB RGBColorManagement } if"
+*CloseUI: *PageRGBColorManagement
+
+*% ======================================
+*% Paper Size
+*% ======================================
+*OpenUI *PageSize/Paper size: PickOne
+*OrderDependency: 30 AnySetup *PageSize
+*DefaultPageSize: Letter.Fullbleed
+*PageSize Letter.Fullbleed/Letter: "<< /PageSize[612 792] /ImagingBBox null >> setpagedevice"
+*PageSize Tabloid.Fullbleed/Tabloid: "<< /PageSize[792 1224] /ImagingBBox null >> setpagedevice"
+*PageSize AnsiC.Fullbleed/C: "<< /PageSize[1224 1584] /ImagingBBox null >> setpagedevice"
+*PageSize AnsiD.Fullbleed/D: "<< /PageSize[1584 2448] /ImagingBBox null >> setpagedevice"
+*PageSize AnsiE.Fullbleed/E: "<< /PageSize[2448 3168] /ImagingBBox null >> setpagedevice"
+*PageSize Legal.Fullbleed/Legal: "<< /PageSize[612 1008] /ImagingBBox null >> setpagedevice"
+*PageSize A4.Fullbleed/A4: "<< /PageSize[595 842] /ImagingBBox null >> setpagedevice"
+*PageSize A3.Fullbleed/A3: "<< /PageSize[842 1191] /ImagingBBox null >> setpagedevice"
+*PageSize A2.Fullbleed/A2: "<< /PageSize[1191 1684] /ImagingBBox null >> setpagedevice"
+*PageSize A1.Fullbleed/A1: "<< /PageSize[1684 2384] /ImagingBBox null >> setpagedevice"
+*PageSize A0.Fullbleed/A0: "<< /PageSize[2384 3370] /ImagingBBox null >> setpagedevice"
+*PageSize B4.Fullbleed/B4 <28>JIS<29>: "<< /PageSize[729 1032] /ImagingBBox null >> setpagedevice"
+*PageSize B3.Fullbleed/B3 <28>JIS<29>: "<< /PageSize[1032 1460] /ImagingBBox null >> setpagedevice"
+*PageSize B2.Fullbleed/B2 <28>JIS<29>: "<< /PageSize[1460 2064] /ImagingBBox null >> setpagedevice"
+*PageSize B1.Fullbleed/B1 <28>JIS<29>: "<< /PageSize[2064 2920] /ImagingBBox null >> setpagedevice"
+*PageSize ARCHA.Fullbleed/Arch A: "<< /PageSize[648 864] /ImagingBBox null >> setpagedevice"
+*PageSize ARCHB.Fullbleed/Arch B: "<< /PageSize[864 1296] /ImagingBBox null >> setpagedevice"
+*PageSize ARCHC.Fullbleed/Arch C: "<< /PageSize[1296 1728] /ImagingBBox null >> setpagedevice"
+*PageSize ARCHD.Fullbleed/Arch D: "<< /PageSize[1728 2592] /ImagingBBox null >> setpagedevice"
+*PageSize 26x38.Fullbleed/Arch E2: "<< /PageSize[1872 2736] /ImagingBBox null >> setpagedevice"
+*PageSize 27x39.Fullbleed/Arch E3: "<< /PageSize[1944 2808] /ImagingBBox null >> setpagedevice"
+*PageSize 30x42.Fullbleed/Arch E1: "<< /PageSize[2160 3024] /ImagingBBox null >> setpagedevice"
+*PageSize ARCHE.Fullbleed/Arch E: "<< /PageSize[2592 3456] /ImagingBBox null >> setpagedevice"
+*PageSize ISOB4.Fullbleed/ISO B4: "<< /PageSize[709 1001] /ImagingBBox null >> setpagedevice"
+*PageSize ISOB3.Fullbleed/B3: "<< /PageSize[1001 1417] /ImagingBBox null >> setpagedevice"
+*PageSize ISOB2.Fullbleed/B2: "<< /PageSize[1417 2004] /ImagingBBox null >> setpagedevice"
+*PageSize ISOB1.Fullbleed/B1: "<< /PageSize[2004 2835] /ImagingBBox null >> setpagedevice"
+*PageSize 13x19.Fullbleed/Super B<2F>A3: "<< /PageSize[936 1368] /ImagingBBox null >> setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion/Paper size: PickOne
+*OrderDependency: 40 AnySetup *PageRegion
+*DefaultPageRegion: Letter.Fullbleed
+*PageRegion Letter.Fullbleed/Letter: "<< /PageSize[612 792] /ImagingBBox null >> setpagedevice"
+*PageRegion Tabloid.Fullbleed/Tabloid: "<< /PageSize[792 1224] /ImagingBBox null >> setpagedevice"
+*PageRegion AnsiC.Fullbleed/C: "<< /PageSize[1224 1584] /ImagingBBox null >> setpagedevice"
+*PageRegion AnsiD.Fullbleed/D: "<< /PageSize[1584 2448] /ImagingBBox null >> setpagedevice"
+*PageRegion AnsiE.Fullbleed/E: "<< /PageSize[2448 3168] /ImagingBBox null >> setpagedevice"
+*PageRegion Legal.Fullbleed/Legal: "<< /PageSize[612 1008] /ImagingBBox null >> setpagedevice"
+*PageRegion A4.Fullbleed/A4: "<< /PageSize[595 842] /ImagingBBox null >> setpagedevice"
+*PageRegion A3.Fullbleed/A3: "<< /PageSize[842 1191] /ImagingBBox null >> setpagedevice"
+*PageRegion A2.Fullbleed/A2: "<< /PageSize[1191 1684] /ImagingBBox null >> setpagedevice"
+*PageRegion A1.Fullbleed/A1: "<< /PageSize[1684 2384] /ImagingBBox null >> setpagedevice"
+*PageRegion A0.Fullbleed/A0: "<< /PageSize[2384 3370] /ImagingBBox null >> setpagedevice"
+*PageRegion B4.Fullbleed/B4 <28>JIS<29>: "<< /PageSize[729 1032] /ImagingBBox null >> setpagedevice"
+*PageRegion B3.Fullbleed/B3 <28>JIS<29>: "<< /PageSize[1032 1460] /ImagingBBox null >> setpagedevice"
+*PageRegion B2.Fullbleed/B2 <28>JIS<29>: "<< /PageSize[1460 2064] /ImagingBBox null >> setpagedevice"
+*PageRegion B1.Fullbleed/B1 <28>JIS<29>: "<< /PageSize[2064 2920] /ImagingBBox null >> setpagedevice"
+*PageRegion ARCHA.Fullbleed/Arch A: "<< /PageSize[648 864] /ImagingBBox null >> setpagedevice"
+*PageRegion ARCHB.Fullbleed/Arch B: "<< /PageSize[864 1296] /ImagingBBox null >> setpagedevice"
+*PageRegion ARCHC.Fullbleed/Arch C: "<< /PageSize[1296 1728] /ImagingBBox null >> setpagedevice"
+*PageRegion ARCHD.Fullbleed/Arch D: "<< /PageSize[1728 2592] /ImagingBBox null >> setpagedevice"
+*PageRegion 26x38.Fullbleed/Arch E2: "<< /PageSize[1872 2736] /ImagingBBox null >> setpagedevice"
+*PageRegion 27x39.Fullbleed/Arch E3: "<< /PageSize[1944 2808] /ImagingBBox null >> setpagedevice"
+*PageRegion 30x42.Fullbleed/Arch E1: "<< /PageSize[2160 3024] /ImagingBBox null >> setpagedevice"
+*PageRegion ARCHE.Fullbleed/Arch E: "<< /PageSize[2592 3456] /ImagingBBox null >> setpagedevice"
+*PageRegion ISOB4.Fullbleed/ISO B4: "<< /PageSize[709 1001] /ImagingBBox null >> setpagedevice"
+*PageRegion ISOB3.Fullbleed/B3: "<< /PageSize[1001 1417] /ImagingBBox null >> setpagedevice"
+*PageRegion ISOB2.Fullbleed/B2: "<< /PageSize[1417 2004] /ImagingBBox null >> setpagedevice"
+*PageRegion ISOB1.Fullbleed/B1: "<< /PageSize[2004 2835] /ImagingBBox null >> setpagedevice"
+*PageRegion 13x19.Fullbleed/Super B<2F>A3: "<< /PageSize[936 1368] /ImagingBBox null >> setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Letter.Fullbleed
+*ImageableArea Letter.Fullbleed/Letter: "0 0 612 792"
+*ImageableArea Tabloid.Fullbleed/Tabloid: "0 0 792 1224"
+*ImageableArea AnsiC.Fullbleed/C: "0 0 1224 1584"
+*ImageableArea AnsiD.Fullbleed/D: "0 0 1584 2448"
+*ImageableArea AnsiE.Fullbleed/E: "0 0 2448 3168"
+*ImageableArea Legal.Fullbleed/Legal: "0 0 612 1008"
+*ImageableArea A4.Fullbleed/A4: "0 0 595 842"
+*ImageableArea A3.Fullbleed/A3: "0 0 842 1191"
+*ImageableArea A2.Fullbleed/A2: "0 0 1191 1684"
+*ImageableArea A1.Fullbleed/A1: "0 0 1684 2384"
+*ImageableArea A0.Fullbleed/A0: "0 0 2384 3370"
+*ImageableArea B4.Fullbleed/B4 <28>JIS<29>: "0 0 729 1032"
+*ImageableArea B3.Fullbleed/B3 <28>JIS<29>: "0 0 1032 1460"
+*ImageableArea B2.Fullbleed/B2 <28>JIS<29>: "0 0 1460 2064"
+*ImageableArea B1.Fullbleed/B1 <28>JIS<29>: "0 0 2064 2920"
+*ImageableArea ARCHA.Fullbleed/Arch A: "0 0 648 864"
+*ImageableArea ARCHB.Fullbleed/Arch B: "0 0 864 1296"
+*ImageableArea ARCHC.Fullbleed/Arch C: "0 0 1296 1728"
+*ImageableArea ARCHD.Fullbleed/Arch D: "0 0 1728 2592"
+*ImageableArea 26x38.Fullbleed/Arch E2: "0 0 1872 2736"
+*ImageableArea 27x39.Fullbleed/Arch E3: "0 0 1944 2808"
+*ImageableArea 30x42.Fullbleed/Arch E1: "0 0 2160 3024"
+*ImageableArea ARCHE.Fullbleed/Arch E: "0 0 2592 3456"
+*ImageableArea ISOB4.Fullbleed/ISO B4: "0 0 709 1001"
+*ImageableArea ISOB3.Fullbleed/B3: "0 0 1001 1417"
+*ImageableArea ISOB2.Fullbleed/B2: "0 0 1417 2004"
+*ImageableArea ISOB1.Fullbleed/B1: "0 0 2004 2835"
+*ImageableArea 13x19.Fullbleed/Super B<2F>A3: "0 0 936 1368"
+
+
+*DefaultPaperDimension: Letter.Fullbleed
+*PaperDimension Letter.Fullbleed/Letter: "612 792"
+*PaperDimension Tabloid.Fullbleed/Tabloid: "792 1224"
+*PaperDimension AnsiC.Fullbleed/C: "1224 1584"
+*PaperDimension AnsiD.Fullbleed/D: "1584 2448"
+*PaperDimension AnsiE.Fullbleed/E: "2448 3168"
+*PaperDimension Legal.Fullbleed/Legal: "612 1008"
+*PaperDimension A4.Fullbleed/A4: "595 842"
+*PaperDimension A3.Fullbleed/A3: "842 1191"
+*PaperDimension A2.Fullbleed/A2: "1191 1684"
+*PaperDimension A1.Fullbleed/A1: "1684 2384"
+*PaperDimension A0.Fullbleed/A0: "2384 3370"
+*PaperDimension B4.Fullbleed/B4 <28>JIS<29>: "729 1032"
+*PaperDimension B3.Fullbleed/B3 <28>JIS<29>: "1032 1460"
+*PaperDimension B2.Fullbleed/B2 <28>JIS<29>: "1460 2064"
+*PaperDimension B1.Fullbleed/B1 <28>JIS<29>: "2064 2920"
+*PaperDimension ARCHA.Fullbleed/Arch A: "648 864"
+*PaperDimension ARCHB.Fullbleed/Arch B: "864 1296"
+*PaperDimension ARCHC.Fullbleed/Arch C: "1296 1728"
+*PaperDimension ARCHD.Fullbleed/Arch D: "1728 2592"
+*PaperDimension 26x38.Fullbleed/Arch E2: "1872 2736"
+*PaperDimension 27x39.Fullbleed/Arch E3: "1944 2808"
+*PaperDimension 30x42.Fullbleed/Arch E1: "2160 3024"
+*PaperDimension ARCHE.Fullbleed/Arch E: "2592 3456"
+*PaperDimension ISOB4.Fullbleed/ISO B4: "709 1001"
+*PaperDimension ISOB3.Fullbleed/B3: "1001 1417"
+*PaperDimension ISOB2.Fullbleed/B2: "1417 2004"
+*PaperDimension ISOB1.Fullbleed/B1: "2004 2835"
+*PaperDimension 13x19.Fullbleed/Super B<2F>A3: "936 1368"
+
+
+*% ======================================
+*% CustomPageSize
+*% ======================================
+*MaxMediaWidth: "2880"
+*MaxMediaHeight: "566930"
+*MinMediaWidth: "223"
+*MinMediaHeight: "396"
+*HWMargins: 0 0 0 0
+*ADUseHWMargins: True
+*ParamCustomPageSize Width: 1 points 223 2880
+*ParamCustomPageSize Height: 2 points 396 566930
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 1 1
+*RequiresPageRegion All: True
+*CenterRegistered: False
+*LeadingEdge Short: ""
+*DefaultLeadingEdge: Short
+*CustomPageSize True: "
+4 dict begin
+3 1 roll
+2 array astore /PageOffset exch def
+2 mod 0 eq {exch} if
+2 array astore /PageSize exch def
+/ImagingBBox null def
+currentdict end setpagedevice"
+
+*% ======================================
+*% PrintQuality
+*% ======================================
+*OpenUI *PrintQuality/Print quality: PickOne
+*OrderDependency: 50 AnySetup *PrintQuality
+*DefaultPrintQuality: LinesFast
+*PrintQuality LinesFast/Lines<2F>Fast: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /PrintQuality 1 /Type 36 >> >> systemdict /setpagedevice get exec"
+*PrintQuality UniformAreas/Uniform Areas: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /PrintQuality 2 /Type 36 >> >> systemdict /setpagedevice get exec"
+*PrintQuality HighDetail/High Detail: "<< /PostRenderingEnhance true /PostRenderingEnhanceDetails << /PrintQuality 3 /Type 36 >> >> systemdict /setpagedevice get exec"
+*CloseUI: *PrintQuality
+
+*MSPrintSchemaKeywordMap: PageOutputQuality *PrintQuality
+
+*% ======================================
+*% Resolution
+*% ======================================
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 50 AnySetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 300dpi/300 x 300 dpi: ""
+*Resolution 600dpi/600 x 600 dpi: ""
+*Resolution 1200dpi/1200 x 1200 dpi: ""
+*CloseUI: *Resolution
+
+*MSPrintSchemaKeywordMap: PageResolution *Resolution
+
+*cupsFilter: "application/vnd.cups-postscript 0 hpps"
+
+*%==============================================
+*% Secure Printing
+*% ============================================
+*OpenGroup: SecPin/Secure Printing
+*OpenUI *HPLFPPinPrnt/Secure Printing: PickOne
+*OrderDependency: 50.0 AnySetup *HPLFPPinPrnt
+*DefaultHPPinPrnt: False
+*HPLFPPinPrnt True/On: "%%"
+*HPLFPPinPrnt False/Off: "%%"
+*CloseUI: *HPLFPPinPrnt
+*OpenUI *HPFIDigit/First Digit: PickOne
+*OrderDependency: 50 AnySetup *HPFIDigit
+*DefaultHPFIDigit: 0
+*HPFIDigit 0/0: "%%"
+*HPFIDigit 1/1: "%%"
+*HPFIDigit 2/2: "%%"
+*HPFIDigit 3/3: "%%"
+*HPFIDigit 4/4: "%%"
+*HPFIDigit 5/5: "%%"
+*HPFIDigit 6/6: "%%"
+*HPFIDigit 7/7: "%%"
+*HPFIDigit 8/8: "%%"
+*HPFIDigit 9/9: "%%"
+*CloseUI: *HPFIDigit
+*OpenUI *HPSEDigit/Second Digit: PickOne
+*OrderDependency: 50 AnySetup *HPSEDigit
+*DefaultHPSEDigit: 0
+*HPSEDigit 0/0: "%%"
+*HPSEDigit 1/1: "%%"
+*HPSEDigit 2/2: "%%"
+*HPSEDigit 3/3: "%%"
+*HPSEDigit 4/4: "%%"
+*HPSEDigit 5/5: "%%"
+*HPSEDigit 6/6: "%%"
+*HPSEDigit 7/7: "%%"
+*HPSEDigit 8/8: "%%"
+*HPSEDigit 9/9: "%%"
+*CloseUI: *HPSEDigit
+*OpenUI *HPTHDigit/Third Digit: PickOne
+*OrderDependency: 50 AnySetup *HPTHDigit
+*DefaultHPTHDigit: 0
+*HPTHDigit 0/0: "%%"
+*HPTHDigit 1/1: "%%"
+*HPTHDigit 2/2: "%%"
+*HPTHDigit 3/3: "%%"
+*HPTHDigit 4/4: "%%"
+*HPTHDigit 5/5: "%%"
+*HPTHDigit 6/6: "%%"
+*HPTHDigit 7/7: "%%"
+*HPTHDigit 8/8: "%%"
+*HPTHDigit 9/9: "%%"
+*CloseUI: *HPTHDigit
+*OpenUI *HPFTDigit/Fourth Digit: PickOne
+*OrderDependency: 50 AnySetup *HPFTDigit
+*DefaultHPFTDigit: 0
+*HPFTDigit 0/0: "%%"
+*HPFTDigit 1/1: "%%"
+*HPFTDigit 2/2: "%%"
+*HPFTDigit 3/3: "%%"
+*HPFTDigit 4/4: "%%"
+*HPFTDigit 5/5: "%%"
+*HPFTDigit 6/6: "%%"
+*HPFTDigit 7/7: "%%"
+*HPFTDigit 8/8: "%%"
+*HPFTDigit 9/9: "%%"
+*CloseUI: *HPFTDigit
+*CloseGroup: SecPin
+
+*% end of SKU section
