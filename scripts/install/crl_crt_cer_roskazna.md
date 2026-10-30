@@ -1,35 +1,13 @@
 # Установка сертификатов Росказны
 
-## 1. Создать директорию для скриптов
+## Запуск
 
 ```bash
-mkdir -p "$HOME/scripts"
-cd "$HOME/scripts"
-```
-
-## 2. Запуск
-
-```bash
-# Вариант 1: Быстрый запуск (curl)
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/crl_crt_cer_roskazna.sh | sudo bash
-
-# Вариант 2: Быстрый запуск (wget)
-wget -qO- https://github.com/teanrus/redos-lifehacks/releases/latest/download/crl_crt_cer_roskazna.sh | sudo bash
-
-# Вариант 3: Скачивание с проверкой целостности
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/crl_crt_cer_roskazna.sh -o run.sh
-curl -sL https://github.com/teanrus/redos-lifehacks/releases/latest/download/crl_crt_cer_roskazna.sh.sha256 -o run.sh.sha256
-sha256sum -c install-messengers.sh.sha256
-sudo bash install-messengers.sh
-
-wget -O run https://github.com/teanrus/redos-lifehacks/releases/latest/download/crl_crt_cer_roskazna.sh && chmod +x run && ./run && rm run
-```
-
-## 3. Выполнить скрипт
-
-```bash
-chmod +x "$HOME/scripts/install_crl_crt_cer_roskazna.sh"
-"$HOME/scripts/install_crl_crt_cer_roskazna.sh"
+mkdir -p "$HOME/scripts" \
+  && wget -O "$HOME/scripts/run.sh" https://github.com/teanrus/redos-lifehacks/releases/latest/download/crl_crt_cer_roskazna.sh \
+  && chmod +x "$HOME/scripts/run.sh" \
+  && "$HOME/scripts/run.sh" \
+  && rm "$HOME/scripts/run.sh"
 ```
 
 ## От имени какого пользователя запускать
