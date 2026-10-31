@@ -14,6 +14,10 @@
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)  
 ViPNet Client: VPN-соединение, автоматическое определение версии, настройка firewall, автозапуск сервиса, импорт конфигурации
 
+### 🔏 [Установка сертификатов Росказны](/scripts/install/crl_crt_cer_roskazna.md)
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)<br>
+Загружает CRL и сертификаты с сайта Росказны и устанавливает их в общесистемное хранилище CryptoPro (`mca`). Требуются `wget`, `sudo` и CryptoPro CSP с `certmgr` для amd64. Запускайте от обычного пользователя с правом `sudo`, не через `sudo bash`. Источник поддерживает только HTTP.
+
 ---
 
 ## 🚀 Быстрый запуск
@@ -46,4 +50,3 @@ sudo bash install-vipnet.sh
 
 > [!TIP]
 > Все скрипты требуют прав `root`. Возможно использование в других RPM-дистрибутивах (CentOS, Fedora, AlmaLinux).
-
