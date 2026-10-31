@@ -6,16 +6,22 @@
 ## 📋 Доступные скрипты
 
 ### 💬 [Установка мессенджеров](/scripts/install/install-messengers.md)
+
 [![Platform](https://img.shields.io/badge/platform-RED%20OS%207.x-orange.svg)](https://redos.red-soft.ru/)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)  
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%208.x-green.svg)](https://redos.red-soft.ru/)
+
 Корпоративные мессенджеры: Telegram, Среда, MAX, VK Messenger — выборочная установка, ярлыки в меню, автоматическая очистка временных файлов
 
 ### 🛡️ [Установка ViPNet Client](/scripts/install/install-vipnet.md)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)  
+
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
+
 ViPNet Client: VPN-соединение, автоматическое определение версии, настройка firewall, автозапуск сервиса, импорт конфигурации
 
 ### 🔏 [Установка сертификатов Росказны](/scripts/install/crl_crt_cer_roskazna.md)
-[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)<br>
+
+[![Platform](https://img.shields.io/badge/platform-RED%20OS%207.3-red.svg)](https://redos.red-soft.ru/)
+
 Загружает CRL и сертификаты с сайта Росказны и устанавливает их в общесистемное хранилище CryptoPro (`mca`). Требуются `wget`, `sudo` и CryptoPro CSP с `certmgr` для amd64. Запускайте от обычного пользователя с правом `sudo`, не через `sudo bash`. Источник поддерживает только HTTP.
 
 ---
